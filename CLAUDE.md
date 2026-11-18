@@ -36,7 +36,7 @@ Root: `G:\Shared drives\1. EKC CURRICULUM\1. KLA Folders\SCIENCE\VCE Physics\VCE
 - **Planning rules (Rocco, 18 Nov 2026):**
   - 1 week (3 lessons) of exam revision right before each exam block.
   - 1 revision lesson before every assessment.
-  - At least 1 buffer lesson per unit.
+  - At least 1 buffer lesson per AoS, in the lead-up to its SAC.
 
 ## Still to confirm with Rocco (ask before laying out lessons)
 1. Timing: confirmed above (79-minute lessons still to confirm).
