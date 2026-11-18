@@ -37,10 +37,13 @@ Root: `G:\Shared drives\1. EKC CURRICULUM\1. KLA Folders\SCIENCE\VCE Physics\VCE
   - 1 week (3 lessons) of exam revision right before each exam block.
   - 1 revision lesson before every assessment.
   - At least 1 buffer lesson per AoS, in the lead-up to its SAC.
+  - Revision lessons are for SACs (summative). Chapter tests and CFATs are formative: no revision lesson.
+  - A chapter test takes about 60 of 79 minutes, so it uses a whole lesson. A CFAT takes about 20 minutes, so it shares a lesson with a short lesson.
+  - Pracs get their own lesson (not combined with theory).
 
 ## Still to confirm with Rocco (ask before laying out lessons)
 1. Timing: confirmed above (79-minute lessons still to confirm).
-2. Pracs: a dedicated prac lesson each week, or each Cambridge practical inside its section? A logbook is required, and Unit 1 needs at least 15 h of practical work.
+2. Pracs: each prac is its own lesson (decided 18 Nov). Still to decide: how many of Cambridge's 14 Unit 1 pracs to run (a logbook is required; check the study design's minimum practical hours).
 3. Assessment: one CFAT per chapter, built from the Cambridge chapter tests? SACs in Weeks 7, 10 and 15? Week 16 for revision and the practice exam?
 4. Lesson shape (below): still right?
 
