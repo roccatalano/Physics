@@ -1,27 +1,36 @@
-# Handoff
+# Physics planner: handoff (18 Nov 2026)
 
-_Last updated 18 Nov 2026_
+Start a new chat with: "Read HANDOFF.md and CLAUDE.md in roccatalano/Physics and carry on."
+
+## Where things are
+- Repo: `roccatalano/Physics` (public, renamed from 11PHY). Live site: https://roccatalano.github.io/Physics/
+- Rules for Claude: `CLAUDE.md` (Cambridge first, calendar, planning rules, slide style). Also in the project doc `claude/11phy-planner-instructions.md`.
+- Planner: `index.html` + `data/years.json` + `data/year11.json`. Never edit JSON by hand: run `python3 tools/build_year11.py`.
+- Other pages (shown as tabs inside Year 11): `analysis.html` (Cambridge course, `tools/build_analysis.py`), `pearson.html` (Pearson cross-map, `tools/build_pearson_page.py`), `studydesign.html` (`tools/build_studydesign.py`).
+- Drive links: `tools/drive_ids.json` (354 Cambridge files), `tools/pearson_drive_ids.json` (158 Pearson files). Mapping rules in `tools/pearson_map.py`. Links only open for people with shared-drive access.
+- Check pages locally: `python3 -m http.server 8897` in the repo, then a playwright screenshot.
 
 ## Done
-- Repo and GitHub Pages set up (placeholder page live).
-- CLAUDE.md written: Cambridge-first rules, source locations, lesson shape, slide and sheet style.
-
-- Cambridge resources analysis page built (`analysis.html`, from `tools/build_analysis.py` and `tools/cambridge_unit1_sections.json`). Linked from the home page.
-- Rocco has not yet decided where do-now, APK and exit-ticket questions come from. Don't assume the old plan.
-
-- 18 Nov: site turned into a **Physics Planner with tabs for Years 7 to 12**, in the 12MAG planner's design. Year 11 shows Unit 1 and 2 by AoS, chapter cards with Cambridge resource badges, and section-by-section resources. Other years are placeholders.
-- Unit 2 worked examples are not indexed yet (needs the Ch 7 to 9 PDFs).
-
-- Study design planning summary built (`studydesign.html`), linked from the Year 11 tab. Key numbers: 50 h per unit minimum; pracs Unit 1 15 h, Unit 2 10 h + 7 h; Unit 1 and 2 assessment is a school decision; Unit 2 options are a student choice (Cambridge covers 11 of 18).
-
-- Year 11 now has its own tabs: Course plan, Cambridge course, Study design. The analysis page is restyled to the light planner look.
-
-- 18 Nov: Cambridge links grouped under a Cambridge heading on every card; all 158 Pearson files mapped onto the Cambridge structure (orange) plus a Pearson cross-map tab. Course resources card added at the top of the Year 11 course plan.
+- Year 7 to 12 tabs (only Year 11 started), 12MAG look.
+- Year 11 sub-tabs: Course plan, Cambridge course, Pearson cross-map, Study design.
+- Course plan: AoS detail bars, chapter cards with badges, section cards nested (collapsed with Cambridge/Pearson counts; open to show grouped links). Cambridge links blue, Pearson orange.
+- All Cambridge files linked; all 158 Pearson files mapped onto Cambridge sections, chapters, AoS or course (pirated Pearson textbook PDF excluded, never link it).
+- 2027 calendar and planning rules agreed (see CLAUDE.md): Unit 1 about 48 lessons, Unit 2 about 46.
+- Study design deep dive (prac hours: Unit 1 15 h, Unit 2 10 h + 7 h investigation).
+- Verdict so far: Cambridge is the stronger base; Pearson is a top-up (6 sections have no Pearson extras: 3A, 3D, 4A, 6B, 6C, 9A).
 
 ## Next
-1. Confirm timing, prac model, assessment plan and lesson shape with Rocco (see CLAUDE.md, "Still to confirm").
-2. Draft the Unit 1 lesson-by-lesson plan from the Cambridge order and show it to Rocco.
-3. Build the planner page and data scripts.
-4. Then slides and guided sheets, lesson by lesson.
+1. Year-by-year tabs (e.g. 2027 overview calendar like 12MAG).
+2. Lay out Unit 1 lessons on the calendar.
+3. Then slides and guided sheets per lesson from Cambridge.
+4. Later: Years 7 to 10 (need those SCIENCE folders connected). Later still: move to Google Sites / Apps Script.
 
-- 18 Nov: section cards nest (collapsed, show Cambridge/Pearson counts; open to see grouped links).
+## Open questions for Rocco
+- Cambridge/Pearson groups inside section cards: start open or folded?
+- One chapter test per chapter, or per AoS (lesson budget is tight: about 21 theory lessons for 21 sections)?
+- SACs in the SAC free periods or in class?
+- 79-minute lessons confirmed?
+- Which pracs (Unit 1 needs 12 prac lessons; Cambridge has 14)?
+- Is the lesson shape still right?
+- Step Up (from 19 Nov): start Ch 1 or an intro?
+- Unit 2 worked examples not yet indexed.
