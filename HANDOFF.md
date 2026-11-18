@@ -23,3 +23,5 @@ _Last updated 18 Nov 2026_
 2. Draft the Unit 1 lesson-by-lesson plan from the Cambridge order and show it to Rocco.
 3. Build the planner page and data scripts.
 4. Then slides and guided sheets, lesson by lesson.
+
+- 18 Nov: section cards nest (collapsed, show Cambridge/Pearson counts; open to see grouped links).
