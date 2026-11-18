@@ -1,0 +1,40 @@
+<!--{"id":"12-9D-1-mass-energy","year":12,"section":"9D","title":"Rest energy and relativistic kinetic energy","criteria":["U4 AoS1: E0 = mc²","U4 AoS1: Etot = Ek + E0 = γmc², Ek = (γ − 1)mc²"],
+"blurb":"Speed up a particle. Its rest energy stays the same while its kinetic energy grows without limit as v approaches c. Compare with the classical ½mv².",
+"source":"Cambridge VCE Physics Units 3&4, 9D Mass and energy equivalence (pp. 461–470). Electron and proton masses from the VCAA formula sheet values; 1 MeV = 1.6 × 10⁻¹³ J.","colour":"#fbb040"}-->
+<div class="ctx">Mass is a store of energy: rest energy $E_0 = mc^2$. Moving adds kinetic energy. <b>Why can nothing with mass reach the speed of light?</b></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#fbb040"><h3>Kinetic energy against speed, and the energy totals</h3><svg id="sv" viewBox="0 0 860 400"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#7dd3fc;gap:9px"><h3>Particle and speed</h3>
+   <div class="btns"><button class="pt on" data-v="e">Electron</button><button class="pt" data-v="p">Proton</button><button class="pt" data-v="k">1 kg</button></div>
+   <div class="sl" style="grid-template-columns:40px 1fr 96px"><span class="nm">v</span><input type="range" id="v" min="0" max="0.995" step="0.001" value="0.6"><span class="v" id="vv"></span></div>
+   <div class="btns"><button class="pr" data-v="0.1">0.1c</button><button class="pr" data-v="0.6">0.6c</button><button class="pr" data-v="0.866">0.866c</button><button class="pr" data-v="0.99">0.99c</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:18px;line-height:1.45;flex:1"><h3>Readout</h3><div id="out"></div></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),c=3e8,MeV=1.6e-13;const PT={e:['electron',9.1e-31],p:['proton',1.67e-27],k:['1 kg mass',1]};let pt='e',v=.6;
+// graph: Ek/(mc^2) against v/c, y 0..6
+const G={x0:70,x1:560,y0:360,y1:30},gx=b=>G.x0+b*(G.x1-G.x0),gy=k=>G.y0-Math.min(k,6.4)/6*(G.y0-G.y1);
+const ax=(a,b,c2,d)=>el('line',{x1:a,y1:b,x2:c2,y2:d,stroke:'#5b6690','stroke-width':2},sv);ax(G.x0,G.y0,G.x1+30,G.y0);ax(G.x0,G.y0,G.x0,G.y1-10);
+[0,.2,.4,.6,.8,1].forEach(b=>{ax(gx(b),G.y0,gx(b),G.y0+6);txt(sv,gx(b),G.y0+24,b?b.toFixed(1)+'c':'0',{'font-size':16,fill:'#a5b4d8','text-anchor':'middle'})});
+[1,2,3,4,5,6].forEach(k=>{ax(G.x0-6,gy(k),G.x0,gy(k));txt(sv,G.x0-10,gy(k)+5,k,{'font-size':16,fill:'#a5b4d8','text-anchor':'end'})});
+txt(sv,G.x0+8,G.y1-14,'Ek in units of mc²',{'font-size':16,fill:'#a5b4d8'});txt(sv,G.x1+44,G.y0+5,'v',{'font-size':18,fill:'#a5b4d8','font-style':'italic','text-anchor':'end'});
+el('line',{x1:gx(1),x2:gx(1),y1:G.y0,y2:G.y1-6,stroke:'#f87171','stroke-width':2,'stroke-dasharray':'6 6'},sv);txt(sv,gx(1)+8,G.y1+4,'v = c',{'font-size':17,fill:'#f87171','font-style':'italic'});
+let dR='',dC='';for(let b=0;b<=.9993;b+=.002){const k=1/Math.sqrt(1-b*b)-1;if(k>6.4)break;dR+=(dR?'L':'M')+gx(b).toFixed(1)+','+gy(k).toFixed(1)}for(let b=0;b<=1.0001;b+=.01)dC+=(dC?'L':'M')+gx(b).toFixed(1)+','+gy(.5*b*b).toFixed(1);
+el('path',{d:dC,fill:'none',stroke:'#7dd3fc','stroke-width':3,'stroke-dasharray':'8 6'},sv);el('path',{d:dR,fill:'none',stroke:'#fbb040','stroke-width':4},sv);
+txt(sv,gx(.62),gy(.5)-30,'½mv² (classical)',{'font-size':16,fill:'#7dd3fc'});txt(sv,gx(.73),gy(3.6),'(γ − 1)mc²',{'font-size':17,fill:'#fbb040','font-weight':700});
+const pdot=el('circle',{r:9,fill:'#4ade80',stroke:'#0d1330','stroke-width':2},sv),cdot=el('circle',{r:7,fill:'#7dd3fc',stroke:'#0d1330','stroke-width':2},sv);
+// stacked bar: E0 + Ek = Etot in units of mc^2 (0..8)
+const BX=650,BW=90,by=k=>G.y0-Math.min(k,8)/8*(G.y0-G.y1);ax(BX-10,G.y0,BX+BW+10,G.y0);
+const b0=el('rect',{x:BX,width:BW,fill:'#c084fc'},sv),bk=el('rect',{x:BX,width:BW,fill:'#fbb040'},sv),t0=txt(sv,BX+BW/2,0,'E₀',{'font-size':18,'font-weight':700,fill:'#0d1330','text-anchor':'middle'}),tk=txt(sv,BX+BW/2,0,'Ek',{'font-size':18,'font-weight':700,fill:'#0d1330','text-anchor':'middle'});
+const tt=txt(sv,BX+BW/2,0,'',{'font-size':17,fill:'#eef2ff','text-anchor':'middle'});txt(sv,BX+BW/2,G.y0+24,'Etot = γmc²',{'font-size':16,fill:'#a5b4d8','text-anchor':'middle'});
+const fmt=E=>pt==='k'?sig(E/1e16)+'×10¹⁶ J':(E/MeV<1000?sig(E/MeV):sig(E/MeV/1000))+(E/MeV<1000?' MeV':' GeV');
+function upd(){const [nm,m]=PT[pt],g=1/Math.sqrt(1-v*v),E0=m*c*c,Ek=(g-1)*E0,Ecl=.5*m*v*v*c*c;
+ pdot.setAttribute('cx',gx(v));pdot.setAttribute('cy',gy(g-1));pdot.style.display=g-1>6.3?'none':'';cdot.setAttribute('cx',gx(v));cdot.setAttribute('cy',gy(.5*v*v));
+ b0.setAttribute('y',by(1));b0.setAttribute('height',G.y0-by(1));bk.setAttribute('y',by(g));bk.setAttribute('height',by(1)-by(g));t0.setAttribute('y',(by(1)+G.y0)/2+6);
+ tk.setAttribute('y',(by(g)+by(1))/2+6);tk.style.display=by(1)-by(g)>24?'':'none';tt.setAttribute('y',by(g)-10);tt.textContent=g>8?'γ = '+g.toFixed(1)+' (off scale)':'γ = '+g.toFixed(2);
+ document.getElementById('out').innerHTML=`${nm}: m = ${pt==='k'?'1 kg':sig(m/10**Math.floor(Math.log10(m)))+'×10<sup>'+Math.floor(Math.log10(m))+'</sup> kg'}<br>γ = <b class="hi">${g.toFixed(3)}</b><br>E₀ = mc² = <b style="color:#c084fc">${fmt(E0)}</b><br>Ek = (γ − 1)mc² = <b class="hi">${fmt(Ek)}</b><br>Etot = γmc² = <b class="gr">${fmt(g*E0)}</b><br><span style="color:#7dd3fc">½mv² would give ${fmt(Ecl)}</span>`}
+slider('v',x=>x.toFixed(3)+'c',x=>{v=x;upd()});group('.pr',x=>{const s=document.getElementById('v');s.value=x;s.dispatchEvent(new Event('input'))});group('.pt',x=>{pt=x;upd()});
+</script>

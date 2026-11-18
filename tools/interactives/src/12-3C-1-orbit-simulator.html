@@ -1,0 +1,82 @@
+<!--{"id":"12-3C-1-orbit-simulator","section":"3C","year":12,"title":"Orbit simulator","criteria":["U3 AoS2: satellites in circular orbits, v = √(GM/r)","U3 AoS2: Kepler's third law, geostationary orbit"],
+"blurb":"Pick an orbit radius around Earth: the speed, period and acceleration follow from gravity alone. Kepler's third law graph, and a geostationary orbit that stays above one town.",
+"source":"Cambridge VCE Physics Units 3&4, 3C Orbiting satellites (pp. 146–155). Circular orbits; Earth spins once per 23.9 h.","colour":"#4ade80"}-->
+<style>.sl{grid-template-columns:64px 1fr 124px}.pr{padding:5px 9px;font-size:16px}</style>
+<div class="ctx">Gravity provides the centripetal force, so <b>the orbit radius alone sets the speed and the period</b>. The satellite's mass cancels out.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#4ade80;padding:12px 16px"><h3 id="ptitle">Satellite around Earth</h3><svg id="sv" viewBox="0 0 860 440"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:10px"><h3 style="margin-bottom:2px">Orbit</h3>
+   <div class="sl"><span class="nm">height</span><input type="range" id="h" min="0" max="1000" step="1" value="200"><span class="v" id="hv"></span></div>
+   <div class="btns"><button class="pr" data-v="408">ISS</button><button class="pr" data-v="20200">GPS</button><button class="pr" data-v="35786">Geostationary</button><button class="pr" data-v="378030">Moon</button></div>
+   <div class="btns"><button id="tw" style="font-size:16px">Time warp: 1 s = 10 min</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:18px;line-height:1.45;padding:10px 18px">
+   <div>$v=\sqrt{\dfrac{GM}{r}}$ <span id="ov"></span></div>
+   <div>$T=2\pi\sqrt{\dfrac{r^3}{GM}}$ <span id="oT"></span></div>
+   <div>$a=\dfrac{GM}{r^2}$ <span id="oa"></span></div>
+  </div>
+  <div class="rule" id="rule" style="font-size:17px;padding:10px 14px"></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),GM=6.67e-11*5.97e24,RE=6.37e6,TS=86164;
+const SUP={'-':'⁻','0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'};
+function sci(v,n=3){const e=Math.floor(Math.log10(Math.abs(v)));let ms=(v/Math.pow(10,e)).toFixed(n-1);return e===0?ms:ms+' × 10'+String(e).split('').map(c=>SUP[c]).join('')}
+const HMIN=200,HMAX=380000,toH=s=>HMIN*Math.pow(HMAX/HMIN,s/1000),toS=h=>1000*Math.log(h/HMIN)/Math.log(HMAX/HMIN);
+let hk=408,warp=600,ang=0,spin=0;
+function mk(id,c){const m=el('marker',{id,viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:4,markerHeight:4,orient:'auto'},el('defs',{},sv));el('path',{d:'M0 0L10 5L0 10z',fill:c},m)}
+mk('ag','#4ade80');mk('ap','#f472b6');
+const CX=225,CY=220,RV=195;
+const orbit=el('circle',{cx:CX,cy:CY,fill:'none',stroke:'#4ade80','stroke-opacity':.45,'stroke-width':2.5,'stroke-dasharray':'6 6'},sv);
+const earth=el('g',{},sv),eC=el('circle',{cx:0,cy:0,fill:'#2563eb'},earth),eL=el('path',{fill:'#4ade80','fill-opacity':.55},earth),town=el('circle',{r:6,fill:'#fbb040',stroke:'#0d1330','stroke-width':2},earth);
+const link=el('line',{stroke:'#fbb040','stroke-width':2,'stroke-dasharray':'4 5'},sv);
+const sat=el('g',{},sv);el('rect',{x:-6,y:-6,width:12,height:12,fill:'#eef2ff'},sat);el('rect',{x:-22,y:-3,width:14,height:6,fill:'#7dd3fc'},sat);el('rect',{x:8,y:-3,width:14,height:6,fill:'#7dd3fc'},sat);
+const vA=el('line',{stroke:'#4ade80','stroke-width':5,'marker-end':'url(#ag)'},sv),fA=el('line',{stroke:'#f472b6','stroke-width':5,'marker-end':'url(#ap)'},sv);
+const vT=txt(sv,0,0,'v',{fill:'#4ade80','font-size':20,'font-weight':700}),fT=txt(sv,0,0,'F',{fill:'#f472b6','font-size':20,'font-weight':700});
+const clock=txt(sv,20,425,'',{fill:'#a5b4d8','font-size':16});const scaleT=txt(sv,20,26,'',{fill:'#7f8bb5','font-size':15});
+// Kepler graph
+const GX=515,GY=50,GW=320,GH=320;const kg=el('g',{},sv);
+el('rect',{x:GX,y:GY,width:GW,height:GH,fill:'#141a40',rx:6},kg);
+txt(kg,GX,GY-16,"Kepler's third law: r³ against T²",{fill:'#f472b6','font-size':16,'font-weight':700});
+txt(kg,GX+GW/2,GY+GH+26,'T²',{fill:'#7f8bb5','font-size':16,'text-anchor':'middle'});txt(kg,GX-10,GY+GH/2,'r³',{fill:'#7f8bb5','font-size':16,'text-anchor':'end'});
+const kl=el('line',{stroke:'#f472b6','stroke-width':3},kg),kref=el('g',{},kg),kdot=el('circle',{r:9,fill:'#fbb040'},kg);
+const kq=txt(kg,GX+GW/2,GY+GH+52,'',{fill:'#cfd7f5','font-size':16,'text-anchor':'middle'});
+const REF=[['ISS',408],['GPS',20200],['Geo',35786],['Moon',378030]];
+const fmtT=T=>T<7200?sig(T/60,3)+' min':T<3*86400?sig(T/3600,3)+' h':sig(T/86400,3)+' days';
+const kms=h=>Math.round(h).toLocaleString('en-AU').replace(/,/g,' ')+' km';
+let r,v,T,k;
+function upd(){r=RE+hk*1000;v=Math.sqrt(GM/r);T=2*Math.PI*Math.sqrt(r**3/GM);k=RV/Math.max(r,2*RE);
+ orbit.setAttribute('r',r*k);const re=Math.max(4,RE*k);eC.setAttribute('r',re);
+ let d='';[[.2,.6,.5],[2.4,.5,.4],[4.2,.7,.35]].forEach(([a,w,s])=>{d+=`M${re*Math.cos(a)},${re*Math.sin(a)}A${re},${re} 0 0 1 ${re*Math.cos(a+w)},${re*Math.sin(a+w)}L${re*s*Math.cos(a+w/2)},${re*s*Math.sin(a+w/2)}Z`});eL.setAttribute('d',d);
+ town.setAttribute('cx',re);town.setAttribute('cy',0);town.setAttribute('r',Math.max(3,Math.min(7,re/4)));
+ document.getElementById('hv').textContent=kms(hk);
+ document.getElementById('ov').innerHTML=`= <b class="gr">${sig(v/1000,3)} km s⁻¹</b>`;
+ document.getElementById('oT').innerHTML=`= <b class="hi">${fmtT(T)}</b>`;
+ document.getElementById('oa').innerHTML=`= ${sig(GM/r/r,3)} m s⁻²`;
+ // Kepler graph, axes to 1.25× current point
+ const xm=1.25*T*T,ym=1.25*r**3,gx=q=>GX+q/xm*GW,gy=q=>GY+GH-q/ym*GH;
+ kl.setAttribute('x1',GX);kl.setAttribute('y1',GY+GH);kl.setAttribute('x2',gx(xm));kl.setAttribute('y2',gy(GM/(4*Math.PI**2)*xm));
+ kdot.setAttribute('cx',gx(T*T));kdot.setAttribute('cy',gy(r**3));kref.innerHTML='';
+ REF.forEach(([n,h])=>{const rr=RE+h*1000,TT=2*Math.PI*Math.sqrt(rr**3/GM);if(rr**3<ym*.99&&Math.abs(h-hk)/h>.02&&rr**3>ym*.03){el('circle',{cx:gx(TT*TT),cy:gy(rr**3),r:6,fill:'#7dd3fc'},kref);txt(kref,gx(TT*TT)-10,gy(rr**3)+6,n,{fill:'#7dd3fc','font-size':15,'text-anchor':'end'})}});
+ kq.textContent=`r³/T² = GM/4π² = ${sci(r**3/T/T)} m³ s⁻²`;
+ scaleT.textContent='To scale';
+ const geo=Math.abs(T-TS)/TS<.01;
+ document.getElementById('rule').innerHTML=geo?'<b>Geostationary:</b> T matches Earth\'s spin, so it stays above the orange town (over the equator).':
+  hk<2000?'<b>Low orbit:</b> fastest, shortest period. The ISS circles Earth about 16 times a day.':
+  T<TS?'Higher orbit: <b>slower</b>, <b>longer period</b>. T is under a day, so it overtakes the town.':'T is longer than a day, so the town overtakes it. <b>Higher means slower.</b>';
+}
+document.querySelectorAll('.pr').forEach(b=>b.onclick=()=>{hk=+b.dataset.v;document.getElementById('h').value=toS(hk);upd()});
+const TW=[[600,'10 min'],[3600,'1 h'],[86400,'1 day']];let twi=0;document.getElementById('tw').onclick=e=>{twi=(twi+1)%3;warp=TW[twi][0];e.target.textContent='Time warp: 1 s = '+TW[twi][1]};
+document.getElementById('h').addEventListener('input',e=>{hk=toH(+e.target.value);upd()});document.getElementById('h').value=toS(hk);upd();
+let simT=0;
+IX.anims.push((t,dt)=>{const ds=IX.play?dt*IX.speed*warp:0;simT+=ds;ang-=2*Math.PI*ds/T;spin-=2*Math.PI*ds/TS;
+ earth.setAttribute('transform',`translate(${CX},${CY}) rotate(${spin*180/Math.PI})`);
+ const x=CX+r*k*Math.cos(ang),y=CY+r*k*Math.sin(ang);sat.setAttribute('transform',`translate(${x},${y}) rotate(${ang*180/Math.PI})`);
+ const tx=Math.sin(ang),ty=-Math.cos(ang),L=55;vA.setAttribute('x1',x);vA.setAttribute('y1',y);vA.setAttribute('x2',x+tx*L);vA.setAttribute('y2',y+ty*L);vT.setAttribute('x',x+tx*(L+14)-6);vT.setAttribute('y',y+ty*(L+14)+7);
+ const ux=-Math.cos(ang),uy=-Math.sin(ang),Lf=Math.min(45,r*k-RE*k-6);fA.style.display=fT.style.display=Lf>14?'':'none';
+ fA.setAttribute('x1',x);fA.setAttribute('y1',y);fA.setAttribute('x2',x+ux*Lf);fA.setAttribute('y2',y+uy*Lf);fT.setAttribute('x',x+ux*Lf*.5+uy*16-6);fT.setAttribute('y',y+uy*Lf*.5-ux*16+7);
+ const re=Math.max(4,RE*k);link.setAttribute('x1',CX+re*Math.cos(spin));link.setAttribute('y1',CY+re*Math.sin(spin));link.setAttribute('x2',x);link.setAttribute('y2',y);
+ clock.textContent='Time passed: '+fmtT(Math.max(1,simT)).replace(' min',' min');
+});
+</script>

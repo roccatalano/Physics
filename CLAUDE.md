@@ -65,7 +65,8 @@ Do now (3 retrieval questions: last lesson / last week / last term, from Cambrid
 - House style: the physics deck look (navy, moving background waves, Space Grotesk + Inter, coloured-edge cards) + 12MAG interactive rules: a context line, controls (sliders + preset buttons), live readouts, a rule box, footer = source + "Interactive by teacher". Must be physically correct at the slider extremes.
 - Section cards list their interactives (`build_year11.py` reads interactives.json). Copies go to `Desktop\2027 Planning\Year 11 Physics\Slides\interactives\`.
 - Backgrounds by AoS (Rocco, 18 Nov): Ch 1–2 waves, Ch 3–4 drifting/decaying particles, Ch 5–6 circuit traces with charge pulses, Ch 7–9 projectile arcs (`BG` in build.py, drawn in ix.js). Slide decks should use the same.
-- Done (18 Nov): 49 interactives covering every section except 4C (discussion). Possible extras: an elevator normal-force interactive (8B WE8B-4).
+- Year 12 (Rocco, 18 Nov, to share with the 12PHY teacher): 27 interactives from the Cambridge Units 3&4 textbook, files `12-<section>-…` with `"year":12` in the header; same gallery with a Year 11 / Year 12 toggle (`index.html#y12` opens Year 12). Year 12 backgrounds: Ch 1–2 motion arcs, 3–4 field lines, 5–6 rotating coils, 7–9 interference. Y12 2A and 2B reuse Year 11 9A-1, 8A-1, 8A-2 (`ALSO12` in build.py). Not on Year 11 section cards.
+- Done (18 Nov): Year 11: 49 interactives covering every section except 4C (discussion). Possible extras: an elevator normal-force interactive (8B WE8B-4).
 
 ## Planner
 - One lesson card per lesson. Show the Cambridge section, key knowledge, learning goals, the lesson sequence with minutes, every Cambridge resource with its file location, prac details and CFAT/SAC markers.

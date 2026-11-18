@@ -1,0 +1,67 @@
+<!--{"id":"12-7B-1-photoelectric","year":12,"section":"7B","title":"The photoelectric effect","criteria":["U4 AoS1: E = hf = hc/λ","U4 AoS1: Ek max = hf − φ, threshold frequency, work function","U4 AoS1: stopping potential and intensity"],
+"blurb":"Shine light on a metal. Change the frequency, the intensity and the collector voltage. Watch the photoelectrons, the Ek max against f graph and the current against voltage graph.",
+"source":"Cambridge VCE Physics Units 3&4, 7B Particle-like properties of light (pp. 373–386), Formula Ek max = hf − φ. Caesium value from Worked example 7B–1; other work functions typical values. Model: emitted Ek spread evenly from 0 to Ek max.","colour":"#fbb040"}-->
+<div class="ctx">Light shines on a metal plate in a vacuum tube. Electrons that escape (photoelectrons) can reach the collector and make a current. <b>Which change gives them more energy: brighter light or higher frequency?</b></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#fbb040;gap:6px"><h3 id="ptitle">Photocell and graph</h3><svg id="sv" viewBox="0 0 860 420"></svg>
+  <div class="btns"><button class="gm on" data-v="f">Graph: Ek max against f</button><button class="gm" data-v="v">Graph: current against voltage</button></div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#7dd3fc;gap:8px"><h3>Light and metal</h3>
+   <div class="sl" style="grid-template-columns:92px 1fr 118px"><span class="nm">f</span><input type="range" id="f" min="3" max="15" step="0.1" value="6.5"><span class="v" id="fv"></span></div>
+   <div class="sl" style="grid-template-columns:92px 1fr 118px"><span class="nm">Intensity</span><input type="range" id="I" min="0" max="100" step="5" value="60"><span class="v" id="Iv"></span></div>
+   <div class="sl" style="grid-template-columns:92px 1fr 118px"><span class="nm">Voltage</span><input type="range" id="V" min="-4" max="3" step="0.05" value="0"><span class="v" id="Vv"></span></div>
+   <div class="btns" id="mets"></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:18px;line-height:1.45;flex:1"><h3>Readout</h3><div id="out"></div></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),h=4.14e-15;
+const MET=[['Caesium',2.10],['Sodium',2.28],['Calcium',2.87],['Zinc',4.30]];let f=6.5e14,I=60,V=0,phi=2.10,met='Caesium',gm='f';
+document.getElementById('mets').innerHTML=MET.map(([n],i)=>`<button class="mt${i?'':' on'}" data-v="${i}" style="padding:5px 9px;font-size:16px">${n}</button>`).join('');
+function wlcol(nm){if(nm<380)return '#c084fc';if(nm>700)return '#f87171';let r=0,g=0,b=0;if(nm<440){r=(440-nm)/60;b=1}else if(nm<490){g=(nm-440)/50;b=1}else if(nm<510){g=1;b=(510-nm)/20}else if(nm<580){r=(nm-510)/70;g=1}else if(nm<645){r=1;g=(645-nm)/65}else r=1;return `rgb(${[r,g,b].map(v=>Math.round(255*(.25+.75*v))).join(',')})`}
+// tube (top band y 10..190)
+const PX=150,CX=740,TY=40,TB=170,D=CX-PX;
+el('rect',{x:110,y:20,width:680,height:170,rx:80,fill:'#141a40',stroke:'#36418a','stroke-width':2},sv);
+const plate=el('rect',{x:PX-14,y:TY,width:14,height:TB-TY,fill:'#a5b4d8'},sv),metT=txt(sv,PX-8,TB+16,'',{'font-size':16,fill:'#a5b4d8','text-anchor':'middle'});
+el('rect',{x:CX,y:TY,width:12,height:TB-TY,fill:'#a5b4d8'},sv);txt(sv,CX+6,TB+16,'collector',{'font-size':16,fill:'#a5b4d8','text-anchor':'middle'});
+const lamp=el('circle',{cx:40,cy:40,r:20,stroke:'#eef2ff','stroke-width':2},sv);txt(sv,40,80,'light',{'font-size':16,fill:'#a5b4d8','text-anchor':'middle'});
+const amT=txt(sv,450,208,'',{'font-size':18,fill:'#4ade80','text-anchor':'middle','font-weight':700});
+const gPh=el('g',{},sv),gEl=el('g',{},sv);let photons=[],els=[],acc=0,hits=0,col=0;
+// graph area y 225..415
+const G={x0:90,x1:840,y0:392,y1:232};const gg=el('g',{},sv);
+function drawGraph(){gg.innerHTML='';const ax=(x1,y1,x2,y2,c,w,da)=>el('line',{x1,y1,x2,y2,stroke:c||'#5b6690','stroke-width':w||2,'stroke-dasharray':da||''},gg);
+ if(gm==='f'){const fx=v=>G.x0+(v/15e14)*(G.x1-G.x0),ey=e=>(G.y0+G.y1)/2-e*(G.y0-G.y1)/10; // Ek -5..5 eV
+  ax(G.x0,ey(0),G.x1,ey(0));ax(G.x0,G.y0,G.x0,G.y1);
+  txt(gg,G.x1,ey(0)+22,'f (Hz)',{'font-size':16,fill:'#a5b4d8','text-anchor':'end'});txt(gg,G.x0+8,G.y1+4,'Ek max (eV)',{'font-size':16,fill:'#a5b4d8'});
+  [5,10].forEach(k=>{ax(fx(k*1e14),ey(0)-5,fx(k*1e14),ey(0)+5);txt(gg,fx(k*1e14),ey(0)+22,k+'×10¹⁴',{'font-size':15,fill:'#a5b4d8','text-anchor':'middle'})});
+  [-4,-2,2,4].forEach(e=>{ax(G.x0-5,ey(e),G.x0+5,ey(e));txt(gg,G.x0-10,ey(e)+5,e,{'font-size':15,fill:'#a5b4d8','text-anchor':'end'})});
+  const f0=phi/h;
+  MET.forEach(([n,p])=>{if(p===phi)return;const a=p/h;el('line',{x1:fx(a),y1:ey(0),x2:fx(15e14),y2:ey(h*15e14-p),stroke:'#36418a','stroke-width':2},gg)});
+  el('line',{x1:fx(0),y1:ey(-phi),x2:fx(f0),y2:ey(0),stroke:'#fbb040','stroke-width':2.5,'stroke-dasharray':'6 6'},gg);
+  el('line',{x1:fx(f0),y1:ey(0),x2:fx(15e14),y2:ey(h*15e14-phi),stroke:'#fbb040','stroke-width':4},gg);
+  txt(gg,fx(f0),ey(0)-12,'f₀',{'font-size':18,fill:'#fbb040','text-anchor':'middle'});txt(gg,G.x0+12,ey(-phi)+6,'−φ',{'font-size':18,fill:'#fbb040'});
+  txt(gg,G.x1,ey(h*15e14-phi)-34,'gradient = h = 4.14 × 10⁻¹⁵ eV s',{'font-size':16,fill:'#fbb040','text-anchor':'end'});
+  const ek=Math.max(0,h*f-phi);el('circle',{cx:fx(f),cy:ey(ek),r:9,fill:'#4ade80',stroke:'#0d1330','stroke-width':2},gg)}
+ else{const vx=v=>G.x0+(v+4)/7*(G.x1-G.x0),iy=i=>G.y0-i*(G.y0-G.y1-10);ax(G.x0,G.y0,G.x1,G.y0);ax(vx(0),G.y0,vx(0),G.y1);
+  txt(gg,G.x1,G.y0-40,'V (volts)',{'font-size':16,fill:'#a5b4d8','text-anchor':'end'});txt(gg,vx(0)+8,G.y1+4,'current',{'font-size':16,fill:'#a5b4d8'});
+  [-4,-3,-2,-1,0,1,2,3].forEach(v=>{ax(vx(v),G.y0-5,vx(v),G.y0+5);txt(gg,vx(v),G.y0+22,v,{'font-size':15,fill:'#a5b4d8','text-anchor':'middle'})});
+  const V0=Math.max(0,h*f-phi),cur=v=>I/100*(v>=0?1:(V0>0?Math.max(0,1+v/V0):0));let d='';for(let v=-4;v<=3.001;v+=.02)d+=(d?'L':'M')+vx(v).toFixed(1)+','+iy(cur(v)).toFixed(1);
+  el('path',{d,fill:'none',stroke:'#fbb040','stroke-width':4},gg);if(V0>0&&V0<4){txt(gg,vx(-V0)-6,G.y0-14,'−V₀',{'font-size':18,fill:'#fbb040','text-anchor':'middle'})}
+  el('circle',{cx:vx(V),cy:iy(cur(V)),r:9,fill:'#4ade80',stroke:'#0d1330','stroke-width':2},gg)}}
+function update(){const nm=3e8/f*1e9,E=h*f,ek=E-phi,c=wlcol(nm);lamp.setAttribute('fill',c);plate.setAttribute('fill','#a5b4d8');metT.textContent=met;col=c;
+ const V0=Math.max(0,ek);
+ document.getElementById('out').innerHTML=`λ = <b class="hi">${nm.toFixed(0)} nm</b> ${nm<380?'(UV)':nm>700?'(IR)':''}<br>photon E = hf = <b class="hi">${E.toFixed(2)} eV</b><br>work function φ = <b class="hi">${phi.toFixed(2)} eV</b><br>`+
+  (ek>0?`Ek max = hf − φ = <b class="gr">${ek.toFixed(2)} eV</b><br>stopping voltage V₀ = <b class="gr">${V0.toFixed(2)} V</b>`:`<b class="pk">hf &lt; φ: no photoelectrons</b><br>at any intensity`)+`<br><span style="color:#a5b4d8">threshold f₀ = φ/h = ${(phi/h/1e14).toFixed(2)}×10¹⁴ Hz</span>`;
+ drawGraph()}
+slider('f',v=>v.toFixed(1)+'×10¹⁴ Hz',v=>{f=v*1e14;update()});slider('I',v=>v+' %',v=>{I=v;update()});slider('V',v=>(v>0?'+':'')+v.toFixed(2)+' V',v=>{V=v;update()});
+group('.mt',v=>{[met,phi]=MET[+v];update()});group('.gm',v=>{gm=v;update()});
+IX.anims.push((t,dt)=>{dt=IX.play?dt*IX.speed:0;const E=h*f,ek=E-phi;
+ acc+=dt*I/100*14;while(acc>1){acc--;const y=TY+10+Math.random()*(TB-TY-20);photons.push({x:60,y:52,tx:PX-14,ty:y,u:0,e:el('circle',{r:5,fill:col},gPh)})}
+ photons=photons.filter(p=>{p.u+=dt*2.2;const x=p.x+(p.tx-p.x)*p.u,y=p.y+(p.ty-p.y)*p.u;p.e.setAttribute('cx',x);p.e.setAttribute('cy',y);
+  if(p.u>=1){p.e.remove();if(ek>0){const K=Math.random()*ek;els.push({x:0,y:p.ty,K0:K,dir:1,e:el('circle',{r:6,fill:'#7dd3fc',stroke:'#0d1330','stroke-width':1.5},gEl)})}return false}return true});
+ els=els.filter(q=>{const K=q.K0+V*q.x/D;let sp=60+170*Math.sqrt(Math.max(0,K));if(K<=0.0005&&q.dir>0){q.dir=-1}
+  q.x+=q.dir*sp*dt*.6;q.e.setAttribute('cx',PX+q.x);q.e.setAttribute('cy',q.y);
+  if(q.x>=D){q.e.remove();hits++;return false}if(q.x<0){q.e.remove();return false}return true});
+ amT.textContent='';});
+</script>

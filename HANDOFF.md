@@ -25,6 +25,8 @@ Start a new chat with: "Read HANDOFF.md and CLAUDE.md in roccatalano/Physics and
 
 * Interactives: 49 built (all sections except 4C), with per-AoS backgrounds. Gallery: interactives/index.html; each section card links its own. (Original plan list kept below.) Gallery: interactives/index.html. Planned for the rest (★ = priority): 1B ★EM spectrum explorer, EM wave 3D · 1C ★Snell's law ray box (TIR, critical angle), wavefronts, dispersion prism, optical fibre · 2A ★particle model of temperature, heating curve, conduction/convection · 2B ★blackbody curves (Wien), energy budget · 3A N–Z stability chart, strong vs electrostatic · 3B ★penetration, deflection · 3C ★decay simulator, half-life graph · 3D ★U-238 chain on N–Z grid · 3E dose calculator · 4A ★chain reaction with control rods · 4B ★binding energy curve, Sun's fusion · 5A ★charge flow/Q=It · 5B energy per charge · 5C ★series builder · 5D ★parallel builder · 5E power/brightness · 6A ★I–V tracer · 6B house wiring + cost · 6C ★fault simulator (earth, fuse, RCD) · 7A ★vector adder · 7B ★motion graph matcher · 7C ★SUVAT animator · 8A ★collision lab · 8B ★free body diagrams, inclined plane · 8C ★seesaw torque · 9A F–x area · 9B ★energy skate park · 9C ★spring lab.
 
+* Year 12 interactives: 27 (Units 3&4), same gallery with a Year 11/12 toggle; share https://roccatalano.github.io/Physics/interactives/#y12. Skipped: Y12 particle accelerator view.
+
 ## Next
 1. Year-by-year tabs (e.g. 2027 overview calendar like 12MAG).
 2. Lay out Unit 1 lessons on the calendar.

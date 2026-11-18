@@ -1,0 +1,58 @@
+<!--{"id":"12-5A-1-photovoltaic-cell","year":12,"section":"5A","title":"Solar panel: light in, current out","criteria":["U3 AoS3: photovoltaic cells produce DC","U3 AoS3: cells in series and parallel"],
+"blurb":"Sunlight hits a panel of silicon cells and drives a DC current through a load. Change the light intensity and the number of cells in series, then read V, I, P and efficiency.",
+"source":"Cambridge VCE Physics Units 3&4, 5A Solar panels: generating electricity from photovoltaic cells (pp. 243–250). Model: each cell 156 mm × 156 mm, 0.5 V at full sun (falls slightly in dim light), current 9 A at 1000 W/m², proportional to intensity.","colour":"#fbb040"}-->
+<div class="ctx">Light carries energy into a silicon cell. It frees electrons, which are pushed around the outside circuit as a <b>direct current</b>. Each cell gives about 0.5 V, so cells are joined <b>in series</b> to add their voltages.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#fbb040"><h3>Panel and load</h3><svg id="sv" viewBox="0 0 860 440"></svg></div>
+ <div class="side" style="width:370px">
+  <div class="card ctl" style="--c:#fbb040"><h3>Sunlight and panel</h3>
+   <div class="sl"><span class="nm">Intensity</span><input type="range" id="G" min="0" max="1000" step="50" value="1000"><span class="v" id="Gv"></span></div>
+   <div class="sl"><span class="nm">Cells</span><input type="range" id="n" min="1" max="72" step="1" value="60"><span class="v" id="nv"></span></div>
+   <div class="btns"><button class="pr" data-v="1000">Full sun</button><button class="pr" data-v="300">Cloudy</button><button class="pr" data-v="0">Night</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5"><h3>Readings</h3>
+   <div>Light power in: <b id="pin" class="hi"></b></div>
+   <div>$V$ = <b id="V" class="cy"></b> &nbsp; $I$ = <b id="I" class="pk"></b></div>
+   <div>$P = VI$ = <b id="P" class="gr"></b></div>
+   <div>Efficiency: <b id="eta"></b></div>
+  </div>
+  <div class="rule" id="rule" style="font-size:17px"></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv');let G=1000,n=60;const AC=0.156*0.156;
+// sun
+const sun=el('circle',{cx:70,cy:60,r:36,fill:'#fbb040'},sv);
+// panel grid
+const PX=170,PY=170,PW=520,PH=110;el('rect',{x:PX-6,y:PY-6,width:PW+12,height:PH+12,rx:8,fill:'#cbd5e1'},sv);
+const cellG=el('g',{},sv);
+txt(sv,PX+PW/2,PY+PH+40,'solar panel (cells in series)',{'text-anchor':'middle','font-size':17,fill:'#cfd7f5'});
+// circuit: from panel ends down to lamp
+const wire='M'+(PX-6)+' '+(PY+PH/2)+'H110V400H780V'+(PY+PH/2)+'H'+(PX+PW+6);
+el('path',{d:wire,fill:'none',stroke:'#cfd7f5','stroke-width':5},sv);
+txt(sv,PX-40,PY+PH/2-14,'−',{'font-size':30,fill:'#7dd3fc','text-anchor':'middle'});txt(sv,PX+PW+40,PY+PH/2-14,'+',{'font-size':30,fill:'#f472b6','text-anchor':'middle'});
+const glow=el('circle',{cx:445,cy:400,r:30,fill:'#fde047',opacity:0},sv);
+el('circle',{cx:445,cy:400,r:24,fill:'#141a40',stroke:'#cfd7f5','stroke-width':4},sv);
+el('path',{d:'M428 383L462 417M462 383L428 417',stroke:'#cfd7f5','stroke-width':4},sv);txt(sv,445,375-14,'load',{'text-anchor':'middle','font-size':16,fill:'#cfd7f5'});
+const wp=el('path',{d:wire,fill:'none',stroke:'none'},sv),WL=wp.getTotalLength();
+const dots=[...Array(34)].map(()=>el('circle',{r:6,fill:'#7dd3fc'},sv));
+txt(sv,640,430,'electrons flow − to + outside',{'font-size':15,fill:'#7dd3fc','text-anchor':'middle'});
+// photons
+const ph=[...Array(18)].map((_,i)=>({e:el('path',{fill:'none',stroke:'#fde047','stroke-width':3},sv),s:i/18,x:PX+30+((i*137)%480)}));
+function cells(){cellG.innerHTML='';const cols=Math.min(n,12),rows=Math.ceil(n/12);const w=PW/12,h=PH/6;
+ for(let i=0;i<n;i++){const c=i%12,r=Math.floor(i/12);el('rect',{x:PX+c*w+2,y:PY+r*h+2,width:w-4,height:h-4,rx:2,fill:'#1e3a8a',stroke:'#60a5fa','stroke-width':1},cellG)}}
+const vc=()=>G<=0?0:Math.max(0,0.5+0.026*Math.log(G/1000));
+function upd(){const Vv=n*vc(),Ii=9*G/1000,P=Vv*Ii,Pin=G*AC*n;
+ document.getElementById('pin').textContent=sig(Pin,3)+' W';document.getElementById('V').textContent=G?f2(Vv,1)+' V':'0 V';
+ document.getElementById('I').textContent=f2(Ii,1)+' A';document.getElementById('P').textContent=G?sig(P,3)+' W':'0 W';
+ document.getElementById('eta').textContent=G?Math.round(100*P/Pin)+' %':'no light';
+ sun.setAttribute('opacity',.15+.85*G/1000);glow.setAttribute('opacity',Math.min(.9,P/300));
+ document.getElementById('rule').innerHTML=G===0?'<b>No light, no current.</b> A solar panel needs a battery to supply power at night.':
+  '<b>More light:</b> more current.<br><b>More cells in series:</b> more voltage.'}
+slider('G',x=>x+' W/m²',x=>{G=x;upd()});slider('n',x=>x,x=>{n=x;cells();upd()});
+group('.pr',v=>{const r=document.getElementById('G');r.value=v;r.dispatchEvent(new Event('input'))});
+let ph0=0;IX.anims.push((t,dt)=>{const k=IX.play?dt*IX.speed:0;const Ii=9*G/1000;ph0+=k*Ii*14;
+ dots.forEach((d,i)=>{const p=wp.getPointAtLength(((WL-(ph0+i*WL/dots.length))%WL+WL)%WL);d.setAttribute('cx',p.x);d.setAttribute('cy',p.y);d.style.display=G?'':'none'});
+ ph.forEach(p=>{const u=((t*.6+p.s)%1);const x0=p.x-120*(1-u),y0=40+(PY-50)*u;let d='';for(let j=0;j<=12;j++){const s=j/12;d+=(j?'L':'M')+(x0-28*s+6*Math.sin(s*12)).toFixed(1)+','+(y0-34*s).toFixed(1)}
+  p.e.setAttribute('d',d);p.e.setAttribute('opacity',(p.s*18<Math.round(18*G/1000))?.9*(1-u*.3):0)})});
+</script>

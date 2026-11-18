@@ -1,0 +1,55 @@
+<!--{"id":"12-1C-1-projectile-launcher","year":12,"section":"1C","title":"Projectile launcher","criteria":["U3 AoS1: projectile motion near Earth's surface","U3 AoS1: qualitative effect of air resistance"],
+"blurb":"Launch a projectile at any speed, angle and height. Velocity components are drawn on the ball; time of flight, range and maximum height are worked live. Turn on air resistance to compare the path.",
+"source":"Cambridge VCE Physics Units 3&4, 1C Projectile motion (pp. 38–47), Worked example 1C–1, g = 9.8 m s⁻². Air resistance path is a qualitative model (drag ∝ v², terminal speed 30 m s⁻¹).","colour":"#fbb040"}-->
+<div class="ctx">Treat the motion as two parts. Horizontally the velocity <b>stays the same</b>. Vertically the ball accelerates down at <b>9.8 m s⁻²</b> the whole time, even on the way up.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#fbb040;padding:12px 16px"><h3>The flight</h3><svg id="sv" viewBox="0 0 860 470"></svg></div>
+ <div class="side">
+  <style>.sl{grid-template-columns:62px 1fr 96px}</style>
+  <div class="card ctl" style="--c:#fbb040;gap:9px"><h3>Launcher</h3>
+   <div class="sl"><span class="nm">$u$</span><input type="range" id="u" min="5" max="40" step="1" value="37"><span class="v" id="uv"></span></div>
+   <div class="sl"><span class="nm">$\theta$</span><input type="range" id="th" min="0" max="90" step="1" value="33"><span class="v" id="thv"></span></div>
+   <div class="sl"><span class="nm">height</span><input type="range" id="h" min="0" max="40" step="1" value="0"><span class="v" id="hv"></span></div>
+   <div class="btns"><button class="pr" data-v="37,33,0">WE 1C–1</button><button class="pr" data-v="20,0,30">Off a cliff</button><button class="pr" data-v="25,45,0">45°</button></div>
+   <div class="btns"><button id="air">Air resistance</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:18px;line-height:1.5;padding:12px 18px"><h3>Calculate (no air)</h3><div id="ro"></div></div>
+ </div>
+</div>
+<script>
+const g=9.8,VT=30,sv=document.getElementById('sv');let u=37,th=33,h0=0,air=0,S,tf,R,H,ox=60,oy=420,airPts=[];
+const grid=el('g',{},sv),gnd=el('line',{x1:20,x2:850,stroke:'#5b6690','stroke-width':3},sv),cliff=el('rect',{fill:'#232c63',stroke:'#5b6690','stroke-width':2},sv);
+const pAir=el('path',{fill:'none',stroke:'#f472b6','stroke-width':3,'stroke-dasharray':'8 7'},sv),pTh=el('path',{fill:'none',stroke:'#fbb040','stroke-width':3,'stroke-opacity':.55},sv);
+const hl=el('line',{stroke:'#a5b4d8','stroke-width':2,'stroke-dasharray':'4 6'},sv),hT=txt(sv,0,0,'',{fill:'#a5b4d8','font-size':18}),rT=txt(sv,0,0,'',{fill:'#fbb040','font-size':19,'text-anchor':'middle'}),aT=txt(sv,0,0,'',{fill:'#f472b6','font-size':18,'text-anchor':'end'});
+const dots=el('g',{},sv),ballA=el('circle',{r:9,fill:'#f472b6'},sv),ball=el('circle',{r:11,fill:'#fbb040'},sv);
+function arrow(c){const gg=el('g',{},sv),l=el('line',{stroke:c,'stroke-width':5,'stroke-linecap':'round'},gg),hd=el('path',{fill:c},gg),t=txt(gg,0,0,'',{fill:c,'font-size':19,'font-weight':700});
+ return(x,y,dx,dy,s,lx,ly)=>{const L=Math.hypot(dx,dy);gg.style.display=L<6?'none':'';if(L<6)return;const ux=dx/L,uy=dy/L,X=x+dx,Y=y+dy;l.setAttribute('x1',x);l.setAttribute('y1',y);l.setAttribute('x2',X-ux*12);l.setAttribute('y2',Y-uy*12);
+  hd.setAttribute('d',`M${X},${Y}L${X-ux*18-uy*9},${Y-uy*18+ux*9}L${X-ux*18+uy*9},${Y-uy*18-ux*9}Z`);t.setAttribute('x',X+lx);t.setAttribute('y',Y+ly);t.innerHTML=s}}
+const aH=arrow('#7dd3fc'),aV=arrow('#4ade80');
+const X=x=>ox+x*S,Y=y=>oy-y*S;
+function upd(){const r=th*Math.PI/180,uh=u*Math.cos(r),uv0=u*Math.sin(r);tf=(uv0+Math.sqrt(uv0*uv0+2*g*h0))/g;R=uh*tf;H=h0+uv0*uv0/(2*g);
+ // drag path (Euler, small step)
+ airPts=[];let x=0,y=h0,vx=uh,vy=uv0,t=0;const k=g/(VT*VT);while(y>=0&&t<20){airPts.push([t,x,y]);const v=Math.hypot(vx,vy);vx-=k*v*vx*.002;vy-=(g+k*v*vy)*.002;x+=vx*.002;y+=vy*.002;t+=.002}airPts.push([t,x,Math.max(y,0)]);
+ const W=Math.max(R,10),Ht=Math.max(H,5);S=Math.min(760/W,380/Ht);ox=60;oy=430;
+ gnd.setAttribute('y1',oy);gnd.setAttribute('y2',oy);cliff.setAttribute('x',ox-50);cliff.setAttribute('width',50);cliff.setAttribute('y',Y(h0));cliff.setAttribute('height',h0*S);cliff.style.display=h0?'':'none';
+ let d='';for(let i=0;i<=120;i++){const t=tf*i/120;d+=(i?'L':'M')+X(uh*t).toFixed(1)+','+Y(h0+uv0*t-.5*g*t*t).toFixed(1)}pTh.setAttribute('d',d);
+ pAir.setAttribute('d',airPts.filter((_,i)=>i%20==0||i==airPts.length-1).map((p,i)=>(i?'L':'M')+X(p[1]).toFixed(1)+','+Y(p[2]).toFixed(1)).join(''));pAir.style.display=air?'':'none';
+ const xa=uh*uv0/g;hl.setAttribute('x1',X(Math.max(0,xa))-60);hl.setAttribute('x2',X(Math.max(0,xa))+60);hl.setAttribute('y1',Y(H));hl.setAttribute('y2',Y(H));
+ hT.setAttribute('x',X(Math.max(0,xa))+66);hT.setAttribute('y',Y(H)+6);hT.textContent='max height '+f2(H,1)+' m';
+ rT.setAttribute('x',Math.min(790,Math.max(120,X(R))));rT.setAttribute('y',oy+30);rT.textContent='range '+f2(R,1)+' m';
+ const ar=airPts[airPts.length-1];aT.setAttribute('x',Math.max(150,X(ar[1])-14));aT.setAttribute('y',oy-12);aT.textContent=air&&ar[1]>3?'with air '+f2(ar[1],0)+' m':'';
+ ballA.style.display=air?'':'none';
+ document.getElementById('ro').innerHTML=`<span class="cy">u<sub>h</sub> = u cos θ</span> = <b>${f2(uh,1)} m s⁻¹</b><br><span class="gr">u<sub>v</sub> = u sin θ</span> = <b>${f2(uv0,1)} m s⁻¹</b><br>time of flight = <b>${f2(tf,2)} s</b><br>range = u<sub>h</sub> t = <b class="hi">${f2(R,1)} m</b><br>max height = <b>${f2(H,1)} m</b>`;
+ // dots every 0.25 s
+ dots.innerHTML='';for(let t=0;t<=tf+1e-9;t+=Math.max(.25,tf/24))el('circle',{cx:X(uh*t),cy:Y(h0+uv0*t-.5*g*t*t),r:4,fill:'#fbb040','fill-opacity':.5},dots);T=0}
+let T=0;
+slider('u',x=>x+' m s⁻¹',x=>{u=x;upd()});slider('th',x=>x+'°',x=>{th=x;upd()});slider('h',x=>x+' m',x=>{h0=x;upd()});
+group('.pr',v=>{const[a,b,c]=v.split(',');for(const[id,val]of[['u',a],['th',b],['h',c]]){const s=document.getElementById(id);s.value=val;s.dispatchEvent(new Event('input'))}});
+toggle('air',v=>{air=v?1:0;upd()},false);
+IX.anims.push((t,dt)=>{if(IX.play)T+=dt*IX.speed;const end=Math.max(tf,air?airPts[airPts.length-1][0]:0);if(T>end+1.2)T=0;
+ const r=th*Math.PI/180,uh=u*Math.cos(r),uv0=u*Math.sin(r),tt=Math.min(T,tf),x=uh*tt,y=h0+uv0*tt-.5*g*tt*tt,vv=uv0-g*tt;
+ ball.setAttribute('cx',X(x));ball.setAttribute('cy',Y(y));const k=3.2;
+ aH(X(x),Y(y),uh*k,0,'v<tspan font-size="14" dy="5">h</tspan>',8,6);aV(X(x),Y(y),0,-vv*k,'v<tspan font-size="14" dy="5">v</tspan>',10,vv>0?-6:18);
+ if(air){const i=Math.min(airPts.length-1,Math.round(T/.002)),p=airPts[i];ballA.setAttribute('cx',X(p[1]));ballA.setAttribute('cy',Y(p[2]))}});
+upd();
+</script>

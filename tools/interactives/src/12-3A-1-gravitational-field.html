@@ -1,0 +1,84 @@
+<!--{"id":"12-3A-1-gravitational-field","section":"3A","year":12,"title":"Gravitational field explorer","criteria":["U3 AoS2: gravitational fields, field lines","U3 AoS2: g = GM/r², inverse square law"],
+"blurb":"Move a test mass away from Earth, the Moon, Mars or Jupiter and watch g fall as 1/r². Earth–Moon view traces the combined field lines and finds the point where g = 0.",
+"source":"Cambridge VCE Physics Units 3&4, 3A Gravity and gravitational fields (pp. 122–137). Point masses; Earth–Moon sizes not to scale.","colour":"#7dd3fc"}-->
+<style>.sl{grid-template-columns:70px 1fr 120px}.bd{padding:6px 11px}</style>
+<div class="ctx">Gravity is a field: every point around a mass has a field strength <b>g</b>, in N kg⁻¹. Move the test mass out. <b>Double the distance, and what happens to g?</b></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc;padding:12px 16px"><h3 id="ptitle">Field around one body</h3><svg id="sv" viewBox="0 0 860 470"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:10px"><h3 style="margin-bottom:2px">Set up</h3>
+   <div class="btns"><button class="md on" data-v="one">One body</button><button class="md" data-v="em">Earth and Moon</button></div>
+   <div class="btns" id="bodies"><button class="bd on" data-v="0">Earth</button><button class="bd" data-v="1">Moon</button><button class="bd" data-v="2">Mars</button><button class="bd" data-v="3">Jupiter</button></div>
+   <div class="sl" id="rrow"><span class="nm">r</span><input type="range" id="r" min="1" max="6" step="0.05" value="2"><span class="v" id="rv"></span></div>
+   <div class="sl" id="xrow" style="display:none"><span class="nm">probe</span><input type="range" id="x" min="0.05" max="0.97" step="0.01" value="0.5"><span class="v" id="xv"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5;padding:12px 18px"><h3>Calculate</h3>
+   <div>$g = G\dfrac{M}{r^2}$</div><div id="calc" style="font-size:18px"></div>
+  </div>
+  <div class="rule" id="rule" style="font-size:17px;padding:10px 14px"></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),G=6.67e-11;
+const B=[{n:'Earth',M:5.97e24,R:6.37e6,c:'#7dd3fc'},{n:'Moon',M:7.35e22,R:1.74e6,c:'#cbd5e1'},{n:'Mars',M:6.42e23,R:3.39e6,c:'#f97316'},{n:'Jupiter',M:1.90e27,R:7.15e7,c:'#fbbf24'}];
+let mode='one',bi=0,rr=2,px=.5;
+const SUP={'-':'⁻','0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'};
+function sci(v,n=3){const e=Math.floor(Math.log10(Math.abs(v))),m=v/Math.pow(10,e);let ms=m.toFixed(n-1);if(+ms>=10){return sci(v*1.0000001,n)}return e===0?ms:ms+' × 10'+String(e).split('').map(c=>SUP[c]).join('')}
+function mk(id,c){const m=el('marker',{id,viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:4,markerHeight:4,orient:'auto'},el('defs',{},sv));el('path',{d:'M0 0L10 5L0 10z',fill:c},m)}
+mk('ab','#7dd3fc');mk('ao','#fbb040');mk('ap','#f472b6');
+const one=el('g',{},sv),em=el('g',{},sv);
+// ---------- one body ----------
+const CX=215,CY=235,RP=36;
+const lines=el('g',{},one);for(let k=0;k<16;k++){const a=k/16*2*Math.PI;el('line',{x1:CX+Math.cos(a)*RP*6,y1:CY+Math.sin(a)*RP*6,x2:CX+Math.cos(a)*(RP+8),y2:CY+Math.sin(a)*(RP+8),stroke:'#7dd3fc','stroke-opacity':.55,'stroke-width':2,'marker-end':'url(#ab)'},lines)}
+[2,3,4,5].forEach(n=>{el('circle',{cx:CX,cy:CY,r:RP*n,fill:'none',stroke:'#36418a','stroke-width':1.5,'stroke-dasharray':'5 6'},one);txt(one,CX-6,CY-RP*n-6,n+'R',{fill:'#7f8bb5','font-size':15,'text-anchor':'end'})});
+const planet=el('circle',{cx:CX,cy:CY,r:RP},one);const pname=txt(one,CX,CY+6,'',{'text-anchor':'middle','font-size':15,fill:'#0d1330','font-weight':700});
+const tmLine=el('line',{stroke:'#fbb040','stroke-width':5,'marker-end':'url(#ao)'},one);
+const tm=el('circle',{r:9,fill:'#fbb040'},one);const tmT=txt(one,0,0,'',{fill:'#fbb040','font-size':17,'font-weight':700,'text-anchor':'middle'});
+// graph
+const GX0=505,GW=320,GY0=40,GH=360;const gx=r=>GX0+(r-1)/5*GW,gy=f=>GY0+GH-f*GH;
+el('rect',{x:GX0,y:GY0,width:GW,height:GH,fill:'#141a40',rx:6},one);
+[1,1/4,1/9,1/16].forEach((f,i)=>{el('line',{x1:GX0,x2:GX0+GW,y1:gy(f),y2:gy(f),stroke:'#232c63','stroke-width':1},one);txt(one,GX0-8,gy(f)+5,['g₀','g₀/4','g₀/9','g₀/16'][i],{fill:'#7f8bb5','font-size':14,'text-anchor':'end'})});
+for(let r=1;r<=6;r++){el('line',{x1:gx(r),x2:gx(r),y1:GY0+GH,y2:GY0+GH+6,stroke:'#5b6690','stroke-width':2},one);txt(one,gx(r),GY0+GH+24,r+'R',{fill:'#7f8bb5','font-size':15,'text-anchor':'middle'})}
+txt(one,GX0+GW/2,GY0+GH+50,'r, distance from the centre',{fill:'#7f8bb5','font-size':15,'text-anchor':'middle'});
+txt(one,GX0,GY0-14,'g against r',{fill:'#f472b6','font-size':17,'font-weight':700});
+let d='';for(let i=0;i<=100;i++){const r=1+5*i/100;d+=(i?'L':'M')+gx(r).toFixed(1)+','+gy(1/r/r).toFixed(1)}el('path',{d,fill:'none',stroke:'#f472b6','stroke-width':4},one);
+const gLineV=el('line',{stroke:'#fbb040','stroke-width':2,'stroke-dasharray':'4 4'},one),gLineH=el('line',{stroke:'#fbb040','stroke-width':2,'stroke-dasharray':'4 4'},one),gDot=el('circle',{r:8,fill:'#fbb040'},one);
+// ---------- Earth and Moon ----------
+const EX=90,MX=780,EY=235,D=3.84e8,ME=5.97e24,MM=7.35e22;const sc=(MX-EX)/D;
+const field=(x,y)=>{let gxv=0,gyv=0;[[EX,ME],[MX,MM]].forEach(([cx,M])=>{const dx=(x-cx)/sc,dy=(y-EY)/sc,r=Math.hypot(dx,dy);const g=G*M/r/r;gxv-=g*dx/r;gyv-=g*dy/r});return[gxv,gyv]};
+const eml=el('g',{},em);
+function trace(cx,cy,a,r0){let x=cx+r0*Math.cos(a),y=cy+r0*Math.sin(a);const pts=[[x,y]];for(let i=0;i<700;i++){const [fx,fy]=field(x,y),m=Math.hypot(fx,fy);if(m<1e-6)break;x-=3*fx/m;y-=3*fy/m;pts.push([x,y]);if(x<-10||x>870||y<-10||y>480)break;if(Math.hypot(x-EX,y-EY)<20&&i>5)break;if(Math.hypot(x-MX,y-EY)<10&&i>5)break;
+  if(pts.length>3){const [px2,py2]=pts[pts.length-3];if(Math.hypot(x-px2,y-py2)<2)break}}return pts}
+function drawLine(pts){if(pts.length<4)return;el('path',{d:pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+','+p[1].toFixed(1)).join(''),fill:'none',stroke:'#7dd3fc','stroke-opacity':.5,'stroke-width':2},eml);
+ const k=Math.floor(pts.length*.45),[x1,y1]=pts[k+1],[x2,y2]=pts[k];el('line',{x1,y1,x2,y2,stroke:'#7dd3fc','stroke-width':2,'marker-end':'url(#ab)'},eml)}
+for(let k=0;k<24;k++)drawLine(trace(EX,EY,k/24*2*Math.PI+.13,22));
+for(let k=0;k<10;k++)drawLine(trace(MX,EY,k/10*2*Math.PI+.3,12));
+el('circle',{cx:EX,cy:EY,r:20,fill:'#7dd3fc'},em);txt(em,EX,EY+44,'Earth',{'text-anchor':'middle','font-size':16,fill:'#7dd3fc'});
+el('circle',{cx:MX,cy:EY,r:9,fill:'#cbd5e1'},em);txt(em,MX,EY+36,'Moon',{'text-anchor':'middle','font-size':16,fill:'#cbd5e1'});
+const xn=1/(1+Math.sqrt(MM/ME));el('line',{x1:EX+xn*(MX-EX),x2:EX+xn*(MX-EX),y1:EY-70,y2:EY+70,stroke:'#4ade80','stroke-width':2,'stroke-dasharray':'5 5'},em);
+txt(em,EX+xn*(MX-EX),EY-80,'g = 0',{fill:'#4ade80','font-size':17,'font-weight':700,'text-anchor':'middle'});
+const prb=el('circle',{r:8,fill:'#fbb040'},em),prA=el('line',{stroke:'#fbb040','stroke-width':5,'marker-end':'url(#ao)'},em);
+txt(em,430,455,'Distances to scale. Earth and Moon drawn larger than scale.',{fill:'#7f8bb5','font-size':14,'text-anchor':'middle'});
+const km=m=>Math.round(m/1e6).toLocaleString('en-AU').replace(',',' ')+' 000 km';
+function upd(){one.style.display=mode==='one'?'':'none';em.style.display=mode==='em'?'':'none';
+ document.getElementById('bodies').style.display=mode==='one'?'':'none';document.getElementById('rrow').style.display=mode==='one'?'':'none';document.getElementById('xrow').style.display=mode==='em'?'':'none';
+ const c=document.getElementById('calc'),ru=document.getElementById('rule');
+ if(mode==='one'){const b=B[bi],r=rr*b.R,g=G*b.M/r/r,g0=G*b.M/b.R/b.R;
+  document.getElementById('ptitle').textContent='Field around '+(b.n==='Earth'||b.n==='Moon'?'the '+b.n:b.n)+' (lines point to the centre)';
+  planet.setAttribute('fill',b.c);pname.textContent=b.n;
+  const x=CX+rr*RP;tm.setAttribute('cx',x);tm.setAttribute('cy',CY);const L=Math.max(12,70*g/g0);tmLine.setAttribute('x1',x-10);tmLine.setAttribute('x2',x-10-L);tmLine.setAttribute('y1',CY);tmLine.setAttribute('y2',CY);
+  tmT.setAttribute('x',x);tmT.setAttribute('y',CY-18);tmT.textContent='g = '+sig(g,3);
+  const f=1/rr/rr;gDot.setAttribute('cx',gx(rr));gDot.setAttribute('cy',gy(f));gLineV.setAttribute('x1',gx(rr));gLineV.setAttribute('x2',gx(rr));gLineV.setAttribute('y1',gy(f));gLineV.setAttribute('y2',GY0+GH);gLineH.setAttribute('x1',GX0);gLineH.setAttribute('x2',gx(rr));gLineH.setAttribute('y1',gy(f));gLineH.setAttribute('y2',gy(f));
+  c.innerHTML=`r = ${sci(r)} m<br>g = <b class="hi">${sig(g,3)} N kg⁻¹</b> (surface ${sig(g0,3)})`;
+  ru.innerHTML=`At <b>${f2(rr,2)}R</b>, g is <b>1/${sig(rr*rr,3)}</b> of the surface value. Twice as far: <b>a quarter</b> of the field.`;
+  document.getElementById('rv').textContent=f2(rr,2)+'R';}
+ else{document.getElementById('ptitle').textContent='Earth and Moon: the combined field';
+  const x=EX+px*(MX-EX),[fx,fy]=field(x,EY),g=Math.abs(fx);prb.setAttribute('cx',x);prb.setAttribute('cy',EY);
+  const L=Math.min(90,Math.max(0,22*Math.log10(1+g/1e-4)));prA.setAttribute('x1',x);prA.setAttribute('y1',EY);prA.setAttribute('x2',x+Math.sign(fx)*L);prA.setAttribute('y2',EY);prA.style.display=L<4?'none':'';
+  const dE=px*D,dM=(1-px)*D,gE=G*ME/dE/dE,gM=G*MM/dM/dM;
+  c.innerHTML=`Earth: ${sci(gE)} N kg⁻¹ (left)<br>Moon: ${sci(gM)} N kg⁻¹ (right)<br>Net: <b class="hi">${sci(Math.abs(gE-gM))} N kg⁻¹ ${gE>gM?'to Earth':'to the Moon'}</b>`;
+  ru.innerHTML=`The fields cancel <b>${Math.round(xn*100)}% of the way</b> to the Moon (${km(xn*D)} from Earth), because the Moon has only 1/81 of Earth's mass.`;
+  document.getElementById('xv').textContent=km(px*D);}}
+group('.md',v=>{mode=v;upd()});group('.bd',v=>{bi=+v;upd()});
+slider('r',null,v=>{rr=v;upd()});slider('x',null,v=>{px=v;upd()});
+</script>

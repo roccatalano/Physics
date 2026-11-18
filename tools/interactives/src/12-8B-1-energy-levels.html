@@ -1,0 +1,64 @@
+<!--{"id":"12-8B-1-energy-levels","year":12,"section":"8B","title":"Energy levels and line spectra","criteria":["U4 AoS1: ΔE = hf for absorbed or emitted photons","U4 AoS1: E = hf = hc/λ","U4 AoS1: emission and absorption spectra"],
+"blurb":"Click two energy levels. The atom emits or absorbs one photon with exactly the energy difference, and a line appears in the spectrum at λ = hc/ΔE.",
+"source":"Cambridge VCE Physics Units 3&4, 8B Similarities between light and matter (pp. 401–420), Figure 8B–10 (hydrogen, ground state = 0 eV) and Worked example 8B–4 (sodium). Energy axis broken to spread the upper levels.","colour":"#f472b6"}-->
+<div class="ctx">An atom can only have certain energies. When it changes level it emits or absorbs <b>one photon</b> whose energy equals the difference. <b>Click a starting level, then an ending level.</b></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#f472b6"><h3 id="ptitle">Energy state diagram and spectrum</h3><svg id="sv" viewBox="0 0 860 400"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:9px"><h3>Atom and spectrum</h3>
+   <div class="btns"><button class="at on" data-v="H">Hydrogen</button><button class="at" data-v="Na">Sodium</button></div>
+   <div class="btns"><button class="md on" data-v="e">Emission</button><button class="md" data-v="a">Absorption</button></div>
+   <div class="btns"><button id="all">Show all lines</button><button id="clr">Clear</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:18px;line-height:1.45;flex:1"><h3>Photon</h3><div id="out">Click a level on the diagram to start.</div></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),HC=1.24e-6,H=4.14e-15;
+const ATOMS={H:{lv:[0,10.2,12.09,12.75,13.06,13.22],ion:13.6,y:e=>e<10?380-e*3:350-(e-10)*88},Na:{lv:[0,2.10,3.19,3.61,3.75],ion:null,y:e=>380-e*90}};
+let atom='H',mode='e',from=null,shown=new Set(),anim=null;
+function wlcol(nm){let r=0,g=0,b=0;if(nm<440){r=(440-nm)/60;b=1}else if(nm<490){g=(nm-440)/50;b=1}else if(nm<510){g=1;b=(510-nm)/20}else if(nm<580){r=(nm-510)/70;g=1}else if(nm<645){r=1;g=(645-nm)/65}else r=1;
+ const k=nm<420?.45+.55*(nm-380)/40:nm>700?.45+.55*(750-nm)/50:1;return `rgb(${[r,g,b].map(v=>Math.round(255*Math.max(0,v)*Math.max(.3,k))).join(',')})`}
+const region=nm=>nm<380?'ultraviolet':nm>750?'infrared':'visible';
+const gD=el('g',{},sv),gS=el('g',{},sv),gA=el('g',{},sv);const SX0=490,SX1=840,L0=380,L1=750,sx=nm=>SX0+(nm-L0)/(L1-L0)*(SX1-SX0);
+const dot=el('circle',{r:10,fill:'#fbb040',stroke:'#0d1330','stroke-width':2},gA),ph=el('path',{fill:'none','stroke-width':4},gA),pht=txt(gA,0,0,'',{'font-size':17,'text-anchor':'middle'});
+function build(){gD.innerHTML='';gS.innerHTML='';const A=ATOMS[atom];
+ txt(gD,70,16,'Energy (eV)',{'font-size':17,fill:'#a5b4d8'});
+ if(A.ion){const y=A.y(A.ion);el('line',{x1:70,x2:330,y1:y,y2:y,stroke:'#a5b4d8','stroke-width':2,'stroke-dasharray':'6 6'},gD);txt(gD,10,y-6,'13.6',{'font-size':17,fill:'#a5b4d8'});txt(gD,338,y+5,'ionised',{'font-size':17,fill:'#a5b4d8'});
+  el('path',{d:'M78 362l12 -6l-12 -6l12 -6',fill:'none',stroke:'#a5b4d8','stroke-width':2},gD)}
+ const LY=[];A.lv.forEach((e,i)=>{let ly=A.y(e)+6;if(i&&LY[i-1]-ly<18)ly=LY[i-1]-18;LY.push(ly)});
+ A.lv.forEach((e,i)=>{const y=A.y(e),g=el('g',{style:'cursor:pointer'},gD);el('rect',{x:60,y:y-7,width:280,height:14,fill:'transparent'},g);
+  el('line',{x1:70,x2:330,y1:y,y2:y,stroke:from===i?'#fbb040':'#eef2ff','stroke-width':from===i?5:3},g);
+  const ly=LY[i];txt(g,10,ly,e.toFixed(2),{'font-size':17,fill:'#cfd7f5'});
+  txt(g,338,ly,'n = '+(i+1)+(i?'':' ground'),{'font-size':17,fill:'#cfd7f5'});g.onclick=()=>pick(i)});
+ // spectrum strips
+ const ys=mode==='e'?[60,70]:[60,70];txt(gS,SX0,40,mode==='e'?'Emission spectrum':'Absorption spectrum',{'font-size':18,'font-weight':700,fill:'#f472b6'});
+ if(mode==='a'){for(let nm=L0;nm<L1;nm+=2)el('rect',{x:sx(nm),y:56,width:(SX1-SX0)/(L1-L0)*2+.6,height:120,fill:wlcol(nm+1)},gS)}else el('rect',{x:SX0,y:56,width:SX1-SX0,height:120,fill:'#05070f'},gS);
+ el('rect',{x:SX0,y:56,width:SX1-SX0,height:120,fill:'none',stroke:'#36418a','stroke-width':2},gS);
+ [400,500,600,700].forEach(nm=>{el('line',{x1:sx(nm),x2:sx(nm),y1:176,y2:184,stroke:'#a5b4d8','stroke-width':2},gS);txt(gS,sx(nm),202,nm,{'font-size':15,fill:'#a5b4d8','text-anchor':'middle'})});
+ txt(gS,SX1,222,'λ (nm)',{'font-size':15,fill:'#a5b4d8','text-anchor':'end'});
+ const off=[];[...shown].forEach(k=>{const [a,b]=k.split('-').map(Number),dE=Math.abs(A.lv[a]-A.lv[b]),nm=HC/dE*1e9;
+  if(nm>=L0&&nm<=L1)el('rect',{x:sx(nm)-2.5,y:56,width:5,height:120,fill:mode==='e'?wlcol(nm):'#05070f'},gS);else off.push(nm)});
+ off.sort((a,b)=>a-b);const uv=off.filter(n=>n<L0).map(n=>n.toFixed(0)),ir=off.filter(n=>n>L1).map(n=>n.toFixed(0));
+ if(uv.length)txt(gS,SX0,250,'UV (not shown): '+uv.join(', ')+' nm',{'font-size':16,fill:'#c084fc'});
+ if(ir.length)txt(gS,SX0,272,'IR (not shown): '+ir.slice(0,4).join(', ')+(ir.length>4?' …':'')+' nm',{'font-size':16,fill:'#f87171'});
+ txt(gS,SX0,322,mode==='e'?'Bright lines on a dark background:':'Dark lines in a continuous spectrum:',{'font-size':16,fill:'#a5b4d8'});
+ txt(gS,SX0,344,mode==='e'?'the atom drops down and emits.':'the atom absorbs, then jumps up.',{'font-size':16,fill:'#a5b4d8'});
+ dot.style.display=from===null?'none':'';if(from!==null){dot.setAttribute('cx',200);dot.setAttribute('cy',A.y(A.lv[from]))}}
+function pick(i){const A=ATOMS[atom];if(from===null||from===i){from=i;ph.setAttribute('d','');pht.textContent='';build();
+  document.getElementById('out').innerHTML=`Start: <b class="hi">n = ${i+1}</b> (${A.lv[i].toFixed(2)} eV).<br>Now click ${mode==='e'?'a <b>lower</b>':'a <b>higher</b>'} level.`;return}
+ if(mode==='e'&&i>from||mode==='a'&&i<from){document.getElementById('out').innerHTML=`<b class="pk">${mode==='e'?'Emission needs a drop to a lower level.':'Absorption needs a jump to a higher level.'}</b><br>Start: n = ${from+1}. Click ${mode==='e'?'a lower':'a higher'} level.`;return}
+ const dE=Math.abs(A.lv[from]-A.lv[i]),nm=HC/dE*1e9,f=dE/H,a=from,b=i;shown.add(Math.max(a,b)+'-'+Math.min(a,b));anim={a,b,t:0,nm};
+ document.getElementById('out').innerHTML=`n = ${a+1} → n = ${b+1}<br>ΔE = ${A.lv[Math.max(a,b)].toFixed(2)} − ${A.lv[Math.min(a,b)].toFixed(2)} = <b class="hi">${dE.toFixed(2)} eV</b><br>f = ΔE/h = <b class="hi">${sig(f/1e14)}×10¹⁴ Hz</b><br>λ = hc/ΔE = <b class="hi">${nm.toFixed(0)} nm</b> <span style="color:${nm<380?'#c084fc':nm>750?'#f87171':wlcol(nm)}">(${region(nm)})</span>`;
+ from=i;build()}
+IX.anims.push((t,dt)=>{if(!anim)return;anim.t+=(IX.play?dt*IX.speed:0)*.8;const A=ATOMS[atom],u=Math.min(1,anim.t),ya=A.y(A.lv[anim.a]),yb=A.y(A.lv[anim.b]),c=anim.nm<380?'#c084fc':anim.nm>750?'#f87171':wlcol(anim.nm);
+ const emit=mode==='e',mv=emit?Math.min(1,u*2):Math.max(0,u*2-1);dot.style.display='';dot.setAttribute('cx',200);dot.setAttribute('cy',ya+(yb-ya)*mv);
+ const yph=emit?(ya+yb)/2:ya,x0=emit?215+u*230:-60+u*240;let d='';for(let k=0;k<=40;k++){const x=x0+k*2.5;d+=(k?'L':'M')+x.toFixed(1)+','+(yph+8*Math.sin(k/40*Math.PI*6)).toFixed(1)}
+ const vis=emit?u>.25:u<.55;ph.setAttribute('d',vis?d:'');ph.setAttribute('stroke',c);pht.textContent=vis?anim.nm.toFixed(0)+' nm':'';pht.setAttribute('x',x0+50);pht.setAttribute('y',yph-16);pht.setAttribute('fill',c);
+ if(u>=1){ph.setAttribute('d','');pht.textContent='';anim=null}});
+group('.at',v=>{atom=v;from=null;shown.clear();build();document.getElementById('out').innerHTML='Click a level on the diagram to start.'});
+group('.md',v=>{mode=v;from=null;build();document.getElementById('out').innerHTML='Click a level on the diagram to start.'});
+document.getElementById('all').onclick=()=>{const n=ATOMS[atom].lv.length;for(let a=1;a<n;a++)for(let b=0;b<a;b++)shown.add(a+'-'+b);build()};
+document.getElementById('clr').onclick=()=>{shown.clear();from=null;build();document.getElementById('out').innerHTML='Click a level on the diagram to start.'};
+build();
+</script>

@@ -1,0 +1,52 @@
+<!--{"id":"12-2C-1-vertical-spring","year":12,"section":"2C","title":"Vertical spring: energy against extension","criteria":["U3 AoS1: Hooke's law and elastic potential energy","U3 AoS1: energy transformations in a vertical spring"],
+"blurb":"A mass is let go from the end of an unstretched spring and bounces between A (top) and C (bottom). Watch Eg, Es and Ek trade on the energy–extension graph; B, halfway, is equilibrium and the fastest point.",
+"source":"Cambridge VCE Physics Units 3&4, 2C Springs (pp. 92–101), Formulas 2C–1 and 2C–2, Figures 2C–9 and 2C–10, g = 9.8 m s⁻². Ideal light spring, no friction; Eg = 0 at the lowest point C. Drawing scaled to fit; fast bounces slowed.","colour":"#f472b6"}-->
+<div class="ctx">The mass starts at <b>A</b> with the spring unstretched and is let go. Take the lowest point <b>C</b> as zero height. The total energy stays the same: $E_g + E_s + E_k = \text{constant}$.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#f472b6;padding:12px 16px"><h3>Spring and energy–extension graph</h3><svg id="sv" viewBox="0 0 860 470"></svg></div>
+ <div class="side">
+  <style>.sl{grid-template-columns:44px 1fr 104px}</style>
+  <div class="card ctl" style="--c:#fbb040;gap:9px"><h3>Spring</h3>
+   <div class="sl"><span class="nm">$m$</span><input type="range" id="m" min="0.2" max="2" step="0.1" value="1"><span class="v" id="mv"></span></div>
+   <div class="sl"><span class="nm">$k$</span><input type="range" id="k" min="5" max="100" step="1" value="20"><span class="v" id="kv"></span></div>
+   <div class="btns"><button class="go" data-v="A">At A</button><button class="go" data-v="B">At B</button><button class="go" data-v="C">At C</button><button class="go on" data-v="">Bounce</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:17px;line-height:1.45;padding:10px 16px"><h3>Now</h3><div id="ro"></div></div>
+ </div>
+</div>
+<script>
+const g=9.8,sv=document.getElementById('sv');let m=1,k=20,xB,xC,E,hold='',ph=0;
+const TOP=50,SC=270; // A at y=TOP+90, C at y=TOP+90+SC
+const yA=TOP+50,Y=x=>yA+x/xC*SC;
+el('rect',{x:70,y:TOP-24,width:150,height:14,fill:'#5b6690'},sv);
+const spr=el('path',{fill:'none',stroke:'#cfd7f5','stroke-width':3,'stroke-linejoin':'round'},sv),blk=el('rect',{x:105,width:80,height:50,rx:7,fill:'#fbb040'},sv);
+const mk=['A','B','C'].map(l=>{const ln=el('line',{x1:200,x2:250,stroke:'#a5b4d8','stroke-width':2,'stroke-dasharray':'5 5'},sv);return[ln,txt(sv,262,0,l,{fill:'#a5b4d8','font-size':20,'font-weight':700})]});
+const aN=(()=>{const gg=el('g',{},sv),l=el('line',{stroke:'#4ade80','stroke-width':5,'stroke-linecap':'round'},gg),h=el('path',{fill:'#4ade80'},gg),t=txt(gg,0,0,'F_net',{fill:'#4ade80','font-size':17,'font-weight':700});
+ return(x,y,dy)=>{gg.style.display=Math.abs(dy)<4?'none':'';const s=Math.sign(dy),Y2=y+dy;l.setAttribute('x1',x);l.setAttribute('x2',x);l.setAttribute('y1',y);l.setAttribute('y2',Y2-s*12);h.setAttribute('d',`M${x},${Y2}L${x-9},${Y2-s*18}L${x+9},${Y2-s*18}Z`);t.setAttribute('x',x-12);t.setAttribute('y',Y2+(s>0?-4:14));t.setAttribute('text-anchor','end');t.innerHTML='F<tspan font-size="13" dy="4">net</tspan>'}})();
+// graph
+const GX=360,GW=440,GY=60,GH=330,gx=x=>GX+x/xC*GW,gy=e=>GY+GH-e/E*GH;
+el('line',{x1:GX,x2:GX+GW+10,y1:GY+GH,y2:GY+GH,stroke:'#a5b4d8','stroke-width':2},sv);el('line',{x1:GX,x2:GX,y1:GY-10,y2:GY+GH,stroke:'#a5b4d8','stroke-width':2},sv);
+txt(sv,GX+GW/2,GY+GH+52,'extension x (m)',{fill:'#a5b4d8','font-size':17,'text-anchor':'middle'});txt(sv,GX-12,GY-18,'energy (J)',{fill:'#a5b4d8','font-size':17,'text-anchor':'start'});
+const tk=[0,.5,1].map(f=>[txt(sv,GX+f*GW,GY+GH+24,'',{fill:'#a5b4d8','font-size':16,'text-anchor':'middle'}),txt(sv,GX+f*GW,GY+GH-8,['A','B','C'][f*2],{fill:'#a5b4d8','font-size':16,'text-anchor':'middle','font-weight':700})]);
+const eT=txt(sv,GX-8,GY+6,'',{fill:'#a5b4d8','font-size':16,'text-anchor':'end'});
+const C={g:'#7dd3fc',s:'#f472b6',k:'#fbb040',t:'#eef2ff'},cur={},dot={},lab={};
+for(const q of['t','g','s','k']){cur[q]=el('path',{fill:'none',stroke:C[q],'stroke-width':q=='t'?2:4,'stroke-dasharray':q=='t'?'6 6':''},sv);dot[q]=el('circle',{r:8,fill:C[q]},sv)}
+const vl=el('line',{y1:GY,y2:GY+GH,stroke:'#eef2ff','stroke-opacity':.35,'stroke-width':2},sv);
+const L=[['E<tspan font-size="13" dy="4">g</tspan>','g',GX+12,GY+40],['E<tspan font-size="13" dy="4">s</tspan>','s',GX+GW-50,GY+40],['E<tspan font-size="13" dy="4">k</tspan>','k',GX+GW/2-14,GY+GH*.68],['total','t',GX+GW/2-24,GY-10]];
+L.forEach(([s,q,x,y])=>{const t=txt(sv,x,y,'',{fill:C[q],'font-size':19,'font-weight':700});t.innerHTML=s});
+const Eg=x=>m*g*(xC-x),Es=x=>.5*k*x*x,Ek=x=>Math.max(0,E-Eg(x)-Es(x));
+function upd(){xB=m*g/k;xC=2*xB;E=m*g*xC;
+ mk.forEach(([ln,t],i)=>{const y=Y(i*xB)+25;ln.setAttribute('y1',y);ln.setAttribute('y2',y);t.setAttribute('y',y+7)});
+ const P=f=>{let d='';for(let i=0;i<=60;i++){const x=xC*i/60;d+=(i?'L':'M')+gx(x).toFixed(1)+','+gy(f(x)).toFixed(1)}return d};
+ cur.g.setAttribute('d',P(Eg));cur.s.setAttribute('d',P(Es));cur.k.setAttribute('d',P(Ek));cur.t.setAttribute('d',P(()=>E));
+ tk.forEach(([t],i)=>t.textContent=sig(i*xB,3));eT.textContent=sig(E,3)}
+slider('m',x=>f2(x,1)+' kg',x=>{m=x;upd()});slider('k',x=>x+' N m⁻¹',x=>{k=x;upd()});group('.go',v=>{hold=v});
+IX.anims.push((t,dt)=>{const w=Math.min(Math.sqrt(k/m),3);if(IX.play&&!hold)ph+=w*dt*IX.speed;
+ let x=hold=='A'?0:hold=='B'?xB:hold=='C'?xC:xB-xB*Math.cos(ph);
+ const yb=Y(x);let d=`M145,${TOP-10}`;const n=14,h=(yb-(TOP-10))/n;for(let i=1;i<n;i++)d+=`L${145+(i%2?-22:22)},${TOP-10+h*i}`;d+=`L145,${yb}`;spr.setAttribute('d',d);blk.setAttribute('y',yb);
+ const Fn=m*g-k*x;aN(110,yb+25,Fn/(m*g)*70);
+ vl.setAttribute('x1',gx(x));vl.setAttribute('x2',gx(x));for(const[q,f]of[['g',Eg],['s',Es],['k',Ek],['t',()=>E]]){dot[q].setAttribute('cx',gx(x));dot[q].setAttribute('cy',gy(f(x)))}
+ const v=Math.sqrt(2*Ek(x)/m);
+ document.getElementById('ro').innerHTML=`extension x = <b>${sig(x,3)} m</b><br>F<sub>net</sub> = mg − kx = <b>${f2(Math.abs(Fn)<1e-9?0:Fn,2).replace('-','−')} N</b><br><span class="cy">E<sub>g</sub> = mgh</span> = <b>${sig(Eg(x),3)} J</b><br><span class="pk">E<sub>s</sub> = ½kx²</span> = <b>${sig(Es(x),3)} J</b><br><span class="hi">E<sub>k</sub></span> = <b>${sig(Ek(x),3)} J</b>, v = <b>${f2(v,2)} m s⁻¹</b>`});
+upd();
+</script>

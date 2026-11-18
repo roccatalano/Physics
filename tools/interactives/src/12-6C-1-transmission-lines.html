@@ -1,0 +1,61 @@
+<!--{"id":"12-6C-1-transmission-lines","year":12,"section":"6C","title":"Transmission lines: why high voltage?","criteria":["U3 AoS3: power loss in transmission lines, Ploss = I²R","U3 AoS3: voltage drop ΔV = IR","U3 AoS3: step-up and step-down transformers in distribution"],
+"blurb":"A power station sends power along lines with resistance. Step the voltage up and the current falls, so the I²R loss falls with the square. Ten times the voltage, one hundredth of the loss.",
+"source":"Cambridge VCE Physics Units 3&4, 6C Minimising power transmission losses, Worked examples 6C–1 to 6C–4 (pp. 315–329). Ideal transformers; I = P/V at the sending end; rms values.","colour":"#fb923c"}-->
+<div class="ctx">A power station sends power to a town along lines with resistance. The lines carry current $I = \dfrac{P}{V}$, so they waste $P_\text{loss} = I^2R$ as heat and drop $V_\text{drop} = IR$.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#fb923c;gap:4px"><svg id="sv" viewBox="0 0 860 250"></svg><svg id="gp" viewBox="0 0 860 260"></svg></div>
+ <div class="side" style="width:380px">
+  <div class="card ctl" style="--c:#fbb040;gap:9px"><h3>Settings</h3>
+   <div class="sl"><span class="nm">Line voltage</span><input type="range" id="k" min="0" max="10" step="1" value="3"><span class="v" id="kv"></span></div>
+   <div class="sl"><span class="nm">Power sent</span><input type="range" id="P" min="10" max="500" step="10" value="100"><span class="v" id="Pv"></span></div>
+   <div class="sl"><span class="nm">Line $R$</span><input type="range" id="R" min="1" max="20" step="1" value="5"><span class="v" id="Rv"></span></div>
+   <div class="btns"><button id="x10">× 10 voltage</button><button id="d10">÷ 10 voltage</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.45"><h3>In the lines</h3>
+   <div>$I = \dfrac{P}{V}$ = <b id="I" class="cy"></b></div>
+   <div>$V_\text{drop} = IR$ = <b id="vd" class="hi"></b></div>
+   <div>$P_\text{loss} = I^2R$ = <b id="pl" class="pk"></b></div>
+   <div>Delivered: <b id="dl" class="gr"></b></div>
+  </div>
+  <div class="rule" style="font-size:17px"><b>× 10 voltage</b> → ÷ 10 current → <b>÷ 100 power loss</b>, because $P_\text{loss} = I^2R$.</div>
+ </div>
+</div>
+<script>
+const VS=[230,500,1000,2300,5000,10000,23000,50000,100000,230000,500000];let ki=3,P=100e3,R=5;
+const sv=document.getElementById('sv'),gp=document.getElementById('gp');
+const kV=v=>v>=1000?sig(v/1000,3)+' kV':v+' V',W=p=>p>=1e6?sig(p/1e6,3)+' MW':p>=1000?sig(p/1000,3)+' kW':sig(p,3)+' W';
+// scene
+el('rect',{x:10,y:90,width:90,height:90,rx:8,fill:'#334155',stroke:'#94a3b8','stroke-width':3},sv);el('rect',{x:62,y:46,width:18,height:44,fill:'#475569'},sv);
+txt(sv,55,206,'power station',{'text-anchor':'middle','font-size':15,fill:'#cbd5e1'});
+const tf=(x,lab)=>{el('circle',{cx:x-9,cy:135,r:20,fill:'none',stroke:'#fbb040','stroke-width':4},sv);el('circle',{cx:x+9,cy:135,r:20,fill:'none',stroke:'#fbb040','stroke-width':4},sv);return txt(sv,x,190,lab,{'text-anchor':'middle','font-size':15,fill:'#fbb040'})};
+const up=tf(160,'step-up'),dn=tf(700,'step-down');
+const lines=[115,155].map(y=>el('line',{x1:190,x2:670,y1:y,y2:y,stroke:'#cfd7f5','stroke-width':6},sv));
+const glow=[115,155].map(y=>el('line',{x1:190,x2:670,y1:y,y2:y,stroke:'#ef4444','stroke-width':14,'stroke-opacity':0},sv));
+[300,430,560].forEach(x=>{el('path',{d:`M${x} 225L${x-22} 225L${x} 95L${x+22} 225Z`,fill:'none',stroke:'#5b6690','stroke-width':3},sv);});
+el('path',{d:'M100 135H140M720 135H760',stroke:'#cfd7f5','stroke-width':5},sv);
+[[770,120],[800,108],[830,122]].forEach(([x,y])=>el('path',{d:`M${x-12} ${y+40}V${y+12}L${x} ${y}L${x+12} ${y+12}V${y+40}Z`,fill:'#334155',stroke:'#94a3b8','stroke-width':2},sv));
+txt(sv,800,206,'town (230 V)',{'text-anchor':'middle','font-size':15,fill:'#cbd5e1'});
+const vlab=txt(sv,430,80,'',{'text-anchor':'middle','font-size':19,fill:'#fbb040','font-weight':700}),ilab=txt(sv,430,246,'',{'text-anchor':'middle','font-size':17,fill:'#7dd3fc'});
+const dots=[];[115,155].forEach((y,j)=>{for(let i=0;i<14;i++)dots.push([el('circle',{r:5,fill:'#7dd3fc',cy:y},sv),i,j])});
+// graph: % lost vs line voltage (log x)
+const GX=90,GW=720,GY=210,GH=160,lx=v=>GX+(Math.log10(v)-Math.log10(200))/(Math.log10(6e5)-Math.log10(200))*GW,py=p=>GY-Math.min(100,p)/100*GH;
+el('line',{x1:GX,x2:GX+GW,y1:GY,y2:GY,stroke:'#36418a','stroke-width':2},gp);el('line',{x1:GX,x2:GX,y1:GY-GH-6,y2:GY,stroke:'#36418a','stroke-width':2},gp);
+[0,50,100].forEach(p=>txt(gp,GX-8,py(p)+5,p+' %',{'font-size':14,fill:'#8b96c4','text-anchor':'end'}));
+[[230,'230 V'],[1000,'1 kV'],[10000,'10 kV'],[100000,'100 kV'],[500000,'500 kV']].forEach(([v,l])=>txt(gp,lx(v),GY+22,l,{'font-size':14,fill:'#8b96c4','text-anchor':'middle'}));
+txt(gp,GX+10,GY-GH-22,'Share of the power lost in the lines',{'font-size':16,fill:'#f472b6'});txt(gp,GX+GW,GY+44,'line voltage (log scale)',{'font-size':14,fill:'#8b96c4','text-anchor':'end'});
+const curve=el('path',{fill:'none',stroke:'#f472b6','stroke-width':4},gp),pt=el('circle',{r:9,fill:'#fbb040'},gp),ptl=txt(gp,0,0,'',{'font-size':16,fill:'#fbb040','font-weight':700});
+function upd(){const V=VS[ki],I=P/V,vd=I*R,pl=I*I*R,ok=vd<V,fr=pl/P;
+ document.getElementById('I').textContent=sig(I,3)+' A';document.getElementById('vd').textContent=ok?kV(+sig(vd,3)):'more than '+kV(V);
+ document.getElementById('pl').textContent=ok?W(pl)+' ('+(fr<1e-3?'<0.1':sig(100*fr,2))+' %)':'all of it';
+ const d=document.getElementById('dl');d.textContent=ok?W(P-pl):'impossible: V too low';d.className=ok?'gr':'pk';
+ vlab.textContent=(ki===0?'no step-up: ':'')+kV(V)+' in the lines';ilab.textContent='I = '+sig(I,3)+' A';
+ glow.forEach(g=>g.setAttribute('stroke-opacity',ok?Math.min(.8,fr*3):.8));
+ let c='';for(let i=0;i<=200;i++){const v=200*Math.pow(6e5/200,i/200),f=Math.min(1,P*R/v/v);c+=(i?'L':'M')+lx(v).toFixed(1)+','+py(100*f).toFixed(1)}curve.setAttribute('d',c);
+ const y=py(100*Math.min(1,fr));pt.setAttribute('cx',lx(V));pt.setAttribute('cy',y);ptl.setAttribute('x',lx(V)+12);ptl.setAttribute('y',Math.max(GY-GH+40,y-12));ptl.textContent=ok?(fr<1e-3?'<0.1':sig(100*fr,2))+' %':'not possible'}
+const ks=slider('k',i=>kV(VS[i]),i=>{ki=i;upd()});slider('P',x=>x+' kW',x=>{P=x*1000;upd()});slider('R',x=>x+' Ω',x=>{R=x;upd()});
+const jump=d=>{const V=VS[ki]*d;let j=VS.findIndex(v=>Math.abs(v/V-1)<.1);if(j<0)j=VS.reduce((b,v,i)=>Math.abs(Math.log(v/V))<Math.abs(Math.log(VS[b]/V))?i:b,0);ks.value=j;ks.dispatchEvent(new Event('input'))};
+document.getElementById('x10').onclick=()=>jump(10);document.getElementById('d10').onclick=()=>jump(.1);
+let s=0;IX.anims.push((t,dt)=>{const I=P/VS[ki];if(IX.play)s+=dt*IX.speed*Math.min(220,30+50*Math.log10(1+I));
+ dots.forEach(([d,i,j])=>{const x=190+(((j?-1:1)*s+i*480/14)%480+480)%480;d.setAttribute('cx',x)})});
+upd();
+</script>

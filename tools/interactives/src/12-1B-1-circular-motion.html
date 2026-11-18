@@ -1,0 +1,86 @@
+<!--{"id":"12-1B-1-circular-motion","year":12,"section":"1B","title":"Circular motion: what provides the centripetal force?","criteria":["U3 AoS1: uniform circular motion (horizontal plane, banked tracks)","U3 AoS1: forces at the top and bottom of vertical circles"],
+"blurb":"Three cases. A ball on a string in a horizontal circle (cut the string to see it leave on a tangent), a car on a banked track with its design speed, and a ball whirled in a vertical circle with the tension at the top and bottom.",
+"source":"Cambridge VCE Physics Units 3&4, 1B Circular motion (pp. 23–37), Formulas 1B–1 to 1B–6, g = 9.8 m s⁻². Vertical circle at constant speed as in Worked example 1B–2. Animation slowed for fast spins.","colour":"#7dd3fc"}-->
+<div class="ctx" id="ctx"></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc;padding:12px 16px"><h3 id="pt"></h3><svg id="sv" viewBox="0 0 860 470"></svg></div>
+ <div class="side">
+  <style>.sl{grid-template-columns:44px 1fr 108px}.md{padding-left:11px;padding-right:11px}</style>
+  <div class="card ctl" style="--c:#fbb040;gap:9px"><h3>Set up</h3>
+   <div class="btns"><button class="md on" data-v="h">Horizontal</button><button class="md" data-v="b">Banked</button><button class="md" data-v="l">Vertical</button></div>
+   <div class="sl"><span class="nm">$m$</span><input type="range" id="m"><span class="v" id="mv"></span></div>
+   <div class="sl"><span class="nm">$r$</span><input type="range" id="r"><span class="v" id="rv"></span></div>
+   <div class="sl"><span class="nm">$v$</span><input type="range" id="v"><span class="v" id="vv"></span></div>
+   <div class="sl" id="throw"><span class="nm">$\theta$</span><input type="range" id="th" min="5" max="45" step="1" value="30"><span class="v" id="thv"></span></div>
+   <div class="btns"><button id="act">Cut the string</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:17px;line-height:1.42;padding:10px 16px"><h3>Calculate</h3><div id="ro"></div></div>
+ </div>
+</div>
+<script>
+const g=9.8,sv=document.getElementById('sv');let mode='h',m,r,v,th=30,cut=0,cutT=0,ph=0;
+const N1=x=>x>=100?f2(x,0):x>=10?f2(x,1):f2(x,2);
+const P={h:{m:[.1,2,.1,.5],r:[.3,2,.1,1],v:[1,10,.5,4]},l:{m:[.1,2,.1,.5],r:[.3,1.5,.1,1],v:[.5,8,.5,4]},b:{m:[800,2000,100,1200],r:[20,200,10,75],v:[5,40,1,21]}};
+const CTX={h:'A ball on a string moves in a horizontal circle on a frictionless table (seen from above). The <b>tension</b> is the only horizontal force, so it must provide the centripetal force.',
+ b:'A car turns on a banked track (cross-section). The normal force tilts in, and its horizontal part pushes the car towards the centre. At the <b>design speed</b> no friction is needed.',
+ l:'A ball on a string is whirled in a vertical circle at constant speed. Gravity helps at the top and works against the tension at the bottom.'};
+const PT={h:'Top view: horizontal circle',b:'Banked track: cross-section through the car',l:'Side view: vertical circle'};
+const G={h:el('g',{},sv),b:el('g',{},sv),l:el('g',{},sv)};
+function arrow(par,c,dash){const gg=el('g',{},par),l=el('line',{stroke:c,'stroke-width':dash?4:6,'stroke-linecap':'round','stroke-dasharray':dash?'9 7':''},gg),hd=el('path',{fill:c},gg),t=txt(gg,0,0,'',{fill:c,'font-size':19,'font-weight':700});
+ return(x,y,dx,dy,s,lx,ly,anc)=>{const L=Math.hypot(dx,dy);gg.style.display=L<5||s===null?'none':'';if(L<5||s===null)return;const ux=dx/L,uy=dy/L,X=x+dx,Y=y+dy;
+  l.setAttribute('x1',x);l.setAttribute('y1',y);l.setAttribute('x2',X-ux*13);l.setAttribute('y2',Y-uy*13);hd.setAttribute('d',`M${X},${Y}L${X-ux*20-uy*10},${Y-uy*20+ux*10}L${X-ux*20+uy*10},${Y-uy*20-ux*10}Z`);
+  t.setAttribute('x',X+(lx||0));t.setAttribute('y',Y+(ly||0));t.setAttribute('text-anchor',anc||'middle');t.innerHTML=s}}
+// horizontal
+const HC=[330,240],HR=175;el('circle',{cx:HC[0],cy:HC[1],r:HR,fill:'none',stroke:'#5b6690','stroke-width':2,'stroke-dasharray':'6 8'},G.h);el('circle',{cx:HC[0],cy:HC[1],r:7,fill:'#a5b4d8'},G.h);
+const hStr=el('line',{stroke:'#cfd7f5','stroke-width':3},G.h),hBall=el('circle',{r:16,fill:'#fbb040'},G.h),hV=arrow(G.h,'#7dd3fc'),hT=arrow(G.h,'#4ade80');
+const hNote=txt(G.h,620,60,'',{fill:'#fbb040','font-size':20,'text-anchor':'middle'});
+// vertical loop
+const LC=[300,235],LR=175;el('circle',{cx:LC[0],cy:LC[1],r:LR,fill:'none',stroke:'#5b6690','stroke-width':2,'stroke-dasharray':'6 8'},G.l);el('circle',{cx:LC[0],cy:LC[1],r:7,fill:'#a5b4d8'},G.l);
+const lStr=el('line',{stroke:'#cfd7f5','stroke-width':3},G.l),lBall=el('circle',{r:16,fill:'#fbb040'},G.l),lG=arrow(G.l,'#7dd3fc'),lT=arrow(G.l,'#4ade80');
+const lTop=txt(G.l,LC[0]+40,LC[1]-LR-14,'',{'font-size':19,'text-anchor':'start'}),lBot=txt(G.l,LC[0]+40,LC[1]+LR+28,'',{'font-size':19,'text-anchor':'start'});
+const lBar=el('g',{},G.l);txt(lBar,690,40,'Tension now',{fill:'#4ade80','font-size':18,'text-anchor':'middle'});el('rect',{x:660,y:60,width:60,height:330,fill:'#141a40',stroke:'#36418a',rx:6},lBar);
+const lFill=el('rect',{x:664,width:52,fill:'#4ade80',rx:4},lBar),lBv=txt(lBar,690,420,'',{'font-size':19,'text-anchor':'middle'}),lSl=txt(lBar,690,448,'',{fill:'#fb7185','font-size':18,'text-anchor':'middle'});
+// banked
+const bSlope=el('path',{fill:'#232c63',stroke:'#5b6690','stroke-width':3},G.b),bCar=el('g',{},G.b);el('rect',{x:-55,y:-44,width:110,height:44,rx:9,fill:'#fbb040'},bCar);[-32,32].forEach(x=>el('circle',{cx:x,cy:0,r:10,fill:'#0d1330'},bCar));
+const bArc=el('path',{fill:'none',stroke:'#fbb040','stroke-width':3},G.b),bTh=txt(G.b,0,0,'θ',{fill:'#fbb040','font-size':22,'font-weight':700});
+const bCen=arrow(G.b,'#a5b4d8',1),bG=arrow(G.b,'#7dd3fc'),bN=arrow(G.b,'#4ade80'),bF=arrow(G.b,'#fb7185'),bNet=arrow(G.b,'#f472b6',1);
+const mini=el('g',{},G.b);el('circle',{cx:770,cy:80,r:55,fill:'none',stroke:'#5b6690','stroke-width':10},mini);const mCar=el('circle',{r:8,fill:'#fbb040'},mini);txt(mini,770,160,'top view',{fill:'#a5b4d8','font-size':16,'text-anchor':'middle'});
+function setR(id,a){const e=document.getElementById(id);e.min=a[0];e.max=a[1];e.step=a[2];e.value=a[3]}
+const sl={m:slider('m',x=>(mode=='b'?x:f2(x,1))+' kg',x=>{m=x;upd()}),r:slider('r',x=>(mode=='b'?x:f2(x,1))+' m',x=>{r=x;upd()}),v:slider('v',x=>f2(x,mode=='b'?0:1)+' m s⁻¹',x=>{v=x;upd()})};
+slider('th',x=>x+'°',x=>{th=x;upd()});
+function setMode(md){mode=md;for(const k in G)G[k].style.display=k==md?'':'none';for(const k of['m','r','v']){setR(k,P[md][k]);document.getElementById(k).dispatchEvent(new Event('input'))}
+ document.getElementById('throw').style.display=md=='b'?'':'none';document.getElementById('act').style.display=md=='b'?'none':'';
+ document.getElementById('act').textContent=md=='h'?'Cut the string':'Slowest speed at top';document.getElementById('ctx').innerHTML=CTX[md];document.getElementById('pt').textContent=PT[md];cut=0;upd()}
+group('.md',setMode);
+document.getElementById('act').onclick=()=>{if(mode=='h'){cut=1;cutT=0}else{const e=document.getElementById('v');e.value=Math.ceil(Math.sqrt(r*g)*2)/2;e.dispatchEvent(new Event('input'))}};
+function upd(){if(m===undefined||r===undefined||v===undefined)return;const Fc=m*v*v/r,ac=v*v/r,o=document.getElementById('ro');
+ if(mode=='h')o.innerHTML=`a<sub>c</sub> = v²/r = <b>${N1(ac)} m s⁻²</b><br>F<sub>c</sub> = mv²/r = <b class="hi">${N1(Fc)} N</b><br><span class="gr">tension T = F<sub>c</sub></span>, towards the centre<br><span class="cy">v</span> is along the tangent`;
+ if(mode=='l'){const Tt=Fc-m*g,Tb=Fc+m*g,vm=Math.sqrt(r*g);o.innerHTML=`F<sub>c</sub> = mv²/r = <b>${N1(Fc)} N</b><br>top: T = F<sub>c</sub> − mg = <b class="${Tt<0?'pk':'hi'}">${Tt<0?'slack':N1(Tt)+' N'}</b><br>bottom: T = F<sub>c</sub> + mg = <b class="hi">${N1(Tb)} N</b><br>slowest at top: √(rg) = <b>${f2(vm,2)} m s⁻¹</b>`;
+  lTop.innerHTML=Tt<0?'<tspan fill="#fb7185">top: string slack</tspan>':`<tspan fill="#cfd7f5">top: T = </tspan><tspan fill="#4ade80">${N1(Tt)} N</tspan>`;lBot.innerHTML=`<tspan fill="#cfd7f5">bottom: T = </tspan><tspan fill="#4ade80">${N1(Tb)} N</tspan>`}
+ if(mode=='b'){const t=th*Math.PI/180,vd=Math.sqrt(r*g*Math.tan(t)),f=m*(g*Math.sin(t)-ac*Math.cos(t));
+  o.innerHTML=`design speed √(rg tan θ) = <b class="hi">${f2(vd,1)} m s⁻¹</b><br>F<sub>c</sub> = mv²/r = <b>${f2(Fc/1000,2)} kN</b><br>`+(Math.abs(v-vd)<.5?'<b class="gr">Design speed: no friction</b>':v>vd?`Too fast: f <b class="pk">down</b> slope ${f2(Math.abs(f)/1000,1)} kN`:`Too slow: f <b class="pk">up</b> slope ${f2(Math.abs(f)/1000,1)} kN`)}
+}
+IX.anims.push((t,dt)=>{if(m===undefined)return;const w=Math.min(v/r*.5,3.5);if(IX.play)ph+=w*dt*IX.speed;
+ if(mode=='h'){const sc=Math.min(130,40+m*v*v/r*.9),vs=Math.min(150,25+v*12);let a=-ph,x=HC[0]+HR*Math.cos(a),y=HC[1]+HR*Math.sin(a);
+  if(cut){if(IX.play)cutT+=dt*IX.speed;const a0=-ph+0;if(cut==1){cut={a:a,x,y};}const c=cut,vx=Math.sin(c.a)*vs*1.2,vy=-Math.cos(c.a)*vs*1.2;ph=-c.a;x=c.x+vx*cutT;y=c.y+vy*cutT;
+   hStr.style.display='none';hT(0,0,0,0,null);hV(x,y,Math.sin(c.a)*vs,-Math.cos(c.a)*vs,'v',0,-14);hNote.textContent='no force: straight line along the tangent';if(cutT>2.2){cut=0;cutT=0;hNote.textContent=''}}
+  else{hStr.style.display='';hStr.setAttribute('x1',HC[0]);hStr.setAttribute('y1',HC[1]);hStr.setAttribute('x2',x);hStr.setAttribute('y2',y);
+   hV(x,y,Math.sin(a)*vs,-Math.cos(a)*vs,'v',Math.sin(a)*22,-Math.cos(a)*22+6);hT(x,y,-Math.cos(a)*sc,-Math.sin(a)*sc,'T',-Math.sin(a)*20,Math.cos(a)*20+6)}
+  hBall.setAttribute('cx',x);hBall.setAttribute('cy',y)}
+ if(mode=='l'){const a=-ph,x=LC[0]+LR*Math.sin(a),y=LC[1]-LR*Math.cos(a),Fc=m*v*v/r,T=Fc-m*g*Math.cos(a),mx=Fc+m*g,k=150/mx;
+  lStr.setAttribute('x1',LC[0]);lStr.setAttribute('y1',LC[1]);lStr.setAttribute('x2',x);lStr.setAttribute('y2',y);lStr.setAttribute('stroke-dasharray',T<0?'6 6':'');
+  lBall.setAttribute('cx',x);lBall.setAttribute('cy',y);lG(x,y,0,m*g*k,'mg',-22,0,'end');
+  lT(x,y,-Math.sin(a)*Math.max(T,0)*k,Math.cos(a)*Math.max(T,0)*k,'T',-Math.sin(a)*22-14,Math.cos(a)*22+6);
+  const h=Math.max(T,0)/mx*322;lFill.setAttribute('y',386-h);lFill.setAttribute('height',h);lBv.textContent=T<0?'0 N':N1(T)+' N';lSl.textContent=T<0?'slack':''}
+ if(mode=='b'){const tt=th*Math.PI/180,c=Math.cos(tt),s=Math.sin(tt),cx=430,cy=290;
+  // slope rises to the right; centre of circle to the left
+  const L1=Math.min(360,330/c),x1=cx-c*L1,y1=cy+s*L1,x2=cx+c*260,y2=cy-s*260;bSlope.setAttribute('d',`M${x1},${y1}L${x2},${y2}L${x2},460L${x1},460Z`);
+  const R0=80,ax=cx-c*200,ay=cy+s*200;bArc.setAttribute('d',`M${ax+R0},${ay}A${R0},${R0} 0 0 0 ${ax+R0*c},${ay-R0*s}`);bTh.setAttribute('x',ax+R0+14);bTh.setAttribute('y',ay-R0*s/2+6);
+  bCar.setAttribute('transform',`translate(${cx},${cy-10}) rotate(${-th})`);const W=m*g,ccx=cx-s*20,ccy=cy-c*20-10;
+  const N=m*(g*c+v*v/r*s),f=m*(g*s-v*v/r*c),Fc=m*v*v/r,k=160/Math.max(W,N,Fc,Math.abs(f));
+  bG(ccx,ccy,0,W*k,'mg',26,10,'start');bN(ccx,ccy,-s*N*k,-c*N*k,'N',-18,-6,'end');
+  bF(cx,cy+2,c*f*k,-s*f*k,Math.abs(f)*k<5?null:'f',0,26);bNet(ccx,ccy,-Fc*k,0,'F<tspan font-size="14" dy="5">c</tspan>',-16,-8,'end');
+  bCen(220,440,-160,0,'to centre',80,-12);
+  mCar.setAttribute('cx',770+55*Math.cos(-ph));mCar.setAttribute('cy',80+55*Math.sin(-ph))}});
+setMode('h');
+</script>

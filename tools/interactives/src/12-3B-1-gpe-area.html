@@ -1,0 +1,54 @@
+<!--{"id":"12-3B-1-gpe-area","section":"3B","year":12,"title":"Gravitational PE: the area under the graph","criteria":["U3 AoS2: ΔEg from the area under a force–distance or field–distance graph","U3 AoS2: Eg = mgΔh in a uniform field"],
+"blurb":"Lift a mass from one height to another above Earth. The shaded area under the force–distance or field–distance graph is the change in gravitational PE. Compare it with mgΔh.",
+"source":"Cambridge VCE Physics Units 3&4, 3B Gravitational potential energy (pp. 138–145). Earth as a point mass, g = 9.81 N kg⁻¹ at the surface.","colour":"#fbb040"}-->
+<style>.sl{grid-template-columns:34px 1fr 116px}.md{padding:6px 10px;font-size:16px}</style>
+<div class="ctx">A satellite is lifted from one height to another. Far from Earth the field is weaker, so <b>each kilometre costs less energy</b>. The energy is the area under the graph.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#fbb040;padding:12px 16px"><h3 id="ptitle">Force–distance graph</h3><svg id="sv" viewBox="0 0 860 470"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#7dd3fc;gap:10px"><h3 style="margin-bottom:2px">Set up</h3>
+   <div class="btns"><button class="md on" data-v="F">Force–distance</button><button class="md" data-v="g">Field–distance</button></div>
+   <div class="sl"><span class="nm">m</span><input type="range" id="m" min="100" max="2000" step="100" value="1000"><span class="v" id="mv"></span></div>
+   <div class="sl"><span class="nm">h₁</span><input type="range" id="h1" min="0" max="30000" step="1000" value="0"><span class="v" id="h1v"></span></div>
+   <div class="sl"><span class="nm">h₂</span><input type="range" id="h2" min="0" max="30000" step="1000" value="10000"><span class="v" id="h2v"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:18px;line-height:1.5;padding:12px 18px"><h3>Calculate</h3>
+   <div id="calc"></div>
+  </div>
+  <div class="rule" id="rule" style="font-size:17px;padding:10px 14px"></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),RE=6.37e6,g0=9.81;let mode='F',m=1000,h1=0,h2=10000;
+const SUP={'-':'⁻','0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'};
+function sci(v,n=3){if(v===0)return '0';const e=Math.floor(Math.log10(Math.abs(v)));let ms=(v/Math.pow(10,e)).toFixed(n-1);return e===0?ms:ms+' × 10'+String(e).split('').map(c=>SUP[c]).join('')}
+const gh=h=>g0*Math.pow(RE/(RE+h*1000),2);   // h in km
+const X0=95,XW=730,Y0=30,YH=360,HMAX=30000;const X=h=>X0+h/HMAX*XW,Y=f=>Y0+YH-f/10*YH;
+const grid=el('g',{},sv),shade=el('path',{fill:'#fbb040','fill-opacity':.35},sv),curve=el('path',{fill:'none',stroke:'#f472b6','stroke-width':4},sv),flat=el('line',{stroke:'#7dd3fc','stroke-width':2.5,'stroke-dasharray':'8 6'},sv),flatT=txt(sv,0,0,'',{fill:'#7dd3fc','font-size':15}),axes=el('g',{},sv);
+const m1=el('line',{stroke:'#fbb040','stroke-width':2},sv),m2=el('line',{stroke:'#fbb040','stroke-width':2},sv),rk=el('g',{},sv);
+el('path',{d:'M0 -16L8 0V12H-8V0Z',fill:'#eef2ff'},rk);el('path',{d:'M-5 12L0 22L5 12Z',fill:'#fbb040'},rk);
+const ylab=txt(sv,X0+8,Y0-10,'',{fill:'#f472b6','font-size':16,'font-weight':700});
+for(let h=0;h<=HMAX;h+=5000){el('line',{x1:X(h),x2:X(h),y1:Y0,y2:Y0+YH,stroke:'#2c3670','stroke-width':1.5},grid);txt(axes,X(h),Y0+YH+22,(h/1000)+(h===HMAX?' ×1000 km':''),{fill:'#7f8bb5','font-size':15,'text-anchor':h===HMAX?'end':'middle'})}
+for(let f=0;f<=10;f++)el('line',{x1:X0,x2:X0+XW,y1:Y(f),y2:Y(f),stroke:'#2c3670','stroke-width':1.5},grid);
+const ytk=[...Array(6)].map((_,i)=>txt(axes,X0-8,Y(i*2)+5,'',{fill:'#7f8bb5','font-size':15,'text-anchor':'end'}));
+txt(axes,X0+XW/2,Y0+YH+48,'h, height above Earth’s surface',{fill:'#7f8bb5','font-size':15,'text-anchor':'middle'});
+let d='';for(let i=0;i<=150;i++){const h=HMAX*i/150;d+=(i?'L':'M')+X(h).toFixed(1)+','+Y(gh(h)).toFixed(1)}curve.setAttribute('d',d);
+const kms=v=>v.toLocaleString('en-AU').replace(/,/g,' ')+' km';
+function upd(){const a=Math.min(h1,h2),b=Math.max(h1,h2),up=h2>=h1;
+ const dE=6.67e-11*5.97e24*m*(1/(RE+a*1000)-1/(RE+b*1000)),naive=m*g0*(b-a)*1000,sq=(mode==='F'?m:1)*5e6;
+ ytk.forEach((t,i)=>t.textContent=mode==='F'?(i*2*m/1000).toFixed(m<500?2:m<5000?1:0):i*2);
+ ylab.textContent=mode==='F'?'F = mg   (kN)':'g   (N kg⁻¹)';
+ document.getElementById('ptitle').textContent=mode==='F'?`Force–distance graph for a ${m} kg satellite`:'Field–distance graph for Earth';
+ let s='M'+X(a)+','+Y(0);for(let i=0;i<=60;i++){const h=a+(b-a)*i/60;s+='L'+X(h).toFixed(1)+','+Y(gh(h)).toFixed(1)}shade.setAttribute('d',s+'L'+X(b)+','+Y(0)+'Z');
+ flat.setAttribute('x1',X(a));flat.setAttribute('x2',X(b));flat.setAttribute('y1',Y(gh(a)));flat.setAttribute('y2',Y(gh(a)));flat.style.display=b>a?'':'none';
+ flatT.setAttribute('x',X(b)+6);flatT.setAttribute('y',Y(gh(a))+5);flatT.textContent=b>a&&b<26000?'mgΔh assumes this':'';
+ [[m1,h1],[m2,h2]].forEach(([l,h])=>{l.setAttribute('x1',X(h));l.setAttribute('x2',X(h));l.setAttribute('y1',Y(0));l.setAttribute('y2',Y(gh(h))-6)});
+ const c=document.getElementById('calc');
+ c.innerHTML=`≈ <b>${sig(dE/(mode==='F'?1:m)/sq,2)}</b> squares × ${sci(sq,2)} ${mode==='F'?'J':'J kg⁻¹'}`+(mode==='F'?'':`<br>= ${sci(dE/m)} J kg⁻¹, × m:`)+
+  `<br>ΔEg = <b class="hi">${sci(dE)} J</b><br>mgΔh gives <span class="cy">${sci(naive)} J</span>`;
+ const over=naive>0?(naive/dE-1)*100:0;
+ document.getElementById('rule').innerHTML=b===a?'Set two different heights.':(up?'Moving <b>up</b>: Eg <b>rises</b> by the area.':'Moving <b>down</b>: Eg <b>falls</b> by the area.')+(over>1?` mgΔh is <b>${Math.round(over)}% too big</b>: g is not constant.`:' Close to the surface g is nearly constant, so mgΔh works.');
+}
+group('.md',v=>{mode=v;upd()});slider('m',v=>v+' kg',v=>{m=v;upd()});slider('h1',kms,v=>{h1=v;upd()});slider('h2',kms,v=>{h2=v;upd()});
+IX.anims.push(t=>{const u=Math.min(1,(t%5)/3.5),h=h1+(h2-h1)*u;rk.setAttribute('transform',`translate(${X(h)},${Y(gh(h))-34})`)});
+</script>

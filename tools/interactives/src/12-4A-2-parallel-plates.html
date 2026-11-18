@@ -1,0 +1,54 @@
+<!--{"id":"12-4A-2-parallel-plates","section":"4A","year":12,"title":"Parallel plates: a uniform electric field","criteria":["U3 AoS2: uniform field between parallel plates, E = V/d, F = qE","U3 AoS2: work on a charge W = qV, particle acceleration"],
+"blurb":"Set the voltage and plate gap, then release an electron, proton or alpha particle. It speeds up across the gap: E = V/d, F = qE, and the energy gained is qV.",
+"source":"Cambridge VCE Physics Units 3&4, 4A Electric fields and forces (pp. 169–193). Edge effects and gravity ignored; non-relativistic. Motion slowed down a lot.","colour":"#7dd3fc"}-->
+<style>.sl{grid-template-columns:30px 1fr 96px}.pt{padding:6px 11px}</style>
+<div class="ctx">Two metal plates are connected to a power supply. Between them the field is <b>uniform</b>: the same strength and direction everywhere. Release a charge and watch it <b>speed up</b>.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc;padding:12px 16px"><h3 id="ptitle">Uniform field between plates</h3><svg id="sv" viewBox="0 0 860 470"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:10px"><h3 style="margin-bottom:2px">Set up</h3>
+   <div class="sl"><span class="nm">V</span><input type="range" id="V" min="100" max="1000" step="50" value="500"><span class="v" id="Vv"></span></div>
+   <div class="sl"><span class="nm">d</span><input type="range" id="d" min="1" max="10" step="0.5" value="5"><span class="v" id="dv"></span></div>
+   <div class="btns"><button class="pt on" data-v="e">Electron</button><button class="pt" data-v="p">Proton</button><button class="pt" data-v="a">Alpha</button></div>
+   <div class="btns"><button id="go" style="background:#4ade80;color:#0d1330;border-color:#4ade80">Release ▶</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:18px;line-height:1.5;padding:10px 18px">
+   <div>$E=\dfrac{V}{d}$ <span id="oE"></span></div>
+   <div>$F=qE$ <span id="oF"></span></div>
+   <div>$W=qV=\tfrac12mv^2$ <span id="oW"></span></div>
+   <div id="ov"></div>
+  </div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),e=1.6e-19;let V=500,dcm=5,pk='e',t0=null;
+const P={e:{n:'electron',q:-e,m:9.1e-31,c:'#60a5fa',s:'e⁻',lab:'1.6 × 10⁻¹⁹'},p:{n:'proton',q:e,m:1.67e-27,c:'#f472b6',s:'p⁺',lab:'1.6 × 10⁻¹⁹'},a:{n:'alpha particle',q:2*e,m:6.64e-27,c:'#fbb040',s:'α',lab:'3.2 × 10⁻¹⁹'}};
+const SUP={'-':'⁻','0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'};
+function sci(v,n=3){const x=Math.floor(Math.log10(Math.abs(v)));let ms=(v/Math.pow(10,x)).toFixed(n-1);return x===0?ms:ms+' × 10'+String(x).split('').map(c=>SUP[c]).join('')}
+function mk(id,c){const m=el('marker',{id,viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:4,markerHeight:4,orient:'auto'},el('defs',{},sv));el('path',{d:'M0 0L10 5L0 10z',fill:c},m)}
+mk('ab','#7dd3fc');mk('ay','#fbb040');mk('ag','#4ade80');
+let last=-1;const g=el('g',{},sv),dots=el('g',{},sv),pt=el('g',{},sv);const pc=el('circle',{r:16},pt),ps=txt(pt,0,6,'',{'text-anchor':'middle','font-size':16,'font-weight':700,fill:'#0d1330'});
+const fA=el('line',{stroke:'#fbb040','stroke-width':5,'marker-end':'url(#ay)'},sv),vA=el('line',{stroke:'#4ade80','stroke-width':5,'marker-end':'url(#ag)'},sv);
+const CX=430,Y1=50,Y2=390;let XL,XR;
+function draw(){g.innerHTML='';dots.innerHTML='';const w=40+dcm*50;XL=CX-w/2;XR=CX+w/2;
+ el('rect',{x:XL-22,y:Y1,width:22,height:Y2-Y1,rx:4,fill:'#ef4444'},g);el('rect',{x:XR,y:Y1,width:22,height:Y2-Y1,rx:4,fill:'#3b82f6'},g);
+ for(let y=Y1+20;y<Y2;y+=40){txt(g,XL-11,y+7,'+',{'text-anchor':'middle','font-size':20,'font-weight':700,fill:'#fff'});txt(g,XR+11,y+7,'−',{'text-anchor':'middle','font-size':20,'font-weight':700,fill:'#fff'})}
+ const n=Math.round(4+5*Math.log10(V/(dcm/100)/1000));for(let i=0;i<n;i++){const y=Y1+18+(Y2-Y1-36)*(i+.5)/n;el('line',{x1:XL+4,x2:XR-8,y1:y,y2:y,stroke:'#7dd3fc','stroke-opacity':.55,'stroke-width':2,'marker-end':'url(#ab)'},g)}
+ txt(g,XL-11,Y1-14,'+'+V+' V',{'text-anchor':'middle','font-size':17,fill:'#fca5a5','font-weight':700});txt(g,XR+11,Y1-14,'0 V',{'text-anchor':'middle','font-size':17,fill:'#93c5fd','font-weight':700});
+ el('line',{x1:XL,x2:XR,y1:Y2+30,y2:Y2+30,stroke:'#a5b4d8','stroke-width':2},g);[XL,XR].forEach(x=>el('line',{x1:x,x2:x,y1:Y2+23,y2:Y2+37,stroke:'#a5b4d8','stroke-width':2},g));txt(g,CX,Y2+56,'d = '+dcm+' cm',{'text-anchor':'middle','font-size':17,fill:'#a5b4d8'});
+ const p=P[pk],d=dcm/100,E=V/d,F=Math.abs(p.q)*E,W=Math.abs(p.q)*V,v=Math.sqrt(2*W/p.m);
+ document.getElementById('oE').innerHTML=`= <b class="cy">${sci(E)} V m⁻¹</b>`;
+ document.getElementById('oF').innerHTML=`= <b class="hi">${sci(F)} N</b>`;
+ document.getElementById('oW').innerHTML=`= <b class="gr">${sci(W)} J</b>`;
+ document.getElementById('ov').innerHTML=`Final speed <b class="pk">${sci(v)} m s⁻¹</b><br><span style="font-size:16px;color:#a5b4d8">The field lines point the way a <b>+</b> charge is pushed. ${p.q<0?'An electron is pushed the other way.':''}</span>`;
+ document.getElementById('ptitle').textContent=`An ${p.n} between the plates`.replace('An p','A p');
+ pc.setAttribute('fill',p.c);ps.textContent=p.s;t0=null;place(0)}
+function place(u){const p=P[pk],x0=p.q>0?XL+18:XR-18,x1=p.q>0?XR-18:XL+18,x=x0+(x1-x0)*u*u,y=(Y1+Y2)/2;pt.setAttribute('transform',`translate(${x},${y})`);
+ const s=Math.sign(x1-x0);fA.setAttribute('x1',x);fA.setAttribute('x2',x+s*60);fA.setAttribute('y1',y-34);fA.setAttribute('y2',y-34);
+ const L=u*90;vA.style.display=L>6?'':'none';vA.setAttribute('x1',x);vA.setAttribute('x2',x+s*L);vA.setAttribute('y1',y+34);vA.setAttribute('y2',y+34)}
+const lF=txt(sv,0,0,'F',{fill:'#fbb040','font-size':18,'font-weight':700}),lv=txt(sv,0,0,'v',{fill:'#4ade80','font-size':18,'font-weight':700});
+slider('V',v=>v+' V',v=>{V=v;draw()});slider('d',v=>v+' cm',v=>{dcm=v;draw()});group('.pt',v=>{pk=v;draw()});
+document.getElementById('go').onclick=()=>{t0=IX.t;last=-1;dots.innerHTML=''};
+IX.anims.push(t=>{let u=0;if(t0!==null){const k=(t-t0)/2.2;u=Math.min(1,k);const step=Math.floor(k*10);if(step!==last&&k<=1.0001){last=step;const p=P[pk],x0=p.q>0?XL+18:XR-18,x1=p.q>0?XR-18:XL+18;el('circle',{cx:x0+(x1-x0)*(step/10)**2,cy:(Y1+Y2)/2+100,r:5,fill:'#eef2ff','fill-opacity':.6},dots)}}
+ place(u);const x=+pt.getAttribute('transform').match(/translate\(([-\d.]+)/)[1];lF.setAttribute('x',x-6);lF.setAttribute('y',(Y1+Y2)/2-46);lv.setAttribute('x',x-6);lv.setAttribute('y',(Y1+Y2)/2+70);lv.style.display=u>.07?'':'none'});
+</script>

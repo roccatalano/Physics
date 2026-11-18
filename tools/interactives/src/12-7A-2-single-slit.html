@@ -1,0 +1,46 @@
+<!--{"id":"12-7A-2-single-slit","year":12,"section":"7A","title":"Diffraction and the λ/w ratio","criteria":["U4 AoS1: diffraction and the λ/w ratio"],
+"blurb":"Plane waves pass through a gap. Change the wavelength and the gap width: the waves spread a lot when λ/w is close to 1 and hardly at all when λ/w is much less than 1.",
+"source":"Cambridge VCE Physics Units 3&4, 7A Wave-like properties of light (pp. 357–360), Figure 7A–12. Waves beyond the gap from Huygens' principle (sum of point sources); spread lines at sin θ = λ/w.","colour":"#c084fc"}-->
+<div class="ctx">Straight wavefronts in a ripple tank reach a gap in a barrier. <b>How much do they spread out</b> after the gap? Compare the wavelength $\lambda$ with the gap width $w$.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#c084fc"><h3>Ripple tank, top view</h3><div style="flex:1;min-height:0;position:relative"><canvas id="cv" width="287" height="134" style="position:absolute;inset:0;width:100%;height:100%;border-radius:10px"></canvas><svg id="sv" viewBox="0 0 860 400" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%"></svg></div><div class="rule" style="font-size:17px;padding:8px 14px;margin-top:10px">The bigger the ratio $\lambda / w$, the more the waves diffract: clear diffraction when $\lambda / w$ is close to 1, very little when $\lambda / w \ll 1$. Dashed lines: edge of the central band.</div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:10px"><h3>Waves and gap</h3>
+   <div class="sl" style="grid-template-columns:94px 1fr 80px"><span class="nm">λ</span><input type="range" id="lam" min="0.5" max="3" step="0.1" value="1.5"><span class="v" id="lamv"></span></div>
+   <div class="sl" style="grid-template-columns:94px 1fr 80px"><span class="nm">Gap w</span><input type="range" id="w" min="0.5" max="12" step="0.1" value="3"><span class="v" id="wv"></span></div>
+   <div class="btns"><button class="pr" data-v="1,1.2">λ/w near 1</button><button class="pr" data-v="1,4">λ/w ≈ 0.25</button><button class="pr" data-v="0.6,12">λ/w ≪ 1</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;flex:1"><h3>Ratio</h3>
+   <div>$\dfrac{\lambda}{w}$ <span class="kr">=</span> <b class="big" id="rat"></b></div>
+   <div id="say" style="font-size:19px;line-height:1.4;margin-top:6px"></div>
+  </div>
+ </div>
+</div>
+<script>
+const cv=document.getElementById('cv'),cx=cv.getContext('2d'),sv=document.getElementById('sv'),GW=287,GH=134,S=3,BX=80; // barrier at grid x=80 (240 px)
+const img=cx.createImageData(GW,GH);let lam=1.5,w=3,A=null,P=null;
+const PXCM=20; // 20 px per cm
+const bar1=el('rect',{x:BX*S-4,y:0,width:8,fill:'#eef2ff'},sv),bar2=el('rect',{x:BX*S-4,width:8,fill:'#eef2ff'},sv);
+const e1=el('line',{stroke:'#fbb040','stroke-width':3,'stroke-dasharray':'10 8'},sv),e2=el('line',{stroke:'#fbb040','stroke-width':3,'stroke-dasharray':'10 8'},sv);
+const wl=txt(sv,BX*S-14,0,'w',{fill:'#fbb040','font-size':22,'font-style':'italic','text-anchor':'end'});
+function calc(){const k=2*Math.PI/(lam*PXCM),half=w*PXCM/2,M=Math.max(8,Math.round(w*PXCM/3)),cy=GH*S/2;A=new Float32Array(GW*GH*2);
+ for(let j=0;j<GH;j++)for(let i=0;i<GW;i++){const x=i*S,y=j*S,o=2*(j*GW+i);
+  if(i<=BX){A[o]=Math.cos(k*(x-BX*S));A[o+1]=Math.sin(k*(x-BX*S));continue}
+  let re=0,im=0;for(let m=0;m<M;m++){const ys=cy-half+(m+.5)*2*half/M,r=Math.hypot(x-BX*S,y-ys)+.5,a=1/Math.sqrt(r);re+=a*Math.cos(k*r);im+=a*Math.sin(k*r)}
+  A[o]=re/M;A[o+1]=im/M}
+ // normalise: amplitude just after the centre of the gap -> 1
+ const mags=[];for(let p=0;p<A.length;p+=2){const i=(p/2)%GW;if(i<=BX)continue;const j=Math.floor(p/2/GW),r=Math.hypot(i-BX,j-GH/2)*S,g=Math.sqrt((r+30)/30);A[p]*=g;A[p+1]*=g;mags.push(Math.hypot(A[p],A[p+1]))}
+ mags.sort((a,b)=>a-b);const ref=mags[Math.floor(mags.length*.97)]||1;for(let p=0;p<A.length;p+=2){if((p/2)%GW>BX){A[p]/=ref;A[p+1]/=ref}}
+ const yb=GH*S/2-half,ye=GH*S/2+half;bar1.setAttribute('height',yb);bar2.setAttribute('y',ye);bar2.setAttribute('height',GH*S-ye);wl.setAttribute('y',GH*S/2+8);
+ const r=lam/w,show=r<=1;[e1,e2].forEach((e,s)=>{e.style.display=show?'':'none';if(!show)return;const th=Math.asin(r),L=700;e.setAttribute('x1',BX*S);e.setAttribute('y1',GH*S/2);e.setAttribute('x2',BX*S+L*Math.cos(th));e.setAttribute('y2',GH*S/2+(s?1:-1)*L*Math.sin(th))});
+ document.getElementById('rat').textContent=(r).toFixed(2);
+ document.getElementById('say').innerHTML=r>=.7?'<b class="hi">Clear diffraction.</b> The waves spread round almost like circles.':r>=.15?'<b class="cy">Some diffraction.</b> The waves spread out a fair amount past the edges.':'<b class="gr">Very little diffraction.</b> The waves pass through almost as a straight beam.'}
+function frame(t){if(!A)return;const ph=2*Math.PI*1.2*t,c=Math.cos(ph),s=Math.sin(ph),d=img.data;
+ for(let p=0,q=0;p<A.length;p+=2,q+=4){const i=(p/2)%GW,j=Math.floor(p/2/GW),inBar=Math.abs(i-BX)<1&&Math.abs(j*S-GH*S/2)>w*PXCM/2;
+  const m=Math.min(1,Math.hypot(A[p],A[p+1]));let v=A[p]*c+A[p+1]*s;v=Math.max(-1,Math.min(1,v));const u=Math.max(0,(m+v)/2);
+  d[q]=14+u*111;d[q+1]=20+u*191;d[q+2]=56+u*196;d[q+3]=255}
+ cx.putImageData(img,0,0)}
+slider('lam',v=>v.toFixed(1)+' cm',v=>{lam=v;calc()});slider('w',v=>v.toFixed(1)+' cm',v=>{w=v;calc()});
+group('.pr',v=>{const [a,b]=v.split(',');const L=document.getElementById('lam'),W=document.getElementById('w');L.value=a;W.value=b;L.dispatchEvent(new Event('input'));W.dispatchEvent(new Event('input'))});
+IX.anims.push(t=>frame(t));
+</script>

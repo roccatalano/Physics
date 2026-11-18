@@ -78,7 +78,7 @@ for u in out['units']:
     for c in a['chapters']:
       for s_ in c['sections']:
         if s_['code'] in LI:s_['lesson']=LI[s_['code']]
-        ix=[{'id':m['id'],'title':m['title']} for m in IXS if m['section']==s_['code']]
+        ix=[{'id':m['id'],'title':m['title']} for m in IXS if m['section']==s_['code'] and m.get('year',11)==11]
         if ix:s_['interactives']=ix
 os.makedirs(os.path.join(H,'..','data'),exist_ok=True)
 json.dump(out,open(os.path.join(H,'..','data','year11.json'),'w'),indent=1,ensure_ascii=False)

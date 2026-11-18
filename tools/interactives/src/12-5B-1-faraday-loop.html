@@ -1,0 +1,62 @@
+<!--{"id":"12-5B-1-faraday-loop","year":12,"section":"5B","title":"Faraday's law: a loop through a field","criteria":["U3 AoS3: magnetic flux ΦB = B⊥A","U3 AoS3: Faraday's law ε = −NΔΦB/Δt","U3 AoS3: Lenz's law"],
+"blurb":"A square coil slides at constant speed through a region of field into the page. Watch the flux build up and fall, read the emf from the slope of the flux graph, and see the induced current direction from Lenz's law.",
+"source":"Cambridge VCE Physics Units 3&4, 5B Generating emf by varying the magnetic flux, Formulas 5B–1, 5B–2 (pp. 251–264). Coil 10 cm × 10 cm, field region 30 cm wide with a sharp edge.","colour":"#7dd3fc"}-->
+<div class="ctx">A square coil (10 cm sides) moves at a steady speed through a field pointing <b>into the page</b>. An emf is induced only while the flux through it is <b>changing</b>.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc;gap:4px"><svg id="sc" viewBox="0 0 860 190"></svg>
+  <svg id="gf" viewBox="0 0 860 178"></svg><svg id="ge" viewBox="0 0 860 178"></svg></div>
+ <div class="side" style="width:360px">
+  <div class="card ctl" style="--c:#fbb040;gap:10px"><h3>Settings</h3>
+   <div class="sl"><span class="nm">Field $B$</span><input type="range" id="B" min="0.1" max="1" step="0.1" value="0.5"><span class="v" id="Bv"></span></div>
+   <div class="sl"><span class="nm">Turns $N$</span><input type="range" id="N" min="1" max="50" step="1" value="20"><span class="v" id="Nv"></span></div>
+   <div class="sl"><span class="nm">Speed $v$</span><input type="range" id="v" min="0.1" max="0.4" step="0.05" value="0.2"><span class="v" id="vv"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5"><h3>Now</h3>
+   <div>$\Phi_B = B_\perp A$ = <b id="fl" class="cy"></b></div>
+   <div>$\varepsilon = -N\dfrac{\Delta\Phi_B}{\Delta t}$ = <b id="em" class="pk"></b></div>
+   <div>Current: <b id="dir" class="hi"></b></div>
+  </div>
+  <div class="rule" id="rule" style="font-size:17px"></div>
+ </div>
+</div>
+<script>
+let B=.5,N=20,v=.2;const L=.1,F0=.25,F1=.55,X0=0,X1=.8;// metres; field region F0..F1, coil left edge travels X0..X1-L
+const sc=document.getElementById('sc'),gf=document.getElementById('gf'),ge=document.getElementById('ge');
+const SX=x=>40+x*1000,SY=40;// 1 m = 1000 px
+el('rect',{x:SX(F0),y:12,width:(F1-F0)*1000,height:166,fill:'#232c63',stroke:'#36418a','stroke-width':2},sc);
+for(let x=F0+.025;x<F1;x+=.05)for(let y=30;y<178;y+=36)txt(sc,SX(x),y+7,'×',{'text-anchor':'middle','font-size':22,fill:'#5b6690'});
+txt(sc,SX(F1)+10,30,'B into page',{'font-size':16,fill:'#8b96c4'});
+const coil=el('rect',{y:45,width:L*1000,height:L*1000,rx:4,fill:'#7dd3fc','fill-opacity':.08,stroke:'#fbb040','stroke-width':6},sc);
+const shade=el('rect',{y:45,height:L*1000,fill:'#7dd3fc','fill-opacity':.35},sc);
+const arr=el('path',{fill:'none',stroke:'#f472b6','stroke-width':4},sc),ah=el('path',{fill:'#f472b6'},sc);
+const vlab=txt(sc,0,40,'v →',{'font-size':17,fill:'#fbb040'});
+// graphs
+const GX=84,GW=736;
+function axes(svg,lab,col){el('line',{x1:GX,x2:GX+GW,y1:90,y2:90,stroke:'#36418a','stroke-width':2},svg);el('line',{x1:GX,x2:GX,y1:12,y2:170,stroke:'#36418a','stroke-width':2},svg);
+ txt(svg,GX+8,22,lab,{'font-size':16,fill:col});return{p:el('path',{fill:'none',stroke:col,'stroke-width':4},svg),dot:el('circle',{r:7,fill:col},svg),top:txt(svg,GX-6,20,'',{'font-size':13,fill:'#8b96c4','text-anchor':'end'}),bot:txt(svg,GX-6,166,'',{'font-size':13,fill:'#8b96c4','text-anchor':'end'})}}
+const A1=axes(gf,'Flux ΦB through the coil','#7dd3fc'),A2=axes(ge,'Induced emf ε','#f472b6');txt(ge,GX+GW+4,108,'t',{'font-size':16,fill:'#8b96c4'});
+const tl=txt(ge,GX+GW,124,'',{'font-size':13,fill:'#8b96c4','text-anchor':'end'});
+const ov=x=>Math.max(0,Math.min(x+L,F1)-Math.max(x,F0));// overlap length (m)
+const flux=x=>B*L*ov(x),emf=x=>{ let d=0;if(x+L>F0&&x<F0)d+=1;if(x+L>F1&&x<F1)d-=1;return -N*B*L*v*d};
+const nice=m=>{const p=10**Math.floor(Math.log10(m));return [1,2,5,10].map(k=>k*p).find(k=>k>=m*1.001)};
+let tt=0;const T=()=>(X1-L-X0)/v;
+const fmtV=x=>(Math.abs(x)<1?sig(x*1000,3)+' mV':sig(x,3)+' V').replace('-','−');
+function draw(){const Tt=T(),fm=B*L*L*1.1,em=N*B*L*.4;// fixed emf scale for max speed
+ const fy=f=>90-f/fm*70,ey=e=>90-e/em*70,gx=s=>GX+s/Tt*GW;let d1='',d2='';const n=300;
+ for(let i=0;i<=n;i++){const s=Math.min(tt,i/n*Tt),x=X0+v*s;d1+=(i?'L':'M')+gx(s).toFixed(1)+','+fy(flux(x)).toFixed(1);d2+=(i?'L':'M')+gx(s).toFixed(1)+','+ey(emf(x)).toFixed(1)}
+ A1.p.setAttribute('d',d1);A2.p.setAttribute('d',d2);const x=X0+v*Math.min(tt,Tt);A1.dot.setAttribute('cx',gx(Math.min(tt,Tt)));A1.dot.setAttribute('cy',fy(flux(x)));A2.dot.setAttribute('cx',gx(Math.min(tt,Tt)));A2.dot.setAttribute('cy',ey(emf(x)));
+ A1.top.textContent=sig(fm*1000,2)+' mWb';A1.bot.textContent='';A2.top.textContent='+'+fmtV(em);A2.bot.textContent='−'+fmtV(em);tl.textContent=sig(Tt,2)+' s';
+ coil.setAttribute('x',SX(x));vlab.setAttribute('x',SX(x)+30);const o0=Math.max(x,F0),o1=Math.min(x+L,F1);shade.setAttribute('x',SX(o0));shade.setAttribute('width',Math.max(0,(o1-o0)*1000));
+ const e=emf(x),cx=SX(x)+50,cy=95,r=26;let dir='none (flux not changing)';arr.style.display=ah.style.display=e?'':'none';
+ if(e){const cw=e>0;// entering: e<0, Φ into page increasing, induced field out of page, anticlockwise
+  const a0=cw?-2.6:2.6+0,sgn=cw?1:-1;let d='';for(let i=0;i<=30;i++){const a=-Math.PI/2+sgn*i/30*1.6*Math.PI;d+=(i?'L':'M')+(cx+r*Math.cos(a)).toFixed(1)+','+(cy+r*Math.sin(a)).toFixed(1)}
+  arr.setAttribute('d',d);const a=-Math.PI/2+sgn*1.6*Math.PI,px=cx+r*Math.cos(a),py=cy+r*Math.sin(a),tx=-Math.sin(a)*sgn,ty=Math.cos(a)*sgn;
+  ah.setAttribute('d',`M${px+tx*12} ${py+ty*12}L${px-ty*8} ${py+tx*8}L${px+ty*8} ${py-tx*8}Z`);dir=cw?'clockwise':'anticlockwise'}
+ document.getElementById('fl').textContent=sig(Math.round(flux(x)*1e9)/1e6,3)+' mWb';document.getElementById('em').textContent=e?fmtV(e):'0 V';document.getElementById('dir').textContent=dir;
+ const k=x+L>F0&&x<F0?'in':x+L>F1&&x<F1?'out':x>=F0&&x+L<=F1?'full':'none';const r2=document.getElementById('rule');
+ if(r2.dataset.k!==k){r2.dataset.k=k;r2.innerHTML={in:'<b>Entering:</b> flux into the page grows. The current makes a field <b>out of the page</b> to oppose it.',
+  out:'<b>Leaving:</b> flux into the page falls. The current makes a field <b>into the page</b> to oppose it.',
+  full:'<b>Fully inside:</b> the flux is large but <b>not changing</b>, so there is no emf.',none:'<b>Outside the field:</b> no flux, no change, no emf.'}[k]}}
+slider('B',x=>f2(x,1)+' T',x=>{B=x});slider('N',x=>x,x=>{N=x});slider('v',x=>f2(x)+' m/s',x=>{tt=tt*v/x||0;v=x});
+IX.anims.push((t,dt)=>{if(IX.play){tt+=dt*IX.speed;if(tt>T()+0.8)tt=0}draw()});
+</script>

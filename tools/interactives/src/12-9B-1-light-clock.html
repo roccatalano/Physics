@@ -1,0 +1,49 @@
+<!--{"id":"12-9B-1-light-clock","year":12,"section":"9B","title":"Light clock: time dilation and length contraction","criteria":["U4 AoS1: proper time t0 and time dilation t = γt0","U4 AoS1: proper length L0 and length contraction L = L0/γ","U4 AoS1: Lorentz factor γ"],
+"blurb":"A light clock ticks inside a rocket. From Earth the light travels a longer diagonal path at the same speed c, so each tick takes longer and the rocket looks shorter.",
+"source":"Cambridge VCE Physics Units 3&4, 9B Time dilation and length contraction (pp. 439–453), Formulas 9B–1 to 9B–3. Animation speeds scaled down; proper tick 1 s shown in slow time.","colour":"#7dd3fc"}-->
+<div class="ctx">Light bounces between two mirrors inside a rocket. Light has the <b>same speed $c$ for every observer</b>. Seen from Earth, the moving light takes a longer path, so <b>each tick takes longer</b>.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc"><h3>Same clock, two frames of reference</h3><svg id="sv" viewBox="0 0 860 400"></svg><div class="rule" style="font-size:17px;padding:8px 14px;margin-top:8px">The crew measure the proper time $t_0$ and proper length $L_0$. Earth measures a longer time $t = \gamma t_0$ and a shorter length $L = L_0 / \gamma$.</div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:9px"><h3>Rocket speed</h3>
+   <div class="sl" style="grid-template-columns:40px 1fr 90px"><span class="nm">v</span><input type="range" id="v" min="0" max="0.995" step="0.001" value="0.866"><span class="v" id="vv"></span></div>
+   <div class="btns"><button class="pr" style="padding:6px 11px" data-v="0">0</button><button class="pr" style="padding:6px 11px" data-v="0.6">0.6c</button><button class="pr on" data-v="0.866">0.866c</button><button class="pr" style="padding:6px 11px" data-v="0.995">0.995c</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:18px;line-height:1.45;flex:1"><h3>Readout</h3>
+   <div>$\gamma = \dfrac{1}{\sqrt{1 - \frac{v^2}{c^2}}}$ <span class="kr">=</span> <b class="big" id="g" style="font-size:26px"></b></div>
+   <div id="out" style="margin-top:4px"></div>
+  </div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv');let v=.866,g=2,tR=0,tE=0,xE=0,ph=0;
+const T0=1.6,Hm=110,L0px=200; // display: proper tick (up and down) lasts T0 s; mirror gap Hm px; rocket proper length 200 px
+// top panel: rocket frame
+el('rect',{x:0,y:0,width:860,height:190,rx:12,fill:'#141a40'},sv);txt(sv,16,28,'Crew frame (rocket at rest)',{'font-size':18,'font-weight':700,fill:'#7dd3fc'});
+el('rect',{x:0,y:200,width:860,height:200,rx:12,fill:'#141a40'},sv);txt(sv,16,228,'Earth frame (rocket moving at v)',{'font-size':18,'font-weight':700,fill:'#fbb040'});
+function rocket(g0,col){const g=el('g',{},sv);const body=el('path',{fill:'none',stroke:col,'stroke-width':3},g),m1=el('line',{stroke:'#eef2ff','stroke-width':5},g),m2=el('line',{stroke:'#eef2ff','stroke-width':5},g),dot=el('circle',{r:8,fill:'#fde68a'},g),trail=el('path',{fill:'none',stroke:'#fde68a','stroke-width':3,'stroke-opacity':.7},g);return{g,body,m1,m2,dot,trail}}
+const R=rocket(0,'#7dd3fc'),E=rocket(0,'#fbb040');
+const rT=txt(sv,0,0,'',{'font-size':17,fill:'#7dd3fc','text-anchor':'middle'}),eT=txt(sv,0,0,'',{'font-size':17,fill:'#fbb040','text-anchor':'middle'});
+const ckR=txt(sv,844,28,'',{'font-size':19,'font-weight':700,fill:'#eef2ff','text-anchor':'end'}),ckE=txt(sv,844,228,'',{'font-size':19,'font-weight':700,fill:'#eef2ff','text-anchor':'end'});
+function drawRocket(o,x,yb,len){const mw=22*len/L0px;const yt=yb-Hm-20;o.body.setAttribute('d',`M${x-len/2},${yb}H${x+len/2-len*.12}L${x+len/2},${(yb+yt)/2}L${x+len/2-len*.12},${yt}H${x-len/2}Z`);
+ o.m1.setAttribute('x1',x-mw);o.m1.setAttribute('x2',x+mw);o.m1.setAttribute('y1',yb-10);o.m1.setAttribute('y2',yb-10);o.m2.setAttribute('x1',x-mw);o.m2.setAttribute('x2',x+mw);o.m2.setAttribute('y1',yt+10);o.m2.setAttribute('y2',yt+10)}
+function upd(){g=1/Math.sqrt(1-v*v);document.getElementById('g').textContent=g.toFixed(2);
+ document.getElementById('out').innerHTML=`One tick, crew: `+`<b class="cy">t₀ = 1.00 s</b><br>One tick, Earth: <b class="hi">t = γt₀ = ${g.toFixed(2)} s</b><br>Rocket, crew: <b class="cy">L₀ = 100 m</b><br>Rocket, Earth: <b class="hi">L = L₀/γ = ${(100/g).toFixed(1)} m</b>`;
+ rT.textContent='L₀ = 100 m';eT.textContent='L = '+(100/g).toFixed(1)+' m'}
+slider('v',x=>x.toFixed(3)+'c',x=>{v=x;upd()});
+group('.pr',x=>{const s=document.getElementById('v');s.value=x;s.dispatchEvent(new Event('input'))});
+IX.anims.push((t,dt)=>{dt=IX.play?dt*IX.speed:0;tR+=dt;tE+=dt/(g*T0);
+ // crew frame: photon bounces vertically, period T0
+ const u=(tR%T0)/T0,yb=170,y=yb-10-(Hm-20)*(u<.5?u*2:2-u*2)-0;drawRocket(R,430,yb,L0px);R.dot.setAttribute('cx',430);R.dot.setAttribute('cy',y);R.trail.setAttribute('d','');
+ rT.setAttribute('x',430);rT.setAttribute('y',yb+18);
+ ckR.textContent='crew clock: '+(tR/T0).toFixed(1)+' ticks';
+ // earth frame: tick lasts g*T0; rocket moves at display speed vd
+ const Te=g*T0,vd=v*(2*(Hm-20))/T0; // same scale for c: light covers 2(Hm-20) px per T0 vertically in rocket frame
+ xE+=vd*dt;const span=860+L0px;let xc=((xE+L0px/2)%span)-L0px/2+0;const ue=tE%1,yb2=380,yv=yb2-10-(Hm-20)*(ue<.5?ue*2:2-ue*2);
+ drawRocket(E,xc,yb2,L0px/g);E.dot.setAttribute('cx',xc);E.dot.setAttribute('cy',yv);
+ // trail for this tick: from start of tick position
+ const x0=xc-vd*ue*Te;const xm=x0+vd*Te/2;let d=`M${x0},${yb2-10}`;d+=ue<.5?`L${xc},${yv}`:`L${xm},${yb2-10-(Hm-20)}L${xc},${yv}`;E.trail.setAttribute('d',d);
+ eT.setAttribute('x',xc);eT.setAttribute('y',yb2+16);
+ ckE.textContent='rocket clock seen from Earth: '+tE.toFixed(1)+' ticks';});
+upd();
+</script>

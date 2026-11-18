@@ -1,0 +1,50 @@
+<!--{"id":"12-9C-1-muon-decay","year":12,"section":"9C","title":"Muons reaching the ground","criteria":["U4 AoS1: muon decay as evidence for special relativity","U4 AoS1: time dilation in Earth's frame, length contraction in the muon's frame"],
+"blurb":"A muon made 5000 m up should only travel about 657 m before it decays. Compare Earth's frame (its lifetime is dilated) with the muon's frame (the atmosphere is contracted).",
+"source":"Cambridge VCE Physics Units 3&4, 9C Muon decay (pp. 455–457): lifetime 2.20 μs, 5000 m, 0.995c. As in the book, every muon is treated as lasting exactly its mean lifetime (real decay is random).","colour":"#f472b6"}-->
+<div class="ctx">Cosmic rays make muons about <b>5000 m</b> above the ground. At rest a muon lasts $t_0 = 2.20\ \mu\text{s}$. Without relativity it could travel only $s = vt_0 \approx 657$ m. <b>So how do so many reach the ground?</b></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#f472b6"><h3>The same journey in two frames (same scale)</h3><svg id="sv" viewBox="0 0 860 400"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:9px"><h3>Muon speed</h3>
+   <div class="sl" style="grid-template-columns:40px 1fr 100px"><span class="nm">v</span><input type="range" id="v" min="0.9" max="0.999" step="0.001" value="0.995"><span class="v" id="vv"></span></div>
+   <div class="btns"><button class="pr" data-v="0.9">0.9c</button><button class="pr" data-v="0.98">0.98c</button><button class="pr on" data-v="0.995">0.995c (book)</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:18px;line-height:1.45;flex:1"><h3>Readout</h3><div id="out"></div></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),c=3e8,t0=2.2e-6,H0=5000,TOP=60,BOT=360,K=(BOT-TOP)/H0;let v=.995,g=10,lam=0,hold=0;
+const P=[[20,'Earth frame','#fbb040'],[440,'Muon frame','#7dd3fc']].map(([x,nm,col])=>{el('rect',{x,y:0,width:400,height:400,rx:12,fill:'#141a40'},sv);txt(sv,x+16,30,nm,{'font-size':19,'font-weight':700,fill:col});return x});
+// Earth frame
+const eGround=el('rect',{x:30,y:BOT,width:380,height:30,fill:'#2f6b3a'},sv),eAtm=el('rect',{x:30,y:TOP,width:380,height:BOT-TOP,fill:'#7dd3fc','fill-opacity':.08},sv);
+txt(sv,40,BOT+22,'ground',{'font-size':16,fill:'#cfd7f5'});
+const eH=txt(sv,400,(TOP+BOT)/2,'5000 m',{'font-size':17,fill:'#cfd7f5','text-anchor':'end'});
+const cls=el('line',{x1:60,x2:300,stroke:'#f87171','stroke-width':3,'stroke-dasharray':'6 5'},sv),clsT=txt(sv,200,0,'',{'font-size':16,fill:'#f87171'});
+const rel=el('line',{x1:60,x2:300,stroke:'#4ade80','stroke-width':3,'stroke-dasharray':'6 5'},sv),relT=txt(sv,200,0,'',{'font-size':16,fill:'#4ade80'});
+const eMu=el('circle',{cx:130,r:10,fill:'#f472b6',stroke:'#0d1330','stroke-width':2},sv),eClk=txt(sv,400,30,'',{'font-size':17,fill:'#eef2ff','text-anchor':'end'});
+// Muon frame
+const cpm=el('clipPath',{id:'cpm'},el('defs',{},sv));el('rect',{x:440,y:42,width:400,height:358},cpm);
+const mAtm=el('rect',{x:450,width:380,fill:'#7dd3fc','fill-opacity':.08,'clip-path':'url(#cpm)'},sv),mGround=el('rect',{x:450,width:380,height:400,fill:'#2f6b3a','clip-path':'url(#cpm)'},sv),mGT=txt(sv,460,0,'ground (moving up at v)',{'font-size':16,fill:'#cfd7f5'});
+const mTop=el('line',{'clip-path':'url(#cpm)',x1:450,x2:830,stroke:'#7dd3fc','stroke-width':2,'stroke-dasharray':'4 6'},sv);
+const mH=txt(sv,460,0,'',{'font-size':17,fill:'#eef2ff'});
+const mMu=el('circle',{cx:560,cy:TOP,r:10,fill:'#f472b6',stroke:'#0d1330','stroke-width':2},sv),mClk=txt(sv,820,30,'',{'font-size':17,fill:'#eef2ff','text-anchor':'end'});
+const burstE=el('circle',{fill:'none',stroke:'#f472b6','stroke-width':3},sv),burstM=el('circle',{fill:'none',stroke:'#f472b6','stroke-width':3},sv);
+const resE=txt(sv,230,BOT-14,'',{'font-size':18,'font-weight':700,'text-anchor':'middle'}),resM=txt(sv,640,BOT-14,'',{'font-size':18,'font-weight':700,'text-anchor':'middle'});
+function upd(){g=1/Math.sqrt(1-v*v);const sC=v*c*t0,sR=g*sC,L=H0/g;
+ const y=d=>TOP+Math.min(d,H0)*K;cls.setAttribute('y1',y(sC));cls.setAttribute('y2',y(sC));clsT.setAttribute('y',y(sC)-6);clsT.setAttribute('x',180);clsT.textContent='v t₀ = '+sC.toFixed(0)+' m';
+ rel.setAttribute('y1',y(sR));rel.setAttribute('y2',y(sR));rel.style.display=sR<H0?'':'none';relT.setAttribute('y',y(sR)-6);relT.setAttribute('x',180);relT.textContent=sR<H0?'γ v t₀ = '+sR.toFixed(0)+' m':'';
+ document.getElementById('out').innerHTML=`γ = <b class="hi">${g.toFixed(2)}</b><br><b style="color:#fbb040">Earth:</b> lifetime t = γt₀ = <b class="hi">${(g*t0*1e6).toFixed(1)} μs</b>, range γvt₀ = <b class="hi">${sR.toFixed(0)} m</b><br><b class="cy">Muon:</b> lifetime t₀ = 2.20 μs, atmosphere L = L₀/γ = <b class="hi">${L.toFixed(0)} m</b><br>${sR>=H0?'<b class="gr">Reaches the ground in both frames.</b>':'<b class="pk">Decays before the ground in both frames.</b>'}`;lam=0;hold=0}
+slider('v',x=>x.toFixed(3)+'c',x=>{v=x;upd()});group('.pr',x=>{const s=document.getElementById('v');s.value=x;s.dispatchEvent(new Event('input'))});
+IX.anims.push((t,dt)=>{dt=IX.play?dt*IX.speed:0;const L=H0/g,sR=g*v*c*t0,reach=sR>=H0,TE=reach?H0/(v*c):g*t0; // Earth-frame duration of the journey
+ if(lam<1)lam=Math.min(1,lam+dt/4);else{hold+=dt;if(hold>1.8){lam=0;hold=0}}
+ const tE=lam*TE,tM=tE/g;// earth frame
+ const dE=v*c*tE;eMu.setAttribute('cy',TOP+dE*K);eClk.textContent='Earth clock '+(tE*1e6).toFixed(2)+' μs';
+ // muon frame: ground starts L below the muon and moves up
+ const dM=v*c*tM,gy=TOP+(L-dM)*K;mAtm.setAttribute('y',TOP-dM*K);mAtm.setAttribute('height',Math.max(0,L*K));mTop.setAttribute('y1',TOP-dM*K);mTop.setAttribute('y2',TOP-dM*K);
+ mGround.setAttribute('y',gy);mGT.setAttribute('y',gy+22);mH.setAttribute('y',Math.min(390,gy+50));mH.textContent='atmosphere L = '+L.toFixed(0)+' m';mClk.textContent='muon clock '+(tM*1e6).toFixed(2)+' μs';
+ const done=lam>=1,bs=done?10+Math.min(1,hold)*22:0;
+ [[burstE,130,TOP+dE*K],[burstM,560,TOP]].forEach(([b,x,y])=>{b.setAttribute('cx',x);b.setAttribute('cy',y);b.setAttribute('r',bs);b.style.display=done&&!reach?'':'none'});
+ [eMu,mMu].forEach(m=>m.style.opacity=done&&!reach?Math.max(0,1-hold*2):1);
+ [resE,resM].forEach(r=>{r.textContent=done?(reach?'reaches the ground':'decays'):'';r.setAttribute('fill',reach?'#4ade80':'#f472b6')});resE.setAttribute('y',reach?BOT-14:TOP+dE*K+34);resM.setAttribute('y',reach?385:TOP+40);resM.setAttribute('fill',reach?'#eef2ff':'#f472b6')});
+upd();
+</script>

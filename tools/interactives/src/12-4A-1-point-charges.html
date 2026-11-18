@@ -1,0 +1,56 @@
+<!--{"id":"12-4A-1-point-charges","section":"4A","year":12,"title":"Point charges: field lines and Coulomb's law","criteria":["U3 AoS2: electric field lines for point charges, monopoles and dipoles","U3 AoS2: E = kQ/r², Coulomb's law F = kq₁q₂/r²"],
+"blurb":"Set two charges and their separation. Field lines run from + to −, and the Coulomb force on each charge is calculated live. Halve r and the force goes up four times.",
+"source":"Cambridge VCE Physics Units 3&4, 4A Electric fields and forces (pp. 169–193). k = 8.99 × 10⁹ N m² C⁻². Field lines traced in 2D.","colour":"#f472b6"}-->
+<style>.sl{grid-template-columns:40px 1fr 96px}</style>
+<div class="ctx">Field lines start on <b>positive</b> charges and end on <b>negative</b> charges. More lines means a bigger charge. Where do the lines crowd together?</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#f472b6;padding:12px 16px"><h3 id="ptitle">Electric field</h3><svg id="sv" viewBox="0 0 860 470"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:10px"><h3 style="margin-bottom:2px">Charges</h3>
+   <div class="sl"><span class="nm">q₁</span><input type="range" id="q1" min="-5" max="5" step="1" value="3"><span class="v" id="q1v"></span></div>
+   <div class="sl"><span class="nm">q₂</span><input type="range" id="q2" min="-5" max="5" step="1" value="-3"><span class="v" id="q2v"></span></div>
+   <div class="sl"><span class="nm">r</span><input type="range" id="r" min="0.2" max="1" step="0.05" value="0.6"><span class="v" id="rv"></span></div>
+   <div class="btns"><button class="ps" data-v="3,-3">Dipole</button><button class="ps" data-v="3,3">Two +</button><button class="ps" data-v="4,0">One +</button><button class="ps" data-v="0,-4">One −</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:18px;line-height:1.5;padding:10px 18px">
+   <div>$F = k\dfrac{q_1 q_2}{r^2}$</div><div id="calc"></div>
+  </div>
+  <div class="rule" id="rule" style="font-size:17px;padding:10px 14px"></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),K=8.99e9;let q1=3,q2=-3,R=.6;
+const SUP={'-':'⁻','0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'};
+function sci(v,n=3){const e=Math.floor(Math.log10(Math.abs(v)));let ms=(v/Math.pow(10,e)).toFixed(n-1);return e===0?ms:ms+' × 10'+String(e).split('').map(c=>SUP[c]).join('')}
+function mk(id,c){const m=el('marker',{id,viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:4,markerHeight:4,orient:'auto'},el('defs',{},sv));el('path',{d:'M0 0L10 5L0 10z',fill:c},m)}
+mk('ab','#7dd3fc');mk('ay','#fbb040');
+const CY=235,CX=430,PX=560; // px per metre
+const lines=el('g',{},sv),forces=el('g',{},sv),chg=el('g',{},sv),labs=el('g',{},sv);
+const sgn=q=>q>0?'+':q<0?'−':'';
+function draw(){lines.innerHTML='';forces.innerHTML='';chg.innerHTML='';labs.innerHTML='';
+ const C=[[CX-R*PX/2,CY,q1],[CX+R*PX/2,CY,q2]].filter(c=>c[2]!==0);
+ const E=(x,y)=>{let ex=0,ey=0;C.forEach(([cx,cy,q])=>{const dx=x-cx,dy=y-cy,r=Math.hypot(dx,dy);ex+=q*dx/r**3;ey+=q*dy/r**3});return[ex,ey]};
+ const tot=C.reduce((a,c)=>a+c[2],0),dir=tot<0?-1:1;
+ C.filter(c=>c[2]*dir>0).forEach(([cx,cy,q])=>{const n=4*Math.abs(q);for(let i=0;i<n;i++){const a=(i+.5)/n*2*Math.PI;let x=cx+16*Math.cos(a),y=cy+16*Math.sin(a);const pts=[[x,y]];
+  for(let s=0;s<900;s++){const [ex,ey]=E(x,y),m=Math.hypot(ex,ey);if(!m)break;x+=dir*4*ex/m;y+=dir*4*ey/m;pts.push([x,y]);if(x<-40||x>900||y<-40||y>510)break;if(C.some(([qx,qy,qq])=>qq*dir<0&&Math.hypot(x-qx,y-qy)<14))break}
+  el('path',{d:pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+','+p[1].toFixed(1)).join(''),fill:'none',stroke:'#7dd3fc','stroke-opacity':.6,'stroke-width':2},lines);
+  const L=pts.length;[.3,.7].forEach(f=>{const k=Math.min(L-2,Math.max(1,Math.floor(Math.min(L*f,f<.5?40:110))));const [x1,y1]=pts[k-1],[x2,y2]=pts[k+1]||pts[k];const [a1,b1]=dir>0?[x1,y1]:[x2,y2],[a2,b2]=dir>0?[x2,y2]:[x1,y1];if(x2>0&&x2<860&&y2>0&&y2<470)el('line',{x1:a1,y1:b1,x2:a2,y2:b2,stroke:'#7dd3fc','stroke-width':2,'marker-end':'url(#ab)'},lines)})}});
+ C.forEach(([cx,cy,q])=>{el('circle',{cx,cy,r:14+Math.abs(q)*1.6,fill:q>0?'#f472b6':'#60a5fa',stroke:'#0d1330','stroke-width':3},chg);txt(chg,cx,cy+8,sgn(q),{'text-anchor':'middle','font-size':26,'font-weight':700,fill:'#0d1330'})});
+ [[CX-R*PX/2,q1,'q₁'],[CX+R*PX/2,q2,'q₂']].forEach(([x,q,n])=>q&&txt(labs,x,CY+58,`${n} = ${sgn(q)}${Math.abs(q)} μC`,{'text-anchor':'middle','font-size':17,fill:'#eef2ff'}));
+ // separation marker
+ if(q1&&q2){const y=CY+90,x1=CX-R*PX/2,x2=CX+R*PX/2;el('line',{x1,x2,y1:y,y2:y,stroke:'#a5b4d8','stroke-width':2},labs);[x1,x2].forEach(x=>el('line',{x1:x,x2:x,y1:y-7,y2:y+7,stroke:'#a5b4d8','stroke-width':2},labs));txt(labs,CX,y+24,'r = '+R.toFixed(2)+' m',{'text-anchor':'middle','font-size':17,fill:'#a5b4d8'})}
+ const c=document.getElementById('calc'),ru=document.getElementById('rule');
+ if(q1&&q2){const F=K*Math.abs(q1*q2)*1e-12/R/R,rep=q1*q2>0;
+  const L=Math.min(110,30+25*Math.log10(1+F)),x1=CX-R*PX/2,x2=CX+R*PX/2,y=CY-58;const s=rep?-1:1;
+  el('line',{x1,y1:y,x2:x1+s*L,y2:y,stroke:'#fbb040','stroke-width':5,'marker-end':'url(#ay)'},forces);el('line',{x1:x2,y1:y,x2:x2-s*L,y2:y,stroke:'#fbb040','stroke-width':5,'marker-end':'url(#ay)'},forces);
+  c.innerHTML=`= 8.99 × 10⁹ × ${Math.abs(q1)} × 10⁻⁶ × ${Math.abs(q2)} × 10⁻⁶ / ${R.toFixed(2)}²<br>= <b class="hi">${sig(F,3)} N</b>, ${rep?'repel':'attract'}`;
+  ru.innerHTML=`Equal and opposite forces (Newton's third law). <b>Halve r: F is 4 times bigger.</b>`;
+  document.getElementById('ptitle').textContent=rep?'Like charges: lines push apart, a neutral point between':(q1===-q2?'A dipole: ':'Unlike charges: ')+'lines run from + to −';}
+ else{const q=q1||q2;c.innerHTML=q?`One charge alone: no force.<br>$E = k\\dfrac{Q}{r^2}$: at 0.30 m, <b class="hi">${sci(K*Math.abs(q)*1e-6/.09)} N C⁻¹</b>`.replace(/\$[^$]+\$/,'E = kQ/r²'):'Set a charge.';
+  ru.innerHTML=q>0?'A <b>positive</b> monopole: field lines point <b>away</b> from it, the way a positive test charge would be pushed.':q<0?'A <b>negative</b> monopole: field lines point <b>towards</b> it.':'';
+  document.getElementById('ptitle').textContent='A single point charge';}
+}
+const fq=v=>(v>0?'+':v<0?'−':'')+Math.abs(v)+' μC';
+slider('q1',fq,v=>{q1=v;draw()});slider('q2',fq,v=>{q2=v;draw()});slider('r',v=>v.toFixed(2)+' m',v=>{R=v;draw()});
+document.querySelectorAll('.ps').forEach(b=>b.onclick=()=>{const [a,c]=b.dataset.v.split(',').map(Number);['q1','q2'].forEach((id,i)=>{const e=document.getElementById(id);e.value=[a,c][i];e.dispatchEvent(new Event('input'))})});
+</script>

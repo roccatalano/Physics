@@ -1,0 +1,53 @@
+<!--{"id":"12-1A-1-connected-masses","year":12,"section":"1A","title":"Connected masses: slope, string and pulley","criteria":["U3 AoS1: Newton's laws for connected bodies","U3 AoS1: forces on inclined planes"],
+"blurb":"A block on a frictionless table or slope is tied over a pulley to a hanging mass. Treat both as one system to find the acceleration, then use one mass on its own to find the tension.",
+"source":"Cambridge VCE Physics Units 3&4, 1A Newton’s laws (pp. 18–34), Formulas 1A–1 and 1A–3, Worked example 1A–6, g = 9.8 m s⁻². Frictionless surface and pulley, light string.","colour":"#4ade80"}-->
+<div class="ctx">Step 1: treat both masses as <b>one system</b>, so $a = \dfrac{F_\text{net}}{m_1 + m_2}$. Step 2: look at <b>one mass</b> on its own to find the tension.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#4ade80;padding:12px 16px"><h3>The system</h3><svg id="sv" viewBox="0 0 860 470"></svg></div>
+ <div class="side">
+  <style>.sl{grid-template-columns:44px 1fr 92px}</style>
+  <div class="card ctl" style="--c:#fbb040;gap:9px"><h3>Set up</h3>
+   <div class="sl"><span class="nm cy">$m_1$</span><input type="range" id="m1" min="1" max="20" step="0.5" value="10"><span class="v" id="m1v"></span></div>
+   <div class="sl"><span class="nm pk">$m_2$</span><input type="range" id="m2" min="0.5" max="20" step="0.5" value="4.5"><span class="v" id="m2v"></span></div>
+   <div class="sl"><span class="nm">$\theta$</span><input type="range" id="th" min="0" max="60" step="1" value="0"><span class="v" id="thv"></span></div>
+   <div class="btns"><button class="pr" data-v="10,4.5,0">WE 1A–6</button><button class="pr" data-v="10,5,30">Balanced</button><button class="pr" data-v="12,3,40">Slides back</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:18px;line-height:1.48;padding:12px 16px"><h3>Calculate</h3><div id="ro"></div></div>
+ </div>
+</div>
+<script>
+const g=9.8,sv=document.getElementById('sv');let m1=10,m2=4.5,th=0,a=0,T=0,X=0;
+const Q=[560,170],PR=24,PC=[Q[0]+PR,Q[1]-PR+2],PX=62;
+const slope=el('path',{fill:'#232c63',stroke:'#5b6690','stroke-width':3},sv),leg=el('line',{stroke:'#5b6690','stroke-width':3},sv);
+const arc=el('path',{fill:'none',stroke:'#fbb040','stroke-width':3},sv),aT=txt(sv,0,0,'θ',{fill:'#fbb040','font-size':22,'font-weight':700});
+const rope1=el('line',{stroke:'#cfd7f5','stroke-width':3},sv),rope2=el('line',{stroke:'#cfd7f5','stroke-width':3},sv);
+el('circle',{cx:PC[0],cy:PC[1],r:PR,fill:'#141a40',stroke:'#a5b4d8','stroke-width':4},sv);el('circle',{cx:PC[0],cy:PC[1],r:5,fill:'#a5b4d8'},sv);
+const b1=el('g',{},sv);el('rect',{x:-40,y:-30,width:80,height:60,rx:7,fill:'#7dd3fc'},b1);const b1t=txt(b1,0,8,'m₁',{fill:'#0d1330','font-size':22,'text-anchor':'middle','font-weight':700});
+const b2=el('g',{},sv);el('rect',{x:-30,y:0,width:60,height:60,rx:7,fill:'#f472b6'},b2);txt(b2,0,38,'m₂',{fill:'#0d1330','font-size':22,'text-anchor':'middle','font-weight':700});
+function arrow(c,dash){const gg=el('g',{},sv),l=el('line',{stroke:c,'stroke-width':dash?4:6,'stroke-linecap':'round','stroke-dasharray':dash?'9 7':''},gg),hd=el('path',{fill:c},gg),t=txt(gg,0,0,'',{fill:c,'font-size':19,'font-weight':700});
+ return(x,y,dx,dy,s,lx,ly,anc)=>{const L=Math.hypot(dx,dy);gg.style.display=L<5?'none':'';if(L<5)return;const ux=dx/L,uy=dy/L,Xh=x+dx,Yh=y+dy;
+  l.setAttribute('x1',x);l.setAttribute('y1',y);l.setAttribute('x2',Xh-ux*13);l.setAttribute('y2',Yh-uy*13);hd.setAttribute('d',`M${Xh},${Yh}L${Xh-ux*20-uy*10},${Yh-uy*20+ux*10}L${Xh-ux*20+uy*10},${Yh-uy*20-ux*10}Z`);
+  t.setAttribute('x',Xh+(lx||0));t.setAttribute('y',Yh+(ly||0));t.setAttribute('text-anchor',anc||'middle');t.innerHTML=s}}
+const aT1=arrow('#4ade80'),aS=arrow('#fbb040'),aT2=arrow('#4ade80'),aW2=arrow('#f472b6'),aA=arrow('#fff',1);
+const note=txt(sv,430,450,'',{fill:'#fbb040','font-size':20,'text-anchor':'middle'});
+function upd(){const r=th*Math.PI/180,s=Math.sin(r),Fn=m2*g-m1*g*s;a=Fn/(m1+m2);T=m2*(g-a);X=0;
+ document.getElementById('ro').innerHTML=`F<sub>net</sub> = m₂g − m₁g sin θ = <b>${f2(Fn,1).replace('-','−')} N</b><br>a = F<sub>net</sub> ÷ (m₁ + m₂) = <b class="hi">${f2(Math.abs(a),2)} m s⁻²</b><br>`+
+ `<span class="pk">m₂ alone:</span> m₂g − T = m₂a<br>T = m₂(g − a) = <b class="gr">${f2(T,1)} N</b><br>`+(Math.abs(a)<1e-9?'Balanced: no acceleration':a>0?'m₂ falls, m₁ moves to the pulley':'m₁ slides down, m₂ rises');
+ note.textContent=th==0?'frictionless table':'frictionless slope'}
+slider('m1',x=>f2(x,1)+' kg',x=>{m1=x;upd()});slider('m2',x=>f2(x,1)+' kg',x=>{m2=x;upd()});slider('th',x=>x+'°',x=>{th=x;upd()});
+group('.pr',v=>{const[p,q,w]=v.split(',');for(const[id,val]of[['m1',p],['m2',q],['th',w]]){const e=document.getElementById(id);e.value=val;e.dispatchEvent(new Event('input'))}});
+let tm=0;
+IX.anims.push((t,dt)=>{const r=th*Math.PI/180,c=Math.cos(r),s=Math.sin(r);if(IX.play)tm+=dt*IX.speed;let x=.5*a*tm*tm;if(Math.abs(x)>1.5||tm>4){tm=0;x=0}
+ const L=Math.min(520,(Q[1]+250-Q[1])/Math.max(s,.001)),BL=[Q[0]-c*L,Q[1]+s*L];
+ slope.setAttribute('d',`M${BL[0]},${BL[1]}L${Q[0]},${Q[1]}L${Q[0]},${Math.max(BL[1],Q[1]+40)}L${BL[0]},${Math.max(BL[1],Q[1]+40)}Z`);
+ arc.setAttribute('d',th?`M${BL[0]+70},${BL[1]}A70,70 0 0 0 ${BL[0]+70*c},${BL[1]-70*s}`:'');aT.setAttribute('x',BL[0]+82);aT.setAttribute('y',BL[1]-70*s/2+8);aT.style.display=th?'':'none';
+ const d=230-x*PX,px=Q[0]-c*d,py=Q[1]+s*d,nx=-s,ny=-c,cx=px+nx*31,cy=py+ny*31;
+ b1.setAttribute('transform',`translate(${cx},${cy}) rotate(${-th})`);
+ const tx=PC[0]-PR*s,ty=PC[1]-PR*c;rope1.setAttribute('x1',cx+c*40);rope1.setAttribute('y1',cy-s*40);rope1.setAttribute('x2',tx);rope1.setAttribute('y2',ty);
+ const hy=Q[1]+70+x*PX;rope2.setAttribute('x1',PC[0]+PR);rope2.setAttribute('y1',PC[1]);rope2.setAttribute('x2',PC[0]+PR);rope2.setAttribute('y2',hy);b2.setAttribute('transform',`translate(${PC[0]+PR},${hy})`);
+ const k=120/Math.max(m1*g,m2*g);
+ aT1(cx+c*40,cy-s*40,c*T*k,-s*T*k,'T',0,-14);aS(cx-c*40,cy+s*40,-c*m1*g*s*k,s*m1*g*s*k,'m₁g sin θ',-10,26,'end');
+ aT2(PC[0]+PR+50,hy+30,0,-T*k,'T',18,10,'start');aW2(PC[0]+PR+50,hy+30,0,m2*g*k,'m₂g',18,10,'start');
+ aA(PC[0]+PR-60,hy+30,0,Math.sign(a)*Math.min(80,Math.abs(a)*12),'a',-16,0,'end')});
+upd();
+</script>

@@ -1,5 +1,361 @@
 [
  {
+  "id": "12-1A-1-connected-masses",
+  "year": 12,
+  "section": "1A",
+  "title": "Connected masses: slope, string and pulley",
+  "criteria": [
+   "U3 AoS1: Newton's laws for connected bodies",
+   "U3 AoS1: forces on inclined planes"
+  ],
+  "blurb": "A block on a frictionless table or slope is tied over a pulley to a hanging mass. Treat both as one system to find the acceleration, then use one mass on its own to find the tension.",
+  "source": "Cambridge VCE Physics Units 3&4, 1A Newton’s laws (pp. 18–34), Formulas 1A–1 and 1A–3, Worked example 1A–6, g = 9.8 m s⁻². Frictionless surface and pulley, light string.",
+  "colour": "#4ade80"
+ },
+ {
+  "id": "12-1B-1-circular-motion",
+  "year": 12,
+  "section": "1B",
+  "title": "Circular motion: what provides the centripetal force?",
+  "criteria": [
+   "U3 AoS1: uniform circular motion (horizontal plane, banked tracks)",
+   "U3 AoS1: forces at the top and bottom of vertical circles"
+  ],
+  "blurb": "Three cases. A ball on a string in a horizontal circle (cut the string to see it leave on a tangent), a car on a banked track with its design speed, and a ball whirled in a vertical circle with the tension at the top and bottom.",
+  "source": "Cambridge VCE Physics Units 3&4, 1B Circular motion (pp. 23–37), Formulas 1B–1 to 1B–6, g = 9.8 m s⁻². Vertical circle at constant speed as in Worked example 1B–2. Animation slowed for fast spins.",
+  "colour": "#7dd3fc"
+ },
+ {
+  "id": "12-1C-1-projectile-launcher",
+  "year": 12,
+  "section": "1C",
+  "title": "Projectile launcher",
+  "criteria": [
+   "U3 AoS1: projectile motion near Earth's surface",
+   "U3 AoS1: qualitative effect of air resistance"
+  ],
+  "blurb": "Launch a projectile at any speed, angle and height. Velocity components are drawn on the ball; time of flight, range and maximum height are worked live. Turn on air resistance to compare the path.",
+  "source": "Cambridge VCE Physics Units 3&4, 1C Projectile motion (pp. 38–47), Worked example 1C–1, g = 9.8 m s⁻². Air resistance path is a qualitative model (drag ∝ v², terminal speed 30 m s⁻¹).",
+  "colour": "#fbb040"
+ },
+ {
+  "id": "12-2C-1-vertical-spring",
+  "year": 12,
+  "section": "2C",
+  "title": "Vertical spring: energy against extension",
+  "criteria": [
+   "U3 AoS1: Hooke's law and elastic potential energy",
+   "U3 AoS1: energy transformations in a vertical spring"
+  ],
+  "blurb": "A mass is let go from the end of an unstretched spring and bounces between A (top) and C (bottom). Watch Eg, Es and Ek trade on the energy–extension graph; B, halfway, is equilibrium and the fastest point.",
+  "source": "Cambridge VCE Physics Units 3&4, 2C Springs (pp. 92–101), Formulas 2C–1 and 2C–2, Figures 2C–9 and 2C–10, g = 9.8 m s⁻². Ideal light spring, no friction; Eg = 0 at the lowest point C. Drawing scaled to fit; fast bounces slowed.",
+  "colour": "#f472b6"
+ },
+ {
+  "id": "12-3A-1-gravitational-field",
+  "section": "3A",
+  "year": 12,
+  "title": "Gravitational field explorer",
+  "criteria": [
+   "U3 AoS2: gravitational fields, field lines",
+   "U3 AoS2: g = GM/r², inverse square law"
+  ],
+  "blurb": "Move a test mass away from Earth, the Moon, Mars or Jupiter and watch g fall as 1/r². Earth–Moon view traces the combined field lines and finds the point where g = 0.",
+  "source": "Cambridge VCE Physics Units 3&4, 3A Gravity and gravitational fields (pp. 122–137). Point masses; Earth–Moon sizes not to scale.",
+  "colour": "#7dd3fc"
+ },
+ {
+  "id": "12-3B-1-gpe-area",
+  "section": "3B",
+  "year": 12,
+  "title": "Gravitational PE: the area under the graph",
+  "criteria": [
+   "U3 AoS2: ΔEg from the area under a force–distance or field–distance graph",
+   "U3 AoS2: Eg = mgΔh in a uniform field"
+  ],
+  "blurb": "Lift a mass from one height to another above Earth. The shaded area under the force–distance or field–distance graph is the change in gravitational PE. Compare it with mgΔh.",
+  "source": "Cambridge VCE Physics Units 3&4, 3B Gravitational potential energy (pp. 138–145). Earth as a point mass, g = 9.81 N kg⁻¹ at the surface.",
+  "colour": "#fbb040"
+ },
+ {
+  "id": "12-3C-1-orbit-simulator",
+  "section": "3C",
+  "year": 12,
+  "title": "Orbit simulator",
+  "criteria": [
+   "U3 AoS2: satellites in circular orbits, v = √(GM/r)",
+   "U3 AoS2: Kepler's third law, geostationary orbit"
+  ],
+  "blurb": "Pick an orbit radius around Earth: the speed, period and acceleration follow from gravity alone. Kepler's third law graph, and a geostationary orbit that stays above one town.",
+  "source": "Cambridge VCE Physics Units 3&4, 3C Orbiting satellites (pp. 146–155). Circular orbits; Earth spins once per 23.9 h.",
+  "colour": "#4ade80"
+ },
+ {
+  "id": "12-4A-1-point-charges",
+  "section": "4A",
+  "year": 12,
+  "title": "Point charges: field lines and Coulomb's law",
+  "criteria": [
+   "U3 AoS2: electric field lines for point charges, monopoles and dipoles",
+   "U3 AoS2: E = kQ/r², Coulomb's law F = kq₁q₂/r²"
+  ],
+  "blurb": "Set two charges and their separation. Field lines run from + to −, and the Coulomb force on each charge is calculated live. Halve r and the force goes up four times.",
+  "source": "Cambridge VCE Physics Units 3&4, 4A Electric fields and forces (pp. 169–193). k = 8.99 × 10⁹ N m² C⁻². Field lines traced in 2D.",
+  "colour": "#f472b6"
+ },
+ {
+  "id": "12-4A-2-parallel-plates",
+  "section": "4A",
+  "year": 12,
+  "title": "Parallel plates: a uniform electric field",
+  "criteria": [
+   "U3 AoS2: uniform field between parallel plates, E = V/d, F = qE",
+   "U3 AoS2: work on a charge W = qV, particle acceleration"
+  ],
+  "blurb": "Set the voltage and plate gap, then release an electron, proton or alpha particle. It speeds up across the gap: E = V/d, F = qE, and the energy gained is qV.",
+  "source": "Cambridge VCE Physics Units 3&4, 4A Electric fields and forces (pp. 169–193). Edge effects and gravity ignored; non-relativistic. Motion slowed down a lot.",
+  "colour": "#7dd3fc"
+ },
+ {
+  "id": "12-4B-1-magnetic-field-lines",
+  "section": "4B",
+  "year": 12,
+  "title": "Magnetic field lines: magnets, wires and solenoids",
+  "criteria": [
+   "U3 AoS2: magnetic field lines for magnets, current-carrying wires and solenoids",
+   "U3 AoS2: right-hand grip rule, magnetic dipoles"
+  ],
+  "blurb": "Field lines for a bar magnet, two magnets facing each other, a straight wire and a solenoid. Flip the current and use the right-hand grip rule to predict the direction.",
+  "source": "Cambridge VCE Physics Units 3&4, 4B Magnetic fields and forces (pp. 195–227). 2D cross-sections; magnet poles modelled as point poles. Conventional current.",
+  "colour": "#a78bfa"
+ },
+ {
+  "id": "12-4B-2-dc-motor",
+  "section": "4B",
+  "year": 12,
+  "title": "DC motor: F = nIlB and the split ring commutator",
+  "criteria": [
+   "U3 AoS2: force on a current-carrying wire F = nIlB",
+   "U3 AoS2: DC motor operation, split ring commutator"
+  ],
+  "blurb": "A coil turns between the poles of a magnet. The force on each side is F = nIlB. The split ring commutator reverses the current every half turn so it keeps spinning; swap to slip rings and it just rocks to a stop.",
+  "source": "Cambridge VCE Physics Units 3&4, 4B Magnetic fields and forces (pp. 195–227). Uniform field; friction added so the speed levels off; rotation speed not to scale.",
+  "colour": "#fbb040"
+ },
+ {
+  "id": "12-4B-3-charge-circular-path",
+  "section": "4B",
+  "year": 12,
+  "title": "Charges in a magnetic field: r = mv/qB",
+  "criteria": [
+   "U3 AoS2: force on a moving charge F = qvB",
+   "U3 AoS2: circular path r = mv/qB, mass spectrometer"
+  ],
+  "blurb": "Fire an electron, proton or alpha particle into a magnetic field. F = qvB is always at right angles to v, so the path is a circle of radius r = mv/qB. Mass spectrometer mode separates carbon isotopes.",
+  "source": "Cambridge VCE Physics Units 3&4, 4B Magnetic fields and forces (pp. 195–227). Uniform field, non-relativistic speeds.",
+  "colour": "#f472b6"
+ },
+ {
+  "id": "12-5A-1-photovoltaic-cell",
+  "year": 12,
+  "section": "5A",
+  "title": "Solar panel: light in, current out",
+  "criteria": [
+   "U3 AoS3: photovoltaic cells produce DC",
+   "U3 AoS3: cells in series and parallel"
+  ],
+  "blurb": "Sunlight hits a panel of silicon cells and drives a DC current through a load. Change the light intensity and the number of cells in series, then read V, I, P and efficiency.",
+  "source": "Cambridge VCE Physics Units 3&4, 5A Solar panels: generating electricity from photovoltaic cells (pp. 243–250). Model: each cell 156 mm × 156 mm, 0.5 V at full sun (falls slightly in dim light), current 9 A at 1000 W/m², proportional to intensity.",
+  "colour": "#fbb040"
+ },
+ {
+  "id": "12-5B-1-faraday-loop",
+  "year": 12,
+  "section": "5B",
+  "title": "Faraday's law: a loop through a field",
+  "criteria": [
+   "U3 AoS3: magnetic flux ΦB = B⊥A",
+   "U3 AoS3: Faraday's law ε = −NΔΦB/Δt",
+   "U3 AoS3: Lenz's law"
+  ],
+  "blurb": "A square coil slides at constant speed through a region of field into the page. Watch the flux build up and fall, read the emf from the slope of the flux graph, and see the induced current direction from Lenz's law.",
+  "source": "Cambridge VCE Physics Units 3&4, 5B Generating emf by varying the magnetic flux, Formulas 5B–1, 5B–2 (pp. 251–264). Coil 10 cm × 10 cm, field region 30 cm wide with a sharp edge.",
+  "colour": "#7dd3fc"
+ },
+ {
+  "id": "12-5C-1-dc-generator",
+  "year": 12,
+  "section": "5C",
+  "title": "DC generator: the split ring commutator",
+  "criteria": [
+   "U3 AoS3: DC generators and split ring commutators",
+   "U3 AoS3: ΦB vs t and ε vs t graphs"
+  ],
+  "blurb": "A coil turns in a magnetic field. With a split ring commutator the output never reverses. Switch to slip rings to compare, and change turns, field and speed.",
+  "source": "Cambridge VCE Physics Units 3&4, 5C DC generators: producing DC voltage (pp. 265–274), and 5D. Coil area 0.010 m², uniform field, coil starts with its face square to the field. Rotation shown slowed to a few hertz so it can be seen.",
+  "colour": "#a78bfa"
+ },
+ {
+  "id": "12-5D-1-ac-generator",
+  "year": 12,
+  "section": "5D",
+  "title": "AC generator: slip rings make sinusoidal AC",
+  "criteria": [
+   "U3 AoS3: AC generators (alternators) and slip rings",
+   "U3 AoS3: ΦB vs t and ε vs t graphs",
+   "U3 AoS3: effect of speed and turns on emf"
+  ],
+  "blurb": "A coil turns in a magnetic field with slip rings. Watch the flux graph and the sinusoidal emf it produces (ε is the negative slope of ΦB), then change N, B and the turn rate.",
+  "source": "Cambridge VCE Physics Units 3&4, 5D Generators with slip rings produce sinusoidal AC (pp. 275–284), and 5C. Coil area 0.010 m², uniform field, coil starts with its face square to the field. Rotation shown slowed to a few hertz so it can be seen.",
+  "colour": "#a78bfa"
+ },
+ {
+  "id": "12-6A-1-peak-rms",
+  "year": 12,
+  "section": "6A",
+  "title": "Peak, peak-to-peak and rms",
+  "criteria": [
+   "U3 AoS3: peak, peak-to-peak and rms values of AC",
+   "U3 AoS3: Vrms = Vp/√2, Peffective = VrmsIrms"
+  ],
+  "blurb": "An AC supply drives a resistor. Read Vp, Vp–p and Vrms off the trace, and see why the rms value is the DC voltage that gives the same average power.",
+  "source": "Cambridge VCE Physics Units 3&4, 6A Peak and rms values of sinusoidal AC voltages, Formulas 6A–1 to 6A–3 (pp. 298–306). Resistive load only.",
+  "colour": "#f472b6"
+ },
+ {
+  "id": "12-6B-1-transformer",
+  "year": 12,
+  "section": "6B",
+  "title": "Transformer: the turns ratio",
+  "criteria": [
+   "U3 AoS3: transformers, step-up and step-down",
+   "U3 AoS3: ideal transformer N2/N1 = V2/V1 = I1/I2"
+  ],
+  "blurb": "Set the turns on each coil, the input voltage and the load. The changing flux in the iron core links the coils: V2/V1 = N2/N1, and power in equals power out so the current changes the other way. Try DC to see why it fails.",
+  "source": "Cambridge VCE Physics Units 3&4, 6B Transformers: electromagnetic induction at work, Formulas 6B–1, 6B–2 (pp. 307–314). Ideal transformer: no energy losses; all voltages and currents rms.",
+  "colour": "#4ade80"
+ },
+ {
+  "id": "12-6C-1-transmission-lines",
+  "year": 12,
+  "section": "6C",
+  "title": "Transmission lines: why high voltage?",
+  "criteria": [
+   "U3 AoS3: power loss in transmission lines, Ploss = I²R",
+   "U3 AoS3: voltage drop ΔV = IR",
+   "U3 AoS3: step-up and step-down transformers in distribution"
+  ],
+  "blurb": "A power station sends power along lines with resistance. Step the voltage up and the current falls, so the I²R loss falls with the square. Ten times the voltage, one hundredth of the loss.",
+  "source": "Cambridge VCE Physics Units 3&4, 6C Minimising power transmission losses, Worked examples 6C–1 to 6C–4 (pp. 315–329). Ideal transformers; I = P/V at the sending end; rms values.",
+  "colour": "#fb923c"
+ },
+ {
+  "id": "12-7A-1-double-slit",
+  "year": 12,
+  "section": "7A",
+  "title": "Young's double slit",
+  "criteria": [
+   "U4 AoS1: interference and path difference",
+   "U4 AoS1: effect of λ, L and d on fringe spacing"
+  ],
+  "blurb": "Change the wavelength, slit separation and screen distance. Watch the fringes spread or bunch up, and read the path difference to any bright or dark band.",
+  "source": "Cambridge VCE Physics Units 3&4, 7A Wave-like properties of light (pp. 357–363), Formula Δx = λL/d. Narrow slits assumed; not to scale.",
+  "colour": "#7dd3fc"
+ },
+ {
+  "id": "12-7A-2-single-slit",
+  "year": 12,
+  "section": "7A",
+  "title": "Diffraction and the λ/w ratio",
+  "criteria": [
+   "U4 AoS1: diffraction and the λ/w ratio"
+  ],
+  "blurb": "Plane waves pass through a gap. Change the wavelength and the gap width: the waves spread a lot when λ/w is close to 1 and hardly at all when λ/w is much less than 1.",
+  "source": "Cambridge VCE Physics Units 3&4, 7A Wave-like properties of light (pp. 357–360), Figure 7A–12. Waves beyond the gap from Huygens' principle (sum of point sources); spread lines at sin θ = λ/w.",
+  "colour": "#c084fc"
+ },
+ {
+  "id": "12-7B-1-photoelectric",
+  "year": 12,
+  "section": "7B",
+  "title": "The photoelectric effect",
+  "criteria": [
+   "U4 AoS1: E = hf = hc/λ",
+   "U4 AoS1: Ek max = hf − φ, threshold frequency, work function",
+   "U4 AoS1: stopping potential and intensity"
+  ],
+  "blurb": "Shine light on a metal. Change the frequency, the intensity and the collector voltage. Watch the photoelectrons, the Ek max against f graph and the current against voltage graph.",
+  "source": "Cambridge VCE Physics Units 3&4, 7B Particle-like properties of light (pp. 373–386), Formula Ek max = hf − φ. Caesium value from Worked example 7B–1; other work functions typical values. Model: emitted Ek spread evenly from 0 to Ek max.",
+  "colour": "#fbb040"
+ },
+ {
+  "id": "12-8A-1-de-broglie",
+  "year": 12,
+  "section": "8A",
+  "title": "de Broglie wavelength: electrons and X-rays",
+  "criteria": [
+   "U4 AoS1: de Broglie wavelength λ = h/p",
+   "U4 AoS1: electron and X-ray diffraction patterns"
+  ],
+  "blurb": "Set the electron speed and the X-ray wavelength. When the two diffraction patterns match, the wavelengths and momenta match, but the energies are very different.",
+  "source": "Cambridge VCE Physics Units 3&4, 8A Matter as particles or waves (pp. 394–400), Formulas 8A–1 and 8A–2. Non-relativistic electrons. Ring sizes schematic (proportional to λ).",
+  "colour": "#4ade80"
+ },
+ {
+  "id": "12-8B-1-energy-levels",
+  "year": 12,
+  "section": "8B",
+  "title": "Energy levels and line spectra",
+  "criteria": [
+   "U4 AoS1: ΔE = hf for absorbed or emitted photons",
+   "U4 AoS1: E = hf = hc/λ",
+   "U4 AoS1: emission and absorption spectra"
+  ],
+  "blurb": "Click two energy levels. The atom emits or absorbs one photon with exactly the energy difference, and a line appears in the spectrum at λ = hc/ΔE.",
+  "source": "Cambridge VCE Physics Units 3&4, 8B Similarities between light and matter (pp. 401–420), Figure 8B–10 (hydrogen, ground state = 0 eV) and Worked example 8B–4 (sodium). Energy axis broken to spread the upper levels.",
+  "colour": "#f472b6"
+ },
+ {
+  "id": "12-9B-1-light-clock",
+  "year": 12,
+  "section": "9B",
+  "title": "Light clock: time dilation and length contraction",
+  "criteria": [
+   "U4 AoS1: proper time t0 and time dilation t = γt0",
+   "U4 AoS1: proper length L0 and length contraction L = L0/γ",
+   "U4 AoS1: Lorentz factor γ"
+  ],
+  "blurb": "A light clock ticks inside a rocket. From Earth the light travels a longer diagonal path at the same speed c, so each tick takes longer and the rocket looks shorter.",
+  "source": "Cambridge VCE Physics Units 3&4, 9B Time dilation and length contraction (pp. 439–453), Formulas 9B–1 to 9B–3. Animation speeds scaled down; proper tick 1 s shown in slow time.",
+  "colour": "#7dd3fc"
+ },
+ {
+  "id": "12-9C-1-muon-decay",
+  "year": 12,
+  "section": "9C",
+  "title": "Muons reaching the ground",
+  "criteria": [
+   "U4 AoS1: muon decay as evidence for special relativity",
+   "U4 AoS1: time dilation in Earth's frame, length contraction in the muon's frame"
+  ],
+  "blurb": "A muon made 5000 m up should only travel about 657 m before it decays. Compare Earth's frame (its lifetime is dilated) with the muon's frame (the atmosphere is contracted).",
+  "source": "Cambridge VCE Physics Units 3&4, 9C Muon decay (pp. 455–457): lifetime 2.20 μs, 5000 m, 0.995c. As in the book, every muon is treated as lasting exactly its mean lifetime (real decay is random).",
+  "colour": "#f472b6"
+ },
+ {
+  "id": "12-9D-1-mass-energy",
+  "year": 12,
+  "section": "9D",
+  "title": "Rest energy and relativistic kinetic energy",
+  "criteria": [
+   "U4 AoS1: E0 = mc²",
+   "U4 AoS1: Etot = Ek + E0 = γmc², Ek = (γ − 1)mc²"
+  ],
+  "blurb": "Speed up a particle. Its rest energy stays the same while its kinetic energy grows without limit as v approaches c. Compare with the classical ½mv².",
+  "source": "Cambridge VCE Physics Units 3&4, 9D Mass and energy equivalence (pp. 461–470). Electron and proton masses from the VCAA formula sheet values; 1 MeV = 1.6 × 10⁻¹³ J.",
+  "colour": "#fbb040"
+ },
+ {
   "id": "1A-1-wave-types",
   "section": "1A",
   "title": "Transverse and longitudinal waves",

@@ -1,0 +1,52 @@
+<!--{"id":"12-6A-1-peak-rms","year":12,"section":"6A","title":"Peak, peak-to-peak and rms","criteria":["U3 AoS3: peak, peak-to-peak and rms values of AC","U3 AoS3: Vrms = Vp/√2, Peffective = VrmsIrms"],
+"blurb":"An AC supply drives a resistor. Read Vp, Vp–p and Vrms off the trace, and see why the rms value is the DC voltage that gives the same average power.",
+"source":"Cambridge VCE Physics Units 3&4, 6A Peak and rms values of sinusoidal AC voltages, Formulas 6A–1 to 6A–3 (pp. 298–306). Resistive load only.","colour":"#f472b6"}-->
+<div class="ctx">An AC supply is connected across a resistor. The voltage swings between $+V_\text{p}$ and $-V_\text{p}$. The <b>rms</b> value is the steady DC voltage that would heat the resistor at the <b>same average rate</b>.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#f472b6;gap:2px"><svg id="gv" viewBox="0 0 860 300"></svg><svg id="gp" viewBox="0 0 860 220"></svg></div>
+ <div class="side" style="width:370px">
+  <div class="card ctl" style="--c:#fbb040;gap:10px"><h3>Supply</h3>
+   <div class="sl"><span class="nm">$V_\text{rms}$</span><input type="range" id="Vr" min="2" max="20" step="1" value="12"><span class="v" id="Vrv"></span></div>
+   <div class="sl"><span class="nm">Frequency</span><input type="range" id="f" min="1" max="4" step="0.5" value="2"><span class="v" id="fv"></span></div>
+   <div class="sl"><span class="nm">$R$</span><input type="range" id="R" min="2" max="20" step="1" value="10"><span class="v" id="Rv"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5"><h3>Values</h3>
+   <div>$V_\text{p} = \sqrt{2}\,V_\text{rms}$ = <b id="vp" class="pk"></b></div>
+   <div>$V_\text{p–p} = 2V_\text{p}$ = <b id="vpp" class="hi"></b></div>
+   <div>$I_\text{rms} = \dfrac{V_\text{rms}}{R}$ = <b id="ir" class="cy"></b></div>
+   <div>$P_\text{eff} = V_\text{rms}I_\text{rms}$ = <b id="pe" class="gr"></b></div>
+  </div>
+  <div class="rule" style="font-size:17px">Power peaks at $V_\text{p}I_\text{p}$, but the <b>average</b> is half of that: $\tfrac12 V_\text{p}I_\text{p} = V_\text{rms}I_\text{rms}$.</div>
+ </div>
+</div>
+<script>
+let Vr=12,fr=2,R=10;const gv=document.getElementById('gv'),gp=document.getElementById('gp');const GX=70,GW=650,WIN=2;let VM=30;
+const vy=v=>150-v/VM*125;
+el('line',{x1:GX,x2:GX+GW,y1:150,y2:150,stroke:'#36418a','stroke-width':2},gv);el('line',{x1:GX,x2:GX,y1:20,y2:285,stroke:'#36418a','stroke-width':2},gv);
+txt(gv,GX+10,22,'Voltage across the resistor, V (V)',{'font-size':16,fill:'#f472b6'});txt(gv,GX+GW,172,'t',{'font-size':16,fill:'#8b96c4'});
+const vpath=el('path',{fill:'none',stroke:'#f472b6','stroke-width':4},gv);
+const mk=(c,lab,dash,r)=>({l:el('line',{x1:GX,x2:GX+GW,stroke:c,'stroke-width':2.5,'stroke-dasharray':dash},gv),t:txt(gv,r?GX+GW+4:GX-8,0,lab,{'font-size':15,fill:c,'text-anchor':r?'start':'end'})});
+const Lp=mk('#f472b6','+Vp','8 6',1),Ln=mk('#f472b6','−Vp','8 6',1),Lr=mk('#4ade80','Vrms','3 5',1);
+const pp=el('g',{},gv),ppl=el('line',{stroke:'#fbb040','stroke-width':3},pp),ppa=el('path',{fill:'#fbb040'},pp),ppt=txt(pp,0,0,'Vp–p',{'font-size':16,fill:'#fbb040','font-weight':700});
+// power graph
+el('line',{x1:GX,x2:GX+GW,y1:195,y2:195,stroke:'#36418a','stroke-width':2},gp);el('line',{x1:GX,x2:GX,y1:20,y2:200,stroke:'#36418a','stroke-width':2},gp);
+txt(gp,GX+10,22,'Power in the resistor, P (W); dotted line = average',{'font-size':16,fill:'#7dd3fc'});
+const parea=el('path',{fill:'#7dd3fc','fill-opacity':.12,stroke:'#7dd3fc','stroke-width':4},gp);
+const pav=el('line',{x1:GX,x2:GX+GW,stroke:'#4ade80','stroke-width':3,'stroke-dasharray':'3 5'},gp),pavt=txt(gp,GX+GW+6,0,'',{'font-size':15,fill:'#4ade80'});
+const pmt=txt(gp,GX-8,0,'',{'font-size':14,fill:'#7dd3fc','text-anchor':'end'}),pzt=txt(gp,GX-8,200,'0',{'font-size':14,fill:'#8b96c4','text-anchor':'end'});
+for(let s=0;s<=WIN;s+=.5)txt(gv,GX+s/WIN*GW,300,s+' s',{'font-size':13,fill:'#5b6690','text-anchor':'middle'});
+function upd(){const Vp=Math.SQRT2*Vr,Ir=Vr/R;VM=Vp*1.1;Lp.t.textContent='+Vp = '+sig(Vp,3)+' V';Ln.t.textContent='−Vp';Lr.t.textContent='Vrms = '+Vr+' V';document.getElementById('vp').textContent=sig(Vp,3)+' V';document.getElementById('vpp').textContent=sig(2*Vp,3)+' V';
+ document.getElementById('ir').textContent=sig(Ir,3)+' A';document.getElementById('pe').textContent=sig(Vr*Ir,3)+' W';
+ [[Lp,Vp],[Ln,-Vp],[Lr,Vr]].forEach(([o,v])=>{o.l.setAttribute('y1',vy(v));o.l.setAttribute('y2',vy(v));o.t.setAttribute('y',vy(v)+5)})}
+slider('Vr',x=>x+' V',x=>{Vr=x;upd()});slider('f',x=>f2(x,1)+' Hz',x=>{fr=x});slider('R',x=>x+' Ω',x=>{R=x;upd()});
+let ph=0;IX.anims.push((t,dt)=>{if(IX.play)ph+=dt*IX.speed*fr*2*Math.PI*.25;
+ const Vp=Math.SQRT2*Vr,Pp=Vp*Vp/R,PM=Pp*1.1;let d='',e='M'+GX+',195';
+ for(let i=0;i<=400;i++){const s=i/400*WIN,v=Vp*Math.sin(2*Math.PI*fr*s-ph),x=GX+s/WIN*GW;d+=(i?'L':'M')+x.toFixed(1)+','+vy(v).toFixed(1);e+='L'+x.toFixed(1)+','+(195-v*v/R/PM*170).toFixed(1)}
+ vpath.setAttribute('d',d);parea.setAttribute('d',e+'L'+(GX+GW)+',195Z');
+ const ya=195-Pp/2/PM*170;pav.setAttribute('y1',ya);pav.setAttribute('y2',ya);pavt.setAttribute('y',ya-8);pavt.textContent='Peff = '+sig(Pp/2,3)+' W';pmt.textContent=sig(Pp,3)+' W';pmt.setAttribute('y',195-Pp/PM*170+5);
+ // peak to peak arrow at the first crest after s=0.1
+ let n=Math.ceil((0.1*fr*2*Math.PI-Math.PI/2-ph)/(2*Math.PI));const sc=(Math.PI/2+2*Math.PI*n+ ph)/(2*Math.PI*fr),xc=GX+sc/WIN*GW+0;
+ ppl.setAttribute('x1',xc);ppl.setAttribute('x2',xc);ppl.setAttribute('y1',vy(Vp)+8);ppl.setAttribute('y2',vy(-Vp)-8);
+ ppa.setAttribute('d',`M${xc} ${vy(Vp)}l-7 11h14zM${xc} ${vy(-Vp)}l-7 -11h14z`);ppt.setAttribute('x',xc+8);ppt.setAttribute('y',152-14)});
+upd();
+</script>

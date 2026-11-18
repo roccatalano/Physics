@@ -1,0 +1,68 @@
+<!--{"id":"12-4B-1-magnetic-field-lines","section":"4B","year":12,"title":"Magnetic field lines: magnets, wires and solenoids","criteria":["U3 AoS2: magnetic field lines for magnets, current-carrying wires and solenoids","U3 AoS2: right-hand grip rule, magnetic dipoles"],
+"blurb":"Field lines for a bar magnet, two magnets facing each other, a straight wire and a solenoid. Flip the current and use the right-hand grip rule to predict the direction.",
+"source":"Cambridge VCE Physics Units 3&4, 4B Magnetic fields and forces (pp. 195–227). 2D cross-sections; magnet poles modelled as point poles. Conventional current.","colour":"#a78bfa"}-->
+<style>.sl{grid-template-columns:40px 1fr 80px}.md{padding:6px 11px}</style>
+<div class="ctx">Magnetic field lines run from <b>N to S</b> outside a magnet and always form <b>closed loops</b>. A current makes a magnetic field too. Which way does it go?</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#a78bfa;padding:12px 16px"><h3 id="ptitle">Field lines</h3><svg id="sv" viewBox="0 0 860 470"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:10px"><h3 style="margin-bottom:2px">Source</h3>
+   <div class="btns"><button class="md on" data-v="bar">Bar magnet</button><button class="md" data-v="ns">N facing S</button><button class="md" data-v="nn">N facing N</button><button class="md" data-v="wire">Straight wire</button><button class="md" data-v="sol">Solenoid</button></div>
+   <div class="btns"><button id="flip">Flip</button><button id="cmp">Compasses</button></div>
+  </div>
+  <div class="card" style="--c:#4ade80"><h3>Rule</h3><div class="out" id="exp" style="font-size:18px;line-height:1.45"></div></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv');let mode='bar',fl=1,showC=false;
+function mk(id,c){const m=el('marker',{id,viewBox:'0 0 10 10',refX:5,refY:5,markerWidth:4.5,markerHeight:4.5,orient:'auto'},el('defs',{},sv));el('path',{d:'M0 0L10 5L0 10z',fill:c},m)}
+mk('av','#c4b5fd');
+const L=el('g',{},sv),O=el('g',{},sv),C=el('g',{},sv);
+const W=860,H=470,CY=235;
+function path(pts,arrows){if(pts.length<3)return;el('path',{d:pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+','+p[1].toFixed(1)).join(''),fill:'none',stroke:'#c4b5fd','stroke-opacity':.6,'stroke-width':2},L);
+ (arrows||[.5]).forEach(f=>{const k=Math.max(1,Math.min(pts.length-2,Math.floor(pts.length*f)));const [x1,y1]=pts[k-1],[x2,y2]=pts[k+1];if(x2>8&&x2<W-8&&y2>8&&y2<H-8)el('line',{x1,y1,x2,y2,stroke:'#c4b5fd','stroke-width':3,'marker-end':'url(#av)'},L)})}
+let field;
+function trace(x,y,dir,stop,max){const pts=[[x,y]];for(let i=0;i<(max||1500);i++){const [bx,by]=field(x,y),m=Math.hypot(bx,by);if(!m)break;x+=dir*3*bx/m;y+=dir*3*by/m;pts.push([x,y]);if(x<-30||x>W+30||y<-30||y>H+30||stop(x,y,i))break}return pts}
+// magnet: poles as point charges (3D 1/r^2)
+function poleField(P){return (x,y)=>{let bx=0,by=0;P.forEach(([px,py,q])=>{const dx=x-px,dy=y-py,r=Math.hypot(dx,dy)+.01;bx+=q*dx/r**3;by+=q*dy/r**3});return[bx,by]}}
+function magnet(x,y,w,flipN){const h=46,n=el('g',{},O);const lN=flipN?x+w/2:x-w/2;
+ el('rect',{x:x-w/2,y:y-h/2,width:w/2,height:h,fill:flipN?'#3b82f6':'#ef4444'},n);el('rect',{x,y:y-h/2,width:w/2,height:h,fill:flipN?'#ef4444':'#3b82f6'},n);
+ txt(n,x-w/4,y+9,flipN?'S':'N',{'text-anchor':'middle','font-size':26,'font-weight':700,fill:'#fff'});txt(n,x+w/4,y+9,flipN?'N':'S',{'text-anchor':'middle','font-size':26,'font-weight':700,fill:'#fff'});}
+function compass(x,y){const [bx,by]=field(x,y),a=Math.atan2(by,bx)*180/Math.PI,g=el('g',{transform:`translate(${x},${y}) rotate(${a})`},C);
+ el('circle',{r:15,fill:'#0d1330',stroke:'#a5b4d8','stroke-width':2},g);el('path',{d:'M13 0L0 -5L0 5Z',fill:'#ef4444'},g);el('path',{d:'M-13 0L0 -5L0 5Z',fill:'#eef2ff'},g)}
+function draw(){L.innerHTML='';O.innerHTML='';C.innerHTML='';const ex=document.getElementById('exp');let cps=[];
+ document.getElementById('flip').textContent=mode==='wire'||mode==='sol'?'Reverse current':'Flip magnet';
+ if(mode==='bar'||mode==='ns'||mode==='nn'){
+  const s=fl;let P,mags;
+  if(mode==='bar'){P=[[430-80*s,CY,1],[430+80*s,CY,-1]];mags=[[430,200,s<0]]}
+  else if(mode==='ns'){P=[[150,CY,1],[330,CY,-1],[530,CY,1],[710,CY,-1]];if(s<0)P=P.map(p=>[p[0],p[1],-p[2]]);mags=[[240,200,s<0],[620,200,s<0]]}
+  else{P=[[150,CY,-1],[330,CY,1],[530,CY,1],[710,CY,-1]];if(s<0)P=P.map(p=>[p[0],p[1],-p[2]]);mags=[[240,200,s>0],[620,200,s<0]]}
+  field=poleField(P);
+  P.filter(p=>p[2]>0).forEach(([px,py])=>{const n=mode==='bar'?18:14;for(let i=0;i<n;i++){const a=(i+.5)/n*2*Math.PI;const pts=trace(px+10*Math.cos(a),py+10*Math.sin(a),1,(x,y)=>P.some(([qx,qy,q])=>q<0&&Math.hypot(x-qx,y-qy)<8));path(pts,[.5])}});
+  P.filter(p=>p[2]<0).forEach(([px,py])=>{const n=mode==='bar'?18:14;for(let i=0;i<n;i++){const a=(i+.5)/n*2*Math.PI;const pts=trace(px+10*Math.cos(a),py+10*Math.sin(a),-1,(x,y)=>P.some(([qx,qy,q])=>q>0&&Math.hypot(x-qx,y-qy)<8));const e=pts[pts.length-1];if(!P.some(([qx,qy,q])=>q>0&&Math.hypot(e[0]-qx,e[1]-qy)<9))path(pts.reverse(),[.5])}});
+  mags.forEach(([x,,f])=>magnet(x,CY,200,f));
+  cps=mode==='bar'?[[430,90],[430,380],[200,120],[660,120],[200,350],[660,350],[90,CY],[770,CY]]:[[430,CY],[430,140],[430,330],[60,CY],[800,CY]];
+  ex.innerHTML=mode==='bar'?'Outside the magnet the lines go from <b>N to S</b>. Inside they go S to N, closing the loop. A compass needle\'s N end points along the field.':
+   mode==='ns'?'<b>Opposite poles</b> facing: lines go straight across the gap. The field there is strong and nearly <b>uniform</b>. They attract.':'<b>Like poles</b> facing: lines push away from each other. In the middle there is a <b>neutral point</b> where B = 0. They repel.';
+  document.getElementById('ptitle').textContent={bar:'Bar magnet',ns:'Two magnets, opposite poles facing',nn:'Two magnets, like poles facing'}[mode];}
+ else if(mode==='wire'){const cx=430;field=(x,y)=>{const dx=x-cx,dy=y-CY,r2=dx*dx+dy*dy+1;return[-fl*dy/r2,fl*dx/r2].map(v=>-v)};
+  [40,75,120,175,240].forEach((r,i)=>{const pts=[];for(let k=0;k<=72;k++){const a=-fl*k/72*2*Math.PI;pts.push([cx+r*Math.cos(a),CY+r*Math.sin(a)])}path(pts,[.13,.63])});
+  el('circle',{cx,cy:CY,r:20,fill:'#fbb040',stroke:'#0d1330','stroke-width':3},O);
+  if(fl>0){el('circle',{cx,cy:CY,r:6,fill:'#0d1330'},O)}else{el('path',{d:`M${cx-9} ${CY-9}L${cx+9} ${CY+9}M${cx+9} ${CY-9}L${cx-9} ${CY+9}`,stroke:'#0d1330','stroke-width':4},O)}
+txt(O,30,40,fl>0?'Current out of the page (⊙)':'Current into the page (⊗)',{fill:'#fbb040','font-size':18,'font-weight':700});
+  cps=[[430,CY-100],[530,CY],[330,CY],[430,CY+100],[600,110],[260,360]];
+  ex.innerHTML=`<b>Right-hand grip rule:</b> thumb along the current, fingers curl the way the field goes. Here the field circles <b>${fl>0?'anticlockwise':'clockwise'}</b>. It gets weaker further from the wire.`;
+  document.getElementById('ptitle').textContent='Straight wire, seen end on';}
+ else{ // solenoid: loops as pairs of line currents, top row and bottom row
+  const xs=[];for(let i=0;i<9;i++)xs.push(270+i*40);const yt=CY-55,yb=CY+55;const xd=[];for(let i=0;i<=64;i++)xd.push(270+i*5);
+  field=(x,y)=>{let bx=0,by=0;xd.forEach(px=>{[[yt,1],[yb,-1]].forEach(([py,s])=>{const dx=x-px,dy=y-py,r2=dx*dx+dy*dy+30;const I=s*fl;bx+=I*dy/r2;by+=-I*dx/r2})});return[bx,by]};
+  [-42,-30,-18,-6,6,18,30,42].forEach(y0=>{const st=[430,CY+y0];let closed=false;const pts=trace(st[0],st[1],1,(x,y,i)=>(closed=i>40&&Math.hypot(x-st[0],y-st[1])<4),2500);if(closed)path(pts,[.03,.5]);else{const bk=trace(st[0],st[1],-1,()=>false,2500).reverse();path(bk.concat(pts),[bk.length/(bk.length+pts.length)+.02,.15,.85])}});
+  el('rect',{x:250,y:yt-14,width:360,height:yb-yt+28,rx:10,fill:'none',stroke:'#fbb040','stroke-width':2,'stroke-dasharray':'4 6','stroke-opacity':.5},O);
+  xs.forEach(px=>[[yt,1],[yb,-1]].forEach(([py,s])=>{el('circle',{cx:px,cy:py,r:12,fill:'#fbb040',stroke:'#0d1330','stroke-width':2},O);const out=s*fl>0;if(out)el('circle',{cx:px,cy:py,r:4,fill:'#0d1330'},O);else el('path',{d:`M${px-6} ${py-6}L${px+6} ${py+6}M${px+6} ${py-6}L${px-6} ${py+6}`,stroke:'#0d1330','stroke-width':3},O)}));
+  const nLeft=fl<0;txt(O,215,CY+10,nLeft?'N':'S',{'text-anchor':'middle','font-size':30,'font-weight':700,fill:nLeft?'#ef4444':'#60a5fa'});txt(O,645,CY+10,nLeft?'S':'N',{'text-anchor':'middle','font-size':30,'font-weight':700,fill:nLeft?'#60a5fa':'#ef4444'});
+  cps=[[430,CY],[330,CY],[530,CY],[430,60],[430,410],[110,CY],[760,CY]];
+  ex.innerHTML=`Inside a solenoid the field is strong and nearly <b>uniform</b>. Outside it looks like a bar magnet's. <b>Grip the coil</b> with fingers along the current: your thumb points to <b>N</b>.`;
+  document.getElementById('ptitle').textContent='Solenoid, cut through along its axis';}
+ if(showC)cps.forEach(([x,y])=>compass(x,y));}
+group('.md',v=>{mode=v;fl=1;draw()});document.getElementById('flip').onclick=()=>{fl=-fl;draw()};toggle('cmp',v=>{showC=v;draw()},false);
+</script>

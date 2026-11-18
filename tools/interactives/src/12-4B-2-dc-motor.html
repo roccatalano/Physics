@@ -1,0 +1,67 @@
+<!--{"id":"12-4B-2-dc-motor","section":"4B","year":12,"title":"DC motor: F = nIlB and the split ring commutator","criteria":["U3 AoS2: force on a current-carrying wire F = nIlB","U3 AoS2: DC motor operation, split ring commutator"],
+"blurb":"A coil turns between the poles of a magnet. The force on each side is F = nIlB. The split ring commutator reverses the current every half turn so it keeps spinning; swap to slip rings and it just rocks to a stop.",
+"source":"Cambridge VCE Physics Units 3&4, 4B Magnetic fields and forces (pp. 195–227). Uniform field; friction added so the speed levels off; rotation speed not to scale.","colour":"#fbb040"}-->
+<style>.sl{grid-template-columns:30px 1fr 84px}</style>
+<div class="ctx">We look along the axle. The two long sides of the coil carry current in <b>opposite directions</b>, so one is pushed up and the other down. What happens when the coil is vertical?</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#fbb040;padding:12px 16px"><h3>End view of the coil</h3><svg id="sv" viewBox="0 0 860 470"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#7dd3fc;gap:8px"><h3 style="margin-bottom:2px">Motor</h3>
+   <div class="sl"><span class="nm">$n$</span><input type="range" id="n" min="1" max="100" step="1" value="50"><span class="v" id="nv"></span></div>
+   <div class="sl"><span class="nm">$I$</span><input type="range" id="I" min="0" max="5" step="0.5" value="2"><span class="v" id="Iv"></span></div>
+   <div class="sl"><span class="nm">$l$</span><input type="range" id="l" min="5" max="20" step="1" value="10"><span class="v" id="lv"></span></div>
+   <div class="sl"><span class="nm">$B$</span><input type="range" id="B" min="0.1" max="1" step="0.05" value="0.5"><span class="v" id="Bv"></span></div>
+   <div class="btns"><button class="cm on" data-v="1">Split ring</button><button class="cm" data-v="0">Slip rings</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:18px;line-height:1.5;padding:10px 18px">
+   <div>$F = nIlB$ <span id="oF"></span></div>
+   <div id="rule" style="font-size:17px;color:#cfd7f5;margin-top:4px"></div>
+  </div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv');let n=50,I=2,l=10,B=.5,split=true,th=.35,om=0;
+function mk(id,c){const m=el('marker',{id,viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:4,markerHeight:4,orient:'auto'},el('defs',{},sv));el('path',{d:'M0 0L10 5L0 10z',fill:c},m)}
+mk('ab','#7dd3fc');mk('ay','#fbb040');mk('ag','#4ade80');
+const CX=250,CY=225,RW=120;
+// magnets and field
+el('rect',{x:20,y:CY-150,width:60,height:300,rx:8,fill:'#ef4444'},sv);txt(sv,50,CY+12,'N',{'text-anchor':'middle','font-size':34,'font-weight':700,fill:'#fff'});
+el('rect',{x:420,y:CY-150,width:60,height:300,rx:8,fill:'#3b82f6'},sv);txt(sv,450,CY+12,'S',{'text-anchor':'middle','font-size':34,'font-weight':700,fill:'#fff'});
+for(let y=CY-130;y<=CY+130;y+=52)el('line',{x1:88,x2:410,y1:y,y2:y,stroke:'#7dd3fc','stroke-opacity':.35,'stroke-width':2,'marker-end':'url(#ab)'},sv);
+txt(sv,250,CY+178,'B',{'text-anchor':'middle','font-size':20,'font-weight':700,fill:'#7dd3fc'});
+el('circle',{cx:CX,cy:CY,r:RW,fill:'none',stroke:'#36418a','stroke-width':2,'stroke-dasharray':'4 7'},sv);
+const coil=el('line',{stroke:'#eef2ff','stroke-width':6,'stroke-linecap':'round'},sv);el('circle',{cx:CX,cy:CY,r:7,fill:'#a5b4d8'},sv);
+const sd=[0,1].map(i=>{const g=el('g',{},sv);el('circle',{r:20,fill:i?'#7dd3fc':'#fbb040',stroke:'#0d1330','stroke-width':3},g);const dot=el('circle',{r:6,fill:'#0d1330'},g),x=el('path',{d:'M-8 -8L8 8M8 -8L-8 8',stroke:'#0d1330','stroke-width':4},g);
+ const f=el('line',{stroke:'#4ade80','stroke-width':6,'marker-end':'url(#ag)'},sv),ft=txt(sv,0,0,'F',{fill:'#4ade80','font-size':20,'font-weight':700});return{g,dot,x,f,ft}});
+// commutator panel
+const KX=650,KY=120,KR=46;txt(sv,KX,KY-80,'Commutator (same view)',{'text-anchor':'middle','font-size':16,fill:'#a5b4d8','font-weight':700});
+const kg=el('g',{},sv);const h0=el('path',{fill:'#fbb040'},kg),h1=el('path',{fill:'#7dd3fc'},kg),ring=el('circle',{r:KR,fill:'none',stroke:'#fbb040','stroke-width':16},kg);
+el('rect',{x:KX+KR+6,y:KY-12,width:34,height:24,fill:'#94a3b8',rx:3},sv);el('rect',{x:KX-KR-40,y:KY-12,width:34,height:24,fill:'#94a3b8',rx:3},sv);
+txt(sv,KX+KR+60,KY+8,'+',{'text-anchor':'middle','font-size':26,'font-weight':700,fill:'#fca5a5'});txt(sv,KX-KR-58,KY+8,'−',{'text-anchor':'middle','font-size':26,'font-weight':700,fill:'#93c5fd'});
+txt(sv,KX,KY+76,'brushes stay still',{'text-anchor':'middle','font-size':15,fill:'#7f8bb5'});
+// torque graph
+const GX=540,GY=250,GW=290,GH=150;el('rect',{x:GX,y:GY,width:GW,height:GH,fill:'#141a40',rx:6},sv);
+el('line',{x1:GX,x2:GX+GW,y1:GY+GH/2,y2:GY+GH/2,stroke:'#5b6690','stroke-width':2},sv);
+txt(sv,GX,GY-10,'Turning effect against angle',{fill:'#f472b6','font-size':16,'font-weight':700});
+[0,90,180,270,360].forEach(a=>txt(sv,GX+a/360*GW,GY+GH+20,a+'°',{'text-anchor':'middle','font-size':14,fill:'#7f8bb5'}));
+const tc=el('path',{fill:'none',stroke:'#f472b6','stroke-width':3},sv),td=el('circle',{r:7,fill:'#fbb040'},sv);
+const tq=a=>split?Math.abs(Math.cos(a)):Math.cos(a); // a = angle of side 0 from +x
+function curve(){let d='';for(let i=0;i<=120;i++){const a=i/120*2*Math.PI;d+=(i?'L':'M')+(GX+i/120*GW).toFixed(1)+','+(GY+GH/2-tq(a)*GH*.45).toFixed(1)}tc.setAttribute('d',d)}
+const F=()=>n*I*(l/100)*B;
+function upd(){document.getElementById('oF').innerHTML=`= ${n} × ${I} × ${(l/100).toFixed(2)} × ${B} = <b class="hi">${sig(F(),3)} N</b>`;
+ document.getElementById('rule').innerHTML=split?'The split ring <b>reverses the current every half turn</b>, so the turning effect is always the same way. It is zero when the coil is vertical; momentum carries it past.':'With slip rings the current never reverses. Past vertical the forces <b>turn it back</b>, so it rocks and stops.';curve()}
+slider('n',null,v=>{n=v;upd()});slider('I',v=>v+' A',v=>{I=v;upd()});slider('l',v=>v+' cm',v=>{l=v;upd()});slider('B',v=>v.toFixed(2)+' T',v=>{B=v;upd()});
+group('.cm',v=>{split=v==='1';ring.style.display=split?'none':'';upd()});ring.style.display='none';
+IX.anims.push((t,dt)=>{const h=IX.play?dt*IX.speed:0,f=F()/100;
+ for(let k=0;k<4;k++){const al=7*f*tq(th)-0.9*om;om+=al*h/4;th+=om*h/4}
+ const a=((th%(2*Math.PI))+2*Math.PI)%(2*Math.PI);const c=Math.cos(a),s=Math.sin(a);
+ const p=[[CX+RW*c,CY-RW*s],[CX-RW*c,CY+RW*s]];coil.setAttribute('x1',p[0][0]);coil.setAttribute('y1',p[0][1]);coil.setAttribute('x2',p[1][0]);coil.setAttribute('y2',p[1][1]);
+ // current out of page in side 0 if (split ? cos>0 : true)
+ const out0=split?c>=0:true,L=Math.min(110,25+85*f)*(I>0?1:0);
+ sd.forEach((q,i)=>{const out=i?!out0:out0;q.g.setAttribute('transform',`translate(${p[i][0]},${p[i][1]})`);q.dot.style.display=out?'':'none';q.x.style.display=out?'none':'';
+  const dir=out?-1:1;q.f.style.display=q.ft.style.display=L>0?'':'none';q.f.setAttribute('x1',p[i][0]);q.f.setAttribute('x2',p[i][0]);q.f.setAttribute('y1',p[i][1]+dir*22);q.f.setAttribute('y2',p[i][1]+dir*(22+L));q.ft.setAttribute('x',p[i][0]+14);q.ft.setAttribute('y',p[i][1]+dir*(22+L*.6)+7)});
+ // commutator halves follow the coil: half 0 centred on side 0's angle
+ const arc=(c0,col)=>{const a1=c0-Math.PI/2+.12,a2=c0+Math.PI/2-.12,R1=KR-10,R2=KR+8;const P=(r,aa)=>`${KX+r*Math.cos(aa)},${KY-r*Math.sin(aa)}`;return `M${P(R2,a1)}A${R2},${R2} 0 0 0 ${P(R2,a2)}L${P(R1,a2)}A${R1},${R1} 0 0 1 ${P(R1,a1)}Z`};
+ h0.setAttribute('d',arc(a,0));h1.setAttribute('d',arc(a+Math.PI,1));h0.style.display=h1.style.display=split?'':'none';ring.setAttribute('cx',KX);ring.setAttribute('cy',KY);
+ td.setAttribute('cx',GX+a/(2*Math.PI)*GW);td.setAttribute('cy',GY+GH/2-tq(a)*GH*.45)});
+</script>

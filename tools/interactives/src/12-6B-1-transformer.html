@@ -1,0 +1,62 @@
+<!--{"id":"12-6B-1-transformer","year":12,"section":"6B","title":"Transformer: the turns ratio","criteria":["U3 AoS3: transformers, step-up and step-down","U3 AoS3: ideal transformer N2/N1 = V2/V1 = I1/I2"],
+"blurb":"Set the turns on each coil, the input voltage and the load. The changing flux in the iron core links the coils: V2/V1 = N2/N1, and power in equals power out so the current changes the other way. Try DC to see why it fails.",
+"source":"Cambridge VCE Physics Units 3&4, 6B Transformers: electromagnetic induction at work, Formulas 6B–1, 6B–2 (pp. 307–314). Ideal transformer: no energy losses; all voltages and currents rms.","colour":"#4ade80"}-->
+<div class="ctx">An alternating current in the <b>primary</b> coil makes a changing flux in the iron core. The same changing flux passes through the <b>secondary</b> coil and induces an emf there.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#4ade80"><svg id="sv" viewBox="0 0 860 520"></svg></div>
+ <div class="side" style="width:370px">
+  <div class="card ctl" style="--c:#fbb040;gap:9px"><h3>Transformer</h3>
+   <div class="sl"><span class="nm">$N_1$</span><input type="range" id="N1" min="50" max="1000" step="50" value="1000"><span class="v" id="N1v"></span></div>
+   <div class="sl"><span class="nm">$N_2$</span><input type="range" id="N2" min="50" max="1000" step="50" value="50"><span class="v" id="N2v"></span></div>
+   <div class="sl"><span class="nm">$V_1$</span><input type="range" id="V1" min="10" max="240" step="10" value="230"><span class="v" id="V1v"></span></div>
+   <div class="sl"><span class="nm">Load $R$</span><input type="range" id="R" min="5" max="100" step="5" value="20"><span class="v" id="Rv"></span></div>
+   <div class="btns"><button class="sp" data-v="ac">AC input</button><button class="sp" data-v="dc">DC input</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.45"><h3>Ideal transformer</h3>
+   <div id="kind" style="font-weight:700"></div>
+   <div>$V_2 = V_1\dfrac{N_2}{N_1}$ = <b id="V2" class="pk"></b></div>
+   <div>$I_2$ = <b id="I2" class="pk"></b> &nbsp; $I_1$ = <b id="I1" class="cy"></b></div>
+   <div>$P_1 = P_2$ = <b id="P" class="gr"></b></div>
+  </div>
+ </div>
+</div>
+<script>
+let N1=1000,N2=50,V1=230,R=20,ac=true;const sv=document.getElementById('sv');
+// core
+const C={x:250,y:60,w:360,h:300,t:56};
+el('path',{d:`M${C.x} ${C.y}h${C.w}v${C.h}h${-C.w}z M${C.x+C.t} ${C.y+C.t}v${C.h-2*C.t}h${C.w-2*C.t}v${-(C.h-2*C.t)}z`,fill:'#475569','fill-rule':'evenodd',stroke:'#94a3b8','stroke-width':2},sv);
+txt(sv,C.x+C.w/2,C.y-14,'soft iron core',{'text-anchor':'middle','font-size':17,fill:'#cbd5e1'});
+const fl=el('path',{d:`M${C.x+C.t/2} ${C.y+C.t/2}h${C.w-C.t}v${C.h-C.t}h${-(C.w-C.t)}z`,fill:'none',stroke:'#fde047','stroke-width':4,'stroke-dasharray':'14 16'},sv);
+const coils=el('g',{},sv);
+// circuits
+el('path',{d:`M${C.x-14} 120H80V300H${C.x-14}`,fill:'none',stroke:'#7dd3fc','stroke-width':4},sv);
+el('circle',{cx:80,cy:210,r:30,fill:'#141a40',stroke:'#7dd3fc','stroke-width':4},sv);const src=el('path',{fill:'none',stroke:'#7dd3fc','stroke-width':3},sv);
+el('path',{d:`M${C.x+C.w+14} 120H780V300H${C.x+C.w+14}`,fill:'none',stroke:'#f472b6','stroke-width':4},sv);
+el('rect',{x:766,y:170,width:28,height:80,rx:4,fill:'#141a40',stroke:'#f472b6','stroke-width':4},sv);txt(sv,806,216,'R',{'font-size':18,fill:'#f472b6'});
+
+const n1t=txt(sv,C.x+C.t/2,392,'',{'text-anchor':'middle','font-size':17,fill:'#7dd3fc','font-weight':700}),n2t=txt(sv,C.x+C.w-C.t/2,392,'',{'text-anchor':'middle','font-size':17,fill:'#f472b6','font-weight':700});
+// traces
+const TY=472,TA=46,TX1=60,TX2=470,TW=330;
+txt(sv,TX1,TY-TA-8,'V1 (t)',{'font-size':15,fill:'#7dd3fc'});const t2l=txt(sv,TX2,TY-TA-8,'V2 (t), same scale',{'font-size':15,fill:'#f472b6'});
+[TX1,TX2].forEach(x=>el('line',{x1:x,x2:x+TW,y1:TY,y2:TY,stroke:'#36418a','stroke-width':2},sv));
+const t1=el('path',{fill:'none',stroke:'#7dd3fc','stroke-width':3},sv),t2=el('path',{fill:'none',stroke:'#f472b6','stroke-width':3},sv);
+function drawCoils(){coils.innerHTML='';const turn=(x,n,c)=>{const k=Math.max(2,Math.round(n/50));const top=C.y+30,bot=C.y+C.h-30,step=(bot-top)/k;
+ for(let i=0;i<k;i++){const y=top+i*step+step/2;el('ellipse',{cx:x,cy:y,rx:C.t/2+14,ry:Math.min(7,step/2-1),fill:'none',stroke:c,'stroke-width':Math.max(2,Math.min(5,step/3))},coils)}};
+ turn(C.x+C.t/2,N1,'#7dd3fc');turn(C.x+C.w-C.t/2,N2,'#f472b6');n1t.textContent='primary: N1 = '+N1;n2t.textContent='secondary: N2 = '+N2}
+function vals(){const V2=ac?V1*N2/N1:0,I2=V2/R,I1=ac?V2*I2/V1:NaN;return{V2,I2,I1}}
+function upd(){const{V2,I2,I1}=vals();drawCoils();
+ document.getElementById('V2').textContent=sig(V2,3)+' V';document.getElementById('I2').textContent=sig(I2,3)+' A';
+ document.getElementById('I1').textContent=ac?sig(I1,3)+' A':'steady';const pw=V2*I2;document.getElementById('P').textContent=pw>=1e6?sig(pw/1e6,3)+' MW':pw>=1e3?sig(pw/1e3,3)+' kW':sig(pw,3)+' W';
+ const k=document.getElementById('kind');k.textContent=!ac?'DC: flux is steady, so nothing is induced':N2>N1?'Step-up: V up, I down':N2<N1?'Step-down: V down, I up':'Equal turns: no change';
+ k.style.color=!ac?'#f472b6':'#fbb040'}
+slider('N1',x=>x,x=>{N1=x;upd()});slider('N2',x=>x,x=>{N2=x;upd()});slider('V1',x=>x+' V',x=>{V1=x;upd()});slider('R',x=>x+' Ω',x=>{R=x;upd()});
+group('.sp',v=>{ac=v==='ac';upd()})[0].classList.add('on');
+let ph=0,off=0;IX.anims.push((t,dt)=>{const k=IX.play?dt*IX.speed:0;ph+=k*2*Math.PI*.5;const s=Math.cos(ph);
+ off+=ac?k*90*Math.sin(ph):0;fl.setAttribute('stroke-dashoffset',off);fl.setAttribute('stroke-opacity',ac?.3+.7*Math.abs(Math.sin(ph)):.6);
+ src.setAttribute('d',ac?'M58 210q11 -22 22 0t22 0':'M60 204h40M60 216h40');
+ const{V2}=vals();const Vs=V2/V1;// trace scale: V1 fills the box; V2 to the same scale (clipped)
+ const m=Math.max(1,ac?Vs:1),yv=v=>TY-v/m*TA*.85;let a='',b='';
+ for(let i=0;i<=120;i++){const x=i/120,p=ac?Math.sin(4*Math.PI*x-ph):1;a+=(i?'L':'M')+(TX1+x*TW).toFixed(1)+','+yv(p).toFixed(1);b+=(i?'L':'M')+(TX2+x*TW).toFixed(1)+','+yv(ac?p*Vs:0).toFixed(1)}
+ t1.setAttribute('d',a);t2l.textContent='V2 (t), same scale as V1';t2.setAttribute('d',b)});
+upd();
+</script>

@@ -1,0 +1,80 @@
+<!--{"id":"12-5D-1-ac-generator","year":12,"section":"5D","title":"AC generator: slip rings make sinusoidal AC","criteria":["U3 AoS3: AC generators (alternators) and slip rings", "U3 AoS3: \u03a6B vs t and \u03b5 vs t graphs", "U3 AoS3: effect of speed and turns on emf"],
+"blurb":"A coil turns in a magnetic field with slip rings. Watch the flux graph and the sinusoidal emf it produces (ε is the negative slope of ΦB), then change N, B and the turn rate.",
+"source":"Cambridge VCE Physics Units 3&4, 5D Generators with slip rings produce sinusoidal AC (pp. 275–284), and 5C. Coil area 0.010 m², uniform field, coil starts with its face square to the field. Rotation shown slowed to a few hertz so it can be seen.","colour":"#a78bfa"}-->
+<div class="ctx">A coil turns between the poles of a magnet. The flux through it rises and falls, so an emf is induced. The <b>slip rings and brushes</b> decide what reaches the outside circuit.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#a78bfa;gap:2px"><svg id="sc" viewBox="0 0 860 230"></svg><svg id="gf" viewBox="0 0 860 170"></svg><svg id="ge" viewBox="0 0 860 170"></svg></div>
+ <div class="side" style="width:370px">
+  <div class="card ctl" style="--c:#fbb040;gap:10px"><h3>Generator</h3>
+   <div class="btns"><button class="cm" data-v="split">Split ring (DC)</button><button class="cm" data-v="slip">Slip rings (AC)</button></div>
+   <div class="sl"><span class="nm">Turns $N$</span><input type="range" id="N" min="10" max="100" step="10" value="80"><span class="v" id="Nv"></span></div>
+   <div class="sl"><span class="nm">Field $B$</span><input type="range" id="B" min="0.1" max="1" step="0.1" value="0.8"><span class="v" id="Bv"></span></div>
+   <div class="sl"><span class="nm">Turn rate $f$</span><input type="range" id="f" min="0.5" max="2" step="0.25" value="1"><span class="v" id="fv"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5"><h3>Output</h3>
+   
+   <div>Peak output: <b id="pk" class="pk"></b></div>
+   <div>Period $T$ = <b id="per" class="cy"></b></div>
+   <div>Average over ¼ turn: <b id="avg" class="gr"></b></div>
+  </div>
+  <div class="rule" id="rule" style="font-size:17px"></div>
+ </div>
+</div>
+<script>
+let mode='slip',N=80,B=.8,fr=1,th=0;const A=.01;
+const sc=document.getElementById('sc'),gf=document.getElementById('gf'),ge=document.getElementById('ge');
+// magnets and field
+const CX=250,CY=115,HW=110,HH=80;
+el('rect',{x:40,y:25,width:70,height:180,rx:10,fill:'#ef4444'},sc);txt(sc,75,124,'N',{'text-anchor':'middle','font-size':34,'font-weight':700,fill:'#fff'});
+el('rect',{x:390,y:25,width:70,height:180,rx:10,fill:'#3b82f6'},sc);txt(sc,425,124,'S',{'text-anchor':'middle','font-size':34,'font-weight':700,fill:'#fff'});
+[45,80,150,185].forEach(y=>{el('line',{x1:112,x2:388,y1:y,y2:y,stroke:'#5b6690','stroke-width':2,'stroke-dasharray':'6 6'},sc);el('path',{d:`M380 ${y-6}L390 ${y}L380 ${y+6}`,fill:'none',stroke:'#5b6690','stroke-width':2},sc)});
+txt(sc,250,222,'B',{'text-anchor':'middle','font-size':17,fill:'#8b96c4','font-style':'italic'});
+el('line',{x1:CX,x2:CX,y1:10,y2:220,stroke:'#36418a','stroke-width':2,'stroke-dasharray':'3 5'},sc);
+const face=el('polygon',{fill:'#a78bfa','fill-opacity':.25},sc);
+const sA=el('line',{stroke:'#fbb040','stroke-width':7,'stroke-linecap':'round'},sc),sB=el('line',{stroke:'#7dd3fc','stroke-width':7,'stroke-linecap':'round'},sc);
+const tp=el('line',{stroke:'#cfd7f5','stroke-width':5},sc),bt=el('line',{stroke:'#cfd7f5','stroke-width':5},sc);
+// commutator drawing (end-on view on the right)
+const KX=580,KY=110,KR=44;const kg=el('g',{},sc);
+const brushL=el('rect',{x:KX-KR-26,y:KY-12,width:24,height:24,rx:3,fill:'#94a3b8'},sc),brushR=el('rect',{x:KX+KR+2,y:KY-12,width:24,height:24,rx:3,fill:'#94a3b8'},sc);
+el('path',{d:`M${KX-KR-26} ${KY}H${KX-KR-60}V205H${KX+KR+60}V${KY}H${KX+KR+26}`,fill:'none',stroke:'#cfd7f5','stroke-width':4},sc);
+const meter=el('circle',{cx:KX,cy:205,r:20,fill:'#141a40',stroke:'#cfd7f5','stroke-width':3},sc);txt(sc,KX,211,'V',{'text-anchor':'middle','font-size':18,fill:'#cfd7f5'});
+const needle=el('line',{x1:KX,y1:205,stroke:'#f472b6','stroke-width':3},sc);
+const kt=txt(sc,KX,22,'',{'text-anchor':'middle','font-size':16,fill:'#cfd7f5'});
+// graphs
+const GX=84,GW=736,MID=88,AMP=62,WIN=3;
+function axes(svg,lab,col){el('line',{x1:GX,x2:GX+GW,y1:MID,y2:MID,stroke:'#36418a','stroke-width':2},svg);el('line',{x1:GX,x2:GX,y1:16,y2:160,stroke:'#36418a','stroke-width':2},svg);
+ txt(svg,GX+8,22,lab,{'font-size':16,fill:col});for(let s=0;s<=WIN;s++)txt(svg,GX+s/WIN*GW,166,s+' s',{'font-size':13,fill:'#5b6690','text-anchor':'middle'});
+ return{p:el('path',{fill:'none',stroke:col,'stroke-width':4},svg),dot:el('circle',{r:7,fill:col},svg),top:txt(svg,GX-6,MID-AMP+5,'',{'font-size':13,fill:'#8b96c4','text-anchor':'end'}),bot:txt(svg,GX-6,MID+AMP+5,'',{'font-size':13,fill:'#8b96c4','text-anchor':'end'})}}
+const G1=axes(gf,'Flux ΦB through the coil','#7dd3fc'),G2=axes(ge,'Output voltage','#f472b6');
+const phi=a=>B*A*Math.cos(a),emf=a=>N*B*A*2*Math.PI*fr*Math.sin(a),out=a=>mode==='slip'?emf(a):Math.abs(emf(a));
+const EM=15;// largest possible peak, fixed scale so changes show
+function upd(){const pk=N*B*A*2*Math.PI*fr;document.getElementById('pk').textContent=sig(pk,3)+' V';document.getElementById('per').textContent=sig(1/fr,3)+' s';
+ document.getElementById('avg').textContent=sig(4*N*B*A*fr,3)+' V';
+ kt.textContent=mode==='slip'?'slip rings: each end of the coil keeps its own ring':'split ring: swaps the connections every half turn';
+ document.getElementById('rule').innerHTML=mode==='slip'?'<b>Slip rings:</b> each brush stays on one end of the coil, so the output <b>reverses every half turn</b>: AC.':
+ '<b>Split ring:</b> as the emf in the coil reverses, the brushes swap halves, so the output <b>never reverses</b>: DC.'}
+group('.cm',v=>{mode=v;upd()}).forEach(b=>b.classList.toggle('on',b.dataset.v===mode));
+slider('N',x=>x,x=>{N=x;upd()});slider('B',x=>f2(x,1)+' T',x=>{B=x;upd()});slider('f',x=>f2(x)+' Hz',x=>{fr=x;upd()});
+let tt=0;const hist=[];
+IX.anims.push((t,dt)=>{if(IX.play){const k=dt*IX.speed;tt+=k;th+=2*Math.PI*fr*k;hist.push([tt,th,phi(th),out(th)])}
+ while(hist.length&&hist[0][0]<tt-WIN)hist.shift();
+ // coil, viewed from the front: plane width shrinks as cos of angle between plane and view
+ const s=Math.sin(th),c=Math.cos(th),w=HW*s;// coil plane angle: th=0 face square to field means coil is edge on in this view
+ face.setAttribute('points',`${CX-w},${CY-HH} ${CX+w},${CY-HH} ${CX+w},${CY+HH} ${CX-w},${CY+HH}`);
+ [[sA,-w],[sB,w]].forEach(([l,x])=>{l.setAttribute('x1',CX+x);l.setAttribute('x2',CX+x);l.setAttribute('y1',CY-HH);l.setAttribute('y2',CY+HH)});
+ [[tp,CY-HH],[bt,CY+HH]].forEach(([l,y])=>{l.setAttribute('x1',CX-w);l.setAttribute('x2',CX+w);l.setAttribute('y1',y);l.setAttribute('y2',y)});
+ // commutator end view
+ kg.innerHTML='';const a0=-th;
+ if(mode==='split'){[0,1].forEach(i=>{const a1=a0+i*Math.PI+.12,a2=a0+(i+1)*Math.PI-.12;const p=(a)=>[KX+KR*Math.cos(a),KY+KR*Math.sin(a)];const [x1,y1]=p(a1),[x2,y2]=p(a2),[x3,y3]=[KX+(KR-14)*Math.cos(a2),KY+(KR-14)*Math.sin(a2)],[x4,y4]=[KX+(KR-14)*Math.cos(a1),KY+(KR-14)*Math.sin(a1)];
+  el('path',{d:`M${x1} ${y1}A${KR} ${KR} 0 0 1 ${x2} ${y2}L${x3} ${y3}A${KR-14} ${KR-14} 0 0 0 ${x4} ${y4}Z`,fill:i?'#7dd3fc':'#fbb040'},kg)})}
+ else{el('circle',{cx:KX,cy:KY,r:KR,fill:'#fbb040'},kg);el('circle',{cx:KX,cy:KY,r:KR-14,fill:'#1a2150'},kg);el('circle',{cx:KX,cy:KY,r:KR-18,fill:'#7dd3fc'},kg);el('circle',{cx:KX,cy:KY,r:KR-32,fill:'#1a2150'},kg);
+  // inner ring reached by the right brush through a lead
+  }
+ const o=out(th),ang=o/EM*1.3;needle.setAttribute('x2',KX+16*Math.sin(ang));needle.setAttribute('y2',205-16*Math.cos(ang));
+ const gx=s=>GX+(s-Math.max(0,tt-WIN))/WIN*GW,fy=v=>MID-v/(1*A)*AMP,ey=v=>MID-v/EM*AMP;
+ G1.p.setAttribute('d',hist.map((h,i)=>(i?'L':'M')+gx(h[0]).toFixed(1)+','+fy(h[2]).toFixed(1)).join(''));G2.p.setAttribute('d',hist.map((h,i)=>(i?'L':'M')+gx(h[0]).toFixed(1)+','+ey(h[3]).toFixed(1)).join(''));
+ if(hist.length){const h=hist[hist.length-1];G1.dot.setAttribute('cx',gx(h[0]));G1.dot.setAttribute('cy',fy(h[2]));G2.dot.setAttribute('cx',gx(h[0]));G2.dot.setAttribute('cy',ey(h[3]))}
+ G1.top.textContent='+10 mWb';G1.bot.textContent='−10 mWb';G2.top.textContent='+'+sig(EM,2)+' V';G2.bot.textContent='−'+sig(EM,2)+' V';
+ });
+upd();
+</script>

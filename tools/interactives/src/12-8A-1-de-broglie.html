@@ -1,0 +1,33 @@
+<!--{"id":"12-8A-1-de-broglie","year":12,"section":"8A","title":"de Broglie wavelength: electrons and X-rays","criteria":["U4 AoS1: de Broglie wavelength λ = h/p","U4 AoS1: electron and X-ray diffraction patterns"],
+"blurb":"Set the electron speed and the X-ray wavelength. When the two diffraction patterns match, the wavelengths and momenta match, but the energies are very different.",
+"source":"Cambridge VCE Physics Units 3&4, 8A Matter as particles or waves (pp. 394–400), Formulas 8A–1 and 8A–2. Non-relativistic electrons. Ring sizes schematic (proportional to λ).","colour":"#4ade80"}-->
+<div class="ctx">A beam of electrons and a beam of X-rays each pass through the same thin metal foil. Both make <b>rings</b>. Ring size depends on wavelength. <b>Can you make the two patterns match?</b></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#4ade80"><h3>Diffraction patterns on the screen (same foil, same screen distance)</h3><svg id="sv" viewBox="0 0 860 400"></svg><div class="rule" style="font-size:17px;padding:8px 14px">$\lambda = \dfrac{h}{p}$ for photons and for matter ($p = mv$). Same λ: same momentum, same pattern.</div></div>
+ <div class="side" style="width:380px">
+  <div class="card ctl" style="--c:#7dd3fc;gap:9px"><h3>Beams</h3>
+   <div class="sl" style="grid-template-columns:86px 1fr 128px"><span class="nm">e⁻ speed</span><input type="range" id="v" min="2" max="10" step="0.05" value="3"><span class="v" id="vv"></span></div>
+   <div class="sl" style="grid-template-columns:86px 1fr 128px"><span class="nm">X-ray λ</span><input type="range" id="xl" min="0.05" max="0.40" step="0.005" value="0.15"><span class="v" id="xlv"></span></div>
+   <div class="btns"><button id="match">Match</button><button id="book">Book: 4.9 × 10⁶ m s⁻¹</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:17.5px;line-height:1.38;flex:1"><h3>Compare</h3><div id="out"></div></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),h=6.63e-34,me=9.11e-31,c=3e8,eV=1.6e-19;let v=3e6,xl=.15e-9;
+const RF=[1,1.41,1.73,2.0,2.45],K=55/0.15e-9; // ring 1 radius 55 px at 0.15 nm
+const P=[[215,'Electrons','#7dd3fc'],[645,'X-rays','#c084fc']].map(([cx,nm,col],k)=>{const g=el('g',{},sv),cp=el('clipPath',{id:'cp'+k},el('defs',{},sv));el('rect',{x:cx-200,y:20,width:400,height:330,rx:14},cp);
+ el('rect',{x:cx-200,y:20,width:400,height:330,rx:14,fill:'#070b1f',stroke:'#36418a','stroke-width':2},g);const rg=el('g',{'clip-path':`url(#cp${k})`},g);
+ el('circle',{cx,cy:185,r:14,fill:col},rg);const rings=RF.map((f,i)=>el('circle',{cx,cy:185,fill:'none',stroke:col,'stroke-width':7-i,'stroke-opacity':.85-.12*i,filter:''},rg));
+ txt(sv,cx,380,nm,{'font-size':22,'font-weight':700,fill:col,'text-anchor':'middle'});const lt=txt(sv,cx,46,'',{'font-size':19,fill:'#eef2ff','text-anchor':'middle'});return{rings,lt,cx}});
+
+function draw(){const p=me*v,le=h/p,Ek=.5*me*v*v/eV,px=h/xl,Ex=h*c/xl/eV;
+ [[P[0],le],[P[1],xl]].forEach(([q,l])=>{q.rings.forEach((r,i)=>r.setAttribute('r',K*l*RF[i]));q.lt.textContent='λ = '+(l*1e9).toFixed(3)+' nm'});
+ const same=Math.abs(le-xl)/xl<.03;
+ document.getElementById('out').innerHTML=`<b class="cy">Electron</b><br>p = mv = ${sig(p/1e-24)}×10⁻²⁴ kg m s⁻¹<br>λ = h/p = <b class="hi">${(le*1e9).toFixed(3)} nm</b><br>Ek = <b class="hi">${Ek<1000?sig(Ek):sig(Ek/1000)+' k'}${Ek<1000?' eV':'eV'}</b><br>
+ <b style="color:#c084fc">X-ray photon</b><br>p = h/λ = ${sig(px/1e-24)}×10⁻²⁴ kg m s⁻¹<br>E = hc/λ = <b class="hi">${sig(Ex/1000)} keV</b><br>${same?'<b class="gr">Same λ and p; photon has '+Math.round(Ex/Ek)+' × the energy.</b>':''}`}
+const vs=slider('v',x=>x.toFixed(2)+'×10⁶ m s⁻¹',x=>{v=x*1e6;draw()}),xs=slider('xl',x=>x.toFixed(3)+' nm',x=>{xl=x*1e-9;draw()});
+document.getElementById('vv').style.fontSize='17px';
+document.getElementById('match').onclick=()=>{const le=h/(me*v);xs.value=Math.min(.4,Math.max(.05,le*1e9));xs.dispatchEvent(new Event('input'))};
+document.getElementById('book').onclick=()=>{vs.value=4.9;vs.dispatchEvent(new Event('input'))};
+</script>
