@@ -49,7 +49,7 @@ FLAGS=['<b>Units 1 and 2 assessment is a school decision.</b> No SAC types or ma
  '<b>Logbooks</b> are required in every unit for satisfactory completion. Teachers must sight them regularly, especially for Unit 2 Outcomes 2 and 3.',
  '<b>Practice exam check:</b> the Cambridge practice exam\'s DC motor question is Unit 3 content (AoS 2 fields). Remove it before using the paper for Unit 1 or 2.',
  '<b>Group work:</b> investigations may be done in groups, but anything assessed must be completed individually.']
-page=f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Physics · VCE Physics Study Design: planning summary</title><style>{CSS}</style></head><body>
+page=f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Physics · VCE Physics Study Design: planning summary</title><style>{CSS}</style><script>if(window.self!==window.top){{document.documentElement.classList.add('emb')}}</script><style>.emb .top,.emb nav,.emb nav.crumb{{display:none!important}}.emb body{{background:transparent}}.emb main,.emb .wrap{{padding-top:4px}}</style></head><body>
 <div class="top"><header><h1>Physics Planner</h1></header></div><main>
 <nav class="crumb"><a href="./">Physics Planner</a> › Year 11 › Study design</nav>
 <div class="unit">VCE Physics Study Design: what it means for planning</div>

@@ -189,11 +189,12 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
 a.ext{color:var(--accent)}
 </style></head><body>
 <div class="top"><header><h1>Physics Planner</h1><nav class="tabs" id="tabs"></nav></header>
-<div class="subbar"><span class="sub" id="subinfo"></span><div class="ctl"><select id="aosFilter"></select><button id="fresh" title="Load the newest version from GitHub (skips the copy your browser saved)">↻ Get latest</button></div></div></div>
+<div class="subbar"><div class="toggle" id="views"></div><span class="sub" id="subinfo"></span><div class="ctl"><select id="aosFilter"></select><button id="fresh" title="Load the newest version from GitHub (skips the copy your browser saved)">↻ Get latest</button></div></div></div>
 <main id="main"></main>
 <script>
 const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 const $=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let VIEW=store.get('ph:view','plan');const VIEWS=[['plan','Course plan'],['cambridge','Cambridge course'],['sd','Study design']];
 let YEARS=[],DATA={},tab=store.get('ph:tab',11),open=new Set(store.get('ph:open',[])),filt='';
 const V='?v='+Date.now();
 async function load(){YEARS=(await (await fetch('data/years.json'+V)).json()).years;
@@ -202,15 +203,21 @@ function tabs(){$('#tabs').innerHTML=YEARS.map(y=>`<button data-y="${y.year}" cl
  $('#tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{tab=+b.dataset.y;store.set('ph:tab',tab);filt='';render()})}
 function badge(t,on){return `<span class="${on?'y':''}">${esc(t)}</span>`}
 function aosKey(u,a){return u*3+a-3}
+function views(on){const v=$('#views');if(!on){v.innerHTML='';v.style.display='none';return}v.style.display='';
+ v.innerHTML=VIEWS.map(([k,t])=>`<button data-v="${k}" class="${VIEW==k?'on':''}">${t}</button>`).join('');v.querySelectorAll('button').forEach(b=>b.onclick=()=>{VIEW=b.dataset.v;store.set('ph:view',VIEW);render()})}
+function frame(src){$('#aosFilter').style.display='none';$('#main').innerHTML=`<iframe id="fr" src="${src}" style="width:100%;border:0;min-height:80vh;display:block"></iframe>`;
+ const fr=$('#fr');fr.onload=()=>{const fit=()=>{try{fr.style.height=fr.contentDocument.documentElement.scrollHeight+'px'}catch(e){}};fit();setTimeout(fit,600)}}
 function render(){tabs();const y=YEARS.find(x=>x.year==tab)||YEARS[4];const d=DATA[y.year];
- $('#subinfo').textContent=`${y.title} · ${y.course}`;
+ $('#subinfo').textContent=`${y.title} · ${y.course}`;views(!!d);
+ if(d&&VIEW=='cambridge')return frame('analysis.html'+V);
+ if(d&&VIEW=='sd')return frame('studydesign.html'+V);
  const f=$('#aosFilter');
  if(!d){f.style.display='none';$('#main').innerHTML=`<div class="unit">${esc(y.title)} Physics</div><div class="placeholder"><b>${esc(y.course)}</b><p>Not planned yet.</p><ul><li>Source materials: to be decided</li><li>Course plan: to come</li><li>Lesson resources: to come</li></ul></div>`;return}
  f.style.display='';const opts=[];d.units.forEach(u=>u.aos.forEach(a=>opts.push([`${u.n}-${a.n}`,`Unit ${u.n} · AoS ${a.n}`])));
  f.innerHTML='<option value="">All areas of study</option>'+opts.map(([v,t])=>`<option value="${v}" ${filt==v?'selected':''}>${t}</option>`).join('');
  f.onchange=()=>{filt=f.value;render()};
  let h=`<div class="unit">Course plan</div><div class="legend">${d.units.map(u=>u.aos.map(a=>`<span class="a${aosKey(u.n,a.n)}"><i style="background:var(--ac)"></i>U${u.n} AoS ${a.n}</span>`).join('')).join('')}</div>
- <div class="note">Built on the <b>${esc(d.source)}</b> resources. Lessons are not planned yet: each chapter shows what Cambridge provides, section by section. <a class="ext" href="analysis.html">How the Cambridge resources are meant to be used ›</a> · <a class="ext" href="studydesign.html">Study design: planning summary ›</a></div>
+ <div class="note">Built on the <b>${esc(d.source)}</b> resources. Lessons are not planned yet: each chapter shows what Cambridge provides, section by section. See the <b>Cambridge course</b> and <b>Study design</b> tabs above.</div>
  <div class="ctl2"><button id="uall">Open all chapters</button><button id="unone">Close all chapters</button></div>`;
  for(const u of d.units){h+=`<div class="unitbar">Unit ${u.n} <span>${esc(u.title)}</span></div>`;
   for(const a of u.aos){if(filt&&filt!=`${u.n}-${a.n}`)continue;const k=aosKey(u.n,a.n),ud=`ud${u.n}-${a.n}`;

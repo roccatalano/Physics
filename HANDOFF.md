@@ -14,6 +14,8 @@ _Last updated 18 Nov 2026_
 
 - Study design planning summary built (`studydesign.html`), linked from the Year 11 tab. Key numbers: 50 h per unit minimum; pracs Unit 1 15 h, Unit 2 10 h + 7 h; Unit 1 and 2 assessment is a school decision; Unit 2 options are a student choice (Cambridge covers 11 of 18).
 
+- Year 11 now has its own tabs: Course plan, Cambridge course, Study design. The analysis page is restyled to the light planner look.
+
 ## Next
 1. Confirm timing, prac model, assessment plan and lesson shape with Rocco (see CLAUDE.md, "Still to confirm").
 2. Draft the Unit 1 lesson-by-lesson plan from the Cambridge order and show it to Rocco.
