@@ -21,6 +21,8 @@ Start a new chat with: "Read HANDOFF.md and CLAUDE.md in roccatalano/Physics and
 
 * Years 7 to 10 tabs merged into one **Progression** tab: 60 Jacaranda physics subtopics in 6 strands, linked to Cambridge sections (click a card to highlight links). Gaps with no feeder: 3D, 4A, 5E, 9C. Then added a Year 12 (Units 3 and 4) column: Year 11 sections link forward; Y12 sections with no earlier feeder flagged "new" (8A, 8B, 9A to 9C).
 
+* Lesson index built for Ch 1 to 9 (G: `Yr 11 Cambridge Index`). The 1A card on the planner shows its lesson resources (green group).
+
 ## Next
 1. Year-by-year tabs (e.g. 2027 overview calendar like 12MAG).
 2. Lay out Unit 1 lessons on the calendar.

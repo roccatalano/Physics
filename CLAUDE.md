@@ -22,7 +22,7 @@ Owner: Rocco (Mr. Catalano), teacher. He is fairly new to git and Claude Code: e
 - Never invent questions when Cambridge has one that fits. If something has to be written or adapted, label it "own" or "adapted".
 
 ## Source files (shared drive, connected to the session)
-Root: `G:\Shared drives\1. EKC CURRICULUM\1. KLA Folders\SCIENCE\VCE Physics\VCE Physics Units 1 2 [2027]\Cambridge Resources\`
+Root: `G:\Shared drives\1. EKC CURRICULUM\1. KLA Folders\SCIENCE\VCE Physics\VCE Physics Units 1 2 [2027]\Yr 11 Cambridge Resources\` (renamed from `Cambridge Resources` on 18 Nov 2026; Year 12 pack in `Yr 12 Cambridge Resources\`, not indexed, Rocco doesn't teach it)
 - `Course-wide\`: Curriculum grid, textbook front matter and appendix, practice exam (answers in TEACHER ONLY).
 - `Unit 1\<AoS>\<ChNN name>\<section>\`: section questions, check-in sets, worksheets, PowerPoint figures, practicals.
 - `...\<ChNN name>\Ch NN Chapter review\`: checklist, review questions, summary, curated internet resources.
@@ -55,6 +55,10 @@ Root: `G:\Shared drives\1. EKC CURRICULUM\1. KLA Folders\SCIENCE\VCE Physics\VCE
 ## Lesson shape (as agreed for the old planner; confirm)
 Do now (3 retrieval questions: last lesson / last week / last term, from Cambridge check-ins) → Learning goals (3, one per card) → Key ideas (definitions | formulas) → APK (prior knowledge, not retrieval) → New knowledge → We do (Cambridge worked examples, each followed by a You try) → Independent practice (Cambridge section questions or worksheet) → Exit ticket (one question per learning goal, from Cambridge, with red/amber/green self-rating).
 - Each lesson's steps must add up exactly to the lesson length.
+
+## Lesson index (built 18 Nov 2026)
+- Private index of all Cambridge Units 1&2 lesson material (Ch 1 to 9): `VCE Physics Units 1 2 [2027]\Yr 11 Cambridge Index\` (format in its `SCHEMA.md`, errors and gaps in its `README.md`). Verbatim text, answers, tags, We do/You try plans, exit candidates, 652 images. Never copy its text into this public repo.
+- `tools/build_lesson_index.py <index folder>` writes `tools/lesson_index.json` (IDs, headings, counts only); `build_year11.py` attaches it to section cards as a green "Lesson resources (index)" group. `SHOW` in that script lists which sections show it (1A so far).
 
 ## Planner
 - One lesson card per lesson. Show the Cambridge section, key knowledge, learning goals, the lesson sequence with minutes, every Cambridge resource with its file location, prac details and CFAT/SAC markers.

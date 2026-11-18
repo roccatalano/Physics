@@ -192,6 +192,8 @@ details.nest>summary .ttl{font-weight:600;margin:0}details.nest>*:not(summary){m
 .note{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:10px;color:var(--ink)}
 .tabs button .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-left:6px;background:#bbb;vertical-align:1px}.tabs button .dot.on{background:#2b9a4a}
 a.ext{color:var(--accent)}
+.grp.li{background:#eef7f1}.grp.li .gh{color:#1a6b2a}.li .rl{grid-template-columns:130px 1fr}.li .pill{display:inline-block;font-size:11px;border:1px solid #b7dcc2;border-radius:6px;padding:0 5px;margin:1px 2px 1px 0;background:#fff;color:#1d4d2a}.li .pill.ad{border-style:dashed;color:#8a5a00;border-color:#e0c08a}.li .pill.q{color:#555;border-color:#ddd}.li .wd{display:block;margin:2px 0}.li .sm{color:var(--muted);font-size:11.5px}.cnt .c3{background:#dff1e2;color:#1a6b2a}
+
 </style></head><body>
 <div class="top"><header><h1>Physics Planner</h1><nav class="tabs" id="tabs"></nav></header>
 <div class="subbar"><div class="toggle" id="views"></div><span class="sub" id="subinfo"></span><div class="ctl"><select id="aosFilter"></select><button id="fresh" title="Load the newest version from GitHub (skips the copy your browser saved)">↻ Get latest</button></div></div></div>
@@ -214,6 +216,25 @@ function pchip(f){return chip(f,(f.ref?f.ref+' ':'')+(f.label=='Video'||f.label.
 function pgroup(fs,title){if(!fs||!fs.length)return '';const G={};fs.forEach(f=>(G[f.label]=G[f.label]||[]).push(f));
  return `<details class="grp pe" open><summary class="gh">${title||'Pearson'}</summary>${Object.entries(G).map(([l,a])=>`<div class="rl"><i>${esc(l)}</i><span>${a.map(f=>chip(f,f.label=='Video'||l.startsWith('Practical')?((f.ref?f.ref+' ':'')+f.name.replace(/^PA\d\d /,'')):(f.ref||f.name))).join(' ')}</span></div>`).join('')}</details>`}
 function flist(fs){return fs.map(f=>chip(f,f.label&&f.label!='Other'&&!f.name.startsWith('Option')?f.name:f.name.replace(/^Option [\d.]+ /,'').replace(/ \(Word\)$/,' (Word)'))).join(' ')}
+function lres(L){const P=(x,c)=>`<span class="pill ${c||''}">${esc(x)}</span>`;const R=(l,v)=>v?`<div class="rl"><i>${l}</i><span>${v}</span></div>`:'';
+ const sz=o=>Object.entries(o||{}).filter(([k])=>k&&k!='null').map(([k,v])=>v+' '+k).join(', ');
+ const it=L2=>L2.map(q=>P(q.id.replace(/^[0-9A-Z]+-/,'').replace(/^WS[0-9A-Z]+-/,'WS'),'q')).join('');
+ return `<details class="grp li" open><summary class="gh">Lesson resources (index)</summary>
+ ${R('Success criteria',L.criteria.map(c=>P(c.id)).join(''))}
+ ${R('Study design',L.studyDesign+' dot points')}
+ ${R('Key ideas',L.glossary.length+' glossary terms: <span class=sm>'+L.glossary.map(esc).join(', ')+'</span>'+(L.formulas.length?'<br>'+L.formulas.map(f=>P(f.id+' '+f.name)).join(''):''))}
+ ${R('New knowledge',(L.engage?'Engage: '+esc(L.engage)+'<br>':'')+L.chunks.map(c=>P(c.heading||c.id)).join(''))}
+ ${R('Figures',L.figures.map(f=>P(f.label+(f.important?' ★':''))).join('')+' <span class=sm>'+L.images.length+' images in total</span>')}
+ ${R('Worked examples',L.workedExamples.length?L.workedExamples.map(w=>P(w.id+' '+w.title+' ('+w.steps+' steps)')).join(''):'<span class=sm>none in the textbook</span>')}
+ ${R('We do → You try',L.wedo.map(w=>`<span class="wd">${P(w.wedo,w.origin=='adapted'?'ad':'')} → ${w.youtry.map(y=>P(y,'q')).join('')} <span class=sm>${w.crit.join(', ')}${w.origin=='adapted'?' · adapted':''}</span></span>`).join(''))}
+ ${R('Do now pool',L.checkins.n+' check-ins (sets '+L.checkins.sets.join(', ')+') <span class=sm>'+sz(L.checkins.sizes)+'</span>')}
+ ${R('Practice',L.sectionQs.n+' section questions <span class=sm>('+sz(L.sectionQs.sizes)+')</span><br>'+esc(L.worksheet.title||'Worksheet')+': '+L.worksheet.n+' questions'+(L.worksheet.total?', /'+L.worksheet.total:''))}
+ ${R('Exit tickets',L.criteria.map(c=>`<span class="wd">${P(c.id)} ${c.exit.map(e=>P(e.id,'q')).join('')}</span>`).join(''))}
+ ${R('Review questions',L.reviewQs.map(r=>P('Q'+r,'q')).join(''))}
+ ${R('Skills tips',L.skills.map(x=>P(x)).join(''))}
+ ${R('Pracs',L.pracs.length?L.pracs.map(x=>P(x)).join(''):'<span class=sm>none</span>')}
+ ${L.missingAnswers.length?R('No answer yet',L.missingAnswers.map(x=>P(x,'ad')).join('')):''}
+ <div class="path">Index file: ${esc(L.path)} (Cambridge text, answers and images live there, on the shared drive)</div></details>`}
 function badge(t,on){return `<span class="${on?'y':''}">${esc(t)}</span>`}
 function aosKey(u,a){return u*3+a-3}
 function views(on){const v=$('#views');if(!on){v.innerHTML='';v.style.display='none';return}v.style.display='';
@@ -247,7 +268,7 @@ function render(){tabs();const y=YEARS.find(x=>x.year==tab)||YEARS.find(x=>x.yea
     <div class="ubad">${badge('Sections '+S.length,1)}${badge('Check-ins '+ci,ci)}${we===null?badge('Worked examples ?',0):badge('Worked examples '+we,we)}${badge('Worksheets '+ws,ws)}${badge('Pracs '+pr,pr)}${badge(c.testMarks?'Chapter test /'+c.testMarks:'Chapter test',c.chapter.test)}${badge('Review',c.chapter.review)}${badge('Slides 0',0)}${badge('Guided sheets 0',0)}</div></div>`;
     if(isO){h+=`<div class="uopen a${k}"><div class="aos"><b>Chapter ${c.n} · ${esc(c.title)}</b><span>${S.length} Cambridge sections</span></div><div class="secgrid">`;
      const book=(c.files||[]).find(f=>f.kind=='book');
-     for(const s of S){const K=k=>(s.files||[]).filter(f=>f.kind==k);const nC=(s.files||[]).length+(s.workedExamples||[]).length,nP=(s.pearson||[]).length;h+=`<details class="scard nest"><summary><b class="code">${esc(s.code)}</b> <span class="ttl">${esc(s.title)}</span><span class="cnt"><span class="c1">Cambridge ${nC}</span>${nP?`<span class="c2">Pearson ${nP}</span>`:''}</span></summary><details class="grp cb" open><summary class="gh">Cambridge</summary>
+     for(const s of S){const K=k=>(s.files||[]).filter(f=>f.kind==k);const nC=(s.files||[]).length+(s.workedExamples||[]).length,nP=(s.pearson||[]).length;h+=`<details class="scard nest"><summary><b class="code">${esc(s.code)}</b> <span class="ttl">${esc(s.title)}</span><span class="cnt"><span class="c1">Cambridge ${nC}</span>${nP?`<span class="c2">Pearson ${nP}</span>`:''}${s.lesson?'<span class="c3">Lesson index ✓</span>':''}</span></summary>${s.lesson?lres(s.lesson):''}<details class="grp cb" open><summary class="gh">Cambridge</summary>
       ${row('Check-ins',K('checkin'))}${row('Section questions',K('sq'))}${row('Worksheet',K('ws'))}${row('PowerPoint figures',K('ppt'))}${row('Practicals',K('prac'))}
       <div class="rl ${s.workedExamples&&!s.workedExamples.length?'none':''}"><i>Worked examples</i><span>${s.workedExamples?(s.workedExamples.length?s.workedExamples.map(esc).join('<br>')+(book?'<br>'+chip(book,'Textbook chapter'):''):'none'):'not indexed yet'}</span></div></details>${pgroup(s.pearson)}<div class="path">${esc(s.folder)}</div></details>`}
      const CF=k=>(c.files||[]).filter(f=>f.kind==k);
