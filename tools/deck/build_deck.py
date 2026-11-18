@@ -198,3 +198,68 @@ if __name__=='__main__':
   print(fn,len(page)//1024,'KB · phases total',total,'min')
   dn=donow_sheet(spec)
   if dn:open(os.path.join(outdir,spec['name']+' do now.html'),'w').write(dn);print('do now sheet written')
+
+# ---------- guided sheet: black and white, double-sided A4, follows the slides, cut-off exit ticket strip
+BLANK_WAVE='''<svg viewBox="0 0 640 190" style="width:100%;height:44mm"><line x1="20" y1="95" x2="620" y2="95" stroke="#000" stroke-dasharray="5 5" stroke-width="1.2"/>
+<path d="M20 95 C 70 15, 120 15, 170 95 S 270 175, 320 95 S 420 15, 470 95 S 570 175, 620 95" fill="none" stroke="#000" stroke-width="2.5"/>
+<path d="M560 30 L610 30" stroke="#000" stroke-width="1.5" marker-end="url(#ah)"/><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z"/></marker></defs>
+<text x="585" y="22" font-size="13" text-anchor="middle" font-family="Inter">direction of wave</text></svg>'''
+def guided_sheet(spec):
+  global MATH;MATH=[]
+  code=' + '.join(spec['sections']);secname=SEC[spec['sections'][0]]['title'] if spec['sections'][0] in SEC else ''
+  L=lambda n,h=8:''.join(f'<div class="ln" style="height:{h}mm"></div>' for _ in range(n))
+  box=lambda t,inner,cls='':f'<section class="bx {cls}"><h3>{t}</h3>{inner}</section>'
+  parts=[];exitp=''
+  for sd in spec['slides']:
+    t=sd['type']
+    if t=='donow':
+      parts.append(box('Do now',''.join(f'<div class="q"><b>{k+1}.</b> {m(get(i)["question"])}</div>{L(1,6)}' for k,i in enumerate(sd['items']))))
+    elif t=='goals':
+      parts.append(box('Learning goals: by the end of today I can',''.join(f'<div class="tk"><span>{m(CRIT[c]["text"])}</span></div>' for c in sd['criteria'])))
+    elif t=='keyideas':
+      d=''.join(f'<div class="kd"><span class="gap"></span><span>{m(get(i)["def"])}</span></div>' for i in sd.get('glossary',[]))
+      f=''
+      for i in sd.get('formulas',[]):
+        fo=get(i);us=' &nbsp; '.join(f'{m("$"+w["sym"]+"$")} <span class="gap s"></span>' for w in fo.get('where',[]))
+        f+=f'<div class="fm"><b>{e(fo.get("name",""))}:</b> &nbsp; {m("$"+fo["latex"].split("=")[0].strip()+"$")} = <span class="gap s"></span> = <span class="gap s"></span><span class="us">Units: &nbsp; {us}</span></div>'
+      parts.append(box('Key ideas',f'<div class="sub">Write the term for each definition</div>{d}{f}'))
+    elif t=='apk':
+      parts.append(box('APK: what you already know',''.join(f'<div class="q">{m(a["q"])}</div>{L(1,7)}' for a in sd['items'] if a.get('q'))))
+    elif t in ('new','figure'):
+      if sd.get('sheet')=='skip':continue
+      if sd.get('sheet_figure')=='blank-wave':
+        parts.append(box('New knowledge: label the wave','<div class="sub">Label: crest, trough, amplitude (A), wavelength (λ), neutral position</div>'+BLANK_WAVE,'own'))
+      elif t=='new' and sd.get('sheet_notes',True):
+        parts.append(box('New knowledge: '+e(sd.get('heading') or (get(sd['chunk']).get('heading') if sd.get('chunk') else '')),L(sd.get('lines',4))))
+    elif t in ('wedo','youtry'):
+      it=get(sd['item']);we=it['_kind']=='worked_examples'
+      title=('We do: ' if t=='wedo' else 'You try: ')+(it.get('title') or (it.get('_ws') or 'Worksheet')+' Q'+it.get('n',''))
+      parts.append(box(title,f'<div class="q">{m(it["question"])}</div><div class="work" style="height:{sd.get("space",64)}mm"></div>'))
+    elif t=='practice':
+      parts.append(box('Independent practice',''.join(f'<div class="tk"><span>{m(a)}: {m(b)}</span></div>' for a,b in sd['rows'])))
+    elif t=='exit':
+      rows=''
+      for k,x in enumerate(sd['items']):
+        q=get(x['q']);qt=(q['_parent'].get('question','')+' ' if q.get('_parent') else '')+q.get('question','')
+        rows+=f'<div class="ex"><div class="exq"><b>{k+1}.</b> {m(qt)}{L(1,7)}</div><div class="rag"><i></i><i></i><i></i><small>{e(x["crit"])}</small></div></div>'
+      exitp=f'<div class="cut">✂ cut here and hand in</div><section class="bx exit"><h3>Exit ticket · {e(code)} · Name: ______________________</h3>{rows}</section>'
+  sheetcss="""@page{size:A4;margin:11mm 12mm}*{box-sizing:border-box}body{font-family:Inter,sans-serif;color:#000;margin:0;font-size:10pt;line-height:1.35}
+.hd{display:flex;align-items:baseline;gap:5mm;white-space:nowrap;border-bottom:2.5px solid #000;padding-bottom:2mm;margin-bottom:3mm}.hd b{font:700 15pt 'Space Grotesk'}.hd span{font-size:9.5pt}.hd .nm{margin-left:auto}
+.bx{border:1.5px solid #000;border-radius:3mm;padding:2mm 3.5mm;margin-bottom:2.5mm;break-inside:avoid}.bx h3{font:700 9pt Inter;letter-spacing:.06em;text-transform:uppercase;margin:0 0 1.5mm;border-bottom:1px solid #000;padding-bottom:1mm}
+.q{margin:1.2mm 0}.ln{border-bottom:1px solid #999}.sub{font-size:8.5pt;color:#333;margin-bottom:1mm}
+.tk{display:flex;gap:2.5mm;align-items:flex-start;margin:1mm 0}.tk:before{content:"";flex:none;width:3.6mm;height:3.6mm;border:1.3px solid #000;margin-top:.5mm}
+.two{display:grid;grid-template-columns:1.55fr 1fr;gap:5mm}.kd{display:grid;grid-template-columns:30mm 1fr;gap:3mm;margin:1.2mm 0;align-items:end;font-size:9.5pt}.gap{flex:none;width:27mm;border-bottom:1.3px solid #000;height:5mm;display:inline-block}.gap.s{width:12mm;vertical-align:-1mm}
+.fm{font-size:10.5pt;margin:2.5mm 0 1mm;white-space:nowrap;display:flex;align-items:baseline;gap:1.5mm;border-top:1px dashed #777;padding-top:2mm}.fm .us{margin-left:auto;font-size:9.5pt}.wt{width:100%;border-collapse:collapse;font-size:9pt}.wt th,.wt td{border:1px solid #000;padding:1mm 2mm;text-align:left}.wt td.bl{width:20mm}
+.work{border:1px dashed #777;border-radius:2mm;margin-top:1.5mm}
+.cut{border-top:1.5px dashed #000;text-align:center;font-size:8pt;margin:2mm 0;padding-top:1mm}
+.ex{display:grid;grid-template-columns:1fr 26mm;gap:3mm;margin:1mm 0}.rag{display:flex;gap:1.5mm;align-items:center}.rag i{width:5.5mm;height:5.5mm;border:1.5px solid #000;border-radius:50%}.rag small{font-size:7pt;margin-left:1mm}
+.own h3:after{content:" (own)";font-weight:400;text-transform:none;letter-spacing:0}
+.pb{break-before:page}"""
+  split=[i for i,p in enumerate(parts) if p.startswith('<section class="bx "><h3>We do')]
+  k=split[0] if split else len(parts)
+  head=f'<div class="hd"><b>{e(code)} {e(secname)}</b><span>Unit {spec["unit"]} · AoS {spec["aos"]} · Lesson {spec["lesson"]}</span><span class="nm">Name: ____________________ Date: __________</span></div>'
+  page=f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>{e(code)} guided sheet</title><style>{FONTS}{kcss}{sheetcss}</style></head><body>
+{head}{''.join(parts[:k])}<div class="pb"></div>{''.join(parts[k:])}{exitp}</body></html>"""
+  return render_math(page)
+if __name__=='__main__':
+  gs=guided_sheet(spec);open(os.path.join(outdir,spec['name']+' guided sheet.html'),'w').write(gs);print('guided sheet written')
