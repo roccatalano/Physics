@@ -4,6 +4,14 @@
 import json,re,os,collections
 H=os.path.dirname(os.path.abspath(__file__))
 INV=json.load(open(os.path.join(H,'cambridge_inventory.json')))
+IDS=json.load(open(os.path.join(H,'drive_ids.json')))  # file name -> Google Drive file id (Cambridge Resources folder, 18 Nov 2026)
+LABEL={'checkin':'Check-in','sq':'Section questions','ws':'Worksheet','wsans':'Worksheet answers','prac':'Practical','ppt':'PowerPoint','test':'Chapter test','resp':'Suggested responses','review':'Review questions','checklist':'Checklist','summary':'Model summary','links':'Internet resources','book':'Textbook chapter','other':'Other'}
+def fl(names):
+  out=[]
+  for n in sorted(names):
+    b=n.split('/')[-1];k=kind(b)
+    out.append({'kind':k,'label':LABEL[k],'name':b.rsplit('.',1)[0].replace('–','-'),'ext':b.rsplit('.',1)[-1],'id':IDS.get(b)})
+  return out
 U1=json.load(open(os.path.join(H,'cambridge_unit1_sections.json')))
 ROOT='G:\\Shared drives\\1. EKC CURRICULUM\\1. KLA Folders\\SCIENCE\\VCE Physics\\VCE Physics Units 1 2 [2027]\\Cambridge Resources\\'
 TESTS={1:28,2:22,3:25,4:30,5:58,6:44}
@@ -45,8 +53,8 @@ for un in (1,2):
         pr=[re.sub(r'^\d[A-Z] Practical ','',f.split('/')[-1].rsplit('.',1)[0]).replace('–','-') for f in files if kind(f.split('/')[-1])=='prac']
         if code in U1: pr=[x.replace('–','-') for x in U1[code]['prac']]
         we=[w.replace('–','-') for w in U1.get(code,{}).get('we',[])] if code in U1 else None
-        C['sections'].append({'code':code,'title':sn[3:],'checkins':K['checkin'],'sectionQs':K['sq'],'worksheets':K['ws'],'pracs':pr,'ppts':K['ppt'],'workedExamples':we,'folder':f"{C['folder']}\\{sn}"})
-      C['chapter']=dict(C['chapter']);A['chapters'].append(C)
+        C['sections'].append({'files':fl(files),'code':code,'title':sn[3:],'checkins':K['checkin'],'sectionQs':K['sq'],'worksheets':K['ws'],'pracs':pr,'ppts':K['ppt'],'workedExamples':we,'folder':f"{C['folder']}\\{sn}"})
+      C['chapter']=dict(C['chapter']);C['files']=fl(ch['files']);A['chapters'].append(C)
     U['aos'].append(A)
   out['units'].append(U)
 os.makedirs(os.path.join(H,'..','data'),exist_ok=True)

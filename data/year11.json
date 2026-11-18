@@ -20,6 +20,36 @@
        "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch01 EM radiation",
        "sections": [
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "1A Check-in Set 1",
+           "ext": "docx",
+           "id": "1-57EJC3TXXhnUZSmTimGFSiuCwWa_WtW"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "1A Check-in Set 2",
+           "ext": "docx",
+           "id": "1DOSaQRUvrC7geVGwITECn0bEwY2CMVmt"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "1A Section questions",
+           "ext": "docx",
+           "id": "1qvwiCviKAUTzfjIl5FfMYOuX71Yj1TLE"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "1A Worksheet 1A-1 The properties of waves",
+           "ext": "docx",
+           "id": "10cUhKtp3f8bJ9nyoHLsCB8XSX1EsQKjC"
+          }
+         ],
          "code": "1A",
          "title": "Waves",
          "checkins": 2,
@@ -33,6 +63,50 @@
          "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch01 EM radiation\\1A Waves"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "1B Check-in Set 1",
+           "ext": "docx",
+           "id": "1O54jvdNeB7N0TO3uEc1Txi6YJ_PZNetZ"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "1B Check-in Set 2",
+           "ext": "docx",
+           "id": "1CNNB_k3BYV9yEp_4nivygW73vjqQIXrL"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "1B PowerPoint Figure 1B-3",
+           "ext": "pptx",
+           "id": "1PIz_kXip-jnnSUkC1dzEGSYLZBDGU7ld"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "1B PowerPoint Table 1B-1",
+           "ext": "pptx",
+           "id": "1jxYIBwPJbms6tMNLCPm5BQMCqff7a__h"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "1B Section questions",
+           "ext": "docx",
+           "id": "1XDjsbDyqXB0UkmxAa9kGFLpcq2at2DOP"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "1B Worksheet 1B-1 Electromagnetic radiation",
+           "ext": "docx",
+           "id": "1w3vCAWF4Wz0lYOPt4PuTu0RrRNg2lhW0"
+          }
+         ],
          "code": "1B",
          "title": "EM waves",
          "checkins": 2,
@@ -44,6 +118,78 @@
          "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch01 EM radiation\\1B EM waves"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "1C Check-in Set 1",
+           "ext": "docx",
+           "id": "18uoLE1D8cgdXLb_ECScEUHu7204sym00"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "1C Check-in Set 2",
+           "ext": "docx",
+           "id": "1IWnFOUB-IM0ddKOGGXLvV-l8tdtP09Mm"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "1C Check-in Set 3",
+           "ext": "docx",
+           "id": "1vDDteaqbQJMuo6vlG9prLI_L-p4-cFc_"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "1C Check-in Set 4",
+           "ext": "docx",
+           "id": "1RsnCxm0ktGVLix5921At1GjF63vp6CZP"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "1C PowerPoint Figure 1C-13",
+           "ext": "pptx",
+           "id": "1g6D4J-preJmyTZN0sLUq1YtxUVw5uey6"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "1C PowerPoint Figure 1C-18",
+           "ext": "pptx",
+           "id": "1USFDI6b2Cu_8CtquMSuf-t4lJVHDf70R"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "1C PowerPoint Figure 1C-31",
+           "ext": "pptx",
+           "id": "10vQBmkdukPx-YiEkXy6fmVFqjf7I8sWn"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "1C Practical 1C-1 Finding the refractive index of an",
+           "ext": "docx",
+           "id": "1XhCnjv4qxigZaKcwwXgYGpn3NxaZUdAY"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "1C Section questions",
+           "ext": "docx",
+           "id": "1kQyr2tOpyE1luHb0PfWFwYWExx-e8mYo"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "1C Worksheet 1C-1 Reflection, refraction and",
+           "ext": "docx",
+           "id": "1rU27fMF6UR62v51clhzf1QEUqYMCUXhC"
+          }
+         ],
          "code": "1C",
          "title": "Refraction",
          "checkins": 4,
@@ -73,7 +219,79 @@
         "resp": 1,
         "test": 1
        },
-       "testMarks": 28
+       "testMarks": 28,
+       "files": [
+        {
+         "kind": "checklist",
+         "label": "Checklist",
+         "name": "Ch01 Checklist",
+         "ext": "docx",
+         "id": "1ibmi8S96mXIuHazCB0I-CO5bgzWzFXKc"
+        },
+        {
+         "kind": "links",
+         "label": "Internet resources",
+         "name": "Ch01 Curated internet resources",
+         "ext": "docx",
+         "id": "1mC3sp6rMnZhID2DgS26LGPnfgBgYrTK4"
+        },
+        {
+         "kind": "review",
+         "label": "Review questions",
+         "name": "Ch01 Review questions",
+         "ext": "docx",
+         "id": "17ndpvUKlrVBh8nnzw0Z3bx_D9lQom2g4"
+        },
+        {
+         "kind": "summary",
+         "label": "Model summary",
+         "name": "Ch01 Summary",
+         "ext": "docx",
+         "id": "1Xag5uxRuGy7H-2Tzhbj6OmEjL4Rlc8g0"
+        },
+        {
+         "kind": "book",
+         "label": "Textbook chapter",
+         "name": "Ch01 Textbook chapter",
+         "ext": "pdf",
+         "id": "1366Te8g2JuRhqc58Zfpj8ncmN-nCmfNy"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "1A Worksheet 1A-1 Answers",
+         "ext": "docx",
+         "id": "151vgtBF10BvwbuIOe2QMA9h52QwEoypB"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "1B Worksheet 1B-1 Answers",
+         "ext": "docx",
+         "id": "1CpdUgCfWRP1Y5YKPxKa8ivHkzdamQvHA"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "1C Worksheet 1C-1 Answers",
+         "ext": "docx",
+         "id": "191hgkYeSkPDiMIkk7dzM5GJ2x_8qoI-C"
+        },
+        {
+         "kind": "resp",
+         "label": "Suggested responses",
+         "name": "Chapter 1 Suggested responses",
+         "ext": "docx",
+         "id": "146lEWxckY8N8LlleT1m6CQ5NN_t7M86Z"
+        },
+        {
+         "kind": "test",
+         "label": "Chapter test",
+         "name": "Chapter 1 Test",
+         "ext": "docx",
+         "id": "1srglyq1wp0tvUlAe47NdBXUggyo9P24D"
+        }
+       ]
       },
       {
        "n": 2,
@@ -81,6 +299,64 @@
        "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch02 Thermal energy",
        "sections": [
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "2A Check-in Set 1",
+           "ext": "docx",
+           "id": "1xgLGSMu7BKNUcHAEpMlB_LynA9gcEuDh"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "2A Check-in Set 2",
+           "ext": "docx",
+           "id": "1R2JnEQoQPUtb2Uj8ryrwf82Xp87gzkmu"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "2A Check-in Set 3",
+           "ext": "docx",
+           "id": "1Zoo8yyBEr937-jnUbwTbRjlIMY3l2wUr"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "2A PowerPoint Figure 2A-13",
+           "ext": "pptx",
+           "id": "1evQiHjFqj8QgQbaxxJTyHh_6cE2Oe4Qm"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "2A Practical 2A-1 Convection in water",
+           "ext": "docx",
+           "id": "1qRGUEs1c6zuQU0viB_s75UOZubiWqsf9"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "2A Practical 2A-2 Specific heat capacity of water",
+           "ext": "docx",
+           "id": "12sMOrd3xOSvo070vfc0WyYnZHI3sbcF1"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "2A Section questions",
+           "ext": "docx",
+           "id": "1865Pg_sXG6ZW6FHOuhWb82m5ELv1_GS3"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "2A Worksheet 2A-1 Thermal energy",
+           "ext": "docx",
+           "id": "1AAUKXkjovAI_MonueVIZ6zO6EnT0IfJg"
+          }
+         ],
          "code": "2A",
          "title": "Thermal energy",
          "checkins": 3,
@@ -99,6 +375,50 @@
          "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch02 Thermal energy\\2A Thermal energy"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "2B Check-in Set 1",
+           "ext": "docx",
+           "id": "13QA-DQRl9u1Mf185rjGGhEUCOhQ_DXsq"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "2B Check-in Set 2",
+           "ext": "docx",
+           "id": "1RTgnqvRU2isPheubwHjO8140DI-r3W54"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "2B PowerPoint Figure 2B-1",
+           "ext": "pptx",
+           "id": "1nU50OccE0nexIfNf_QOZkUei0Te_sqL0"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "2B PowerPoint Figure 2B-6",
+           "ext": "pptx",
+           "id": "1Wj4YaUFCVKzZQ573vS3eMYGJZ93vaEhp"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "2B Section questions",
+           "ext": "docx",
+           "id": "1u5FjIbAM_XBDhwV1kTfSkEgQvRyNgg1a"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "2B Worksheet 2B-1 Thermal energy and electromagnetic",
+           "ext": "docx",
+           "id": "1XjYok7gddnVILjEmLtDwdr4F38MEYkVu"
+          }
+         ],
          "code": "2B",
          "title": "Global warming",
          "checkins": 2,
@@ -123,7 +443,72 @@
         "resp": 1,
         "test": 1
        },
-       "testMarks": 22
+       "testMarks": 22,
+       "files": [
+        {
+         "kind": "checklist",
+         "label": "Checklist",
+         "name": "Ch02 Checklist",
+         "ext": "docx",
+         "id": "140ZkE_wlGJPec4eb7ukyjRFgoKDZnLtj"
+        },
+        {
+         "kind": "links",
+         "label": "Internet resources",
+         "name": "Ch02 Curated internet resources",
+         "ext": "docx",
+         "id": "1qM5J2i-ur0SUWgJhMQsJ_WXLN1Ozw_0e"
+        },
+        {
+         "kind": "review",
+         "label": "Review questions",
+         "name": "Ch02 Review questions",
+         "ext": "docx",
+         "id": "1MkC_j-kUtVCnTVE9mCYfPhmyDtBuNHpD"
+        },
+        {
+         "kind": "summary",
+         "label": "Model summary",
+         "name": "Ch02 Summary",
+         "ext": "docx",
+         "id": "1o3AN5tL7a7iBVKG1XZnSvFn9LSnOK0aY"
+        },
+        {
+         "kind": "book",
+         "label": "Textbook chapter",
+         "name": "Ch02 Textbook chapter",
+         "ext": "pdf",
+         "id": "1xUNHhA17ptvAzF99rSqAo0WOb9OxQcPf"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "2A Worksheet 2A-1 Answers",
+         "ext": "docx",
+         "id": "1JP1Wge5xEIZN-ExRdWX3qJnfQGu_UZWd"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "2B Worksheet 2B-1 Answers",
+         "ext": "docx",
+         "id": "1uvJpSiu_vYcWquhofgY9hIjochBVX3KV"
+        },
+        {
+         "kind": "resp",
+         "label": "Suggested responses",
+         "name": "Chapter 2 Suggested responses",
+         "ext": "pdf",
+         "id": "1D_ecKPpPUOegc0BVfRp5WAUmd-_wFId6"
+        },
+        {
+         "kind": "test",
+         "label": "Chapter test",
+         "name": "Chapter 2 Test",
+         "ext": "docx",
+         "id": "19x5BAAXEEix5C8C43MBfpHyTQBzAVKxK"
+        }
+       ]
       }
      ],
      "files": []
@@ -139,6 +524,57 @@
        "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation",
        "sections": [
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3A Check-in Set 1",
+           "ext": "docx",
+           "id": "1kRu_4keEd60AZUUWwv9khua5zPqWU2c3"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3A Check-in Set 2",
+           "ext": "docx",
+           "id": "16QPkvZlJNWgw5s7h4idae0cgQpldZxWu"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3A Check-in Set 3",
+           "ext": "docx",
+           "id": "184gGkDwn6E3F2B42Nlcer6IjCMNTIqSw"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3A Check-in Set 4",
+           "ext": "docx",
+           "id": "1pJEj321UMoHMgPmoXVXj-DEftreq7G9i"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "3A PowerPoint Figure 3A-3",
+           "ext": "pptx",
+           "id": "12x5q44XDYQpUYona5LPO0iX2hk-3Dj7b"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "3A Section questions",
+           "ext": "docx",
+           "id": "10h1aB61azuqp0CpdIa7-DQU1onqRWq7u"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "3A Worksheet 3A-1 Nuclear stability- forces",
+           "ext": "docx",
+           "id": "18yXvGyxkqvL7Xw_lI5Du934p6YVbmS9n"
+          }
+         ],
          "code": "3A",
          "title": "Nuclear stability",
          "checkins": 4,
@@ -152,6 +588,85 @@
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3A Nuclear stability"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3B Check-in Set 1",
+           "ext": "docx",
+           "id": "1sCWKejgs-Vp0jJQdbDIYkeET3P2iygr4"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3B Check-in Set 2",
+           "ext": "docx",
+           "id": "1KGlv8lZA7jhRctwL2Ec0eFoYQx4bq-Ht"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3B Check-in Set 3",
+           "ext": "docx",
+           "id": "1hqaMfzKiaXVFZ-GTevnQ31lOx9wLhBGZ"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3B Check-in Set 4",
+           "ext": "docx",
+           "id": "1eEgUvFI8gB4HH-c1Ol2Vi-OsY-v2HTnP"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3B Check-in Set 5",
+           "ext": "docx",
+           "id": "1nckyYrYwxUgk3uN4ZgE_TqjjzbGDQU5d"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "3B PowerPoint Figure 3B-6",
+           "ext": "pptx",
+           "id": "1R7JYStVXj7lc7vPc8E0MSd6vd37nN8To"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "3B PowerPoint Figure 3B-8",
+           "ext": "pptx",
+           "id": "1putbfni87gVG6AsIY4F52gyrnSNp52l5"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "3B PowerPoint Table 3B-1",
+           "ext": "pptx",
+           "id": "1KQyQe22rXGSSvxmfpgVAw4my9oKeQu0F"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "3B Practical 3B-1 Alpha decay simulation",
+           "ext": "docx",
+           "id": "1eO0vRCeUI0LwtJ0gTmYxL5DqcyZRnr-M"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "3B Practical 3B-2 Beta decay simulation",
+           "ext": "docx",
+           "id": "1ZG9jykw0u7Bl_p-Fl6yZbuOcomqt2Eio"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "3B Section questions",
+           "ext": "docx",
+           "id": "1uPAfQeU9bftQgdCZniklkMyHFGl_euMa"
+          }
+         ],
          "code": "3B",
          "title": "Alpha beta gamma",
          "checkins": 5,
@@ -168,6 +683,57 @@
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3B Alpha beta gamma"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3C Check-in Set 1",
+           "ext": "docx",
+           "id": "1Hcz2poiCcMgYtifuexWsI1uhHt1pO6HN"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3C Check-in Set 2",
+           "ext": "docx",
+           "id": "1wtmeR2Ol7aFt5hr5qqFlQPUNWBRSEJNp"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "3C PowerPoint Figure 3C-2",
+           "ext": "pptx",
+           "id": "1SvVFamAIFu5nMi8xqvSXZn4niWT4mtiQ"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "3C Practical 3C-1 Calculating half-life from a",
+           "ext": "docx",
+           "id": "1JljdA9fdks2tHT9Uquf4g6RZXknbtjOd"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "3C Section questions",
+           "ext": "docx",
+           "id": "1i9qQ6o-Se_6ukUqMhBlzNi0VdcO1R-Y1"
+          },
+          {
+           "kind": "other",
+           "label": "Other",
+           "name": "3C Simulating random radioactive decay using a",
+           "ext": "xlsx",
+           "id": "11iwAQ06jcxUHGWUh2X5vRtZhQ9y3-2Ae"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "3C Worksheet 3C-1 Modelling radioactive decay",
+           "ext": "docx",
+           "id": "1NV0r-V43DmaZMLSUFNbxXUYOPZlv0iE3"
+          }
+         ],
          "code": "3C",
          "title": "Half-life",
          "checkins": 2,
@@ -184,6 +750,36 @@
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3C Half-life"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3D Check-in Set 1",
+           "ext": "docx",
+           "id": "18ucLtTqPJpZfSP0HCLfmzy57ki24R5cF"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "3D PowerPoint Figure 3D-2",
+           "ext": "pptx",
+           "id": "1QigJJtLPb3yfFDV-BvI5uQDOO8S38JuK"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "3D Section questions",
+           "ext": "docx",
+           "id": "1u-npPlZ3RuuuyThMT3EOY-P86fMmonUS"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "3D Worksheet 3D-1 Analysing decay series diagrams",
+           "ext": "docx",
+           "id": "1zruvgQAg5tTVlyQfIDg8bsLaBRH3Dlb1"
+          }
+         ],
          "code": "3D",
          "title": "Decay series",
          "checkins": 1,
@@ -195,6 +791,64 @@
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3D Decay series"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3E Check-in Set 1",
+           "ext": "docx",
+           "id": "1-0KrDePlVLdtEuMyiUz8tg85_3jsI8pZ"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3E Check-in Set 2",
+           "ext": "docx",
+           "id": "1Y-kCpZ7ihF0U4wZXzdyJl_4KGRrDd57w"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3E Check-in Set 3",
+           "ext": "docx",
+           "id": "1y-EmDPP9Y1bb3oPmGy-tpIcp6YXVG-rg"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3E Check-in Set 4",
+           "ext": "docx",
+           "id": "1tzWvl3cR7EDBrbx_IoXAk-DO6sTelFBR"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "3E Check-in Set 5",
+           "ext": "docx",
+           "id": "1eEQMMbZEaXTI57EXJhGGYRw4I43uo5u6"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "3E Practical 3E-1 Protection against radiation",
+           "ext": "docx",
+           "id": "1Nggr1c8gekzUh3un65b91LgH0lYB0L2Y"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "3E Section questions",
+           "ext": "docx",
+           "id": "1yqe2O4jonPSLVXx5Z-o7URTWOCBIkpn9"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "3E Worksheet 3E-1 The effect of radiation on humans",
+           "ext": "docx",
+           "id": "11v8EOm6d8u3h1LSoC3IpK7rb_hv1fBss"
+          }
+         ],
          "code": "3E",
          "title": "Radiation and humans",
          "checkins": 5,
@@ -220,7 +874,93 @@
         "resp": 1,
         "test": 1
        },
-       "testMarks": 25
+       "testMarks": 25,
+       "files": [
+        {
+         "kind": "checklist",
+         "label": "Checklist",
+         "name": "Ch03 Checklist",
+         "ext": "docx",
+         "id": "1ZL5boZJ11Xe8jLQaD4HBEnrFw83ohI-4"
+        },
+        {
+         "kind": "links",
+         "label": "Internet resources",
+         "name": "Ch03 Curated internet resources",
+         "ext": "docx",
+         "id": "1x7EdiviXjh47vHaU6cHkSvihvp0p19yA"
+        },
+        {
+         "kind": "review",
+         "label": "Review questions",
+         "name": "Ch03 Review questions",
+         "ext": "docx",
+         "id": "1mS5Q9OPzP-iFfAmwQ7y6q5TvmAgaLClC"
+        },
+        {
+         "kind": "summary",
+         "label": "Model summary",
+         "name": "Ch03 Summary",
+         "ext": "docx",
+         "id": "1Ha-udZtOXc34tvcuq5P_IgEQ4J_CGQhc"
+        },
+        {
+         "kind": "book",
+         "label": "Textbook chapter",
+         "name": "Ch03 Textbook chapter",
+         "ext": "pdf",
+         "id": "1i8VGI1gbrS2lXCmOM5RKmTrGDVuSy8iJ"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "3A Worksheet 3A-1 Answers",
+         "ext": "docx",
+         "id": "1K2ZUEYy06bHI8IGrI7ugrGCNO8YgIC1_"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "3B Worksheet 3B-1 Answers",
+         "ext": "docx",
+         "id": "1DkmD__j8mn2jvw4wt66tJFA3QrC2uKPr"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "3C Worksheet 3C-1 Answers",
+         "ext": "docx",
+         "id": "1Ij4DHun7tuKH5IehgDaumNRIEzhZ19b9"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "3D Worksheet 3D-1 Answers",
+         "ext": "docx",
+         "id": "1xzcf1iDxAzQTcTczYwPHWOZKRLmONROo"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "3E Worksheet 3E-1 Answers",
+         "ext": "docx",
+         "id": "1xzxMyvZ2cBsN1Icwz48Y-I7CSLkHMbEQ"
+        },
+        {
+         "kind": "resp",
+         "label": "Suggested responses",
+         "name": "Chapter 3 Suggested responses",
+         "ext": "docx",
+         "id": "1fnnLC8VfH7MSsU8SWF7ZqQU0-zhU_teL"
+        },
+        {
+         "kind": "test",
+         "label": "Chapter test",
+         "name": "Chapter 3 Test",
+         "ext": "docx",
+         "id": "1SUdlkAfDEHiNAr8FO-qmRS2aSJGWn5GQ"
+        }
+       ]
       },
       {
        "n": 4,
@@ -228,6 +968,64 @@
        "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy",
        "sections": [
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "4A Check-in Set 1",
+           "ext": "docx",
+           "id": "1VIFDBOJc-cS4R70qIMt8tCX8LLe3buWq"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "4A Check-in Set 2",
+           "ext": "docx",
+           "id": "1aIaVxFIPLvnOpx2ysNAP-oPKPcbPHT4U"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "4A Check-in Set 3",
+           "ext": "docx",
+           "id": "13zKhU3vRBnLLfcHSFB9yT1BaqcQILfh1"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "4A PowerPoint Figure 4A-14",
+           "ext": "pptx",
+           "id": "1gDB4RKnxiKwI4x4Nl5XQk-NB0qKqOsPi"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "4A PowerPoint Figure 4A-8",
+           "ext": "pptx",
+           "id": "1xfr8ueNIrNoB43h4q1jvG9LLW36Dv4w4"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "4A Practical 4A-1 Nuclear fission simulation",
+           "ext": "docx",
+           "id": "1hXMD025T3Oau4JbYzJxY19RUqcYcqO3e"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "4A Section questions",
+           "ext": "docx",
+           "id": "1JRHQ6pJsvyJIsI0Tg_Gd4h-OPy06TkIS"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "4A Worksheet 4A-1 Nuclear energy & energy-mass",
+           "ext": "docx",
+           "id": "1V8gi9MQJa6zqJrNZX-vdOoK8zYkTwJnA"
+          }
+         ],
          "code": "4A",
          "title": "Mass-energy",
          "checkins": 3,
@@ -244,6 +1042,43 @@
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy\\4A Mass-energy"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "4B Check-in Set 1",
+           "ext": "docx",
+           "id": "11yLEr4_BC_I-lsZm3YOGpFv9R8Yj8UY-"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "4B Check-in Set 2",
+           "ext": "docx",
+           "id": "1gj3BQ5WaBDrvld7TI34Be7OryH9cmK4g"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "4B PowerPoint Figure 4B-9",
+           "ext": "pptx",
+           "id": "1TSraICm27Ne4yPAFsCoPXfHsYa4dVkrm"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "4B Section questions",
+           "ext": "docx",
+           "id": "1Ro9u0rQywLxPPEmf8mSrZKzAdFOI-tO7"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "4B Worksheet 4B-1 Comparing fusion and fission",
+           "ext": "docx",
+           "id": "1SNAc8HzgIy8nUejmUlwwwGCciIFrxBcf"
+          }
+         ],
          "code": "4B",
          "title": "Fusion and fission",
          "checkins": 2,
@@ -258,6 +1093,29 @@
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy\\4B Fusion and fission"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "4C Check-in Set 1",
+           "ext": "docx",
+           "id": "1fpMjIrUWxOoPD2WxZ0U-ZWmE-mL6nUNx"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "4C Section questions",
+           "ext": "docx",
+           "id": "13eBY-Yu5A3kkM_PEpHs7IMsztJfMGWjp"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "4C Worksheet 4C-1 Nuclear energy for Australia",
+           "ext": "docx",
+           "id": "1P3dt-tFJqDpul2-z2kEdXzBeJCUcG4q0"
+          }
+         ],
          "code": "4C",
          "title": "Nuclear for Australia",
          "checkins": 1,
@@ -280,7 +1138,86 @@
         "resp": 1,
         "test": 1
        },
-       "testMarks": 30
+       "testMarks": 30,
+       "files": [
+        {
+         "kind": "checklist",
+         "label": "Checklist",
+         "name": "Ch04 Checklist",
+         "ext": "docx",
+         "id": "1eVFUv1YwJTb9iW7of5NvZrr3tANYOHkl"
+        },
+        {
+         "kind": "links",
+         "label": "Internet resources",
+         "name": "Ch04 Curated internet resources",
+         "ext": "docx",
+         "id": "1vS6HGNuQRLhnfXl1PUihynRw9jDRon1w"
+        },
+        {
+         "kind": "ppt",
+         "label": "PowerPoint",
+         "name": "Ch04 PowerPoint Page 173",
+         "ext": "pptx",
+         "id": "1Z6JVgW4cgAw67KmeakSn6i_09WkPmcbH"
+        },
+        {
+         "kind": "review",
+         "label": "Review questions",
+         "name": "Ch04 Review questions",
+         "ext": "docx",
+         "id": "1Yy3KYVbPSp_gCq11Hz6IrpCPJSjI5Fno"
+        },
+        {
+         "kind": "summary",
+         "label": "Model summary",
+         "name": "Ch04 Summary",
+         "ext": "docx",
+         "id": "1W4wYcxCOi0Ts7lc5YibkPN_0--3YkLLp"
+        },
+        {
+         "kind": "book",
+         "label": "Textbook chapter",
+         "name": "Ch04 Textbook chapter",
+         "ext": "pdf",
+         "id": "10Moss5GIUTxO3R3LWvhsVGfX1-olUmjm"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "4A Worksheet 4A-1 Answers",
+         "ext": "docx",
+         "id": "1tWkpwJ_xUI-Z7JhcCHql--LimXWwdBge"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "4B Worksheet 4B-1 Answers",
+         "ext": "docx",
+         "id": "1Lvj3kEqQi3LPZNydz4seO7H6dQkBa18d"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "4C Worksheet 4C-1 Answers",
+         "ext": "docx",
+         "id": "1V0001bOVs_Uz9LfL-vJt_gvJTxygFr9S"
+        },
+        {
+         "kind": "resp",
+         "label": "Suggested responses",
+         "name": "Chapter 4 Suggested responses",
+         "ext": "docx",
+         "id": "1KUSjieq-iSc-2S4Mlla4b2AfXHqDuMNR"
+        },
+        {
+         "kind": "test",
+         "label": "Chapter test",
+         "name": "Chapter 4 Test",
+         "ext": "docx",
+         "id": "1OoGxalJSLIQKbenGFII3YnS08GJcJOO_"
+        }
+       ]
       }
      ],
      "files": []
@@ -296,6 +1233,71 @@
        "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity",
        "sections": [
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5A Check-in Set 1",
+           "ext": "docx",
+           "id": "1Y9Rk6vJoxKr-_kOwmxZnMYx5s0nNYS2l"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5A Check-in Set 2",
+           "ext": "docx",
+           "id": "1IaI6O2REWMayxQ5bGrqBEWKRtJcNUVZt"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5A Check-in Set 3",
+           "ext": "docx",
+           "id": "1qBn0vM6n14yqcqqxv5MmFKJ9wcPSowyv"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5A Check-in Set 4",
+           "ext": "docx",
+           "id": "1wOYseWW-10KJXuZVkgllwNTUmi5RktqB"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5A Check-in Set 5",
+           "ext": "docx",
+           "id": "1EpdrZx2poel3j6pA8CZb2UDjTMqf5597"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "5A PowerPoint Figure 5A-5",
+           "ext": "pptx",
+           "id": "1lM-yl_Lus3Vqt3VXoJQGNC6tEalv6T53"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "5A PowerPoint Table 5A-1",
+           "ext": "pptx",
+           "id": "1WkW16mb27aF1YYI49Ff6ZzCPwK8nGFBv"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "5A Section questions",
+           "ext": "docx",
+           "id": "1rA83AFwiIbJO1Z1IFHO7mAtZqXls-aXa"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "5A Worksheet 5A-1 Charge (Q) and current (I)",
+           "ext": "docx",
+           "id": "1b6lYoe7WetjiaHzFkYuMZ3HCLkWEHQFr"
+          }
+         ],
          "code": "5A",
          "title": "Charge and current",
          "checkins": 5,
@@ -310,6 +1312,71 @@
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5A Charge and current"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5B Check-in Set 1",
+           "ext": "docx",
+           "id": "1s-NXIHDDSmBPNMqB10KQUqOxRco6eIwx"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5B Check-in Set 2",
+           "ext": "docx",
+           "id": "1bQpvlvN-QSSNPpZVh2sHR6F2qNrOuKBs"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5B Check-in Set 3",
+           "ext": "docx",
+           "id": "1JqYILbUgQLTNoyWimASrkYc0t9Ld_HPJ"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5B Check-in Set 4",
+           "ext": "docx",
+           "id": "1aZZBQkZUzk1Wp-IT49lDhj_qQXLYgGWL"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "5B PowerPoint Figure 5B-17",
+           "ext": "pptx",
+           "id": "1UuZsoJCLdzpUM916EIoP7PhpjHBPMW6x"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "5B PowerPoint Figure 5B-9",
+           "ext": "pptx",
+           "id": "1QAnKgxzYeCuCtNLbkFuElh6sYwkMqnSA"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "5B Practical 5B-1 Using an ammeter and voltmeter in",
+           "ext": "docx",
+           "id": "1W99AZ5PphZ9Jo6Oe4Z3GDbTO7XW-rrf2"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "5B Section questions",
+           "ext": "docx",
+           "id": "1HJVRvy8_lApPOgo6klAuPebTHihj7o1o"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "5B Worksheet 5B-1 Electrical energy and potential",
+           "ext": "docx",
+           "id": "1kYVW7lOUv5h19MmalzlwDJGFrcmZxOYf"
+          }
+         ],
          "code": "5B",
          "title": "Energy and PD",
          "checkins": 4,
@@ -326,6 +1393,57 @@
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5B Energy and PD"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5C Check-in Set 1",
+           "ext": "docx",
+           "id": "1scsKolERHXpszOZf3h_0FTCZWeerYxKa"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5C Check-in Set 2",
+           "ext": "docx",
+           "id": "1yORFF7pTncMXWuWlG_zgP3SMeBRYyu3v"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5C Check-in Set 3",
+           "ext": "docx",
+           "id": "1Vh6_rE3Qpy8s2-G1gJi-QijwA0fnYuII"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "5C PowerPoint Figure 5C-5",
+           "ext": "pptx",
+           "id": "1-e-6poC1DkF_yCoz3mFdS437B3mXOlw6"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "5C Practical 5C-1 Using resistors in series",
+           "ext": "docx",
+           "id": "1g1paKj_xyJjzzoIAvSCb4FjcS5MIrb1p"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "5C Section questions",
+           "ext": "docx",
+           "id": "1v090hje75vzbfUUCWbBJzMvSl36YNu-Z"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "5C Worksheet 5C-1 Modelling resistance in series",
+           "ext": "docx",
+           "id": "1rS0ZNooiLVonovamuBcKGtuVfQkLh0gn"
+          }
+         ],
          "code": "5C",
          "title": "Series circuits",
          "checkins": 3,
@@ -345,6 +1463,57 @@
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5C Series circuits"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5D Check-in Set 1",
+           "ext": "docx",
+           "id": "1LBp1mcxYTGh7tA7crXaSZCCbbL7C3fwH"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5D Check-in Set 2",
+           "ext": "docx",
+           "id": "1moINleWt_2qvWi6iRVAygLKzLbFlSQ7L"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "5D PowerPoint Figure 5D-2",
+           "ext": "pptx",
+           "id": "1Oh-6uDAwPTiMQc7lSlegAAQxuHoFjIWk"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "5D PowerPoint Figure 5D-3",
+           "ext": "pptx",
+           "id": "1bcAIL0kVqn0J3sylC1j1_FNZdPW-XhhN"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "5D Practical 5D-1 Using resistors in parallel",
+           "ext": "docx",
+           "id": "1TIcnSm48awe0m7DrwjibrTN356g91-iQ"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "5D Section questions",
+           "ext": "docx",
+           "id": "1Y6pVTq0e-5NMV-v_DdOGCNY0EiaIXW8X"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "5D Worksheet 5D-1 Modelling resistance in parallel",
+           "ext": "docx",
+           "id": "1Fb4g6CQ86VInixSEEOsFOZH6_wxc75OI"
+          }
+         ],
          "code": "5D",
          "title": "Parallel circuits",
          "checkins": 2,
@@ -363,6 +1532,57 @@
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5D Parallel circuits"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5E Check-in Set 1",
+           "ext": "docx",
+           "id": "1B9Czxm80SGxXdclb82VmmfAwB6KAVHiu"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5E Check-in Set 2",
+           "ext": "docx",
+           "id": "1UPFmIYT0iqMSrfqksJ9skUKIZ9lSE2gY"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5E Check-in Set 3",
+           "ext": "docx",
+           "id": "1KqK3Dztb2N77wGe0C60JD9n3hyoz4_kC"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "5E Check-in Set 4",
+           "ext": "docx",
+           "id": "1_Yi0d4hZc6f7HeirllV7fMNkRIpIhnjt"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "5E PowerPoint Figure 5E-4",
+           "ext": "pptx",
+           "id": "1fzG_5HZzhnzoqiVegZdGqrgObeYD370r"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "5E Section questions",
+           "ext": "docx",
+           "id": "1w57xqnCAgbK4wraVNnN_KBgm9EDm4PJl"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "5E Worksheet 5E-1 Electric power",
+           "ext": "docx",
+           "id": "1xJgjk4QHz3MHrdnevIZDm8umxr6603-P"
+          }
+         ],
          "code": "5E",
          "title": "Power",
          "checkins": 4,
@@ -392,7 +1612,93 @@
         "resp": 1,
         "test": 1
        },
-       "testMarks": 58
+       "testMarks": 58,
+       "files": [
+        {
+         "kind": "checklist",
+         "label": "Checklist",
+         "name": "Ch05 Checklist",
+         "ext": "docx",
+         "id": "1QpMpqH_0KClfDLm9L81Fs3cNQb925re4"
+        },
+        {
+         "kind": "links",
+         "label": "Internet resources",
+         "name": "Ch05 Curated internet resources",
+         "ext": "docx",
+         "id": "1xRTbTsUJZ-2GiIMom6jirJvEGVUQQgKV"
+        },
+        {
+         "kind": "review",
+         "label": "Review questions",
+         "name": "Ch05 Review questions",
+         "ext": "docx",
+         "id": "1jP0twvahIA_0xCljzDM2A1plDGJENHmt"
+        },
+        {
+         "kind": "summary",
+         "label": "Model summary",
+         "name": "Ch05 Summary",
+         "ext": "docx",
+         "id": "1KlkZbfObO8nmiSeegMl05l_VZ0UPUdvv"
+        },
+        {
+         "kind": "book",
+         "label": "Textbook chapter",
+         "name": "Ch05 Textbook chapter",
+         "ext": "pdf",
+         "id": "1LXXhqVVMEnyiSFsJ12stFCP5MwoX8DpL"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "5A Worksheet 5A-1 Answers",
+         "ext": "docx",
+         "id": "1RoMfrHb7nv2CefREqF4GjWtCdE4H1Z0t"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "5B Worksheet 5B-1 Answers",
+         "ext": "docx",
+         "id": "1YSGvlgZxljsJEHY85GXGY_hQsmeOP0pc"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "5C Worksheet 5C-1 Answers",
+         "ext": "docx",
+         "id": "1kOegSPSs-yGdo5uMu_ioJyR15nHVlVLf"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "5D Worksheet 5D-1 Answers",
+         "ext": "docx",
+         "id": "1yorclCy05xd355nHe1bkNAAQRNCR1C7r"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "5E Worksheet 5E-1 Answers",
+         "ext": "docx",
+         "id": "162ciSzky_hwfzNSRABzrVMubrELak41p"
+        },
+        {
+         "kind": "resp",
+         "label": "Suggested responses",
+         "name": "Chapter 5 Suggested responses",
+         "ext": "docx",
+         "id": "1nQKdMFLsIyT5lTxarLTCofnYsAshMYCX"
+        },
+        {
+         "kind": "test",
+         "label": "Chapter test",
+         "name": "Chapter 5 Test",
+         "ext": "docx",
+         "id": "1tgkOKDSOB-GtcSwe4lZrh4ab60v2u1Ut"
+        }
+       ]
       },
       {
        "n": 6,
@@ -400,6 +1706,106 @@
        "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity",
        "sections": [
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "6A Check-in Set 1",
+           "ext": "docx",
+           "id": "1yAp1osihy5Wcw-yhSLoZ6RnGtHvJqp1v"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "6A Check-in Set 2",
+           "ext": "docx",
+           "id": "1wOVa6OpjmClXwR5iPOJPqZim2HgSSShS"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "6A Check-in Set 3",
+           "ext": "docx",
+           "id": "1-o79gMOwBsl7JrMABHplulVFRFlZgT1Q"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "6A Check-in Set 4",
+           "ext": "docx",
+           "id": "1rVwPE_2iuDN8rP4Fu28qQD0wvsm2pm_N"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "6A PowerPoint Figure 6A-14",
+           "ext": "pptx",
+           "id": "1vCKVTHcdyja2EDkB2QuvfkygbzuFTHlh"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "6A PowerPoint Figure 6A-17",
+           "ext": "pptx",
+           "id": "1fsjbFh07PbhyMJMmTFmRIi5qr4ADkSCZ"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "6A PowerPoint Figure 6A-19",
+           "ext": "pptx",
+           "id": "1brg2Vbt_gVN7m7KIFgZXMNWjZpuG0fel"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "6A PowerPoint Figure 6A-4",
+           "ext": "pptx",
+           "id": "1yv05HNwAirowJ2zw3ponoHHCJGfVYnQ2"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "6A PowerPoint Figure 6A-9",
+           "ext": "pptx",
+           "id": "14MeHoRa5cmuwZJufcfmmZDgZLRF2QfSB"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "6A Practical 6A-1 Non-ohmic resistor (a light bulb)",
+           "ext": "docx",
+           "id": "1zPRKdqlYq_-XofNbAKIxaeZ9UIlxPNdH"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "6A Practical 6A-2 A light dependent resistor (LDR)",
+           "ext": "docx",
+           "id": "1QiPhQ92B-lrp-UI24J0KwlcyBoBELXYD"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "6A Practical 6A-3 Voltage across a thermistor",
+           "ext": "docx",
+           "id": "1XRev39uKcz9SZ1NNnraH4EOFZE3ZDW0u"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "6A Section questions",
+           "ext": "docx",
+           "id": "12GsqncBQcbn4yb2AIvuqdx4Fp2e8j9Rd"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "6A Worksheet 6A-1 Useful electronic components",
+           "ext": "docx",
+           "id": "1FmL_nB6sq0yIUGBE8tNqwDCRE2pMVtkk"
+          }
+         ],
          "code": "6A",
          "title": "Components",
          "checkins": 4,
@@ -420,6 +1826,50 @@
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity\\6A Components"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "6B Check-in Set 1",
+           "ext": "docx",
+           "id": "1IXovQ78xghuv0ukCUB1ZU9QQnrqhqNnm"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "6B Check-in Set 2",
+           "ext": "docx",
+           "id": "1eIB6nxXfC1jK_wn99p5Ei9WyA9Adrr_6"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "6B Check-in Set 3",
+           "ext": "docx",
+           "id": "1DLzWj2EaMQZzp5M-RSc9NpdQV_61AVh_"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "6B PowerPoint Figure 6B-4",
+           "ext": "pptx",
+           "id": "1GOdBaGEit17szu7MLFgDG-cjYiFuYpBS"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "6B Section questions",
+           "ext": "docx",
+           "id": "1zVdCT4vXEk1dxbXe6I5Q1kP6HJFK5bzM"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "6B Worksheet 6B-1 Electricity at home",
+           "ext": "docx",
+           "id": "1cM3eQRkBDIMsZVrQ7C_TdqREv3A5Y_z8"
+          }
+         ],
          "code": "6B",
          "title": "Electricity at home",
          "checkins": 3,
@@ -435,6 +1885,50 @@
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity\\6B Electricity at home"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "6C Check-in Set 1",
+           "ext": "docx",
+           "id": "1hiN0sQD0OnaESNjdr2_WZpS1SLSjOkEx"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "6C Check-in Set 2",
+           "ext": "docx",
+           "id": "1r1GZ42OVdq0qubkZjNV35_GNmcOozxCB"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "6C PowerPoint Figure 6C-2",
+           "ext": "pptx",
+           "id": "12LDrXeH_g-tg1oNfAhVQ-T6R58vTuboK"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "6C PowerPoint Table 6C-1",
+           "ext": "pptx",
+           "id": "1TGI0eD62LeUf5Yx5TNiMDsjfdcWYZJLJ"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "6C Section questions",
+           "ext": "docx",
+           "id": "1vxKujdZbwVlrw11duxWHPVUg8TUF9YMD"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "6C Worksheet 6C-1 Electrical safety",
+           "ext": "docx",
+           "id": "1brjbIBMZ1Y9D0FGqyEAnNhUpVxlruobS"
+          }
+         ],
          "code": "6C",
          "title": "Safety",
          "checkins": 2,
@@ -456,7 +1950,79 @@
         "resp": 1,
         "test": 1
        },
-       "testMarks": 44
+       "testMarks": 44,
+       "files": [
+        {
+         "kind": "checklist",
+         "label": "Checklist",
+         "name": "Ch06 Checklist",
+         "ext": "docx",
+         "id": "1BepKfla8qb0HUpzNl7dJqGT6WzsfldUC"
+        },
+        {
+         "kind": "links",
+         "label": "Internet resources",
+         "name": "Ch06 Curated internet resources",
+         "ext": "docx",
+         "id": "1BkyNbIo8hjJ72Ep2VMVcAeZdXKCnFklp"
+        },
+        {
+         "kind": "review",
+         "label": "Review questions",
+         "name": "Ch06 Review questions",
+         "ext": "docx",
+         "id": "1VWl9iEr3GgLYMRL3uhDVwo--22--6lJl"
+        },
+        {
+         "kind": "summary",
+         "label": "Model summary",
+         "name": "Ch06 Summary",
+         "ext": "docx",
+         "id": "1-QzgeeY0R8tLJBcwrD5jLYOsJKHovDF3"
+        },
+        {
+         "kind": "book",
+         "label": "Textbook chapter",
+         "name": "Ch06 Textbook chapter",
+         "ext": "pdf",
+         "id": "1AKVPCTgZBl88YCTlUCpRhynCBLEVpREu"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "6A Worksheet 6A-1 Answers",
+         "ext": "docx",
+         "id": "1gqk4Atmr1MRqK--GEWg9Mn-RjrsTlaof"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "6B Worksheet 6B-1 Answers",
+         "ext": "docx",
+         "id": "1VEZYg0bnJK_4d7NImUA546d_ozULvpmR"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "6C Worksheet 6C-1 Answers",
+         "ext": "docx",
+         "id": "1B0uSVP5JmafViEPWlspFifl0FEzkr3cB"
+        },
+        {
+         "kind": "resp",
+         "label": "Suggested responses",
+         "name": "Chapter 6 Suggested responses",
+         "ext": "docx",
+         "id": "1tTjoOskZEtXumGOnlRR12RIWJOaBpOeo"
+        },
+        {
+         "kind": "test",
+         "label": "Chapter test",
+         "name": "Chapter 6 Test",
+         "ext": "docx",
+         "id": "1GgDP2lQk0GlAe93UDzLnyKOCy6dwAQUc"
+        }
+       ]
       }
      ],
      "files": []
@@ -478,6 +2044,57 @@
        "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion",
        "sections": [
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "7A Check-in Set 1",
+           "ext": "docx",
+           "id": "1iL7WZapdG0kFV_QQLAjY62WTplQtEm9l"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "7A Check-in Set 2",
+           "ext": "docx",
+           "id": "1HdNDbExN-_Ue4jbE0HyHhIMG_J6HO4D1"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "7A Check-in Set 3",
+           "ext": "docx",
+           "id": "1iFlexG1FXRhvDzx2WML4WHQPIVkgDxc2"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "7A Check-in Set 4",
+           "ext": "docx",
+           "id": "1MuYr89QQhd_u3CYpN1bQs0oEZGf71vNl"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "7A Practical 7A-1 Drawing vectors",
+           "ext": "docx",
+           "id": "1MwC4iomqjNGVqc7h-_pViIN1M0elcATg"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "7A Section questions",
+           "ext": "docx",
+           "id": "16uzkgG47QAz_wM__TCOV33vhTsBqlOtK"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "7A Worksheet 7A-1 Concepts used to model motion",
+           "ext": "docx",
+           "id": "1JZxRxkIyIlfPJ9QRg2wmO8pubzacQIx7"
+          }
+         ],
          "code": "7A",
          "title": "Modelling motion",
          "checkins": 4,
@@ -491,6 +2108,85 @@
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion\\7A Modelling motion"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "7B Check-in Set 1",
+           "ext": "docx",
+           "id": "1TtmlytF6dIODEnoFLAlDmSI9Zy_J31-H"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "7B Check-in Set 2",
+           "ext": "docx",
+           "id": "1vgFDePHgGjhxrq5TMtq7rK75svo-c0Sp"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "7B Check-in Set 3",
+           "ext": "docx",
+           "id": "1hucdMu85LOw6p_V8H0xMNpOyUnYyhqLN"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "7B PowerPoint Figure 7B-10",
+           "ext": "pptx",
+           "id": "17IGPVoXFHdGp-a7sloCLuideXRU04ODC"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "7B PowerPoint Figure 7B-11 & 7B-12",
+           "ext": "pptx",
+           "id": "1QjQ-WM1bfZWF6sl3vezVAIx8Q5n7rlof"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "7B PowerPoint Figure 7B-15",
+           "ext": "pptx",
+           "id": "14u42nY9xl3RL3ZCyGo7UEL0B6JS_gak-"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "7B PowerPoint Figure 7B-16",
+           "ext": "pptx",
+           "id": "1FgRc6Yf5xWmJGsNeZ99nvshziUCn4TtT"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "7B PowerPoint Figure 7B-18",
+           "ext": "pptx",
+           "id": "1NBbZFAx0IVcPEcV3YiIPvQhPxD9GvrPM"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "7B Practical 7B-1 Motion graphs",
+           "ext": "docx",
+           "id": "1SQufQgJErksrwkWPrh-6jpKiCUDHe9Lg"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "7B Section questions",
+           "ext": "docx",
+           "id": "1kX7t0UFlvtC_nrITPsuGx9st6wOg2Blr"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "7B Worksheet 7B-1 Analysing motion through graphs",
+           "ext": "docx",
+           "id": "1e3Njj2iJqyJ1_jr1xILdOJu7mIytt-99"
+          }
+         ],
          "code": "7B",
          "title": "Motion graphs",
          "checkins": 3,
@@ -504,6 +2200,43 @@
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion\\7B Motion graphs"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "7C Check-in Set 1",
+           "ext": "docx",
+           "id": "1ieYsjWrMh1LWXXRlmVoOehbzw4MCiioP"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "7C PowerPoint Figure 7C-3",
+           "ext": "pptx",
+           "id": "1JEfCEWvqeaSfma-4PAphcpiExbH0fpoP"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "7C Practical 7C-1 Water rockets",
+           "ext": "docx",
+           "id": "1pgaJuoYwDP9cmuTaPH6EoRM2a4HB1XEZ"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "7C Section questions",
+           "ext": "docx",
+           "id": "1iHTPJpv0gtLzyyByLW1awIrFnktAGCW2"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "7C Worksheet 7C-1 Analysing straight-line motion with",
+           "ext": "docx",
+           "id": "16nNQd_Fv1pwYKj627OHBWlPv6Ddg_JPj"
+          }
+         ],
          "code": "7C",
          "title": "Uniform acceleration",
          "checkins": 1,
@@ -527,7 +2260,86 @@
         "resp": 1,
         "test": 1
        },
-       "testMarks": null
+       "testMarks": null,
+       "files": [
+        {
+         "kind": "checklist",
+         "label": "Checklist",
+         "name": "Ch07 Checklist",
+         "ext": "docx",
+         "id": "1VZSQUt5ffS2Idbft7gzsItP9oat5K7q7"
+        },
+        {
+         "kind": "links",
+         "label": "Internet resources",
+         "name": "Ch07 Curated internet resources",
+         "ext": "docx",
+         "id": "1R7SM02vhG0kAtJI0Bpp8QzQ5uovwHnFI"
+        },
+        {
+         "kind": "review",
+         "label": "Review questions",
+         "name": "Ch07 Review questions",
+         "ext": "docx",
+         "id": "1NPeirOElOQC_qkZOwSRxpf6oq7SoA4Yg"
+        },
+        {
+         "kind": "summary",
+         "label": "Model summary",
+         "name": "Ch07 Summary",
+         "ext": "docx",
+         "id": "1RuHHI0ct7nHTPz-9-q0heKRzRQ3orCKl"
+        },
+        {
+         "kind": "book",
+         "label": "Textbook chapter",
+         "name": "Ch07 Textbook chapter",
+         "ext": "pdf",
+         "id": "136pwrKmFDPd3crj2t9iclHNxAjrciWFX"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "7A Worksheet 7A-1 Answers",
+         "ext": "docx",
+         "id": "1hWyuBV4ZJLOQssPEqjyxR4MGI6KEJF4N"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "7B Worksheet 7B-1 Answers (2)",
+         "ext": "docx",
+         "id": "18kvnmqK791wUAIDUbKjL0OhkpWYMR58w"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "7B Worksheet 7B-1 Answers",
+         "ext": "docx",
+         "id": "1NmaUhrD2FaKv0g8BtTqSJDD9oxZCccw-"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "7C Worksheet 7C-1 Answers",
+         "ext": "docx",
+         "id": "1R8zo8KshNCEfu-pQ3CwBVgHFAHZdIVmJ"
+        },
+        {
+         "kind": "resp",
+         "label": "Suggested responses",
+         "name": "Chapter 7 Suggested responses",
+         "ext": "docx",
+         "id": "1ScF0mIJjSdE1sUNpqxeY9nomc939mgjj"
+        },
+        {
+         "kind": "test",
+         "label": "Chapter test",
+         "name": "Chapter 7 Test",
+         "ext": "docx",
+         "id": "1xFfWUuGveHx42nYWJZmuV0kWAMnfmj9S"
+        }
+       ]
       },
       {
        "n": 8,
@@ -535,6 +2347,50 @@
        "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces",
        "sections": [
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "8A Check-in Set 1",
+           "ext": "docx",
+           "id": "1MGCYsoanOfxz2VndSzmxzE837MUbWTf6"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "8A Check-in Set 2",
+           "ext": "docx",
+           "id": "1UKzyIG8OeOQpkxAUerhrWOg-rImAu8bR"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "8A PowerPoint Figure 8A-7",
+           "ext": "pptx",
+           "id": "1CUx8HxspRSZqhEen6rE2yg8b0H8-heOE"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "8A Practical 8A-1 Egg drop",
+           "ext": "docx",
+           "id": "1GzacHS0SLjFGq6eEPouwsrwJassPARwb"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "8A Section questions",
+           "ext": "docx",
+           "id": "1pmxwcA1sM1rmxPogI_loOrZociEieZ2E"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "8A Worksheet 8A-1 Momentum",
+           "ext": "docx",
+           "id": "111rGUNuY9UCfagz6YPa0T7mpIfZOTjcC"
+          }
+         ],
          "code": "8A",
          "title": "Momentum",
          "checkins": 2,
@@ -548,6 +2404,64 @@
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces\\8A Momentum"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "8B Check-in Set 1",
+           "ext": "docx",
+           "id": "1Pjye_4G0qVnxNLOhcQS5Wd0_Yt5UVR5n"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "8B Check-in Set 2",
+           "ext": "docx",
+           "id": "13LaqAoaZIzJDl9bbpTsb3dZ9faGykFe2"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "8B PowerPoint Figure 8B-11",
+           "ext": "pptx",
+           "id": "1wYFDHZuuVRQGqWz7MAyfLkMH32TIMSac"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "8B PowerPoint Figure 8B-15",
+           "ext": "pptx",
+           "id": "1aiAM-03tKyLNo9r8oCWIRpOIx9bkA1a0"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "8B PowerPoint Figure 8B-2",
+           "ext": "pptx",
+           "id": "1pSAkHMdyRTnHfrCR3xObcQGc_JPP4BcO"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "8B Practical 8B-1 Newton’s second law",
+           "ext": "docx",
+           "id": "1kcwtFRWnyKvePwWj_adwA070K6DnAPyl"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "8B Section questions",
+           "ext": "docx",
+           "id": "12Xm7mQcCr-aKg7J7S1zvKVf6lU7KDNLg"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "8B Worksheet 8B-1 Newton’s laws of motion",
+           "ext": "docx",
+           "id": "1xD0Lq5986fn0h6ra6CDFHb3kiCQMpen9"
+          }
+         ],
          "code": "8B",
          "title": "Newtons laws",
          "checkins": 2,
@@ -561,6 +2475,50 @@
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces\\8B Newtons laws"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "8C Check-in Set 1",
+           "ext": "docx",
+           "id": "15aAM25kriVN_ukzCy_O0ZL4tS-G4viLe"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "8C Check-in Set 2",
+           "ext": "docx",
+           "id": "1kVYpFWZq1IwQaszp0W9snIz5JfnbXQjk"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "8C PowerPoint Figure 8C-2 & 8C-3",
+           "ext": "pptx",
+           "id": "1wNM1ylBCFaEQf19tN9zr2Rv6SFhvU8vn"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "8C Practical 8C-1 Torque and rotational equilibrium",
+           "ext": "docx",
+           "id": "1UxhxCVLhiYI6EORppnk9aJdjMjDFc0sZ"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "8C Section questions",
+           "ext": "docx",
+           "id": "1Si0_G3i3wx3xSRWki2oDB4xPD_qj3tv_"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "8C Worksheet 8C-1 Equilibrium",
+           "ext": "docx",
+           "id": "1GiItfaPc8tJX6GHNABLR8svwfuctYOVf"
+          }
+         ],
          "code": "8C",
          "title": "Equilibrium",
          "checkins": 2,
@@ -584,7 +2542,79 @@
         "resp": 1,
         "test": 1
        },
-       "testMarks": null
+       "testMarks": null,
+       "files": [
+        {
+         "kind": "checklist",
+         "label": "Checklist",
+         "name": "Ch08 Checklist",
+         "ext": "docx",
+         "id": "1wySdBcBlaVu-OQpmbfGl0N1EsYc_i-9O"
+        },
+        {
+         "kind": "links",
+         "label": "Internet resources",
+         "name": "Ch08 Curated internet resources",
+         "ext": "docx",
+         "id": "1htMscpw1prBELdCu7YfF8v3KDd0vr2xK"
+        },
+        {
+         "kind": "review",
+         "label": "Review questions",
+         "name": "Ch08 Review questions",
+         "ext": "docx",
+         "id": "1ggAz4i3kMydeTeEIgpUiL5VQX-aN3Ly7"
+        },
+        {
+         "kind": "summary",
+         "label": "Model summary",
+         "name": "Ch08 Summary",
+         "ext": "docx",
+         "id": "1l6xOfOHzP_00J-kQv7xPJg8el7QE-ndY"
+        },
+        {
+         "kind": "book",
+         "label": "Textbook chapter",
+         "name": "Ch08 Textbook chapter",
+         "ext": "pdf",
+         "id": "1TalW3Y02vy5B4n5rvReGUcU-MnwJDoad"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "8A Worksheet 8A-1 Answers",
+         "ext": "docx",
+         "id": "1lVy6UlI19rDVDjQyvvDPiBCEM72PGezl"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "8B Worksheet 8B-1 Answers",
+         "ext": "docx",
+         "id": "1Yf87gKNNWKA41NMfNxRlFh2tU4a0Sexz"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "8C Worksheet 8C-1 Answers",
+         "ext": "docx",
+         "id": "17Bn4p-RzsQI6hUF0v6F85BFdvoM8xfl3"
+        },
+        {
+         "kind": "resp",
+         "label": "Suggested responses",
+         "name": "Chapter 8 Suggested responses",
+         "ext": "docx",
+         "id": "1QWuSFuAxA-GZ1PXHOkct-PzJVVD7Eew6"
+        },
+        {
+         "kind": "test",
+         "label": "Chapter test",
+         "name": "Chapter 8 Test",
+         "ext": "docx",
+         "id": "1QheXqaJvF_qRdasSqOA2iyedCIGzkMKD"
+        }
+       ]
       },
       {
        "n": 9,
@@ -592,6 +2622,36 @@
        "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy",
        "sections": [
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "9A Check-in Set 1",
+           "ext": "docx",
+           "id": "1E_hQ0xqvsmmUmH903nNBbg9yAM4jUgZv"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "9A Practical 9A-1 Work",
+           "ext": "docx",
+           "id": "1JJ26owz4PD4NCFJgzTl3zX9OMXniaQDJ"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "9A Section questions",
+           "ext": "docx",
+           "id": "12xCB14-2bhJwbJSDsn2aUidOU5G93Rtj"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "9A Worksheet 9A-1 Work",
+           "ext": "docx",
+           "id": "16Bx5GebhNN5b2xytsAt8Z3J2E0Izs5O0"
+          }
+         ],
          "code": "9A",
          "title": "Work",
          "checkins": 1,
@@ -605,6 +2665,50 @@
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy\\9A Work"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "9B Check-in Set 1",
+           "ext": "docx",
+           "id": "1oY7y1YH3NWDJiTddL1Qz2YzD0_bLeLFX"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "9B Check-in Set 2",
+           "ext": "docx",
+           "id": "1Wqf8ujAn0Atg7ZMzptAcd0D_Ng-d4bzK"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "9B PowerPoint Figure 9B-3",
+           "ext": "pptx",
+           "id": "1AmVNHSyIgWJg5RwrjkmrDo8DFtZoD81B"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "9B Practical 9B-1 Energy",
+           "ext": "docx",
+           "id": "11jLXDqsTLiY0CKoaIVrpw_SSAupDc7o4"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "9B Section questions",
+           "ext": "docx",
+           "id": "1rAyF3O5VkHqf5qHlzD1OftK_mGSClLGo"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "9B Worksheet 9B-1 Energy, power and energy efficiency",
+           "ext": "docx",
+           "id": "124jVSBgq8TfsqPQcv6j90EHjQ37eEk64"
+          }
+         ],
          "code": "9B",
          "title": "Energy and power",
          "checkins": 2,
@@ -618,6 +2722,50 @@
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy\\9B Energy and power"
         },
         {
+         "files": [
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "9C Check-in Set 1",
+           "ext": "docx",
+           "id": "1woCnPqb7LgO-cBenTtYXo6ee6JSUfg-8"
+          },
+          {
+           "kind": "checkin",
+           "label": "Check-in",
+           "name": "9C Check-in Set 2",
+           "ext": "docx",
+           "id": "1nz10yxmnmnw1PXI_4YtdmYUi5TSNA_fM"
+          },
+          {
+           "kind": "ppt",
+           "label": "PowerPoint",
+           "name": "9C PowerPoint Figure 9C-5",
+           "ext": "pptx",
+           "id": "19jWwFgfDXOeBO2qv1YLNsYhDQuQrILwd"
+          },
+          {
+           "kind": "prac",
+           "label": "Practical",
+           "name": "9C Practical 9C-1 Spring constants and elastic",
+           "ext": "docx",
+           "id": "1iTkSPP0rY7vkkENAAh_Qvp3toj9LDLdu"
+          },
+          {
+           "kind": "sq",
+           "label": "Section questions",
+           "name": "9C Section questions",
+           "ext": "docx",
+           "id": "17dTsaDXCyu7um9JCsw0H2am_0KtLnO3Q"
+          },
+          {
+           "kind": "ws",
+           "label": "Worksheet",
+           "name": "9C Worksheet 9C-1 Springs",
+           "ext": "docx",
+           "id": "1M4HYwhq2xUMDDEP1zBWpZbvNVs78EH-i"
+          }
+         ],
          "code": "9C",
          "title": "Springs",
          "checkins": 2,
@@ -641,7 +2789,79 @@
         "resp": 1,
         "test": 1
        },
-       "testMarks": null
+       "testMarks": null,
+       "files": [
+        {
+         "kind": "checklist",
+         "label": "Checklist",
+         "name": "Ch09 Checklist",
+         "ext": "docx",
+         "id": "1XrKCPiggKZxNxgaoym8va_OFZ7IzIvcZ"
+        },
+        {
+         "kind": "links",
+         "label": "Internet resources",
+         "name": "Ch09 Curated internet resources",
+         "ext": "docx",
+         "id": "1Wj8LG7JZAUMGDJep5eeok7hfsT215Qas"
+        },
+        {
+         "kind": "review",
+         "label": "Review questions",
+         "name": "Ch09 Review questions",
+         "ext": "docx",
+         "id": "1jYdo0b21NdiqzVj9jnLMEXXQ2veAEw4e"
+        },
+        {
+         "kind": "summary",
+         "label": "Model summary",
+         "name": "Ch09 Summary",
+         "ext": "docx",
+         "id": "18xRqbUveiNdVPmR99OzaVqvMv29p-zDJ"
+        },
+        {
+         "kind": "book",
+         "label": "Textbook chapter",
+         "name": "Ch09 Textbook chapter",
+         "ext": "pdf",
+         "id": "1X2UsVhi6M-Aq-fsKNQiCmtG6ZGGi7656"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "9A Worksheet 9A-1 Answers",
+         "ext": "docx",
+         "id": "1RKfCrttVRB-4xJ5hIFeUF0KsJTEIWeoX"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "9B Worksheet 9B-1 Answers",
+         "ext": "docx",
+         "id": "1t3ao23vryqBK3aei-Jee0irvhcOW-w5c"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "9C Worksheet 9C-1 Answers",
+         "ext": "docx",
+         "id": "1L3DEEyMqkdKJgA8mc8u_egMeXTx_XATD"
+        },
+        {
+         "kind": "resp",
+         "label": "Suggested responses",
+         "name": "Chapter 9 Suggested responses",
+         "ext": "docx",
+         "id": "1IfLq5qD7EH9Ue1QXNVwBGPN709niozBk"
+        },
+        {
+         "kind": "test",
+         "label": "Chapter test",
+         "name": "Chapter 9 Test",
+         "ext": "docx",
+         "id": "1p656HhIshm9QH0IRXiqbUWybmksR7yJ_"
+        }
+       ]
       }
      ],
      "files": []

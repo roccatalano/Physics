@@ -182,7 +182,8 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
 .scard{background:#fff;border:1px solid var(--line);border-left:5px solid var(--ac);border-radius:10px;padding:10px 12px}
 .scard b.code{color:var(--ac)}.scard .ttl{font-weight:600;margin:2px 0 6px}
 .rl{font-size:12.5px;color:var(--ink);margin:3px 0;display:grid;grid-template-columns:120px 1fr;gap:6px}.rl i{font-style:normal;color:var(--muted)}.rl span{display:block}
-.rl.none{color:#a32d2d}.path{font-size:11px;color:var(--muted);word-break:break-all;margin-top:6px}
+.rl.none{color:#a32d2d}.dl{display:inline-block;font-size:12px;color:#1d7266;text-decoration:none;border:1px solid #9fd3c9;border-radius:6px;padding:0 6px;margin:1px 3px 1px 0;font-weight:600;background:#fff}.dl:hover{background:#e6f5ee}.dl.off{color:#999;border-color:#ddd}
+.path{font-size:11px;color:var(--muted);word-break:break-all;margin-top:6px}
 .ystat{font-size:11px;padding:1px 7px;border-radius:9px;margin-left:6px;vertical-align:1px}.ystat.prog{background:#dff1e2;color:#1a6b2a}.ystat.no{background:#eee;color:#888}
 .note{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:10px;color:var(--ink)}
 .tabs button .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-left:6px;background:#bbb;vertical-align:1px}.tabs button .dot.on{background:#2b9a4a}
@@ -201,6 +202,10 @@ async function load(){YEARS=(await (await fetch('data/years.json'+V)).json()).ye
  for(const y of YEARS) if(y.file) DATA[y.year]=await (await fetch(y.file+V)).json(); render()}
 function tabs(){$('#tabs').innerHTML=YEARS.map(y=>`<button data-y="${y.year}" class="${tab==y.year?'on':''}">${esc(y.title)}<span class="dot ${y.file?'on':''}"></span></button>`).join('');
  $('#tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{tab=+b.dataset.y;store.set('ph:tab',tab);filt='';render()})}
+const DR=id=>`https://drive.google.com/file/d/${id}/view`;
+function chip(f,txt){return f.id?`<a class="dl" href="${DR(f.id)}" target="_blank" rel="noopener" title="${esc(f.name)}">${esc(txt)}</a>`:`<span class="dl off">${esc(txt)}</span>`}
+function short(f){return f.name.replace(/^\d[A-Z] /,'').replace(/^(Check-in )?Set /,'Set ').replace(/^Check-in /,'').replace(/^Worksheet /,'').replace(/^Practical /,'').replace(/^PowerPoint /,'').replace(/ Answers$/,' answers')}
+function row(lbl,fs,empty){return `<div class="rl ${fs.length?'':'none'}"><i>${lbl}</i><span>${fs.length?fs.map(f=>chip(f,short(f))).join(' '):(empty||'none')}</span></div>`}
 function badge(t,on){return `<span class="${on?'y':''}">${esc(t)}</span>`}
 function aosKey(u,a){return u*3+a-3}
 function views(on){const v=$('#views');if(!on){v.innerHTML='';v.style.display='none';return}v.style.display='';
@@ -230,11 +235,12 @@ function render(){tabs();const y=YEARS.find(x=>x.year==tab)||YEARS[4];const d=DA
     h+=`<div class="ucard a${k} ${isO?'open':''}" data-k="${ck}"><div class="uc1"><span>Ch ${c.n} · Unit ${u.n} AoS ${a.n}</span><span>${isO?'▾':'▸'}</span></div><div class="uname">${esc(c.title)}</div><div class="umeta">${S.length} sections · ${S.map(x=>x.code).join(', ')} · lessons not planned yet</div>
     <div class="ubad">${badge('Sections '+S.length,1)}${badge('Check-ins '+ci,ci)}${we===null?badge('Worked examples ?',0):badge('Worked examples '+we,we)}${badge('Worksheets '+ws,ws)}${badge('Pracs '+pr,pr)}${badge(c.testMarks?'Chapter test /'+c.testMarks:'Chapter test',c.chapter.test)}${badge('Review',c.chapter.review)}${badge('Slides 0',0)}${badge('Guided sheets 0',0)}</div></div>`;
     if(isO){h+=`<div class="uopen a${k}"><div class="aos"><b>Chapter ${c.n} · ${esc(c.title)}</b><span>${S.length} Cambridge sections</span></div><div class="secgrid">`;
-     for(const s of S){h+=`<div class="scard"><b class="code">${esc(s.code)}</b><div class="ttl">${esc(s.title)}</div>
-      <div class="rl"><i>Check-in sets</i>${s.checkins}</div><div class="rl"><i>Section questions</i>${s.sectionQs?'yes':'none'}</div><div class="rl ${s.worksheets?'':'none'}"><i>Worksheets</i>${s.worksheets||'none'}</div><div class="rl"><i>PowerPoint figures</i>${s.ppts}</div>
-      <div class="rl ${s.workedExamples&&!s.workedExamples.length?'none':''}"><i>Worked examples</i>${s.workedExamples?(s.workedExamples.length?'<span>'+s.workedExamples.map(esc).join('<br>')+'</span>':'none'):'not indexed yet'}</div>
-      <div class="rl"><i>Practicals</i>${s.pracs.length?'<span>'+s.pracs.map(esc).join('<br>')+'</span>':'none'}</div><div class="path">${esc(s.folder)}</div></div>`}
-     h+=`</div><div class="colh" style="margin-top:12px">Chapter resources</div><div class="rl" style="display:block">${['review','checklist','summary','links','test','resp'].filter(x=>c.chapter[x]).map(x=>({review:'Review questions',checklist:'Checklist',summary:'Model summary',links:'Curated internet resources',test:'Chapter test'+(c.testMarks?' (/'+c.testMarks+')':''),resp:'Suggested responses'}[x])).join(' · ')}</div><div class="path">${esc(c.folder)}</div></div>`}
+     const book=(c.files||[]).find(f=>f.kind=='book');
+     for(const s of S){const K=k=>(s.files||[]).filter(f=>f.kind==k);h+=`<div class="scard"><b class="code">${esc(s.code)}</b><div class="ttl">${esc(s.title)}</div>
+      ${row('Check-ins',K('checkin'))}${row('Section questions',K('sq'))}${row('Worksheet',K('ws'))}${row('PowerPoint figures',K('ppt'))}${row('Practicals',K('prac'))}
+      <div class="rl ${s.workedExamples&&!s.workedExamples.length?'none':''}"><i>Worked examples</i><span>${s.workedExamples?(s.workedExamples.length?s.workedExamples.map(esc).join('<br>')+(book?'<br>'+chip(book,'Textbook chapter'):''):'none'):'not indexed yet'}</span></div><div class="path">${esc(s.folder)}</div></div>`}
+     const CF=k=>(c.files||[]).filter(f=>f.kind==k);
+     h+=`</div><div class="colh" style="margin-top:12px">Chapter resources</div><div class="secgrid"><div class="scard">${row('Textbook',CF('book'))}${row('Review questions',CF('review'))}${row('Checklist',CF('checklist'))}${row('Model summary',CF('summary'))}${row('Internet resources',CF('links'))}</div><div class="scard"><div class="colh" style="margin-bottom:4px">Teacher only</div>${row('Chapter test',CF('test'))}${row('Suggested responses',CF('resp'))}${row('Worksheet answers',CF('wsans'))}</div></div><div class="path">${esc(c.folder)}</div></div>`}
    }
    h+='</div></div>'}}
  $('#main').innerHTML=h;
