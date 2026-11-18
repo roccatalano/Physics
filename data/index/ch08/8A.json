@@ -1415,5 +1415,67 @@
  "powerpoint_figures": [
   "8A PowerPoint Figure 8A–7.pptx"
  ],
- "notes": "Answers to check-ins and section questions were transcribed from the Suggested responses PDF render (the docx stores the maths as WMF images). WE8A-3 says 'Let moving to the right be the positive direction' and 'to the right' though the question is north (book wording kept). Worksheet 8A–1 Q6 is lettered a, c in the source (no part b); indexed as 6a, 6b. 8A.6 has no numbered worked example: the We do uses the in-text force–time graph examples (Figures 8A–5 to 8A–7, chunk 8A-E8). The 8A egg-drop prac has Part 1 only in the aim line kept."
+ "notes": "Answers to check-ins and section questions were transcribed from the Suggested responses PDF render (the docx stores the maths as WMF images). WE8A-3 says 'Let moving to the right be the positive direction' and 'to the right' though the question is north (book wording kept). Worksheet 8A–1 Q6 is lettered a, c in the source (no part b); indexed as 6a, 6b. 8A.6 has no numbered worked example: the We do uses the in-text force–time graph examples (Figures 8A–5 to 8A–7, chunk 8A-E8). The 8A egg-drop prac has Part 1 only in the aim line kept.",
+ "resources": [
+  {
+   "id": "8A-R1",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=E13h1E_Pc00",
+   "yt": "E13h1E_Pc00",
+   "duration": null,
+   "title": "Video of impulse and momentum",
+   "src": {
+    "file": "Ch08 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "8A-R2",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/sims/html/collision-lab/latest/collision-lab_en.html",
+   "yt": null,
+   "duration": null,
+   "title": "Simulation of simple straight-line collisions. Also covers 2D collisions as an extension",
+   "src": {
+    "file": "Ch08 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "8A-R3",
+   "kind": "web",
+   "url": "https://www.physicsclassroom.com/Physics-Interactives/Momentum-and-Collisions",
+   "yt": null,
+   "duration": null,
+   "title": "Variety of simulations investigating momentum and impulse",
+   "src": {
+    "file": "Ch08 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "8A-R4",
+   "kind": "web",
+   "url": "https://openstax.org/books/physics/pages/8-1-linear-momentum-force-and-impulse",
+   "yt": null,
+   "duration": null,
+   "title": "Explanation and example problems with worked solutions",
+   "src": {
+    "file": "Ch08 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "8A-R5",
+   "kind": "web",
+   "url": "https://flexbooks.ck12.org/cbook/ck-12-physics-flexbook-2.0/section/6.1/primary/lesson/momentum-and-impulse-phys/",
+   "yt": null,
+   "duration": null,
+   "title": "Explanation and example problems with worked solutions",
+   "src": {
+    "file": "Ch08 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

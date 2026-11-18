@@ -1038,5 +1038,43 @@
    "aim": "Find the volume of water in a water rocket that will give the greatest flight duration or height."
   }
  ],
- "notes": "7C has a single criterion (7C.1), so every question maps to it. No section on deriving formulas is assessed ('It is not a requirement to know how to derive these formulas'). Source answer errors kept verbatim: 7C-SQ6a/6c say 'the answer is positive because ... down' (should be negative); 7C-SQ9a gives 35 m s^-2 (should be m s^-1); WS7C-3 writes sqrt(-5^2 + ...); WS7C-4c gives 5.8 s or 5.3 s. 7C-SQ1 options are a diagram (img/7C_SQ1.png)."
+ "notes": "7C has a single criterion (7C.1), so every question maps to it. No section on deriving formulas is assessed ('It is not a requirement to know how to derive these formulas'). Source answer errors kept verbatim: 7C-SQ6a/6c say 'the answer is positive because ... down' (should be negative); 7C-SQ9a gives 35 m s^-2 (should be m s^-1); WS7C-3 writes sqrt(-5^2 + ...); WS7C-4c gives 5.8 s or 5.3 s. 7C-SQ1 options are a diagram (img/7C_SQ1.png).",
+ "resources": [
+  {
+   "id": "7C-R1",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=v1V3T5BPd7E",
+   "yt": "v1V3T5BPd7E",
+   "duration": null,
+   "title": "A video explaining the equations of straight-line motion with constant acceleration with an example problem",
+   "src": {
+    "file": "Ch07 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "7C-R2",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=-hFEFDLQ8Zg",
+   "yt": "-hFEFDLQ8Zg",
+   "duration": null,
+   "title": "A video explaining the equations of straight-line motion with constant acceleration with an example problem",
+   "src": {
+    "file": "Ch07 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "7C-R3",
+   "kind": "web",
+   "url": "https://studywell.com/kinematics/suvat-equations/",
+   "yt": null,
+   "duration": null,
+   "title": "Example questions with fully worked solutions",
+   "src": {
+    "file": "Ch07 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

@@ -1117,5 +1117,31 @@
   }
  ],
  "pracs": [],
- "notes": "No practical file in 5E (textbook Activity 5E–1 Power used in parallel circuits, p280). Check-in Set 3 answers in Suggested responses do not match the questions (answers null). Section questions use 240 V. WS5E-4 answer has an arithmetic slip (81/6 = 13.5 W, not 3 W)."
+ "notes": "No practical file in 5E (textbook Activity 5E–1 Power used in parallel circuits, p280). Check-in Set 3 answers in Suggested responses do not match the questions (answers null). Section questions use 240 V. WS5E-4 answer has an arithmetic slip (81/6 = 13.5 W, not 3 W).",
+ "resources": [
+  {
+   "id": "5E-R1",
+   "kind": "web",
+   "url": "https://www.bbc.co.uk/bitesize/guides/zgvq4qt/revision/9",
+   "yt": null,
+   "duration": null,
+   "title": "Guide to electrical power and energy in circuits",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "5E-R2",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=7mdc-lRrW1c",
+   "yt": "7mdc-lRrW1c",
+   "duration": null,
+   "title": "Video on power in series and parallel circuits",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

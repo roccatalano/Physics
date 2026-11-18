@@ -533,5 +533,32 @@
   }
  ],
  "pracs": [],
- "notes": "No worked example in 3D: wedo uses worksheet Q2a (adapted). Worksheet 3D–1 Answers: the last equation's label reads 'U-238 parent, Th-234 daughter' (source error; should be U-234 parent, Th-230 daughter). Section question 3 is cut off in the docx; full wording taken from the textbook. Most questions need Figure 3D–2."
+ "notes": "No worked example in 3D: wedo uses worksheet Q2a (adapted). Worksheet 3D–1 Answers: the last equation's label reads 'U-238 parent, Th-234 daughter' (source error; should be U-234 parent, Th-230 daughter). Section question 3 is cut off in the docx; full wording taken from the textbook. Most questions need Figure 3D–2.",
+ "resources": [
+  {
+   "id": "3D-R1",
+   "kind": "video",
+   "url": "https://youtu.be/jpAANAetuMQ",
+   "yt": "jpAANAetuMQ",
+   "duration": null,
+   "title": "Video on decay series",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null,
+   "status": "unavailable (checked 18 Nov 2026)"
+  },
+  {
+   "id": "3D-R2",
+   "kind": "web",
+   "url": "https://www.vascak.cz/data/android/physicsatschool/template.php?s=jadro_rady&l=en",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive simulation showing decay chains of several isotopes with atomic and mass numbers",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

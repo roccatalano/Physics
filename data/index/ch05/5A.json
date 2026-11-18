@@ -1355,5 +1355,91 @@
   }
  ],
  "pracs": [],
- "notes": "No practical file in the 5A folder (textbook has Activity 5A–1 Using an ammeter to measure current, p16). WE5A-1 is diagram-only (use the image). Suggested response 10b has an exponent typo (3.13 × 10^18 should be 10^19). Answers to diagram questions are images (answer_img)."
+ "notes": "No practical file in the 5A folder (textbook has Activity 5A–1 Using an ammeter to measure current, p16). WE5A-1 is diagram-only (use the image). Suggested response 10b has an exponent typo (3.13 × 10^18 should be 10^19). Answers to diagram questions are images (answer_img).",
+ "resources": [
+  {
+   "id": "5A-R1",
+   "kind": "web",
+   "url": "https://www.bbc.co.uk/bitesize/guides/zgvq4qt/revision/1",
+   "yt": null,
+   "duration": null,
+   "title": "Guide to electric circuit symbols",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "5A-R2",
+   "kind": "web",
+   "url": "https://www.bbc.co.uk/bitesize/guides/zgvq4qt/revision/2",
+   "yt": null,
+   "duration": null,
+   "title": "Electrical charge & current explained",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "5A-R3",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=ru032Mfsfig&list=PLxPUNwEbydRN2yldvTWprBRxxpC3TRT7I",
+   "yt": "ru032Mfsfig",
+   "duration": null,
+   "title": "Electrical charge & current explained",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "5A-R4",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=OGa_b26eK2c",
+   "yt": "OGa_b26eK2c",
+   "duration": null,
+   "title": "Video on voltage, current, resistance",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "5A-R5",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=xr68GxkiWFM",
+   "yt": "xr68GxkiWFM",
+   "duration": null,
+   "title": "Video on amperes",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "5A-R6",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/en/simulations/circuit-construction-kit-dc",
+   "yt": null,
+   "duration": null,
+   "title": "Circuit construction online simulation",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "5A-R7",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=4HJzDZvfLmA",
+   "yt": "4HJzDZvfLmA",
+   "duration": null,
+   "title": "Instructional video for simulation",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

@@ -79,3 +79,6 @@ table.pr td{padding:14px;border-bottom:1.5px solid #232c63;vertical-align:top}
 .ixf{flex:1;border:0;border-radius:14px;width:100%;min-height:0;background:#0d1330}
 .help{position:absolute;right:12px;bottom:2px;font-size:11px;color:#3b4570}
 @media print{html,body{overflow:visible;background:#0d1330}#stage{position:relative;left:0;top:0;transform:none!important}.slide{display:flex!important;position:relative;height:720px;page-break-after:always}.st{opacity:1;transform:none}}
+.opts{display:flex;flex-direction:column;gap:6px;margin-top:10px;font-size:19px;line-height:1.35}.opt{padding-left:4px}
+.work.c2{display:block;columns:2;column-gap:22px}.work.c2>div{break-inside:avoid;margin-bottom:6px}
+.vid{flex:1;display:flex;flex-direction:column;gap:10px;min-height:0}.vt{font-size:20px;color:#cfd7f5}.vid .ixf{background:#000}.vn{font-size:14px;color:#94a3c8}.vn a{color:#7dd3fc}

@@ -1103,5 +1103,55 @@
    ]
   }
  ],
- "notes": "Section question 5a suggested response wrongly quotes 201/67 (copied from the molybdenum check-in); the result 12.5% (8.1/2.7 = 3 half-lives) is right. Tables 3C–1 to 3C–4 are image-only. Two extra worked examples come from the 3C Skills box (WE3C-S1, WE3C-S2). Worksheet 3C–1 Q3 graph converted from EMF (low resolution)."
+ "notes": "Section question 5a suggested response wrongly quotes 201/67 (copied from the molybdenum check-in); the result 12.5% (8.1/2.7 = 3 half-lives) is right. Tables 3C–1 to 3C–4 are image-only. Two extra worked examples come from the 3C Skills box (WE3C-S1, WE3C-S2). Worksheet 3C–1 Q3 graph converted from EMF (low resolution).",
+ "resources": [
+  {
+   "id": "3C-R1",
+   "kind": "web",
+   "url": "https://academo.org/demos/radioactive-decay-simulator/",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive calculator showing how a population of radioactive atoms decays over time, demonstrating half-life",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "3C-R2",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/en/simulations/alpha-decay",
+   "yt": null,
+   "duration": null,
+   "title": "Simulation demonstrating alpha decay and half-life",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "3C-R3",
+   "kind": "video",
+   "url": "https://youtu.be/IDkNlU7zKYU",
+   "yt": "IDkNlU7zKYU",
+   "duration": null,
+   "title": "Video explaining how radioactive strength is related to half-life",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "3C-R4",
+   "kind": "video",
+   "url": "https://youtu.be/NkQBh1euock",
+   "yt": "NkQBh1euock",
+   "duration": null,
+   "title": "Video about half-life and decay constants",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

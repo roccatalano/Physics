@@ -970,5 +970,43 @@
    "aim": "To measure the effect on total resistance in a circuit of adding more resistors in parallel."
   }
  ],
- "notes": "Several Suggested-response errors flagged in item notes: CI1.2 (answer does not match question), SQ6 (0.12 V vs 6 V), SQ7b (1.33 Ω vs 133 Ω), SQ9a (4.5 A vs 0.45 A), SQ12d. WE5D-1b textbook prints 8.84 Ω; 150/31 = 4.84 Ω."
+ "notes": "Several Suggested-response errors flagged in item notes: CI1.2 (answer does not match question), SQ6 (0.12 V vs 6 V), SQ7b (1.33 Ω vs 133 Ω), SQ9a (4.5 A vs 0.45 A), SQ12d. WE5D-1b textbook prints 8.84 Ω; 150/31 = 4.84 Ω.",
+ "resources": [
+  {
+   "id": "5D-R1",
+   "kind": "web",
+   "url": "https://www.bbc.co.uk/bitesize/guides/zgvq4qt/revision/7",
+   "yt": null,
+   "duration": null,
+   "title": "Guide to parallel circuits",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "5D-R2",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=h_yPktKnHq4",
+   "yt": "h_yPktKnHq4",
+   "duration": null,
+   "title": "Video tutorial on parallel circuits",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "5D-R3",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=9bmk9atwfhE",
+   "yt": "9bmk9atwfhE",
+   "duration": null,
+   "title": "Advanced – video on parallel and series circuits together",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

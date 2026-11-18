@@ -846,5 +846,79 @@
   }
  ],
  "pracs": [],
- "notes": "No worked examples and no practical in 1B: all We do entries are adapted (worksheet Q6 and the Skills box conversions). Table 1B–1 spans pages 13 to 15 (three crops). FLAG: Suggested responses give 1B SQ2 = D and SQ3 = D, but the correct answers appear to be B or C (SQ2: transverse/no medium) and B or C (SQ3: different wavelength/period); Cambridge key looks wrong; check before using. Glossary entry for Microwave is garbled in the textbook (copied verbatim). Table 1B–2 in the textbook lists the base unit as 10^1 (Cambridge typo for 10^0). WS1B-4 answer is only 'Similar answer to Q3.'"
+ "notes": "No worked examples and no practical in 1B: all We do entries are adapted (worksheet Q6 and the Skills box conversions). Table 1B–1 spans pages 13 to 15 (three crops). FLAG: Suggested responses give 1B SQ2 = D and SQ3 = D, but the correct answers appear to be B or C (SQ2: transverse/no medium) and B or C (SQ3: different wavelength/period); Cambridge key looks wrong; check before using. Glossary entry for Microwave is garbled in the textbook (copied verbatim). Table 1B–2 in the textbook lists the base unit as 10^1 (Cambridge typo for 10^0). WS1B-4 answer is only 'Similar answer to Q3.'",
+ "resources": [
+  {
+   "id": "1B-R1",
+   "kind": "web",
+   "url": "https://www.bbc.co.uk/bitesize/guides/z32f4qt/revision/2",
+   "yt": null,
+   "duration": null,
+   "title": "Electromagnetic waves",
+   "src": {
+    "file": "Ch01 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "1B-R2",
+   "kind": "web",
+   "url": "https://www.khanacademy.org/science/physics/light-waves/introduction-to-light-waves/a/light-and-the-electromagnetic-spectrum",
+   "yt": null,
+   "duration": null,
+   "title": "This Khan Academy list includes a full explanation of light and the electromagnetic spectrum",
+   "src": {
+    "file": "Ch01 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "1B-R3",
+   "kind": "web",
+   "url": "https://science.nasa.gov/ems/07_infraredwaves",
+   "yt": null,
+   "duration": null,
+   "title": "Nasa science information and extension on Infrared rays",
+   "src": {
+    "file": "Ch01 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "1B-R4",
+   "kind": "web",
+   "url": "https://imagine.gsfc.nasa.gov/science/toolbox/emspectrum2.html",
+   "yt": null,
+   "duration": null,
+   "title": "Nasa science electromagnetic radiation and types of waves",
+   "src": {
+    "file": "Ch01 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "1B-R5",
+   "kind": "web",
+   "url": "https://www.bigbangeducation.com.au/make-a-rainbow/",
+   "yt": null,
+   "duration": null,
+   "title": "Make a rainbow kids activity",
+   "src": {
+    "file": "Ch01 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "1B-R6",
+   "kind": "web",
+   "url": "https://www.weather.gov/jetstream/electro",
+   "yt": null,
+   "duration": null,
+   "title": "Further information to understand electromagnetic waves",
+   "src": {
+    "file": "Ch01 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

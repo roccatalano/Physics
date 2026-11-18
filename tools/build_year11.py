@@ -1,7 +1,7 @@
 # Builds data/year11.json for the Physics planner from the Cambridge VCE Physics 1&2 file inventory.
 # Inputs: tools/cambridge_inventory.json (file list of the Cambridge Resources folder on G:, 18 Nov 2026)
 #         tools/cambridge_unit1_sections.json (worked examples read from the Unit 1 chapter PDFs)
-import json,re,os,collections,sys
+import glob,json,re,os,collections,sys
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 import pearson_map
 PM=pearson_map.build()
@@ -78,6 +78,10 @@ for u in out['units']:
     for c in a['chapters']:
       for s_ in c['sections']:
         if s_['code'] in LI:s_['lesson']=LI[s_['code']]
+        rp=glob.glob(os.path.join(H,'..','data','index','ch*',s_['code']+'.json'))
+        if rp:
+          rs=json.load(open(rp[0])).get('resources',[])
+          if rs:s_['resources']=[{k:r.get(k) for k in ('id','kind','url','title','duration','status')} for r in rs]
         ix=[{'id':m['id'],'title':m['title']} for m in IXS if m['section']==s_['code'] and m.get('year',11)==11]
         if ix:s_['interactives']=ix
 os.makedirs(os.path.join(H,'..','data'),exist_ok=True)

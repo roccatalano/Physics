@@ -613,5 +613,67 @@
   }
  ],
  "pracs": [],
- "notes": "No worked examples, glossary terms, practicals or slide-worthy diagrams in 4C (photos only, 4C–1 to 4C–4, not cropped). Only one check-in set. Efficiency formula is adapted. WS4C-3 answer models both sides; students choose one. Source typos kept verbatim: 'uranium recent prevent', 'cooling bonds', 'costal'. SQ4 uses the textbook wording (docx omits 'best')."
+ "notes": "No worked examples, glossary terms, practicals or slide-worthy diagrams in 4C (photos only, 4C–1 to 4C–4, not cropped). Only one check-in set. Efficiency formula is adapted. WS4C-3 answer models both sides; students choose one. Source typos kept verbatim: 'uranium recent prevent', 'cooling bonds', 'costal'. SQ4 uses the textbook wording (docx omits 'best').",
+ "resources": [
+  {
+   "id": "4C-R1",
+   "kind": "web",
+   "url": "https://www.ansto.gov.au/facilities/opal-multi-purpose-reactor",
+   "yt": null,
+   "duration": null,
+   "title": "ANSTO factsheet about Australia’s only nuclear reactor OPAL",
+   "src": {
+    "file": "Ch04 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "4C-R2",
+   "kind": "video",
+   "url": "https://youtu.be/hjGPogWdEEw",
+   "yt": "hjGPogWdEEw",
+   "duration": null,
+   "title": "Video examining the arguments and numbers against nuclear power in Australia:  (Short version: )",
+   "src": {
+    "file": "Ch04 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "4C-R3",
+   "kind": "video",
+   "url": "https://youtu.be/RwjAvkpV8Xc",
+   "yt": "RwjAvkpV8Xc",
+   "duration": null,
+   "title": "Video examining the arguments and numbers against nuclear power in Australia:  (Short version: )",
+   "src": {
+    "file": "Ch04 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "4C-R4",
+   "kind": "web",
+   "url": "https://icanw.org.au/learn/nuclear-testing-in-australia/",
+   "yt": null,
+   "duration": null,
+   "title": "ICAN factsheet on the history of nuclear weapons testing in Australia",
+   "src": {
+    "file": "Ch04 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "4C-R5",
+   "kind": "web",
+   "url": "https://www.creativespirits.info/aboriginalculture/history/maralinga-how-british-nuclear-tests-changed-history-forever",
+   "yt": null,
+   "duration": null,
+   "title": "History of the Maralinga tests and video interview with two Aboriginal survivors",
+   "src": {
+    "file": "Ch04 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

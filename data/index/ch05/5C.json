@@ -1132,5 +1132,67 @@
    "aim": "To measure the effect on total resistance in a circuit of adding more resistors in series."
   }
  ],
- "notes": "Chunk text has some maths flattened by PDF extraction (fractions); use the formulas list and figures for maths. WE5C-4 textbook prints 4.8 × 10^6 for 4.8 µA; written here as 4.8 × 10^-6. Suggested-response inconsistencies flagged in item notes (SQ8c 240 V vs 24 V, SQ11 0.3 A vs 3 mA, CI3.1). Worksheet Q1 graph converted from EMF."
+ "notes": "Chunk text has some maths flattened by PDF extraction (fractions); use the formulas list and figures for maths. WE5C-4 textbook prints 4.8 × 10^6 for 4.8 µA; written here as 4.8 × 10^-6. Suggested-response inconsistencies flagged in item notes (SQ8c 240 V vs 24 V, SQ11 0.3 A vs 3 mA, CI3.1). Worksheet Q1 graph converted from EMF.",
+ "resources": [
+  {
+   "id": "5C-R1",
+   "kind": "web",
+   "url": "https://www.bbc.co.uk/bitesize/guides/zgvq4qt/revision/6",
+   "yt": null,
+   "duration": null,
+   "title": "Guide to resistance in series circuits",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "5C-R2",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=CztiI0re5Eo",
+   "yt": "CztiI0re5Eo",
+   "duration": null,
+   "title": "Ohms Law – video explanations",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "5C-R3",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=lf0lMDZVwTI",
+   "yt": "lf0lMDZVwTI",
+   "duration": null,
+   "title": "Ohms Law – video explanations",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "5C-R4",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=qJZCHExi4Pk",
+   "yt": "qJZCHExi4Pk",
+   "duration": null,
+   "title": "Practice questions on Ohms Law",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "5C-R5",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=LECvF5VCz1w",
+   "yt": "LECvF5VCz1w",
+   "duration": null,
+   "title": "Practice questions on Ohms Law",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

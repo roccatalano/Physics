@@ -759,5 +759,43 @@
    "aim": "To investigate the effect that changing the force applied to a cart has on the kinetic energy transferred to another cart."
   }
  ],
- "notes": "Only one check-in set for 9A. Worksheet 9A–1 answer 1b ends mid-sentence ('Note that the negative sign indicates') in the Cambridge file. Worksheet docx letters Q3 parts as a and d (pandoc numbering); indexed as 3a, 3b. Section Q8a answer is a graph image. Textbook SQ3 says 'her head', docx says 'their head' (docx used)."
+ "notes": "Only one check-in set for 9A. Worksheet 9A–1 answer 1b ends mid-sentence ('Note that the negative sign indicates') in the Cambridge file. Worksheet docx letters Q3 parts as a and d (pandoc numbering); indexed as 3a, 3b. Section Q8a answer is a graph image. Textbook SQ3 says 'her head', docx says 'their head' (docx used).",
+ "resources": [
+  {
+   "id": "9A-R1",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=zVRH9d5PW8g",
+   "yt": "zVRH9d5PW8g",
+   "duration": null,
+   "title": "Videos explaining work",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "9A-R2",
+   "kind": "web",
+   "url": "https://www.physicsclassroom.com/Physics-Interactives/Work-and-Energy/Work-and-Kinetic-Energy/Interactive",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive simulation that looks at work",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "9A-R3",
+   "kind": "web",
+   "url": "https://javalab.org/en/work-in-science/",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive simulation that shows that work is the area under a force-displacement graph",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

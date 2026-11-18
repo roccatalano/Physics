@@ -1286,5 +1286,55 @@
  "powerpoint_figures": [
   "8C PowerPoint Figure 8C–2 & 8C–3.pptx"
  ],
- "notes": "Answers write torque as T. 8C Section Q3 diagram arrives before the question number in the docx (handled). Skills box solution divides by 2 instead of 4 (book error, kept verbatim; 240 N is right). Worksheet 8C–1 Q5a says 'metal beam' (means cable). Worksheet answer to Q6a is a diagram (img/8C_WS6-ans.png)."
+ "notes": "Answers write torque as T. 8C Section Q3 diagram arrives before the question number in the docx (handled). Skills box solution divides by 2 instead of 4 (book error, kept verbatim; 240 N is right). Worksheet 8C–1 Q5a says 'metal beam' (means cable). Worksheet answer to Q6a is a diagram (img/8C_WS6-ans.png).",
+ "resources": [
+  {
+   "id": "8C-R1",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=jg4e8W44_E4",
+   "yt": "jg4e8W44_E4",
+   "duration": null,
+   "title": "A video introducing torque and rotational equilibrium",
+   "src": {
+    "file": "Ch08 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "8C-R2",
+   "kind": "web",
+   "url": "https://ophysics.com/r6.html",
+   "yt": null,
+   "duration": null,
+   "title": "Simulation showing a bar supported by a cable",
+   "src": {
+    "file": "Ch08 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "8C-R3",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/sims/html/balancing-act/latest/balancing-act_en.html",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive simulation with game which involves translational and rotational equilibrium",
+   "src": {
+    "file": "Ch08 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "8C-R4",
+   "kind": "web",
+   "url": "https://www.design-simulation.com/ip/simulationlibrary/equilibrium.php",
+   "yt": null,
+   "duration": null,
+   "title": "More interactive simulations looking at translational and rotational equilibrium",
+   "src": {
+    "file": "Ch08 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

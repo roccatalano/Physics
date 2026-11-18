@@ -88,3 +88,6 @@ Index/
 - Images embedded in .docx files: extract from the docx `word/media/` folder and name them the same way (`1A_SQ3.png`, `1A_WS4.png`).
 - Save: every figure that would help on a slide (graphs, ray diagrams, circuit diagrams, wave diagrams, tables of data, the EM spectrum), every image a question or worked example needs to make sense. Skip decorative photos.
 - Check a few crops visually (Read the PNG) to make sure the box is right.
+
+## Curated internet resources (added 18 Nov 2026)
+Each section file has `"resources": [{"id":"1A-R2","kind":"video|web","url","yt":"YouTube id or null","start":seconds or null,"duration":"3:38" or null,"title","src"}]`, from the chapter's "Curated internet resources" docx. Videos become embeddable video slides.

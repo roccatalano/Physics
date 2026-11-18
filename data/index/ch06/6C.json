@@ -987,5 +987,43 @@
   }
  ],
  "pracs": [],
- "notes": "No worked examples in 6C: all We do entries are adapted from section/worksheet questions. No Cambridge practicals. Answer-key problems: SQ2 (key D 16 mA vs table), SQ5 (key D 'appliance plug'; textbook says live wire, B), SQ8d incomplete. Photos 6C-1, 6C-3, 6C-4 and the skills photos skipped as decorative."
+ "notes": "No worked examples in 6C: all We do entries are adapted from section/worksheet questions. No Cambridge practicals. Answer-key problems: SQ2 (key D 16 mA vs table), SQ5 (key D 'appliance plug'; textbook says live wire, B), SQ8d incomplete. Photos 6C-1, 6C-3, 6C-4 and the skills photos skipped as decorative.",
+ "resources": [
+  {
+   "id": "6C-R1",
+   "kind": "web",
+   "url": "https://electrical.theiet.org/wiring-matters/years/2017/68-november-2017/rcds-everything-an-electrician-should-know/",
+   "yt": null,
+   "duration": null,
+   "title": "Description of operation of an RCD",
+   "src": {
+    "file": "Ch06 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "6C-R2",
+   "kind": "web",
+   "url": "https://www.miniphysics.com/need-for-earthing-and-double-insulation.html",
+   "yt": null,
+   "duration": null,
+   "title": "Description and diagrams of double insulation and earthing",
+   "src": {
+    "file": "Ch06 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "6C-R3",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=l5YI4IbkUDs",
+   "yt": "l5YI4IbkUDs",
+   "duration": null,
+   "title": "Video with reference to electrical safety in a house",
+   "src": {
+    "file": "Ch06 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

@@ -803,5 +803,43 @@
   }
  ],
  "pracs": [],
- "notes": "No practical for 1A. Only one textbook worked example (WE1A-1); other We do entries are adapted from worksheet/check-in items. Worksheet Q2a(ii) refers to 'Question 1a' (Cambridge typo for 2a). WS1A-2e answer for f has no unit in the answer file. Check-in Set 2 Q2 wording differs slightly between textbook and docx; docx used."
+ "notes": "No practical for 1A. Only one textbook worked example (WE1A-1); other We do entries are adapted from worksheet/check-in items. Worksheet Q2a(ii) refers to 'Question 1a' (Cambridge typo for 2a). WS1A-2e answer for f has no unit in the answer file. Check-in Set 2 Q2 wording differs slightly between textbook and docx; docx used.",
+ "resources": [
+  {
+   "id": "1A-R1",
+   "kind": "web",
+   "url": "https://www.physicsclassroom.com/class/waves/Lesson-2/Frequency-and-Period-of-a-Wave",
+   "yt": null,
+   "duration": null,
+   "title": "Further explanations of frequency, amplitude, period and waves",
+   "src": {
+    "file": "Ch01 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "1A-R2",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=CVsdXKO9xlk",
+   "yt": "CVsdXKO9xlk",
+   "duration": "3:38",
+   "title": "Detailed explanation of waves Simple and clear explanation of wave motion with every day analogies.",
+   "src": {
+    "file": "Ch01 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "1A-R3",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=7cDAYFTXq3E",
+   "yt": "7cDAYFTXq3E",
+   "duration": null,
+   "title": "Simple video to show the difference between longitudinal and transfer waves",
+   "src": {
+    "file": "Ch01 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

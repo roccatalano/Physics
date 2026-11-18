@@ -1304,5 +1304,56 @@
    "aim": "To show the change in output voltages of a circuit with a variable resistor in series with a thermistor."
   }
  ],
- "notes": "WE6A-2 has textbook typos (12/3000, ×2000; should be 12/300 = 0.04 A and ×200 = 8 V). WS6A-4 assumes a 9 V supply not given in the question, and its part c answer (27 V) is wrong. Check-in Set 2 answers talk about voltmeter reading although the question asks about globe brightness. No worked example for diode/LED behaviour (6A.1, 6A.2): adapted We do from worksheet. Section question answers 8 to 11 include answer diagrams (answer_img). Photos (6A-1, 6A-9, 6A-10, 6A-15 photo) skipped as decorative."
+ "notes": "WE6A-2 has textbook typos (12/3000, ×2000; should be 12/300 = 0.04 A and ×200 = 8 V). WS6A-4 assumes a 9 V supply not given in the question, and its part c answer (27 V) is wrong. Check-in Set 2 answers talk about voltmeter reading although the question asks about globe brightness. No worked example for diode/LED behaviour (6A.1, 6A.2): adapted We do from worksheet. Section question answers 8 to 11 include answer diagrams (answer_img). Photos (6A-1, 6A-9, 6A-10, 6A-15 photo) skipped as decorative.",
+ "resources": [
+  {
+   "id": "6A-R1",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=SInIQEx_abs",
+   "yt": "SInIQEx_abs",
+   "duration": null,
+   "title": "Diodes video tutorial and practice questions",
+   "src": {
+    "file": "Ch06 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "6A-R2",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=1uVJS5I8IC0",
+   "yt": "1uVJS5I8IC0",
+   "duration": null,
+   "title": "Video exercises with diodes",
+   "src": {
+    "file": "Ch06 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "6A-R3",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=2fvXW4OEWLE",
+   "yt": "2fvXW4OEWLE",
+   "duration": null,
+   "title": "Video explanation of LDR in circuits",
+   "src": {
+    "file": "Ch06 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "6A-R4",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=AHqhIwvkmUw",
+   "yt": "AHqhIwvkmUw",
+   "duration": null,
+   "title": "Video explanation of various dependent resistors",
+   "src": {
+    "file": "Ch06 Curated internet resources.docx"
+   },
+   "start": null,
+   "status": "unavailable (checked 18 Nov 2026)"
+  }
+ ]
 }

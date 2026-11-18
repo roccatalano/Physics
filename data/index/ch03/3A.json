@@ -1465,5 +1465,67 @@
   }
  ],
  "pracs": [],
- "notes": "No worked example for isotope notation or forces; WE3A-1 (binding energy per nucleon) is the only one. Worksheet 3A–1 Q4a answer gives He-5 (as in source). Coulomb's law appears in a NOTE (not needed in Unit 1). Table 3A–1 values are in the image only."
+ "notes": "No worked example for isotope notation or forces; WE3A-1 (binding energy per nucleon) is the only one. Worksheet 3A–1 Q4a answer gives He-5 (as in source). Coulomb's law appears in a NOTE (not needed in Unit 1). Table 3A–1 values are in the image only.",
+ "resources": [
+  {
+   "id": "3A-R1",
+   "kind": "web",
+   "url": "https://people.physics.anu.edu.au/~ecs103/chart/",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive nuclide diagram from ANU showing the ‘belt of stability’ and modes of decay",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "3A-R2",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=Yv3EMq2Dgq8&list=PLsNB4peY6C6JDc1HcVKjjYzVB0BYEXexd",
+   "yt": "Yv3EMq2Dgq8",
+   "duration": null,
+   "title": "Video series on the fundamental forces of physics, including strong and weak nuclear forces and electrostatic force",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "3A-R3",
+   "kind": "web",
+   "url": "https://www.expii.com/t/strong-nuclear-force-vs-electrostatic-force-overview-8755",
+   "yt": null,
+   "duration": null,
+   "title": "Series of charts showing how electrostatic repulsion is overcome by the strong nuclear force",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "3A-R4",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/en/simulations/beta-decay",
+   "yt": null,
+   "duration": null,
+   "title": "Simulation showing how spontaneous beta decay transforms protons into neutrons",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "3A-R5",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=b7upbQtJeno",
+   "yt": "b7upbQtJeno",
+   "duration": null,
+   "title": "Video explaining binding energy curve",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

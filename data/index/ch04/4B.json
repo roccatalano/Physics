@@ -1080,5 +1080,55 @@
  "powerpoint_figures": [
   "4B PowerPoint Figure 4B–9.pptx"
  ],
- "notes": "No practical for 4B. Photos (4B–1 to 4B–6, 4B–8) not cropped. 'Binding energy curve' glossary term has no printed definition. WS4B-5 question has a 10^27 conversion-factor typo (answer uses 10^29). SQ11 omits 'MeV' after 28.2957 (verbatim). WE4B-3 is the 4B Skills box."
+ "notes": "No practical for 4B. Photos (4B–1 to 4B–6, 4B–8) not cropped. 'Binding energy curve' glossary term has no printed definition. WS4B-5 question has a 10^27 conversion-factor typo (answer uses 10^29). SQ11 omits 'MeV' after 28.2957 (verbatim). WE4B-3 is the 4B Skills box.",
+ "resources": [
+  {
+   "id": "4B-R1",
+   "kind": "video",
+   "url": "https://youtu.be/o-5i2v4aSjU",
+   "yt": "o-5i2v4aSjU",
+   "duration": null,
+   "title": "Video comparing the processes of nuclear fusion and nuclear fission",
+   "src": {
+    "file": "Ch04 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "4B-R2",
+   "kind": "video",
+   "url": "https://youtu.be/Wh5TUlzBwLw",
+   "yt": "Wh5TUlzBwLw",
+   "duration": null,
+   "title": "Video about the youngest person to achieve nuclear fusion",
+   "src": {
+    "file": "Ch04 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "4B-R3",
+   "kind": "video",
+   "url": "https://youtu.be/N4yWhA1mVxA",
+   "yt": "N4yWhA1mVxA",
+   "duration": null,
+   "title": "Video explaining fusion and showing a real-life fusion reactor",
+   "src": {
+    "file": "Ch04 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "4B-R4",
+   "kind": "video",
+   "url": "https://youtu.be/yTkojROg-t8",
+   "yt": "yTkojROg-t8",
+   "duration": null,
+   "title": "Video that uses a binding energy curve to explain how fusion and fission are both nuclear reactions that release energy",
+   "src": {
+    "file": "Ch04 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

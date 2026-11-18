@@ -1816,5 +1816,79 @@
    "aim": "The aim of this practical activity is to calculate the refractive index of an unknown material by comparing the incident and reflected rays."
   }
  ],
- "notes": "FLAG: Check-in Set 1 Q3 answer in Suggested responses uses 2.00 × 10^8 (answer 2.00 'm s–1'), but the question gives 1.5 × 10^8 m s–1 (correct n = 2.0, no units). Copied verbatim; fix before use. FLAG: section Q9b answer says violet refracts 'more away from the normal' on entry (should be towards). FLAG: worksheet Q1 answer says light 'scatters the molecules' (loose physics). Practical aim says 'reflected rays' (Cambridge wording; means refracted). No prac in the folder for TIR (1C.7) or dispersion (1C.9): only Practical 1C–1 (Snell's law). Figures 1C–1, 1C–2, 1C–9 and 1C–20 (decorative photos) not cropped. PowerPoint figures exist for 1C–13, 1C–18, 1C–31."
+ "notes": "FLAG: Check-in Set 1 Q3 answer in Suggested responses uses 2.00 × 10^8 (answer 2.00 'm s–1'), but the question gives 1.5 × 10^8 m s–1 (correct n = 2.0, no units). Copied verbatim; fix before use. FLAG: section Q9b answer says violet refracts 'more away from the normal' on entry (should be towards). FLAG: worksheet Q1 answer says light 'scatters the molecules' (loose physics). Practical aim says 'reflected rays' (Cambridge wording; means refracted). No prac in the folder for TIR (1C.7) or dispersion (1C.9): only Practical 1C–1 (Snell's law). Figures 1C–1, 1C–2, 1C–9 and 1C–20 (decorative photos) not cropped. PowerPoint figures exist for 1C–13, 1C–18, 1C–31.",
+ "resources": [
+  {
+   "id": "1C-R1",
+   "kind": "web",
+   "url": "https://www.bbc.co.uk/bitesize/guides/zv4pd6f/revision/1",
+   "yt": null,
+   "duration": null,
+   "title": "Critical angle and total internal reflection",
+   "src": {
+    "file": "Ch01 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "1C-R2",
+   "kind": "web",
+   "url": "https://www.explainthatstuff.com/fiberoptics.html",
+   "yt": null,
+   "duration": null,
+   "title": "Find out more about optic fibres and how they work with light reflection",
+   "src": {
+    "file": "Ch01 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "1C-R3",
+   "kind": "web",
+   "url": "https://wonders.physics.wisc.edu/prisms/",
+   "yt": null,
+   "duration": null,
+   "title": "Understanding prisms and light dispersion",
+   "src": {
+    "file": "Ch01 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "1C-R4",
+   "kind": "web",
+   "url": "https://www.mathsisfun.com/physics/light.html",
+   "yt": null,
+   "duration": null,
+   "title": "A description focussing on the basics for light, the speed of light, how it changes through a medium and the relationship between frequency and wavelength",
+   "src": {
+    "file": "Ch01 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "1C-R5",
+   "kind": "web",
+   "url": "https://www.khanacademy.org/science/physics/geometric-optics/reflection-refraction/v/refraction-and-snell-s-law",
+   "yt": null,
+   "duration": "14:24",
+   "title": "Refraction and Snell’s Law. This Khan Academy video goes into more depth to understand Snell’s Law",
+   "src": {
+    "file": "Ch01 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "1C-R6",
+   "kind": "web",
+   "url": "https://www.khanacademy.org/science/physics/geometric-optics/reflection-refraction/v/snell-s-law-examples-1",
+   "yt": null,
+   "duration": null,
+   "title": "Snell’s law examples",
+   "src": {
+    "file": "Ch01 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

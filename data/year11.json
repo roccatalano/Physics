@@ -733,6 +733,32 @@
           ],
           "missingAnswers": []
          },
+         "resources": [
+          {
+           "id": "1A-R1",
+           "kind": "web",
+           "url": "https://www.physicsclassroom.com/class/waves/Lesson-2/Frequency-and-Period-of-a-Wave",
+           "title": "Further explanations of frequency, amplitude, period and waves",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "1A-R2",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=CVsdXKO9xlk",
+           "title": "Detailed explanation of waves Simple and clear explanation of wave motion with every day analogies.",
+           "duration": "3:38",
+           "status": null
+          },
+          {
+           "id": "1A-R3",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=7cDAYFTXq3E",
+           "title": "Simple video to show the difference between longitudinal and transfer waves",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "1A-1-wave-types",
@@ -820,6 +846,56 @@
          "ppts": 2,
          "workedExamples": [],
          "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch01 EM radiation\\1B EM waves",
+         "resources": [
+          {
+           "id": "1B-R1",
+           "kind": "web",
+           "url": "https://www.bbc.co.uk/bitesize/guides/z32f4qt/revision/2",
+           "title": "Electromagnetic waves",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "1B-R2",
+           "kind": "web",
+           "url": "https://www.khanacademy.org/science/physics/light-waves/introduction-to-light-waves/a/light-and-the-electromagnetic-spectrum",
+           "title": "This Khan Academy list includes a full explanation of light and the electromagnetic spectrum",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "1B-R3",
+           "kind": "web",
+           "url": "https://science.nasa.gov/ems/07_infraredwaves",
+           "title": "Nasa science information and extension on Infrared rays",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "1B-R4",
+           "kind": "web",
+           "url": "https://imagine.gsfc.nasa.gov/science/toolbox/emspectrum2.html",
+           "title": "Nasa science electromagnetic radiation and types of waves",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "1B-R5",
+           "kind": "web",
+           "url": "https://www.bigbangeducation.com.au/make-a-rainbow/",
+           "title": "Make a rainbow kids activity",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "1B-R6",
+           "kind": "web",
+           "url": "https://www.weather.gov/jetstream/electro",
+           "title": "Further information to understand electromagnetic waves",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "1B-1-em-spectrum",
@@ -955,6 +1031,56 @@
           "1C-5 Application of total internal reflection"
          ],
          "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch01 EM radiation\\1C Refraction",
+         "resources": [
+          {
+           "id": "1C-R1",
+           "kind": "web",
+           "url": "https://www.bbc.co.uk/bitesize/guides/zv4pd6f/revision/1",
+           "title": "Critical angle and total internal reflection",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "1C-R2",
+           "kind": "web",
+           "url": "https://www.explainthatstuff.com/fiberoptics.html",
+           "title": "Find out more about optic fibres and how they work with light reflection",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "1C-R3",
+           "kind": "web",
+           "url": "https://wonders.physics.wisc.edu/prisms/",
+           "title": "Understanding prisms and light dispersion",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "1C-R4",
+           "kind": "web",
+           "url": "https://www.mathsisfun.com/physics/light.html",
+           "title": "A description focussing on the basics for light, the speed of light, how it changes through a medium and the relationship between frequency and wavelength",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "1C-R5",
+           "kind": "web",
+           "url": "https://www.khanacademy.org/science/physics/geometric-optics/reflection-refraction/v/refraction-and-snell-s-law",
+           "title": "Refraction and Snell’s Law. This Khan Academy video goes into more depth to understand Snell’s Law",
+           "duration": "14:24",
+           "status": null
+          },
+          {
+           "id": "1C-R6",
+           "kind": "web",
+           "url": "https://www.khanacademy.org/science/physics/geometric-optics/reflection-refraction/v/snell-s-law-examples-1",
+           "title": "Snell’s law examples",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "1C-1-snell-ray-box",
@@ -1239,6 +1365,88 @@
           "2A-3 Application to cooling a drink"
          ],
          "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch02 Thermal energy\\2A Thermal energy",
+         "resources": [
+          {
+           "id": "2A-R1",
+           "kind": "video",
+           "url": "https://youtu.be/yXT012us9ng",
+           "title": "Video explaining how increases and decreases of temperature are related to increases and decreases of thermal energy in a system",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "2A-R2",
+           "kind": "web",
+           "url": "https://www.bbc.co.uk/bitesize/guides/zr7j382/revision/1",
+           "title": "Guide to conduction in solids",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "2A-R3",
+           "kind": "web",
+           "url": "https://www.bbc.co.uk/bitesize/guides/zr7j382/revision/3",
+           "title": "Guide to convection in gases and liquids",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "2A-R4",
+           "kind": "web",
+           "url": "https://www.bbc.co.uk/bitesize/guides/z2gjtv4/revision/5",
+           "title": "Guide to specific heat capacity",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "2A-R5",
+           "kind": "video",
+           "url": "https://youtu.be/-iBFwpKV6ak",
+           "title": "Video on the physics of walking over hot coals (conduction and insulation)",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "2A-R6",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/en/contributions/view/3780",
+           "title": "Interactive about thermal energy transfers (documentation here)",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "2A-R7",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/sims/html/energy-forms-and-changes/latest/energy-forms-and-changes_en.html",
+           "title": "Interactive about thermal energy transfers (documentation here)",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "2A-R8",
+           "kind": "video",
+           "url": "https://youtu.be/8VmkdzRE8sQ",
+           "title": "Video on specific latent heat – covers both vaporisation and fusion, with example calculations",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "2A-R9",
+           "kind": "video",
+           "url": "https://youtu.be/Q63QPec_1bk",
+           "title": "Video of worked examples for using the equation Q = mcΔT to calculate the energy needed to raise the temperature of a substance",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "2A-R10",
+           "kind": "video",
+           "url": "https://youtu.be/3itqmCtmJPc?t=311",
+           "title": "Video using the equation Q = mL to calculate the energy needed to change the state of a substance (5:11)",
+           "duration": "5:11",
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "2A-1-particle-temperature",
@@ -1333,6 +1541,48 @@
           "2B-2 Peak wavelength emitted by Earth"
          ],
          "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch02 Thermal energy\\2B Global warming",
+         "resources": [
+          {
+           "id": "2B-R1",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/sims/html/blackbody-spectrum/latest/blackbody-spectrum_en.html",
+           "title": "An interactive that uses Wien’s law (λmaxT = 2.90 × 10–3 mK) to calculate the peak emitting wavelengths of objects modelled as blackbodies",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "2B-R2",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=XdXAdwb7loE",
+           "title": "Video using the above interactive to explain Wien’s Law",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "2B-R3",
+           "kind": "web",
+           "url": "https://theconversation.com/earths-energy-budget-is-out-of-balance-heres-how-thats-warming-the-climate-165244",
+           "title": "Article about earth’s energy budget",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "2B-R4",
+           "kind": "video",
+           "url": "https://youtu.be/U2CPwWgY_G4",
+           "title": "Video explaining how the absorption of thermal infrared radiation affects Earth’s ‘energy budget’ and leads global heating",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "2B-R5",
+           "kind": "web",
+           "url": "https://climate.nasa.gov/",
+           "title": "Lots of more information about climate science and global temperature change",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "2B-1-blackbody-wien",
@@ -1567,6 +1817,48 @@
           "3A-1 Binding energy in oxygen"
          ],
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3A Nuclear stability",
+         "resources": [
+          {
+           "id": "3A-R1",
+           "kind": "web",
+           "url": "https://people.physics.anu.edu.au/~ecs103/chart/",
+           "title": "Interactive nuclide diagram from ANU showing the ‘belt of stability’ and modes of decay",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3A-R2",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=Yv3EMq2Dgq8&list=PLsNB4peY6C6JDc1HcVKjjYzVB0BYEXexd",
+           "title": "Video series on the fundamental forces of physics, including strong and weak nuclear forces and electrostatic force",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3A-R3",
+           "kind": "web",
+           "url": "https://www.expii.com/t/strong-nuclear-force-vs-electrostatic-force-overview-8755",
+           "title": "Series of charts showing how electrostatic repulsion is overcome by the strong nuclear force",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3A-R4",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/en/simulations/beta-decay",
+           "title": "Simulation showing how spontaneous beta decay transforms protons into neutrons",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3A-R5",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=b7upbQtJeno",
+           "title": "Video explaining binding energy curve",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "3A-1-stability-chart",
@@ -1722,6 +2014,32 @@
           "3B-1 Energy of an α-particle"
          ],
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3B Alpha beta gamma",
+         "resources": [
+          {
+           "id": "3B-R1",
+           "kind": "web",
+           "url": "https://www.studysmarter.us/explanations/physics/nuclear-physics/alpha-beta-and-gamma-radiation/",
+           "title": "In-depth explanation of the properties of α-, β–-, β+- and γ-radiation, with quiz",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3B-R2",
+           "kind": "web",
+           "url": "https://isaacphysics.org/concepts/cp_radioactive_decay?stage=all",
+           "title": "Decay equations explanations and examples",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3B-R3",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/en/simulations/build-a-nucleus",
+           "title": "Simulation showing how nuclei are changed by different types of decay",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "3B-1-penetration",
@@ -1825,6 +2143,40 @@
           "3C-2 Half-life of cobalt-60"
          ],
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3C Half-life",
+         "resources": [
+          {
+           "id": "3C-R1",
+           "kind": "web",
+           "url": "https://academo.org/demos/radioactive-decay-simulator/",
+           "title": "Interactive calculator showing how a population of radioactive atoms decays over time, demonstrating half-life",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3C-R2",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/en/simulations/alpha-decay",
+           "title": "Simulation demonstrating alpha decay and half-life",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3C-R3",
+           "kind": "video",
+           "url": "https://youtu.be/IDkNlU7zKYU",
+           "title": "Video explaining how radioactive strength is related to half-life",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3C-R4",
+           "kind": "video",
+           "url": "https://youtu.be/NkQBh1euock",
+           "title": "Video about half-life and decay constants",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "3C-1-dice-decay",
@@ -1877,6 +2229,24 @@
          "ppts": 1,
          "workedExamples": [],
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3D Decay series",
+         "resources": [
+          {
+           "id": "3D-R1",
+           "kind": "video",
+           "url": "https://youtu.be/jpAANAetuMQ",
+           "title": "Video on decay series",
+           "duration": null,
+           "status": "unavailable (checked 18 Nov 2026)"
+          },
+          {
+           "id": "3D-R2",
+           "kind": "web",
+           "url": "https://www.vascak.cz/data/android/physicsatschool/template.php?s=jadro_rady&l=en",
+           "title": "Interactive simulation showing decay chains of several isotopes with atomic and mass numbers",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "3D-1-u238-chain",
@@ -1982,6 +2352,80 @@
           "3E-1 Radiation dose"
          ],
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3E Radiation and humans",
+         "resources": [
+          {
+           "id": "3E-R1",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=Lg9coTz43K0",
+           "title": "Short retro video on differences in shielding from α-, β–-, β+- and γ-radiation",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3E-R2",
+           "kind": "video",
+           "url": "https://youtu.be/qc9wYSnbqO4",
+           "title": "Video on effects of α-, β–-, β+- and γ-radiation on humans",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3E-R3",
+           "kind": "video",
+           "url": "https://youtu.be/BH2bKONkvFc",
+           "title": "Fun video showing how the different capacity of α-, β–-, β+- and γ-radiation to cause cell damage",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3E-R4",
+           "kind": "web",
+           "url": "https://www.cdc.gov/nceh/radiation/emergencies/contamination.htm",
+           "title": "CDC information and video on internal and external radioactive contamination and effects on humans",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3E-R5",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=qjkTzk8NAxM&t=570s",
+           "title": "Lecture on ‘radioactive cookie’ demonstrating differences in ionising impacts of of α-, β–-, β+- and γ-radiation",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3E-R6",
+           "kind": "web",
+           "url": "https://www.arpansa.gov.au/understanding-radiation/what-is-radiation/radiation/measurement",
+           "title": "Breakdown of absorbed dose (gray), equivalent dose (sievert) and effective dose (sievert)",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3E-R7",
+           "kind": "video",
+           "url": "https://youtu.be/gn9SUPQtwVk",
+           "title": "Video showing how to calculate absorbed, equivalent and effective doses",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3E-R8",
+           "kind": "web",
+           "url": "https://www.ansto.gov.au/education/nuclear-facts/what-are-radioisotopes",
+           "title": "ANSTO factsheet on the use of medical radioisotopes in therapy",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "3E-R9",
+           "kind": "video",
+           "url": "https://youtu.be/V2VGHUjN17w",
+           "title": "Video on radiation therapy, including the effects on healthy and damaged tissues and cells",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "3E-1-dose-calculator",
@@ -2177,6 +2621,56 @@
           "4A-2 Energy of a nuclear bomb"
          ],
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy\\4A Mass-energy",
+         "resources": [
+          {
+           "id": "4A-R1",
+           "kind": "video",
+           "url": "https://youtu.be/hhHXQYFEO7o",
+           "title": "Retro video explaining how nuclear power is related to binding energy and energy–mass equivalence, as well as fission reactions",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "4A-R2",
+           "kind": "web",
+           "url": "https://www.iaea.org/newscenter/news/what-is-nuclear-energy-the-science-of-nuclear-power",
+           "title": "IAEA factsheet on nuclear energy",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "4A-R3",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/en/simulations/nuclear-fission",
+           "title": "Interactive simulation explaining how a chain reaction works",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "4A-R4",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=H7Ltze7GbUA&t=239s",
+           "title": "Video discussing the effect of mass and shape on criticality in fission chain reactions, using Slotin incident as case study",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "4A-R5",
+           "kind": "web",
+           "url": "https://www.nuclearinst.com/Nuclear-Reactor-Simulator",
+           "title": "Simulation of all the parts of nuclear reactor, including moderators and control rods",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "4A-R6",
+           "kind": "web",
+           "url": "http://lotus.itservices.manchester.ac.uk:8080/",
+           "title": "Interactive game showing how a nuclear power plant generates power, and how control rods can adjust power output",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "4A-1-chain-reaction",
@@ -2264,6 +2758,40 @@
           "4B-2 Energy of nuclear fission"
          ],
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy\\4B Fusion and fission",
+         "resources": [
+          {
+           "id": "4B-R1",
+           "kind": "video",
+           "url": "https://youtu.be/o-5i2v4aSjU",
+           "title": "Video comparing the processes of nuclear fusion and nuclear fission",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "4B-R2",
+           "kind": "video",
+           "url": "https://youtu.be/Wh5TUlzBwLw",
+           "title": "Video about the youngest person to achieve nuclear fusion",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "4B-R3",
+           "kind": "video",
+           "url": "https://youtu.be/N4yWhA1mVxA",
+           "title": "Video explaining fusion and showing a real-life fusion reactor",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "4B-R4",
+           "kind": "video",
+           "url": "https://youtu.be/yTkojROg-t8",
+           "title": "Video that uses a binding energy curve to explain how fusion and fission are both nuclear reactions that release energy",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "4B-1-binding-energy-curve",
@@ -2317,7 +2845,49 @@
          "pracs": [],
          "ppts": 0,
          "workedExamples": [],
-         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy\\4C Nuclear for Australia"
+         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy\\4C Nuclear for Australia",
+         "resources": [
+          {
+           "id": "4C-R1",
+           "kind": "web",
+           "url": "https://www.ansto.gov.au/facilities/opal-multi-purpose-reactor",
+           "title": "ANSTO factsheet about Australia’s only nuclear reactor OPAL",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "4C-R2",
+           "kind": "video",
+           "url": "https://youtu.be/hjGPogWdEEw",
+           "title": "Video examining the arguments and numbers against nuclear power in Australia:  (Short version: )",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "4C-R3",
+           "kind": "video",
+           "url": "https://youtu.be/RwjAvkpV8Xc",
+           "title": "Video examining the arguments and numbers against nuclear power in Australia:  (Short version: )",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "4C-R4",
+           "kind": "web",
+           "url": "https://icanw.org.au/learn/nuclear-testing-in-australia/",
+           "title": "ICAN factsheet on the history of nuclear weapons testing in Australia",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "4C-R5",
+           "kind": "web",
+           "url": "https://www.creativespirits.info/aboriginalculture/history/maralinga-how-british-nuclear-tests-changed-history-forever",
+           "title": "History of the Maralinga tests and video interview with two Aboriginal survivors",
+           "duration": null,
+           "status": null
+          }
+         ]
         }
        ],
        "chapter": {
@@ -2605,6 +3175,64 @@
           "5A-2 Electrical charge from current"
          ],
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5A Charge and current",
+         "resources": [
+          {
+           "id": "5A-R1",
+           "kind": "web",
+           "url": "https://www.bbc.co.uk/bitesize/guides/zgvq4qt/revision/1",
+           "title": "Guide to electric circuit symbols",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "5A-R2",
+           "kind": "web",
+           "url": "https://www.bbc.co.uk/bitesize/guides/zgvq4qt/revision/2",
+           "title": "Electrical charge & current explained",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "5A-R3",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=ru032Mfsfig&list=PLxPUNwEbydRN2yldvTWprBRxxpC3TRT7I",
+           "title": "Electrical charge & current explained",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "5A-R4",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=OGa_b26eK2c",
+           "title": "Video on voltage, current, resistance",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "5A-R5",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=xr68GxkiWFM",
+           "title": "Video on amperes",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "5A-R6",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/en/simulations/circuit-construction-kit-dc",
+           "title": "Circuit construction online simulation",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "5A-R7",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=4HJzDZvfLmA",
+           "title": "Instructional video for simulation",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "5A-1-charge-flow",
@@ -2742,6 +3370,32 @@
           "5B-2 Electrical energy of appliances"
          ],
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5B Energy and PD",
+         "resources": [
+          {
+           "id": "5B-R1",
+           "kind": "web",
+           "url": "https://www.bbc.co.uk/bitesize/guides/zgvq4qt/revision/3",
+           "title": "Guide to potential difference & resistance",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "5B-R2",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=w82aSjLuD_8",
+           "title": "Video on voltage",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "5B-R3",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=wmaobOy8r6I",
+           "title": "Video on voltage compared to water flow",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "5B-1-energy-per-charge",
@@ -2836,6 +3490,48 @@
           "5C-5 Using a potential divider"
          ],
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5C Series circuits",
+         "resources": [
+          {
+           "id": "5C-R1",
+           "kind": "web",
+           "url": "https://www.bbc.co.uk/bitesize/guides/zgvq4qt/revision/6",
+           "title": "Guide to resistance in series circuits",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "5C-R2",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=CztiI0re5Eo",
+           "title": "Ohms Law – video explanations",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "5C-R3",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=lf0lMDZVwTI",
+           "title": "Ohms Law – video explanations",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "5C-R4",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=qJZCHExi4Pk",
+           "title": "Practice questions on Ohms Law",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "5C-R5",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=LECvF5VCz1w",
+           "title": "Practice questions on Ohms Law",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "5C-1-series-builder",
@@ -2953,6 +3649,32 @@
           "5D-4 Graphical approach to parallel resistance"
          ],
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5D Parallel circuits",
+         "resources": [
+          {
+           "id": "5D-R1",
+           "kind": "web",
+           "url": "https://www.bbc.co.uk/bitesize/guides/zgvq4qt/revision/7",
+           "title": "Guide to parallel circuits",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "5D-R2",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=h_yPktKnHq4",
+           "title": "Video tutorial on parallel circuits",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "5D-R3",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=9bmk9atwfhE",
+           "title": "Advanced – video on parallel and series circuits together",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "5D-1-parallel-builder",
@@ -3039,6 +3761,24 @@
           "5E-7 Power loss in series and parallel"
          ],
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5E Power",
+         "resources": [
+          {
+           "id": "5E-R1",
+           "kind": "web",
+           "url": "https://www.bbc.co.uk/bitesize/guides/zgvq4qt/revision/9",
+           "title": "Guide to electrical power and energy in circuits",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "5E-R2",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=7mdc-lRrW1c",
+           "title": "Video on power in series and parallel circuits",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "5E-1-power-brightness",
@@ -3337,6 +4077,40 @@
           "6A-4 Thermistor circuit"
          ],
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity\\6A Components",
+         "resources": [
+          {
+           "id": "6A-R1",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=SInIQEx_abs",
+           "title": "Diodes video tutorial and practice questions",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "6A-R2",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=1uVJS5I8IC0",
+           "title": "Video exercises with diodes",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "6A-R3",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=2fvXW4OEWLE",
+           "title": "Video explanation of LDR in circuits",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "6A-R4",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=AHqhIwvkmUw",
+           "title": "Video explanation of various dependent resistors",
+           "duration": null,
+           "status": "unavailable (checked 18 Nov 2026)"
+          }
+         ],
          "interactives": [
           {
            "id": "6A-1-iv-curve-tracer",
@@ -3407,6 +4181,56 @@
           "6B-3 Cost of running appliances"
          ],
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity\\6B Electricity at home",
+         "resources": [
+          {
+           "id": "6B-R1",
+           "kind": "web",
+           "url": "https://www.hometips.com/how-it-works/electrical-panel-circuit-breakers.html",
+           "title": "How electricity is wired in a house",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "6B-R2",
+           "kind": "web",
+           "url": "https://www.analog.com/en/technical-articles/energy-use-calculation-tutorial.html",
+           "title": "Calculating the cost of energy used with an on-line calculator",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "6B-R3",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=P-W42tk-fWc",
+           "title": "Video explanation of ground, neutral and hot (active) wires (USA example but in principle the same as Australian, especially on the distinction between Neutral and Ground)",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "6B-R4",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=pJYh4HgovaE",
+           "title": "Video lesson on live (active) wire, neutral & ground (Indian example but wiring is the same as Australia)",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "6B-R5",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=SMPhh8gT_1E",
+           "title": "Video on calculating energy use and understanding kW-h",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "6B-R6",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=UchitHGF4n8",
+           "title": "Extension – operation of a transformer",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "6B-1-power-circuit",
@@ -3473,6 +4297,32 @@
          "ppts": 2,
          "workedExamples": [],
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity\\6C Safety",
+         "resources": [
+          {
+           "id": "6C-R1",
+           "kind": "web",
+           "url": "https://electrical.theiet.org/wiring-matters/years/2017/68-november-2017/rcds-everything-an-electrician-should-know/",
+           "title": "Description of operation of an RCD",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "6C-R2",
+           "kind": "web",
+           "url": "https://www.miniphysics.com/need-for-earthing-and-double-insulation.html",
+           "title": "Description and diagrams of double insulation and earthing",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "6C-R3",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=l5YI4IbkUDs",
+           "title": "Video with reference to electrical safety in a house",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "6C-1-fault-simulator",
@@ -3735,6 +4585,48 @@
          "ppts": 0,
          "workedExamples": null,
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion\\7A Modelling motion",
+         "resources": [
+          {
+           "id": "7A-R1",
+           "kind": "web",
+           "url": "https://www.khanacademy.org/science/physics/one-dimensional-motion/displacement-velocity-time/v/introduction-to-vectors-and-scalars",
+           "title": "Video explaining vectors and scalars",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "7A-R2",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=EwSHKuSxX_8",
+           "title": "Video explaining vectors, scalars and component vectors (first 8 minutes are relevant)",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "7A-R3",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/en/simulations/vector-addition",
+           "title": "Vector addition simulations",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "7A-R4",
+           "kind": "web",
+           "url": "https://www.physicsclassroom.com/Physics-Interactives/Vectors-and-Projectiles/Vector-Addition/Vector-Addition-Interactive",
+           "title": "Vector addition simulations",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "7A-R5",
+           "kind": "web",
+           "url": "https://www.physicsclassroom.com/Physics-Interactives/Vectors-and-Projectiles/Vector-Guessing-Game/Vector-Guessing-Game-Interactive",
+           "title": "Vector guessing game",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "7A-1-vector-adder",
@@ -3851,6 +4743,64 @@
          "ppts": 5,
          "workedExamples": null,
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion\\7B Motion graphs",
+         "resources": [
+          {
+           "id": "7B-R1",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=nUb7xfkc0Ac",
+           "title": "Displacement-time, velocity-time and acceleration-time graphs and how they relate to each other video",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "7B-R2",
+           "kind": "web",
+           "url": "https://www.bbc.co.uk/bitesize/guides/zs89xfr/revision/6#:~:text=If%20an%20object%20moves%20along,the%20acceleration%20of%20the%20object",
+           "title": "Motion time graphs explanations",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "7B-R3",
+           "kind": "web",
+           "url": "http://zonalandeducation.com/mstm/physics/mechanics/kinematics/xvaVsTime/xVsTime.html",
+           "title": "Position-time graph interactive simulation",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "7B-R4",
+           "kind": "web",
+           "url": "https://www.pasco.com/products/software/matchgraph#download-panel",
+           "title": "An interactive graphing program that gets students to match a displayed graph to their motion. This requires a PASCO motion sensor",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "7B-R5",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=8A7DiGzJUvg",
+           "title": "Motion graphs of a falling ball",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "7B-R6",
+           "kind": "web",
+           "url": "https://ophysics.com/k4b.html",
+           "title": "Interactive graphing tool that shows how displacement-time, velocity-time and acceleration-time graphs relate to each other",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "7B-R7",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/en/simulations/moving-man",
+           "title": "Interactive graphing tool that shows how displacement-time, velocity-time and acceleration-time graphs relate to each other",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "7B-1-motion-graph-matcher",
@@ -3941,6 +4891,32 @@
          "ppts": 1,
          "workedExamples": null,
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion\\7C Uniform acceleration",
+         "resources": [
+          {
+           "id": "7C-R1",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=v1V3T5BPd7E",
+           "title": "A video explaining the equations of straight-line motion with constant acceleration with an example problem",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "7C-R2",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=-hFEFDLQ8Zg",
+           "title": "A video explaining the equations of straight-line motion with constant acceleration with an example problem",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "7C-R3",
+           "kind": "web",
+           "url": "https://studywell.com/kinematics/suvat-equations/",
+           "title": "Example questions with fully worked solutions",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "7C-1-constant-acceleration",
@@ -4153,6 +5129,48 @@
          "ppts": 1,
          "workedExamples": null,
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces\\8A Momentum",
+         "resources": [
+          {
+           "id": "8A-R1",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=E13h1E_Pc00",
+           "title": "Video of impulse and momentum",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "8A-R2",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/sims/html/collision-lab/latest/collision-lab_en.html",
+           "title": "Simulation of simple straight-line collisions. Also covers 2D collisions as an extension",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "8A-R3",
+           "kind": "web",
+           "url": "https://www.physicsclassroom.com/Physics-Interactives/Momentum-and-Collisions",
+           "title": "Variety of simulations investigating momentum and impulse",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "8A-R4",
+           "kind": "web",
+           "url": "https://openstax.org/books/physics/pages/8-1-linear-momentum-force-and-impulse",
+           "title": "Explanation and example problems with worked solutions",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "8A-R5",
+           "kind": "web",
+           "url": "https://flexbooks.ck12.org/cbook/ck-12-physics-flexbook-2.0/section/6.1/primary/lesson/momentum-and-impulse-phys/",
+           "title": "Explanation and example problems with worked solutions",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "8A-1-collision-lab",
@@ -4268,6 +5286,64 @@
          "ppts": 3,
          "workedExamples": null,
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces\\8B Newtons laws",
+         "resources": [
+          {
+           "id": "8B-R1",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=g550H4e5FCY",
+           "title": "Good overview of Newton’s laws",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "8B-R2",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_en.html",
+           "title": "Simulation on Forces and motion which goes over net force, acceleration and friction.",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "8B-R3",
+           "kind": "web",
+           "url": "https://www.physicsclassroom.com/Physics-Interactives/Newtons-Laws",
+           "title": "Interactive simulations on how the net force and mass relate to acceleration, free body diagram, elevators and an extension activity on pulley systems",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "8B-R4",
+           "kind": "web",
+           "url": "https://javalab.org/en/force_movement_en/",
+           "title": "Interactive simulations on how the net force and mass relate to acceleration, free body diagram, elevators and an extension activity on pulley systems",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "8B-R5",
+           "kind": "web",
+           "url": "https://ophysics.com/f1.html",
+           "title": "Interactive simulations on how the net force and mass relate to acceleration, free body diagram, elevators and an extension activity on pulley systems",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "8B-R6",
+           "kind": "web",
+           "url": "https://ophysics.com/f2.html",
+           "title": "Interactive simulation of an inclined plane",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "8B-R7",
+           "kind": "web",
+           "url": "https://ophysics.com/f3.html",
+           "title": "Interactive simulation of a pulley system (extension)",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "8B-1-net-force",
@@ -4369,6 +5445,40 @@
          "ppts": 1,
          "workedExamples": null,
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces\\8C Equilibrium",
+         "resources": [
+          {
+           "id": "8C-R1",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=jg4e8W44_E4",
+           "title": "A video introducing torque and rotational equilibrium",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "8C-R2",
+           "kind": "web",
+           "url": "https://ophysics.com/r6.html",
+           "title": "Simulation showing a bar supported by a cable",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "8C-R3",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/sims/html/balancing-act/latest/balancing-act_en.html",
+           "title": "Interactive simulation with game which involves translational and rotational equilibrium",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "8C-R4",
+           "kind": "web",
+           "url": "https://www.design-simulation.com/ip/simulationlibrary/equilibrium.php",
+           "title": "More interactive simulations looking at translational and rotational equilibrium",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "8C-1-seesaw-torque",
@@ -4527,6 +5637,32 @@
          "ppts": 0,
          "workedExamples": null,
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy\\9A Work",
+         "resources": [
+          {
+           "id": "9A-R1",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=zVRH9d5PW8g",
+           "title": "Videos explaining work",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "9A-R2",
+           "kind": "web",
+           "url": "https://www.physicsclassroom.com/Physics-Interactives/Work-and-Energy/Work-and-Kinetic-Energy/Interactive",
+           "title": "Interactive simulation that looks at work",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "9A-R3",
+           "kind": "web",
+           "url": "https://javalab.org/en/work-in-science/",
+           "title": "Interactive simulation that shows that work is the area under a force-displacement graph",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "9A-1-work-area",
@@ -4616,6 +5752,56 @@
          "ppts": 1,
          "workedExamples": null,
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy\\9B Energy and power",
+         "resources": [
+          {
+           "id": "9B-R1",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=g7u6pIfUVy4",
+           "title": "YouTube video on kinetic and potential energy",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "9B-R2",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=_MR1Dp8-F8w",
+           "title": "YouTube video on work, energy and power and how they relate to each other",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "9B-R3",
+           "kind": "web",
+           "url": "https://www.physicsclassroom.com/Physics-Interactives/Work-and-Energy",
+           "title": "A variety of simulations on energy",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "9B-R4",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/sims/html/energy-skate-park/latest/energy-skate-park_en.html",
+           "title": "Simulation on energy conservation",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "9B-R5",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/sims/html/energy-skate-park-basics/latest/energy-skate-park-basics_en.html",
+           "title": "Simulation on energy conservation",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "9B-R6",
+           "kind": "web",
+           "url": "https://javalab.org/en/mechanical_energy_en/",
+           "title": "Simulation on energy conservation",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "9B-1-skate-park",
@@ -4697,6 +5883,72 @@
          "ppts": 1,
          "workedExamples": null,
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy\\9C Springs",
+         "resources": [
+          {
+           "id": "9C-R1",
+           "kind": "video",
+           "url": "https://www.youtube.com/watch?v=gZ_KnZHCn4M",
+           "title": "Hooke’s law, elastic potential energy video and horizontal spring systems",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "9C-R2",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/sims/html/hookes-law/latest/hookes-law_en.html",
+           "title": "Simulation investigating Hooke’s law",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "9C-R3",
+           "kind": "web",
+           "url": "https://ophysics.com/e5.html",
+           "title": "Springs simulations visualising the forces, acceleration and energy transformations that occur when a horizontal spring is in motion",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "9C-R4",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/sims/html/masses-and-springs-basics/latest/masses-and-springs-basics_en.html",
+           "title": "Springs simulations visualising the forces, acceleration and energy transformations that occur when a vertical spring is in motion",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "9C-R5",
+           "kind": "web",
+           "url": "https://phet.colorado.edu/sims/html/masses-and-springs/latest/masses-and-springs_en.html",
+           "title": "Springs simulations visualising the forces, acceleration and energy transformations that occur when a vertical spring is in motion",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "9C-R6",
+           "kind": "web",
+           "url": "https://www.physicsclassroom.com/Physics-Interactives/Work-and-Energy/Mass-on-a-Spring/Mass-on-a-Spring-Interactive",
+           "title": "Interactive simulation that looks at the energy transformations and velocity of a vertical spring system",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "9C-R7",
+           "kind": "web",
+           "url": "https://ophysics.com/e1.html",
+           "title": "Simulation that shows the conservation of energy in a spring",
+           "duration": null,
+           "status": null
+          },
+          {
+           "id": "9C-R8",
+           "kind": "web",
+           "url": "https://javalab.org/en/elastic_energy_en/",
+           "title": "Interactive simulation investigating spring potential energy",
+           "duration": null,
+           "status": null
+          }
+         ],
          "interactives": [
           {
            "id": "9C-1-hookes-law",

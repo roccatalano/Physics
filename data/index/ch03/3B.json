@@ -1246,5 +1246,43 @@
    "aim": "To use an online simulation of beta decay to determine whether the concept of half-life in alpha decay is also valid for beta decay."
   }
  ],
- "notes": "Check-in Set 5 Q1 uses 'Au' with Z = 92 (typo in Cambridge source; should be U). Decay equations rebuilt in LaTeX from the textbook images. Table 3B–1 is image-only (img/3B_tab3B-1.png). 3B Skills box gives the conservation check for decay equations."
+ "notes": "Check-in Set 5 Q1 uses 'Au' with Z = 92 (typo in Cambridge source; should be U). Decay equations rebuilt in LaTeX from the textbook images. Table 3B–1 is image-only (img/3B_tab3B-1.png). 3B Skills box gives the conservation check for decay equations.",
+ "resources": [
+  {
+   "id": "3B-R1",
+   "kind": "web",
+   "url": "https://www.studysmarter.us/explanations/physics/nuclear-physics/alpha-beta-and-gamma-radiation/",
+   "yt": null,
+   "duration": null,
+   "title": "In-depth explanation of the properties of α-, β–-, β+- and γ-radiation, with quiz",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "3B-R2",
+   "kind": "web",
+   "url": "https://isaacphysics.org/concepts/cp_radioactive_decay?stage=all",
+   "yt": null,
+   "duration": null,
+   "title": "Decay equations explanations and examples",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "3B-R3",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/en/simulations/build-a-nucleus",
+   "yt": null,
+   "duration": null,
+   "title": "Simulation showing how nuclei are changed by different types of decay",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

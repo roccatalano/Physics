@@ -944,5 +944,79 @@
   }
  ],
  "pracs": [],
- "notes": "No Cambridge practicals for 6B. Many Cambridge errors to fix before use: WE6B-3b (0.6 W treated as kW), WE6B-2 (230 V stated, 240 V used), CI2.2 answer (5/60 for 10 min), SQ6a,b answers (inverted P/V), SQ10 '3000 kW', WS6B-2 answer units (kW h vs W h, J), WS6B-3d (20/24). Section questions use 240 V; textbook body uses 230 V. Activities 6B–1 and 6B–2 (research tasks) and Table 6B–1 (energy tips) not indexed as questions. 6B.1 (re-draw a picture as a circuit diagram) has no section question; Review Q20 covers it."
+ "notes": "No Cambridge practicals for 6B. Many Cambridge errors to fix before use: WE6B-3b (0.6 W treated as kW), WE6B-2 (230 V stated, 240 V used), CI2.2 answer (5/60 for 10 min), SQ6a,b answers (inverted P/V), SQ10 '3000 kW', WS6B-2 answer units (kW h vs W h, J), WS6B-3d (20/24). Section questions use 240 V; textbook body uses 230 V. Activities 6B–1 and 6B–2 (research tasks) and Table 6B–1 (energy tips) not indexed as questions. 6B.1 (re-draw a picture as a circuit diagram) has no section question; Review Q20 covers it.",
+ "resources": [
+  {
+   "id": "6B-R1",
+   "kind": "web",
+   "url": "https://www.hometips.com/how-it-works/electrical-panel-circuit-breakers.html",
+   "yt": null,
+   "duration": null,
+   "title": "How electricity is wired in a house",
+   "src": {
+    "file": "Ch06 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "6B-R2",
+   "kind": "web",
+   "url": "https://www.analog.com/en/technical-articles/energy-use-calculation-tutorial.html",
+   "yt": null,
+   "duration": null,
+   "title": "Calculating the cost of energy used with an on-line calculator",
+   "src": {
+    "file": "Ch06 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "6B-R3",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=P-W42tk-fWc",
+   "yt": "P-W42tk-fWc",
+   "duration": null,
+   "title": "Video explanation of ground, neutral and hot (active) wires (USA example but in principle the same as Australian, especially on the distinction between Neutral and Ground)",
+   "src": {
+    "file": "Ch06 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "6B-R4",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=pJYh4HgovaE",
+   "yt": "pJYh4HgovaE",
+   "duration": null,
+   "title": "Video lesson on live (active) wire, neutral & ground (Indian example but wiring is the same as Australia)",
+   "src": {
+    "file": "Ch06 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "6B-R5",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=SMPhh8gT_1E",
+   "yt": "SMPhh8gT_1E",
+   "duration": null,
+   "title": "Video on calculating energy use and understanding kW-h",
+   "src": {
+    "file": "Ch06 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "6B-R6",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=UchitHGF4n8",
+   "yt": "UchitHGF4n8",
+   "duration": null,
+   "title": "Extension – operation of a transformer",
+   "src": {
+    "file": "Ch06 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

@@ -1787,5 +1787,91 @@
   "8B PowerPoint Figure 8B–15.pptx",
   "8B PowerPoint Figure 8B–2.pptx"
  ],
- "notes": "8B.2/8B.3 has no numbered worked example: plan uses the in-text 1150 kg car example (chunk 8B-E2, Figure 8B–3). Book errors kept verbatim: WE8B-5b uses sin 9° (should be 19°); Figure 8B–15 labels N = mg sin θ (text says mg cos θ); SQ7 says 125 m s^-1 and answer uses 1000 kg though the question says 100 kg; SQ11d answer uses 96 kg (question is 56 kg); Worksheet 8B–1 Q1a answer unit says m s^-1 (should be m s^-2). 8B.7 and 8B.8 are only lightly assessed (review Q20, SQ10a, WS2a). 8B.9 (car safety) has no calculation questions in 8B; use 8A SQ7, SQ8d and review Q19d."
+ "notes": "8B.2/8B.3 has no numbered worked example: plan uses the in-text 1150 kg car example (chunk 8B-E2, Figure 8B–3). Book errors kept verbatim: WE8B-5b uses sin 9° (should be 19°); Figure 8B–15 labels N = mg sin θ (text says mg cos θ); SQ7 says 125 m s^-1 and answer uses 1000 kg though the question says 100 kg; SQ11d answer uses 96 kg (question is 56 kg); Worksheet 8B–1 Q1a answer unit says m s^-1 (should be m s^-2). 8B.7 and 8B.8 are only lightly assessed (review Q20, SQ10a, WS2a). 8B.9 (car safety) has no calculation questions in 8B; use 8A SQ7, SQ8d and review Q19d.",
+ "resources": [
+  {
+   "id": "8B-R1",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=g550H4e5FCY",
+   "yt": "g550H4e5FCY",
+   "duration": null,
+   "title": "Good overview of Newton’s laws",
+   "src": {
+    "file": "Ch08 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "8B-R2",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_en.html",
+   "yt": null,
+   "duration": null,
+   "title": "Simulation on Forces and motion which goes over net force, acceleration and friction.",
+   "src": {
+    "file": "Ch08 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "8B-R3",
+   "kind": "web",
+   "url": "https://www.physicsclassroom.com/Physics-Interactives/Newtons-Laws",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive simulations on how the net force and mass relate to acceleration, free body diagram, elevators and an extension activity on pulley systems",
+   "src": {
+    "file": "Ch08 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "8B-R4",
+   "kind": "web",
+   "url": "https://javalab.org/en/force_movement_en/",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive simulations on how the net force and mass relate to acceleration, free body diagram, elevators and an extension activity on pulley systems",
+   "src": {
+    "file": "Ch08 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "8B-R5",
+   "kind": "web",
+   "url": "https://ophysics.com/f1.html",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive simulations on how the net force and mass relate to acceleration, free body diagram, elevators and an extension activity on pulley systems",
+   "src": {
+    "file": "Ch08 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "8B-R6",
+   "kind": "web",
+   "url": "https://ophysics.com/f2.html",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive simulation of an inclined plane",
+   "src": {
+    "file": "Ch08 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "8B-R7",
+   "kind": "web",
+   "url": "https://ophysics.com/f3.html",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive simulation of a pulley system (extension)",
+   "src": {
+    "file": "Ch08 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

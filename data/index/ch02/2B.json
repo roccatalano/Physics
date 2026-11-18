@@ -846,5 +846,67 @@
   }
  ],
  "pracs": [],
- "notes": "No practicals for 2B. Wien's constant varies across sources: textbook 2.898e-3 m K (checklist 2.90e-3); WS2B-1 answer note prints 2.989e-3 (typo, verbatim); SR SQ5a uses 0.0029. WE2B-2 final value 1.01e-5 m as printed (0.002898/288 = 1.006e-5). Worksheet 2B-1 term vi is 'IPCC' in the worksheet but 'IPPC' in the answers and chapter glossary list. Figure 2B-3 (forehead thermometer photo) skipped as decorative. PowerPoint Figure 2B–1 and 2B–6 files exist in the section folder."
+ "notes": "No practicals for 2B. Wien's constant varies across sources: textbook 2.898e-3 m K (checklist 2.90e-3); WS2B-1 answer note prints 2.989e-3 (typo, verbatim); SR SQ5a uses 0.0029. WE2B-2 final value 1.01e-5 m as printed (0.002898/288 = 1.006e-5). Worksheet 2B-1 term vi is 'IPCC' in the worksheet but 'IPPC' in the answers and chapter glossary list. Figure 2B-3 (forehead thermometer photo) skipped as decorative. PowerPoint Figure 2B–1 and 2B–6 files exist in the section folder.",
+ "resources": [
+  {
+   "id": "2B-R1",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/sims/html/blackbody-spectrum/latest/blackbody-spectrum_en.html",
+   "yt": null,
+   "duration": null,
+   "title": "An interactive that uses Wien’s law (λmaxT = 2.90 × 10–3 mK) to calculate the peak emitting wavelengths of objects modelled as blackbodies",
+   "src": {
+    "file": "Ch02 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "2B-R2",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=XdXAdwb7loE",
+   "yt": "XdXAdwb7loE",
+   "duration": null,
+   "title": "Video using the above interactive to explain Wien’s Law",
+   "src": {
+    "file": "Ch02 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "2B-R3",
+   "kind": "web",
+   "url": "https://theconversation.com/earths-energy-budget-is-out-of-balance-heres-how-thats-warming-the-climate-165244",
+   "yt": null,
+   "duration": null,
+   "title": "Article about earth’s energy budget",
+   "src": {
+    "file": "Ch02 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "2B-R4",
+   "kind": "video",
+   "url": "https://youtu.be/U2CPwWgY_G4",
+   "yt": "U2CPwWgY_G4",
+   "duration": null,
+   "title": "Video explaining how the absorption of thermal infrared radiation affects Earth’s ‘energy budget’ and leads global heating",
+   "src": {
+    "file": "Ch02 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "2B-R5",
+   "kind": "web",
+   "url": "https://climate.nasa.gov/",
+   "yt": null,
+   "duration": null,
+   "title": "Lots of more information about climate science and global temperature change",
+   "src": {
+    "file": "Ch02 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

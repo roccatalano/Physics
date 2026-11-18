@@ -2101,5 +2101,91 @@
    "aim": "To build a practical understanding of motion graphs."
   }
  ],
- "notes": "Every 7B criterion has a worked example. Check-in Set 1 Q1–2 (unit conversions) have no matching checklist criterion: criteria left empty. Textbook typos kept verbatim: skills box says '= 18' then '19.2' (48/2.5 = 19.2); 7B-SQ8c answer unit printed as m s^-1 (should be m s^-2); 7B-CI2.1d answer's middle term printed as (-20 ±5)/2 in the rendered PDF, indexed as (-20-5)/2. Worksheet 7B–1 Q2 and Q4 parts are mis-lettered in the docx (a, c, d, e / a, f, g...); indexed by the answer-sheet letters. 'TEACHER ONLY/7B Worksheet 7B–1 Answers (2).docx' is a duplicate of the answers file. 7B-SQ10c options are four graph images (A–D order assumed from docx order). Many questions are graph-heavy: always show the img."
+ "notes": "Every 7B criterion has a worked example. Check-in Set 1 Q1–2 (unit conversions) have no matching checklist criterion: criteria left empty. Textbook typos kept verbatim: skills box says '= 18' then '19.2' (48/2.5 = 19.2); 7B-SQ8c answer unit printed as m s^-1 (should be m s^-2); 7B-CI2.1d answer's middle term printed as (-20 ±5)/2 in the rendered PDF, indexed as (-20-5)/2. Worksheet 7B–1 Q2 and Q4 parts are mis-lettered in the docx (a, c, d, e / a, f, g...); indexed by the answer-sheet letters. 'TEACHER ONLY/7B Worksheet 7B–1 Answers (2).docx' is a duplicate of the answers file. 7B-SQ10c options are four graph images (A–D order assumed from docx order). Many questions are graph-heavy: always show the img.",
+ "resources": [
+  {
+   "id": "7B-R1",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=nUb7xfkc0Ac",
+   "yt": "nUb7xfkc0Ac",
+   "duration": null,
+   "title": "Displacement-time, velocity-time and acceleration-time graphs and how they relate to each other video",
+   "src": {
+    "file": "Ch07 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "7B-R2",
+   "kind": "web",
+   "url": "https://www.bbc.co.uk/bitesize/guides/zs89xfr/revision/6#:~:text=If%20an%20object%20moves%20along,the%20acceleration%20of%20the%20object",
+   "yt": null,
+   "duration": null,
+   "title": "Motion time graphs explanations",
+   "src": {
+    "file": "Ch07 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "7B-R3",
+   "kind": "web",
+   "url": "http://zonalandeducation.com/mstm/physics/mechanics/kinematics/xvaVsTime/xVsTime.html",
+   "yt": null,
+   "duration": null,
+   "title": "Position-time graph interactive simulation",
+   "src": {
+    "file": "Ch07 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "7B-R4",
+   "kind": "web",
+   "url": "https://www.pasco.com/products/software/matchgraph#download-panel",
+   "yt": null,
+   "duration": null,
+   "title": "An interactive graphing program that gets students to match a displayed graph to their motion. This requires a PASCO motion sensor",
+   "src": {
+    "file": "Ch07 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "7B-R5",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=8A7DiGzJUvg",
+   "yt": "8A7DiGzJUvg",
+   "duration": null,
+   "title": "Motion graphs of a falling ball",
+   "src": {
+    "file": "Ch07 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "7B-R6",
+   "kind": "web",
+   "url": "https://ophysics.com/k4b.html",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive graphing tool that shows how displacement-time, velocity-time and acceleration-time graphs relate to each other",
+   "src": {
+    "file": "Ch07 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "7B-R7",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/en/simulations/moving-man",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive graphing tool that shows how displacement-time, velocity-time and acceleration-time graphs relate to each other",
+   "src": {
+    "file": "Ch07 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

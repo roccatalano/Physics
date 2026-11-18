@@ -1169,5 +1169,79 @@
    "aim": "Part 1: To investigate the effect of changing the release height of a cart travelling down a ramp, on the kinetic energy transferred to a second cart in a collision.\nPart 2: To investigate the effect that changing the mass of a cart has on the kinetic energy transferred to another cart."
   }
  ],
- "notes": "9B.3 (Ek ∝ v²) has no worked example; the Skills box cyclist question (9B-SK1) serves as a worked example for it, and Figure 9B–3. Suggested responses typos kept as found except lost superscripts ('8.92 × 103', '5.25 × 104') which are written as powers of ten. SQ9a answer in Suggested responses omits the square on 22.5 in the working (answer value correct). WE9B-4 step 3 was garbled in pdftotext; rebuilt from the page layout. Worksheet 9B-1 Q1 answer has no mark split."
+ "notes": "9B.3 (Ek ∝ v²) has no worked example; the Skills box cyclist question (9B-SK1) serves as a worked example for it, and Figure 9B–3. Suggested responses typos kept as found except lost superscripts ('8.92 × 103', '5.25 × 104') which are written as powers of ten. SQ9a answer in Suggested responses omits the square on 22.5 in the working (answer value correct). WE9B-4 step 3 was garbled in pdftotext; rebuilt from the page layout. Worksheet 9B-1 Q1 answer has no mark split.",
+ "resources": [
+  {
+   "id": "9B-R1",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=g7u6pIfUVy4",
+   "yt": "g7u6pIfUVy4",
+   "duration": null,
+   "title": "YouTube video on kinetic and potential energy",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "9B-R2",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=_MR1Dp8-F8w",
+   "yt": "_MR1Dp8-F8w",
+   "duration": null,
+   "title": "YouTube video on work, energy and power and how they relate to each other",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "9B-R3",
+   "kind": "web",
+   "url": "https://www.physicsclassroom.com/Physics-Interactives/Work-and-Energy",
+   "yt": null,
+   "duration": null,
+   "title": "A variety of simulations on energy",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "9B-R4",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/sims/html/energy-skate-park/latest/energy-skate-park_en.html",
+   "yt": null,
+   "duration": null,
+   "title": "Simulation on energy conservation",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "9B-R5",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/sims/html/energy-skate-park-basics/latest/energy-skate-park-basics_en.html",
+   "yt": null,
+   "duration": null,
+   "title": "Simulation on energy conservation",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "9B-R6",
+   "kind": "web",
+   "url": "https://javalab.org/en/mechanical_energy_en/",
+   "yt": null,
+   "duration": null,
+   "title": "Simulation on energy conservation",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

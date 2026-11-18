@@ -1232,5 +1232,43 @@
    "aim": "To position ammeters and voltmeters correctly in an electrical circuit."
   }
  ],
- "notes": "Section questions use 240 V mains (textbook note) while worked examples use 230 V. 5B-SQ4 answer C is from Suggested responses. Suggested-response typos: SQ5a \"125 J\" (12 J); CI4.2 uses 6 V not 5.9 V. WE5B-2 text says 4.416 kJ but working gives 4.416 MJ."
+ "notes": "Section questions use 240 V mains (textbook note) while worked examples use 230 V. 5B-SQ4 answer C is from Suggested responses. Suggested-response typos: SQ5a \"125 J\" (12 J); CI4.2 uses 6 V not 5.9 V. WE5B-2 text says 4.416 kJ but working gives 4.416 MJ.",
+ "resources": [
+  {
+   "id": "5B-R1",
+   "kind": "web",
+   "url": "https://www.bbc.co.uk/bitesize/guides/zgvq4qt/revision/3",
+   "yt": null,
+   "duration": null,
+   "title": "Guide to potential difference & resistance",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "5B-R2",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=w82aSjLuD_8",
+   "yt": "w82aSjLuD_8",
+   "duration": null,
+   "title": "Video on voltage",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "5B-R3",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=wmaobOy8r6I",
+   "yt": "wmaobOy8r6I",
+   "duration": null,
+   "title": "Video on voltage compared to water flow",
+   "src": {
+    "file": "Ch05 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

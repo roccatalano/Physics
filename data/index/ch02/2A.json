@@ -1482,5 +1482,127 @@
    "aim": "The aim of this practical activity is to calculate the specific heat capacity of water but also sharpening your thinking about how to modify conditions to reduce the error in your result."
   }
  ],
- "notes": "No worked examples for temperature conversion (2A.3) or qualitative transfers (2A.4); wedo_plan uses worksheet Qs (adapted). SQ6 answer and WS7 answer rely on diagrams (WS7 answer image saved; SQ6 answer diagrams are in the Suggested responses PDF, not cropped). SQ8 states c_ice as 2108 J kg^-1 (units as printed; textbook text uses 2093 J kg^-1 K^-1). WS9b/9c answers mix kJ and J as printed (9c: 0.50 × 334 = 167 kJ). WE2A-3 printed working says m_water = 0.100 kg for Q3 but uses 1.000 kg (verbatim). Table 2A-2 (conductivities) not cropped. PowerPoint Figure 2A–13 file exists in the section folder (same as fig 2A-13)."
+ "notes": "No worked examples for temperature conversion (2A.3) or qualitative transfers (2A.4); wedo_plan uses worksheet Qs (adapted). SQ6 answer and WS7 answer rely on diagrams (WS7 answer image saved; SQ6 answer diagrams are in the Suggested responses PDF, not cropped). SQ8 states c_ice as 2108 J kg^-1 (units as printed; textbook text uses 2093 J kg^-1 K^-1). WS9b/9c answers mix kJ and J as printed (9c: 0.50 × 334 = 167 kJ). WE2A-3 printed working says m_water = 0.100 kg for Q3 but uses 1.000 kg (verbatim). Table 2A-2 (conductivities) not cropped. PowerPoint Figure 2A–13 file exists in the section folder (same as fig 2A-13).",
+ "resources": [
+  {
+   "id": "2A-R1",
+   "kind": "video",
+   "url": "https://youtu.be/yXT012us9ng",
+   "yt": "yXT012us9ng",
+   "duration": null,
+   "title": "Video explaining how increases and decreases of temperature are related to increases and decreases of thermal energy in a system",
+   "src": {
+    "file": "Ch02 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "2A-R2",
+   "kind": "web",
+   "url": "https://www.bbc.co.uk/bitesize/guides/zr7j382/revision/1",
+   "yt": null,
+   "duration": null,
+   "title": "Guide to conduction in solids",
+   "src": {
+    "file": "Ch02 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "2A-R3",
+   "kind": "web",
+   "url": "https://www.bbc.co.uk/bitesize/guides/zr7j382/revision/3",
+   "yt": null,
+   "duration": null,
+   "title": "Guide to convection in gases and liquids",
+   "src": {
+    "file": "Ch02 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "2A-R4",
+   "kind": "web",
+   "url": "https://www.bbc.co.uk/bitesize/guides/z2gjtv4/revision/5",
+   "yt": null,
+   "duration": null,
+   "title": "Guide to specific heat capacity",
+   "src": {
+    "file": "Ch02 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "2A-R5",
+   "kind": "video",
+   "url": "https://youtu.be/-iBFwpKV6ak",
+   "yt": "-iBFwpKV6ak",
+   "duration": null,
+   "title": "Video on the physics of walking over hot coals (conduction and insulation)",
+   "src": {
+    "file": "Ch02 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "2A-R6",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/en/contributions/view/3780",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive about thermal energy transfers (documentation here)",
+   "src": {
+    "file": "Ch02 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "2A-R7",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/sims/html/energy-forms-and-changes/latest/energy-forms-and-changes_en.html",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive about thermal energy transfers (documentation here)",
+   "src": {
+    "file": "Ch02 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "2A-R8",
+   "kind": "video",
+   "url": "https://youtu.be/8VmkdzRE8sQ",
+   "yt": "8VmkdzRE8sQ",
+   "duration": null,
+   "title": "Video on specific latent heat – covers both vaporisation and fusion, with example calculations",
+   "src": {
+    "file": "Ch02 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "2A-R9",
+   "kind": "video",
+   "url": "https://youtu.be/Q63QPec_1bk",
+   "yt": "Q63QPec_1bk",
+   "duration": null,
+   "title": "Video of worked examples for using the equation Q = mcΔT to calculate the energy needed to raise the temperature of a substance",
+   "src": {
+    "file": "Ch02 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "2A-R10",
+   "kind": "video",
+   "url": "https://youtu.be/3itqmCtmJPc?t=311",
+   "yt": "3itqmCtmJPc",
+   "duration": "5:11",
+   "title": "Video using the equation Q = mL to calculate the energy needed to change the state of a substance (5:11)",
+   "src": {
+    "file": "Ch02 Curated internet resources.docx"
+   },
+   "start": 311
+  }
+ ]
 }

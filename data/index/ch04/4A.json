@@ -1388,5 +1388,79 @@
   "4A PowerPoint Figure 4A–8.pptx",
   "4A PowerPoint Figure 4A–14.pptx"
  ],
- "notes": "Pages are PDF pages of Physics12_Ch04.pdf (PDF page = book page − 147). Engage text kept verbatim (it says 'Also in 1932' without an earlier 1932 event). 'further fusions' in Critical mass is a textbook typo for fissions (verbatim). Photos (4A–1 to 4A–5, 4A–10, 4A–12, 4A–15) not cropped. WE4A-3 is the 4A Skills box. 4A.3 has no worked example or worksheet question on shape: We do uses Check-in 3.2 (adapted). CI1.3b suggested response has a working-line typo (÷ 3.0×10^6 instead of 3.0×10^7). SQ7a answer has grammar slips ('This are', 'used a control rods'), kept verbatim."
+ "notes": "Pages are PDF pages of Physics12_Ch04.pdf (PDF page = book page − 147). Engage text kept verbatim (it says 'Also in 1932' without an earlier 1932 event). 'further fusions' in Critical mass is a textbook typo for fissions (verbatim). Photos (4A–1 to 4A–5, 4A–10, 4A–12, 4A–15) not cropped. WE4A-3 is the 4A Skills box. 4A.3 has no worked example or worksheet question on shape: We do uses Check-in 3.2 (adapted). CI1.3b suggested response has a working-line typo (÷ 3.0×10^6 instead of 3.0×10^7). SQ7a answer has grammar slips ('This are', 'used a control rods'), kept verbatim.",
+ "resources": [
+  {
+   "id": "4A-R1",
+   "kind": "video",
+   "url": "https://youtu.be/hhHXQYFEO7o",
+   "yt": "hhHXQYFEO7o",
+   "duration": null,
+   "title": "Retro video explaining how nuclear power is related to binding energy and energy–mass equivalence, as well as fission reactions",
+   "src": {
+    "file": "Ch04 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "4A-R2",
+   "kind": "web",
+   "url": "https://www.iaea.org/newscenter/news/what-is-nuclear-energy-the-science-of-nuclear-power",
+   "yt": null,
+   "duration": null,
+   "title": "IAEA factsheet on nuclear energy",
+   "src": {
+    "file": "Ch04 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "4A-R3",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/en/simulations/nuclear-fission",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive simulation explaining how a chain reaction works",
+   "src": {
+    "file": "Ch04 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "4A-R4",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=H7Ltze7GbUA&t=239s",
+   "yt": "H7Ltze7GbUA",
+   "duration": null,
+   "title": "Video discussing the effect of mass and shape on criticality in fission chain reactions, using Slotin incident as case study",
+   "src": {
+    "file": "Ch04 Curated internet resources.docx"
+   },
+   "start": 239
+  },
+  {
+   "id": "4A-R5",
+   "kind": "web",
+   "url": "https://www.nuclearinst.com/Nuclear-Reactor-Simulator",
+   "yt": null,
+   "duration": null,
+   "title": "Simulation of all the parts of nuclear reactor, including moderators and control rods",
+   "src": {
+    "file": "Ch04 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "4A-R6",
+   "kind": "web",
+   "url": "http://lotus.itservices.manchester.ac.uk:8080/",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive game showing how a nuclear power plant generates power, and how control rods can adjust power output",
+   "src": {
+    "file": "Ch04 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

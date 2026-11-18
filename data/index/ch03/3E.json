@@ -1592,5 +1592,115 @@
    "aim": "To investigate the shielding required for protection from external α-, β- and γ-radiation."
   }
  ],
- "notes": "Section question 4 (MC) options B–D carry a duplicated letter in the docx ('B 1200 J'); cleaned. Section question 10 answer uses 1 MeV = 1.6 × 10⁻¹³ J. Worksheet 3E–1 Q2 is a labelling diagram (answer is an image). Review question 10 (inverse-square, 200 Bq at 1 m) is linked by the checklist to 3E.1/3E.6/3C.2 but the idea is not taught in Chapter 3."
+ "notes": "Section question 4 (MC) options B–D carry a duplicated letter in the docx ('B 1200 J'); cleaned. Section question 10 answer uses 1 MeV = 1.6 × 10⁻¹³ J. Worksheet 3E–1 Q2 is a labelling diagram (answer is an image). Review question 10 (inverse-square, 200 Bq at 1 m) is linked by the checklist to 3E.1/3E.6/3C.2 but the idea is not taught in Chapter 3.",
+ "resources": [
+  {
+   "id": "3E-R1",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=Lg9coTz43K0",
+   "yt": "Lg9coTz43K0",
+   "duration": null,
+   "title": "Short retro video on differences in shielding from α-, β–-, β+- and γ-radiation",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "3E-R2",
+   "kind": "video",
+   "url": "https://youtu.be/qc9wYSnbqO4",
+   "yt": "qc9wYSnbqO4",
+   "duration": null,
+   "title": "Video on effects of α-, β–-, β+- and γ-radiation on humans",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "3E-R3",
+   "kind": "video",
+   "url": "https://youtu.be/BH2bKONkvFc",
+   "yt": "BH2bKONkvFc",
+   "duration": null,
+   "title": "Fun video showing how the different capacity of α-, β–-, β+- and γ-radiation to cause cell damage",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "3E-R4",
+   "kind": "web",
+   "url": "https://www.cdc.gov/nceh/radiation/emergencies/contamination.htm",
+   "yt": null,
+   "duration": null,
+   "title": "CDC information and video on internal and external radioactive contamination and effects on humans",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "3E-R5",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=qjkTzk8NAxM&t=570s",
+   "yt": "qjkTzk8NAxM",
+   "duration": null,
+   "title": "Lecture on ‘radioactive cookie’ demonstrating differences in ionising impacts of of α-, β–-, β+- and γ-radiation",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": 570
+  },
+  {
+   "id": "3E-R6",
+   "kind": "web",
+   "url": "https://www.arpansa.gov.au/understanding-radiation/what-is-radiation/radiation/measurement",
+   "yt": null,
+   "duration": null,
+   "title": "Breakdown of absorbed dose (gray), equivalent dose (sievert) and effective dose (sievert)",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "3E-R7",
+   "kind": "video",
+   "url": "https://youtu.be/gn9SUPQtwVk",
+   "yt": "gn9SUPQtwVk",
+   "duration": null,
+   "title": "Video showing how to calculate absorbed, equivalent and effective doses",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "3E-R8",
+   "kind": "web",
+   "url": "https://www.ansto.gov.au/education/nuclear-facts/what-are-radioisotopes",
+   "yt": null,
+   "duration": null,
+   "title": "ANSTO factsheet on the use of medical radioisotopes in therapy",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "3E-R9",
+   "kind": "video",
+   "url": "https://youtu.be/V2VGHUjN17w",
+   "yt": "V2VGHUjN17w",
+   "duration": null,
+   "title": "Video on radiation therapy, including the effects on healthy and damaged tissues and cells",
+   "src": {
+    "file": "Ch03 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

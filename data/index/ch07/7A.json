@@ -1226,5 +1226,67 @@
    "aim": "To give a practical understanding of vectors, including components of vectors and vector addition."
   }
  ],
- "notes": "No worked example for 7A.1/7A.2 (vectors vs scalars): WS7A-1 used as an adapted We do. Friction (7A-E5) is not linked to any checklist criterion but is in the study design dot point. Suggested responses for 7A-SQ11b are incomplete in the source (the value of h and the extra distance were equation objects that did not render): answer partly null. Check-in 7A-CI1.2 answer is verbatim from Suggested responses but contains an error ('a scalar only has a direction'; should be magnitude). Worksheet 7A–1 Q2 parts are mis-lettered (a, i, j) in the docx; indexed as a, b, c to match the answers. Answer images for diagram answers are in answer_img."
+ "notes": "No worked example for 7A.1/7A.2 (vectors vs scalars): WS7A-1 used as an adapted We do. Friction (7A-E5) is not linked to any checklist criterion but is in the study design dot point. Suggested responses for 7A-SQ11b are incomplete in the source (the value of h and the extra distance were equation objects that did not render): answer partly null. Check-in 7A-CI1.2 answer is verbatim from Suggested responses but contains an error ('a scalar only has a direction'; should be magnitude). Worksheet 7A–1 Q2 parts are mis-lettered (a, i, j) in the docx; indexed as a, b, c to match the answers. Answer images for diagram answers are in answer_img.",
+ "resources": [
+  {
+   "id": "7A-R1",
+   "kind": "web",
+   "url": "https://www.khanacademy.org/science/physics/one-dimensional-motion/displacement-velocity-time/v/introduction-to-vectors-and-scalars",
+   "yt": null,
+   "duration": null,
+   "title": "Video explaining vectors and scalars",
+   "src": {
+    "file": "Ch07 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "7A-R2",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=EwSHKuSxX_8",
+   "yt": "EwSHKuSxX_8",
+   "duration": null,
+   "title": "Video explaining vectors, scalars and component vectors (first 8 minutes are relevant)",
+   "src": {
+    "file": "Ch07 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "7A-R3",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/en/simulations/vector-addition",
+   "yt": null,
+   "duration": null,
+   "title": "Vector addition simulations",
+   "src": {
+    "file": "Ch07 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "7A-R4",
+   "kind": "web",
+   "url": "https://www.physicsclassroom.com/Physics-Interactives/Vectors-and-Projectiles/Vector-Addition/Vector-Addition-Interactive",
+   "yt": null,
+   "duration": null,
+   "title": "Vector addition simulations",
+   "src": {
+    "file": "Ch07 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "7A-R5",
+   "kind": "web",
+   "url": "https://www.physicsclassroom.com/Physics-Interactives/Vectors-and-Projectiles/Vector-Guessing-Game/Vector-Guessing-Game-Interactive",
+   "yt": null,
+   "duration": null,
+   "title": "Vector guessing game",
+   "src": {
+    "file": "Ch07 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

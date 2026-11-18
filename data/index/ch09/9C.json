@@ -1387,5 +1387,103 @@
    "aim": "To find the spring constant and stored elastic potential energy for a 5 cm extension of three different springs."
   }
  ],
- "notes": "No textbook worked example for spring energy transformations (9C.5, 9C.6): We do uses worksheet questions (origin adapted) plus the 'explain' skills box. Check-in Set 2 Q1 answer is just 'C' (no explanation in Suggested responses although the question asks to explain). CI1.1 Cambridge answer uses 0.1 m for 1 cm (gives 1.00e3; 1 cm = 0.01 m would give 1.00e4): flag to Rocco. Section Q7a answer writes F = ma for weight. Review-style toaster Q10 is long investigation-style. Figures 9C–9 and 9C–11 are tall full-page flow diagrams. Worksheet docx letters 4b-d and 5b-d oddly (pandoc); indexed as a-d."
+ "notes": "No textbook worked example for spring energy transformations (9C.5, 9C.6): We do uses worksheet questions (origin adapted) plus the 'explain' skills box. Check-in Set 2 Q1 answer is just 'C' (no explanation in Suggested responses although the question asks to explain). CI1.1 Cambridge answer uses 0.1 m for 1 cm (gives 1.00e3; 1 cm = 0.01 m would give 1.00e4): flag to Rocco. Section Q7a answer writes F = ma for weight. Review-style toaster Q10 is long investigation-style. Figures 9C–9 and 9C–11 are tall full-page flow diagrams. Worksheet docx letters 4b-d and 5b-d oddly (pandoc); indexed as a-d.",
+ "resources": [
+  {
+   "id": "9C-R1",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=gZ_KnZHCn4M",
+   "yt": "gZ_KnZHCn4M",
+   "duration": null,
+   "title": "Hooke’s law, elastic potential energy video and horizontal spring systems",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "9C-R2",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/sims/html/hookes-law/latest/hookes-law_en.html",
+   "yt": null,
+   "duration": null,
+   "title": "Simulation investigating Hooke’s law",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "9C-R3",
+   "kind": "web",
+   "url": "https://ophysics.com/e5.html",
+   "yt": null,
+   "duration": null,
+   "title": "Springs simulations visualising the forces, acceleration and energy transformations that occur when a horizontal spring is in motion",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "9C-R4",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/sims/html/masses-and-springs-basics/latest/masses-and-springs-basics_en.html",
+   "yt": null,
+   "duration": null,
+   "title": "Springs simulations visualising the forces, acceleration and energy transformations that occur when a vertical spring is in motion",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "9C-R5",
+   "kind": "web",
+   "url": "https://phet.colorado.edu/sims/html/masses-and-springs/latest/masses-and-springs_en.html",
+   "yt": null,
+   "duration": null,
+   "title": "Springs simulations visualising the forces, acceleration and energy transformations that occur when a vertical spring is in motion",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "9C-R6",
+   "kind": "web",
+   "url": "https://www.physicsclassroom.com/Physics-Interactives/Work-and-Energy/Mass-on-a-Spring/Mass-on-a-Spring-Interactive",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive simulation that looks at the energy transformations and velocity of a vertical spring system",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "9C-R7",
+   "kind": "web",
+   "url": "https://ophysics.com/e1.html",
+   "yt": null,
+   "duration": null,
+   "title": "Simulation that shows the conservation of energy in a spring",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  },
+  {
+   "id": "9C-R8",
+   "kind": "web",
+   "url": "https://javalab.org/en/elastic_energy_en/",
+   "yt": null,
+   "duration": null,
+   "title": "Interactive simulation investigating spring potential energy",
+   "src": {
+    "file": "Ch09 Curated internet resources.docx"
+   },
+   "start": null
+  }
+ ]
 }

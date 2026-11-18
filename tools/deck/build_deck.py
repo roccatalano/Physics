@@ -27,7 +27,7 @@ for chf in glob.glob(os.path.join(R,'data','index','ch*','ch*.json')):
     p=os.path.join(d,code+'.json')
     if not os.path.exists(p):continue
     s=json.load(open(p));SEC[code]=s;s['_dir']=d
-    for k in ['glossary','formulas','chunks','figures','worked_examples','checkins','section_questions','skills']:
+    for k in ['glossary','formulas','chunks','figures','worked_examples','checkins','section_questions','skills','resources']:
       for it in s.get(k,[]):IDX[it['id']]=dict(it,_dir=d,_kind=k,_sec=code)
     for it in (s.get('worksheet') or {}).get('questions',[]):IDX[it['id']]=dict(it,_dir=d,_kind='worksheet',_sec=code,_ws=s['worksheet'].get('title'))
 def get(i):
@@ -95,11 +95,11 @@ def build(spec):
   code=' + '.join(spec['sections']);secname=SEC[spec['sections'][0]]['title'] if spec['sections'][0] in SEC else ''
   slides=[];n=0;phases=[];seen=set()
   for sd in spec['slides']:
-    n+=1;t=sd['type'];ph=sd.get('phase',{'title':'','donow':'Do now','goals':'Learning goals','keyideas':'Key ideas','apk':'APK','new':'New knowledge','figure':'New knowledge','interactive':'New knowledge','wedo':'We do','youtry':'We do','practice':'Independent practice','exit':'Exit ticket','prac':'Prac'}[t])
+    n+=1;t=sd['type'];ph=sd.get('phase',{'title':'','donow':'Do now','goals':'Learning goals','keyideas':'Key ideas','apk':'APK','new':'New knowledge','figure':'New knowledge','interactive':'New knowledge','video':'New knowledge','wedo':'We do','youtry':'We do','practice':'Independent practice','exit':'Exit ticket','prac':'Prac'}[t])
     mn=sd.get('min')
     if ph and ph not in seen and mn:phases.append((ph,mn));seen.add(ph)
     mn=mn or dict(phases).get(ph)
-    attrs=f'data-phase="{e(ph)}" data-min="{mn or ""}"';src='';own=False;body=''
+    attrs=f'data-phase="{e(ph)}" data-min="{mn or ""}" data-sid="{e(sd.get("_sid",sd.get("id","")))}" data-type="{t}"';src='';own=False;body=''
     if t=='title':
       body=None;slides.append(('title',sd));continue
     if t=='donow':
@@ -135,16 +135,21 @@ def build(spec):
       lay='g2' if fig and txt else ''
       body=bar(code,'New knowledge',head,secname)+f'<div class="grid {lay}">{f"<div class=card style=--c:#7dd3fc>{txt}</div>" if txt else ""}{fig}</div>'
       src=srcline(get(sd['chunk'])) if sd.get('chunk') else (srcline(get(sd['figure'])) if sd.get('figure') else '');own=bool(sd.get('points'))
+    elif t=='video':
+      v=get(sd['item']);st=f'&start={v["start"]}' if v.get('start') else ''
+      body=bar(code,'New knowledge',sd.get('heading') or 'Video',secname)+f'<div class="vid"><div class="vt">{m(v["title"])}{" · "+e(v["duration"]) if v.get("duration") else ""}</div><iframe class="ixf" data-yt="{e(v["yt"])}" data-q="rel=0{st}" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe><div class="vn">Needs the internet. If it will not play here: <a href="{e(v["url"])}" target="_blank" rel="noopener">open on YouTube</a></div></div>'
+      src='Cambridge VCE Physics Units 1&amp;2, Chapter '+code[0]+' curated internet resources'
     elif t=='interactive':
       body=bar(code,'New knowledge',sd.get('heading',''),secname)+f'<iframe class="ixf" data-src="{e(sd["id"])}.html?bare" allow="fullscreen"></iframe>';src='Interactive by teacher'
     elif t in ('wedo','youtry'):
       it=get(sd['item']);we=it['_kind']=='worked_examples';label=('We do' if t=='wedo' else 'You try')
-      title=it.get('title') or (it.get('_ws') or 'Worksheet')+' Q'+it.get('n','')
+      title=it.get('title') or ((it.get('_ws') or 'Worksheet') if it['_kind']=='worksheet' else ('Section '+it.get('_sec','')+' questions' if it['_kind']=='section_questions' else 'Review questions'))+' Q'+str(it.get('n',''))
       steps=it['steps'] if we else lines(it.get('answer') or '')
+      opts=''.join(f'<div class="opt">{m(o)}</div>' for o in (it.get('options') or []))
       fig=''.join(f'<div class="fig">{img(it,p)}</div>' for p in (sd.get('img') or ([] if we else it.get('img',[])))[:1])
       body=(bar(code,label,title,secname)+
-        f'<div class="grid" style="grid-template-columns:1.05fr 1fr"><div style="display:flex;flex-direction:column;gap:14px"><div class="card" style="--c:{"#fbb040" if t=="wedo" else "#94a3c8"}"><div class="q">{m(it["question"])}</div></div>{kibox(sd.get("kib"))}{fig}</div>'
-        f'<div class="card" style="--c:#4ade80;display:flex;flex-direction:column"><h3>Working</h3><div class="work">{worklines(steps)}</div>{"<div class=ans st style=margin-top:auto>"+m(it.get("answer",""))+"</div>" if we and it.get("answer") else ""}</div></div>')
+        f'<div class="grid" style="grid-template-columns:1.05fr 1fr"><div style="display:flex;flex-direction:column;gap:14px"><div class="card" style="--c:{"#fbb040" if t=="wedo" else "#94a3c8"}"><div class="q">{m(it["question"])}</div>{f'<div class="opts">{opts}</div>' if opts else ''}</div>{kibox(sd.get("kib"))}{fig}</div>'
+        f'<div class="card" style="--c:#4ade80;display:flex;flex-direction:column"><h3>Working</h3><div class="work{' c2' if len(steps)>9 else ''}">{worklines(steps)}</div>{"<div class=ans st style=margin-top:auto>"+m(it.get("answer",""))+"</div>" if we and it.get("answer") else ""}</div></div>')
       src=srcline(it)+(', '+e(it['id']) if not we else ', Worked example '+e(it['id'][2:]))+('' if we else '. Working from the worksheet answers.')
       own=bool(sd.get('adapted'))
     elif t=='practice':
@@ -166,6 +171,7 @@ def build(spec):
   out=[]
   for t,x in slides:
     if t=='title':
+      if not phases:continue
       tags=f'<div class="tags"><span style="--k:#7dd3fc">Unit {spec["unit"]}</span><span style="--k:#fbb040">AoS {spec["aos"]}: {e(spec.get("aos_name",""))}</span><span style="--k:#f472b6">Lesson {spec["lesson"]}</span></div>'
       out.append(f'<section class="slide title" data-phase="" data-min="">{tags}<h1>{e(spec["title"])}</h1><div class="sub">{e(code)} · Cambridge VCE Physics Units 1&amp;2</div><div class="seq"><h3>Lesson sequence</h3>{seq}</div>{foot("",1)}</section>')
     else:out.append(x)
