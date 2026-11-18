@@ -19,6 +19,8 @@ Start a new chat with: "Read HANDOFF.md and CLAUDE.md in roccatalano/Physics and
 - Study design deep dive (prac hours: Unit 1 15 h, Unit 2 10 h + 7 h investigation).
 - Verdict so far: Cambridge is the stronger base; Pearson is a top-up (6 sections have no Pearson extras: 3A, 3D, 4A, 6B, 6C, 9A).
 
+* Years 7 to 10 tabs merged into one **Progression** tab: 60 Jacaranda physics subtopics in 6 strands, linked to Cambridge sections (click a card to highlight links). Gaps with no feeder: 3D, 4A, 5E, 9C.
+
 ## Next
 1. Year-by-year tabs (e.g. 2027 overview calendar like 12MAG).
 2. Lay out Unit 1 lessons on the calendar.
@@ -34,3 +36,11 @@ Start a new chat with: "Read HANDOFF.md and CLAUDE.md in roccatalano/Physics and
 - Is the lesson shape still right?
 - Step Up (from 19 Nov): start Ch 1 or an intro?
 - Unit 2 worked examples not yet indexed.
+
+## Indexing plan (agreed in discussion, 18 Nov)
+* Goal: pick sections (or success criteria) and the HTML slides and guided sheet build themselves from an index.
+* Index everything by Cambridge success criteria IDs (e.g. 1A.4).
+* We do / You try: textbook worked examples first, then worksheet questions (tagged calc/explain/recall); the rest of the worksheet + section questions are practice (12MAG style).
+* APK: from the Progression tab links.
+* Do now: generator from check-in questions, indexed by section (tag recall/calc).
+* Exit tickets: review questions matched to success criteria (start from the Chapter Checklist links), tagged quick/long.

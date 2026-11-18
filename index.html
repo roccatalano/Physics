@@ -204,7 +204,7 @@ let YEARS=[],DATA={},tab=store.get('ph:tab',11),open=new Set(store.get('ph:open'
 const V='?v='+Date.now();
 async function load(){YEARS=(await (await fetch('data/years.json'+V)).json()).years;
  for(const y of YEARS) if(y.file) DATA[y.year]=await (await fetch(y.file+V)).json(); render()}
-function tabs(){$('#tabs').innerHTML=YEARS.map(y=>`<button data-y="${y.year}" class="${tab==y.year?'on':''}">${esc(y.title)}<span class="dot ${y.file?'on':''}"></span></button>`).join('');
+function tabs(){$('#tabs').innerHTML=YEARS.map(y=>`<button data-y="${y.year}" class="${tab==y.year?'on':''}">${esc(y.title)}<span class="dot ${y.file||y.page?'on':''}"></span></button>`).join('');
  $('#tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{tab=+b.dataset.y;store.set('ph:tab',tab);filt='';render()})}
 const DR=id=>`https://drive.google.com/file/d/${id}/view`;
 function chip(f,txt){return f.id?`<a class="dl" href="${DR(f.id)}" target="_blank" rel="noopener" title="${esc(f.name)}">${esc(txt)}</a>`:`<span class="dl off">${esc(txt)}</span>`}
@@ -220,8 +220,9 @@ function views(on){const v=$('#views');if(!on){v.innerHTML='';v.style.display='n
  v.innerHTML=VIEWS.map(([k,t])=>`<button data-v="${k}" class="${VIEW==k?'on':''}">${t}</button>`).join('');v.querySelectorAll('button').forEach(b=>b.onclick=()=>{VIEW=b.dataset.v;store.set('ph:view',VIEW);render()})}
 function frame(src){$('#aosFilter').style.display='none';$('#main').innerHTML=`<iframe id="fr" src="${src}" style="width:100%;border:0;min-height:80vh;display:block"></iframe>`;
  const fr=$('#fr');fr.onload=()=>{const fit=()=>{try{fr.style.height=fr.contentDocument.documentElement.scrollHeight+'px'}catch(e){}};fit();setTimeout(fit,600)}}
-function render(){tabs();const y=YEARS.find(x=>x.year==tab)||YEARS[4];const d=DATA[y.year];
+function render(){tabs();const y=YEARS.find(x=>x.year==tab)||YEARS.find(x=>x.year==11);const d=DATA[y.year];
  $('#subinfo').textContent=`${y.title} · ${y.course}`;views(!!d);
+ if(y.page)return frame(y.page+V);
  if(d&&VIEW=='cambridge')return frame('analysis.html'+V);
  if(d&&VIEW=='sd')return frame('studydesign.html'+V);
  if(d&&VIEW=='pearson')return frame('pearson.html'+V);

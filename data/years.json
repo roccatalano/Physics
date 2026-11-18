@@ -1,7 +1,28 @@
-{"subject":"Physics","note":"One tab per year level. Physics content only (the physical sciences strand in Years 7 to 10).","years":[
-{"year":7,"title":"Year 7","course":"Science: physical sciences strand","status":"not started","file":null},
-{"year":8,"title":"Year 8","course":"Science: physical sciences strand","status":"not started","file":null},
-{"year":9,"title":"Year 9","course":"Science: physical sciences strand","status":"not started","file":null},
-{"year":10,"title":"Year 10","course":"Science: physical sciences strand","status":"not started","file":null},
-{"year":11,"title":"Year 11","course":"VCE Physics Units 1 and 2","status":"in progress","file":"data/year11.json"},
-{"year":12,"title":"Year 12","course":"VCE Physics Units 3 and 4","status":"not started","file":null}]}
+{
+ "subject": "Physics",
+ "note": "VCE Physics planner. Years 7 to 10 are one progression tab (what students bring into VCE); then one tab per VCE year.",
+ "years": [
+  {
+   "year": 710,
+   "title": "Years 7 to 10",
+   "course": "Physics progression into VCE (Jacaranda 7 to 10)",
+   "status": "in progress",
+   "file": null,
+   "page": "progression.html"
+  },
+  {
+   "year": 11,
+   "title": "Year 11",
+   "course": "VCE Physics Units 1 and 2",
+   "status": "in progress",
+   "file": "data/year11.json"
+  },
+  {
+   "year": 12,
+   "title": "Year 12",
+   "course": "VCE Physics Units 3 and 4",
+   "status": "not started",
+   "file": null
+  }
+ ]
+}
