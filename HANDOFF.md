@@ -29,7 +29,7 @@ Start a new chat with: "Read HANDOFF.md and CLAUDE.md in roccatalano/Physics and
 
 * Index copied into the repo (data/index). Slide templates + deck builder (tools/deck): 12 slide types, Do now half-sheet; template deck for 1A in lessons/.
 
-* Slide library: all 30 sections, 1,819 slides incl. 60 Cambridge video slides (lessons/library). Curated videos/websites on every section card.
+* Slide library was built then deleted (Rocco: finalise slide design first). Curated videos/websites on every section card. Lesson resources (index) now on all 30 cards, with APK (Y7-10) and Year 12 links.
 
 ## Next
 1. Year-by-year tabs (e.g. 2027 overview calendar like 12MAG).

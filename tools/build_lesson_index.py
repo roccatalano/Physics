@@ -7,7 +7,7 @@
 import json,os,sys,glob,collections
 H=os.path.dirname(os.path.abspath(__file__))
 SRC=sys.argv[1] if len(sys.argv)>1 else '/home/claude/index'
-SHOW=['1A']
+SHOW=None  # None = every section (Rocco, 18 Nov 2026)
 out={}
 for chf in sorted(glob.glob(os.path.join(SRC,'ch*','ch*.json'))):
   ch=json.load(open(chf));d=os.path.dirname(chf)
@@ -15,7 +15,7 @@ for chf in sorted(glob.glob(os.path.join(SRC,'ch*','ch*.json'))):
   rq={q['id']:q for q in ch['review_questions']}
   for code in ch['sections']:
     p=os.path.join(d,code+'.json')
-    if code not in SHOW or not os.path.exists(p):continue
+    if (SHOW and code not in SHOW) or not os.path.exists(p):continue
     s=json.load(open(p))
     tag=lambda q:{'id':q['id'],'kind':q.get('kind'),'kind2':q.get('kind2'),'size':q.get('size'),'crit':q.get('criteria',[])}
     ws=(s.get('worksheet') or {})

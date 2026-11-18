@@ -167,4 +167,7 @@ page=f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="
 <p class="src">Sources: Jacaranda Science Quest 7, 8, 9 and 10 (2021 editions, written for Victorian Curriculum 1.0), physics subtopics only; Cambridge VCE Physics Units 1&amp;2 and Units 3&amp;4 (2023) with their curriculum grids; VCE Physics Study Design 2023 to 2027. Summaries paraphrased for planning; links are a first pass (18 Nov 2026) to be checked. {len(NODES)} Jacaranda subtopics, {len(SEC)} Year 11 sections, {len(Y12D)} Year 12 sections. Year 12 reflects the current study design (Units 3 and 4: 2024 to 2027).</p>
 </main><script>{JS}</script></body></html>"""
 open(os.path.join(H,'..','progression.html'),'w').write(page)
+# for the section cards: which Years 7 to 10 subtopics feed each Year 11 section, and which Year 12 sections it leads to
+links={c:{'from':[{'y':n[0],'code':n[1],'title':n[2]} for n in NODES if c in n[5]],'to12':[{'code':x,'title':Y12D[x][0]} for x in FWD.get(c,[])]} for c in SEC}
+json.dump(links,open(os.path.join(H,'..','data','progression_links.json'),'w'),indent=1,ensure_ascii=False)
 print('edges',len(EDGES),'gaps',gaps,'new12',new12,'dashes',len(re.findall('[—–]',page)))

@@ -72,12 +72,14 @@ for un in (1,2):
     U['aos'].append(A)
   out['units'].append(U)
 IXF=os.path.join(H,'..','interactives','interactives.json');IXS=json.load(open(IXF)) if os.path.exists(IXF) else []
+PLF=os.path.join(H,'..','data','progression_links.json');PL=json.load(open(PLF)) if os.path.exists(PLF) else {}
 LI=json.load(open(os.path.join(H,'lesson_index.json'))) if os.path.exists(os.path.join(H,'lesson_index.json')) else {}
 for u in out['units']:
   for a in u['aos']:
     for c in a['chapters']:
       for s_ in c['sections']:
         if s_['code'] in LI:s_['lesson']=LI[s_['code']]
+        if s_['code'] in PL:s_['prog']=PL[s_['code']]
         rp=glob.glob(os.path.join(H,'..','data','index','ch*',s_['code']+'.json'))
         if rp:
           rs=json.load(open(rp[0])).get('resources',[])
