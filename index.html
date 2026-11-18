@@ -210,7 +210,7 @@ function render(){tabs();const y=YEARS.find(x=>x.year==tab)||YEARS[4];const d=DA
  f.innerHTML='<option value="">All areas of study</option>'+opts.map(([v,t])=>`<option value="${v}" ${filt==v?'selected':''}>${t}</option>`).join('');
  f.onchange=()=>{filt=f.value;render()};
  let h=`<div class="unit">Course plan</div><div class="legend">${d.units.map(u=>u.aos.map(a=>`<span class="a${aosKey(u.n,a.n)}"><i style="background:var(--ac)"></i>U${u.n} AoS ${a.n}</span>`).join('')).join('')}</div>
- <div class="note">Built on the <b>${esc(d.source)}</b> resources. Lessons are not planned yet: each chapter shows what Cambridge provides, section by section. <a class="ext" href="analysis.html">How the Cambridge resources are meant to be used ›</a></div>
+ <div class="note">Built on the <b>${esc(d.source)}</b> resources. Lessons are not planned yet: each chapter shows what Cambridge provides, section by section. <a class="ext" href="analysis.html">How the Cambridge resources are meant to be used ›</a> · <a class="ext" href="studydesign.html">Study design: planning summary ›</a></div>
  <div class="ctl2"><button id="uall">Open all chapters</button><button id="unone">Close all chapters</button></div>`;
  for(const u of d.units){h+=`<div class="unitbar">Unit ${u.n} <span>${esc(u.title)}</span></div>`;
   for(const a of u.aos){if(filt&&filt!=`${u.n}-${a.n}`)continue;const k=aosKey(u.n,a.n),ud=`ud${u.n}-${a.n}`;

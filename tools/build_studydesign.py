@@ -1,0 +1,71 @@
+# Builds studydesign.html: a planning summary of the VCE Physics Study Design (Units 1 and 2: 2023 to 2027;
+# Units 3 and 4: 2024 to 2027). Source: Curriculum and Study Design\2023-VCE-Physics-Study-Design.pdf (read 18 Nov 2026).
+# Paraphrased for planning. It does not reproduce the study design.
+import os,html,re
+H=os.path.dirname(os.path.abspath(__file__));e=html.escape
+CSS=open(os.path.join(H,'planner_base.css')).read()+"""
+main{max-width:1100px}.lead{color:var(--muted);font-size:15px;max-width:850px}
+h2{font-size:20px;margin:34px 0 10px;border-bottom:2px solid var(--ink);padding-bottom:4px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.box{background:#fff;border:1px solid var(--line);border-left:6px solid var(--ac,#1f4fa0);border-radius:10px;padding:12px 14px}
+.box h3{margin:0 0 6px;font-size:15px}.box p,.box li{font-size:13.5px;line-height:1.5;margin:4px 0}.box ul{padding-left:18px;margin:4px 0}
+.k{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+.big{font-size:26px;font-weight:700;color:var(--ac,#1f4fa0)}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.st{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center}.st b{display:block;font-size:24px;color:#1f4fa0}.st span{font-size:12px;color:var(--muted)}
+table.t{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:13.5px}
+table.t th{background:#fbfaf6;text-align:left;padding:8px 10px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--line)}
+table.t td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}.ok{color:#1a6b2a;font-weight:600}.warn{color:#a32d2d;font-weight:600}.amb{color:#8a5a00;font-weight:600}
+.flag{background:#fff;border:1px solid var(--line);border-left:6px solid #a32d2d;border-radius:10px;padding:10px 14px;margin-bottom:8px;font-size:13.5px}
+.src{font-size:12px;color:var(--muted);margin-top:30px}nav.crumb{font-size:13px;margin:6px 0 14px}nav.crumb a{color:#1f4fa0}
+"""
+def box(ac,title,body):return f'<div class="box" style="--ac:{ac}"><h3>{title}</h3>{body}</div>'
+def ul(xs):return '<ul>'+''.join(f'<li>{x}</li>' for x in xs)+'</ul>'
+U1=[('#1f4fa0','AoS 1 · How are light and heat explained?','Outcome 1: model, investigate and evaluate the wave nature of light, thermal energy, and how matter emits and absorbs light.',16,'Ch 1 and 2 (1A to 2B)','Contexts named: mirages and rainbows, optical fibres in communication, global warming and climate change.'),
+ ('#b4532a','AoS 2 · How is energy from the nucleus utilised?','Outcome 2: explain, apply and evaluate nuclear radiation, radioactive decay and nuclear energy.',12,'Ch 3 and 4 (3A to 4C)','Contexts named: radioisotopes in medical therapy, and whether nuclear energy is viable for Australia.'),
+ ('#2b7a3d','AoS 3 · How can electricity be used to transfer energy?','Outcome 3: investigate and apply a basic DC circuit model to battery devices and household systems, model circuits mathematically, and describe safe use of electricity.',19,'Ch 5 and 6 (5A to 6C)','Students must run practical investigations of circuit components and test the mathematical models experimentally.')]
+U2=[('#7a3fa0','AoS 1 · How is motion understood?','Outcome 1: investigate, analyse, mathematically model and apply force, energy and motion.',19,'Ch 7 to 9 (7A to 9C)','Includes vectors, constant acceleration equations, non-uniform motion from graphs, momentum and impulse, Newton\'s laws, work, Hooke\'s law, energy, power, efficiency, torque and equilibrium. Ends with a <b>case study</b> applying motion (sport, vehicle safety, a device or a structure).'),
+ ('#1d7a86','AoS 2 · Options','Outcome 2: research the physics of one option and use it to argue a stance, response or solution to a contemporary issue.','18 options','Cambridge has 11 of the 18','<b>Each student selects one option.</b> A range of investigation methodologies can be used.'),
+ ('#9a6b00','AoS 3 · How do physicists investigate questions?','Outcome 3: draw an evidence-based conclusion from primary data generated in a student-adapted or student-designed investigation.',12,'No Cambridge files (placeholders only)','The question can come from AoS 1 motion or from the student\'s option. Key knowledge covers investigation design, scientific evidence and science communication.')]
+def aoscards(L):return '<div class="g3">'+''.join(box(ac,t,f'<p>{o}</p><p class="k">Key knowledge points</p><div class="big">{n}</div><p class="k">Cambridge</p><p>{c}</p><p>{x}</p>') for ac,t,o,n,c,x in L)+'</div>'
+OPT=[('2.1','climate change',1,0),('2.2','fusion vs fission as energy sources',0,1),('2.3','how heavy things fly',1,0),('2.4','forces on structures and materials',1,0),('2.5','forces on the human body',0,1),('2.6','radiation and human health',0,0),('2.7','electricity in the human body',0,0),('2.8','enhancing human vision',1,0),('2.9','physics of photography',1,0),('2.10','musical instruments',1,1),('2.11','ball sports performance',1,1),('2.12','AC to charge a DC device',0,1),('2.13','stars and black holes',1,0),('2.14','life beyond the Solar System',1,0),('2.15','traditional artefacts, knowledge and techniques',1,1),('2.16','particle accelerators',0,0),('2.17','origins of matter',1,0),('2.18','contemporary physics research in our region',0,0)]
+opt='<table class="t"><tr><th>Option</th><th>Topic</th><th>Cambridge</th><th>Pearson (on the drive)</th></tr>'+''.join(f'<tr><td>{n}</td><td>{e(t)}</td><td class="{"ok" if c else "warn"}">{"yes" if c else "no"}</td><td class="{"ok" if p else ""}">{"yes" if p else ""}</td></tr>' for n,t,c,p in OPT)+'</table>'
+TASKS=['report of a lab or fieldwork activity that generates primary data','reflective annotations of practicals in the logbook','analysis and evaluation of primary and/or secondary data','critique of an experimental design, process or apparatus','modelling or simulation activity','design, build, test and evaluate a device','explanation of a physics device, design or innovation','physics-referenced response to an issue','report on a physics phenomenon','media analysis or response','infographic','problem-solving with physics concepts and skills','report applying physics to a real-world context','analysis with calculations in real-world contexts','comparison and evaluation of two solutions, explanations or methods','scientific poster']
+PRAC=[('Unit 1, AoS 1 to 3','15 h','12 lessons','14 pracs available','<span class="ok">Fits</span>: 12 of the 14 is the minimum; all 14 gives about 18 h.'),
+      ('Unit 2, AoS 1 and 2','10 h','8 lessons','9 pracs available (Ch 7 to 9)','<span class="ok">Fits</span>: Cambridge\'s 9 motion pracs give about 12 h.'),
+      ('Unit 2, AoS 3','7 h','6 lessons','none','<span class="amb">To plan</span>: the student investigation needs at least 6 lessons of its own.')]
+prac='<table class="t"><tr><th>Where</th><th>Minimum class time</th><th>At 79 min a lesson</th><th>Cambridge</th><th>Verdict</th></tr>'+''.join(f'<tr><td>{a}</td><td>{b}</td><td>{c}</td><td>{d}</td><td>{x}</td></tr>' for a,b,c,d,x in PRAC)+'</table>'
+BUD=[('Lessons available (2027 calendar)','48','46'),('Instruction time (at 79 min)','63 h <span class="ok">(min 50 h)</span>','61 h <span class="ok">(min 50 h)</span>'),('Exam revision week','3','3'),('Buffer, 1 per AoS','3','3'),('SAC revision, 1 per SAC','3','3'),('Prac lessons (study design minimum)','12','8 + 6 for the investigation'),('Chapter tests, 1 per chapter','6','3'),('<b>Left for theory lessons</b>','<b>21</b> for 21 sections','<b>20</b> for 9 sections + the option study'),('If SACs also take class time','18','17')]
+bud='<table class="t"><tr><th></th><th>Unit 1</th><th>Unit 2</th></tr>'+''.join(f'<tr><td>{a}</td><td>{b}</td><td>{c}</td></tr>' for a,b,c in BUD)+'</table>'
+KSS=[('Develop aims and questions, formulate hypotheses and make predictions',''),('Plan and conduct investigations','choose a methodology, design methods, control variables, record changes in the logbook'),('Comply with safety and ethical guidelines','risk assessments informed by safety data sheets'),('Generate, collate and record data','qualitative and quantitative, using a logbook'),('Analyse and evaluate data and investigation methods','uncertainty, error, significant figures, accuracy, precision, validity'),('Construct evidence-based arguments and draw conclusions',''),('Analyse, evaluate and communicate scientific ideas','conventions, units, representations, referencing')]
+kss='<div class="g2">'+''.join(box('#1f4fa0',e(a),f'<p>{e(b)}</p>' if b else '') for a,b in KSS)+'</div>'
+METH=['case study','classification and identification','experiment','fieldwork','literature review','modelling','product, process or system development','simulation']
+U34=[('Unit 3 · How do fields explain motion and electricity?','AoS 1 motion in two dimensions, AoS 2 fields (gravitational, electric, magnetic), AoS 3 electricity generation. 3 SAC tasks, 40 marks each. <b>30%</b> of the study score.'),
+     ('Unit 4 · How have creative ideas and investigation revolutionised thinking in physics?','AoS 1 how understanding of light, matter and motion has changed (including special relativity), AoS 2 student-designed investigation reported as a scientific poster (max 600 words) plus logbook. 2 tasks, 40 marks each. <b>20%</b> of the study score.'),
+     ('Exam','One end-of-year exam, 2.5 hours, on all Units 3 and 4 key knowledge and key science skills. <b>50%</b> of the study score.'),
+     ('Conditions','Each SAC task type can be used only once across Units 3 and 4. Written tasks about 50 minutes; oral or multimodal about 5 minutes. At least 15 h of practical work in Unit 3; in Unit 4, 5 h in AoS 1 and 10 h for the investigation.')]
+FLAGS=['<b>Units 1 and 2 assessment is a school decision.</b> No SAC types or marks are set by VCAA, but every outcome must be assessed for an S, and tasks should mainly be done in class in limited time.',
+ '<b>Unit 2 options are a student choice.</b> Cambridge only supports 11 of the 18. Offering a short list (e.g. 3 or 4 options) keeps it manageable; Pearson on the drive adds 2.2, 2.5 and 2.12.',
+ '<b>Unit 2 AoS 1 needs a case study</b> (motion in sport, vehicle safety, a device or a structure). Check whether Cambridge Ch 7 to 9 includes one.',
+ '<b>Logbooks</b> are required in every unit for satisfactory completion. Teachers must sight them regularly, especially for Unit 2 Outcomes 2 and 3.',
+ '<b>Practice exam check:</b> the Cambridge practice exam\'s DC motor question is Unit 3 content (AoS 2 fields). Remove it before using the paper for Unit 1 or 2.',
+ '<b>Group work:</b> investigations may be done in groups, but anything assessed must be completed individually.']
+page=f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Physics · VCE Physics Study Design: planning summary</title><style>{CSS}</style></head><body>
+<div class="top"><header><h1>Physics Planner</h1></header></div><main>
+<nav class="crumb"><a href="./">Physics Planner</a> › Year 11 › Study design</nav>
+<div class="unit">VCE Physics Study Design: what it means for planning</div>
+<p class="lead">A planning summary of the VCE Physics Study Design (Units 1 and 2 accredited 2023 to 2027, Units 3 and 4 2024 to 2027): the structure, the rules that affect the timetable, how Cambridge lines up, and what it does to the 2027 lesson budget.</p>
+<div class="stats"><div class="st"><b>50 h</b><span>minimum instruction per unit</span></div><div class="st"><b>3</b><span>outcomes per unit (Units 1 and 2)</span></div><div class="st"><b>15 h</b><span>minimum practical, Unit 1</span></div><div class="st"><b>10 h + 7 h</b><span>minimum practical, Unit 2</span></div><div class="st"><b>1</b><span>logbook per student, every unit</span></div></div>
+<h2>Unit 1 · How is energy useful to society?</h2>{aoscards(U1)}
+<h2>Unit 2 · How does physics help us to understand the world?</h2>{aoscards(U2)}
+<h2>Unit 2 options: who covers what</h2>{opt}
+<h2>Assessment in Units 1 and 2</h2><div class="g2">{box('#1f4fa0','The rules','<p>All assessment is school-based and the procedures are a school decision. Students must show achievement of all three outcomes in each unit. Assessment should be part of normal teaching, done mainly in class and in limited time. Where students choose between tasks, the tasks must be of similar scope and demand.</p><p>Unit 2 Outcome 3 must be assessed by a report of the investigation: a poster, practical report, oral or digital presentation.</p>')}{box('#2b7a3d','Task types allowed (Outcomes 1 to 3 in Unit 1; Outcomes 1 and 2 in Unit 2)',ul([e(t) for t in TASKS]))}</div>
+<h2>Practical work</h2><p class="lead" style="margin-bottom:10px">Practical work can include lab experiments, fieldwork, simulations and modelling. Pracs are one lesson each (decided 18 Nov).</p>{prac}
+<h2>The 2027 lesson budget, with the study design minimums</h2>{bud}<p class="lead" style="margin-top:8px">Unit 1 has almost exactly one lesson per Cambridge section, so sections that need two (e.g. 1C, 5C, 5E, 6A) need time found elsewhere: one chapter test per AoS instead of per chapter frees 3 lessons, and running SACs in the SAC free periods protects the 3 SAC lessons.</p>
+<h2>Key science skills (all units)</h2>{kss}
+<h2>Investigation methodologies</h2><p class="lead">Investigations must draw on these: {e(', '.join(METH))}.</p>
+<h2>Looking ahead: Units 3 and 4 (Year 12 tab)</h2><div class="g2">{''.join(box('#7a3fa0',e(a),f'<p>{b}</p>') for a,b in U34)}</div>
+<h2>Flags for planning</h2>{''.join(f'<div class="flag">{f}</div>' for f in FLAGS)}
+<p class="src">Source: VCAA, VCE Physics Study Design, Units 1 and 2: 2023 to 2027; Units 3 and 4: 2024 to 2027 (Curriculum and Study Design folder on the shared drive). Summarised for planning on 18 Nov 2026; check the study design itself for exact wording. Lesson counts use the 2027 EKC School Planner and 79-minute lessons.</p>
+</main></body></html>"""
+open(os.path.join(H,'..','studydesign.html'),'w').write(page)
+print('dashes',len(re.findall('[—–]',page)))

@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Physics · VCE Physics Study Design: planning summary</title><style>
+
+:root{--bg:#f6f5f1;--card:#fff;--ink:#1f1e1c;--muted:#6b6a65;--line:#e2e0d8;--accent:#2f5fd0;
+--lesson:#eef3fd;--lesson-i:#1d4596;--prac:#e6f5ee;--prac-i:#0f6e56;--sac:#fcebeb;--sac-i:#a32d2d;
+--review:#faeeda;--review-i:#854f0b;--other:#f1efe8;--other-i:#5f5e5a}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);font-size:14px}
+.top{position:sticky;top:0;z-index:5}
+header{background:var(--card);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header h1{font-size:17px;font-weight:600;margin:0 12px 0 0}
+.tabs button,.ctl button,.ctl select{font:inherit;border:1px solid var(--line);background:var(--card);border-radius:8px;padding:6px 12px;cursor:pointer}
+.tabs button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ctl{margin-left:auto;display:flex;gap:8px;align-items:center}
+.subbar{background:#fbfaf6;border-bottom:1px solid var(--line);padding:6px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.subbar .toggle{margin:0;border:0;border-radius:0;gap:2px}.subbar .toggle button{border-radius:6px;padding:5px 14px;color:var(--muted)}
+.subbar .toggle button.on{background:var(--card);color:var(--ink);box-shadow:inset 0 -2px 0 var(--ink)}
+.ctable{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:10px}
+.ctable th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);background:#fbfaf6;padding:8px 10px;border-bottom:1px solid var(--line)}
+.ctable td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}.ctable tr:last-child td{border-bottom:0}
+.ctable select,.ctable textarea{font:inherit;border:1px solid var(--line);border-radius:6px;padding:4px 6px;background:var(--card)}.ctable textarea{width:100%;min-height:36px;font-size:13px}
+.ctable td details{font-size:13px}.ctable td details ul{margin:4px 0;padding-left:18px}
+.st-written{color:var(--prac-i)}.st-drafting{color:var(--review-i)}.st-planned{color:var(--muted)}
+main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
+.unit{font-size:20px;font-weight:600;margin:28px 0 4px}
+.aos{margin:18px 0 8px;padding:6px 0;border-top:2px solid var(--ink);display:flex;justify-content:space-between;gap:12px}
+.aos b{font-size:15px}.aos span{color:var(--muted)}
+.week{display:grid;grid-template-columns:110px repeat(3,minmax(0,1fr));gap:10px;margin-bottom:10px}
+.week.now .wl b{color:var(--accent)}
+.wl{padding-top:6px;color:var(--muted);font-size:12px}.wl b{display:block;color:var(--ink);font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--c);border-radius:10px;padding:9px 11px;cursor:pointer;min-height:78px;display:flex;flex-direction:column;gap:4px}
+.card:hover{border-color:var(--muted);border-left-color:var(--c)}
+.card.open{outline:2px solid var(--accent)}
+.meta{font-size:11px;color:var(--muted);display:flex;justify-content:space-between}
+.ttl{font-weight:500;line-height:1.3}
+.bar{height:4px;background:var(--line);border-radius:4px;margin-top:auto}.bar i{display:block;height:100%;background:var(--prac-i);border-radius:4px}
+.t-lesson{--c:var(--lesson-i)}.t-prac{--c:var(--prac-i)}.t-sac{--c:var(--sac-i)}.t-review{--c:var(--review-i)}.t-holiday{--c:#2f9e8f}
+.card.t-tbc{--c:var(--line);border-style:dashed;background:transparent;color:var(--muted)}.t-tbc .tag{--b:var(--other);--c:var(--muted)}
+.card.span3{grid-column:span 3;align-items:center;justify-content:center;text-align:center;min-height:90px}.card.span3 .ttl{font-size:17px;font-weight:600}.card.span3 .meta,.card.span3 .bar{display:none}
+.t-consolidation,.t-buffer,.t-options,.t-investigation{--c:var(--other-i)}
+.tag{font-size:11px;padding:1px 7px;border-radius:6px;background:var(--b);color:var(--c)}
+.t-lesson .tag{--b:var(--lesson)}.t-prac .tag{--b:var(--prac)}.t-sac .tag{--b:var(--sac)}.t-review .tag{--b:var(--review)}.t-holiday .tag{--b:#e0f4f0}
+.t-consolidation .tag,.t-buffer .tag,.t-options .tag,.t-investigation .tag{--b:var(--other)}
+.detail{grid-column:2/-1;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.detail h2{font-size:17px;margin:0 0 2px}.detail h3{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:14px 0 4px}
+.katex{font-size:1.05em;white-space:nowrap}
+.detail ul{margin:0;padding-left:18px;line-height:1.55}
+.detail label{display:flex;gap:8px;align-items:center;padding:3px 0;cursor:pointer}
+.detail textarea{width:100%;min-height:70px;font:inherit;border:1px solid var(--line);border-radius:8px;padding:8px}
+.toggle{display:inline-flex;margin:16px 0 2px;border:1px solid var(--line);border-radius:8px;overflow:hidden}.toggle button{font:inherit;border:0;background:var(--card);padding:6px 16px;cursor:pointer}.toggle button.on{background:var(--ink);color:#fff}
+.ovbtn{font:inherit;font-size:12px;margin-left:10px;border:1px solid var(--line);background:var(--card);border-radius:6px;padding:3px 10px;cursor:pointer}
+.ov{background:#fbfaf6;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:0 0 14px;display:grid;grid-template-columns:1fr 1.3fr;gap:20px}
+.ov h3{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:12px 0 4px}.ov ol,.ov ul{margin:0;padding-left:20px;line-height:1.55}
+@media(max-width:760px){.ov{grid-template-columns:1fr}}
+.nest{border:1px solid var(--line);border-radius:10px;margin:10px 0;background:var(--card)}
+.nest>summary{list-style:none;cursor:pointer;padding:9px 12px;display:flex;justify-content:space-between;align-items:center;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600}
+.nest>summary::-webkit-details-marker{display:none}.nest>summary:after{content:"▾";font-size:12px;transition:transform .15s}.nest:not([open])>summary:after{transform:rotate(-90deg)}
+.nest>summary .cnt{font-weight:400;text-transform:none;letter-spacing:0;margin-left:auto;margin-right:8px}
+.nest>.nb{padding:0 14px 12px;font-size:13px;line-height:1.55}.nest .nb ul{margin:4px 0;padding-left:18px}.nest .nb h4{margin:8px 0 2px;font-size:12px;color:var(--ink)}
+.nest.n-mat{border-color:#2f9e8f;background:#f0faf8}.nest.n-mat>summary{color:#1d7266}.mat{margin:4px 0;padding-left:0;list-style:none}.mat li{padding:5px 0;border-bottom:1px dashed #cfe9e4}.mat li:last-child{border-bottom:0}.mat .mrow{display:flex;align-items:center;gap:4px}.mat .mrow .ms{margin:0 0 0 auto}.mat .ms{display:inline-block;font-size:10.5px;font-weight:600;padding:1px 6px;border-radius:8px;margin-right:4px;background:#e4e4e4;color:#555}.mat .ms.draft{background:#fbe7b5;color:#7a5a00}.mat .mlink{font-size:11.5px;font-weight:600;color:#1d7266;text-decoration:none;border:1px solid #9fd8cd;border-radius:8px;padding:1px 7px;margin-left:2px}.mat .mlink:hover{background:#c9eedf}.mat .ms.ready{background:#c9eedf;color:#14684f}.mat .copies{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:5px}.mat .copy{border:1px solid #9fd8cd;border-radius:8px;background:#fff;padding:5px 7px;display:flex;flex-direction:column;gap:3px}.mat .copy .cl{display:flex;gap:4px;margin-top:auto}.mat .copy .mlink{margin-left:0}.nest.n-cfat{border-color:#8a6ad8;background:#f7f4fe}.nest.n-cfat>summary{color:#5b3fb0}
+.wedo{margin:4px 0;padding-left:0;list-style:none}.wedo li{padding:6px 0;border-bottom:1px dashed var(--line)}.wedo li:last-child{border-bottom:0}.wedo .ytry{font-size:12px;color:var(--prac-i);margin-top:2px}.apk{margin:4px 0;padding-left:0;list-style:none}.apk li{padding:5px 0;border-bottom:1px dashed var(--line)}.apk li:last-child{border-bottom:0}.apk .ak{display:inline-block;font-size:10.5px;font-weight:600;padding:1px 6px;border-radius:8px;background:var(--line);margin-right:4px}.apk .ak.ex{background:#f3e3c3}.wedo .cgo{display:inline-block;font-size:11px;color:var(--muted);margin-left:6px;white-space:nowrap}.wedo .ytry.none{color:var(--muted);font-style:italic}
+.sk{border:1px solid var(--line);border-radius:8px;margin:6px 0;background:var(--bg)}.sk>summary{list-style:none;cursor:pointer;padding:8px 10px;display:flex;justify-content:space-between;gap:8px;font-weight:500}
+.sk>summary>span:first-child{flex:1;text-align:left}.sk>summary::-webkit-details-marker{display:none}.sk>summary .cnt{font-size:11px;color:var(--muted);font-weight:400;white-space:nowrap}.sk>summary:before{content:"▸";margin-right:4px;color:var(--muted)}.sk[open]>summary:before{content:"▾"}
+.sk.calc{background:#fff}.sk .casg{padding:0 0 6px}.casg{display:grid;grid-template-columns:1fr 1fr;gap:12px}.casg h4{margin:6px 0 6px}@media(max-width:760px){.casg{grid-template-columns:1fr}}
+.vid{margin-bottom:10px}.vid .vt{font-size:12px;line-height:1.35;margin:4px 0 2px}.vid a{font-size:12px}
+.yt{position:relative;display:block;width:100%;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#000;cursor:pointer;border:0;padding:0}
+.yt img{width:100%;height:100%;object-fit:cover;opacity:.85}.yt:after{content:"▶";position:absolute;inset:0;margin:auto;width:46px;height:32px;border-radius:8px;background:#c4302b;color:#fff;font-size:16px;display:flex;align-items:center;justify-content:center}
+.yt.on:after{display:none}.yt iframe{width:100%;height:100%;border:0}
+.pracbox{margin-top:14px;border:1.5px solid var(--prac-i);background:var(--prac);border-radius:10px;padding:10px 14px}.pracbox ul{margin:6px 0;padding-left:18px}
+.tags{display:flex;gap:4px}.tag.cfat{background:#efe9fb;color:#5b3fb0;font-weight:600}
+.card.has-cfat{box-shadow:inset 0 -3px 0 #8a6ad8}
+.cfx{width:100%;border-collapse:collapse;font-size:12px;margin:4px 0}.cfx th{text-align:left;font-weight:600;color:#5b3fb0;border-bottom:1.5px solid #cfc2f0;padding:3px 4px}.cfx td{border-bottom:1px solid #e6def9;padding:3px 4px;vertical-align:top}.cfx td:first-child{white-space:nowrap}.cfx td.n{text-align:center;font-weight:600}.cfx-sum{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;font-size:12px}.cfx-sum span{background:#efe9fb;color:#5b3fb0;border-radius:8px;padding:1px 8px}.cfx-sum .cfx-pill{font-weight:700;background:#8a6ad8;color:#fff}.cfatbox{margin-top:14px;border:1.5px solid #8a6ad8;background:#f7f4fe;border-radius:10px;padding:10px 14px}.cfatbox h3{margin-top:10px}.cfatbox summary{cursor:pointer;font-size:14px}
+.arules,.acard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:10px 0}
+.arules h3,.acard h3{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:12px 0 4px}
+.arules ul,.acard ul{margin:0;padding-left:18px;line-height:1.6}.acard p{margin:0;line-height:1.5}
+.ahead{display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding-bottom:8px;font-size:15px}
+.agrid{display:grid;grid-template-columns:1fr 1.2fr;gap:24px}.goto{font:inherit;font-size:12px;border:1px solid var(--line);background:var(--bg);border-radius:6px;padding:3px 10px;cursor:pointer}
+.src{font-size:11px;padding:1px 6px;border-radius:5px;background:var(--other);color:var(--other-i)}.src-cambridge{background:var(--prac);color:var(--prac-i)}.src-mr{background:var(--lesson);color:var(--lesson-i)}.src-pearson{background:var(--review);color:var(--review-i)}
+.nosol{color:var(--sac-i)}.gaps li{color:var(--review-i)}details summary{cursor:pointer}
+@media(max-width:760px){.agrid{grid-template-columns:1fr}}
+.seq{border-left:1px solid var(--line);padding-left:22px}
+.seqhead{display:flex;justify-content:space-between;align-items:baseline}
+.seqempty{color:var(--muted);font-style:italic;border:1px dashed var(--line);border-radius:10px;padding:30px;text-align:center}
+.goals{background:var(--lesson);color:var(--lesson-i);border-radius:8px;padding:8px 12px;font-size:13px}.goals ul{margin:4px 0 0;padding-left:18px}
+.steps{list-style:none;padding:0;margin:10px 0 0}
+.step{display:grid;grid-template-columns:54px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.stime{font-size:12px;font-weight:600;color:var(--ink)}.stime span{font-weight:400;color:var(--muted)}
+.sphase{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--c,var(--muted));font-weight:600}
+.stitle{font-weight:500}.sdetail{font-size:13px;line-height:1.5;margin-top:2px}.sres{font-size:12px;color:var(--muted);margin-top:4px}.sres:before{content:"Resources: "}
+.donow{margin:6px 0 0;padding-left:18px;font-size:13px;line-height:1.5}.donow li{margin-bottom:4px}
+.ph-apk{--c:#b5487a}.ph-learning,.ph-course{--c:var(--muted)}
+.ph-do-now{--c:var(--review-i)}.ph-new{--c:var(--lesson-i)}.ph-guided{--c:var(--lesson-i)}.ph-apply{--c:var(--prac-i)}.ph-exit{--c:#5b3fb0}
+.vocab{display:flex;flex-wrap:wrap;gap:5px}.vocab span{font-size:12px;background:var(--other);border-radius:6px;padding:2px 8px}
+@media(max-width:760px){.seq{border-left:0;padding-left:0}}
+.sub{color:var(--muted);font-size:12px}
+.empty{color:var(--muted);font-style:italic}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:6px}
+.legend span{display:flex;gap:5px;align-items:center}.legend i{width:10px;height:10px;border-radius:3px;background:var(--c)}
+.placeholder{background:var(--card);border:1px dashed var(--muted);border-radius:12px;padding:40px;text-align:center;color:var(--muted);margin-top:30px}
+@media(max-width:760px){.week{grid-template-columns:1fr}.detail{grid-column:1;grid-template-columns:1fr}}
+
+.ph-cfat{--c:#5b3fb0}.ph-prac,.ph-analysis{--c:var(--prac-i)}.ph-pre-lab,.ph-logbook{--c:var(--review-i)}
+.res{margin:0;padding-left:18px;line-height:1.55}.res .path{display:block;font-size:11px;color:var(--muted);word-break:break-all}
+.teach{margin-top:8px;padding:8px 10px;background:var(--bg);border-radius:8px}.teach h3{margin-top:0}
+.scope{font-size:12px;color:var(--muted)}
+.wdates{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+
+/* planner additions */
+.week.chap{grid-template-columns:110px minmax(0,1fr);margin-bottom:6px;align-items:start}.week.chap .card{min-height:0}.week.chap .wl{height:0;overflow:visible}
+.wl .cn{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+.t-check{--c:var(--sac-i)}.t-check .tag{--b:var(--sac)}
+.t-buffer{--c:var(--other-i)}.card.t-buffer{border-style:dashed;background:transparent;color:var(--muted)}
+.t-blocked{--c:var(--line)}.card.t-blocked{background:#f1efe8;color:var(--muted);cursor:default}
+.t-anchor{--c:var(--review-i)}.t-anchor .tag{--b:var(--review)}
+.card.shell .ttl{color:var(--muted);font-style:italic}
+.revrow{color:var(--muted);font-size:12px;margin:-2px 0 12px 120px}
+.shape{list-style:none;padding:0;margin:10px 0 0}
+.shape li{display:grid;grid-template-columns:96px 1fr;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px}
+.shape .sphase{padding-top:1px}
+.shape .none{color:var(--muted);font-style:italic}
+.warn{background:var(--sac);color:var(--sac-i);border-radius:10px;padding:8px 12px;margin:10px 0;font-size:13px}
+.ystats{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+.ystats div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 12px}.ystats b{font-size:17px;display:block}
+.placeholder ul{text-align:left;display:inline-block;margin:10px 0 0;line-height:1.7}
+.hwrow{display:flex;gap:10px;align-items:baseline}.hwrow .hws{flex:1;min-width:0;white-space:nowrap;overflow:hidden}.hwrow b{white-space:nowrap}
+.chgrid{display:grid;grid-template-columns:110px minmax(0,1.6fr) minmax(0,1fr);gap:10px;align-items:start;margin-bottom:14px}
+.col{display:flex;flex-direction:column;gap:6px}.colh{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600}
+.chgrid .card{min-height:0}.chgrid .detail{grid-column:auto;grid-template-columns:1fr;gap:10px}
+.t-cfat{--c:#8a6ad8}.card.fa{cursor:default}.card.fa .ms{font-size:10.5px;font-weight:600;padding:1px 6px;border-radius:5px}
+.card.fa .ms.draft{background:var(--review);color:var(--review-i)}.card.fa .ms.ready{background:var(--prac);color:var(--prac-i)}
+.cpl.cp2{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:4px}.cpc{border:1px solid #d6d0e8;border-radius:8px;background:#fff;padding:5px 7px;display:flex;flex-direction:column;gap:4px}.cpc a{margin-left:0!important;margin-right:3px}.cpl{display:flex;flex-direction:column;gap:3px;font-size:12px}.cpl a{color:#1d7266;text-decoration:none;border:1px solid #9fd3c9;border-radius:6px;padding:0 6px;margin-left:3px;font-weight:600}
+@media(max-width:760px){.chgrid{grid-template-columns:1fr}}
+.nest.n-test{border-color:#d9a3a3;background:#fdf5f5}.nest.n-test>summary{color:var(--sac-i)}.n-test .cfx th{color:var(--sac-i);border-color:#e8c4c4}.n-test .cfx td{border-color:#f1dede}
+/* Course plan: date-free vertical list of chapter cards (Rocco 17 Nov); dates live on the Year plan tabs */
+.ctl2{display:flex;gap:8px;margin:14px 0 4px}.ctl2 button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);border-radius:8px;padding:5px 12px;cursor:pointer}
+.trow{margin:14px 0 18px}.trh{font-weight:700;font-size:15px;border-bottom:2px solid var(--ink);padding:4px 0;margin-bottom:10px;display:flex;justify-content:space-between}.trh span{font-weight:400;color:var(--muted);font-size:13px}.trh span.over{color:#a32d2d;font-weight:600}
+.udrow .nw{white-space:nowrap}
+.nest.cfx>summary{text-transform:none;letter-spacing:0;font-size:13px;color:var(--ink);gap:8px}.nest.cfx>summary .cft{flex:1;font-weight:400}.nest.cfx>summary .ms{margin-left:auto;font-size:10.5px;font-weight:600;padding:1px 6px;border-radius:8px;background:#fbe7b5;color:#7a5a00}.nest.cfx>summary .ms.ready{background:#c9eedf;color:#14684f}
+.vlist{display:flex;flex-direction:column;gap:8px}.vlist>.udcard,.vlist>.ucard{width:auto;max-width:none;align-self:stretch}
+.ucards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.ucard{background:#fff;border:1px solid #ddd;border-left:6px solid var(--ac);border-radius:8px;padding:10px 12px;cursor:pointer;transition:box-shadow .15s}.ucard:hover{box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.ucard.open{background:var(--acb);box-shadow:inset 0 0 0 2px var(--ac)}
+.a1{--ac:#1f4fa0;--acb:#eef3fb}.a2{--ac:#b5532a;--acb:#fbf0ea}.a3{--ac:#2e8b3e;--acb:#eef7ef}.a4{--ac:#2e7f8b;--acb:#ecf6f7}
+.uc1{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);font-weight:700}.uname{font-weight:700;font-size:15px;margin:3px 0}.umeta{font-size:12px;color:var(--muted)}
+.ubad{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px}.ubad span{font-size:11px;padding:1px 7px;border-radius:9px;background:#eee;color:#888}.ubad span.y{background:#dff1e2;color:#1a6b2a}.ubad span.p{background:#fdf1d8;color:#8a5a00}
+.uspan{font-size:12px;color:#b5532a;font-weight:600;margin-top:4px}
+.uopen{margin-top:12px;border:1px solid #ddd;border-radius:10px;padding:6px 12px 12px;background:#fcfcfa}.uopen .aos{margin-top:8px}
+.evcard{background:#fdf3e6;border:1px dashed #e0a96d;border-radius:8px;padding:10px 12px;color:#7a4510}.evcard .uc1,.evcard .umeta{color:#a0662a}.evcard.sac{background:#fbeaea;border-color:#d98c8c;color:#7a1f1f}.evcard.sac .uc1,.evcard.sac .umeta{color:#a34a4a}
+.udcard{background:var(--ac);color:#fff;border-radius:8px;padding:9px 12px;cursor:pointer;display:flex;flex-direction:column;gap:3px;align-self:start}.udcard:hover{filter:brightness(1.08)}
+.udcard .uc1{color:rgba(255,255,255,.8)}.udcard .uname{font-size:14px;margin:0}.udcard .umeta{color:rgba(255,255,255,.85)}.udcard.open{box-shadow:0 0 0 3px var(--acb),0 0 0 5px var(--ac)}
+.udpanel{display:grid;grid-template-columns:1fr 1fr;gap:12px}.udpanel h3{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:4px 0 6px}
+@media(max-width:900px){.udpanel{grid-template-columns:1fr}}.udrow{display:flex;justify-content:space-between;gap:8px;font-size:13px;padding:5px 0;border-top:1px solid var(--line)}.udrow:first-child{border-top:0}.udrow .sub{color:var(--muted)}
+.udrow .ms{font-size:10.5px;font-weight:600;padding:1px 6px;border-radius:8px;background:#e4e4e4;color:#555}.udrow .mlink{font-size:11.5px;font-weight:600;color:#1d7266;text-decoration:none;border:1px solid #9fd8cd;border-radius:8px;padding:1px 7px;margin-left:2px}.udpanel .nb h4{margin:8px 0 2px;font-size:12px}
+.evcard.exam{background:#eef0fb;border-color:#9aa3d9;color:#2c3576}.evcard.exam .uc1,.evcard.exam .umeta{color:#4a54a0}
+.cpl.cp3{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:6px;margin-top:4px}.cp3 .cpc{border-color:#c9d6ee}.ccr{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-top:2px}.ccr>span:last-child{white-space:nowrap;display:flex;gap:3px}.ccr a{white-space:nowrap}.cp3 .cpc{gap:2px}.ccr .sub{font-size:11px;color:var(--muted)}
+.nest.n-ld{border-color:var(--lesson-i);background:#f3f6fc}.nest.n-ld>summary{color:var(--lesson-i)}.n-ld .detail{border:0;padding:0;background:transparent;grid-template-columns:1fr}.n-ld .detail h2,.n-ld .detail>div>.meta,.n-ld [data-nest="mat"]{display:none}
+.lcard.t-check .nest.n-ld{border-color:var(--sac-i);background:#fdf3f3}.lcard.t-check .nest.n-ld>summary{color:var(--sac-i)}
+/* Year plan calendar (Rocco, 16 Nov) */
+.cweek{display:grid;grid-template-columns:150px minmax(0,1fr);gap:10px;align-items:start;padding:8px 0;border-bottom:1px solid var(--line)}
+.cwl{display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--muted)}.cwl b{color:var(--ink);font-size:14px}
+.chip{font-size:11px;border-radius:7px;padding:2px 7px;line-height:1.3}.cbl{background:#efece4;color:#6b6656}.csac{background:#fbe3e3;color:#7a1f1f;font-weight:600}.cfx{background:#fdeee0;color:#8a4a12}.cex{background:#e7eafb;color:#2c3576}
+.cslots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.slot{border:1px solid var(--line);border-radius:10px;padding:9px 11px;min-height:86px;display:flex;flex-direction:column;gap:4px;background:var(--card)}
+.slot .sm{font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:6px}.slot .st{font-weight:600;line-height:1.3}
+.slesson{border-left:6px solid var(--ac);cursor:pointer}.slesson:hover{box-shadow:0 2px 8px rgba(0,0,0,.1)}.slesson.open{background:var(--acb);box-shadow:inset 0 0 0 2px var(--ac)}
+.slesson.scheck{border-left-color:#a32d2d;background:#fdf6f6}.stags{display:flex;gap:4px;flex-wrap:wrap;margin-top:auto}.stags .tag{font-size:11px;padding:1px 7px;border-radius:6px;background:#eef0f3;color:#555}.stags .tag.cfat{background:#efe9fb;color:#5b3fb0;font-weight:600}.stags .tag.chk{background:#fbe3e3;color:#a32d2d}
+.sbuf{border-style:dashed;background:transparent;color:var(--muted)}.sbuf .st{font-weight:500}
+.ssac{background:#fbeaea;border:1px dashed #d98c8c;color:#7a1f1f}.sfix{background:#fdf3e6;border:1px dashed #e0a96d;color:#7a4510}.snone{grid-column:1/-1;min-height:0;color:var(--muted);font-style:italic;border-style:dashed;background:transparent}
+.cdetail{margin:6px 0 10px 160px}@media(max-width:800px){.cweek{grid-template-columns:1fr}.cdetail{margin-left:0}.cslots{grid-template-columns:1fr 1fr}}
+.ssplit{display:grid;grid-template-columns:2fr 1fr;gap:6px;padding:0;border:0;background:transparent;min-height:86px}.ssplit>.sin{min-height:0;height:100%}
+.sbuf.srev{border:1px dashed #d98c8c;background:#fdf5f5;color:#7a1f1f}.sbuf.sred{border:1px dashed #c9a46a;background:#fdf8ef;color:#7a5410}.sbuf.sexr{border:1px dashed #9aa3d9;background:#f2f3fc;color:#2c3576}.sbuf .sub{color:inherit;opacity:.8;font-size:12px}
+.swide{grid-column:1/-1;background:#e7eafb;border:2px solid #9aa3d9;color:#2c3576;align-items:center;justify-content:center;text-align:center}.swide .st{font-size:20px}
+.ybar{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 12px}.ybar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);border-radius:8px;padding:5px 12px;cursor:pointer}.ybar button.on{background:var(--ink);color:#fff}.ybar i{font-style:normal;font-size:11px;opacity:.7}
+.ttw{display:grid;grid-template-columns:110px minmax(0,1fr);gap:8px;padding:6px 0;border-bottom:1px solid var(--line)}.ttd{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.tday{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:5px;display:flex;flex-direction:column;gap:3px;min-height:60px}.tday.out{background:transparent;border:0}.tday.off{background:#efece4}
+.tdh{font-size:11px;font-weight:600;color:var(--muted);display:flex;flex-direction:column;gap:2px}.tdh .why{font-weight:500;font-size:10.5px;background:#efece4;border-radius:5px;padding:1px 4px;color:#6b6656}.tdh .why.sac{background:#fbe3e3;color:#7a1f1f}
+.tses{display:flex;gap:3px;align-items:flex-start;font-size:11px;border-top:1px dashed var(--line);padding-top:2px;min-height:18px}.tses .p{color:var(--muted);width:10px}
+.tchip{border-left:4px solid var(--ac,#999);background:var(--acb,#f3f3f3);border-radius:4px;padding:1px 4px;line-height:1.25}.tchip.tsac{border-left-color:#a32d2d;background:#fbe3e3;color:#7a1f1f}.tchip.tsp{border-left-color:#9aa3d9;background:#eef0fb;color:#2c3576}
+
+main{max-width:1100px}.lead{color:var(--muted);font-size:15px;max-width:850px}
+h2{font-size:20px;margin:34px 0 10px;border-bottom:2px solid var(--ink);padding-bottom:4px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.box{background:#fff;border:1px solid var(--line);border-left:6px solid var(--ac,#1f4fa0);border-radius:10px;padding:12px 14px}
+.box h3{margin:0 0 6px;font-size:15px}.box p,.box li{font-size:13.5px;line-height:1.5;margin:4px 0}.box ul{padding-left:18px;margin:4px 0}
+.k{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+.big{font-size:26px;font-weight:700;color:var(--ac,#1f4fa0)}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.st{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center}.st b{display:block;font-size:24px;color:#1f4fa0}.st span{font-size:12px;color:var(--muted)}
+table.t{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:13.5px}
+table.t th{background:#fbfaf6;text-align:left;padding:8px 10px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--line)}
+table.t td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}.ok{color:#1a6b2a;font-weight:600}.warn{color:#a32d2d;font-weight:600}.amb{color:#8a5a00;font-weight:600}
+.flag{background:#fff;border:1px solid var(--line);border-left:6px solid #a32d2d;border-radius:10px;padding:10px 14px;margin-bottom:8px;font-size:13.5px}
+.src{font-size:12px;color:var(--muted);margin-top:30px}nav.crumb{font-size:13px;margin:6px 0 14px}nav.crumb a{color:#1f4fa0}
+</style></head><body>
+<div class="top"><header><h1>Physics Planner</h1></header></div><main>
+<nav class="crumb"><a href="./">Physics Planner</a> › Year 11 › Study design</nav>
+<div class="unit">VCE Physics Study Design: what it means for planning</div>
+<p class="lead">A planning summary of the VCE Physics Study Design (Units 1 and 2 accredited 2023 to 2027, Units 3 and 4 2024 to 2027): the structure, the rules that affect the timetable, how Cambridge lines up, and what it does to the 2027 lesson budget.</p>
+<div class="stats"><div class="st"><b>50 h</b><span>minimum instruction per unit</span></div><div class="st"><b>3</b><span>outcomes per unit (Units 1 and 2)</span></div><div class="st"><b>15 h</b><span>minimum practical, Unit 1</span></div><div class="st"><b>10 h + 7 h</b><span>minimum practical, Unit 2</span></div><div class="st"><b>1</b><span>logbook per student, every unit</span></div></div>
+<h2>Unit 1 · How is energy useful to society?</h2><div class="g3"><div class="box" style="--ac:#1f4fa0"><h3>AoS 1 · How are light and heat explained?</h3><p>Outcome 1: model, investigate and evaluate the wave nature of light, thermal energy, and how matter emits and absorbs light.</p><p class="k">Key knowledge points</p><div class="big">16</div><p class="k">Cambridge</p><p>Ch 1 and 2 (1A to 2B)</p><p>Contexts named: mirages and rainbows, optical fibres in communication, global warming and climate change.</p></div><div class="box" style="--ac:#b4532a"><h3>AoS 2 · How is energy from the nucleus utilised?</h3><p>Outcome 2: explain, apply and evaluate nuclear radiation, radioactive decay and nuclear energy.</p><p class="k">Key knowledge points</p><div class="big">12</div><p class="k">Cambridge</p><p>Ch 3 and 4 (3A to 4C)</p><p>Contexts named: radioisotopes in medical therapy, and whether nuclear energy is viable for Australia.</p></div><div class="box" style="--ac:#2b7a3d"><h3>AoS 3 · How can electricity be used to transfer energy?</h3><p>Outcome 3: investigate and apply a basic DC circuit model to battery devices and household systems, model circuits mathematically, and describe safe use of electricity.</p><p class="k">Key knowledge points</p><div class="big">19</div><p class="k">Cambridge</p><p>Ch 5 and 6 (5A to 6C)</p><p>Students must run practical investigations of circuit components and test the mathematical models experimentally.</p></div></div>
+<h2>Unit 2 · How does physics help us to understand the world?</h2><div class="g3"><div class="box" style="--ac:#7a3fa0"><h3>AoS 1 · How is motion understood?</h3><p>Outcome 1: investigate, analyse, mathematically model and apply force, energy and motion.</p><p class="k">Key knowledge points</p><div class="big">19</div><p class="k">Cambridge</p><p>Ch 7 to 9 (7A to 9C)</p><p>Includes vectors, constant acceleration equations, non-uniform motion from graphs, momentum and impulse, Newton's laws, work, Hooke's law, energy, power, efficiency, torque and equilibrium. Ends with a <b>case study</b> applying motion (sport, vehicle safety, a device or a structure).</p></div><div class="box" style="--ac:#1d7a86"><h3>AoS 2 · Options</h3><p>Outcome 2: research the physics of one option and use it to argue a stance, response or solution to a contemporary issue.</p><p class="k">Key knowledge points</p><div class="big">18 options</div><p class="k">Cambridge</p><p>Cambridge has 11 of the 18</p><p><b>Each student selects one option.</b> A range of investigation methodologies can be used.</p></div><div class="box" style="--ac:#9a6b00"><h3>AoS 3 · How do physicists investigate questions?</h3><p>Outcome 3: draw an evidence-based conclusion from primary data generated in a student-adapted or student-designed investigation.</p><p class="k">Key knowledge points</p><div class="big">12</div><p class="k">Cambridge</p><p>No Cambridge files (placeholders only)</p><p>The question can come from AoS 1 motion or from the student's option. Key knowledge covers investigation design, scientific evidence and science communication.</p></div></div>
+<h2>Unit 2 options: who covers what</h2><table class="t"><tr><th>Option</th><th>Topic</th><th>Cambridge</th><th>Pearson (on the drive)</th></tr><tr><td>2.1</td><td>climate change</td><td class="ok">yes</td><td class=""></td></tr><tr><td>2.2</td><td>fusion vs fission as energy sources</td><td class="warn">no</td><td class="ok">yes</td></tr><tr><td>2.3</td><td>how heavy things fly</td><td class="ok">yes</td><td class=""></td></tr><tr><td>2.4</td><td>forces on structures and materials</td><td class="ok">yes</td><td class=""></td></tr><tr><td>2.5</td><td>forces on the human body</td><td class="warn">no</td><td class="ok">yes</td></tr><tr><td>2.6</td><td>radiation and human health</td><td class="warn">no</td><td class=""></td></tr><tr><td>2.7</td><td>electricity in the human body</td><td class="warn">no</td><td class=""></td></tr><tr><td>2.8</td><td>enhancing human vision</td><td class="ok">yes</td><td class=""></td></tr><tr><td>2.9</td><td>physics of photography</td><td class="ok">yes</td><td class=""></td></tr><tr><td>2.10</td><td>musical instruments</td><td class="ok">yes</td><td class="ok">yes</td></tr><tr><td>2.11</td><td>ball sports performance</td><td class="ok">yes</td><td class="ok">yes</td></tr><tr><td>2.12</td><td>AC to charge a DC device</td><td class="warn">no</td><td class="ok">yes</td></tr><tr><td>2.13</td><td>stars and black holes</td><td class="ok">yes</td><td class=""></td></tr><tr><td>2.14</td><td>life beyond the Solar System</td><td class="ok">yes</td><td class=""></td></tr><tr><td>2.15</td><td>traditional artefacts, knowledge and techniques</td><td class="ok">yes</td><td class="ok">yes</td></tr><tr><td>2.16</td><td>particle accelerators</td><td class="warn">no</td><td class=""></td></tr><tr><td>2.17</td><td>origins of matter</td><td class="ok">yes</td><td class=""></td></tr><tr><td>2.18</td><td>contemporary physics research in our region</td><td class="warn">no</td><td class=""></td></tr></table>
+<h2>Assessment in Units 1 and 2</h2><div class="g2"><div class="box" style="--ac:#1f4fa0"><h3>The rules</h3><p>All assessment is school-based and the procedures are a school decision. Students must show achievement of all three outcomes in each unit. Assessment should be part of normal teaching, done mainly in class and in limited time. Where students choose between tasks, the tasks must be of similar scope and demand.</p><p>Unit 2 Outcome 3 must be assessed by a report of the investigation: a poster, practical report, oral or digital presentation.</p></div><div class="box" style="--ac:#2b7a3d"><h3>Task types allowed (Outcomes 1 to 3 in Unit 1; Outcomes 1 and 2 in Unit 2)</h3><ul><li>report of a lab or fieldwork activity that generates primary data</li><li>reflective annotations of practicals in the logbook</li><li>analysis and evaluation of primary and/or secondary data</li><li>critique of an experimental design, process or apparatus</li><li>modelling or simulation activity</li><li>design, build, test and evaluate a device</li><li>explanation of a physics device, design or innovation</li><li>physics-referenced response to an issue</li><li>report on a physics phenomenon</li><li>media analysis or response</li><li>infographic</li><li>problem-solving with physics concepts and skills</li><li>report applying physics to a real-world context</li><li>analysis with calculations in real-world contexts</li><li>comparison and evaluation of two solutions, explanations or methods</li><li>scientific poster</li></ul></div></div>
+<h2>Practical work</h2><p class="lead" style="margin-bottom:10px">Practical work can include lab experiments, fieldwork, simulations and modelling. Pracs are one lesson each (decided 18 Nov).</p><table class="t"><tr><th>Where</th><th>Minimum class time</th><th>At 79 min a lesson</th><th>Cambridge</th><th>Verdict</th></tr><tr><td>Unit 1, AoS 1 to 3</td><td>15 h</td><td>12 lessons</td><td>14 pracs available</td><td><span class="ok">Fits</span>: 12 of the 14 is the minimum; all 14 gives about 18 h.</td></tr><tr><td>Unit 2, AoS 1 and 2</td><td>10 h</td><td>8 lessons</td><td>9 pracs available (Ch 7 to 9)</td><td><span class="ok">Fits</span>: Cambridge's 9 motion pracs give about 12 h.</td></tr><tr><td>Unit 2, AoS 3</td><td>7 h</td><td>6 lessons</td><td>none</td><td><span class="amb">To plan</span>: the student investigation needs at least 6 lessons of its own.</td></tr></table>
+<h2>The 2027 lesson budget, with the study design minimums</h2><table class="t"><tr><th></th><th>Unit 1</th><th>Unit 2</th></tr><tr><td>Lessons available (2027 calendar)</td><td>48</td><td>46</td></tr><tr><td>Instruction time (at 79 min)</td><td>63 h <span class="ok">(min 50 h)</span></td><td>61 h <span class="ok">(min 50 h)</span></td></tr><tr><td>Exam revision week</td><td>3</td><td>3</td></tr><tr><td>Buffer, 1 per AoS</td><td>3</td><td>3</td></tr><tr><td>SAC revision, 1 per SAC</td><td>3</td><td>3</td></tr><tr><td>Prac lessons (study design minimum)</td><td>12</td><td>8 + 6 for the investigation</td></tr><tr><td>Chapter tests, 1 per chapter</td><td>6</td><td>3</td></tr><tr><td><b>Left for theory lessons</b></td><td><b>21</b> for 21 sections</td><td><b>20</b> for 9 sections + the option study</td></tr><tr><td>If SACs also take class time</td><td>18</td><td>17</td></tr></table><p class="lead" style="margin-top:8px">Unit 1 has almost exactly one lesson per Cambridge section, so sections that need two (e.g. 1C, 5C, 5E, 6A) need time found elsewhere: one chapter test per AoS instead of per chapter frees 3 lessons, and running SACs in the SAC free periods protects the 3 SAC lessons.</p>
+<h2>Key science skills (all units)</h2><div class="g2"><div class="box" style="--ac:#1f4fa0"><h3>Develop aims and questions, formulate hypotheses and make predictions</h3></div><div class="box" style="--ac:#1f4fa0"><h3>Plan and conduct investigations</h3><p>choose a methodology, design methods, control variables, record changes in the logbook</p></div><div class="box" style="--ac:#1f4fa0"><h3>Comply with safety and ethical guidelines</h3><p>risk assessments informed by safety data sheets</p></div><div class="box" style="--ac:#1f4fa0"><h3>Generate, collate and record data</h3><p>qualitative and quantitative, using a logbook</p></div><div class="box" style="--ac:#1f4fa0"><h3>Analyse and evaluate data and investigation methods</h3><p>uncertainty, error, significant figures, accuracy, precision, validity</p></div><div class="box" style="--ac:#1f4fa0"><h3>Construct evidence-based arguments and draw conclusions</h3></div><div class="box" style="--ac:#1f4fa0"><h3>Analyse, evaluate and communicate scientific ideas</h3><p>conventions, units, representations, referencing</p></div></div>
+<h2>Investigation methodologies</h2><p class="lead">Investigations must draw on these: case study, classification and identification, experiment, fieldwork, literature review, modelling, product, process or system development, simulation.</p>
+<h2>Looking ahead: Units 3 and 4 (Year 12 tab)</h2><div class="g2"><div class="box" style="--ac:#7a3fa0"><h3>Unit 3 · How do fields explain motion and electricity?</h3><p>AoS 1 motion in two dimensions, AoS 2 fields (gravitational, electric, magnetic), AoS 3 electricity generation. 3 SAC tasks, 40 marks each. <b>30%</b> of the study score.</p></div><div class="box" style="--ac:#7a3fa0"><h3>Unit 4 · How have creative ideas and investigation revolutionised thinking in physics?</h3><p>AoS 1 how understanding of light, matter and motion has changed (including special relativity), AoS 2 student-designed investigation reported as a scientific poster (max 600 words) plus logbook. 2 tasks, 40 marks each. <b>20%</b> of the study score.</p></div><div class="box" style="--ac:#7a3fa0"><h3>Exam</h3><p>One end-of-year exam, 2.5 hours, on all Units 3 and 4 key knowledge and key science skills. <b>50%</b> of the study score.</p></div><div class="box" style="--ac:#7a3fa0"><h3>Conditions</h3><p>Each SAC task type can be used only once across Units 3 and 4. Written tasks about 50 minutes; oral or multimodal about 5 minutes. At least 15 h of practical work in Unit 3; in Unit 4, 5 h in AoS 1 and 10 h for the investigation.</p></div></div>
+<h2>Flags for planning</h2><div class="flag"><b>Units 1 and 2 assessment is a school decision.</b> No SAC types or marks are set by VCAA, but every outcome must be assessed for an S, and tasks should mainly be done in class in limited time.</div><div class="flag"><b>Unit 2 options are a student choice.</b> Cambridge only supports 11 of the 18. Offering a short list (e.g. 3 or 4 options) keeps it manageable; Pearson on the drive adds 2.2, 2.5 and 2.12.</div><div class="flag"><b>Unit 2 AoS 1 needs a case study</b> (motion in sport, vehicle safety, a device or a structure). Check whether Cambridge Ch 7 to 9 includes one.</div><div class="flag"><b>Logbooks</b> are required in every unit for satisfactory completion. Teachers must sight them regularly, especially for Unit 2 Outcomes 2 and 3.</div><div class="flag"><b>Practice exam check:</b> the Cambridge practice exam's DC motor question is Unit 3 content (AoS 2 fields). Remove it before using the paper for Unit 1 or 2.</div><div class="flag"><b>Group work:</b> investigations may be done in groups, but anything assessed must be completed individually.</div>
+<p class="src">Source: VCAA, VCE Physics Study Design, Units 1 and 2: 2023 to 2027; Units 3 and 4: 2024 to 2027 (Curriculum and Study Design folder on the shared drive). Summarised for planning on 18 Nov 2026; check the study design itself for exact wording. Lesson counts use the 2027 EKC School Planner and 79-minute lessons.</p>
+</main></body></html>
