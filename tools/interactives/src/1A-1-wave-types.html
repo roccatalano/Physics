@@ -64,4 +64,16 @@ IX.anims.push(t=>{const ph=F*t;
  L.ha.setAttribute('x1',hx-AL);L.ha.setAttribute('x2',hx+AL);L.ha.setAttribute('y1',L.y2+22);L.ha.setAttribute('y2',L.y2+22);L.ht.setAttribute('x',hx+AL+14);L.ht.setAttribute('y',L.y2+28);
  L.lab.forEach((e,i)=>{const n=Math.floor(i/2),off=i%2?0:.5;let u=((ph+off)%1+1)%1;const x=(u+n)*LAM;e.style.display=labels&&x<XW-50&&x>40&&!(follow&&i%2&&Math.abs(X0+x-hx-120)<190)?'':'none';e.setAttribute('x',X0+x);e.setAttribute('y',i%2?L.y2+28:L.y1-12)});
 });
+
+window.TOUR=[
+ {say:'A slinky spring is shaken up and down at one end. A <b>wave</b> travels along it from left to right.',hl:'.plot',do:()=>{tourClick('.md[data-v=t]');tourOn('#fol',false);tourOn('#lab',false)}},
+ {say:'Watch the <b>orange coil</b>. It only moves up and down. It never travels along the spring.',hl:'#fol',do:()=>tourOn('#fol',true)},
+ {say:'The <b>energy</b> travels along the spring (green arrow), but the coils stay where they are. A wave transfers <b>energy, not matter</b>.',hl:'.plot'},
+ {say:'High points are <b>crests</b>, low points are <b>troughs</b>. The coils vibrate at right angles to the energy, so this is a <b>transverse</b> wave.',hl:'#lab',do:()=>tourOn('#lab',true)},
+ {say:'Now push and pull the end instead. This makes a <b>longitudinal</b> wave.',hl:'.md[data-v=l]',do:()=>tourClick('.md[data-v=l]')},
+ {say:'The orange coil moves <b>back and forth</b>, along the same line as the energy. Coils bunch up in <b>compressions</b> and spread out in <b>rarefactions</b>.',hl:'.plot'},
+ {say:'Side by side: both waves carry energy left to right, and in both the particles only vibrate about their rest position. The difference is the <b>direction of vibration</b>.',hl:'.plot',do:()=>tourClick('.md[data-v=b]')},
+ {say:'<b>Sound</b> is longitudinal: air particles vibrate along the direction the sound travels.',hl:'.ex[data-v=sound]',top:true,do:()=>tourClick('.ex[data-v=sound]')},
+ {say:'<b>Light</b> is transverse: its electric and magnetic fields vibrate at right angles to its direction of travel.',hl:'.ex[data-v=light]',top:true,do:()=>tourClick('.ex[data-v=light]')},
+ {say:'Your turn: try the <b>earthquake P and S waves</b>. Which type is each, and why?',hl:'.ex[data-v=p],.ex[data-v=s]',top:true}];
 </script>

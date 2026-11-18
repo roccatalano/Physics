@@ -56,4 +56,15 @@ IX.anims.push(t=>{const lam=v/f,T=1/f,y=(x,tt)=>A*Math.sin(2*Math.PI*(f*tt-x/lam
 });
 const ag=el('g',{},dx),al=el('line',{stroke:'#4ade80','stroke-width':3},ag),at=txt(ag,0,0,'',{fill:'#4ade80','font-size':17,'font-weight':700});
 function bAv(x){ag.style.display=x==null?'none':'';if(x==null)return;const X=x-0;al.setAttribute('x1',X);al.setAttribute('x2',X);al.setAttribute('y1',GY);al.setAttribute('y2',sy(A));at.setAttribute('x',X+8);at.setAttribute('y',(GY+sy(A))/2+6);at.textContent='A = '+f2(A)+' m'}
+
+window.TOUR=[
+ {say:'A wave travels along a rope. The <b>top graph</b> is a snapshot of the whole rope. The <b>bottom graph</b> follows one particle, P, as time passes.',hl:'.plot',do:()=>{tourSet('A',.3);tourSet('f',.5);tourSet('v',1.5)}},
+ {say:'The <b>amplitude</b> <i>A</i> is the height of a crest above the rest line: here 0.30 m.',hl:'.plot'},
+ {say:'Shake harder and the amplitude grows. Nothing else changes: <b>λ and T stay the same</b>.',hl:'#A',do:()=>tourSet('A',.5)},
+ {say:'The <b>wavelength</b> λ is the distance from one crest to the next on the top graph: λ = 3.00 m.',hl:'.plot',do:()=>tourSet('A',.3)},
+ {say:'The <b>period</b> <i>T</i> is the time for P to do one full vibration, crest to crest on the bottom graph: T = 2.00 s. So <b>f = 1/T = 0.50 Hz</b>.',hl:'.card.out',top:true},
+ {say:'Double the <b>frequency</b>. P vibrates twice as fast, so T halves to 1.00 s, and the crests are closer together: λ halves to 1.50 m.',hl:'#f',do:()=>tourSet('f',1)},
+ {say:'Keep f the same and make waves travel <b>faster</b> along the rope. λ grows: λ = v/f = 3.0 ÷ 1.00 = 3.00 m. T does not change: only the source sets it.',hl:'#v',do:()=>tourSet('v',3)},
+ {say:'So <b>v = fλ</b>: speed equals frequency times wavelength. The Calculate card checks it for any settings.',hl:'.card.out'},
+ {say:'Your turn: press <b>space</b> to pause, measure λ and T from the graphs, then check them against the calculation.',hl:'.rule',top:true,do:()=>{tourSet('A',.3);tourSet('f',.5);tourSet('v',1.5)}}];
 </script>

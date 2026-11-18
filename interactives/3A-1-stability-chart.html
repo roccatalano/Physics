@@ -40,6 +40,16 @@ button.on{background:#7dd3fc;border-color:#7dd3fc;color:#0d1330}
 svg text{font-family:Inter,sans-serif}
 .bare .head,.bare .ctx,.bare .foot{display:none}.bare .ix{padding-top:26px}
 .bare .tools{top:auto;bottom:6px;right:12px}
+/* guided tour ("Explain" button) */
+.tour{position:absolute;left:50%;bottom:44px;transform:translateX(-50%);width:760px;background:#0b1029;border:2px solid #fbb040;border-radius:16px;padding:14px 18px 12px;z-index:20;box-shadow:0 10px 40px rgba(0,0,0,.6);display:none}
+.tour.on{display:block}
+.tour .tx{font-size:21px;line-height:1.45;min-height:62px}.tour .tx b{color:#fbb040}
+.tour .tb{display:flex;align-items:center;gap:8px;margin-top:10px}.tour .tb button{font-size:15px;padding:5px 12px}
+.tour .bar{flex:1;height:6px;background:#232c63;border-radius:3px;overflow:hidden}.tour .bar i{display:block;height:100%;background:#fbb040;width:0}
+.tour .n{font:600 14px Inter;color:#94a3c8;min-width:44px;text-align:right}
+.tour.top{bottom:auto;top:150px}
+.tourhl{outline:4px solid #fbb040!important;outline-offset:4px;border-radius:12px;animation:thl 1s ease-in-out infinite alternate}
+@keyframes thl{from{outline-color:#fbb040}to{outline-color:rgba(251,176,64,.25)}}
 </style></head><body data-bg="nuclear"><div id="stage"><svg id="bg" viewBox="0 0 1280 720"></svg><div class="tools"></div>
 <div class="ix" style="--c:#7dd3fc"><div class="head"><div><div class="label">3A · Interactive</div><h1>The belt of stability</h1></div></div>
 
@@ -108,6 +118,31 @@ function sig(v,n=3){if(!isFinite(v))return '∞';if(v===0)return '0';const p=Mat
  const s=document.createElement('button');s.textContent='Slow motion';s.onclick=()=>{IX.speed=IX.speed===1?.25:1;s.classList.toggle('on',IX.speed!==1)};
  const fs=document.createElement('button');fs.textContent='⛶';fs.title='Full screen';fs.onclick=()=>document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();
  t.append(p,s,fs);addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();p.click()}if(e.key==='f'||e.key==='F')fs.click()})})();
+// Guided tour: a page sets window.TOUR = [{say:'html', hl:'css selector', top:true, do:()=>{}, ms:6000}, ...]
+// The Explain button plays it: each step runs its action, highlights an element and shows the caption, then moves on.
+const TS_={i:-1,timer:null,el:null,auto:true};
+function tourSet(id,v){const r=document.getElementById(id);r.value=v;r.dispatchEvent(new Event('input'))}
+function tourClick(sel){const b=document.querySelector(sel);if(b)b.click()}
+function tourOn(sel,on){const b=document.querySelector(sel);if(b&&b.classList.contains('on')!==on)b.click()}
+function tourStep(i){const S=window.TOUR;clearTimeout(TS_.timer);document.querySelectorAll('.tourhl').forEach(e=>e.classList.remove('tourhl'));
+ if(i<0)i=0;if(i>=S.length){tourEnd();return}TS_.i=i;const s=S[i];
+ try{s.do&&s.do()}catch(e){console.error(e)}
+ if(s.hl)document.querySelectorAll(s.hl).forEach(e=>e.classList.add('tourhl'));
+ TS_.el.classList.toggle('top',!!s.top);TS_.el.querySelector('.tx').innerHTML=s.say;TS_.el.querySelector('.n').textContent=(i+1)+' / '+S.length;
+ const bar=TS_.el.querySelector('.bar i'),ms=s.ms||Math.max(5000,s.say.replace(/<[^>]+>/g,'').split(/\s+/).length*330);
+ bar.style.transition='none';bar.style.width='0';bar.offsetWidth;
+ if(TS_.auto){bar.style.transition=`width ${ms}ms linear`;bar.style.width='100%';TS_.timer=setTimeout(()=>tourStep(TS_.i+1),ms)}}
+function tourEnd(){clearTimeout(TS_.timer);TS_.i=-1;TS_.el.classList.remove('on');document.querySelectorAll('.tourhl').forEach(e=>e.classList.remove('tourhl'));const b=document.getElementById('tourbtn');if(b)b.textContent='▶ Explain'}
+addEventListener('load',()=>{if(!window.TOUR||!TOUR.length)return;const tools=document.querySelector('.tools');
+ TS_.el=document.createElement('div');TS_.el.className='tour';TS_.el.innerHTML='<div class="tx"></div><div class="tb"><button data-a="p">◀ Back</button><button data-a="a">❚❚ Hold</button><button data-a="n">Next ▶</button><span class="bar"><i></i></span><span class="n"></span><button data-a="x">✕ Stop</button></div>';
+ document.getElementById('stage').appendChild(TS_.el);
+ TS_.el.onclick=e=>{const a=e.target.dataset.a;if(!a)return;e.stopPropagation();
+  if(a==='p')tourStep(TS_.i-1);if(a==='n')tourStep(TS_.i+1);if(a==='x')tourEnd();
+  if(a==='a'){TS_.auto=!TS_.auto;e.target.textContent=TS_.auto?'❚❚ Hold':'▶ Auto';tourStep(TS_.i)}};
+ const b=document.createElement('button');b.id='tourbtn';b.textContent='▶ Explain';b.style.opacity=1;b.style.borderColor='#fbb040';
+ b.onclick=()=>{if(TS_.i>=0){tourEnd();return}IX.play=true;TS_.auto=true;TS_.el.querySelector('[data-a=a]').textContent='❚❚ Hold';TS_.el.classList.add('on');b.textContent='■ End';tourStep(0)};
+ tools.prepend(b);
+ addEventListener('keydown',e=>{if(TS_.i<0)return;if(e.key==='ArrowRight')tourStep(TS_.i+1);if(e.key==='ArrowLeft')tourStep(TS_.i-1);if(e.key==='Escape')tourEnd()})});
 </script><script>
 const SYM='n H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn Fr Ra Ac Th Pa U Np Pu Am'.split(' ');
 const ST={1:[1,2],2:[3,4],3:[6,7],4:[9],5:[10,11],6:[12,13],7:[14,15],8:[16,17,18],9:[19],10:[20,21,22],11:[23],12:[24,25,26],13:[27],14:[28,29,30],15:[31],16:[32,33,34,36],17:[35,37],18:[36,38,40],19:[39,41],20:[40,42,43,44,46],21:[45],22:[46,47,48,49,50],23:[51],24:[50,52,53,54],25:[55],26:[54,56,57,58],27:[59],28:[58,60,61,62,64],29:[63,65],30:[64,66,67,68,70],31:[69,71],32:[70,72,73,74],33:[75],34:[74,76,77,78,80],35:[79,81],36:[78,80,82,83,84,86],37:[85],38:[84,86,87,88],39:[89],40:[90,91,92,94],41:[93],42:[92,94,95,96,97,98],44:[96,98,99,100,101,102,104],45:[103],46:[102,104,105,106,108,110],47:[107,109],48:[106,108,110,111,112,114],49:[113],50:[112,114,115,116,117,118,119,120,122,124],51:[121,123],52:[120,122,123,124,125,126],53:[127],54:[126,128,129,130,131,132,134],55:[133],56:[132,134,135,136,137,138],57:[139],58:[136,138,140,142],59:[141],60:[142,143,145,146,148],62:[144,149,150,152,154],63:[153],64:[154,155,156,157,158,160],65:[159],66:[156,158,160,161,162,163,164],67:[165],68:[162,164,166,167,168,170],69:[169],70:[168,170,171,172,173,174,176],71:[175],72:[176,177,178,179,180],73:[181],74:[182,183,184,186],75:[185],76:[184,187,188,189,190,192],77:[191,193],78:[192,194,195,196,198],79:[197],80:[196,198,199,200,201,202,204],81:[203,205],82:[204,206,207,208]};

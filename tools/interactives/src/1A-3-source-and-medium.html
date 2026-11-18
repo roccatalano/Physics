@@ -52,4 +52,12 @@ IX.anims.push(T=>{const t=T-t0,y=x=>{const d=t-tau(x);return d>0?AM*Math.sin(2*M
  if(c1.length>=2){const k=c1.length-2;b1(sx(c1[k]),sx(c1[k+1]),CY-SC-24,'λ = '+sig(V1/f)+' m')}else b1(null);
  if(c2.length>=2)b2(sx(c2[0]),sx(c2[1]),CY-SC-24,'λ = '+sig(v2/f)+' m');else b2(null);
 });
+
+window.TOUR=[
+ {say:'A wave on a light rope (blue) crosses into a <b>heavier rope</b> (pink) at x = 5 m.',hl:'.plot',top:true,do:()=>{tourSet('f',.6);tourClick('.m2[data-v="1"]')},ms:7000},
+ {say:'Watch the two orange particles. Their counters go up <b>at the same rate</b>: the <b>frequency does not change</b> at the join.',hl:'.plot',top:true,ms:8000},
+ {say:'But the wave <b>slows down</b> in the heavier rope, so the crests bunch up: the <b>wavelength is shorter</b>.',hl:'.card.out',top:true},
+ {say:'Now a <b>lighter, faster</b> rope. Same frequency, faster speed, so a <b>longer wavelength</b>.',hl:'.m2[data-v="4"]',top:true,do:()=>tourClick('.m2[data-v="4"]'),ms:9000},
+ {say:'Change the <b>source</b>: shake faster. Both ropes now have a higher frequency, and both wavelengths shrink.',hl:'#f',top:true,do:()=>tourSet('f',1),ms:9000},
+ {say:'The rule: <b>the source sets the frequency, the medium sets the speed</b>, and the wavelength follows from λ = v/f.',hl:'.rule',top:true,do:()=>tourSet('f',.6)}];
 </script>

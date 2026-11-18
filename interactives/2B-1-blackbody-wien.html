@@ -40,6 +40,16 @@ button.on{background:#7dd3fc;border-color:#7dd3fc;color:#0d1330}
 svg text{font-family:Inter,sans-serif}
 .bare .head,.bare .ctx,.bare .foot{display:none}.bare .ix{padding-top:26px}
 .bare .tools{top:auto;bottom:6px;right:12px}
+/* guided tour ("Explain" button) */
+.tour{position:absolute;left:50%;bottom:44px;transform:translateX(-50%);width:760px;background:#0b1029;border:2px solid #fbb040;border-radius:16px;padding:14px 18px 12px;z-index:20;box-shadow:0 10px 40px rgba(0,0,0,.6);display:none}
+.tour.on{display:block}
+.tour .tx{font-size:21px;line-height:1.45;min-height:62px}.tour .tx b{color:#fbb040}
+.tour .tb{display:flex;align-items:center;gap:8px;margin-top:10px}.tour .tb button{font-size:15px;padding:5px 12px}
+.tour .bar{flex:1;height:6px;background:#232c63;border-radius:3px;overflow:hidden}.tour .bar i{display:block;height:100%;background:#fbb040;width:0}
+.tour .n{font:600 14px Inter;color:#94a3c8;min-width:44px;text-align:right}
+.tour.top{bottom:auto;top:150px}
+.tourhl{outline:4px solid #fbb040!important;outline-offset:4px;border-radius:12px;animation:thl 1s ease-in-out infinite alternate}
+@keyframes thl{from{outline-color:#fbb040}to{outline-color:rgba(251,176,64,.25)}}
 </style></head><body data-bg="waves"><div id="stage"><svg id="bg" viewBox="0 0 1280 720"></svg><div class="tools"></div>
 <div class="ix" style="--c:#facc15"><div class="head"><div><div class="label">2B · Interactive</div><h1>Blackbody radiation and Wien&#x27;s law</h1></div></div>
 
@@ -112,6 +122,31 @@ function sig(v,n=3){if(!isFinite(v))return '∞';if(v===0)return '0';const p=Mat
  const s=document.createElement('button');s.textContent='Slow motion';s.onclick=()=>{IX.speed=IX.speed===1?.25:1;s.classList.toggle('on',IX.speed!==1)};
  const fs=document.createElement('button');fs.textContent='⛶';fs.title='Full screen';fs.onclick=()=>document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();
  t.append(p,s,fs);addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();p.click()}if(e.key==='f'||e.key==='F')fs.click()})})();
+// Guided tour: a page sets window.TOUR = [{say:'html', hl:'css selector', top:true, do:()=>{}, ms:6000}, ...]
+// The Explain button plays it: each step runs its action, highlights an element and shows the caption, then moves on.
+const TS_={i:-1,timer:null,el:null,auto:true};
+function tourSet(id,v){const r=document.getElementById(id);r.value=v;r.dispatchEvent(new Event('input'))}
+function tourClick(sel){const b=document.querySelector(sel);if(b)b.click()}
+function tourOn(sel,on){const b=document.querySelector(sel);if(b&&b.classList.contains('on')!==on)b.click()}
+function tourStep(i){const S=window.TOUR;clearTimeout(TS_.timer);document.querySelectorAll('.tourhl').forEach(e=>e.classList.remove('tourhl'));
+ if(i<0)i=0;if(i>=S.length){tourEnd();return}TS_.i=i;const s=S[i];
+ try{s.do&&s.do()}catch(e){console.error(e)}
+ if(s.hl)document.querySelectorAll(s.hl).forEach(e=>e.classList.add('tourhl'));
+ TS_.el.classList.toggle('top',!!s.top);TS_.el.querySelector('.tx').innerHTML=s.say;TS_.el.querySelector('.n').textContent=(i+1)+' / '+S.length;
+ const bar=TS_.el.querySelector('.bar i'),ms=s.ms||Math.max(5000,s.say.replace(/<[^>]+>/g,'').split(/\s+/).length*330);
+ bar.style.transition='none';bar.style.width='0';bar.offsetWidth;
+ if(TS_.auto){bar.style.transition=`width ${ms}ms linear`;bar.style.width='100%';TS_.timer=setTimeout(()=>tourStep(TS_.i+1),ms)}}
+function tourEnd(){clearTimeout(TS_.timer);TS_.i=-1;TS_.el.classList.remove('on');document.querySelectorAll('.tourhl').forEach(e=>e.classList.remove('tourhl'));const b=document.getElementById('tourbtn');if(b)b.textContent='▶ Explain'}
+addEventListener('load',()=>{if(!window.TOUR||!TOUR.length)return;const tools=document.querySelector('.tools');
+ TS_.el=document.createElement('div');TS_.el.className='tour';TS_.el.innerHTML='<div class="tx"></div><div class="tb"><button data-a="p">◀ Back</button><button data-a="a">❚❚ Hold</button><button data-a="n">Next ▶</button><span class="bar"><i></i></span><span class="n"></span><button data-a="x">✕ Stop</button></div>';
+ document.getElementById('stage').appendChild(TS_.el);
+ TS_.el.onclick=e=>{const a=e.target.dataset.a;if(!a)return;e.stopPropagation();
+  if(a==='p')tourStep(TS_.i-1);if(a==='n')tourStep(TS_.i+1);if(a==='x')tourEnd();
+  if(a==='a'){TS_.auto=!TS_.auto;e.target.textContent=TS_.auto?'❚❚ Hold':'▶ Auto';tourStep(TS_.i)}};
+ const b=document.createElement('button');b.id='tourbtn';b.textContent='▶ Explain';b.style.opacity=1;b.style.borderColor='#fbb040';
+ b.onclick=()=>{if(TS_.i>=0){tourEnd();return}IX.play=true;TS_.auto=true;TS_.el.querySelector('[data-a=a]').textContent='❚❚ Hold';TS_.el.classList.add('on');b.textContent='■ End';tourStep(0)};
+ tools.prepend(b);
+ addEventListener('keydown',e=>{if(TS_.i<0)return;if(e.key==='ArrowRight')tourStep(TS_.i+1);if(e.key==='ArrowLeft')tourStep(TS_.i-1);if(e.key==='Escape')tourEnd()})});
 </script><script>
 const h=6.626e-34,c=2.998e8,kB=1.381e-23,b=2.898e-3,sv=document.getElementById('sv'),X0=70,X1=840,Y0=320,Y1=20,LA=-7,LB=-4; // 0.1 um to 100 um
 const sx=l=>X0+(X1-X0)*(Math.log10(l)-LA)/(LB-LA);let T=5778,cs=false,ce=false,fitb=false;
