@@ -1,0 +1,1596 @@
+{
+ "code": "3E",
+ "title": "The effect of radiation on humans",
+ "chapter": 3,
+ "unit": 1,
+ "aos": 2,
+ "study_design": [
+  "Explain the effects of α, β and γ radiation on humans, including: different capacities to cause cell damage; short- and long-term effects of low and high doses; ionising impacts of radioactive sources outside and inside the body; calculations of absorbed dose (gray), equivalent dose (sievert) and effective dose (sievert)",
+  "Evaluate the use of medical radioisotopes in therapy including the effects on healthy and damaged tissues and cells"
+ ],
+ "criteria": [
+  "3E.1",
+  "3E.2",
+  "3E.3",
+  "3E.4",
+  "3E.5",
+  "3E.6"
+ ],
+ "glossary": [
+  {
+   "id": "3E-G1",
+   "term": "Geiger counter",
+   "def": "an instrument for detecting the presence and intensity of ionising radiations",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 52,
+    "book_page": 131
+   }
+  },
+  {
+   "id": "3E-G2",
+   "term": "Dosimeter",
+   "def": "an instrument that measures personal exposure to ionising radiation over a given time period",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 53,
+    "book_page": 132
+   }
+  },
+  {
+   "id": "3E-G3",
+   "term": "Absorbed dose",
+   "def": "the amount of energy absorbed by each kilogram of tissue that is irradiated; measured in grays (Gy)",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 53,
+    "book_page": 132
+   }
+  },
+  {
+   "id": "3E-G4",
+   "term": "Gray (Gy)",
+   "def": "the SI unit of the absorbed dose of ionising radiation, corresponding to 1 J kg–1",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 53,
+    "book_page": 132
+   }
+  },
+  {
+   "id": "3E-G5",
+   "term": "Sievert (Sv)",
+   "def": "the SI unit of dose equivalent (the biological effect of ionising radiation), equal to an effective dose of a joule of energy per kilogram of recipient mass",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 53,
+    "book_page": 132
+   }
+  },
+  {
+   "id": "3E-G6",
+   "term": "Dose equivalent",
+   "def": "dose equivalent (Sv) = absorbed dose (Gy) × radiation weighting factor",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 53,
+    "book_page": 132
+   }
+  },
+  {
+   "id": "3E-G7",
+   "term": "Radiation weighting factor",
+   "def": "a factor by which the absorbed dose (Gy) is to be multiplied to obtain a quantity that expresses, on a common scale for all ionising radiation, the biological damage (Sv) to an exposed individual",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 54,
+    "book_page": 133
+   }
+  },
+  {
+   "id": "3E-G8",
+   "term": "Effective dose",
+   "def": "applies to a specific organ or organs",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 54,
+    "book_page": 133
+   }
+  },
+  {
+   "id": "3E-G9",
+   "term": "Dose–risk relationship",
+   "def": "the probability of incurring a severe radiation effect versus the dose of radiation received",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 57,
+    "book_page": 136
+   }
+  },
+  {
+   "id": "3E-G10",
+   "term": "Genetic effects",
+   "def": "chromosome aberrations and genetic mutations resulting from exposure to radiation",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 57,
+    "book_page": 136
+   }
+  },
+  {
+   "id": "3E-G11",
+   "term": "External radiation",
+   "def": "the radiation source remains outside the body and irradiates us from the outside",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 58,
+    "book_page": 137
+   }
+  },
+  {
+   "id": "3E-G12",
+   "term": "Internal radiation",
+   "def": "the radiation source irradiates us from inside our bodies",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 58,
+    "book_page": 137
+   }
+  },
+  {
+   "id": "3E-G13",
+   "term": "Radiotherapy",
+   "def": "a strategy to target cancerous tumours with maximum effect by using large doses of lethal (to the targeted cells) radiation while minimising collateral damage to healthy cells",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 59,
+    "book_page": 138
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F3E-1",
+   "name": "Absorbed dose (gray)",
+   "latex": "1\\ \\text{Gy} = 1\\ \\text{J kg}^{-1} \\qquad \\text{absorbed dose} = \\frac{\\text{energy}}{\\text{mass}}",
+   "where": [
+    {
+     "sym": "\\text{Gy}",
+     "meaning": "gray: energy absorbed per kilogram of irradiated tissue",
+     "unit": "J kg⁻¹"
+    }
+   ],
+   "criteria": [
+    "3E.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 53,
+    "book_page": 132
+   },
+   "note": "'absorbed dose = energy/mass' written as in Chapter 3 Suggested responses RQ26"
+  },
+  {
+   "id": "F3E-2",
+   "name": "Dose equivalent (sievert)",
+   "latex": "\\text{dose equivalent (Sv)} = \\text{absorbed dose (Gy)} \\times \\text{radiation weighting factor}",
+   "where": [
+    {
+     "sym": "\\text{radiation weighting factor}",
+     "meaning": "1 for β- and γ-radiation; 20 for α-radiation",
+     "unit": ""
+    }
+   ],
+   "criteria": [
+    "3E.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 54,
+    "book_page": 133
+   }
+  }
+ ],
+ "engage": {
+  "heading": "Radium girls",
+  "text": "In 1917, many patriotic young women counted themselves lucky to have landed well paid war work at a large warehouse complex in Orange, New Jersey. Their main job was to apply a new glowing paint to the faces of clocks, instrument gauges, and wristwatches for the United States Radium Company.\n\nWhile the men who moved kilograms of radioactive radium around the factory wore lead aprons to protect themselves from the radiation, the women were given nothing as they were told that they were only handling very small quantities of radium. The so called ‘Radium girls’ were even told to lick their brushes with their lips to get a fine point on the brush for the detailed work required.\n\nThe girls who placed the radium paint in their mouths were ingesting a small amount of radium every time they painted a clock, a watch or instrument. This was repeated many hundreds of times a day.\n\nThe young women, reassured by their supervisors that they were completely safe, even playfully painted their nails and teeth with the luminous paint, known as UnDark.\n\nHowever, by 1927 more than 50 women had died as a direct result of radium paint poisoning.",
+  "figures": [],
+  "src": {
+   "file": "Physics12_Ch03.pdf",
+   "page": 46,
+   "book_page": 125
+  }
+ },
+ "chunks": [
+  {
+   "id": "3E-E1",
+   "heading": "Discovering the effects of radiation on humans",
+   "text": "Soon after radiation was discovered researchers became involved with one of the drawbacks of radiation – its effect on living tissues. Henri Becquerel, for example, placed a vial of radium in his pocket only to notice later that his skin was severely burned.\n\nMarie Curie died of a malignant blood disease because of her exposure to radiation from both the radium and polonium she discovered. It is estimated that more than 300 of the early radiation researchers and workers died from radiation doses that they had received.\n\nThe idea of using radioactive elements to treat cancer probably also started with Becquerel’s severe skin burn caused while accidentally carrying a tube of radium in his vest pocket for 14 continuous days in 1901.\n\nIn 1896, medical doctors had successfully used X-rays to treat stomach cancer in France, only a year after Roentgen’s discovery of X-rays in 1895.\n\nDoctors reasoned that the rays emanating from radium could also be used to treat cancers. In 1902, radium was successfully used to treat a patient with cancer of the throat in Vienna. By 1904, patients in New York were undergoing implantation of radium tubes directly into their cancerous tumours. The Standard Chemical Company began commercially marketing radium from its Colorado mines by 1913, and this new ‘miracle wonder drug’ subsequently found its way into many products and applications.\n\nHundreds of thousands of people drank radium-infused tonic water (Figure 3E–4), brushed their teeth with radium toothpaste, and wore radium cosmetics that gave their skin a bright, cheery glow. Incredibly to us now, Marie Curie’s discovery of radium was treated as if it was just what was required for healthy living!\n\nUnfortunately, radium can be dangerous. Radium-226, which has a half-life of 1600 years, emits α-particles in all directions. A single gram of radium has an activity of 37 000 MBq, that is 3.7 × $10^{10}$ α-particles per second. As noted in Section 3B, α-particle radiations are capable of ionising a large number of atoms over their very short range of penetration. This makes α-particle radiation relatively harmless for most external sources that are about a metre or more away from us, as the radiation will be easily absorbed by the intervening air. But if the α-radiation sources are close to sensitive organs and tissues in the body then α-particle radiation becomes extremely dangerous.\n\nThe reason that ionising radiation is harmful to living beings is that it causes ionisation within the cells; that is, it creates ions that are chemically reactive. Such ions can immediately start undesirable chemical reactions in the cell, and possibly even cell death may occur. However, most cases of radiation damage to a cell affect the mechanism that regulates the division of cells. Therefore, the cell may lose the capacity to divide, either temporarily or permanently, or it may divide in an unexpected way. For example, an uncontrolled division of cells may result in the production of a large mass of such cells – a cancerous tumour.",
+   "figures": [
+    "3E-F4"
+   ],
+   "criteria": [
+    "3E.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 47,
+    "book_page": 126,
+    "pages": [
+     47,
+     48,
+     49
+    ]
+   }
+  },
+  {
+   "id": "3E-E2",
+   "heading": "The capacity of alpha, beta and gamma radiation to cause cell damage",
+   "text": "Given all the radiation in our environment from both natural and artificial sources (Figure 3E–5), it is important to know how radiation might affect our health.\n\nOur bodies are unable to sense lethal high intensity doses of radiation. This perhaps makes radiation more dangerous than other life-threating situations because it is impossible to detect without using specialised radiation detection equipment (e.g. a Geiger counter).\n\nThe damage done to living systems when α-particles, β-particles or γ-rays strike tissue, cells or molecules is that it significantly alters them. For example, if the radiation alters the molecular structure, then the damaged cells may no longer carry out their proper function. Molecules, such as DNA, may get damaged and no longer carry the correct information. In most cases, the radiation will damage a small number of cells by breaking the cell wall or otherwise preventing a cell from reproducing. Obviously, large amounts of unplanned radiation are very dangerous and often deadly. If for medical reasons large radiation doses are recommended, then it has to be precisely targeted to minimise damage to neighbouring cells.\n\nRadiation can interact with DNA directly and cause damage by breaking the bonds in the DNA or indirectly by breaking water molecules surrounding the DNA (on average ~60% of our body mass is water). When these water molecules are broken, they produce ions – for example, unstable oxygen molecules that can damage cells and organs.\n\nOnce a cell is damaged, there are three likely outcomes (Figure 3E–6).\n\n1 If the damage is not too severe, the cell repairs itself and would go back to normal.\n\n2 If the cell damage is not repaired or is incorrectly repaired, then this change may eventually lead to a tumorous cancer.\n\n3 If there is too much damage to the cell, then the cell dies.\n\nCell death is not always a bad option. If a few radiation-damaged cells die, your body will recover and you do not have the risk of those cells potentially turning into cancer. However, widespread cell death, such as that caused by high radiation doses, can lead to organ failure and ultimately death.\n\nThe ability of radiation to damage tissue, cells, organs and molecules relates to the ionising power and penetration of the radiation.\n\nAlpha particles are highly ionising and have a short range (being stopped by skin or paper). Beta particles are less ionising and more penetrating but can be stopped by aluminium ~2 mm thick. Gamma rays are very penetrating and easily pass through the human body. Lead ~5 cm thick or concrete ~1 m thick will absorb 97% of the γ-rays (Figure 3E–7).\n\nLead aprons, lead thyroid shields and lead eyeglasses are therefore considered essential for medical personnel working with any form of penetrating radiation (see Figure 3E–8). Gamma rays and X-rays are both highly penetrating forms of radiation.\n\nTable 3E–1 compares the penetration, ionising ability and shielding required for α-particles, β-particles and γ-rays.\n\nComparing the three types of ionising radiation, α-particles have the highest ionising power and the greatest ability to damage tissue. Conversely that also means that α-particles are less able to penetrate matter. This means the threat of cell damage from α-particle radiation is very small from external sources. However, if the α-emitters are inhaled or taken in with food or water then there is very little protection (refer back to the Engage box for this section).\n\nEvents like a nuclear explosion or nuclear accident, where radioactive α-emitters are spread in the environment, are therefore extremely dangerous to all life forms because the radioactive particles become part of the food chain (see Chernobyl nuclear accident in Chapter 4).\n\nβ-particles have much less ionising power and hence less ability to damage tissue than α-particles. However, this gives β-particles much greater penetration than α-particles. β-particles can be stopped by a sheet of aluminium a few millimetres thick. Once again, the greatest danger occurs when the β-emitters are inhaled or taken in with food or water as there is then very little protection (see strontium-90 in Chapter 4).\n\nGamma rays are a very high frequency form of electromagnetic radiation. Gamma rays have very high penetration and require ~ 5 cm of very dense material (like lead) to shield them. Gold would also be a suitable shield but, apart from specialist use by astronauts, is too expensive. Many γ-rays may pass all the way through a human body without striking anything, but when they do hit they have enough energy to cause cell death. This is the process adopted when targeting cancerous tumours with intense beams of γ-rays (see Section 3B – cobalt-60 γ-ray radiotherapy).\n\nNaturally, except for medical treatment, the safest amount of radiation to the human body is zero. However, it is not possible to be exposed to absolutely no ionising radiation as we are all subject to background radiation, so the way to minimise risk is to be exposed to as little radiation as possible. The best ways to minimise exposure are to limit the time of radiation exposure, increase distance from the radioactive source and use appropriate shielding.",
+   "figures": [
+    "3E-F5",
+    "3E-F6",
+    "3E-F7",
+    "3E-F8",
+    "3E-F9"
+   ],
+   "criteria": [
+    "3E.1",
+    "3E.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 49,
+    "book_page": 128,
+    "pages": [
+     49,
+     50,
+     51,
+     52
+    ]
+   }
+  },
+  {
+   "id": "3E-E3",
+   "heading": "Radiation doses",
+   "text": "Our bodies are unable to sense high-intensity doses of radiation. For example, a dose of gamma radiation large enough to be lethal to a human being would only increase the body temperature by about one thousandth of a degree Celsius. In fact, without specialised radiation detection equipment such as Geiger counters (Figure 3E–9), we would be blissfully unaware that we were in a life-threatening situation.\n\nNOTE: Geiger counters are suitable for measuring α-, β- and γ-radiation. Their maximum capacity is about 10 000 particles per second (10 kBq). They can be made in portable versions and are very useful, for example, in monitoring radiation in factories and hospitals, monitoring radiation leaks, and searching for radioactive geological formations.\n\nGeiger counters are devices for measuring radiation. They provide real-time measurement of the activity of radioactive isotopes. For people working in radiation environments, there are various dosimeters. A radiation dosimeter does not provide protection against radiation exposure but instead detects and measures radiation that you already have been exposed to. These are monitored to ensure that people working in radiation environments do not exceed their annual limits. They are specifically designed to detect high-energy beta, gamma or X-ray radiation.\n\nThe optically stimulated luminescence (OSL) monitor measures potential occupational doses from γ- and X-rays.\n\nIn all situations involving ionising nuclear radiation (e.g. medical, industrial, scientific, nuclear reactors, nuclear accidents and environmental studies for example) it is important to be able to determine the exact doses of radiation being emitted by the radioactive sources and the exact doses being received at the target areas. The source needs to be clearly labelled and identified, the amount of radioactive material specified, its half-life and activity known and/or determined, as well as the type(s) of radiation it is emitting.",
+   "figures": [
+    "3E-F10"
+   ],
+   "criteria": [
+    "3E.1",
+    "3E.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 52,
+    "book_page": 131,
+    "pages": [
+     52,
+     53
+    ]
+   }
+  },
+  {
+   "id": "3E-E4",
+   "heading": "Measuring radioactivity and radiation",
+   "text": "Physicists use three different units to quantify radioactivity and radiation.\n\nThe activity of a given radioactive source is measured in becquerels (Bq), which represents the number of nuclear transformations occurring per second.\n\nIonising radiation loses energy in any matter it travels through. The measure of the radiation energy that is absorbed at the target site is called the absorbed dose – the energy absorbed per kilogram of an irradiated object at the actual target site. The unit used is the gray (Gy), where 1 Gy = 1 J $kg^{-1}$.\n\nThe amount of damage 1 Gy of absorbed dose does to the body depends on the nature of the radiation. For example, α-particles are 20 times more damaging than γ-rays or β-particles. To quantify the potential of radiation to damage – and ultimately kill – cells, physicists use the sievert (Sv), which is a measure of the dose equivalent (the biological effect of ionising radiation).",
+   "figures": [],
+   "criteria": [
+    "3E.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 53,
+    "book_page": 132,
+    "pages": [
+     53
+    ]
+   }
+  },
+  {
+   "id": "3E-E5",
+   "heading": "The radiation weighting factor",
+   "text": "The number of ionisations in a cell for a given dose of radiation is much greater for α-radiation than for either β- or γ-radiation. To ensure that the effects of different types of radiation are taken into account, the radiation weighting factor is used. This is a form of weighting that takes into account the biological damage caused by the radiation. For both β- and γ-radiation, the radiation weighting factor is 1. An absorbed dose of 1 μGy of β- or γ-radiation has a dose equivalent of exactly 1 μSv. For the more strongly ionising α-radiation, the radiation weighting factor is 20; the same absorbed dose of 1 μGy of α-radiation has a radiation dose equivalent of 20 μSv.\n\ndose equivalent (Sv) = absorbed dose (Gy) × radiation weighting factor\n\nNOTE: Equivalent dose is calculated for the whole body. This is the most frequently used dose in radiological protection.\n\nThere are also different risk-weighting factors for different parts of the human body.\n\nOrgans in which many cell divisions occur, such as bone marrow or lungs, are more vulnerable to radiation damage. This gives rise to the notion of effective dose.\n\nFigure 3E–11 shows some relative risk-weighting factors for the human body.\n\nA given effective dose equivalent of radiation is four times more likely to cause a possibly fatal cancer in the lungs than in the thyroid gland (0.12:0.03). Note that our reproductive organs (ovaries and testes) are very sensitive to radiation damage. This has important medical implications when using radiation therapy to treat testicular cancer in men and ovarian cancer in women, as the side-effects from medical radiation exposure can functionally impair the testes and ovaries and significantly reduce the quality of life.\n\nEquivalent dose is calculated for the whole body. It is the addition of effective doses to all organs, each adjusted to account for the sensitivity of each organ to radiation.\n\nEquivalent dose is given in sieverts (Sv) or, more frequently, millisieverts (mSv). This is the most frequently used dose in radiological protection. Unless you see mention of a specific organ, a ‘dose’ in Sv or mSv is the effective dose.\n\nIn the simplest cases, for uniform whole-body exposure to γ-radiation or β-radiation, the radiation weighting factor is 1, and the tissue weighting factors add up to 1. Therefore, for example, an absorbed dose of 1 mGy equals an equivalent dose of 1 mSv.",
+   "figures": [
+    "3E-F12"
+   ],
+   "criteria": [
+    "3E.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 54,
+    "book_page": 133,
+    "pages": [
+     54,
+     55
+    ]
+   }
+  },
+  {
+   "id": "3E-E6",
+   "heading": "Short- and long-term effects of low and high doses",
+   "text": "Somatic effects arise when ordinary body cells are damaged, and the effect depends on the size of the dose. Very high doses lead to almost immediate symptoms, whereas lower doses could lead to symptoms developing years later. The period between the initial exposure to radiation and the appearance of the damage is called the latent period. If the dose is more than 1 Sv (1000 mSv), then symptoms of radiation illness such as nausea, headaches, vomiting and diarrhoea can occur within a few days. These are short-term effects.\n\nThe effects of lower doses may not be observed for a few decades. The effects of radiation that appear months or even years after exposure to radiation are called delayed effects or long-term effects. The most important delayed effects are leukaemia and the formation of cancerous tumours. Table 3E–2 shows the effects of whole-body radiation doses.",
+   "figures": [
+    "3E-F13"
+   ],
+   "criteria": [
+    "3E.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 55,
+    "book_page": 134,
+    "pages": [
+     55,
+     56
+    ]
+   }
+  },
+  {
+   "id": "3E-E7",
+   "heading": "Acute effects",
+   "text": "Most of the acute effects of radiation can become evident hours, days and months after a single-dose exposure to the entire body. Acute radiation syndrome (ARS), also known as radiation sickness or radiation poisoning, is a collection of health effects that are caused by being exposed to high amounts of ionising radiation in a short period of time. Apart from damage to the reproductive organs and the lens of the eye (which is also very susceptible to radiation), there will be damage to bone marrow, the gastrointestinal system and the central nervous system. Dose equivalents greater than 8.0 Sv are normally lethal to humans (Figure 3E–13).",
+   "figures": [
+    "3E-F15"
+   ],
+   "criteria": [
+    "3E.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 56,
+    "book_page": 135,
+    "pages": [
+     56
+    ]
+   }
+  },
+  {
+   "id": "3E-E8",
+   "heading": "Radiation standards",
+   "text": "The relationship between the radiation dose received and its effect on humans is not a simple one. The International Atomic Energy Agency (IAEA) has published a graph of the dose–risk relationship currently used for radiation protection purposes Figure 3E–14. This graph shows the probability of incurring a severe radiation effect versus the dose of radiation received and is based on existing radiobiological data. However, many scientists do not agree with the shape of the curve in the low-dose region. Some argue that any radiation, even a minute amount, is undesirable and can cause harmful effects. Others argue that there is a certain threshold of radiation that all humans can tolerate before it becomes dangerous.\n\nThe International Commission for Radiological Protection (ICRP) currently recommends a whole-body dose limit of 1 mSv per year for members of the general public and for workers in the radiation industry 20 mSv per year averaged over 5 years, and not more than 50 mSv received in any one year for effective (whole body) dose. That is, workers in the radiation industries can receive 20 times the dose that members of the public receive per year.\n\nNOTE: To obtain an accumulated 1 Sv dose of radiation, you would need to receive an average of 15 times the normal annual background radiation dose of 2.3 mSv for a period of about 30 years.\n\nThese dose limits are in addition to the natural background radiation that we all receive (approximately 2.3 mSv per year). The ICRP argues that this dose limit standard gives a probability of 1 in 100 000 for a member of the general public dying and 1 in 5000 for a radiation industry worker dying from radiation-induced illnesses over a 30-year period.",
+   "figures": [
+    "3E-F16"
+   ],
+   "criteria": [
+    "3E.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 57,
+    "book_page": 136,
+    "pages": [
+     57
+    ]
+   }
+  },
+  {
+   "id": "3E-E9",
+   "heading": "Genetic effects",
+   "text": "It is difficult to accurately assess the genetic effects of radiation on humans. It may be many generations before genetic effects become apparent (for humans, perhaps 50–200 years); there is little reliable data available and many of the genetic defects noted are hard to directly link to radiation exposure.\n\nThere are two main known genetic effects of radiation:\n• chromosome aberrations involving changes in the actual number or structure of the chromosomes\n• genetic mutations involving an alteration of the nucleotide sequence of a gene, which can lead to birth defects in future generations.\n\nResults from work done on other animal species suggest that an accumulated 1 Sv dose of radiation on human populations will cause between 1000 and 2000 severe genetic mutations, and up to 1000 severe effects due to chromosome aberrations, per million births.\n\nLong-term studies of more than 27 000 children of parents exposed to relatively high doses from the nuclear bombs dropped at Hiroshima and Nagasaki are inconclusive. It may be a number of generations before any substantial conclusive evidence is available.\n\nAlthough we know that the Simpson’s three-eyed Blinky is a fictional fish found outside in the cooling ponds of Mr. Burns nuclear power plant there is considerable research going into real genetic effects associated with nuclear reactor accidents at Chernobyl and Fukushima. The effects of the nuclear disaster in Fukushima have now become visible in deformed butterflies (Figure 3E–15). Researchers worry similar genetic radiation effects may soon start to be seen among humans.",
+   "figures": [
+    "3E-F17"
+   ],
+   "criteria": [
+    "3E.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 57,
+    "book_page": 136,
+    "pages": [
+     57,
+     58
+    ]
+   }
+  },
+  {
+   "id": "3E-E10",
+   "heading": "External and internal radiation",
+   "text": "Radiation irradiates us (bathes us in radiation) in one of two distinct ways. If the radiation source remains outside the body and irradiates us from the outside, then it is said to be external radiation. If the radiation source is inhaled into our lungs via the air or is swallowed when eating or drinking, it irradiates us from inside our bodies and is said to be internal radiation.\n\nThis is a useful distinction to make when discussing radiation and its effect on people as the different properties of various types of radiation make them more or less dangerous, depending on whether they are external or internal sources.\n\nAlpha particles, beta particles and gamma rays are all ionising. The reason is that ionising radiation is harmful to living beings is because the radiation has enough energy to break the bonds of molecules within the cells. For example, a gamma ray has enough energy to break the bonds of a water molecule (Figure 3E–16). This creates chemically reactive ions $(OH^{-}$ and $H^{+}$), which in turn may lead to an uncontrolled division of cells resulting in the production of a large mass of such cells – a cancerous tumour.",
+   "figures": [
+    "3E-F18"
+   ],
+   "criteria": [
+    "3E.4",
+    "3E.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 58,
+    "book_page": 137,
+    "pages": [
+     58
+    ]
+   }
+  },
+  {
+   "id": "3E-E11",
+   "heading": "Nuclear medicine",
+   "text": "Nuclear radiation is a powerful tool in modern medicine, both as an aid to diagnosis (finding out the problem) and as a means of treatment. In medical diagnosis the strategy is to keep the radiation dose extremely small while gaining the maximum information.\n\nSmall amounts of short-lived radioactive isotopes are injected, taken orally or inhaled by the patient. The radioisotope then circulates through the body or is taken up only by certain tissues. Its distribution can be tracked according to the radiation it gives off.\n\nThe emitted radiation can be captured by various imaging techniques, such as single photon emission computed tomography (SPECT) or positron emission tomography (PET), depending on the radioisotope used. Through such imaging, physicians are able to examine blood flow to specific organs and assess organ function or bone growth. The radioisotopes used typically have short half-lives and decay before their emitted radioactivity can cause damage to the patient’s body.",
+   "figures": [],
+   "criteria": [
+    "3E.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 59,
+    "book_page": 138,
+    "pages": [
+     59
+    ]
+   }
+  },
+  {
+   "id": "3E-E12",
+   "heading": "PET scans",
+   "text": "When a positron meets an electron, there is complete annihilation and two γ-rays are produced. This forms the basis of PET scans. These are very useful in a variety of different medical brain scans (Figure 3E–17).\n\nIn radiotherapy the strategy is to target cancerous tumours with maximum effect by using large doses of lethal (to the targeted cells) radiation while minimising collateral damage to healthy cells.",
+   "figures": [
+    "3E-F19"
+   ],
+   "criteria": [
+    "3E.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 59,
+    "book_page": 138,
+    "pages": [
+     59
+    ]
+   }
+  },
+  {
+   "id": "3E-E13",
+   "heading": "Radioactive iodine-123 (diagnostic) and radioactive iodine-131 (therapy)",
+   "text": "Two different isotopes of iodine are used for diagnosis and treatment of the thyroid gland. Iodine, in the form of iodide, is made into two radioactive isotopes that are commonly used in patients with thyroid diseases: iodine-123 (which is relatively harmless to thyroid cells) and iodine-131 (which destroys thyroid cells).\n\nTo accurately diagnose the functioning of the thyroid, the best radioactive isotope to use is iodine-123, a γ-ray emitter with a radioactive half-life of 13 hours. The thyroid has a great affinity for iodine. In order to check the function of a patient’s thyroid gland, iodine-123 is injected into the bloodstream. If after one hour as much as 98% of the radioactive iodine is collected in the thyroid, and it is evenly distributed, then the gland is functioning normally. If the gland is not functioning properly, then it may be taking up the iodine-123 more quickly (an overactive thyroid condition) or more slowly (an underactive thyroid condition). If the iodine-123 is not evenly distributed throughout the gland, it probably indicates that the thyroid gland contains a cancerous tumour.\n\nThe diagnostic radiologist measures the uptake rate and the distribution of radioactive iodine-123 by moving a γ-ray detector slowly across the thyroid gland. The intensity of the radiation emitted by the radioactive iodine-123 in the thyroid is measured at numerous points, as a function of time. The distribution of the radiation is then normally represented using ‘false’ or enhanced colours (Figure 3E–18).\n\nIn the treatment of cancer of the thyroid gland a radiopharmaceutical containing another iodine isotope, radioactive iodine-131, is taken orally.\n\nAgain, most of this iodine will end up at the thyroid gland. Iodine-131 is both a β- and γ-emitter with a half-life of 8 days. The β-particles, with their relatively low penetrating ability, irradiate only the tissue within the thyroid gland and destroy the cancerous cells, while the γ-rays are able to penetrate the patient’s body. This obviously exposes the healthy body cells to some γ-radiation but has the side benefit of allowing the medical treatment to be externally monitored with a gamma ray camera.",
+   "figures": [
+    "3E-F20"
+   ],
+   "criteria": [
+    "3E.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 59,
+    "book_page": 138,
+    "pages": [
+     59,
+     60
+    ]
+   }
+  },
+  {
+   "id": "3E-E14",
+   "heading": "Radiation therapy",
+   "text": "In radiation therapy the strategy is to deliver a lethal radiation dose to a selected site while keeping the dose to surrounding areas at a minimum. The most common methods involve selecting radioactive isotopes that are organ specific, or using shielding and rotation techniques to target specific sites.\n\nIn Australia, approximately 50 000 deaths each year are attributed to cancer-related causes. The probability of surviving cancer depends on two things: early detection and the type of cancer. If the cancer is detected early enough, then the probability of survival could be good, depending on the type of cancer detected. For example, early detection of breast cancer leads to an average 5-year survival rate of 91%.\n\nThe usual methods employed for treating cancer are surgery, chemotherapy (the use of radiopharmaceuticals), irradiation (the use of radiation beams, Figure 3E–20) or a combination of these methods. For example, the surgical removal of a tumour is often combined with medical radiation technology that destroys the new cancerous growths.\n\nIt is obvious that in diagnostic applications of medical radiation the objective is to minimise radiation damage. However, in the treatment of cancers the purpose is to cause cell damage, to reduce the growth of tumour cells or to kill them.\n\nMost people receive only a relatively small amount of artificial radiation as a result of medical intervention. A few people, because of their particular diagnosed cancers, receive thousands of times the radiation dose they would receive from all other sources combined. In these very high-dose cases medical radiographers plan their treatment using the principle of acceptable risk. This principle involves radiographers carefully weighing the advantages and disadvantages to the patient of using radiation treatment as well as the consequences of treatment. Although in many cases the dose of radiation may cause some permanent damage to the patient (e.g. hair loss and reduced resistance to disease for example), it may be the only possible means of realistically attempting to save their lives.\n\nThe production of abnormal cells as a result of cell damage can be due to many things, including exposure to carcogenic (cancer-causing) materials like asbestos, smoke and radon gas. The abnormal cells can reproduce in a rapid and uncontrolled manner, usually resulting in the formation of a lump or tumour. These lumps are considered to be cancerous if they continue to grow or spread throughout the body.\n\nCancerous cells do not perform the tasks required of healthy cells. They are dysfunctional cells. As the number of abnormal cells increases, debilitating biological problems can arise as the body struggles to function normally.\n\nFortunately, cells that are rapidly reproducing (such as cancerous cells) are much more sensitive than normal cells to radiation (Figure 3E–21). Therefore, techniques that irradiate specific sites of cancerous cells can be used to administer doses that are effectively up to 1000 times greater than the radiation dose received by neighbouring healthy cells.",
+   "figures": [
+    "3E-F22",
+    "3E-F23"
+   ],
+   "criteria": [
+    "3E.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 60,
+    "book_page": 139,
+    "pages": [
+     60,
+     61
+    ]
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "3E-F1",
+   "label": "Figure 3E–1",
+   "caption": "Women painting radium onto the clock hands and numbers of alarm clock faces so that the clocks would glow in the dark",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 46,
+    "book_page": 125
+   }
+  },
+  {
+   "id": "3E-F2",
+   "label": "Figure 3E–2",
+   "caption": "‘Radium girl’ worker who developed rotten teeth, huge tumours on her face and had glowing bones from α-particle radiation from UnDark radium paint",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 47,
+    "book_page": 126
+   }
+  },
+  {
+   "id": "3E-F3",
+   "label": "Figure 3E–3",
+   "caption": "Left: Marie Skłodowska-Curie, the Polish scientist working in France, who in 1898 discovered radium and polonium and was later awarded two Nobel Prizes. The work was onerous because 1 tonne of pitchblende only yielded about one-seventh of a gram of radium. Right: Marie’s notebooks are still stored in lead-lined boxes in France today because they were so contaminated with radium they are still highly radioactive and will be for many years.",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 47,
+    "book_page": 126
+   }
+  },
+  {
+   "id": "3E-F4",
+   "label": "Figure 3E–4",
+   "caption": "Advertisement for making your own radium water to drink at home",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 48,
+    "book_page": 127
+   }
+  },
+  {
+   "id": "3E-F5",
+   "label": "Figure 3E–5",
+   "caption": "About 82% of the average annual radiation that people receive comes from natural sources.",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 49,
+    "book_page": 128
+   }
+  },
+  {
+   "id": "3E-F6",
+   "label": "Figure 3E–6",
+   "caption": "Possible outcomes of cells exposed to ionising radiation",
+   "img": "img/3E_fig3E-6.png",
+   "important": true,
+   "why": "Three outcomes for a damaged cell",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 50,
+    "book_page": 129
+   }
+  },
+  {
+   "id": "3E-F7",
+   "label": "Figure 3E–7",
+   "caption": "Relative approximate penetration of alpha particles, beta particles and gamma rays",
+   "img": "img/3E_fig3E-7.png",
+   "important": true,
+   "why": "Relative penetration of α, β, γ (hand, aluminium, lead)",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 50,
+    "book_page": 129
+   }
+  },
+  {
+   "id": "3E-F8",
+   "label": "Figure 3E–8",
+   "caption": "Veterinary personnel working with X-ray machines wearing lead aprons to protect against radiation",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 51,
+    "book_page": 130
+   }
+  },
+  {
+   "id": "3E-F9",
+   "label": "Table 3E–1",
+   "caption": "Comparison of the penetration, ionising ability and shielding required for α-particles, β-particles and γ-rays",
+   "img": "img/3E_tab3E-1.png",
+   "important": true,
+   "why": "Penetration, ionising ability and shielding for α, β, γ",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 51,
+    "book_page": 130
+   }
+  },
+  {
+   "id": "3E-F10",
+   "label": "Figure 3E–9",
+   "caption": "Using a Geiger counter, a yellow-suited hazmat crewmember checks for radioactivity in toxic waste drums disposed of in the desert.",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 52,
+    "book_page": 131
+   }
+  },
+  {
+   "id": "3E-F11",
+   "label": "Figure 3E–10",
+   "caption": "An OSL monitor is used by radiation workers for monitoring personal levels of radioactivity.",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 53,
+    "book_page": 132
+   }
+  },
+  {
+   "id": "3E-F12",
+   "label": "Figure 3E–11",
+   "caption": "Various parts of the body have different radiation weighting factors. The numbers are decimal fractions of the whole (1.00). This leads to the notion of equivalent dose for the whole body.",
+   "img": "img/3E_fig3E-11.png",
+   "important": true,
+   "why": "Tissue weighting factors for parts of the body",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 55,
+    "book_page": 134
+   }
+  },
+  {
+   "id": "3E-F13",
+   "label": "Table 3E–2",
+   "caption": "Effects of various radiation doses",
+   "img": "img/3E_tab3E-2.png",
+   "important": true,
+   "why": "Effects of whole-body radiation doses",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 56,
+    "book_page": 135
+   }
+  },
+  {
+   "id": "3E-F14",
+   "label": "Figure 3E–12",
+   "caption": "Radiation burns on a Hiroshima atom bomb survivor",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 56,
+    "book_page": 135
+   }
+  },
+  {
+   "id": "3E-F15",
+   "label": "Figure 3E–13",
+   "caption": "The whole body dose radiation received in sievert (Sv) for acute effects and their associated symptoms",
+   "img": "img/3E_fig3E-13.png",
+   "important": true,
+   "why": "Acute effects timeline for 3–5, 10–50, 100 Sv doses",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 56,
+    "book_page": 135
+   }
+  },
+  {
+   "id": "3E-F16",
+   "label": "Figure 3E–14",
+   "caption": "The dose–risk relationship used for the protection of workers in radiation industries. A dose of 100 mSv ($10^{-1}$ Sv) implies a 1 in 1000 probability of a severe effect, and a 1 Sv dose implies a 1 in 50 chance of a severe radiation effect (note the scales used are increasing by a power of 10 each time).",
+   "img": "img/3E_fig3E-14.png",
+   "important": true,
+   "why": "Dose–risk relationship (log scales)",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 57,
+    "book_page": 136
+   }
+  },
+  {
+   "id": "3E-F17",
+   "label": "Figure 3E–15",
+   "caption": "The butterflies found to be deformed as a result of radiation from the nuclear meltdown in Fukushima belong to the butterfly family of gossamer-winged butterflies.",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 58,
+    "book_page": 137
+   }
+  },
+  {
+   "id": "3E-F18",
+   "label": "Figure 3E–16",
+   "caption": "A γ-ray hitting a water molecule has enough energy to break the bonds and form an $OH^{-}$ and an $H^{+}$ ion.",
+   "img": "img/3E_fig3E-16.png",
+   "important": true,
+   "why": "γ-ray breaking a water molecule into OH⁻ and H⁺",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 58,
+    "book_page": 137
+   }
+  },
+  {
+   "id": "3E-F19",
+   "label": "Figure 3E–17",
+   "caption": "A PET scan of a patient’s brain used in diagnosing the severity of Alzheimer’s disease",
+   "img": "img/3E_fig3E-17.png",
+   "important": true,
+   "why": "PET brain scan",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 59,
+    "book_page": 138
+   }
+  },
+  {
+   "id": "3E-F20",
+   "label": "Figure 3E–18",
+   "caption": "A common radiotracer used in nuclear medicine diagnosis is the iodine-123 isotope, which emits γ-radiation. The image is captured by SPECT. This image shows a completely healthy thyroid gland.",
+   "img": "img/3E_fig3E-18.png",
+   "important": true,
+   "why": "SPECT image of a thyroid using iodine-123",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 60,
+    "book_page": 139
+   }
+  },
+  {
+   "id": "3E-F21",
+   "label": "Figure 3E–19",
+   "caption": "Radioactive iodine-131 enters a living cell and ‘glows’ with γ-radiation until the cell dies from the beta radiation.",
+   "img": "img/3E_fig3E-19.png",
+   "important": true,
+   "why": "Iodine-131 therapy: cell glows then dies",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 60,
+    "book_page": 139
+   }
+  },
+  {
+   "id": "3E-F22",
+   "label": "Figure 3E–20",
+   "caption": "Stereotactic radiosurgery (SRS) is a type of radiotherapy that allows precise and high-dose radiation beams to be delivered to a small, localised area of the body, mostly in the brain to destroy a cancerous tumour.",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 61,
+    "book_page": 140
+   }
+  },
+  {
+   "id": "3E-F23",
+   "label": "Figure 3E–21",
+   "caption": "These graphs show the effect of a fractionated radiation treatment plan on both normal and tumour cells. The total radiation dose (e.g. 20 Gy) is split into ten doses each of 2.0 Gy, which is administered every second day for 10 days.",
+   "img": "img/3E_fig3E-21.png",
+   "important": true,
+   "why": "Fractionated radiotherapy: tumour vs normal cell viability",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 62,
+    "book_page": 141
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE3E-1",
+   "title": "Radiation dose",
+   "question": "A 60 kg adult absorbs 180 mJ of energy due to ionising radiation.\na Calculate the absorbed dose in mGy.\nb i Calculate the dose equivalent, in mSv, if the radiation is γ-radiation.\nii Calculate the dose equivalent, in mSv, if the radiation is α-radiation.",
+   "steps": [
+    "a absorbed dose = $\\frac{180 \\times 10^{-3}}{60}$",
+    "= 3 × $10^{-3}$",
+    "= 3 mGy",
+    "b i γ-radiation has a radiation weighting factor of 1.",
+    "dose equivalent (Sv) = absorbed dose (Gy) × radiation weighting factor",
+    "= (3 × $10^{-3}$) × 1",
+    "= 3 × $10^{-3}$",
+    "= 3 mSv",
+    "ii α-radiation has a radiation weighting factor of 20.",
+    "dose equivalent (Sv) = absorbed dose (Gy) × radiation weighting factor",
+    "= (3 × $10^{-3}$) × 20.",
+    "= 60 × $10^{-3}$",
+    "= 60 mSv"
+   ],
+   "answer": "a 3 mGy; b i 3 mSv; ii 60 mSv",
+   "img": [
+    "img/3E_WE3E-1.png"
+   ],
+   "criteria": [
+    "3E.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 54,
+    "book_page": 133
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "3E-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "What are the three possible outcomes once a cell is damaged by nuclear radiation?",
+   "answer": "(i) Minimal damage, cell repairs itself and eventually functions normally\n(ii) Cell is not repaired or is repaired incorrectly then cell is altered and this may lead to a cancerous tumour.\n(iii) Too much damage, cell dies",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3E.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Check-in – Set 1.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "Why do medical personnel working with radiation wear lead aprons and lead thyroid shields?",
+   "answer": "Lead aprons and lead thyroid shields provide medical personnel with shielding protection from all of α-, β- and γ-radiation – but particularly β- and γ-radiation.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "3E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Check-in – Set 1.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-CI1.3",
+   "set": 1,
+   "n": 3,
+   "question": "Specify the relative ionising power and penetration for each of α-, β- and γ-radiation using the terms least, medium and most.",
+   "answer": "α-radiation: most ionising power and least penetration\nβ-radiation: medium ionising power and medium penetration\nγ-radiation: least ionising power and most penetration",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3E.2",
+    "3B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Check-in – Set 1.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-CI1.4",
+   "set": 1,
+   "n": 4,
+   "question": "Which form of radiation (α, β or γ) requires the most shielding? Why?",
+   "answer": "γ-radiation as it has the greatest penetration",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "3E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Check-in – Set 1.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "Which of our five senses tells us that we are experiencing a lethal dose of γ-radiation?",
+   "answer": "None of our senses can detect a lethal dose of gamma radiation",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3E.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Check-in – Set 2.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "a What are the units for absorbed dose, dose equivalent and effective dose?\nb What are the definitions for absorbed dose, dose equivalent and effective dose?",
+   "answer": "a Absorbed dose: gray (Gy); dose equivalent: sievert (Sv); effective dose: sievert (Sv)\nb Absorbed dose: the amount of energy absorbed by each kilogram of tissue that is irradiated, measured in gray (Gy)\nDose equivalent: dose equivalent (Sv) = absorbed dose (Gy) × radiation weighting factor\nEffective dose applies to a specific organ, or organs.",
+   "kind": "recall",
+   "size": "medium",
+   "criteria": [
+    "3E.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Check-in – Set 2.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-CI2.3",
+   "set": 2,
+   "n": 3,
+   "question": "Alpha radiation has a radiation weighting factor of 20. What is the dose equivalent for an absorbed dose of 20 mGy?",
+   "answer": "400 mSv\nDose equivalent (Sv) = absorbed dose (Gy) × radiation weighting factor\n= 20 mGy × 20",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "3E.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Check-in – Set 2.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-CI3.1",
+   "set": 3,
+   "n": 1,
+   "question": "What is meant by the term latent period when referring to the effect of nuclear radiation on humans?",
+   "answer": "The latent period is the period between the initial exposure to radiation and the appearance of the damage.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3E.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Check-in – Set 3.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-CI3.2",
+   "set": 3,
+   "n": 2,
+   "question": "What are some common short-term effects of radiation doses > 1 Sv?",
+   "answer": "Short-term effects include nausea, headaches, vomiting and diarrhoea, which can occur within a few days.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3E.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Check-in – Set 3.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-CI3.3",
+   "set": 3,
+   "n": 3,
+   "question": "What are some common long-term effects of radiation doses > 4 Sv?",
+   "answer": "Long-term effects include leukaemia and the formation of cancerous tumours occurring 4–10 years later.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3E.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Check-in – Set 3.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-CI4.1",
+   "set": 4,
+   "n": 1,
+   "question": "What is the difference between external and internal exposure to nuclear radiation?",
+   "answer": "External: irradiated by a source outside of the body\nInternal: irradiated by a source inside the body",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "3E.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Check-in – Set 4.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-CI4.2",
+   "set": 4,
+   "n": 2,
+   "question": "Which of α-, β- and γ-radiation are ionising forms of radiation?",
+   "answer": "All three: α-, β- and γ-radiation",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3E.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Check-in – Set 4.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-CI4.3",
+   "set": 4,
+   "n": 3,
+   "question": "Why can ionising radiation be harmful to humans?",
+   "answer": "It causes ionisation within the cells, that is, it creates ions that are chemically reactive.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "3E.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Check-in – Set 4.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-CI5.1",
+   "set": 5,
+   "n": 1,
+   "question": "What is the strategy in using radiation doses for medical diagnosis?",
+   "answer": "In medical diagnosis, the strategy is to keep the radiation dose extremely small whilst gaining the maximum information.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "3E.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Check-in – Set 5.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-CI5.2",
+   "set": 5,
+   "n": 2,
+   "question": "What is the strategy in using radiation doses for medical therapy?",
+   "answer": "In medical radiotherapy, the strategy is to target the cancerous tumours with maximum effect by using large doses of lethal (to the targeted cells) radiation while minimising collateral damage to the healthy cells.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "3E.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Check-in – Set 5.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-CI5.3",
+   "set": 5,
+   "n": 3,
+   "question": "Why are cancerous cells more sensitive to radiation than normal cells?",
+   "answer": "Cancerous cells are more sensitive to radiation as they are rapidly reproducing.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "3E.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Check-in – Set 5.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "3E-SQ1",
+   "n": "1",
+   "question": "Which type of human tissue is most sensitive to ionising radiation?",
+   "options": [
+    "A. tissue of the lower limb",
+    "B. tissue with cells that divide quickly",
+    "C. tissue that receives the largest dose",
+    "D. tissue with cells that no longer divide"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3E.2",
+    "3E.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-SQ2",
+   "n": "2",
+   "question": "What type of device is used to monitor radiation levels for people working in radiation environments?",
+   "options": [
+    "A. dosimeter",
+    "B. thermometer",
+    "C. gamma camera",
+    "D. a radio receiver"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3E.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-SQ3",
+   "n": "3",
+   "question": "Which one of the following units is used to measure the dose equivalent?",
+   "options": [
+    "A. becquerel",
+    "B. gray",
+    "C. sievert",
+    "D. joule"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3E.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-SQ4",
+   "n": "4",
+   "question": "How much energy, absorbed via γ-rays, would cause the death of a 60 kg person within 50 hours due to a radiation exposure dose of 40 Sv?",
+   "options": [
+    "A. 120 J",
+    "B. 1200 J",
+    "C. 2400 J",
+    "D. 3000 J"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3E.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-SQ5",
+   "n": "5",
+   "question": "a What were the names of the two new elements Marie Curie discovered?\nb What was dangerous about these new elements?",
+   "options": [],
+   "answer": "a Radium and polonium\nb They were both high activity alpha particle-emitting radioactive elements.",
+   "marks": null,
+   "kind": "recall",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "3E.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-SQ6",
+   "n": "6",
+   "question": "Why is it more dangerous for pregnant women to be exposed to high radiation levels than for other people?",
+   "options": [],
+   "answer": "Unborn babies are especially sensitive to the cancer-causing effects of radiation because of the high rate of cell replication.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "practice",
+    "exit"
+   ],
+   "criteria": [
+    "3E.1",
+    "3E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-SQ7",
+   "n": "7",
+   "question": "Gold is a very good shield for α-, β- and γ-radiation and is less poisonous than lead. Why don’t medical personnel working with radiation wear gold aprons, gold thyroid shields and gold glasses?",
+   "options": [],
+   "answer": "The cost is prohibitive. Gold is much more expensive than lead.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "3E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-SQ8",
+   "n": "8",
+   "question": "Alpha radiation has a radiation weighting factor of 20. What is the dose equivalent for an absorbed dose of 15 mGy?",
+   "options": [],
+   "answer": "300 mSv\nDose equivalent (Sv) = absorbed dose (Gy) × radiation weighting factor\n= 15 mGy × 20",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice",
+    "youtry"
+   ],
+   "criteria": [
+    "3E.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-SQ9",
+   "n": "9",
+   "question": "A 20 kg child absorbs 40 mJ of energy due to ionising radiation.\na Calculate the absorbed dose in mGy.\nb i Calculate the dose equivalent, in mSv, if the radiation is γ-radiation.\nii Calculate the dose equivalent, in mSv, if the radiation is α-radiation.",
+   "options": [],
+   "answer": "a Absorbed dose = $\\frac{40 \\times 10^{-3}}{20}$ = 2 × $10^{-3}$ = 2 mGy\nb i γ-radiation has a radiation weighting factor of 1.\nDose equivalent (Sv) = absorbed dose (Gy) × radiation weighting factor = (2 × $10^{-3}$) × 1 = 2 × $10^{-3}$ = 2 mSv\nii α-radiation has a radiation weighting factor of 20.\nDose equivalent (Sv) = absorbed dose (Gy) × radiation weighting factor = (2 × $10^{-3}$) × 20 = 40 × $10^{-3}$ = 40 mSv",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "3E.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-SQ10",
+   "n": "10",
+   "question": "Radium is a very strong emitter of α-particles. One gram of radium has an activity of 37 GBq (3.7 × $10^{10}$ Bq). Each α-particle emitted has an energy of 4.6 MeV.\na Calculate the total energy per second released by 1 g of radium in MeV and in J.\nb What is the power of 1 g of radium in W?\nc Calculate how much energy (J) 1 g of radium would release in 1 year.",
+   "options": [],
+   "answer": "a Total energy per second in MeV $s^{-1}$ = (4.6)(3.7 × $10^{10}$) = 1.7 × $10^{11}$ MeV $s^{-1}$\nTotal energy per second in J = (1.7 × $10^{11}$)(1.6 × $10^{-13}$) = 2.7 × $10^{-2}$ J $s^{-1}$\nb Power = 2.7 × $10^{-2}$ W\nc Total energy = (2.7 × $10^{-2}$)(365)(24)(3600) = 8.6 × $10^{5}$ J",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "3B.1",
+    "3C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-SQ11",
+   "n": "11",
+   "question": "Why can the formation of ions be damaging to living cells?",
+   "options": [],
+   "answer": "The reason that ionising radiation is harmful to living cells is because it creates ions that are chemically reactive and can immediately start undesirable chemical reactions in the cell. This may irretrievably alter the cells and cause them to become cancerous tumours and possibly even lead to cell death.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice",
+    "exit"
+   ],
+   "criteria": [
+    "3E.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3E-SQ12",
+   "n": "12",
+   "question": "Ionising radiation can cause cancer, yet it also can cure cancer. Explain this apparent contradiction.",
+   "options": [],
+   "answer": "Ionising radiation can damage healthy cells that if not repaired properly, or incorrectly repaired, can lead to altered cells that may eventually uncontrollably reproduce and create a cancerous tumour.\nConcentrated ionising radiation doses can be targeted on cancerous tumours to destroy the cancerous cells completely so that they are no longer viable and stop reproducing.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "3E.1",
+    "3E.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "3E Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 3E–1 The effect of radiation on humans",
+  "total": 20,
+  "file": "3E Worksheet 3E–1 The effect of radiation on humans.docx",
+  "questions": [
+   {
+    "id": "WS3E-1",
+    "n": "1",
+    "question": "Why is ionising radiation harmful to living beings?",
+    "answer": "The reason that ionising radiation is harmful to living beings is because it causes ionisation within the cells, that is, it creates ions that are chemically reactive (for example $O^{2-}$). Such ions can immediately start undesirable chemical reactions in the cell and possible lead to cell death.",
+    "marks": 3,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3E.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3E Worksheet 3E–1 The effect of radiation on humans.docx",
+     "answer_file": "3E Worksheet 3E–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3E-2",
+    "n": "2",
+    "question": "The diagram below shows the relative penetration for the three different forms of nuclear radiation (alpha, beta and gamma). Correctly label the diagram.",
+    "answer": "See labelled diagram (img/3E_WS2_answer.png).",
+    "marks": 3,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "donow"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3E.2",
+     "3B.1"
+    ],
+    "img": [
+     "img/3E_WS2.png",
+     "img/3E_WS2_answer.png"
+    ],
+    "src": {
+     "file": "3E Worksheet 3E–1 The effect of radiation on humans.docx",
+     "answer_file": "3E Worksheet 3E–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3E-3",
+    "n": "3",
+    "question": "Complete the table below to give the ionisation ability of each of the three forms of nuclear radiation (α, β and γ) related to the penetration power. (Particle | Symbol | Penetration | Ionising ability: Alpha α; Beta β; Gamma γ)",
+    "answer": "| Particle | Symbol | Penetration | Ionising ability |\n|---|---|---|---|\n| Alpha | α | Very low | Very high |\n| Beta | β | Intermediate | Intermediate |\n| Gamma | γ | Very high | Very low |",
+    "marks": 6,
+    "kind": "recall",
+    "size": "medium",
+    "phase": [
+     "wedo",
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3E.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "3E Worksheet 3E–1 The effect of radiation on humans.docx",
+     "answer_file": "3E Worksheet 3E–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3E-4",
+    "n": "4",
+    "question": "Why is radon gas (an α-radiation emitter) dangerous if inhaled?",
+    "answer": "Radon gas, an α-radiation emitter, is dangerous if inhaled as it will allow α-particles to penetrate sensitive lung tissues and possibly cause irreversible cell damage (e.g. lung cancer).",
+    "marks": 2,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3E.4",
+     "3E.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "3E Worksheet 3E–1 The effect of radiation on humans.docx",
+     "answer_file": "3E Worksheet 3E–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3E-5a",
+    "n": "5a",
+    "question": "A 60 kg adult absorbs 120 mJ of energy due to ionising radiation.\nCalculate the absorbed dose in mGy.",
+    "answer": "Absorbed dose = $\\frac{120 \\times 10^{-3}}{60}$ = 2 × $10^{-3}$ = 2 mGy",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3E.5"
+    ],
+    "img": [],
+    "src": {
+     "file": "3E Worksheet 3E–1 The effect of radiation on humans.docx",
+     "answer_file": "3E Worksheet 3E–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3E-5bi",
+    "n": "5bi",
+    "question": "A 60 kg adult absorbs 120 mJ of energy due to ionising radiation.\nCalculate the dose equivalent, in mSv, if the radiation is γ-radiation.",
+    "answer": "γ-radiation has a radiation weighting factor of 1.\ndose equivalent (Sv) = absorbed dose (Gy) × radiation weighting factor\n= (2 × $10^{-3}$) × 1 = 2 × $10^{-3}$ = 2 mSv",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3E.5"
+    ],
+    "img": [],
+    "src": {
+     "file": "3E Worksheet 3E–1 The effect of radiation on humans.docx",
+     "answer_file": "3E Worksheet 3E–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3E-5bii",
+    "n": "5bii",
+    "question": "A 60 kg adult absorbs 120 mJ of energy due to ionising radiation.\nCalculate the dose equivalent, in mSv, if the radiation is α-radiation.",
+    "answer": "α-radiation has a radiation weighting factor of 20.\ndose equivalent (Sv) = absorbed dose (Gy) × radiation weighting factor\n= (2 × $10^{-3}$) × 20 = 40 × $10^{-3}$ = 40 mSv",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3E.5"
+    ],
+    "img": [],
+    "src": {
+     "file": "3E Worksheet 3E–1 The effect of radiation on humans.docx",
+     "answer_file": "3E Worksheet 3E–1 Answers.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "3E.5"
+   ],
+   "wedo": "WE3E-1",
+   "youtry": [
+    "WS3E-5a",
+    "WS3E-5bii"
+   ],
+   "note": "Same structure (60 kg adult, 120 mJ vs 180 mJ). 3E-SQ9 is a second set."
+  },
+  {
+   "criteria": [
+    "3E.2"
+   ],
+   "wedo": "WS3E-3",
+   "youtry": [
+    "3E-CI1.3",
+    "3E-CI1.4"
+   ],
+   "origin": "adapted",
+   "note": "Penetration vs ionising ability table; recall rather than calculation."
+  }
+ ],
+ "skills": [
+  {
+   "id": "3E-SK1",
+   "heading": "Identifying exact meaning for key terms",
+   "text": "In detecting and measuring radioactivity and radiation, there are many terms that have very specific meanings. It is important to note all of these terms and their specific definitions. One way of doing this is to create a specific glossary of definitions for areas of study that introduce many new terms, such as this section.\n\nAs noted previously to define is to state the precise meaning of the terms. For example, if you were asked to define ‘absorbed dose (gray)’, then the following definition might appear in your glossary of notes in this section.\n\nDefinition: The measure of the radiation energy that is absorbed at the target site is called the absorbed dose – the energy absorbed per kilogram of an irradiated object at the actual target site. The unit used is the gray (Gy), where 1 Gy = 1 J $kg^{-1}$.\n\nIn this section you should have learned what Geiger counters and dosimeters are, what they do and what their similarities and differences are.\n\nSimilarly you should know, apart from the gray, what the other measurement units – becquerel (Bq) and sievert (Sv) – are and where and when they are used. Also, your glossary for this section should include where and when the terms activity, absorbed dose, dose equivalent, radiation weighting factor and effective dose are used.",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 62,
+    "book_page": 141
+   }
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P3E-1",
+   "title": "Practical 3E–1 Protection against radiation",
+   "file": "3E Practical 3E–1 Protection against radiation.docx",
+   "aim": "To investigate the shielding required for protection from external α-, β- and γ-radiation."
+  }
+ ],
+ "notes": "Section question 4 (MC) options B–D carry a duplicated letter in the docx ('B 1200 J'); cleaned. Section question 10 answer uses 1 MeV = 1.6 × 10⁻¹³ J. Worksheet 3E–1 Q2 is a labelling diagram (answer is an image). Review question 10 (inverse-square, 200 Bq at 1 m) is linked by the checklist to 3E.1/3E.6/3C.2 but the idea is not taught in Chapter 3."
+}

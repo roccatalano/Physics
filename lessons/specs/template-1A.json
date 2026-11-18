@@ -1,0 +1,17 @@
+{"name":"Template - every slide type (1A)","title":"The properties of waves","unit":1,"aos":1,"aos_name":"Light and heat","lesson":1,"sections":["1A"],
+"slides":[
+ {"type":"title"},
+ {"type":"donow","min":8,"items":["1A-CI1.2","1A-CI1.3","1A-CI2.3"],"labels":["Last lesson","Last week","Last term"]},
+ {"type":"goals","min":2,"criteria":["1A.3","1A.4","1A.6"]},
+ {"type":"keyideas","min":5,"glossary":["1A-G2","1A-G3","1A-G6","1A-G8","1A-G9"],"formulas":["F1A-1"]},
+ {"type":"apk","min":5,"items":[
+   {"from":"Year 9 · 9.5 Matter and energy: waves","text":"A wave carries energy from one place to another. Every wave has a frequency and an amplitude.","q":"A swimmer floats as waves pass. Does the swimmer travel to the beach with the waves?","a":"No. The swimmer bobs up and down while the energy passes by."},
+   {"from":"Year 9 · 9.6 Energy transfer by sound","text":"Sound is a pressure wave: it needs particles to travel through.","q":"Why can't sound travel through space?","a":"Space is almost empty. There are no particles to pass the vibration on."}]},
+ {"type":"new","min":15,"chunk":"1A-E2","figure":"1A-F1","paras":2},
+ {"type":"interactive","id":"1A-1-wave-types","heading":"Transverse and longitudinal waves"},
+ {"type":"figure","figure":"1A-F3"},
+ {"type":"wedo","min":15,"item":"WE1A-1","kib":"F1A-1"},
+ {"type":"youtry","item":"WS1A-2a","kib":"F1A-1"},
+ {"type":"practice","min":20,"rows":[["Worksheet 1A–1 The properties of waves","Q1, 2b to 2e, 3, 4"],["Section 1A questions","Q5 to 8 (calculations), then Q1 to 4"]]},
+ {"type":"exit","min":9,"items":[{"crit":"1A.3","q":"CH1-RQ18"},{"crit":"1A.4","q":"CH1-RQ21"},{"crit":"1A.6","q":"CH1-RQ22"}]}
+]}

@@ -1,0 +1,1290 @@
+{
+ "code": "8C",
+ "title": "Equilibrium",
+ "chapter": 8,
+ "unit": 2,
+ "aos": 1,
+ "study_design": [
+  "Calculate torque, $\\tau = r_{\\perp}F$",
+  "Analyse translational and rotational forces (torques) in simple structures in translational and rotational equilibrium"
+ ],
+ "criteria": [
+  "8C.1",
+  "8C.2",
+  "8C.3"
+ ],
+ "glossary": [
+  {
+   "id": "8C-G1",
+   "term": "Equilibrium",
+   "def": "the state where the sum of the translational and rotational forces on an object are equal to zero",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "8C-G2",
+   "term": "Translational force",
+   "def": "a force that can cause an object to change its position",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "8C-G3",
+   "term": "Rotational force",
+   "def": "force that can cause an object to rotate about an axis of rotation",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "8C-G4",
+   "term": "Torque",
+   "def": "a measure of how much of a force acting on an object is causing it to rotate",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "8C-G5",
+   "term": "Pivot point",
+   "def": "the point that an object rotates around; also known as the axis of rotation",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 43
+   }
+  },
+  {
+   "id": "8C-G6",
+   "term": "Centre of mass",
+   "def": "the mean position of all the parts of a system, weighed according to their masses",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 43
+   }
+  },
+  {
+   "id": "8C-G7",
+   "term": "Rotational equilibrium",
+   "def": "when a system is not rotating, the sum of the torques is equal to zero",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 48
+   }
+  },
+  {
+   "id": "8C-G8",
+   "term": "Translational equilibrium",
+   "def": "occurs when the velocity of an object is constant. This means that the net force acting on the object is equal to zero.",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 48
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F8C-1",
+   "name": "Formula 8C–1 Torque",
+   "latex": "\\tau = r_{\\perp}F",
+   "where": [
+    {
+     "sym": "\\tau",
+     "meaning": "Torque",
+     "unit": "N m"
+    },
+    {
+     "sym": "r_{\\perp}",
+     "meaning": "Perpendicular distance from the line of action of the force to the pivot point",
+     "unit": "m"
+    },
+    {
+     "sym": "F",
+     "meaning": "Force",
+     "unit": "N"
+    }
+   ],
+   "criteria": [
+    "8C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 42
+   },
+   "note": "Note: this formula can also be expressed in the form $\\tau = F_{\\perp}r$, where $F_{\\perp}$ is the perpendicular component of the force and $r$ is the distance from the pivot point."
+  },
+  {
+   "id": "F8C-2",
+   "name": "Formula 8C–2 Rotational equilibrium",
+   "latex": "\\sum\\tau = 0 \\quad \\sum\\text{anticlockwise moments} = \\sum\\text{clockwise moments}",
+   "where": [],
+   "criteria": [
+    "8C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 48
+   }
+  },
+  {
+   "id": "F8C-3",
+   "name": "Formula 8C–3 Translational equilibrium",
+   "latex": "\\sum F = 0 \\quad \\sum F_{\\text{left}} = \\sum F_{\\text{right}} \\quad \\sum F_{\\text{up}} = \\sum F_{\\text{down}}",
+   "where": [],
+   "criteria": [
+    "8C.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 48
+   }
+  }
+ ],
+ "engage": {
+  "heading": "Levers in life",
+  "text": "Give me a lever long enough and a fulcrum on which to place it, and I shall move the world – Archimedes. Have you ever wondered why a door handle is placed so far away from the hinge? What would happen if the door handle was placed in the centre of the door? By placing the door handle far away from the pivot point, the person opening the door is placed with a mechanical advantage. As the distance from the pivot point increases, the torque also increases for a given force. The ability to greatly increase the torque by using a long lever has been used by humans for thousands of years, including by Aboriginal and Torres Strait Islander peoples, as covered later in this section. Levers are used on wheel braces and wrenches to help tighten and loosen bolts, on wheelbarrows to make it easier to lift a heavy load, on pliers, tongs and tweezers to help get a tight grip of things.",
+  "src": {
+   "file": "Physics12_Ch08.pdf",
+   "page": 41
+  }
+ },
+ "chunks": [
+  {
+   "id": "8C-E1",
+   "heading": "Introducing equilibrium",
+   "text": "Looking around the room that you are in, you will see many objects but very few will currently be moving. This does not mean the objects have no forces on them; it just means they are in equilibrium. If, for example, you rest a ruler on a desk so that half of the ruler is hanging over the edge, the ruler will have a force due to gravity and normal force acting on it. These translational forces will balance each other. Now if you place an eraser at both ends of the ruler, it will be in rotational equilibrium as the eraser to the left is creating an equal rotational force as the eraser places on the right end. The addition of these erasers increases the gravitational force on the ruler–eraser system, so the normal force on the ruler by the table will also increase. If another eraser is then placed to the right of the ruler, the system will no longer be in equilibrium and it will rotate in a clockwise direction.",
+   "figures": [
+    "8C-F2",
+    "8C-F3"
+   ],
+   "criteria": [
+    "8C.2",
+    "8C.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "8C-E2",
+   "heading": "Torque",
+   "text": "Torque (rotational force) is a measure of the ability to cause rotation. The amount of torque, $\\tau$, is given below. [Formula 8C–1] Torque is a vector quantity; it requires a magnitude and a direction. The direction of torque is either clockwise or anticlockwise. In order to have either clockwise or anticlockwise torques, an object must have a pivot point. The pivot point is the point that an object rotates around. It is important to note that no force that passes directly through the pivot point will cause a torque. For example, if you push on a door so that all of the force goes through the hinges, then the door will not swing open. When solving torque problems, it is important to understand the significant of the centre of mass. The location of the centre of mass is determined by finding the mean position of all the parts of a system, weighed according to their masses. If a force is applied through the centre of mass, it will cause linear acceleration without a torque on the object. The force due to gravity acts at the centre of mass of the object.",
+   "figures": [
+    "8C-F4",
+    "8C-F5"
+   ],
+   "criteria": [
+    "8C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "8C-E3",
+   "heading": "The Woomera",
+   "text": "Aboriginal peoples use leverage to throw spears. A woomera is a device that the spear sits in. It increases the length of the lever arm; therefore, a greater force can be applied to the spear, increasing the distance thrown.",
+   "figures": [],
+   "criteria": [
+    "8C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 45
+   }
+  },
+  {
+   "id": "8C-E4",
+   "heading": "Rotational equilibrium",
+   "text": "Problems that you encounter will often refer to a system being in equilibrium. This means that, not only are all of the forces balanced, but all of the torques are also balanced (as the object is not rotating). When a system is in rotational equilibrium, it is not rotating; this means that the clockwise and anticlockwise torques are equal in magnitude. Therefore, for a system in rotational equilibrium: [Formula 8C–2]",
+   "figures": [],
+   "criteria": [
+    "8C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 48
+   }
+  },
+  {
+   "id": "8C-E5",
+   "heading": "Translational equilibrium",
+   "text": "Any object that is stationary or moving at a constant velocity is in translational equilibrium. When an object is either stationary or moving at a constant velocity, the sum of the forces on the object are equal to zero. This can be expressed mathematically as: [Formula 8C–3]",
+   "figures": [],
+   "criteria": [
+    "8C.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 48
+   }
+  },
+  {
+   "id": "8C-E6",
+   "heading": "Translational and rotational equilibrium",
+   "text": "For a system to be in equilibrium, both the rotational and translational forces must be in equilibrium. Therefore, to solve these types of problems, you must consider how the torques and forces on the system can remain balanced. Generally, it is advisable to do the following. 1 Draw in all of the forces acting on the relevant object. 2 Solve the rotational equilibrium first. To do this, choose a pivot point that will eliminate one of the forces, since any force that passes through the pivot point causes no rotation. Note, you can choose any point to be the pivot point, but some make the calculation easier than others. 3 Solve any unknowns by equating the clockwise and anticlockwise torques. 4 Break all of the forces into their up, down, left and right components. 5 Solve any unknown forces by equating the up and down forces as well as the left and right forces.",
+   "figures": [],
+   "criteria": [
+    "8C.2",
+    "8C.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 50
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "8C-F2",
+   "label": "Figure 8C–2",
+   "caption": "A ruler that has one end over the table does not fall off because it is in translational and rotational equilibrium.",
+   "img": "img/8C_fig8C-2.png",
+   "important": true,
+   "why": "Equilibrium intro",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "8C-F3",
+   "label": "Figure 8C–3",
+   "caption": "The ruler in Figure 8C–2 now has another eraser added to the end that extends beyond the edge of the table and will rotate clockwise because the sum of the clockwise torques are greater than the sum of the anticlockwise torques.",
+   "img": "img/8C_fig8C-3.png",
+   "important": true,
+   "why": "Unbalanced torques",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "8C-F4",
+   "label": "Figure 8C–4",
+   "caption": "The various ways of calculating torque. a The perpendicular distance from the line of action of the force is through the object. b The perpendicular distance to the line of action of the force is outside of the object that the torque is being applied to. c r is taken as the distance from the pivot point to where the force is being applied. The component of the force that is perpendicular to r is then found.",
+   "img": "img/8C_fig8C-4.png",
+   "important": true,
+   "why": "Three ways to find r-perp / F-perp",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 43
+   }
+  },
+  {
+   "id": "8C-F5",
+   "label": "Figure 8C–5",
+   "caption": "A door, viewed from directly above. When a force goes through the pivot point, no torque is generated.",
+   "img": "img/8C_fig8C-5.png",
+   "important": true,
+   "why": "Force through pivot gives zero torque",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 43
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE8C-1",
+   "title": "Torque on a lever",
+   "question": "A force of 100 N is applied 5.00 m from the pivot point as shown below. Calculate the torque and state the direction (clockwise or anticlockwise) in which this bar will rotate.",
+   "steps": [
+    "$\\tau = r_{\\perp}F = (5.00)(100) = 500\\text{ N m}$, it will rotate anticlockwise."
+   ],
+   "answer": "500 N m anticlockwise",
+   "img": [
+    "img/8C_WE8C-1.png"
+   ],
+   "criteria": [
+    "8C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 44
+   }
+  },
+  {
+   "id": "WE8C-2",
+   "title": "Torque when force is not perpendicular",
+   "question": "A see-saw is pushed with a force of 50.0 N, 0.471 m to the left of the pivot point. The force makes an angle of 20° to the horizontal. A diagram of this is shown below. Calculate the torque generated by the force. Include a direction for the torque. Note that, for this question, the force due to gravity of the see-saw acts through the pivot point. Therefore, the perpendicular distance, $r_{\\perp}$, is zero and the torque due to gravity on the see-saw is zero.",
+   "steps": [
+    "In this example, the best approach is to find how far the perpendicular component of the force, $F_{\\perp}$, acts from the pivot point. This is shown in the diagram below.",
+    "vertical component $= 50\\sin 20° = 17.1\\text{ N}$",
+    "$\\tau = (17.1)(0.471) = 8.05\\text{ N m}$, clockwise",
+    "Note that since torque is a vector quantity, it must have a direction. In this case, the direction is clockwise as the see-saw will rotate in the same direction that a clock hand would move."
+   ],
+   "answer": "8.05 N m clockwise",
+   "img": [
+    "img/8C_WE8C-2.png",
+    "img/8C_WE8C-2-sol.png"
+   ],
+   "criteria": [
+    "8C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 44
+   }
+  },
+  {
+   "id": "WE8C-3",
+   "title": "Finding rotational equilibrium",
+   "question": "If the see-saw shown in the diagram below is in equilibrium, calculate the mass of the block on the left.",
+   "steps": [
+    "$\\sum\\tau = 0$",
+    "$F(1.20) = (110)(2.2)$",
+    "$F = 202\\text{ N}$",
+    "$m = \\frac{202}{9.8} = 20.6\\text{ kg}$"
+   ],
+   "answer": "20.6 kg",
+   "img": [
+    "img/8C_WE8C-3.png"
+   ],
+   "criteria": [
+    "8C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 48
+   }
+  },
+  {
+   "id": "WE8C-4",
+   "title": "Force exerted by the pivot",
+   "question": "Two masses are placed on a see-saw shown in the diagram below. If the see-saw is in equilibrium, calculate the force exerted by the pivot.",
+   "steps": [
+    "$\\sum F = 0$",
+    "$\\sum F_{\\text{left}} = \\sum F_{\\text{right}}$ (there are no left or right forces on the pivot, so this is zero on both sides)",
+    "$\\sum F_{\\text{up}} = \\sum F_{\\text{down}} = 223 + 90 = 313\\text{ N}$",
+    "The upwards force exerted by the pivot point is 313 N."
+   ],
+   "answer": "313 N up",
+   "img": [
+    "img/8C_WE8C-4.png"
+   ],
+   "criteria": [
+    "8C.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 49
+   }
+  },
+  {
+   "id": "WE8C-5",
+   "title": "Finding tension in a sign",
+   "question": "A sign is hung by two cables to the ceiling of the shop. The sign has a mass of 35.0 kg and the cables make an angle of 56° to the horizontal. If the mass of the cables is negligible, calculate the tension in each cable.",
+   "steps": [
+    "Since the sign is stationary and not rotating, it is in translational equilibrium; therefore: $\\sum F = 0$ and $\\Sigma\\tau = 0$",
+    "The downwards force due to gravity must be balanced by the upwards components of the tension force. To determine this, the tension force must be broken up into its component forces as shown below.",
+    "$\\sum F_{\\text{up}} = \\sum F_{\\text{down}}$",
+    "$2\\times T\\sin 56° = (35.0)(9.8)$",
+    "$T = 207\\text{ N}$",
+    "Note that the $\\sum F_{\\text{left}} = \\sum F_{\\text{right}}$ will be equal as they will both be equal to $T\\cos 56°$ N."
+   ],
+   "answer": "207 N",
+   "img": [
+    "img/8C_WE8C-5.png",
+    "img/8C_WE8C-5-sol.png"
+   ],
+   "criteria": [
+    "8C.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 49
+   }
+  },
+  {
+   "id": "WE8C-6",
+   "title": "Application to cantilever with support",
+   "question": "A uniform beam, with a length of 2.50 m and a mass of 13.0 kg, is held to a wall by a metal cable. The metal cable is attached to the beam 2.34 m away from the wall and makes an angle of 25.0° to the horizontal as shown in the diagram below. Calculate the tension in the metal cable.",
+   "steps": [
+    "Use the join between the wall and the beam as the pivot point.",
+    "Draw all of the forces acting on the beam:",
+    "The force due to gravity of the beam acts 1.25 m away from the wall (the pivot point):",
+    "$\\sum\\tau = 0$",
+    "$(1.25)(13.0)(9.8) = (T\\sin 25°)(2.34)$",
+    "$T = \\frac{(1.25)(13.0)(9.8)}{(\\sin 25°)(2.34)} = 161\\text{ N}$"
+   ],
+   "answer": "161 N",
+   "img": [
+    "img/8C_WE8C-6.png",
+    "img/8C_WE8C-6-sol.png"
+   ],
+   "criteria": [
+    "8C.1",
+    "8C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 50
+   }
+  },
+  {
+   "id": "WE8C-7",
+   "title": "Equilibrium in a table",
+   "question": "A 20 kg box is placed 1.5 m away from the left leg of a table. The table is supported by two legs and the top of the table is a uniform mass of 5.8 kg. The table is 3.5 m long. Calculate the force that the left leg is exerting.",
+   "steps": [
+    "The first step in these complex problems is to draw all of the forces acting on the relevant object.",
+    "You can eliminate one force by choosing the location of your pivot point. Make the location of the pivot point the right leg and then solve for the force on the left leg.",
+    "$\\sum\\tau = 0$",
+    "$(20)(9.8)(3.5 - 1.5) + (5.8)(9.8)(1.75) = F_{\\text{left leg}}(3.5)$",
+    "$F_{\\text{left leg}} = 140\\text{ N}$ up"
+   ],
+   "answer": "140 N up",
+   "img": [
+    "img/8C_WE8C-7.png"
+   ],
+   "criteria": [
+    "8C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 51
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "8C-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "A builder uses a spanner to turn a bolt. The builder applies a force of 57 N at a distance of 25 cm from the pivot point. a Calculate the torque applied to the bolt. b Other than applying more force, how could the builder increase the torque?",
+   "answer": "a $T = rF = (0.25)(57) = 14.25\\text{ N m}$ b The builder could use a wrench with a longer handle, which would increase the distance of the lever arm.",
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8C.1"
+   ],
+   "img": [
+    "img/8C_CI1-1.png"
+   ],
+   "src": {
+    "file": "8C Check-in – Set 1.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8C-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "Two blocks are placed on a see-saw. The first block has a mass of x kg and is placed so that its centre of mass acts 39 cm to the left of the pivot point; the second block has a mass of 12.9 kg and is placed so that its centre of mass acts 77 cm to the right of the pivot point. Calculate the mass of x, given that the system is in equilibrium.",
+   "answer": "$x(0.39) = (12.9)(0.77)$; $x = 25.5\\text{ kg}$",
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8C.2"
+   ],
+   "img": [
+    "img/8C_CI1-2.png"
+   ],
+   "src": {
+    "file": "8C Check-in – Set 1.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8C-CI1.3",
+   "set": 1,
+   "n": 3,
+   "question": "A builder uses a spanner to turn a bolt. The builder applies a force of 78 N at an angle of 36° from the horizontal and a distance of 32 cm from the pivot point. A diagram of this situation is shown below. Calculate the torque generated by the builder.",
+   "answer": "$T = (78\\cos 36°)(0.32) = 20.2\\text{ N m}$",
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "8C.1"
+   ],
+   "img": [
+    "img/8C_CI1-3.png"
+   ],
+   "src": {
+    "file": "8C Check-in – Set 1.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8C-CI1.4",
+   "set": 1,
+   "n": 4,
+   "question": "When cycling, a cyclist attaches their shoe to the bike pedal that turns the gears that ultimately turns the wheel. The diagram below shows a cyclist pushing on the pedal. In which direction, A, B or C, should the cyclist push? Justify your answer.",
+   "answer": "A. The torque is given by $rF\\sin\\theta$, at A $\\theta = 90°$ and $\\sin 90° = 1$, therefore the torque is a maximum when pushing through A.",
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8C.1"
+   ],
+   "img": [
+    "img/8C_CI1-4.png"
+   ],
+   "src": {
+    "file": "8C Check-in – Set 1.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8C-CI1.5",
+   "set": 1,
+   "n": 5,
+   "question": "A hand car is a manually-powered railway vehicle used by workers to inspect and maintain tracks. Workers stand at either end of the black armature holding the brown handles, pumping the armature up and down to turn a circular gear that turns the wheels. In Australia, hand cars were affectionately known as kalamazoos after the Kalamazoo Manufacturing Company that produced them. The length of the armature is 2.60 m, so each end is 1.30 m from the pivot point, as shown in the diagram. Each rider applies a constant force of 350 N while pumping the car. © Mason Clark a Calculate the total torque when the armatures make an angle of 30° to the horizontal as shown in the diagram above. b Sketch a graph showing how the torque varies with time; no values are required. Take the point of time zero to be when the pump lever is in the horizontal position. Note: the maximum angle to the horizontal that the pump lever makes is 40°.",
+   "answer": "a $T = (2)(350)(1.3)(\\cos 30°) = 788\\text{ N m}$ b [Graph of torque (N m) against time (s): see image]",
+   "kind": "graph",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8C.1"
+   ],
+   "img": [
+    "img/8C_CI1-5.png"
+   ],
+   "src": {
+    "file": "8C Check-in – Set 1.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   },
+   "answer_img": [
+    "img/8C_CI1-5-ans.png"
+   ]
+  },
+  {
+   "id": "8C-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "A see-saw has two different masses placed on it in such a way that it is in equilibrium. A mass of 2 kg is placed so that its centre of mass is 63 cm from the pivot point and a mass of 5 kg is placed so that its centre of mass is x m away from the pivot point. a Calculate the distance x. b Calculate the force applied by the pivot point to the beam.",
+   "answer": "a $(2)(9.8)(0.63) = (5)(9.8)x$; $x = 0.252\\text{ m}$ or 25.2 cm b $F_{\\text{up}} = (2)(9.8) + (5)(9.8) = 68.6\\text{ N}$",
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8C.2",
+    "8C.3"
+   ],
+   "img": [
+    "img/8C_CI2-1.png"
+   ],
+   "src": {
+    "file": "8C Check-in – Set 2.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8C-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "A 150 cm long uniform beam that has a mass of 13.4 kg is held in place by the wall and a chain that is attached 135 cm along the beam. A diagram of this situation is shown. The system is in translational and rotational equilibrium. Calculate the tension in the chain.",
+   "answer": "Take the contact between the beam and the wall to be the pivot point. $\\Sigma CWM = \\Sigma ACWM$; $(0.75)(13.4)(9.8) = (1.35)(T\\sin 24°)$; $T = 179\\text{ N}$",
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8C.2"
+   ],
+   "img": [
+    "img/8C_CI2-2.png"
+   ],
+   "src": {
+    "file": "8C Check-in – Set 2.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "8C-SQ1",
+   "n": "1",
+   "question": "A force of 200 N is applied 3.0 m away from the pivot point as shown below. Calculate the torque and the direction in which this bar will rotate.",
+   "options": [
+    "A. 600 N m clockwise",
+    "B. 600 N m anticlockwise",
+    "C. 300 N m clockwise",
+    "D. 300 N m anticlockwise"
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8C.1"
+   ],
+   "img": [
+    "img/8C_SQ1.png"
+   ],
+   "src": {
+    "file": "8C Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8C-SQ2",
+   "n": "2",
+   "question": "A see-saw is pushed with a force of 4.03 N, 5.78 m to the right of the pivot point. The force makes an angle of 60.0° to the horizontal. A diagram of this is shown below. Calculate the torque generated by the force. Include a direction for the torque. Note that, for this question, the force due to gravity of the see-saw itself acts through the pivot point and can therefore be ignored.",
+   "options": [
+    "A. 20.2 N m clockwise",
+    "B. 20.2 N m anticlockwise",
+    "C. 23.3 N m clockwise",
+    "D. 23.3 N m anticlockwise"
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "8C.1"
+   ],
+   "img": [
+    "img/8C_SQ2.png"
+   ],
+   "src": {
+    "file": "8C Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8C-SQ3",
+   "n": "3",
+   "question": "An electric motor rotates around a central pivot point. A vertical force of 13.4 N is applied at both ends of this motor. The length of the moment arm of the motor is 6.60 m. The arm makes an angle of 35.0° to the horizontal. Calculate the torque generated.",
+   "options": [
+    "A. 72.5 N m clockwise",
+    "B. 72.5 N m anticlockwise",
+    "C. 145 N m clockwise",
+    "D. 145 N m anticlockwise"
+   ],
+   "answer": "C",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8C.1"
+   ],
+   "img": [
+    "img/8C_SQ3.png"
+   ],
+   "src": {
+    "file": "8C Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8C-SQ4",
+   "n": "4",
+   "question": "A see-saw is pushed with a force of 8.45 N, 4.34 m to the right of the pivot point. The force makes an angle of 73.0° to the horizontal. A marble block, which has a mass of 14.4 kg, is placed to the left of the pivot point. A diagram of this is shown below. Calculate the distance from the pivot point that the marble block would need to be placed in order to balance the system. Note that, for this question, the force due to gravity of the see-saw itself acts through the pivot point and can therefore be ignored.",
+   "options": [
+    "A. 2.35 m",
+    "B. 2.49 m",
+    "C. 2.56 m",
+    "D. 25.5 m"
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8C.1",
+    "8C.2"
+   ],
+   "img": [
+    "img/8C_SQ4.png"
+   ],
+   "src": {
+    "file": "8C Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8C-SQ5",
+   "n": "5",
+   "question": "Which of the following systems is not in translational equilibrium?",
+   "options": [
+    "A. a bridge with cars moving over it",
+    "B. a ball falling to the ground under the influence of gravity",
+    "C. an object floating at a constant velocity through deep space",
+    "D. a car that is moving at a constant velocity into a strong head wind"
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8C.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "8C Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8C-SQ6",
+   "n": "6",
+   "question": "A force of 500 N is applied through the pivot point as shown below. Calculate the torque generated. Justify your answer.",
+   "options": [],
+   "answer": "The torque is zero. This is because the force is applied through the pivot point, therefore $r = 0$).",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8C.1"
+   ],
+   "img": [
+    "img/8C_SQ6.png"
+   ],
+   "src": {
+    "file": "8C Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8C-SQ7",
+   "n": "7",
+   "question": "A see-saw is pushed with a force of 26.0 N, 3.05 m to the left of the pivot point. The force makes an angle of 50.0° to the horizontal. A marble block, which has a mass of 10.0 kg is placed 3.83 m to the right of the pivot point. A diagram of this is shown below. Determine the direction in which this see-saw will rotate. Justify your answer with a calculation. Note that, for this question, the force due to gravity of the see-saw itself acts through the pivot point and can therefore be ignored.",
+   "options": [],
+   "answer": "In this example, you are only concerned about the magnitude of the vertical component of the applied force. Vertical component $= (26.0)\\sin 50° = 19.9\\text{ N}$; $ACWM = (3.05)(19.9) = 60.7\\text{ N m}$; $CWM = (3.83)(10.0)(9.8) = 375\\text{ N m}$. Because $CWM > ACWM$, the see-saw will rotate clockwise.",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8C.1",
+    "8C.2"
+   ],
+   "img": [
+    "img/8C_SQ7.png"
+   ],
+   "src": {
+    "file": "8C Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8C-SQ8",
+   "n": "8",
+   "question": "A box of mass 10 kg is placed so that its centre of mass is 1 m away from the left leg of a table. The table is supported by two legs and the top of the table is a uniform mass of 2 kg. The table is 4 m long. Calculate the force that the right leg is exerting.",
+   "options": [],
+   "answer": "Make the left leg the pivot point, therefore: $\\Sigma T = 0$, $\\Sigma ACWM = \\Sigma CWM$; $F_{\\text{right leg}}\\times(4) = (10)(9.8)(1) + (2)(9.8)(2) = 34.3\\text{ N}$ upwards",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8C.2"
+   ],
+   "img": [
+    "img/8C_SQ8.png"
+   ],
+   "src": {
+    "file": "8C Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8C-SQ9",
+   "n": "9",
+   "question": "A 1-metre long, uniform beam of mass 2 kg is suspended to a wall by a cable. The cable, which is attached to the end of the beam, makes an angle of 30° to the beam and a box of mass 3 kg is placed at the end of the beam. Calculate the tension in the cable.",
+   "options": [],
+   "answer": "Make the joint between the wall and the beam the pivot point. $\\Sigma ACWM = \\Sigma CWM$; $T\\sin 30° = (0.5)(2)(9.8) + (1)(3)(9.8)$; $T = 78.4\\text{ N}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8C.1",
+    "8C.2"
+   ],
+   "img": [
+    "img/8C_SQ9.png"
+   ],
+   "src": {
+    "file": "8C Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 8C–1 Equilibrium",
+  "total": 30,
+  "file": "8C Worksheet 8C–1 Equilibrium.docx",
+  "questions": [
+   {
+    "id": "WS8C-1",
+    "n": "1",
+    "question": "A force of 4.5 N is applied perpendicular to the handle of a spanner that is 12.5 cm long, as shown below. Calculate the magnitude of the torque and state the direction (clockwise or anticlockwise) in which this bar will rotate based on the diagram above. (3 marks)",
+    "answer": "$\\tau = r_{\\bot}F = (0.125)(4.5)$ (1 mark) $= 0.5625 \\text{N m}$ (1 mark) It will rotate anticlockwise. (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8C-1",
+    "criteria": [
+     "8C.1"
+    ],
+    "img": [
+     "img/8C_WS1.png"
+    ],
+    "src": {
+     "file": "8C Worksheet 8C–1 Equilibrium.docx"
+    },
+    "answer_src": {
+     "file": "8C Worksheet 8C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8C-2",
+    "n": "2",
+    "question": "A crane extends it beam arm to a length of 10.5 m before lifting up a 250 kg mass. The cable pulling up the 250 kg mass makes an angle of 30° to the beam arm. A diagram of this is shown below. Calculate the torque that the 250 kg mass is generating. (2 marks)",
+    "answer": "$\\tau = F\\bot r = (250)(9.8)(10.5\\sin{30{^\\circ})}$(1 mark) $= 1.29 \\times 10^{4} N m$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8C-2",
+    "criteria": [
+     "8C.1"
+    ],
+    "img": [
+     "img/8C_WS2.png"
+    ],
+    "src": {
+     "file": "8C Worksheet 8C–1 Equilibrium.docx"
+    },
+    "answer_src": {
+     "file": "8C Worksheet 8C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8C-3a",
+    "n": "3a",
+    "stem": "A crane is carrying a load of 300 kg at a distance of 10 m to the right of the pivot point. A counterweight is then moved 2 m to the left of the pivot point to minimise the strain on the crane.",
+    "question": "A crane is carrying a load of 300 kg at a distance of 10 m to the right of the pivot point. A counterweight is then moved 2 m to the left of the pivot point to minimise the strain on the crane. a Calculate the mass of the counterweight, X, so that the system is in rotational equilibrium. (2 marks)",
+    "answer": "$\\sum_{}^{}{ACWM = \\sum_{}^{}{CWM}}$ m$_{X}$ (9.8)(2) = (300)(9.8)(10) (1 mark) m$_{X}$ = 1500 kg (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8C-3",
+    "criteria": [
+     "8C.2"
+    ],
+    "img": [
+     "img/8C_WS3.png"
+    ],
+    "src": {
+     "file": "8C Worksheet 8C–1 Equilibrium.docx"
+    },
+    "answer_src": {
+     "file": "8C Worksheet 8C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8C-3b",
+    "n": "3b",
+    "stem": "A crane is carrying a load of 300 kg at a distance of 10 m to the right of the pivot point. A counterweight is then moved 2 m to the left of the pivot point to minimise the strain on the crane.",
+    "question": "A crane is carrying a load of 300 kg at a distance of 10 m to the right of the pivot point. A counterweight is then moved 2 m to the left of the pivot point to minimise the strain on the crane. b The crane with no counterweight or load has a mass of 20 000 kg. Calculate the upwards force that the ground applies on the crane in this question. (2 marks)",
+    "answer": "$\\sum_{}^{}F_{up} = \\sum_{}^{}F_{down} = (1500)(9.8) + (20000)(9.8) + (300)(9.8)$(1 mark) $= 2.13 \\times 10^{5} N$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8C-4",
+    "criteria": [
+     "8C.3"
+    ],
+    "img": [
+     "img/8C_WS3.png"
+    ],
+    "src": {
+     "file": "8C Worksheet 8C–1 Equilibrium.docx"
+    },
+    "answer_src": {
+     "file": "8C Worksheet 8C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8C-3c",
+    "n": "3c",
+    "stem": "A crane is carrying a load of 300 kg at a distance of 10 m to the right of the pivot point. A counterweight is then moved 2 m to the left of the pivot point to minimise the strain on the crane.",
+    "question": "A crane is carrying a load of 300 kg at a distance of 10 m to the right of the pivot point. A counterweight is then moved 2 m to the left of the pivot point to minimise the strain on the crane. c Describe what happens to the torque generated by the load on the crane as the crane driver moves the load to the left. (2 marks)",
+    "answer": "As the load moves to the left the torque it generates will reduce (1 mark) because the radius is decreasing, $\\downarrow \\tau = F\\bot \\downarrow r$ (1 mark)",
+    "marks": 2,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "8C.1"
+    ],
+    "img": [
+     "img/8C_WS3.png"
+    ],
+    "src": {
+     "file": "8C Worksheet 8C–1 Equilibrium.docx"
+    },
+    "answer_src": {
+     "file": "8C Worksheet 8C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8C-4",
+    "n": "4",
+    "question": "A rectangular advertising sign is supported by the corners using two cables. The sign has a mass of 7.50 kg and the cables make an angle of 35° to the vertical. If the mass of the cables is negligible, calculate the tension in each cable. (3 marks)",
+    "answer": "$\\sum_{}^{}{F = 0}$, therefore: (7.5)(9.8) = (2)T(cos 35°) (2 marks) T = 44.9 N (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8C-5",
+    "criteria": [
+     "8C.3"
+    ],
+    "img": [
+     "img/8C_WS4.png"
+    ],
+    "src": {
+     "file": "8C Worksheet 8C–1 Equilibrium.docx"
+    },
+    "answer_src": {
+     "file": "8C Worksheet 8C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8C-5a",
+    "n": "5a",
+    "stem": "A drawbridge has a total length of 7.30 m, a mass of 5000 kg and is held to a wall via a metal cable. The metal cable is attached to the bridge 5.60 m away from the wall and makes an angle of 27.0° to the horizontal, as shown in the diagram below.",
+    "question": "A drawbridge has a total length of 7.30 m, a mass of 5000 kg and is held to a wall via a metal cable. The metal cable is attached to the bridge 5.60 m away from the wall and makes an angle of 27.0° to the horizontal, as shown in the diagram below. a Calculate the tension in the metal beam. (2 marks)",
+    "answer": "$\\sum_{}^{}{ACWM\\text{ }\\text{=}\\text{ }\\sum_{}^{}{CWM}}\\left( \\frac{7.3}{2} \\right)(5000)(9.8)\\text{ }\\text{=}\\text{ }(5.6)T(\\sin{27{^\\circ}})$ (1 mark) $T\\text{ }\\text{=}\\text{ }\\frac{(3.65)(5000)(9.8 )}{{(sin}27{^\\circ})(5.6)}\\text{ }\\text{ }\\text{=}\\text{ }7.03 \\times 10^{4} \\text{N}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8C-6",
+    "criteria": [
+     "8C.1",
+     "8C.2"
+    ],
+    "img": [
+     "img/8C_WS5.png"
+    ],
+    "src": {
+     "file": "8C Worksheet 8C–1 Equilibrium.docx"
+    },
+    "answer_src": {
+     "file": "8C Worksheet 8C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8C-5b",
+    "n": "5b",
+    "stem": "A drawbridge has a total length of 7.30 m, a mass of 5000 kg and is held to a wall via a metal cable. The metal cable is attached to the bridge 5.60 m away from the wall and makes an angle of 27.0° to the horizontal, as shown in the diagram below.",
+    "question": "A drawbridge has a total length of 7.30 m, a mass of 5000 kg and is held to a wall via a metal cable. The metal cable is attached to the bridge 5.60 m away from the wall and makes an angle of 27.0° to the horizontal, as shown in the diagram below. b Calculate the force that the wall exerts on the beam. (4 marks)",
+    "answer": "$\\sum_{}^{}{F_{\\text{up}}\\text{ }\\text{=}\\text{ }\\sum_{}^{}F_{\\text{down}}}$ (703 48) sin 27° +F$_{up}$ = (5000)(9.8) F$_{up}$ = 17062.5 N (1 mark) $\\sum_{}^{}{F_{\\text{right}}\\text{ }\\text{=}\\text{ }\\sum_{}^{}F_{\\text{left}}}$ (703 48) cos 27${^\\circ}$ = F$_{left}$ F$_{left}$ = 626 81 N (1 mark) These two components can then be put together to find the reaction force: $r\\text{ }\\text{=}\\text{ }\\sqrt{{17062.5}^{2} + 62681^{2}}\\text{ }\\text{=}\\text{ }64962 N$ (1 mark) $\\theta\\text{ }\\text{=}\\text{ }\\tan^{- 1}{\\frac{17062.5}{62681}\\text{ }\\text{=}\\text{ }15.2{^\\circ}}$ The reaction force is 6.50 × 10$^{4}$ N at 15.2° inclined from the horizontal. (1 mark)",
+    "marks": 4,
+    "kind": "calc",
+    "size": "long",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "8C.3"
+    ],
+    "img": [
+     "img/8C_WS5.png"
+    ],
+    "src": {
+     "file": "8C Worksheet 8C–1 Equilibrium.docx"
+    },
+    "answer_src": {
+     "file": "8C Worksheet 8C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8C-6a",
+    "n": "6a",
+    "stem": "Vikram, Marie and Max are all crossing a wooden bridge that has a mass of 750 kg and a span of 15 m. At one moment in time, Vikram, who has a mass of 83 kg, is 1.2 m away from the left side. Marie, who has a mass of 62 kg, is 8 m away from the left side and Max, who is 71 kg, is 13 m away from the left side. A diagram of this situation is shown below.",
+    "question": "Vikram, Marie and Max are all crossing a wooden bridge that has a mass of 750 kg and a span of 15 m. At one moment in time, Vikram, who has a mass of 83 kg, is 1.2 m away from the left side. Marie, who has a mass of 62 kg, is 8 m away from the left side and Max, who is 71 kg, is 13 m away from the left side. A diagram of this situation is shown below. a Add arrows and labels for all of the forces acting on the wooden bridge. (4 marks)",
+    "answer": "(1 mark for each force)",
+    "marks": 4,
+    "kind": "graph",
+    "size": "medium",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "8C.3"
+    ],
+    "img": [
+     "img/8C_WS6.png",
+     "img/8C_WS6-ans.png"
+    ],
+    "src": {
+     "file": "8C Worksheet 8C–1 Equilibrium.docx"
+    },
+    "answer_src": {
+     "file": "8C Worksheet 8C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8C-6b",
+    "n": "6b",
+    "stem": "Vikram, Marie and Max are all crossing a wooden bridge that has a mass of 750 kg and a span of 15 m. At one moment in time, Vikram, who has a mass of 83 kg, is 1.2 m away from the left side. Marie, who has a mass of 62 kg, is 8 m away from the left side and Max, who is 71 kg, is 13 m away from the left side. A diagram of this situation is shown below.",
+    "question": "Vikram, Marie and Max are all crossing a wooden bridge that has a mass of 750 kg and a span of 15 m. At one moment in time, Vikram, who has a mass of 83 kg, is 1.2 m away from the left side. Marie, who has a mass of 62 kg, is 8 m away from the left side and Max, who is 71 kg, is 13 m away from the left side. A diagram of this situation is shown below. b Calculate the force exerted up by the rock to the right rock. (3 marks)",
+    "answer": "You must eliminate one force by choosing the location of your pivot point. Make the location of the pivot point the left rock and then solve for the force on the right rock. $\\sum_{}^{}{ACWM\\text{ }\\text{=}\\text{ }\\sum_{}^{}{CWM}}$ F$_{right rock}$ (15) = (1.2)(83)(9.8) + (7.5)(750)(9.8) + (8)(62)(9.8) + (13)(71)(9.8) (2 marks) F$_{right rock}$ = 4.67 × 10$^{3}$ N up (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8C-7",
+    "criteria": [
+     "8C.2"
+    ],
+    "img": [
+     "img/8C_WS6.png"
+    ],
+    "src": {
+     "file": "8C Worksheet 8C–1 Equilibrium.docx"
+    },
+    "answer_src": {
+     "file": "8C Worksheet 8C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8C-6c",
+    "n": "6c",
+    "stem": "Vikram, Marie and Max are all crossing a wooden bridge that has a mass of 750 kg and a span of 15 m. At one moment in time, Vikram, who has a mass of 83 kg, is 1.2 m away from the left side. Marie, who has a mass of 62 kg, is 8 m away from the left side and Max, who is 71 kg, is 13 m away from the left side. A diagram of this situation is shown below.",
+    "question": "Vikram, Marie and Max are all crossing a wooden bridge that has a mass of 750 kg and a span of 15 m. At one moment in time, Vikram, who has a mass of 83 kg, is 1.2 m away from the left side. Marie, who has a mass of 62 kg, is 8 m away from the left side and Max, who is 71 kg, is 13 m away from the left side. A diagram of this situation is shown below. c Calculate the force exerted by the left rock. (3 marks)",
+    "answer": "$\\sum_{}^{}{F_{up}\\text{ }\\text{=}\\text{ }\\sum_{}^{}F_{down}}F_{left rock} + 4667.152\\text{ }\\text{=}\\text{ }$ (83)(9.8) + (750)(9.8) + (62)(9.8) + (71)(9.8) (2 marks) $F_{left rock}\\text{ }\\text{=}\\text{ } 4.80 \\times 10^{3} N up$ (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8C-7",
+    "criteria": [
+     "8C.3"
+    ],
+    "img": [
+     "img/8C_WS6.png"
+    ],
+    "src": {
+     "file": "8C Worksheet 8C–1 Equilibrium.docx"
+    },
+    "answer_src": {
+     "file": "8C Worksheet 8C–1 Answers.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "8C.1"
+   ],
+   "wedo": "WE8C-1",
+   "youtry": [
+    "WS8C-1"
+   ],
+   "note": "perpendicular force, tau = r F, with direction"
+  },
+  {
+   "criteria": [
+    "8C.1"
+   ],
+   "wedo": "WE8C-2",
+   "youtry": [
+    "WS8C-2"
+   ],
+   "note": "force at an angle: use perpendicular component"
+  },
+  {
+   "criteria": [
+    "8C.2"
+   ],
+   "wedo": "WE8C-3",
+   "youtry": [
+    "WS8C-3a"
+   ],
+   "note": "balance see-saw / crane torques to find a mass"
+  },
+  {
+   "criteria": [
+    "8C.3"
+   ],
+   "wedo": "WE8C-4",
+   "youtry": [
+    "WS8C-3b"
+   ],
+   "note": "sum of up forces = sum of down forces for the support"
+  },
+  {
+   "criteria": [
+    "8C.3"
+   ],
+   "wedo": "WE8C-5",
+   "youtry": [
+    "WS8C-4"
+   ],
+   "note": "two-cable sign: vertical components balance weight"
+  },
+  {
+   "criteria": [
+    "8C.1",
+    "8C.2"
+   ],
+   "wedo": "WE8C-6",
+   "youtry": [
+    "WS8C-5a"
+   ],
+   "note": "beam and cable: pivot at wall, T sin(angle)"
+  },
+  {
+   "criteria": [
+    "8C.2",
+    "8C.3"
+   ],
+   "wedo": "WE8C-7",
+   "youtry": [
+    "WS8C-6b",
+    "WS8C-6c"
+   ],
+   "note": "table/bridge with supports: pivot at one support, then forces balance"
+  }
+ ],
+ "skills": [
+  {
+   "id": "8C-SK1",
+   "heading": "Using diagrams to answer questions",
+   "text": "Physics questions will often have a lot of quantities that must be considered. When large amounts of information are given, it can sometimes be overwhelming to know where to start. This is why you should use the diagram provided or draw your own diagram because as it helps you to visualise the information that you have so that the relationship between the quantities can be more easily shown. As you read through the question, you should immediately circle or highlight any quantities and convert these quantities into SI units so that they can be used in a formula. If a diagram is provided, you should also write down the quantities on the diagram as you read them. If a diagram is not provided, then you should sketch a diagram of the situation as you read the information, inserting all relevant values. Question: A 54.0 kg woman is paining a wall. She is standing on a 4.00 m long plank that has supports at both ends. The plank has a mass of 15.2 kg and its centre of mass acts from its midpoint. The woman is standing so that her centre of mass is 1.25 m from the left support. Calculate the force that the right support applies to the plank. Solution: If you add all of the relevant information to the diagram, it should look similar to the diagram below. Since the system is in equilibrium, we know that the sum of the torques and forces will be equal to zero. We also have two unknown forces, so we will need to eliminate one. This can be done by making the left support the pivot point. Therefore: $(529.2)(1.25) + (148.96)(2) = (4)(F_{\\text{right}})$; $(F_{\\text{right}}) = \\frac{(529.2)(1.25) + (148.96)(2)}{2} = 240\\text{ N}$",
+   "img": [
+    "img/8C_skills.png",
+    "img/8C_skills-sol.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 52
+   }
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P8C-1",
+   "title": "Practical 8C–1 Torque and rotational equilibrium",
+   "file": "8C Practical 8C–1 Torque and rotational equilibrium.docx",
+   "aim": "To gain a practical understanding of torque and rotational equilibrium."
+  }
+ ],
+ "powerpoint_figures": [
+  "8C PowerPoint Figure 8C–2 & 8C–3.pptx"
+ ],
+ "notes": "Answers write torque as T. 8C Section Q3 diagram arrives before the question number in the docx (handled). Skills box solution divides by 2 instead of 4 (book error, kept verbatim; 240 N is right). Worksheet 8C–1 Q5a says 'metal beam' (means cable). Worksheet answer to Q6a is a diagram (img/8C_WS6-ans.png)."
+}

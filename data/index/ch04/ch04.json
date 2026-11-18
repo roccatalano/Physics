@@ -1,0 +1,1088 @@
+{
+ "chapter": 4,
+ "title": "Nuclear energy",
+ "unit": 1,
+ "aos": 2,
+ "aos_title": "How is energy from the nucleus utilised?",
+ "sections": [
+  "4A",
+  "4B",
+  "4C"
+ ],
+ "criteria": [
+  {
+   "id": "4A.1",
+   "text": "Explain, qualitatively, nuclear energy as energy resulting from the conversion of mass to energy",
+   "section": "4A",
+   "review_qs": [
+    "4",
+    "9",
+    "11",
+    "12",
+    "18",
+    "19",
+    "21",
+    "22"
+   ],
+   "exit_candidates": [
+    "CH4-RQ19",
+    "CH4-RQ9",
+    "CH4-RQ4",
+    "4A-SQ5b"
+   ]
+  },
+  {
+   "id": "4A.2",
+   "text": "Explain fission chain reactions",
+   "section": "4A",
+   "review_qs": [
+    "8",
+    "17"
+   ],
+   "exit_candidates": [
+    "CH4-RQ17b",
+    "4A-SQ2",
+    "4A-SQ6"
+   ]
+  },
+  {
+   "id": "4A.3",
+   "text": "Discuss the effect of mass and shape on criticality in fission chain reactions",
+   "section": "4A",
+   "review_qs": [
+    "2",
+    "3",
+    "13",
+    "15",
+    "16"
+   ],
+   "exit_candidates": [
+    "CH4-RQ2",
+    "CH4-RQ3",
+    "CH4-RQ15b",
+    "CH4-RQ16a"
+   ]
+  },
+  {
+   "id": "4A.4",
+   "text": "Discuss the role of neutron absorption and moderators in fission chain reactions",
+   "section": "4A",
+   "review_qs": [
+    "5",
+    "14",
+    "21"
+   ],
+   "exit_candidates": [
+    "CH4-RQ5",
+    "CH4-RQ21",
+    "4A-SQ7b"
+   ]
+  },
+  {
+   "id": "4B.1",
+   "text": "Compare and understand the processes of nuclear fusion and nuclear fission",
+   "section": "4B",
+   "review_qs": [
+    "1",
+    "6",
+    "7",
+    "23",
+    "27",
+    "28"
+   ],
+   "exit_candidates": [
+    "CH4-RQ1",
+    "CH4-RQ28a",
+    "4B-SQ7",
+    "4B-SQ1"
+   ]
+  },
+  {
+   "id": "4B.2",
+   "text": "Explain, using a binding energy curve, why fusion and fission are both nuclear reactions that release energy",
+   "section": "4B",
+   "review_qs": [
+    "24",
+    "25",
+    "26"
+   ],
+   "exit_candidates": [
+    "CH4-RQ24",
+    "CH4-RQ26",
+    "4B-SQ4",
+    "4B-SQ5"
+   ]
+  },
+  {
+   "id": "4C.1",
+   "text": "Investigate and analyse the viability of nuclear energy as an energy source for Australia",
+   "section": "4C",
+   "review_qs": [
+    "10",
+    "20",
+    "29",
+    "30"
+   ],
+   "exit_candidates": [
+    "CH4-RQ10",
+    "CH4-RQ20c",
+    "4C-SQ3",
+    "4C-SQ10"
+   ]
+  },
+  {
+   "id": "4C.2",
+   "text": "Discuss the advantages and disadvantages of nuclear energy for Australia",
+   "section": "4C",
+   "review_qs": [
+    "29",
+    "30"
+   ],
+   "exit_candidates": [
+    "4C-SQ9",
+    "4C-SQ7",
+    "4C-SQ1"
+   ]
+  }
+ ],
+ "review_questions": [
+  {
+   "id": "CH4-RQ1",
+   "n": "1",
+   "question": "Which one of the following statements best explains the process of fusion?",
+   "options": [
+    "A. the joining of light nuclei to create a more stable nucleus like helium",
+    "B. the joining of light nuclei to create a more stable nucleus like uranium",
+    "C. the splitting of a heavy nucleus like uranium into two medium-sized nuclei",
+    "D. the creation of transuranic nuclei by bombarding uranium-238 with neutrons"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "4B.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 43
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ2",
+   "n": "2",
+   "question": "What is a subcritical mass?",
+   "options": [
+    "A. an amount of nuclear material with a neutron capable of inducing fission rate <1",
+    "B. an amount of nuclear material with a neutron capable of inducing fission rate =1",
+    "C. an amount of nuclear material with a neutron capable of inducing fission rate >1",
+    "D. an amount of nuclear material that is ready to explode as a bomb"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "4A.3"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 43
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ3",
+   "n": "3",
+   "question": "What is the chain reaction condition required for a nuclear fission bomb?",
+   "options": [
+    "A. a subcritical mass and a neutron capable of inducing fission rate = 0",
+    "B. a subcritical mass and a neutron capable of inducing fission rate <1",
+    "C. a critical mass and a neutron capable of inducing fission rate = 1",
+    "D. a supercritical mass and a neutron capable of inducing fission rate >1"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "4A.3"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 44
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ4",
+   "n": "4",
+   "question": "In nuclear power reactors, the fuel rods contain",
+   "options": [
+    "A. pure uranium-235.",
+    "B. pure plutonium-235.",
+    "C. enriched uranium-235.",
+    "D. enriched plutonium-235."
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "4A.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 44
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ5",
+   "n": "5",
+   "question": "The function of a moderator in a nuclear power reactor is to",
+   "options": [
+    "A. absorb neutrons.",
+    "B. reflect neutrons.",
+    "C. speed up neutrons.",
+    "D. slow down neutrons."
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "4A.4"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 44
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ6",
+   "n": "6",
+   "question": "What was the main reason that the uranium-235 fission gun barrel type bomb was not tested before it was used on Hiroshima?",
+   "options": [
+    "A. It was believed it should work.",
+    "B. There was only enough uranium-235 for one bomb.",
+    "C. There was not a suitable testing site available for the test.",
+    "D. Uranium-235 bombs had been successfully used against Germany previously."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "4B.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 44
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ7",
+   "n": "7",
+   "question": "Why was the spherical plutonium-239 bomb tested before a similarly constructed bomb was dropped on Nagasaki?",
+   "options": [
+    "A. Scientists wanted to know if an implosion design type of bomb would actually work.",
+    "B. There was more than enough plutonium-239 to construct five more bombs.",
+    "C. Scientists wanted to see if it produced enough radioactive by-products.",
+    "D. The United States wanted Japan to know they had a powerful new weapon."
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "4B.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 44
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ8",
+   "n": "8",
+   "question": "One of the advantages of using enriched uranium to generate electricity in nuclear power stations is",
+   "options": [
+    "A. no waste heat is created in a nuclear power station.",
+    "B. no dangerous radioactive by-products are created.",
+    "C. no carbon dioxide is released by uranium undergoing fission.",
+    "D. the spent fuel rods can not be recycled into creating nuclear weapons."
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "criteria": [
+    "4A.2"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 44
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ9",
+   "n": "9",
+   "question": "In what main form does the released energy from a nuclear fission reaction in a nuclear power plant appear?",
+   "options": [
+    "A. thermal energy",
+    "B. light",
+    "C. gamma rays",
+    "D. electromagnetic radiation"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "4A.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 44
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ10",
+   "n": "10",
+   "question": "Why does the Climate Council of Australia believe renewables are the best option for generating Australia's electricity?",
+   "options": [
+    "A. because Australia is running out of coal",
+    "B. because Australia should be seen as leaders in green energy",
+    "C. because Australia is better off selling its uranium to the world",
+    "D. because Australia is one of the sunniest and windiest countries on Earth"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "4C.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 44
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ11",
+   "n": "11",
+   "question": "Comment on whether Einstein's equation, $E = mc^2$, can be used to explain how coal burns, how uranium fissions in a nuclear power plant and how the Sun shines because of the nuclear fusion of hydrogen.",
+   "options": [],
+   "answer": "Einstein's equation $E = mc^2$ can be used to explain how coal burns, how uranium fissions in a nuclear power plant and why the sun shines because of nuclear fusion. In each case a minute amount of matter is converted to other forms of energy.",
+   "marks": 3,
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "4A.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 45
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ12",
+   "n": "12",
+   "question": "Uranium ore that is mined from the ground contains uranium-235 and uranium-238.",
+   "options": [],
+   "answer": null,
+   "marks": 4,
+   "kind": "recall",
+   "size": "medium",
+   "criteria": [
+    "4A.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Which of these isotopes normally represents 0.7% of the ore?",
+     "answer": "Uranium-235",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "Which of these isotopes normally represents 99.3% of the ore?",
+     "answer": "Uranium-238",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "c",
+     "question": "Which of these isotopes is the more fissile when bombarded with slow neutrons.",
+     "answer": "Uranium-235",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "d",
+     "question": "Explain why a chain reaction does not normally occur in a uranium ore.",
+     "answer": "The neutron flux <1 for these ratios of isotopes in the ore and therefore it is not possible to obtain a sustained controlled chain reaction.",
+     "size": "quick",
+     "marks": 1
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 45
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ13",
+   "n": "13",
+   "question": "Why is uranium ore enriched to approximately 4% to be used in the fuel rods of the reactor core in some nuclear power stations?",
+   "options": [],
+   "answer": "To ensure that the neutron flux is enough to enable a sustained controlled chain reaction to occur.",
+   "marks": 2,
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "4A.3"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 45
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ14",
+   "n": "14",
+   "question": "The core of a nuclear reactor contains fuel rods, a moderator and control rods.",
+   "options": [],
+   "answer": null,
+   "marks": 6,
+   "kind": "explain",
+   "size": "long",
+   "criteria": [
+    "4A.4"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Explain the function of each component.",
+     "answer": "The fuel rods provide the fissile material that generates heat energy when undergoing fission.\nThe moderator is used to slow down the neutrons released during fission to increase the likelihood of further fission.\nControl rods absorb neutrons to ensure that the reactor is running at a critical state and does not go supercritical or subcritical.",
+     "size": "medium",
+     "marks": 3
+    },
+    {
+     "n": "b",
+     "question": "Give examples of typical materials used for each of these components.",
+     "answer": "Typical fuel rods contain enriched uranium-235 with a ratio of ~4% uranium-235 to ~96% uranium-238.\nA typical moderator that is often used is water.\nControl rods are typically made from cadmium boron both strong neutron absorbers.",
+     "size": "medium",
+     "marks": 3
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 45
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ15",
+   "n": "15",
+   "question": "",
+   "options": [],
+   "answer": null,
+   "marks": 4,
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "4A.3"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Which has the greater surface area: a whole apple or the same apple that has been sliced in half?",
+     "answer": "Two halves of an apples have a greater surface area than the whole apple before it is cut in half.",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "Which will lose more neutrons to the surrounding environment, a spherical sample of uranium-235 or the same spherical sample that has been cut into two equal hemispherical pieces?",
+     "answer": "The sample of uranium-235 that has been cut into two equal hemispherical pieces (as there is more surface area to volume).",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "c",
+     "question": "How is this related to the concept behind the 'Little Boy' uranium-235 bomb dropped on Hiroshima?",
+     "answer": "Two subcritical masses of uranium-235 were kept apart until they were needed to become supercritical. This was achieved by using a gun barrel design that forced the two subcritical masses together.",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 45
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ16",
+   "n": "16",
+   "question": "The diagram below shows three different size spheres of uranium-235 that is undergoing fission.",
+   "options": [],
+   "answer": null,
+   "marks": 6,
+   "kind": "graph",
+   "size": "medium",
+   "criteria": [
+    "4A.3"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "State the most likely state of criticality for A, B and C.",
+     "answer": "A = subcritical mass\nB = critical mass\nC = supercritical mass",
+     "size": "quick",
+     "marks": 3
+    },
+    {
+     "n": "b",
+     "question": "State the number of neutrons capable of inducing fission within the sphere.",
+     "answer": "neutron flux<1  neutron flux = 1   neutron flux>1",
+     "size": "quick",
+     "marks": 3
+    }
+   ],
+   "img": [
+    "img/CH4_RQ16.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 45
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ17",
+   "n": "17",
+   "question": "The diagram shows the initial stages (three generations) of an uncontrolled chain reaction.",
+   "options": [],
+   "answer": null,
+   "marks": 13,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "4A.2"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Write down the names of all the different isotope fragments produced by just three generations of fission.",
+     "answer": "Ba-144, Kr-89, Cs-137, Rb-96, Sr-90, Xe-144, Y-102, I-131",
+     "size": "medium",
+     "marks": 8
+    },
+    {
+     "n": "b",
+     "question": "Each fissioning on average produces 200 MeV. How many total fissions have occurred, and how much energy has been released, after just three generations of fission?",
+     "answer": "7 fissions; 1400 MeV",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "How much energy would be released if there was enough fissile uranium-235 so that 81 generations of fission could occur? Assume only two of the neutrons released by each fission create new fission (i.e. 81 generations of doubling). Give your answer in MeV, J (1 MeV = $1.60 \\times 10^{-13}$ J) and the equivalent kilotonnes of TNT (1.0 tonne TNT = $4.18 \\times 10^{9}$ J).",
+     "answer": "$4.48 \\times 10^{26}$ MeV; $7.17 \\times 10^{13}$ J; 17.2 kT of TNT\n$(2)^{81} = 2.42 \\times 10^{24}$ fissions at 200 MeV per fission\nTotal energy (MeV) = 200 $(2.24 \\times 10^{24})$\n= $4.48 \\times 10^{26}$ MeV\nTotal energy (J) = $(4.48 \\times 10^{26})(1.60 \\times 10^{-13})$\n= $7.17 \\times 10^{13}$ J\nTotal energy (TNT) = $\\frac{7.17 \\times 10^{13}}{4.18 \\times 10^{9}}$\n= $1.72 \\times 10^{4}$ t TNT",
+     "size": "long",
+     "marks": 3
+    }
+   ],
+   "img": [
+    "img/CH4_RQ17.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 46
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ18",
+   "n": "18",
+   "question": "Plutonium-239 is a fissile material. When a plutonium-239 nucleus absorbs a neutron, it can undergo fission in many different ways. The nuclear equation below shows one possible fission reaction:\n$${}^{239}_{94}\\text{Pu} + {}^{1}_{0}\\text{n} \\rightarrow {}^{145}_{56}\\text{Ba} + {}^{93}_{36}\\text{Kr} + 2\\,{}^{1}_{0}\\text{n} + \\text{energy}$$\nUse the following data for the nuclear masses (kg):\n| Neutron | Plutonium-239 | Barium-145 | Krypton-93 |\n| $1.67495 \\times 10^{-27}$ | $3.96960 \\times 10^{-25}$ | $2.40660 \\times 10^{-25}$ | $1.54318 \\times 10^{-25}$ |",
+   "options": [],
+   "answer": null,
+   "marks": 4,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "4A.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "What is the decrease in mass (in kg) for this fission reaction?",
+     "answer": "Total mass of the target plutonium-239 and the incident neutron:\n= $(1.67495 \\times 10^{-27}) + (3.96960 \\times 10^{-25})$\n= $3.98635 \\times 10^{-25}$ kg\nTotal mass of all of the fission fragments:\n= $(2.40660 \\times 10^{-25}) + (1.54318 \\times 10^{-25}) + 2 \\times (1.67495 \\times 10^{-27})$\n= $3.98328 \\times 10^{-25}$ kg\nDecrease in mass:\n$\\Delta m = (3.98635 \\times 10^{-25}) - (3.98328 \\times 10^{-25})$\n= $3.07 \\times 10^{-28}$ kg",
+     "size": "medium",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "Calculate the amount of energy (in MeV) that is released during the fission of one plutonium-239 nucleus. (1 eV = $1.60 \\times 10^{-19}$ J)",
+     "answer": "The energy released during the fission of this plutonium nucleus can be found from the mass difference $\\Delta m$.\nUsing $E = \\Delta mc^2$:\n= $(3.07 \\times 10^{-28})(3.00 \\times 10^{8})^2$\n= $2.76 \\times 10^{-11}$ J\nConverting into eV\n$\\frac{2.76 \\times 10^{-11}}{1.6 \\times 10^{-19}} = 1.73 \\times 10^{8}$ eV\n= 173 MeV",
+     "size": "medium",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 46
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ19",
+   "n": "19",
+   "question": "During a 20 Mt nuclear explosion, approximately $8.4 \\times 10^{16}$ J of energy is released. What amount of mass was changed into energy for this explosion?",
+   "options": [],
+   "answer": "0.93 kg\n$E = \\Delta mc^2$\n$\\Delta m = \\frac{E}{c^2}$\n$= \\frac{8.4 \\times 10^{16}}{9.0 \\times 10^{16}}$\n= 0.93 kg",
+   "marks": 2,
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "4A.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 47
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ20",
+   "n": "20",
+   "question": "Approximately 96% of the uranium in the fuel rods of nuclear reactors is uranium-238. When struck by a neutron, a uranium-238 nucleus can absorb the neutron.",
+   "options": [],
+   "answer": null,
+   "marks": 5,
+   "kind": "explain",
+   "size": "long",
+   "criteria": [
+    "4C.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "In what way does this change the uranium-238 nuclei?",
+     "answer": "It creates fissile plutonium-239. By capturing a neutron, uranium-238 becomes uranium-239 that rapidly changes by beta radiation into neptunium-239. This neptunium is then itself transformed by beta radiation, after 2.3 days on average, into a new nucleus: plutonium-239.",
+     "size": "medium",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "Why does this lead to problems in disposing of the nuclear waste?",
+     "answer": "Plutonium-239 is highly radioactive as well as toxic. It has a half-life of 24 100 years and needs to be safely stored for ~ a quarter of a million years.",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "Can the spent fuel rod by used to create nuclear weapons?",
+     "answer": "Yes – by extracting the plutonium-239.",
+     "size": "quick",
+     "marks": 1
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 47
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ21",
+   "n": "21",
+   "question": "How can a nuclear reactor be shut down quickly in an emergency and how does this work?",
+   "options": [],
+   "answer": "By inserting the control rods into the reactor core to absorb all of the neutrons and stop the chain reaction.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "4A.1",
+    "4A.4"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 47
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ22",
+   "n": "22",
+   "question": "Demonstrate, by using the appropriate calculations, that 99.9 per cent of all the energy released by a nuclear weapon is released in the last 10 generations of nuclear-splitting.",
+   "options": [],
+   "answer": "Assume that after $n$ doublings the total amount of energy created was $E$.\nThen 10 more doublings has the following effect: $2^{10} = 10^{24} E$.\nTotal energy produced after $n$ + 10 doublings is $10^{25} E$.\nSo, the percentage produced by the last 10 doublings = $\\left(\\frac{10^{24} E}{10^{25} E}\\right)$ = 99.9%.",
+   "marks": 2,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "4A.1",
+    "4A.2"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 47
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ23",
+   "n": "23",
+   "question": "Why are neutrons good at initiating nuclear reactions such as the fissioning of a uranium-235 nucleus?",
+   "options": [],
+   "answer": "Because the neutrons carry no charge and can therefore penetrate into the highly positively charged uranium-235 nucleus.",
+   "marks": 2,
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "4B.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 47
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ24",
+   "n": "24",
+   "question": "Use the following information to answer Questions 24–26. The average binding energy per nucleon versus the number of nucleons in the nucleus is shown below in the binding energy curve.\nExplain why light elements like isotopes of hydrogen release energy when they fuse into helium.",
+   "options": [],
+   "answer": "The average binding energy per nucleon increases in fusion and some of the mass is converted and released as energy. Notice the curve goes up to a higher average binding energy per nucleon as it moves towards the element iron-56.",
+   "marks": 2,
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "4B.2"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH4_RQ24-26.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 47
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ25",
+   "n": "25",
+   "question": "(Use the binding energy curve.)",
+   "options": [],
+   "answer": null,
+   "marks": 5,
+   "kind": "graph",
+   "size": "medium",
+   "criteria": [
+    "4B.2"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "From the binding energy curve, estimate the average binding energy per nucleon for deuterium (${}^{2}\\text{H}$), tritium (${}^{3}\\text{H}$) and helium (${}^{4}\\text{He}$).",
+     "answer": "Deuterium (${}^{2}$H) ~1.1 MeV; tritium (${}^{3}$H) ~2.8 MeV; helium (${}^{4}$H) ~ 7.1 MeV",
+     "size": "quick",
+     "marks": 3
+    },
+    {
+     "n": "b",
+     "question": "Show that the energy released for the following fusion reaction is approximately 17.5 MeV.\n$${}^{2}_{1}\\text{H} + {}^{3}_{1}\\text{H} \\rightarrow {}^{4}_{2}\\text{He} + {}^{1}_{0}\\text{n} + \\text{energy}$$",
+     "answer": "LHS of equation:\n2 deuterium nucleons + 3 tritium nucleons = 2(1.1) + 3(2.8)\n= 2.2 + 8.4\n= 10.6 MeV\nRHS of equation:\n4 helium nucleons = 4(7.1)\n= 28.4 MeV\nEnergy released = 28.4 – 10.6\n= 17.8 MeV",
+     "size": "medium",
+     "marks": 2
+    }
+   ],
+   "img": [
+    "img/CH4_RQ24-26.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 47
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ26",
+   "n": "26",
+   "question": "(Use the binding energy curve.) Explain why heavy elements like uranium-235 release energy when they undergo fission.",
+   "options": [],
+   "answer": "The average binding energy per nucleon increases in fission and some of the mass is converted and released as energy – notice the curve goes up to a higher average binding energy per nucleon as it moves toward the element iron-56.",
+   "marks": 2,
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "4B.2"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH4_RQ24-26.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 48
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ27",
+   "n": "27",
+   "question": "",
+   "options": [],
+   "answer": null,
+   "marks": 3,
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "4B.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "What were the two major isotopes used for making fission bombs?",
+     "answer": "Uranium-235 and plutonium-239",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "What was the approximate equivalent TNT yield of the fission bombs dropped on Japan?",
+     "answer": "~20 kt",
+     "size": "quick",
+     "marks": 1
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 48
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ28",
+   "n": "28",
+   "question": "Thermonuclear bombs are also known as hydrogen bombs.",
+   "options": [],
+   "answer": null,
+   "marks": 4,
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "4B.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "What is the basic principle in making a thermonuclear bomb?",
+     "answer": "A two-stage approach of using an initial fission bomb to trigger a much larger fusion bomb.",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "Why are they also known as hydrogen bombs?",
+     "answer": "Because they fuse isotopes of hydrogen",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "c",
+     "question": "By what approximate factor are thermonuclear bombs more explosive than fission bombs?",
+     "answer": "~1000 $\\left(\\frac{20\\ \\text{Mt}}{6020\\ \\text{kt}}\\right)$",
+     "size": "quick",
+     "marks": 1
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 48
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ29",
+   "n": "29",
+   "question": "Why is it important for Australians to have their own 20 MW nuclear reactor known as OPAL for creating radioisotopes?",
+   "options": [],
+   "answer": "OPAL produces numerous radioisotopes for medical diagnosis and treatment, industry, agriculture and scientific research. Without OPAL we would have outsource all of these from around the world.",
+   "marks": 3,
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "4C.1",
+    "4C.2"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 48
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH4-RQ30",
+   "n": "30",
+   "question": "Read the following seven dot points from the organisation Nuclear for Net Zero.\nCritically analyse each of the dot points put forward and see whether or not you think they provide good reasons for Australia to adopt nuclear energy as a viable energy source.\n• The solution to climate change is not living with less energy. The solution is embracing better technology, which must include nuclear energy.\n• Nuclear power was banned in Australia in 1998 under federal legislation. At the time, anti-nuclear sentiment was strong and demand for nuclear energy was low in a country spoilt by energy from cheap, abundant fossil fuels.\n• Nuclear energy is used all over the world. It's safe, reliable, produces zero emissions and, importantly, an abundance of energy every hour of every day regardless of weather.\n• With nuclear energy, Australia could bring back domestic manufacturing and other high-energy industries, reduce dependency on foreign countries for essential goods and supplies, and stop outsourcing our emissions in an attempt to bring down our own.\n• With nuclear energy, Australia could convert to electric land transport without creating undue strain on electricity production and transmission.\n• With nuclear energy, Australia could develop a domestic world-leading nuclear technology sector with creation of high-skilled jobs for our best scientists at home.\n• And with nuclear energy, Australia could reach net zero emissions by 2050, without shutting down agriculture or banning meat or closing the aviation industry and without energy poverty.\nSource: https://nuclearfornetzero.org\nUse the critical thinking skills in your answer.\na Make sure you understand the crucial concepts and the links between the various ideas.\nb Determine the relevance and the importance of the arguments and ideas presented.\nc Appraise arguments and identify any inconsistencies and errors in reasoning.\nd Note if there are vested interests in organisations presenting certain points of view.\ne Reflect on how your own assumptions, beliefs and values impact on your evaluation.",
+   "options": [],
+   "answer": "Answers will vary according to how adept students are at using the critical thinking skills and in particular point e, where they need to reflect on how their own assumptions, beliefs and values impact on their evaluation.",
+   "marks": 7,
+   "kind": "explain",
+   "size": "long",
+   "criteria": [
+    "4C.1",
+    "4C.2"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 48
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  }
+ ],
+ "summary": "Chapter 4 Summary\n4A Nuclear energy and energy--mass equivalence\n- Nuclear energy: the energy released during nuclear fission or fusion, resulting from the conversion of mass to energy.\n- Nuclear fission: the process of splitting a large nucleus to form two smaller, more stable nuclei.\n- Energy from nuclear reactions is some million times larger than from chemical bonding.\n- Mass of the fragments from nucleus fission is less than sum of mass of original nucleus & the initial colliding neutron.\n- Mass difference, Δ*m*, results in large amounts of energy being produced: *E* = Δ*mc*2.\n- Mass of product of fusion of two light nuclei is less than mass of the two individuals\n- Chain reaction: when neutrons, emitted from the fission of one atomic nucleus, initiate further fission in the surrounding atomic nuclei, and so on. Example Uranium-235.\n- An incoming neutron strikes U-235 nucleus, which briefly becomes a U-236 nucleus that splits apart; two new nuclei ('fragments') are formed, releasing energy and two or three neutrons.\n- Fission is more likely to be induced by a slow-moving neutron.\n- Approx. 2.5 neutrons on average are released every time a U-235 nucleus split. Excess neutrons can initiate a self-sustaining chain reaction.\n\n- Discuss the effect of mass and shape on criticality in fission chain reactions.\n- Controlled chain reaction: for every two or three neutrons released by the fissile nucleus, only one neutron is allowed to strike another fissile nucleus.\n- Moderator: any material (e.g. graphite) that slows neutrons to allow collision and absorption of a neutron into the target nucleus.\n- A critical mass is achieved when the rate of neutron production in a sphere (of say U-235) is matched by the rate of neutron loss.\n- Because the rate of neutron production is proportional to the volume of the sphere whereas the loss is proportional to the surface area, then a minimum radius is necessary (for smaller radius, the rate of loss is too high compared to the production-rate).\n- Control rods: made of materials (such as boron, cadmium, silver, hafnium or indium) that readily absorb large numbers of neutrons.\n- Criticality can be controlled by geometrical arrangement of the fuel rods, by type of moderators used to slow neutrons, and by type of control rod.\n- In nuclear weapons, uncontrolled reactions produce an explosions: two or more sub-critical masses need to be forced together to produce a super-critical mass so that an uncontrolled chain reaction occurs.\n- A practical difficulty is producing a high-purity (e.g. for U-235 about 80% purity) mass.\n4B Comparing fusion and fission\n- Fusion: two light nuclei combine to create a more stable nucleus, thereby releasing energy. Fission: splitting of a heavy, unstable nucleus into two lighter, more stable nuclei, releasing energy.\n- In fusion reactions, about 0.7% of matter converted to energy; in fission reactions, 0.1% of matter is converted.\n- In a binding energy curve, fusion and fission are both nuclear reactions that release energy.\n\n- Three types of nuclear waste classified according to their radioactivity: low-level, medium-level and high-level.\n- Low-level: 90% of the total volume composed of radioactive items, such as tools and work clothing; contains only 1% of the total radioactivity; stored on site for short periods of time, then released into the environment.\n- Medium-level: requires a longer storage time and requires shielding but not cooling.\n- High-level: mostly comprising used nuclear fuel rod material -- accounts for 3% by volume of waste but contains 95% of total radioactivity; will take about 1200 years to return to the same level as that of original uranium ore and millions of years before it is safe to return to the environment; must be stored in shielded containers and cooled to stop over-heating.\n- Hydrogen, helium and lithium created as a result of the Big Bang; the other elements were made during the life and death of stars.\n- A star fusing He to form heavier elements such as C and O up to Fe and Ni releases energy.\n- Forming elements heavier than Fe and Ni requires extra energy such as in supernova explosions.\n- Colliding neutron stars are responsible for producing heavier elements, such as Au, Ag and Xe.\n- Fusion reactions in Sun take place at very high temperatures and pressures. The Sun's core is dense plasma at 15 million Kelvin.\n- The combination of very high temperature and pressure allows the two H nuclei (protons) to overcome the strong electrostatic repulsion to eventually become He-4.\n- Plasma: a form of matter in which all the atoms are completely ionised -- sometimes called the fourth state of matter.\n- Thermonuclear bomb: a two-stage nuclear weapon with an initial fission stage, which then triggers a much larger fusion explosion.\n- Technological problems of fusing deuterium--tritium for energy: not having the extremely high pressures available in the Sun, temperatures have to be much higher than the Sun's\n    15 x10^6^ K -- at least 150 x10^6^ K for gas in vacuum chamber to become plasma. The plasma is too hot to come into contact with any material, so must be contained in an extremely strong toroidal (donut-shaped) magnetic field. A tokamak is a device that does this.\n- Tokamak: a device that uses a very strong magnetic field to confine plasma in the shape of a torus (a donut-shaped ring).\n- Mass defect (fusion): mass of the nucleus that is created is slightly less than the total mass of the original nuclei, due to the binding energy that is released during fusion. Increasing the number of nucleons in a nucleus, up to iron-56, causes the average binding energy per nucleon to increase.\n- Mass defect (Fission): in the binding curve, the mass defect, between the parent nucleus and the daughter nuclei, is due to the binding energy per nucleon increasing as the number of nucleons in each heavier nucleus decreases to iron-56. This increase in binding energy per nucleon is released as energy during fission forming more stable nuclei.\n4C Nuclear energy for Australia\n- The prospect of using nuclear energy as an energy source in Australia has been a divisive topic of public debate since the 1950s, with many arguments for and against.\n- Australia has never used nuclear energy for generating electrical power, although Australia has a third of the world's uranium deposits and is the world's third largest producer of uranium for nuclear power stations.\n- The OPAL reactor in Lucas Heights, NSW, is the only nuclear reactor in Australia, and is used to produce radioisotopes for medical diagnosis and treatment, industry, agriculture and scientific research.",
+ "test": {
+  "file": "Chapter 4 Test.docx",
+  "questions": 16,
+  "marks": 30,
+  "note": "not indexed question by question (TEACHER ONLY)"
+ },
+ "resources": {
+  "curated_internet": "Ch04 Curated internet resources.docx",
+  "powerpoint": "Ch04 PowerPoint Page 173.pptx"
+ },
+ "notes": "Review-question criteria follow the Cambridge Checklist links (e.g. RQ8, about CO2, is linked to 4A.2 by Cambridge). Answer typos kept verbatim: RQ17c writes 2.24 for 2.42 × 10^24 and gives 17.2 kT then 1.72 × 10^4 t; RQ28c ratio prints '6020 kt' (intended 20 Mt / 20 kt); RQ25a writes helium as ^4H; RQ25b answer gets 17.8 MeV (question says ~17.5). RQ21 shows no marks. 4C.2 has no quick review question, so its exit candidates are section questions. RQ18 and RQ25b equations were WMF images in the docx; retyped in LaTeX from the textbook. Summary text from Ch04 Summary.docx (its 3 images are duplicates of textbook figures, not saved)."
+}

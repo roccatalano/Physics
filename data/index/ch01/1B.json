@@ -1,0 +1,850 @@
+{
+ "code": "1B",
+ "title": "Electromagnetic waves",
+ "chapter": 1,
+ "unit": 1,
+ "aos": 1,
+ "study_design": [
+  "Identify all electromagnetic waves as transverse waves travelling at the same speed, c, in a vacuum as distinct from mechanical waves that require a medium to propagate",
+  "Compare the wavelength and frequencies of different regions of the electromagnetic spectrum, including radio, microwave, infrared, visible, ultraviolet, X-ray and gamma, and compare the different uses each has in society",
+  "Describe electromagnetic radiation emitted from the Sun as mainly ultraviolet, visible and infrared"
+ ],
+ "criteria": [
+  "1B.1",
+  "1B.2",
+  "1B.3",
+  "1B.4"
+ ],
+ "glossary": [
+  {
+   "id": "1B-G1",
+   "term": "Electric field",
+   "def": "a physical field that creates a force on all charged particles within the field. Produced by charged particles and changing magnetic fields. A changing electric field also produces a changing magnetic field.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "1B-G2",
+   "term": "Magnetic field",
+   "def": "a physical field that creates a force on moving charged particles and magnetic materials within the field. Produced by changing electric fields and magnetic materials. A changing magnetic field also produces a changing electric field.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "1B-G3",
+   "term": "Electromagnetic wave",
+   "def": "a transverse wave made up of perpendicular changing electric and magnetic fields, which can propagate through space without the need of a medium",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "1B-G4",
+   "term": "Electromagnetic spectrum",
+   "def": "the range of all types of electromagnetic waves, which have different wavelengths and frequencies",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "1B-G5",
+   "term": "Radio wave",
+   "def": "the region of the electromagnetic spectrum with the longest wavelength and lowest frequencies",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "1B-G6",
+   "term": "Gamma ray",
+   "def": "the region of the electromagnetic spectrum with the shortest wavelengths and highest frequencies",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "1B-G7",
+   "term": "Microwave",
+   "def": "the region of the electromagnetic spectrum with the longest wavelength the region of the electromagnetic spectrum with after radio waves",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "1B-G8",
+   "term": "Infrared (IR)",
+   "def": "the region of the electromagnetic spectrum between microwaves and red light; produced by sources of heat and is not visible to the human eye but can be detected as warmth on the skin",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "1B-G9",
+   "term": "Visible light",
+   "def": "the region of the electromagnetic spectrum between 400 nm to 700 nm; it is the only region that can be detected by our eyes",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "1B-G10",
+   "term": "Ultraviolet (UV)",
+   "def": "the region of the electromagnetic spectrum between visible light and X-rays",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "1B-G11",
+   "term": "X-ray",
+   "def": "the region of the electromagnetic spectrum between UV and gamma rays; they have the second shortest wavelengths and second highest frequencies",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "1B-G12",
+   "term": "Electromagnetic radiation",
+   "def": "another term commonly used to refer to electromagnetic waves",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 16
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F1B-1",
+   "name": "The wave equation for electromagnetic waves",
+   "latex": "c = f\\lambda",
+   "where": [
+    {
+     "sym": "c",
+     "meaning": "Speed of light in vacuum ($3.00 \\times 10^{8}\\ \\text{m s}^{-1}$)",
+     "unit": "m s^{-1}"
+    },
+    {
+     "sym": "f",
+     "meaning": "Frequency of the wave",
+     "unit": "Hz"
+    },
+    {
+     "sym": "\\lambda",
+     "meaning": "Wavelength of the wave",
+     "unit": "m"
+    }
+   ],
+   "criteria": [
+    "1B.1",
+    "1B.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 11
+   }
+  }
+ ],
+ "engage": {
+  "heading": "How do we understand light?",
+  "text": "The electromagnetic spectrum, which includes visible light, plays a crucial role in our lives. Through photosynthesis, light sustains all humankind. There have also been revolutionary applications in medicine, culture, communications, energy, weather forecasting, remote sensing, scientific research and our understanding of the Universe. For example, the recently launched James Webb Space Telescope allows us to see light from the fringes of the Universe and billions of years into the past.\n\nBut what is the nature of light? How fast does it travel? What is it made of? The famed physicist Isaac Newton thought it was made up of tiny particles. Some of his scientific opponents thought it was a kind of wave, but thought that waves needed a medium to vibrate, and no one could find one. But in 1862, Scottish physicist James Clerk Maxwell proposed that waves made up of vibrating electric and magnetic fields could travel in a vacuum at $3.00 \\times 10^{8}\\ \\text{m s}^{-1}$ as a transverse wave without the need for a medium.",
+  "src": {
+   "file": "Physics12_Ch01.pdf",
+   "page": 10
+  }
+ },
+ "chunks": [
+  {
+   "id": "1B-E1",
+   "heading": "What is light?",
+   "text": "Electromagnetic theory, Maxwell’s crowning achievement, predicted that accelerating charges should generate waves – waves made up of changing electric and magnetic fields. The changing electric field causes a changing magnetic field, which in turn generates a changing electric field – and so on. The wave produced in this way doesn’t need a medium to propagate, unlike mechanical waves such as sound, which do require a medium to propagate. These waves travel through a vacuum at the speed of light, $c$, $3.00 \\times 10^{8}\\ \\text{m s}^{-1}$. The electric and magnetic fields are always at right angles to each other, as shown in Figure 1B–2 below. The waves are also always transverse because the electric and magnetic fields are always perpendicular to the direction of travel of the waves.\n\nThe wavelength is shown in Figure 1B–2 and is the same for the electric field and the magnetic field. All electromagnetic waves obey the wave equation ($v = f\\lambda$), and have the same speed in a vacuum, equal to $c$. In other media, electromagnetic waves travel more slowly; for example, the speed of green light in water is $2.25 \\times 10^{8}\\ \\text{m s}^{-1}$. In a vacuum, the wave equation for electromagnetic waves can be written as: [Formula 1B–1]",
+   "figures": [
+    "1B-F2"
+   ],
+   "criteria": [
+    "1B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "1B-E2",
+   "heading": "The electromagnetic spectrum",
+   "text": "Maxwell predicted that there could be a whole family of electromagnetic waves with a range of wavelengths and frequencies. He was right. We now call this the electromagnetic spectrum. The electromagnetic spectrum is shown in Figure 1B–3.\n\nFigure 1B–3 shows the relationship between wavelength and frequency for electromagnetic waves, that frequency increases (moving right to left in the diagram) with decreasing wavelength. This behaviour can be explained by Formula 1B–1 since the speed of light in a vacuum, $c$, is constant and $c = f\\lambda$. So, increasing or decreasing frequency, $f$, must result in a corresponding decrease or increase in wavelength, $\\lambda$, and since $f$ is determined by the source, a large range of electromagnetic waves with different wavelengths and properties can be produced. The electromagnetic spectrum is broken up into approximate regions based on wavelength with the longest wavelength waves being radio waves and the shortest being gamma rays. Between them, in order of decreasing wavelength (increasing frequency), are microwave, infrared (IR), visible light, ultraviolet (UV) and X-ray. Labelling the different regions is important because it helps identify and separate the different processes that create electromagnetic waves. It also allows for broader classification of properties, which is helpful when looking at applications.",
+   "figures": [
+    "1B-F3"
+   ],
+   "criteria": [
+    "1B.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "1B-E3",
+   "heading": "Societal uses of the electromagnetic spectrum",
+   "text": "The electromagnetic spectrum has an amazing range of uses, and every region is useful. The Study Design requires you to be familiar with the wavelength and frequency ranges of radio, microwave, infrared, visible, ultraviolet, X-ray and gamma ray radiations. Table 1B–1 shows some common uses for each, but there are many more (see Table 1B–2 on page 18 for an explanation of the units you will encounter in this table and throughout the chapter).",
+   "figures": [
+    "1B-T1"
+   ],
+   "criteria": [
+    "1B.3",
+    "1B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 13
+   }
+  },
+  {
+   "id": "1B-E4",
+   "heading": "Table 1B–1 Common applications of the electromagnetic spectrum (text)",
+   "text": "Radio: > 1 m and < 300 MHz. • A wide range of communication technologies, including AM and FM radio, TV, CB radios, mobile phones • Radioastronomy gives information about the Universe otherwise unobtainable • Aircraft and ship navigation (radio direction finding) • Global positioning systems (GPS) • Metal detectors • Magnetic resonance imaging (MRI) • Radio frequency identification (RFID)\nMicrowaves: 1 m – 1 mm and 300 MHz – 300 GHz. • Heating in microwave ovens • Radar • Remote sensing; microwave radiation penetrates clouds, haze, dust and most rain; their wavelengths are unaffected by scattering unlike optical wavelengths • Microwave astronomy • Communications (including mobile phones)\nInfrared (IR): 1 mm – 700 nm and 300 GHz – 430 THz. • Thermal imaging (including night vision goggles) • Remote controls (e.g. for domestic TVs) • Heat lamps in IR saunas • IR astronomy • Optical fibre signals\nVisible: 700 nm – 400 nm and $4.3 \\times 10^{14}$ Hz – $7.5 \\times 10^{14}$ Hz. • Vision • Lighting • Optical astronomy • Laser applications – surgery, pointers, cutters, communication • Phototherapy (for seasonal affective disorder (SAD), jaundice) • Photosynthesis (growth of plants)\nUltraviolet (UV): 400 nm – 10 nm and $7.5 \\times 10^{14}$ Hz – $3 \\times 10^{16}$ Hz. • Vitamin D generation in the skin • UV astronomy • Medical and food sterilisation\nX-rays: 10 nm – 10 pm and $3 \\times 10^{16}$ Hz – $3 \\times 10^{19}$ Hz. • X-ray astronomy • Industrial scanning for quality control • Medical imaging (including computerised tomography (CT) scans) • Medical therapies (cancer treatment) • X-ray security imaging • Detection of art forgeries\nGamma rays: < 10 pm and $> 3 \\times 10^{19}$ Hz. • Medical and food sterilisation • Medical imaging (PET scanners) • Medical therapy (cancer treatment) • Gamma ray astronomy • Industrial fault finding and tracing • Electrostatic discharging",
+   "figures": [
+    "1B-T1"
+   ],
+   "criteria": [
+    "1B.3",
+    "1B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 13
+   }
+  },
+  {
+   "id": "1B-E5",
+   "heading": "Societal uses (why each region suits its uses)",
+   "text": "Table 1B–1 shows that each region of the electromagnetic spectrum has its own useful and different applications in society. Generally, longer wavelength waves such as radio and microwave are used more for applications such as communications and radar. This is because they carry lower energy and are safer and their longer wavelengths allow them to travel around (diffract) buildings easier. At the other end of the spectrum, the shorter wavelength regions such as UV, X-ray and gamma ray aren’t used for communications or radar. Instead, they are used in applications such as sterilisation of equipment, medical imaging and treatment of cancer. This is because, at these short wavelengths, the waves have much higher energy density and aren’t as safe for living organisms. They can potentially cause serious harm to humans in large doses. Interestingly, each region of the spectrum is useful for different kinds of astronomy. This is because looking at each spectrum separately allows us to identify and detect different objects and processes occurring in space.",
+   "figures": [],
+   "criteria": [
+    "1B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "1B-E6",
+   "heading": "Light from the Sun",
+   "text": "Almost all of the energy that Earth receives from the Sun arrives as electromagnetic radiation. The idealised graph in Figure 1B–4 shows the distribution of radiation intensity by wavelength along with the percentage of total energy emitted in the ultraviolet, visible light, near infrared, far infrared and other regions of the solar spectrum.\n\nAs the graph in Figure 1B–4 shows, the majority of electromagnetic radiation that Earth receives is infrared (48%) and visible light (44%), with an additional 7% from ultraviolet, leaving a tiny 1% from other wavelengths. The main contribution to warming the planet comes from infrared radiation. We can detect visible light with our eyes, infrared with our skin and ultraviolet with instruments (and, if excessive, with subsequent skin damage).\n\nUnderstanding the wavelength distribution helps us make best use of solar radiation and avoid its dangers. Positive benefits include absorbing visible and IR in solar cells, treating SAD (seasonal affective disorder) with visible light, the formation of vitamin D by the action of UV in our skin and photosynthesis (where the best wavelengths are blue light at about 435 nm and red light at about 650 nm). Negative effects include the formation of skin damage and cancers by UV and the effect of too much blue wavelength light on sleep patterns.",
+   "figures": [
+    "1B-F4"
+   ],
+   "criteria": [
+    "1B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 16
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "1B-F2",
+   "label": "Figure 1B–2",
+   "caption": "Diagram of an electromagnetic wave",
+   "img": "img/1B_fig1B-2.png",
+   "important": true,
+   "why": "Perpendicular E and B fields, direction of travel and wavelength: core 1B.1 picture.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "1B-F3",
+   "label": "Figure 1B–3",
+   "caption": "The electromagnetic spectrum. Visible light forms only a narrow wavelength window of the whole spectrum.",
+   "img": "img/1B_fig1B-3.png",
+   "important": true,
+   "why": "Full spectrum with frequency and wavelength scales plus the visible band (also as PowerPoint Figure 1B–3).",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "1B-T1",
+   "label": "Table 1B–1",
+   "caption": "Common applications of the electromagnetic spectrum",
+   "img": "img/1B_table1B-1a.png",
+   "imgs": [
+    "img/1B_table1B-1a.png",
+    "img/1B_table1B-1b.png",
+    "img/1B_table1B-1c.png"
+   ],
+   "important": true,
+   "why": "Ranges and uses for every region (three page crops; also as PowerPoint Table 1B–1).",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 13
+   }
+  },
+  {
+   "id": "1B-F4",
+   "label": "Figure 1B–4",
+   "caption": "Idealised solar spectrum",
+   "img": "img/1B_fig1B-4.png",
+   "important": true,
+   "why": "Solar output by region with percentages (UV 7%, visible 43%, IR 38% + 11%): 1B.2.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 16
+   }
+  },
+  {
+   "id": "1B-T2",
+   "label": "Table 1B–2",
+   "caption": "Common SI prefixes, their values compared to the base unit and examples.",
+   "img": "img/1B_table1B-2.png",
+   "important": true,
+   "why": "Prefix table for unit conversions (tera to pico).",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 17
+   }
+  }
+ ],
+ "worked_examples": [],
+ "checkins": [
+  {
+   "id": "1B-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "What are the relative orientations of the electric vibrations, the magnetic vibrations, and the velocity of a light wave?",
+   "answer": "They are all at right angles to each other",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1B.1"
+   ],
+   "src": {
+    "file": "1B Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "1B-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "Convert 800 nm into metres.",
+   "answer": "Nano is the prefix for $10^{-9}$, so 800 nm = $8.00 \\times 10^{-7}$ m",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "1B.3"
+   ],
+   "src": {
+    "file": "1B Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "1B-CI1.3",
+   "set": 1,
+   "n": 3,
+   "question": "What kinds of electromagnetic waves have a wavelength of 0.10 nm?",
+   "answer": "0.10 nm is $10^{-10}$ m; which from the spectrum diagram is X-rays",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1B.3"
+   ],
+   "src": {
+    "file": "1B Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "1B-CI1.4",
+   "set": 1,
+   "n": 4,
+   "question": "State the regions of greatest and smallest frequency of the electromagnetic spectrum.",
+   "answer": "Gamma rays (greatest) and radio waves (smallest)",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1B.3"
+   ],
+   "src": {
+    "file": "1B Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "1B-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "What named region of the spectrum would be used in these situations? a a mobile phone b a baggage scanner at an airport c a TV remote control d vitamin D generation in the skin e optical astronomy",
+   "answer": "a Radio and microwaves b X-rays c Infrared d Ultraviolet e Visible light",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1B.4"
+   ],
+   "src": {
+    "file": "1B Check-in – Set 2.docx"
+   }
+  },
+  {
+   "id": "1B-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "Identify the type of electromagnetic rays with the following properties. a have the greatest energy density b are used to broadcast TV signals c have the highest frequency d have the longest wavelength",
+   "answer": "a Gamma rays b Radio waves c Gamma rays d Radio waves",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1B.3",
+    "1B.4"
+   ],
+   "src": {
+    "file": "1B Check-in – Set 2.docx"
+   }
+  },
+  {
+   "id": "1B-CI2.3",
+   "set": 2,
+   "n": 3,
+   "question": "Rank the three main types of electromagnetic radiation received by Earth by radiation amount.",
+   "answer": "1 Infrared 2 Visible light 3 Ultraviolet",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1B.2"
+   ],
+   "src": {
+    "file": "1B Check-in – Set 2.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "1B-SQ1",
+   "n": "1",
+   "question": "Take $c = 3.00 \\times 10^{8}\\ \\text{m s}^{-1}$. When electromagnetic radiation from the Sun arrives at the surface of Earth, it warms the surfaces that it falls on. The best explanation of this is that",
+   "options": [
+    "A. light particles have travelled from the Sun's surface to Earth's surface.",
+    "B. electromagnetic waves have managed to cross the nearly empty space between Earth and the Sun by vibrating the few particles that exist between Earth and the Sun.",
+    "C. electromagnetic waves carry energy from the surface of the Sun to the surface of Earth; they do not need a medium for transmission.",
+    "D. light from the Sun does not warm the surface of Earth; the warming effect is entirely from other mechanisms."
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "1B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "1B Section questions.docx"
+   }
+  },
+  {
+   "id": "1B-SQ2",
+   "n": "2",
+   "question": "Often people in remote situations carry a PLB (personal locator beacon) transmitter, shown here. These operate at 406 MHz and use electromagnetic radiation. Which one of the following characteristics describes PLB radiation?",
+   "options": [
+    "A. it requires a medium for its transmission",
+    "B. it is a transverse wave motion",
+    "C. it does not require a medium for its transmission",
+    "D. it is a mixture of transverse and longitudinal waves"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "1B.1"
+   ],
+   "img": [
+    "img/1B_SQ2.png"
+   ],
+   "src": {
+    "file": "1B Section questions.docx"
+   }
+  },
+  {
+   "id": "1B-SQ3",
+   "n": "3",
+   "question": "PLB radiation differs from visible light in which one of the following ways?",
+   "options": [
+    "A. one is a transverse wave motion and the other is not",
+    "B. it has a different wavelength",
+    "C. it has a different period",
+    "D. PLB radiation cannot travel through a vacuum"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "1B.1",
+    "1B.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "1B Section questions.docx"
+   }
+  },
+  {
+   "id": "1B-SQ4",
+   "n": "4",
+   "question": "Arrange the following components of visible light in order of increasing wavelength: yellow, green, violet, red.",
+   "options": [],
+   "answer": "Violet, green, yellow, red. Consult the spectrum diagram",
+   "marks": null,
+   "kind": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "1B.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "1B Section questions.docx"
+   }
+  },
+  {
+   "id": "1B-SQ5",
+   "n": "5",
+   "question": "Rank the following colours in order of increasing frequency: green, ultraviolet, red, yellow.",
+   "options": [],
+   "answer": "Red, yellow, green, ultraviolet. Consult the spectrum diagram",
+   "marks": null,
+   "kind": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "1B.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "1B Section questions.docx"
+   }
+  },
+  {
+   "id": "1B-SQ6",
+   "n": "6",
+   "question": "Refer to the information given in Question 2 and identify the region of the spectrum that PLB radiation occupies. Calculate the period and wavelength of these waves. Give your answer in ns and cm.",
+   "options": [],
+   "answer": "Using the spectrum diagram, they are radio waves. Use $T = \\frac{1}{f} = 2.5 \\times 10^{-9} = 2.5$ ns. Use $\\lambda = \\frac{c}{f}$ to get $\\lambda =$ 74 cm",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "1B.3",
+    "1A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "1B Section questions.docx"
+   }
+  },
+  {
+   "id": "1B-SQ7",
+   "n": "7",
+   "question": "A scientist has a 500 nm laser for some experiments and would like a laser with double the frequency. Find the wavelength that this new laser would have and the region that it would occupy in the electromagnetic spectrum.",
+   "options": [],
+   "answer": "Use $c = f\\lambda$, since $c$ is constant doubling the frequency would mean halving the wavelength, so it would have a $\\lambda$ of 250 nm. It would be in the ultraviolet region.",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "1B.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "1B Section questions.docx"
+   }
+  },
+  {
+   "id": "1B-SQ8",
+   "n": "8",
+   "question": "SAD can be treated with phototherapy using electromagnetic radiation of frequency $6.4 \\times 10^{14}$ Hz. Identify this radiation in the electromagnetic spectrum.",
+   "options": [],
+   "answer": "Use $\\lambda = \\frac{c}{f}$ to find the wavelength (it is 470 nm); this would be blue light.",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "youtry",
+    "exit"
+   ],
+   "criteria": [
+    "1B.3",
+    "1B.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "1B Section questions.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 1B Electromagnetic waves",
+  "total": 16,
+  "questions": [
+   {
+    "id": "WS1B-1",
+    "n": "1",
+    "question": "On the bar graph below, label where each part of the electromagnetic spectrum falls, including approximate frequencies and wavelengths.",
+    "answer": "[labelled spectrum diagram: see image]",
+    "marks": 5,
+    "kind": "graph",
+    "size": "long",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "1B.3"
+    ],
+    "img": [
+     "img/1B_WS1.png",
+     "img/1B_WS1_answer.png"
+    ],
+    "src": {
+     "file": "1B Worksheet 1B–1 Electromagnetic radiation.docx"
+    }
+   },
+   {
+    "id": "WS1B-2",
+    "n": "2",
+    "question": "TV remotes use electromagnetic waves in the infrared range. Explain why infrared is used for TV remotes rather than X-rays.",
+    "answer": "X-rays are high energy waves and will possibly cause damage to objects (particularly living things) with repeated use. The technology to 'receive' X-ray signals is too expensive to use in everyday devices such as TVs and TV remotes.",
+    "marks": 2,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "wedo"
+    ],
+    "pair_with": "WS1B-3",
+    "criteria": [
+     "1B.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "1B Worksheet 1B–1 Electromagnetic radiation.docx"
+    }
+   },
+   {
+    "id": "WS1B-3",
+    "n": "3",
+    "question": "In outback Australia, communication is often by CB radio. What part of the electromagnetic spectrum do CB radios use? Why do they use this range of frequencies?",
+    "answer": "CB radios use radio waves. They transmit easily through air. They have a longer wavelength which allows them to travel further. They can be reflected if needed. They don't cause damage to living tissue.",
+    "marks": 2,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WS1B-2",
+    "criteria": [
+     "1B.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "1B Worksheet 1B–1 Electromagnetic radiation.docx"
+    }
+   },
+   {
+    "id": "WS1B-4",
+    "n": "4",
+    "question": "Discuss which type of waves would be the best for communicating with humans who have settled on Pluto.",
+    "answer": "Similar answer to Q3.",
+    "marks": 2,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "1B.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "1B Worksheet 1B–1 Electromagnetic radiation.docx"
+    }
+   },
+   {
+    "id": "WS1B-5",
+    "n": "5",
+    "question": "The Global Positioning System (GPS) is a global navigation satellite system that uses 31 satellites in orbit around the Earth. GPS provides information on location, velocity and time to the users via radio waves. Discuss what other waves from the electromagnetic spectrum could possibly be used instead of radio waves.",
+    "answer": "You would need other low frequency, larger wavelength electromagnetic waves, that wouldn't cause damage to living things when focused. Microwaves and infrared could be considered.",
+    "marks": 2,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "1B.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "1B Worksheet 1B–1 Electromagnetic radiation.docx"
+    }
+   },
+   {
+    "id": "WS1B-6a",
+    "n": "6a",
+    "question": "An electromagnetic wave has a frequency of $3.0 \\times 10^{17}$ Hz. What type of electromagnetic wave is this?",
+    "answer": "UV/X-ray range",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "wedo",
+     "exit"
+    ],
+    "pair_with": "1B-SQ8",
+    "criteria": [
+     "1B.3"
+    ],
+    "img": [],
+    "src": {
+     "file": "1B Worksheet 1B–1 Electromagnetic radiation.docx"
+    }
+   },
+   {
+    "id": "WS1B-6b",
+    "n": "6b",
+    "question": "An electromagnetic wave has a frequency of $3.0 \\times 10^{17}$ Hz. Determine the wavelength of the wave.",
+    "answer": "$\\lambda = \\frac{c}{f} = \\frac{3.0 \\times 10^{8}}{3.0 \\times 10^{17}} = 1.0 \\times 10^{-9}\\ \\text{m} = 1\\ \\text{nm}$",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "wedo"
+    ],
+    "pair_with": "1B-SQ6",
+    "criteria": [
+     "1B.3",
+     "1A.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "1B Worksheet 1B–1 Electromagnetic radiation.docx"
+    }
+   },
+   {
+    "id": "WS1B-6c",
+    "n": "6c",
+    "question": "An electromagnetic wave has a frequency of $3.0 \\times 10^{17}$ Hz. Convert this frequency to megahertz.",
+    "answer": "$1\\ \\text{MHz} = 1 \\times 10^{6}\\ \\text{Hz}$, therefore $3 \\times 10^{17}\\ \\text{Hz} = 3 \\times 10^{11}\\ \\text{MHz}$",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "1B.3"
+    ],
+    "img": [],
+    "src": {
+     "file": "1B Worksheet 1B–1 Electromagnetic radiation.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "1B.3"
+   ],
+   "wedo": "WS1B-6b",
+   "origin": "adapted",
+   "youtry": [
+    "1B-SQ6",
+    "1B-SQ8"
+   ],
+   "note": "c = fλ with prefixes, then name the region. No textbook worked example in 1B; WS1B-6a/6b used together as the model."
+  },
+  {
+   "criteria": [
+    "1B.3"
+   ],
+   "wedo": "1B-SK1",
+   "origin": "adapted",
+   "youtry": [
+    "1B-CI1.2",
+    "WS1B-6c"
+   ],
+   "note": "Unit conversions: the 1B Skills box conversions (30 GHz, 550 nm) are the model."
+  },
+  {
+   "criteria": [
+    "1B.4"
+   ],
+   "wedo": "WS1B-2",
+   "origin": "adapted",
+   "youtry": [
+    "WS1B-3"
+   ],
+   "note": "Explain why a region suits a use (energy, safety, wavelength)."
+  }
+ ],
+ "skills": [
+  {
+   "id": "1B-SK1",
+   "heading": "Units",
+   "text": "Because the electromagnetic spectrum has such a wide range of values, it is essential to know the following SI prefixes, which you will also meet in many other places. Converting between them is an essential skill in this course. The 1B Skills video shows more examples of calculations. [Table 1B–2]\n\nTo convert units with a prefix into the base unit, multiply by the value of the prefix. For example, to convert 30 GHz into hertz, use the prefix from Table 1B–2 as follows:\n$30\\ \\text{GHz} = 30 \\times 10^{9}\\ \\text{Hz} = 3.0 \\times 10^{10}\\ \\text{Hz}$\nTo convert 550 nm into metres, use the table again as follows:\n$5.5 \\times 10^{-7}\\ \\text{m} = 5.5 \\times \\frac{10^{-7}}{10^{-9}} = 5.5 \\times 10^{2}\\ \\text{nm} = 550\\ \\text{nm}$; $550\\ \\text{nm} = 550 \\times 10^{-9}\\ \\text{m} = 5.5 \\times 10^{-7}\\ \\text{m}$\nTo convert quantities in the opposite direction, i.e. from the base unit into units with a prefix, divide by the value of the prefix.",
+   "img": "img/1B_SK1.png",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 17
+   }
+  }
+ ],
+ "pracs": [],
+ "notes": "No worked examples and no practical in 1B: all We do entries are adapted (worksheet Q6 and the Skills box conversions). Table 1B–1 spans pages 13 to 15 (three crops). FLAG: Suggested responses give 1B SQ2 = D and SQ3 = D, but the correct answers appear to be B or C (SQ2: transverse/no medium) and B or C (SQ3: different wavelength/period); Cambridge key looks wrong; check before using. Glossary entry for Microwave is garbled in the textbook (copied verbatim). Table 1B–2 in the textbook lists the base unit as 10^1 (Cambridge typo for 10^0). WS1B-4 answer is only 'Similar answer to Q3.'"
+}

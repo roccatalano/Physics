@@ -1,0 +1,1107 @@
+{
+ "code": "3C",
+ "title": "Modelling radioactive decay",
+ "chapter": 3,
+ "unit": 1,
+ "aos": 2,
+ "study_design": [
+  "Model radioactive decay as random decay with a particular half-life, including mathematical modelling with reference to whole half-lives"
+ ],
+ "criteria": [
+  "3C.1",
+  "3C.2"
+ ],
+ "glossary": [
+  {
+   "id": "3C-G1",
+   "term": "Radiocarbon dating",
+   "def": "a method for determining the age of an object containing organic material by using the decay of radioactive carbon-14",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 32,
+    "book_page": 111
+   }
+  },
+  {
+   "id": "3C-G2",
+   "term": "Half-life",
+   "def": "the time taken for half of a group of unstable nuclei to decay",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 33,
+    "book_page": 112
+   }
+  },
+  {
+   "id": "3C-G3",
+   "term": "Decay curve",
+   "def": "a graph of the number of radioactive nuclei remaining in a substance versus time elapsed",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 34,
+    "book_page": 113
+   }
+  },
+  {
+   "id": "3C-G4",
+   "term": "Activity",
+   "def": "the number of radioactive nuclei that decay each second; measured in becquerel (Bq)",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 37,
+    "book_page": 116
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F3C-1",
+   "name": "Formula 3C–1 General formula for radioactive decay",
+   "latex": "N = N_0\\left(\\frac{1}{2}\\right)^{n}",
+   "where": [
+    {
+     "sym": "n",
+     "meaning": "the number of half lives that have passed",
+     "unit": ""
+    },
+    {
+     "sym": "N_0",
+     "meaning": "Original amount of radioactive substance",
+     "unit": ""
+    },
+    {
+     "sym": "N",
+     "meaning": "Final amount of the substance after n half-lives",
+     "unit": ""
+    }
+   ],
+   "criteria": [
+    "3C.1",
+    "3C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 35,
+    "book_page": 114
+   },
+   "img": "img/3C_formula3C-1.png"
+  },
+  {
+   "id": "F3C-2",
+   "name": "Activity",
+   "latex": "1\\ \\text{Bq} = 1\\ \\text{disintegration s}^{-1}",
+   "where": [
+    {
+     "sym": "\\text{Bq}",
+     "meaning": "becquerel, unit of activity (number of nuclei that decay each second)",
+     "unit": "Bq"
+    }
+   ],
+   "criteria": [
+    "3C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 37,
+    "book_page": 116
+   }
+  }
+ ],
+ "engage": {
+  "heading": "Using radioactive carbon-14 to date the settlement of Aboriginal peoples",
+  "text": "Dr Vladimir Levchenko of the Australian Nuclear Science and Technology Organisation (ANSTO) and his team, using radiocarbon dating techniques, have discovered evidence that now suggests Aboriginal peoples settled in the Flinders Ranges of South Australia some 49 000 years ago. The scientists used radiocarbon dating techniques that are reliable to 55 000–60 000 years.\n\nThe Warratyi site (Figure 3C–1) preserves reliably dated, stratified evidence of extinct Australian megafauna, the earliest-known use of ochre in Australia and Southeast Asia, gypsum pigment and bone tools. The evidence clearly shows that Aboriginal peoples not only settled in the arid interior within a few millennia of entering the continent, but also developed key technologies much earlier than previously recorded.",
+  "figures": [
+   "3C-F1"
+  ],
+  "src": {
+   "file": "Physics12_Ch03.pdf",
+   "page": 32,
+   "book_page": 111
+  }
+ },
+ "chunks": [
+  {
+   "id": "3C-E1",
+   "heading": "Random decay",
+   "text": "Radioactive decay is a completely random process, which means that it is impossible to predict when a particular radioactive nucleus will decay regardless of how long the atom has existed. However, with large numbers of nuclei it is possibly to statistically predict the behaviour of the entire group. For example, one gram of radioactive uranium-238 contains 2.6 × $10^{21}$ radioactive atoms. The overall decay rate of such a significant number of radioactive nuclei can be expressed using the concept of the half-life of that radioactive element – the length of time for half the radioactive nuclei to decay.",
+   "figures": [],
+   "criteria": [
+    "3C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 33,
+    "book_page": 112,
+    "pages": [
+     33
+    ]
+   }
+  },
+  {
+   "id": "3C-E2",
+   "heading": "Simulating random radioactive decay using dice",
+   "text": "It is possible to simulate random radioactive decay using dice. Typically, 120 dice are rolled and all dice showing, say, the number 6 face up are removed (they have decayed). Note it is impossible beforehand to predict which of the thrown dice will roll with number 6 face up (i.e. the random nature of decay) – but approximately one-sixth of all the dice thrown each time will show with the number 6 face up.\n\nIf this is repeated a number of times, a table similar to Table 3C–1 might be generated.\n\nNote that it takes approximately four rolls of the dice to have approximately half of the original number of dice left ‘active’. This is the half-life of a number 6 die face. If it takes 5 minutes to roll and count the dice, then the half-life for this configuration is 20 minutes.\n\nIf the experiment is repeated with all the odd numbered dice being removed each time, then the half-life would be very close to one roll or 5 minutes.",
+   "figures": [
+    "3C-F2"
+   ],
+   "criteria": [
+    "3C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 33,
+    "book_page": 112,
+    "pages": [
+     33
+    ]
+   }
+  },
+  {
+   "id": "3C-E3",
+   "heading": "Half-life",
+   "text": "The element technetium-99m, a useful medical radioisotope, decays so that after a period of 6.0 hours exactly half of the original technetium-99m nuclei have decayed. Such a period of time is called a half-life, $t_{\\frac{1}{2}}$. The half-life is a measure of the rate of radioactive decay.\n\nEvery radioactive isotope can be characterised by its half-life.\n\nDifferent radioisotopes emit radiation at different rates. There are those that decay very quickly and have a very short half-life (e.g. for francium-218, $t_{\\frac{1}{2}}$ = 1.0 millisecond), while others decay extremely slowly and have a very long half-life (e.g. for uranium-238, $t_{\\frac{1}{2}}$ = 4500 million years). Table 3C–2 shows some natural and artificial radioisotopes, their emissions, their half-lives and common applications.\n\nTechnetium-99m has a half-life of 6.0 h; after another 6.0 h (a total of 12.0 h), only one-quarter of the original mass of technetium-99m will remain. This process continues so that at any given instant, the rate of decay is proportional to the amount of radioactive material that is left. This can be plotted graphically as a radioactive decay curve. All radioactive elements have the same shaped decay curve as shown in Figure 3C–2. The only significant differences relate to the scale values placed on each axes. This type of curve often appears in physics. It is called an exponential decay curve. The decay curve for carbon-14 is shown in Figure 3C–3.\n\nThe half-life of any given radioactive isotope is constant and is unaffected by any external conditions such as temperature, magnetic fields or the chemical environment. It is related only to the instability of the nucleus of the particular radioactive isotopes.\n\nThe half-life of a radioactive isotope is also a factor in its application. For example, most medical applications using a radioactive isotope as a tracer require a short half-life (e.g. technetium-99m, 6.0 hours). Medical radiotherapy treatment of thyroid cancer needs an isotope with a slightly longer half-life (e.g. iodine-131, 8 days). In both of these cases, this is so no radioactivity remains in the body any longer than necessary. The radioactive isotope used in a household smoke detector is chosen because of its long half-life (e.g. americium-241, 460 years), so although you have to replace the battery annually the radioactive isotope never has to be replaced.",
+   "figures": [
+    "3C-F4",
+    "3C-F5",
+    "3C-F3"
+   ],
+   "criteria": [
+    "3C.1",
+    "3C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 33,
+    "book_page": 112,
+    "pages": [
+     33,
+     34,
+     35
+    ]
+   }
+  },
+  {
+   "id": "3C-E4",
+   "heading": "Carbon-14 dating techniques",
+   "text": "Figure 3C–3 shows how radioactive carbon-14 decays as a function of time. Radioactive carbon-14 has a half-life of 5730 years. If 50% of the original carbon-14 remains, this indicates that the object being dated is 5730 years old, if 25% of the original carbon-14 remains, it is 11 460 years old (2 × 5730), and so on. Carbon-14 dating depends on living matter containing an amount of C-14 that corresponds to that in the atmosphere. When that living matter dies, then the C-14 fraction (compared to C-12) decreases.\n\nNOTE: Samples that have been radiocarbon dated include charcoal, wood, twigs, seeds, bones, shells, leather, peat, lake mud, soil, hair, pottery, pollen, wall paintings, corals, blood residues, fabrics, paper or parchment, resins and water.\n\nTechnetium-99m (Tc-99m) is the most widely used radioactive isotope for medical diagnostic studies. (The ‘m’ stands for 'metastable' but that is not important here.) Hospitals prefer short-lived radioactive isotopes for medical diagnostic purposes. One standard method involves using a particle accelerator to form the radiation nuclides. However, accelerators are expensive and fairly bulky. A much cheaper alternative is to produce radioactive substances using a radioactive ‘cow’. These radioactive generators contain a radioactive substance with a relatively long life, known as the mother nuclide. The mother nuclide disintegrates and produces the decay product, called the daughter nuclide. This daughter nuclide has a short half-life. The daughter nuclide is drained from the generator and is then used for medical diagnostic purposes. This is called ‘milking the radioactive cow’.\n\nOne common type of radioisotopic generator produces the γ-emitter technetium-99m, which has a half-life of 6.0 hours. The mother nuclide in this case is molybdenum-99 with a half-life of 67 hours. Molybdenum-99 decays via β decay and produces the desired technetium-99m:\n\n$^{99}_{42}\\text{Mo} \\rightarrow {}^{99\\text{m}}_{43}\\text{Tc} + {}^{0}_{-1}\\beta$\n\n$^{99\\text{m}}_{43}\\text{Tc} \\rightarrow {}^{99\\text{m}}_{43}\\text{Tc} + {}^{0}_{0}\\gamma$",
+   "figures": [
+    "3C-F5"
+   ],
+   "criteria": [
+    "3C.1",
+    "3C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 35,
+    "book_page": 114,
+    "pages": [
+     35,
+     36
+    ]
+   }
+  },
+  {
+   "id": "3C-E5",
+   "heading": "Strength (activity) of radioactive sources",
+   "text": "The ‘strength’ of any given radioactive source is determined by its activity.\n\nThe activity is defined as the number of nuclei that decay each second; that is, the number of disintegrations per second. The unit of activity is the becquerel (Bq), where\n\n1 becquerel is defined as 1 disintegration per second (1 Bq = 1 disintegration $s^{-1}$).\n\nRadioactive cobalt-60 has a half-life of 5.27 years. It is produced from cobalt-59 by neutron bombardment in a nuclear reactor. It is a γ-ray emitter and used in the sterilisation of medical equipment, in external radiotherapy and in industrial radiography.\n\nA radioactive medical source containing 10 g of cobalt-60 is used for external radiation therapy. It has an initial activity of 440 TBq (4.40 × $10^{14}$ Bq). Figure 3C–4 shows the amount of radioactive cobalt-60 remaining (and therefore its activity) as a function of time. After 5.27 years, only 5 g of radioactive cobalt-60 remains and its activity is therefore 220 TBq. After 2 half-lives, only 2.5 g of radioactive cobalt-60 remains and its activity is now 110 TBq. This decrease in activity has implications for the lifespan of the medical radioactive cobalt-60 radiotherapy units used in hospitals (see Worked example 3C–2).",
+   "figures": [
+    "3C-F6"
+   ],
+   "criteria": [
+    "3C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 37,
+    "book_page": 116,
+    "pages": [
+     37
+    ]
+   }
+  },
+  {
+   "id": "3C-E6",
+   "heading": "Natural radioactivity on Earth",
+   "text": "Physicists believe that ever since Earth was formed 4500 million years ago, there have been two major mechanisms at work that continually produce the natural radiation that is within Earth’s biosphere: terrestrial radiation from Earth and cosmic radiation from space.\n\nTable 3C–3 shows the activities of some everyday items including humans. Both you and the person sitting next to you are mildly radioactive! But don’t worry, it has been that way for the human species for many tens of thousands of years. Humans have trace amounts of potassium-40, a γ-ray emitter that produces ~100 Bq per kilogram of body mass. The half-life of potassium-40 is 1.25 billion years.\n\nNOTE: Potassium-40 is the primary source of radiation from the human body for two reasons. First, the concentration of potassium-40 in the body is fairly high. Potassium is ingested in many foods that we eat, like bananas, and is a critically important element for proper functioning of the human body; it is present in pretty much all the tissues of the body. The activity of the radioactive isotope potassium-40 in a 70 kg person is about 7000 Bq, which represents 7000 atoms undergoing radioactive decay each second.\n\nTable 3C–4 gives the half-lives of a range of radioactive isotopes. When Earth formed 4.5 billion years ago, there would have been twice as much radioactive uranium-238 as there is in Earth now.",
+   "figures": [
+    "3C-F8",
+    "3C-F10"
+   ],
+   "criteria": [
+    "3C.1",
+    "3C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 38,
+    "book_page": 117,
+    "pages": [
+     38,
+     39
+    ]
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "3C-F1",
+   "label": "Figure 3C–1",
+   "caption": "Evidence from the Warratyi rock shelter in the Flinders Ranges shows that Aboriginal peoples occupied arid Southern Australia about 49 000 years ago.",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 32,
+    "book_page": 111
+   }
+  },
+  {
+   "id": "3C-F2",
+   "label": "Table 3C–1",
+   "caption": "Example of rolling 120 dice",
+   "img": "img/3C_tab3C-1.png",
+   "important": true,
+   "why": "Dice simulation data (120 dice)",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 33,
+    "book_page": 112
+   }
+  },
+  {
+   "id": "3C-F3",
+   "label": "Table 3C–2",
+   "caption": "Some natural and artificial radioisotopes, their emissions, their half-lives and common applications",
+   "img": "img/3C_tab3C-2.png",
+   "important": true,
+   "why": "Natural and artificial radioisotopes: emission, half-life, application",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 34,
+    "book_page": 113
+   }
+  },
+  {
+   "id": "3C-F4",
+   "label": "Figure 3C–2",
+   "caption": "The general radioactive decay curve is shown here. Note that after each period of one half-life, $t_{\\frac{1}{2}}$, another half of the original sample has decayed.",
+   "img": "img/3C_fig3C-2.png",
+   "important": true,
+   "why": "General decay curve with N = N0(1/2)^n",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 34,
+    "book_page": 113
+   }
+  },
+  {
+   "id": "3C-F5",
+   "label": "Figure 3C–3",
+   "caption": "Graph showing how radioactive carbon-14 decays as a function of time. The percentage of radioactive carbon-14 present in a sample determines its age.",
+   "img": "img/3C_fig3C-3.png",
+   "important": true,
+   "why": "Carbon-14 decay curve (half-life 5730 years)",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 35,
+    "book_page": 114
+   }
+  },
+  {
+   "id": "3C-F6",
+   "label": "Figure 3C–4",
+   "caption": "The decay curve for cobalt-60 showing the decrease in its activity",
+   "img": "img/3C_fig3C-4.png",
+   "important": true,
+   "why": "Co-60 decay curve: mass and activity halving each 5.27 years",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 37,
+    "book_page": 116
+   }
+  },
+  {
+   "id": "3C-F7",
+   "label": "Figure 3C–5",
+   "caption": "Approximately 82% of the average annual radiation that people receive comes from natural sources.",
+   "img": "img/3C_fig3C-5.png",
+   "important": true,
+   "why": "Pie chart of sources of annual radiation dose",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 38,
+    "book_page": 117
+   }
+  },
+  {
+   "id": "3C-F8",
+   "label": "Table 3C–3",
+   "caption": "Activities of some radioisotopes in everyday life",
+   "img": "img/3C_tab3C-3.png",
+   "important": true,
+   "why": "Activities of everyday radioisotopes",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 38,
+    "book_page": 117
+   }
+  },
+  {
+   "id": "3C-F9",
+   "label": "Figure 3C–6",
+   "caption": "Even the bananas you have for breakfast are mildly radioactive.",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 38,
+    "book_page": 117
+   }
+  },
+  {
+   "id": "3C-F10",
+   "label": "Table 3C–4",
+   "caption": "Half-lives of some radioactive isotopes",
+   "img": "img/3C_tab3C-4.png",
+   "important": true,
+   "why": "Half-lives of some radioactive isotopes",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 39,
+    "book_page": 118
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE3C-1",
+   "title": "Half-life of carbon",
+   "question": "Carbon-14 has a half-life of 5730 years. A bone fragment from an archaeological dig has one-eighth of the original carbon-14 remaining. How old is the bone fragment?",
+   "steps": [
+    "$\\frac{1}{8} = \\left(\\frac{1}{2}\\right)^{3}$",
+    "Therefore, n = 3 half-lives.",
+    "age of bone = 5730 × 3",
+    "= 17 190 years"
+   ],
+   "answer": "17 190 years",
+   "img": [
+    "img/3C_WE3C-1.png"
+   ],
+   "criteria": [
+    "3C.1",
+    "3C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 36,
+    "book_page": 115
+   }
+  },
+  {
+   "id": "WE3C-2",
+   "title": "Half-life of cobalt-60",
+   "question": "A 10 g radioactive medical cobalt-60 source has an initial activity of 440 TBq and a half-life of 5.27 years. The radioactive medical source of cobalt-60 needs replacement when its activity decreases to $\\frac{1}{16}$ of its initial value.\na When will it need to be replaced?\nb What will its activity be at that time?\nc How many grams of radioactive medical cobalt-60 will be remaining at this time?",
+   "steps": [
+    "a $\\frac{1}{16} = \\left(\\frac{1}{2}\\right)^{4}$",
+    "Therefore 4 half-lives have elapsed:",
+    "5.27 × 4 = 21.08 years",
+    "b $\\frac{440}{16}$ = 27.5 TBq",
+    "c $\\frac{10}{16}$ = 0.625 g"
+   ],
+   "answer": "a 21.08 years; b 27.5 TBq; c 0.625 g",
+   "img": [
+    "img/3C_WE3C-2.png",
+    "img/3C_fig3C-4.png"
+   ],
+   "criteria": [
+    "3C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 39,
+    "book_page": 118
+   }
+  },
+  {
+   "id": "WE3C-S1",
+   "title": "3C Skills: using the half-life equation (time for one-eighth to remain)",
+   "question": "Highly radioactive plutonium-239 generated in a nuclear reactor has a half-life of 24 100 years.\nHow long does it take for one-eighth of the original plutonium-239 to remain?",
+   "steps": [
+    "$N = N_0\\frac{1}{8}$",
+    "$= N_0\\left(\\frac{1}{2}\\right)^{3}$",
+    "number of half-lives, n = 3",
+    "time = 24 100 × 3",
+    "= 72 300 years"
+   ],
+   "answer": "72 300 years",
+   "img": [
+    "img/3C_skills.png"
+   ],
+   "criteria": [
+    "3C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 40,
+    "book_page": 119
+   },
+   "from": "3C SKILLS box"
+  },
+  {
+   "id": "WE3C-S2",
+   "title": "3C Skills: using the half-life equation (percentage remaining)",
+   "question": "It is not safe to put highly radioactive plutonium-239 into the environment until 241 000 years have elapsed.\nWhat percentage of the original plutonium-239 does this represent?",
+   "steps": [
+    "number of half-lives, n = 10 ($\\frac{241\\,000}{24\\,100}$)",
+    "$N = N_0\\left(\\frac{1}{2}\\right)^{10}$",
+    "$= N_0$ (0.000 98)",
+    "percentage = 0.000 98 × 100",
+    "= 0.098%"
+   ],
+   "answer": "0.098%",
+   "img": [
+    "img/3C_skills.png"
+   ],
+   "criteria": [
+    "3C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 40,
+    "book_page": 119
+   },
+   "from": "3C SKILLS box"
+  }
+ ],
+ "checkins": [
+  {
+   "id": "3C-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "The graph shows the decay curve for 1000 thorium-234 nuclei as a function of time in days.\nUsing the decay curve determine the:\na half-life of thorium-234\nb number of thorium-234 nuclei remaining after 48 days\nc time (in days) when 100 thorium-234 nuclei remain.",
+   "answer": "a 24 days (read from graph)\nb 250 after two half-lives\nc ~75 days (read from graph)",
+   "kind": "graph",
+   "size": "medium",
+   "criteria": [
+    "3C.1",
+    "3C.2"
+   ],
+   "img": [
+    "img/3C_CI1-1.png"
+   ],
+   "src": {
+    "file": "3C Check-in – Set 1.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3C-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "Molybdenum-99 has a half-life of 67 hours.\nUsing the formula $N = N_0\\left(\\frac{1}{2}\\right)^{n}$ calculate the:\na percentage of molybdenum-99 remaining after 201 hours have elapsed\nb time it takes to have only $\\frac{1}{16}$th of the original molybdenum-99 remaining.",
+   "answer": "a 12.5%\nn = 3 half-lives ($\\frac{201}{67}$ = 3) and $\\left(\\frac{1}{2}\\right)^{3} = \\frac{1}{8}$ = 12.5%\nb 268 hours\n$\\frac{1}{16} = \\left(\\frac{1}{2}\\right)^{4}$, so n = 4 half-lives = 67 × 4 = 268 hours",
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "3C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3C Check-in – Set 1.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3C-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "a What is the unit of activity of radioactive sources?\nb What is the unit defined as?",
+   "answer": "a Becquerel (Bq)\nb 1 Bq = 1 disintegration $s^{-1}$",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3C Check-in – Set 2.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3C-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "a Is the half-life of any given radioactive isotope constant?\nb Can the half-life be affected by temperature, magnetic fields or the chemical environment?",
+   "answer": "a Yes, the half-life is fixed for any particular radioactive isotope.\nb No, the half-life is not affected by temperature, magnetic fields or the chemical environment",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3C Check-in – Set 2.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3C-CI2.3",
+   "set": 2,
+   "n": 3,
+   "question": "In 12 hours, the activity of a sample of a radioactive element falls from 240 Bq to 30 Bq. What is the half-life of this element?",
+   "answer": "4 hours\n$\\frac{30}{240} = \\frac{1}{8} = \\left(\\frac{1}{2}\\right)^{3}$\nn = 3 half-lives (240 → 120 → 60 → 30)",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "3C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3C Check-in – Set 2.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3C-CI2.4",
+   "set": 2,
+   "n": 4,
+   "question": "Potassium-40 has a half-life of 1.25 billion years. The activity of a rock sample of potassium-40 is measured at 30 MBq. What would the activity of the potassium-40 have been 3.75 billion years ago?",
+   "answer": "240 MBq\nn = 3 half-lives\n$\\left(\\frac{1}{2}\\right)^{3} = \\frac{1}{8}$, so the original (240 MBq) has been reduced to $\\frac{1}{8}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "3C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3C Check-in – Set 2.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "3C-SQ1",
+   "n": "1",
+   "question": "The half-life of Zn-71 is 2.4 minutes. There is 200.0 g of Zn-71 initially. Which one of the following is closest to the number of grams that would be left after 9.6 minutes has elapsed?",
+   "options": [
+    "A. 12.5 g",
+    "B. 25 g",
+    "C. 50 g",
+    "D. 100 g"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3C Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3C-SQ2",
+   "n": "2",
+   "question": "All radioactive sources have a half-life. Which of the following statements best explains the concept of the half-life of a source?",
+   "options": [
+    "A. It is half the time it takes for an atom to decay.",
+    "B. It is half the time it takes the activity of the source to decrease to zero.",
+    "C. It is the time it takes the activity of the source to decrease by half.",
+    "D. It is half the time for the radioactive source to become safe."
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3C Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3C-SQ3",
+   "n": "3",
+   "question": "A radioactive source has a half-life of 20 days. How long will it take for $\\frac{7}{8}$ of the source to decay?",
+   "options": [
+    "A. 30 days",
+    "B. 40 days",
+    "C. 60 days",
+    "D. 80 days"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3C Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3C-SQ4",
+   "n": "4",
+   "question": "The graph below shows the decay curve for strontium-90 as a function of time in years.\nUsing the decay curve estimate the:\na half-life of strontium-90\nb percentage of strontium-90 remaining after 140 years\nc time (in years) when 12.5% strontium-90 nuclei remain.",
+   "options": [],
+   "answer": "a ~28 years (read from graph, five half-lives is 140 years)\nb 3.125% (after five half-lives, which is $\\frac{1}{32}$)\nc ~80 years (read from graph)",
+   "marks": null,
+   "kind": "graph",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "3C.1",
+    "3C.2"
+   ],
+   "img": [
+    "img/3C_SQ4.png"
+   ],
+   "src": {
+    "file": "3C Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3C-SQ5",
+   "n": "5",
+   "question": "Gold-198 has a half-life of 2.7 days.\nUsing the formula $N = N_0\\left(\\frac{1}{2}\\right)^{n}$ calculate the:\na percentage of gold-198 remaining after 8.1 days have elapsed\nb time it takes to have only $\\frac{1}{16}$th of the original gold-198 remaining.",
+   "options": [],
+   "answer": "a 12.5% as n = 3 half-lives ($\\frac{201}{67}$ = 3) and $\\left(\\frac{1}{2}\\right)^{3} = \\frac{1}{8}$ = 12.5%\nb 10.8 days\n$\\frac{1}{16} = \\left(\\frac{1}{2}\\right)^{4}$, so n = 4 half-lives\n2.7 × 4 = 10.8 days",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "3C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3C Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3C-SQ6",
+   "n": "6",
+   "question": "The cobalt-60 used in medical radiography is a γ-ray emitter with a half-life of 5.3 years.\nIf the original activity of a particular sample is 64 MBq, calculate the activity after 26.5 years.",
+   "options": [],
+   "answer": "2 MBq\nFive half-lives have elapsed: ($\\frac{26.5}{5.3}$) $\\left(\\frac{1}{2}\\right)^{5} = \\frac{1}{32}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice",
+    "youtry"
+   ],
+   "criteria": [
+    "3C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3C Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3C-SQ7",
+   "n": "7",
+   "question": "Why do medical diagnostic radioisotopes usually have short half-lives measured in hours or days (e.g. technetium-99m, 6 hours; iodine-131, 8 days)?",
+   "options": [],
+   "answer": "So that no radioactive source remains in the body any longer than necessary.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "3C.1",
+    "3E.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "3C Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3C-SQ8",
+   "n": "8",
+   "question": "Why do medical therapy radioisotopes usually have longer half-lives measured in years or decades (e.g. cobalt-60, 5.3 years; caesium-137, 30 years)?",
+   "options": [],
+   "answer": "So that the hospital does not need to continually replace their radioactive sources on a short life cycle.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "3C.1",
+    "3E.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "3C Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 3C–1 Modelling radioactive decay",
+  "total": 20,
+  "file": "3C Worksheet 3C–1 Modelling radioactive decay.docx",
+  "questions": [
+   {
+    "id": "WS3C-1a",
+    "n": "1a",
+    "question": "Plutonium-234 decays via alpha decay. The half-life of Pu-234 is 24 100 years. A physicist is studying a sample with an initial activity of 400 kBq.\nExplain what is meant by the term ‘half-life’.",
+    "answer": "The half-life of a radioactive element is the time taken for half of a group of unstable nuclei to decay.",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3C.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3C Worksheet 3C–1 Modelling radioactive decay.docx",
+     "answer_file": "3C Worksheet 3C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3C-1b",
+    "n": "1b",
+    "question": "Plutonium-234 decays via alpha decay. The half-life of Pu-234 is 24 100 years. A physicist is studying a sample with an initial activity of 400 kBq.\nExplain what is meant by the term ‘activity’. What is the definition of the unit used in measuring activity?",
+    "answer": "The activity of a sample of a radioactive element is the number of nuclear decays that occur per second. The unit of activity is the becquerel (Bq), where: 1 Bq = 1 decay per second.",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3C.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "3C Worksheet 3C–1 Modelling radioactive decay.docx",
+     "answer_file": "3C Worksheet 3C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3C-1c",
+    "n": "1c",
+    "question": "Plutonium-234 decays via alpha decay. The half-life of Pu-234 is 24 100 years. A physicist is studying a sample with an initial activity of 400 kBq.\nHow many years will it take before the activity of the Pu-234 sample is 100 kBq?",
+    "answer": "100 kBq represents one-quarter of the original activity\n$\\frac{1}{4} = \\left(\\frac{1}{2}\\right)^{2}$ so, n = 2 half-lives\n24 100 × 2 = 48 200 years",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3C.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "3C Worksheet 3C–1 Modelling radioactive decay.docx",
+     "answer_file": "3C Worksheet 3C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3C-1d",
+    "n": "1d",
+    "question": "Plutonium-234 decays via alpha decay. The half-life of Pu-234 is 24 100 years. A physicist is studying a sample with an initial activity of 400 kBq.\nHow long will it take for the sample to have an activity of ~400 Bq?",
+    "answer": "400 Bq represents one-thousandth of the original activity\n$\\frac{1}{1000} \\approx \\left(\\frac{1}{2}\\right)^{10}$ so, n = 10 half-lives\n24 100 × 10 = 241 000 years",
+    "marks": 2,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3C.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "3C Worksheet 3C–1 Modelling radioactive decay.docx",
+     "answer_file": "3C Worksheet 3C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3C-2a",
+    "n": "2a",
+    "question": "Radioactive isotopes can be used for determining the age of various objects. One common isotope is carbon-14, which is used to date the remains of once-living organisms. The half-life of carbon-14 is 5730 years. When the animals are alive, the ratio of carbon-14 to carbon-12 is a known fixed amount. As soon as the animals die, the carbon-14 radioactive decay clock starts.\nThe carbon-14 to carbon-12 ratio in a piece of bone from an extinct animal is 12.5% of the ratio when the animal was alive. Calculate how long ago the animal died.",
+    "answer": "12.5% = $\\frac{1}{8} = \\left(\\frac{1}{2}\\right)^{3}$ so, n = 3 half-lives\nAge of bone = 5730 × 3 = 17 190 years",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3C.1",
+     "3C.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "3C Worksheet 3C–1 Modelling radioactive decay.docx",
+     "answer_file": "3C Worksheet 3C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3C-2b",
+    "n": "2b",
+    "question": "Radioactive isotopes can be used for determining the age of various objects. One common isotope is carbon-14, which is used to date the remains of once-living organisms. The half-life of carbon-14 is 5730 years. When the animals are alive, the ratio of carbon-14 to carbon-12 is a known fixed amount. As soon as the animals die, the carbon-14 radioactive decay clock starts.\nAnother piece of bone is known to be ~23 000 years old. Determine the approximate carbon-14 to carbon-12 ratio percentage for this piece of bone.",
+    "answer": "$\\frac{23000}{5730}$ = 4.0 half-lives\n$\\left(\\frac{1}{2}\\right)^{4} = \\frac{1}{16}$, which is 6.25%",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3C.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "3C Worksheet 3C–1 Modelling radioactive decay.docx",
+     "answer_file": "3C Worksheet 3C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3C-3a",
+    "n": "3a",
+    "question": "The graph below shows the decay curve for 1000 thorium-234 nuclei as a function of time in days.\nUse the decay curve to determine the: half-life of thorium-234",
+    "answer": "24 days (read from graph)",
+    "marks": 1,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "wedo"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3C.1"
+    ],
+    "img": [
+     "img/3C_WS3.png"
+    ],
+    "src": {
+     "file": "3C Worksheet 3C–1 Modelling radioactive decay.docx",
+     "answer_file": "3C Worksheet 3C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3C-3b",
+    "n": "3b",
+    "question": "The graph below shows the decay curve for 1000 thorium-234 nuclei as a function of time in days.\nUse the decay curve to determine the: approximate number of thorium-234 nuclei remaining after 50 days",
+    "answer": "From the graph, ~250 thorium-234 nuclei (note: this can be backed up by a calculation).\n50 days is approximately two half-lives:\n$\\left(\\frac{1}{2}\\right)^{2} = \\frac{1}{4}$\n$\\frac{1000}{4}$ = 250 thorium-234 nuclei",
+    "marks": 2,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3C.1",
+     "3C.2"
+    ],
+    "img": [
+     "img/3C_WS3.png"
+    ],
+    "src": {
+     "file": "3C Worksheet 3C–1 Modelling radioactive decay.docx",
+     "answer_file": "3C Worksheet 3C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3C-3c",
+    "n": "3c",
+    "question": "The graph below shows the decay curve for 1000 thorium-234 nuclei as a function of time in days.\nUse the decay curve to determine the: approximate time (in days) when 200 thorium-234 nuclei remain.",
+    "answer": "From the graph, 200 thorium-234 nuclei gives ~55 days",
+    "marks": 2,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3C.1"
+    ],
+    "img": [
+     "img/3C_WS3.png"
+    ],
+    "src": {
+     "file": "3C Worksheet 3C–1 Modelling radioactive decay.docx",
+     "answer_file": "3C Worksheet 3C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3C-4",
+    "n": "4",
+    "question": "Why do medical diagnostic radioisotopes usually have short half-lives, measured in hours or days (e.g. technetium-99m, 6 hours; iodine-131, 8 days)?",
+    "answer": "Medical diagnostic radioisotopes usually have short half-lives (measured in hours or days) so that no radioactive source remains in the body longer than necessary.",
+    "marks": 2,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3C.1",
+     "3E.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "3C Worksheet 3C–1 Modelling radioactive decay.docx",
+     "answer_file": "3C Worksheet 3C–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3C-5",
+    "n": "5",
+    "question": "Why do medical therapy radioisotopes usually have longer half-lives, measured in years or decades (e.g. cobalt-60, 5.3 years; caesium-137, 30 years)?",
+    "answer": "Medical therapy radioisotopes usually have longer half-lives (measured in years or decades) so that the treatment centres do not need to continually replace their radioactive sources on a short life cycle.",
+    "marks": 2,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3C.1",
+     "3E.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "3C Worksheet 3C–1 Modelling radioactive decay.docx",
+     "answer_file": "3C Worksheet 3C–1 Answers.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "3C.1",
+    "3C.2"
+   ],
+   "wedo": "WE3C-1",
+   "youtry": [
+    "WS3C-2a"
+   ],
+   "note": "Fraction remaining to number of half-lives to time: WS3C-2a is the same carbon-14 bone question with 12.5%."
+  },
+  {
+   "criteria": [
+    "3C.2"
+   ],
+   "wedo": "WE3C-2",
+   "youtry": [
+    "WS3C-1c",
+    "3C-CI2.4"
+   ],
+   "note": "Activity after whole half-lives. WS3C-1c (400 to 100 kBq) and CI2.4 (back-calculate original activity)."
+  },
+  {
+   "criteria": [
+    "3C.2"
+   ],
+   "wedo": "WE3C-S1",
+   "youtry": [
+    "3C-SQ5"
+   ],
+   "note": "3C Skills box worked question using N = N0(1/2)^n; SQ5 gold-198 is the same skill both ways."
+  },
+  {
+   "criteria": [
+    "3C.1"
+   ],
+   "wedo": "WS3C-3a",
+   "youtry": [
+    "WS3C-3b",
+    "WS3C-3c"
+   ],
+   "origin": "adapted",
+   "note": "Reading half-life from a decay curve; no worked example. 3C-CI1.1 and 3C-SQ4 are the same skill on other graphs."
+  }
+ ],
+ "skills": [
+  {
+   "id": "3C-SK1",
+   "heading": "Using the half-life equation",
+   "text": "The general formula for radioactive decay is:\n\n$N = N_0\\left(\\frac{1}{2}\\right)^{n}$\n\nWhere $N_0$ is the original amount of radioactive substance, and N is the final amount of the substance after n half-lives.\n\nIt is important to be able to use this equation both ways.\n1 Finding the final amount of the substance after n half-lives\n2 Finding the number of half-lives that have elapsed given the final amount of substance\n\nHighly radioactive plutonium-239 generated in a nuclear reactor has a half-life of 24 100 years.\n\n(Two worked questions follow; indexed as worked examples WE3C-S1 and WE3C-S2.)",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 40,
+    "book_page": 119
+   }
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P3C-1",
+   "title": "Practical 3C–1 Calculating half-life from a simulation",
+   "file": "3C Practical 3C–1 Calculating half-life from a simulation.docx",
+   "aim": "To model the number of undecayed and decayed atoms in a radioactive isotope sample using a probability experiment, showing how the half-life of a radioisotope is calculated, and the effect of the size of the starting numbers.",
+   "extra_files": [
+    "3C Simulating random radioactive decay using a spreadsheet.xlsx"
+   ]
+  }
+ ],
+ "notes": "Section question 5a suggested response wrongly quotes 201/67 (copied from the molybdenum check-in); the result 12.5% (8.1/2.7 = 3 half-lives) is right. Tables 3C–1 to 3C–4 are image-only. Two extra worked examples come from the 3C Skills box (WE3C-S1, WE3C-S2). Worksheet 3C–1 Q3 graph converted from EMF (low resolution)."
+}

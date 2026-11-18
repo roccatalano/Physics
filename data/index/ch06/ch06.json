@@ -1,0 +1,1167 @@
+{
+ "chapter": 6,
+ "title": "Using electricity",
+ "unit": 1,
+ "aos": 3,
+ "sections": [
+  "6A",
+  "6B",
+  "6C"
+ ],
+ "criteria": [
+  {
+   "id": "6A.1",
+   "text": "Recognise the way a diode behaves in a circuit and relate this to its I–V characteristic (graph)",
+   "section": "6A",
+   "review_qs": [
+    "11"
+   ],
+   "exit_candidates": [
+    "CH6-RQ11b",
+    "6A-SQ1",
+    "WS6A-2"
+   ]
+  },
+  {
+   "id": "6A.2",
+   "text": "Recognise the way an LED behaves in a circuit and relate this to its I–V characteristic (graph); compare this to the characteristic for a diode, and relate it to the uses for each",
+   "section": "6A",
+   "review_qs": [
+    "1",
+    "13"
+   ],
+   "exit_candidates": [
+    "CH6-RQ1",
+    "6A-SQ6"
+   ]
+  },
+  {
+   "id": "6A.3",
+   "text": "Recognise a variable resistor (or potentiometer) as a long high-resistance wire of which a selected section is used; apply this to use in a volume control or dimmer, or in a circuit where current is to be varied",
+   "section": "6A",
+   "review_qs": [
+    "13"
+   ],
+   "exit_candidates": [
+    "6A-CI2.1",
+    "WS6A-3"
+   ]
+  },
+  {
+   "id": "6A.4",
+   "text": "Recognise the way an LDR behaves in a circuit and relate this to its resistance vs light level graph",
+   "section": "6A",
+   "review_qs": [
+    "3",
+    "13",
+    "16"
+   ],
+   "exit_candidates": [
+    "CH6-RQ13a",
+    "6A-SQ3",
+    "WS6A-5"
+   ]
+  },
+  {
+   "id": "6A.5",
+   "text": "Recognise the way a thermistor behaves in a circuit and relate this to its resistance vs temperature graph",
+   "section": "6A",
+   "review_qs": [
+    "2",
+    "12",
+    "14"
+   ],
+   "exit_candidates": [
+    "CH6-RQ2",
+    "6A-SQ4",
+    "6A-SQ7"
+   ]
+  },
+  {
+   "id": "6A.6",
+   "text": "Calculate the potential difference output of a potential divider given the ratio of resistances used and the supply potential difference",
+   "section": "6A",
+   "review_qs": [
+    "12",
+    "13"
+   ],
+   "exit_candidates": [
+    "CH6-RQ13c"
+   ]
+  },
+  {
+   "id": "6A.7",
+   "text": "Predict and analyse the behaviour of potential divider circuits using resistors, LDRs, thermistors, and LEDs; understand some of the uses for these non-ohmic components",
+   "section": "6A",
+   "review_qs": [
+    "12",
+    "13",
+    "14",
+    "16"
+   ],
+   "exit_candidates": [
+    "CH6-RQ3",
+    "6A-SQ5"
+   ]
+  },
+  {
+   "id": "6A.8",
+   "text": "Predict and analyse the behaviour of other components in a circuit where variation is created using potentiometers, diodes, LEDs and switches",
+   "section": "6A",
+   "review_qs": [
+    "11",
+    "12",
+    "16"
+   ],
+   "exit_candidates": [
+    "CH6-RQ11c",
+    "6A-SQ1"
+   ]
+  },
+  {
+   "id": "6B.1",
+   "text": "Re-draw a picture of a circuit as the equivalent circuit diagram for series, parallel and complex",
+   "section": "6B",
+   "review_qs": [
+    "20"
+   ],
+   "exit_candidates": [
+    "CH6-RQ6"
+   ]
+  },
+  {
+   "id": "6B.2",
+   "text": "Identify household electrical systems as mostly parallel circuits, with AC supplied in Australia at 230 V 50 Hz",
+   "section": "6B",
+   "review_qs": [
+    "19",
+    "20",
+    "22"
+   ],
+   "exit_candidates": [
+    "CH6-RQ19c",
+    "6B-CI1.2"
+   ]
+  },
+  {
+   "id": "6B.3",
+   "text": "Calculate the power and energy supplied to household appliances in a parallel circuit",
+   "section": "6B",
+   "review_qs": [
+    "6",
+    "7",
+    "19",
+    "20",
+    "22"
+   ],
+   "exit_candidates": [
+    "CH6-RQ8",
+    "6B-SQ2",
+    "6B-SQ4"
+   ]
+  },
+  {
+   "id": "6B.4",
+   "text": "Justify the use of series or parallel circuits for household circuits using the characteristics of each type of circuit",
+   "section": "6B",
+   "review_qs": [
+    "19",
+    "20",
+    "29"
+   ],
+   "exit_candidates": [
+    "CH6-RQ19e",
+    "6B-CI1.2"
+   ]
+  },
+  {
+   "id": "6B.5",
+   "text": "Consider the energy used in a household (and other applications) and apply the kilowatt-hour (kW h) as a unit of energy; for example, as it relates to cost and to battery storage",
+   "section": "6B",
+   "review_qs": [
+    "4",
+    "5",
+    "15",
+    "17",
+    "18",
+    "20",
+    "21"
+   ],
+   "exit_candidates": [
+    "CH6-RQ21",
+    "6B-SQ1",
+    "6B-SQ3",
+    "WS6B-4"
+   ]
+  },
+  {
+   "id": "6C.1",
+   "text": "Describe the causes, effects and first aid treatment of electric shock",
+   "section": "6C",
+   "review_qs": [
+    "27",
+    "28"
+   ],
+   "exit_candidates": [
+    "WS6C-2",
+    "6C-CI1.2"
+   ]
+  },
+  {
+   "id": "6C.2",
+   "text": "Identify and recall the approximate danger thresholds for current and duration passing through a human body",
+   "section": "6C",
+   "review_qs": [
+    "24"
+   ],
+   "exit_candidates": [
+    "6C-SQ1",
+    "6C-CI1.1"
+   ]
+  },
+  {
+   "id": "6C.3",
+   "text": "Recall that the mains supply in Australia is 230 V 50 Hz; recognise the need for safety devices such as fuses, switches and circuit breakers to make a circuit safe",
+   "section": "6C",
+   "review_qs": [
+    "23",
+    "24"
+   ],
+   "exit_candidates": [
+    "CH6-RQ23a",
+    "6C-SQ9"
+   ]
+  },
+  {
+   "id": "6C.4",
+   "text": "Recognise the Australian standard three-pin plug with active, neutral and earth connections; relate this to a model of an AC circuit compared with DC",
+   "section": "6C",
+   "review_qs": [
+    "28"
+   ],
+   "exit_candidates": [
+    "6C-CI2.3",
+    "6C-SQ10"
+   ]
+  },
+  {
+   "id": "6C.5",
+   "text": "Understand the earth connection as a low-resistance path to 0 V, hence as a safety connection; also as a zero of potential; recall the conditions under which double-insulated devices do not require an earth connection",
+   "section": "6C",
+   "review_qs": [
+    "24",
+    "26"
+   ],
+   "exit_candidates": [
+    "6C-SQ3",
+    "6C-CI2.4"
+   ]
+  },
+  {
+   "id": "6C.6",
+   "text": "Describe the operation of these safety devices in Australia: switch, fuse, circuit breaker, residual current device (RCD)",
+   "section": "6C",
+   "review_qs": [
+    "8",
+    "9",
+    "10",
+    "24",
+    "25"
+   ],
+   "exit_candidates": [
+    "6C-SQ4",
+    "6C-SQ9",
+    "WS6C-4"
+   ]
+  }
+ ],
+ "review_questions": [
+  {
+   "id": "CH6-RQ1",
+   "n": "1",
+   "question": "Consider the following graph. Which of the following components is most likely to have the I–V characteristic shown in the graph?",
+   "options": [
+    "A. thermistor",
+    "B. LED",
+    "C. LDR",
+    "D. 5 kΩ ohmic resistor"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "criteria": [
+    "6A.2"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH6_RQ1.png"
+   ],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 49
+   }
+  },
+  {
+   "id": "CH6-RQ2",
+   "n": "2",
+   "question": "Consider the following graphs. The graphs represent the behaviour of",
+   "options": [
+    "A. two thermistors that increase their resistance as temperature increases.",
+    "B. two thermistors that decrease their resistance as temperature increases.",
+    "C. a thermistor that increases its resistance as temperature decreases and another thermistor that increases its resistance as temperature increases.",
+    "D. LDR that decreases its resistance as temperature decreases and another LDR that decreases its resistance as temperature increases."
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "criteria": [
+    "6A.5"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH6_RQ2.png"
+   ],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 49
+   }
+  },
+  {
+   "id": "CH6-RQ3",
+   "n": "3",
+   "question": "Which of the following circuits will always give a decreased output, $V_{\\text{out}}$, as sunlight falls on it?",
+   "options": [
+    "A. [circuit A]",
+    "B. [circuit B]",
+    "C. [circuit C]",
+    "D. [circuit D]"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "criteria": [
+    "6A.4",
+    "6A.7"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH6_RQ3-A.png",
+    "img/CH6_RQ3-B.png",
+    "img/CH6_RQ3-C.png",
+    "img/CH6_RQ3-D.png"
+   ],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 49
+   }
+  },
+  {
+   "id": "CH6-RQ4",
+   "n": "4",
+   "question": "It takes 5 min to heat water in a 2.5 kW kettle to boiling point. How much does the electricity cost to do this? Assume $0.30/kW h.",
+   "options": [
+    "A. 62.5 cents",
+    "B. 15 cents",
+    "C. 20.8 cents",
+    "D. $2.25"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "6B.5"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 49
+   },
+   "note": "Key A (62.5 c) looks wrong: 2.5 × 5/60 × 0.30 = 6.25 c. Check."
+  },
+  {
+   "id": "CH6-RQ5",
+   "n": "5",
+   "question": "Approximately how much would it cost to heat half the amount of water in the kettle in Question 4?",
+   "options": [
+    "A. 30 cents",
+    "B. 60 cents",
+    "C. 12 cents",
+    "D. $1.10"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "6B.5"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 49
+   },
+   "note": "Depends on Q4; key questionable."
+  },
+  {
+   "id": "CH6-RQ6",
+   "n": "6",
+   "question": "Three light globes are placed in a circuit as shown. L2 and L3 are identical but L1 is different. Calculate the equivalent resistance of the parallel L2 and L3 combination.",
+   "options": [
+    "A. 60 Ω",
+    "B. 90 Ω",
+    "C. 120 Ω",
+    "D. 240 Ω"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "6B.1",
+    "6B.3"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH6_RQ6.png"
+   ],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 50
+   }
+  },
+  {
+   "id": "CH6-RQ7",
+   "n": "7",
+   "question": "In the circuit above, if the current through L1 is 0.12 A, how much energy is dissipated in lamp L2 in 10 s?",
+   "options": [
+    "A. 0.432 J",
+    "B. 4.32 J",
+    "C. 7.2 J",
+    "D. 24 J"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "6B.3"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH6_RQ6.png"
+   ],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 50
+   }
+  },
+  {
+   "id": "CH6-RQ8",
+   "n": "8",
+   "question": "What is the current in a 3000 W heater connected to a 240 V mains supply?",
+   "options": [
+    "A. 1.25 A",
+    "B. 12.5 A",
+    "C. 125 A",
+    "D. 800 A"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "6B.3",
+    "6C.6"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 50
+   }
+  },
+  {
+   "id": "CH6-RQ9",
+   "n": "9",
+   "question": "Could two of the same heaters from Question 8 be used safely in a circuit protected by a 15 A circuit breaker?",
+   "options": [
+    "A. yes, if they were in series, but not in parallel or the circuit breaker would trip",
+    "B. yes, if they were in parallel, but not in series or the circuit breaker would trip",
+    "C. no, the current would be too large, whether they were in series or parallel",
+    "D. yes, no problem"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "criteria": [
+    "6C.6",
+    "6B.4"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 50
+   }
+  },
+  {
+   "id": "CH6-RQ10",
+   "n": "10",
+   "question": "In an overseas country, the mains supply is 120 V. Could two of the 3000 W heaters in Question 8 be used safely in a 15 A circuit there?",
+   "options": [
+    "A. yes, no problem",
+    "B. yes, if they were in series but not in parallel or the circuit breaker would trip",
+    "C. yes, if they were in parallel but not in series or the circuit breaker would trip",
+    "D. no, even one heater would draw more than 15 A"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "criteria": [
+    "6C.6"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 50
+   },
+   "note": "Key B questionable: one 3000 W heater at 120 V draws 25 A (D). Check."
+  },
+  {
+   "id": "CH6-RQ11",
+   "n": "11",
+   "question": "The I–V characteristic of a particular diode is shown below. The diode is connected in the circuit as shown.",
+   "options": [],
+   "answer": "see parts",
+   "marks": 4,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "6A.1",
+    "6A.8"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the current through the resistor R1 parallel with the diode, R1. (1 mark)",
+     "answer": "$V$ = 3 V; $R_1$ = 50 Ω; $I_1 = \\frac{V}{R} = \\frac{4}{500} = 0.06$ A or 60 mA",
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "From the graph, what is the potential difference across the diode? (1 mark)",
+     "answer": "0.7 V",
+     "size": "quick"
+    },
+    {
+     "n": "c",
+     "question": "Calculate the potential difference across the resistor in series with the diode, R2. (1 mark)",
+     "answer": "$V_{R2}$ = 3 – 0.7 = 2.3 V",
+     "size": "quick"
+    },
+    {
+     "n": "d",
+     "question": "Calculate the current flowing through the ammeter, A. (1 mark)",
+     "answer": "$I_2 = \\frac{V}{R} = \\frac{2.3}{50} = 0.046$ A or 46 mA; $I_{total} = I_1 + I_2 = 60 + 46 = 106$ mA",
+     "size": "quick"
+    }
+   ],
+   "img": [
+    "img/CH6_RQ11-graph.png",
+    "img/CH6_RQ11-circuit.png"
+   ],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 51
+   },
+   "note": "Suggested response part a is internally inconsistent (3 V, 50 Ω, 4/500). Check values against the circuit image."
+  },
+  {
+   "id": "CH6-RQ12",
+   "n": "12",
+   "question": "A thermistor that has a current running through it will be warmed up by the current.",
+   "options": [],
+   "answer": "see parts",
+   "marks": 4,
+   "kind": "explain",
+   "size": "long",
+   "criteria": [
+    "6A.5",
+    "6A.7",
+    "6A.8"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "What energy transformation is taking place in the thermistor? (1 mark)",
+     "answer": "Electrical energy to thermal energy",
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "If the thermistor is placed in a pipe that has gas flowing through it, the gas flow will cool the thermistor down. The speed of gas flow in the pipe can be measured by the changes of resistance produced. Draw a circuit diagram to model this gas flow meter. (3 marks)",
+     "answer": "There are several possibilities. Circuit should include thermistor, battery, switch, ammeter and perhaps a resistor. Series circuit so order of components not important.",
+     "size": "medium"
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 51
+   }
+  },
+  {
+   "id": "CH6-RQ13",
+   "n": "13",
+   "question": "The graph of the resistance of an LDR with respect to the light intensity is shown below.",
+   "options": [],
+   "answer": "see parts",
+   "marks": 5,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "6A.4",
+    "6A.6",
+    "6A.7"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "What is the resistance of the LDR when the light intensity is 10 W m$^{-2}$? (1 mark)",
+     "answer": "From graph: 400 Ω",
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "The LDR is used in the circuit shown to automatically turn on the lights in a classroom when the intensity drops to 30 W m$^{-2}$. What is the resistance of the LDR when the light intensity is 30 W m$^{-2}$? (1 mark)",
+     "answer": "At 30 W m$^{-2}$, the resistance is 100 Ω.",
+     "size": "quick"
+    },
+    {
+     "n": "c",
+     "question": "What is the value of the variable resistor, R1, if the required value of $V_{\\text{out}}$ is 8 V when the light intensity is 30 W m$^{-2}$? (1 mark)",
+     "answer": "$V_{\\text{out}}$ must be 8 V, therefore $V_{R2}$ = 12 – 8 = 4 V; $R_{LDR}$ = 100 Ω, therefore $R_1$ = 50 Ω",
+     "size": "quick"
+    },
+    {
+     "n": "d",
+     "question": "Can you anticipate any problems with this circuit, or any adjustment that may need to be made once the lights are on? (2 marks)",
+     "answer": "When the lights come on, more light will fall on the LDR, so the resistance will decrease, causing the lights to go off. The light level may then be less than 30 W m$^{-2}$, so the lights will come on ... and so on. There needs to be additional controls to keep the lights on for a period of time before the LDR can again control the circuit. As it is, this is not very practical.",
+     "size": "medium"
+    }
+   ],
+   "img": [
+    "img/CH6_RQ13-graph.png",
+    "img/CH6_RQ13-circuit.png"
+   ],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 52
+   }
+  },
+  {
+   "id": "CH6-RQ14",
+   "n": "14",
+   "question": "A digital thermometer can be made using a thermistor (NTC type). What would be the limitation to this thermometer if it worked according to the circuit shown? (The voltmeter can be scaled to read temperature.) (2 marks)",
+   "options": [],
+   "answer": "As the temperature rises, the resistance of the thermistor decreases, so the reading on the voltmeter will also decrease. This would require the circuit to include some sort of inverter so that as temperature increases, so does the reading. Or reverse the positions of resistor and thermistor.",
+   "marks": 2,
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "6A.5",
+    "6A.7"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH6_RQ14.png"
+   ],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 52
+   }
+  },
+  {
+   "id": "CH6-RQ15",
+   "n": "15",
+   "question": "A car battery operates at 12 V.",
+   "options": [],
+   "answer": "see parts",
+   "marks": 2,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "6B.5"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "How much charge leaves a car battery each second if it supplies current to four headlights in parallel, each of which draws a current of 4 A? (1 mark)",
+     "answer": "$I_{total}$ = 16 A, therefore $Q$ = 16 C s$^{-1}$",
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "Extension: If the battery is rated at 40 A h, how long before it runs flat? (Batteries are sometimes rated on how long they can supply current for, in amp-hours, A h, which is similar to power ratings in watt-hours W h or kilowatt-hours kW h.) (1 mark)",
+     "answer": "40 A h means 40 A for 1 hour or 20 A for 2 hours. Therefore: $\\frac{16}{40} = \\frac{t}{1}$; $t$ = 0.4 hours = 24 minutes",
+     "size": "quick"
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 52
+   },
+   "note": "Part b answer wrong: 40 A h / 16 A = 2.5 h."
+  },
+  {
+   "id": "CH6-RQ16",
+   "n": "16",
+   "question": "Design a circuit to sound an alarm inside a reversing car when it approaches the white wall at the end of the garage. Assume an electronic switch will be used to turn on the alarm. (3 marks)",
+   "options": [],
+   "answer": "Output: high voltage turns on electric switch. White wall reflect light, therefore use an LDR as a detector. Resistance of the LDR decreases as light level increases. Assuming the wall appears brighter as the car approaches, position the LDR in top half of the potential divider. Variable resistor in bottom half allows adjustment to exact light level that triggers the alarm. [diagram: img/CH6_RQ16_ans.png]",
+   "marks": 3,
+   "kind": "explain",
+   "size": "long",
+   "criteria": [
+    "6A.4",
+    "6A.7",
+    "6A.8"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 52
+   },
+   "answer_img": [
+    "img/CH6_RQ16_ans.png"
+   ]
+  },
+  {
+   "id": "CH6-RQ17",
+   "n": "17",
+   "question": "A resistive hot water system is rated at 4000 W.",
+   "options": [],
+   "answer": "see parts",
+   "marks": 3,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "6B.3",
+    "6B.5"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "What current does it draw from the mains supply? (1 mark)",
+     "answer": "$I = \\frac{P}{V} = \\frac{4000}{240}$ = 0.167 A",
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "How much energy, in kW h, does it consume if it heats for 6 hours? (1 mark)",
+     "answer": "$E = Pt$ = 4000 × 6 = 24 kW h",
+     "size": "quick"
+    },
+    {
+     "n": "c",
+     "question": "What would this cost, if it runs on an off-peak tariff of 15 c/kW h? (1 mark)",
+     "answer": "Cost = 24 kW h × 0.15 $/kW h = $3.60",
+     "size": "quick"
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 53
+   },
+   "note": "Part a answer wrong: 4000/240 = 16.7 A."
+  },
+  {
+   "id": "CH6-RQ18",
+   "n": "18",
+   "question": "A heat pump hot water system is rated at 900 W.",
+   "options": [],
+   "answer": "see parts",
+   "marks": 6,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "6B.3",
+    "6B.5"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "What current does it draw from the mains supply? (1 mark)",
+     "answer": "$I = \\frac{P}{V} = \\frac{900}{230}$ = 3.91 A",
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "How much energy, in kW h, does it consume if it heats for 6 hours? (1 mark)",
+     "answer": "$t$ = 6 h; $E$ = 0.9 × 6 = 5.4 kWh",
+     "size": "quick"
+    },
+    {
+     "n": "c",
+     "question": "What would this cost, if it runs on an off-peak tariff of 15 c/kW h? (1 mark)",
+     "answer": "Cost = $E$ × price = 5.4 × 0.15 $/kW h = $0.80",
+     "size": "quick"
+    },
+    {
+     "n": "d",
+     "question": "What would this cost, if it runs on solar power produced from the photovoltaic panels installed on the roof? (1 mark)",
+     "answer": "Zero",
+     "size": "quick"
+    },
+    {
+     "n": "e",
+     "question": "It is sometimes useful to calculate the income foregone by using solar electricity that could otherwise have been sold to the grid. If the solar feed-in tariff is 5.20 c/kW h, how much income could have been gained from the electricity used by the i resistive hot water system in Question 17 (1 mark) ii heat pump hot water system above. (1 mark)",
+     "answer": "i Income forgone = 24 × 0.052 = $1.28\nii Price = 5.2 c/kW h; $E$ = 5.4 kW h; Income forgone = $E$ × price = 5.4 × 0.052 = $0.28 or 28 c",
+     "size": "medium"
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 53
+   }
+  },
+  {
+   "id": "CH6-RQ19",
+   "n": "19",
+   "question": "This question concerns a household circuit where several downlights are connected in a kitchen.",
+   "options": [],
+   "answer": "see parts",
+   "marks": 6,
+   "kind": "explain",
+   "size": "long",
+   "criteria": [
+    "6B.2",
+    "6B.3",
+    "6B.4"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "What would happen to the current in the other lamps if one lamp in a series-connected set of kitchen downlights lights burned out? (1 mark)",
+     "answer": "When one lamp in series burns out, the whole circuit ceases to function. All lights will go out (open circuit).",
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "After replacing the burned-out light, what would happen to the brightness of each lamp if more lamps were connected in series? (1 mark)",
+     "answer": "If more lamps are added to a series circuit, the total resistance increases, so the current decreases and each lamp produces less light. This might be compensated by the extra lights shining but more information or experiment is needed to determine this.",
+     "size": "quick"
+    },
+    {
+     "n": "c",
+     "question": "What would happen to the current in the other lamps if one lamp in a parallel-connected lighting circuit burned out? (1 mark)",
+     "answer": "Nothing, as long as it doesn't short circuit when it breaks.",
+     "size": "quick"
+    },
+    {
+     "n": "d",
+     "question": "After replacing the burned-out light, what would happen to the brightness of each lamp if more lamps were connected in parallel? (1 mark)",
+     "answer": "Nothing",
+     "size": "quick"
+    },
+    {
+     "n": "e",
+     "question": "Which would be cheaper to run, five lights in series or the same five lights in parallel? Explain your reasoning. (1 mark)",
+     "answer": "Lights in series will consume less power and will therefore be cheaper to run (since the effective resistance is high, current will be low and each light only receives $\\frac{1}{5}$ of 230 V, giving overall less power, $P = VI$). However, they won't be very bright.",
+     "size": "quick"
+    },
+    {
+     "n": "f",
+     "question": "Which would provide the most light: five lights in series or the same five lights in parallel? (1 mark)",
+     "answer": "The parallel combination provides most light, since it has smaller effective resistance and therefore greater current; each light receives the full 230 V, giving much greater power ($P = VI$) and therefore brightness (but it will cost more!)",
+     "size": "quick"
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 53
+   }
+  },
+  {
+   "id": "CH6-RQ20",
+   "n": "20",
+   "question": "The house shown below is in a remote area and has no connection to the mains grid.\nA typical 12 V DC installation for such a house uses a rechargeable home battery to supply lighting and some appliances like refrigerators and televisions. The battery can be recharged by a number of methods including solar cells or wind generators. Assume this one can store 20 kW h. Some appliances need a 230 V AC supply that can be generated from the battery with a device called an inverter. A diesel generator may be installed into the same system to supply power when the battery runs down.",
+   "options": [],
+   "answer": "see parts",
+   "marks": 9,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "6B.1",
+    "6B.2",
+    "6B.3",
+    "6B.4",
+    "6B.5"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Draw a possible circuit diagram for a 12 V lighting circuit in the house. (3 marks)",
+     "answer": "Different arrangements are possible. Diagram should include 12 V battery with lamps and switches connected in parallel. [diagram: img/CH6_RQ20a_ans.png]",
+     "size": "medium"
+    },
+    {
+     "n": "b",
+     "question": "How many 7 W LEDs could be on at the same time if the battery supplies 25 kW? (1 mark)",
+     "answer": "Each LED lamp requires 2 W; battery stack can supply 10 kW. $\\frac{10}{2} = 5$. Therefore, 5 lamps of this type could run at once.",
+     "size": "quick"
+    },
+    {
+     "n": "c",
+     "question": "The diesel generator supplies 20 kW. How long must it run to resupply the battery from empty? (1 mark)",
+     "answer": "$P_{generator}$ = 5 kW; $E_{battery}$ = 20 kW h; $t = \\frac{E}{P} = \\frac{20}{5}$ = 4 hours",
+     "size": "quick"
+    },
+    {
+     "n": "d",
+     "question": "If the solar system supplies a maximum of 20 kW, on a sunny day, how long will it take to resupply the battery from empty on a sunny day? (1 mark)",
+     "answer": "$P_{solar}$ = 20 kW; $E_{battery}$ = 20 kW h; $t = \\frac{E}{P} = \\frac{20}{20}$ = 1 hour",
+     "size": "quick"
+    },
+    {
+     "n": "e",
+     "question": "If the wind generator supplies a maximum of 15 kW, on a windy day, how long will it take to resupply the battery from empty on a windy day? (1 mark)",
+     "answer": "$P_{wind}$ = 2.5 kW; $E_{battery}$ = 20 kW h; $t = \\frac{E}{P} = \\frac{20}{2.5}$ = 8 hours",
+     "size": "quick"
+    },
+    {
+     "n": "f",
+     "question": "Discuss whether it is likely that this household in northern Victoria could manage without using fossil fuel (diesel) for electricity throughout the year. How would this affect their lifestyle, if at all? (2 marks)",
+     "answer": "During sunny weather, the battery will always be charged. A house like this, if well-insulated, should be able to run using less than 20 kW h per day, i.e one complete battery of energy. Using energy-expensive appliances during daylight then the sun shines will help, as the solar panels will almost immediately replenish the battery.\nOn cloudy days (and at night), wind power will take longer to provide the necessary energy, but should mostly manage to supply the 20 kW h to replenish the battery. In still, cloudy weather, diesel may be required to fill the gap. In northern Victoria, this weather does not usually occur for very long at a time.",
+     "size": "medium"
+    }
+   ],
+   "img": [
+    "img/CH6_RQ20.png"
+   ],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 54
+   },
+   "note": "Answers b, c, e use different numbers from the question (2 W, 10 kW, 5 kW, 2.5 kW). Rework before use."
+  },
+  {
+   "id": "CH6-RQ21",
+   "n": "21",
+   "question": "A refrigerator does not run continuously because it is controlled by a thermostat. For example, it may be running for a quarter of the time. Estimate how many kW h are used each day by a typical refrigerator that operates at 250 W. (2 marks)",
+   "options": [],
+   "answer": "$t = \\frac{24}{4}$ = 6 hours per day; $P$ = 250 W = 0.25 kW; $E = Pt$ = 6 × 0.25 = 1.5 kW h",
+   "marks": 2,
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "6B.5"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 54
+   }
+  },
+  {
+   "id": "CH6-RQ22",
+   "n": "22",
+   "question": "Should an iron (1000 W), a clothes dryer (2400 W) and a washing machine (900 W) be operated from the same 15 A power point? Explain your answer. (2 marks)",
+   "options": [],
+   "answer": "$P_{iron}$ = 1 kW; $P_{dryer}$ = 2.4 kW; $P_{washer}$ = 0.9 kW; $P_{total}$ = 1 + 2.4 + 0.9 = 4.4 kW. On mains power, $V$ = 230 V. $I = \\frac{P}{V} = \\frac{4.4 \\times 10^{3}}{230} = 19.13$ A. No, they should not be run off the same power point as the circuit breaker will trip if current greater than 15 W is drawn, and all the appliances would draw more than 19 A.",
+   "marks": 2,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "6B.2",
+    "6B.3"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 55
+   }
+  },
+  {
+   "id": "CH6-RQ23",
+   "n": "23",
+   "question": "What would happen if:",
+   "options": [],
+   "answer": "see parts",
+   "marks": 2,
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "6C.3"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "a kitchen appliance in the United States, designed for a 120 V mains supply, was connected to the 230 V mains supply in Australia? (1 mark)",
+     "answer": "In the United States, $V$ = 120 V. So, for power, $P$, current = $\\frac{P}{120} = I_{US}$. In Australia, $V$ = 230 V. So, for power, $P$, current = $\\frac{P}{230} = I_{Australia}$. In the US, the device will draw more current for the same power than in Australia. The appliance may not function correctly here.",
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "an Australian appliance was used in the United States? (1 mark)",
+     "answer": "In the United States, $V$ = 120 V. So, for power, $P$, current = $\\frac{P}{120} = I_{US}$. In Australia, $V$ = 230 V. So, for power, $P$, current = $\\frac{P}{230} = I_{Australia}$. In the US, the device will draw more current for the same power than in Australia. The appliance may not function correctly here.",
+     "size": "quick"
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 55
+   }
+  },
+  {
+   "id": "CH6-RQ24",
+   "n": "24",
+   "question": "Would accidental contact with the live wire in a mains-operated appliance necessarily be fatal? Explain why or why not. (2 marks)",
+   "options": [],
+   "answer": "Whether contact with live mains electricity is fatal or not depends on the current that passes through the body and, to an extent, which organs are affected as the current flows.",
+   "marks": 2,
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "6C.2",
+    "6C.3",
+    "6C.5",
+    "6C.6"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 55
+   }
+  },
+  {
+   "id": "CH6-RQ25",
+   "n": "25",
+   "question": "How can the danger of electric shock in a home be reduced? List at least three safety measures. (3 marks)",
+   "options": [],
+   "answer": "Reduce likelihood of shock by any precautions listed in Skills 6C.",
+   "marks": 3,
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "6C.6"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 55
+   }
+  },
+  {
+   "id": "CH6-RQ26",
+   "n": "26",
+   "question": "",
+   "options": [],
+   "answer": "see parts",
+   "marks": 3,
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "6C.5"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Explain how the earth connection to a toaster could save your life if one of the heating wires inside the toaster was broken and short-circuited the control lever. (2 marks)",
+     "answer": "If a wire inside the toaster contacts the casing, you could receive a severe shock if current flows through you to the earth beneath your feet. However the earth connection to the casing ensures that if such an accident occurs, a large current will flow to the Earth, triggering the circuit breaker in the Active and cutting off power to the toaster circuit. This happens rapidly, so you are unlikely to experience a large shock. Note that RCDs operate instantaneously, even faster than circuit breakers and much faster than old-style fuses.",
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "A hairdryer also has heating wires inside it, but usually does not require an earth connection. Explain why not. (1 mark)",
+     "answer": null,
+     "size": "quick"
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 55
+   },
+   "note": "No suggested response for 26b."
+  },
+  {
+   "id": "CH6-RQ27",
+   "n": "27",
+   "question": "Explain how the first aid procedures for an electric shock patient correspond to the DRS ABC mnemonic (Danger, Response, Send for help, Airway, Breathing, CPR). (6 marks)",
+   "options": [],
+   "answer": "Danger: check for power lines that could harm you before approaching\nResponse: call out to the victim and seek any sign that they are conscious, but don't touch if there is a possibility of receiving a shock yourself\nSend for help: phone for an ambulance or organise a bystander to do this. The sooner the help arrives the better, so call immediately\nAirway: check that nothing is blocking the mouth or throat\nBreathing: monitor to see whether victim is breathing. If not start CPR\nCPR: resuscitate as per CPR course instructions.",
+   "marks": 6,
+   "kind": "explain",
+   "size": "long",
+   "criteria": [
+    "6C.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 55
+   }
+  },
+  {
+   "id": "CH6-RQ28",
+   "n": "28",
+   "question": "Design a typical domestic lighting circuit. (4 marks)",
+   "options": [],
+   "answer": "Several arrangements are possible, all should include parallel circuits with globes and switches.",
+   "marks": 4,
+   "kind": "graph",
+   "size": "long",
+   "criteria": [
+    "6C.1",
+    "6C.4",
+    "6B.2"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch06 Review questions.docx",
+    "textbook_page": 55
+   },
+   "note": "Checklist links Q28 to 6C.1 and 6C.4."
+  }
+ ],
+ "summary": "**Chapter 6 Summary**\n\n**6A Useful electronic components**\n\n-   A diode is a semiconductor with a very large resistance to current flow in one direction but very small in the other, indicated by the following circuit symbol:\n\n> \n\n-   Diodes are useful to protect components that would be damaged by reverse current, and to change AC (alternating current) into DC (direct current).\n\n-   An LED (light-emitting diode) is a diode that lights up when current flows through it but will only allow current to flow in one direction.\n\n    -   For the same amount of light, arrays of LEDs in a mains-connected LED lamp use significantly less energy than filament bulbs or fluorescents.\n\n    -   LEDs are efficient and cheap to produce.\n\n-   A potentiometer is a circuit device consisting of a three-terminal sliding or rotating contact.\n\n\n\n-   Connections at one end of the wiper can be used to create a variable resistor.\n\n-   Moving the sliding contact increases or decreased the length of wire on each side.\n\n-   The proportion of the lengths of wire on each side of the sliding contact is the same as the proportion of the potential difference across each end of the wire.\n\n-   According to Ohm's law, the resistance of the potentiometer is also proportional to the length of wire.\n\n-   Potentiometers are used in volume controllers and light dimmer switches.\n\n-   An LDR (light dependent resistor) is a semiconductor device whose resistance depends on the intensity of light shining on it.\n\n    -   For a particular light intensity, the LDR behaves as a resistor of a constant resistance, obeying Ohm's law over a small range of potential difference\n\n    -   As brightness of light increases, the resistance decreases in an exponential way.\n\n    -   LDRs are used in light meter, automatic flashes in cameras, streetlights or alarms that trigger when a beam of light is broken\n\n-   A thermistor is a non-ohmic semiconductor device whose resistance changes with temperature. There are two types of thermistors:\n\n    -   Negative thermal coefficient thermistor (NTC): as the temperature rises, resistance falls in an exponential-like manner. Most thermistors are this type.\n\n    -   Positive temperature coefficient thermistor (PTC): as the temperature rises, resistance suddenly rises steeply in an exponential-like manner. These are mostly custom designed for specific applications.\n\n    -   Thermistors are used for temperature control in heaters and air conditioners, refrigerators and ovens and digital thermometers.\n\n-   A transducer is a device that receives input signal as one form of energy and converts it to a different form of energy input.\n\n    -   Used as input to a circuit, for example an LDR that detects the light level, a microphone that detects a sound and then triggers a change in the circuit.\n\n    -   Used as output from a circuit, like a buzzer that sounds when a current flows in the circuit.\n\n**6B Electricity at home**\n\n-   All mains electrical circuits have the following in common:\n\n    -   A source of EMF (mains supply -- 230 V at 50 Hz).\n\n    -   A form of protection against excessive currents (fuse or circuit breaker).\n\n    -   A form of control (switch).\n\n    -   The load (bulb or motor).\n\n    -   Low-resistance cables between parts.\n\n-   Most of the mains voltage is across the load, potential in wires drop to very low.\n\n-   Circuits are a combination of series and parallel connections.\n\n    -   Electricity enters house through meter that measures total energy consumption.\n\n        -   Meter connected to active (live) wire.\n\n        -   Mains switch in series so that electrical supply to whole house can be cut off.\n\n    -   Supply divides into separate circuits corresponding to areas of the house.\n\n        -   Each power point and light fitting delivers full mains potential difference.\n\n        -   Separate circuits are in parallel.\n\n        -   Each circuit has own breaker to protect against excessive loading.\n\n        -   Power points and lights are wired in parallel in each room.\n\n-   Consumption of domestic electricity is measured by meter in kilowatt-hour (kWh).\n\n    -   Appliances for use on mains electrical supply have their power consumption rating in W or kWh on a plate underneath or behind the device.\n\n    -   The more stars the more efficient the appliance.\n\n-   The current drawn by an appliance can be calculated using the equation $P = VI$.\n\n-   The cost of running an appliance can be calculated by finding the power use in kWh and multiplying by the cost of electrical energy per kWh.\n\n**6C Electrical safety**\n\n-   Electricity is distributed using high-voltage transmission lines and transformers.\n\n    -   A transformer is a device that transfers energy via AC from one circuit to another, usually with an increase or decrease in voltage.\n\n    -   When electricity is delivered from street supply to a house it is transformed down to 230 V.\n\n-   The mains supply presents a potential hazard to life since even a small current can be deadly.\n\n    -   Exposure to electric shock can bring about fibrillation (uncontrolled beating of the heart) which can starve the brain of oxygen.\n\n-   If you are the first on the scene of an accident involving electric shock, basic steps should be:\n\n-   Assess the scene and call triple zero.\n\n    -   Look first, don't touch -- turn off mains and move the casualty away from the source of electricity using a wooden broom handle or insulating material.\n\n    -   Check if person is conscious and breathing.\n\n    -   Start CPR.\n\n-   Common causes of electric shock are:\n\n    -   Exposed to electrical wires.\n\n    -   Water on electrical appliances.\n\n    -   Cutting through a live cable.\n\n    -   Faulty appliance.\n\n-   Mains electricity is AC and has three main wires.\n\n    -   Live wire -- active wires supplying energy, coloured brown.\n\n    -   Neutral wire -- completes circuit, coloured blue.\n\n    -   Earth wire -- provides a low resistance path to the ground, striped yellow and green.\n\n> \n\n-   Safety features in houses include fuses, circuit breakers, earthing and residual current devices.\n\n    -   Fuses and circuit breakers are safety features in a mains installation.\n\n        -   A fuse is a piece of thin wire that can conduct a certain amount of current.\n\n            -   If excessive current flows because of a short-circuit, the fuse wire overheats and melts, which disconnects that circuit.\n\n        -   A circuit breaker is used in newer houses instead of fuses.\n\n            -   It is an electromagnetic switch that automatically turns off when an abnormally high current flows due to a fault in the circuit.\n\n    -   Earthing provides another safety feature in electrical appliance with metal parts.\n\n        -   If the metal parts become live due to a fault, the current flows into the ground via the earth wire.\n\n    -   An RCD (residual current device) is a device in the switchboard that activates circuit breakers when an imbalance between the active-neutral current is detected, protecting against electrocution.\n\n    -   Some appliances are not earthed but instead are double insulated.\n\n        -   The live parts of the circuit are isolated from the user by two separate layers of insulation between the live parts and any external metal.",
+ "test": {
+  "file": "Chapter 6 Test.docx",
+  "questions": 20,
+  "marks": 44,
+  "note": "not indexed question by question (TEACHER ONLY; answers at end of file)"
+ },
+ "notes": "Checklist links 6B.4 to review Q29, which does not exist (only 28 review questions). The textbook's learning-objective list (p291) numbers 6B.3/6B.4 differently from the Checklist docx; Checklist IDs used here. Review question textbook pages are approximate (src.textbook_page). Many Cambridge answer-key errors flagged in item notes (RQ4, RQ10, RQ11a, RQ15b, RQ17a, RQ20b,c,e; no answer for RQ26b). Summary docx images removed. 6A practicals: 3 (6A–1 bulb, 6A–2 LDR, 6A–3 thermistor); none for 6B, 6C."
+}

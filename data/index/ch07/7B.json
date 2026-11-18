@@ -1,0 +1,2105 @@
+{
+ "code": "7B",
+ "title": "Analysing motion through graphs",
+ "chapter": 7,
+ "unit": 2,
+ "aos": 1,
+ "study_design": [
+  "Analyse graphically, numerically and algebraically, straight-line motion under constant acceleration",
+  "Analyse, graphically, non-uniform motion in a straight line"
+ ],
+ "criteria": [
+  "7B.1",
+  "7B.2",
+  "7B.3",
+  "7B.4",
+  "7B.5",
+  "7B.6",
+  "7B.7"
+ ],
+ "glossary": [
+  {
+   "id": "7B-G1",
+   "term": "Origin",
+   "def": "the initial point from where a body moves",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 17
+   }
+  },
+  {
+   "id": "7B-G2",
+   "term": "Acceleration",
+   "def": "the rate of change of velocity",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 19
+   }
+  },
+  {
+   "id": "7B-G3",
+   "term": "Gradient",
+   "def": "the slope of a graph. The gradient of a straight line can be calculated as the rise divided by the run.",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 20
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F7B-1",
+   "name": "Average velocity",
+   "latex": "v_{\\text{av}} = \\frac{\\Delta s}{\\Delta t}",
+   "where": [
+    {
+     "sym": "v_{\\text{av}}",
+     "meaning": "Average velocity",
+     "unit": "\\text{m s}^{-1}"
+    },
+    {
+     "sym": "\\Delta s",
+     "meaning": "Change in displacement",
+     "unit": "m"
+    },
+    {
+     "sym": "\\Delta t",
+     "meaning": "Change in time",
+     "unit": "s"
+    }
+   ],
+   "img": "img/7B_formula7B-1-2.png",
+   "criteria": [
+    "7B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 18
+   }
+  },
+  {
+   "id": "F7B-2",
+   "name": "Average speed",
+   "latex": "\\text{average speed} = \\frac{\\Delta d}{\\Delta t}",
+   "where": [
+    {
+     "sym": "\\Delta d",
+     "meaning": "Change in distance",
+     "unit": "m"
+    },
+    {
+     "sym": "\\Delta t",
+     "meaning": "Change in time",
+     "unit": "s"
+    }
+   ],
+   "img": "img/7B_formula7B-1-2.png",
+   "criteria": [
+    "7B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 18
+   }
+  },
+  {
+   "id": "F7B-3",
+   "name": "Acceleration",
+   "latex": "a = \\frac{\\Delta v}{t} = \\frac{v - u}{t}",
+   "where": [
+    {
+     "sym": "a",
+     "meaning": "Acceleration",
+     "unit": "\\text{m s}^{-2}"
+    },
+    {
+     "sym": "\\Delta v",
+     "meaning": "Change in velocity",
+     "unit": "\\text{m s}^{-1}"
+    },
+    {
+     "sym": "v",
+     "meaning": "Final velocity",
+     "unit": "\\text{m s}^{-1}"
+    },
+    {
+     "sym": "u",
+     "meaning": "Initial velocity",
+     "unit": "\\text{m s}^{-1}"
+    },
+    {
+     "sym": "t",
+     "meaning": "Time",
+     "unit": "s"
+    }
+   ],
+   "img": "img/7B_formula7B-3.png",
+   "criteria": [
+    "7B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 19
+   }
+  },
+  {
+   "id": "F7B-4",
+   "name": "Gradient (not a numbered formula box)",
+   "latex": "\\text{gradient} = \\frac{\\text{rise}}{\\text{run}}",
+   "where": [],
+   "img": null,
+   "criteria": [
+    "7B.2",
+    "7B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "F7B-5",
+   "name": "Area under an acceleration–time graph (not a numbered formula box)",
+   "latex": "\\text{area} = \\Delta v = at",
+   "where": [],
+   "img": null,
+   "criteria": [
+    "7B.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 29
+   }
+  }
+ ],
+ "engage": {
+  "heading": "How to accelerate as fast as a Formula 1 car",
+  "text": "BASE jumping, cliff diving, helicopter skiing and the luge are some of the most dangerous sports in the world. They involve high speed, high acceleration and high risk. Yet in all of these sports there are no motors, no gears, no jets or rockets. In fact, the only form of propulsion used by people participating in these sports is the acceleration due to gravity. Which raises the question, how big is the acceleration due to gravity?\nThe acceleration due to gravity is 9.8 $\\text{m s}^{-2}$ down; this is equal to an object increasing its speed by 35.3 $\\text{km h}^{-1}$ every second. So how does this compare to the acceleration of other things? If it is assumed the acceleration of other objects is linear, the graph in Figure 7B–1 can be derived, which shows the acceleration due to gravity compared to other objects.\nThe acceleration due to gravity is very significant. This is why free-falling under the influence of gravity in sports such as BASE jumping and cliff diving is so dangerous. Because your speed increases so rapidly as you fall if you hit something solid you will decelerated even faster which will subject your body to large damaging forces. The velocity–time graph in Figure 7B–3 shows how the velocity of a free-falling object increases with time if air resistance is ignored.\nFrom the graph in Figure 7B–3, the free-falling object would take just over 5.5 s to reach 195 $\\text{km h}^{-1}$. The displacement–time graph in Figure 7B–4 shows how much distance an object would cover as time passes, if the object was initially at rest and accelerated by gravity.\nThis graph then demonstrates that if air resistance was ignored, you would only need to fall for about 150 m before you reached a velocity of 195 $\\text{km h}^{-1}$. In reality, air resistance reduces the final velocity. There is even a limit to how fast things can fall called ‘terminal velocity’, where the force due to gravity is balanced by the force of the air pushing up on the falling object. Since the overall force on the body is zero, the body will no longer accelerate but will maintain its velocity. For humans, terminal velocity is about 195 $\\text{km h}^{-1}$, which takes about 12 seconds to reach and requires an individual to fall for 450 m. Gravity accelerates BASE jumpers to speeds in excess of 180 $\\text{km h}^{-1}$, cliff divers will hit the water with speeds greater than 80 $\\text{km h}^{-1}$, skiers will travel downhill with speeds greater than 96 $\\text{km h}^{-1}$, and luge competitors reach speeds of about 140 $\\text{km h}^{-1}$.\nSo, if you want to accelerate close to the speed of a Formula 1 car, just jump and you’ll accelerate towards Earth at about the same rate (if you ignore air resistance).",
+  "figures": [
+   "7B-F2",
+   "7B-F3",
+   "7B-F4"
+  ],
+  "src": {
+   "file": "Physics12_Ch07.pdf",
+   "page": 14
+  }
+ },
+ "chunks": [
+  {
+   "id": "7B-E1",
+   "heading": "The vector quantities of motion",
+   "text": "Understanding how to analyse motion in a straight line is the starting point for analysing all motion. The analysis of motion is extensively used in a range of different fields such as flight, racing car driving and even for video umpires in sports.",
+   "figures": [],
+   "criteria": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 17
+   }
+  },
+  {
+   "id": "7B-E2",
+   "heading": "Distance versus displacement",
+   "text": "Imagine a hiker who walks from camp A to camp B. The camps are separated by a distance of 10 km when you travel directly east. However, it is impossible for the hiker to go directly east, as a steep mountain blocks the path. Therefore, to get to camp B, the hiker must walk a distance of 11.7 km around the mountain.\nThis example highlights the difference between distance and displacement. Displacement is the direct distance from one point to another. Displacement is a vector quantity and therefore requires both a magnitude and a direction. When the hiker has reached camp B, their displacement from the origin (starting position) is 10 km east. You know that the hiker actually travelled 11.7 km in order to reach camp B; which is a measure of distance and is a scalar quantity so it requires a magnitude only.",
+   "figures": [
+    "7B-F7"
+   ],
+   "criteria": [
+    "7B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 17
+   }
+  },
+  {
+   "id": "7B-E3",
+   "heading": "Speed versus velocity",
+   "text": "Velocity is the rate of change of displacement. It is a vector quantity because it requires both a magnitude and direction. The direction of the velocity is the same as the direction of the change in displacement. In motion, the velocity can be either positive or negative. For example, if a velocity of 10 $\\text{m s}^{-1}$ north means that every second you are moving 10 m further north away from your starting position. The greater the velocity, the faster you are moving from the starting position. Speed is the rate of change of distance. This is a scalar quantity and therefore only requires a magnitude. The formula for speed is very similar to the formula for velocity, the two are shown side by side for comparison below.\nSpeed is often given in terms of kilometres per hour ($\\text{km h}^{-1}$) as many vehicles use this as a measure of their speed. When given a value of speed or velocity in terms of kilometres per hour, it is useful to convert it immediately into metres per second. This can be done by dividing the $\\text{km h}^{-1}$ value by 3.6. So, to convert from $\\text{m s}^{-1}$ to $\\text{km h}^{-1}$, multiply the $\\text{m s}^{-1}$ value by 3.6 as shown in the figure below.",
+   "figures": [
+    "7B-F8"
+   ],
+   "criteria": [
+    "7B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 18
+   }
+  },
+  {
+   "id": "7B-E4",
+   "heading": "Acceleration",
+   "text": "Acceleration is the rate of change of velocity. It is given the symbol $a$. The SI unit for acceleration is metres per second per second ($\\text{m s}^{-2}$). Imagine a car, starting from rest and travelling in a straight line, that is accelerating at 4 $\\text{m s}^{-2}$; by the end of the first second that car will be travelling with a velocity of 4 $\\text{m s}^{-1}$. When 2 seconds have passed, the car would have gained another 4 $\\text{m s}^{-1}$ to its velocity and will be travelling at 8 $\\text{m s}^{-1}$.",
+   "figures": [],
+   "criteria": [
+    "7B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 19
+   }
+  },
+  {
+   "id": "7B-E5",
+   "heading": "Displacement–time graphs",
+   "text": "Displacement–time graphs display how far an object is away from its origin at a given point in time. This can be shown by the displacement–time graph of a person going for a jog in Figure 7B–10.\nThe jogger leaves their origin, their house, and runs away from their house for 20 s, covering a distance of 80 m. The jogger then stops and rests for 24 s before turning around and running the 80 m back towards their house in 12 s. The jogger then continues to run in the opposite direction, away from their house, and covers another 80 m in 20 s.",
+   "figures": [
+    "7B-F10"
+   ],
+   "criteria": [
+    "7B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 19
+   }
+  },
+  {
+   "id": "7B-E6",
+   "heading": "Gradient of a displacement–time graph",
+   "text": "There are a few useful principles that can be applied to all graphs. Many questions will ask about the gradient of the line of best fit. The gradient of the graph is given by:\n$\\text{gradient} = \\frac{\\text{rise}}{\\text{run}}$\nThe gradient gives useful information; for example, the gradient of a displacement–time graph gives the velocity of the object.",
+   "figures": [],
+   "criteria": [
+    "7B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "7B-E7",
+   "heading": "Displacement–time and velocity–time graphs compared",
+   "text": "The gradient of the graph can be thought of as the steepness of the graph, it is often important to be able to quickly assess the gradient of any graph. Consider the motion of a body displayed on the displacement–time graph in Figure 7B–11 on the next page.\n1 From A to B, the steepness is positive and constant, giving a constant positive gradient and therefore velocity.\n2 The section B to C is steeper than the previous section (A–B), but it is still constant and positive, giving a constant positive gradient (velocity).\n3 Section C to D is flat and as it has no incline, the gradient and therefore the velocity is zero during this time.\n4 The steepness of the segment D to E is negative, quite steep and constant. This gives a large, constant, negative gradient (velocity).\nTo graph the velocity–time graph of the body, we would have to graph the value of the gradient of the displacement–time graph at each point. This is shown in Figure 7B–12. The two graphs are positioned so the points A–E are vertically aligned in both graphs.\n1 From A to B the gradient in the top graph is 1 $\\text{m s}^{-1}$, as shown in the bottom graph. The dashed vertical line in the bottom graph indicates that the velocity change was instant. With most physical objects this is unrealistic but that can be ignored here.\n2 From B to C the gradient in the top graph is 2 $\\text{m s}^{-1}$.\n3 From C to D the gradient in the top graph is 0 $\\text{m s}^{-1}$, so the body is stationary.\n4 From D to E the gradient is –3, and the negative sign indicates the body has changed direction and is returning to its starting position. Its final displacement is zero..",
+   "figures": [
+    "7B-F11",
+    "7B-F12"
+   ],
+   "criteria": [
+    "7B.1",
+    "7B.2",
+    "7B.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 21
+   }
+  },
+  {
+   "id": "7B-E8",
+   "heading": "Velocity–time graphs",
+   "text": "Velocity–time graphs display the velocity of an object at a given point in time. This can be demonstrated by the velocity–time graph in below for a car doing a U-turn at a set of traffic lights.\nThe car takes 50 s to uniformly accelerate to a speed of 15 $\\text{m s}^{-1}$. The car then travels at a constant velocity of 15 $\\text{m s}^{-1}$ for 100 s. The driver, seeing the traffic lights on red, brakes and the car takes 20 s to decelerate to a velocity of zero. The car remains stationary at the lights for 30 s. Then the light turns green and the car does a U-turn and accelerates for 50 s in the opposite direction to which it was originally travelling. This is why the velocity has become negative. The car then maintains a constant velocity of 10 $\\text{m s}^{-1}$ for 50 s.",
+   "figures": [
+    "7B-F13"
+   ],
+   "criteria": [
+    "7B.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "7B-E9",
+   "heading": "Gradient of a velocity–time graph",
+   "text": "On a velocity–time graph, the velocity is on the $y$-axis and time is on the $x$-axis.\nThe gradient of the line represents the acceleration because $\\text{gradient} = \\frac{\\text{rise}}{\\text{run}} = \\frac{\\Delta v}{\\Delta t} = a$.\nDividing $\\text{m s}^{-1}$ by seconds, you get the unit $\\frac{\\text{m s}^{-1}}{\\text{s}} = \\text{m s}^{-2}$. You may hear this spoken as ‘metres per second per second’.",
+   "figures": [],
+   "criteria": [
+    "7B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "7B-E10",
+   "heading": "The area under a velocity–time graph",
+   "text": "The area under a velocity–time graph represents the change in displacement. Consider the velocity–time graph of a hiker, walking with a constant straight-line velocity of 1 $\\text{m s}^{-1}$ for 5 seconds (Figure 7B–14).\nThe change in displacement of the hiker after 5 seconds can be determined by finding the area under the graph:\n$\\text{area} = s = vt = (1)(5) = 5$ m\nFor non-constant velocity, the change in displacement is still found using the area under the velocity–time graph, as shown in Figure 7B–15.\nThe unit is given by multiplying the $x$-axis unit with the $y$-axis unit as shown, $\\text{m} \\times \\text{s}^{-1} \\times \\text{s} = \\text{m}$.",
+   "figures": [
+    "7B-F14",
+    "7B-F15"
+   ],
+   "criteria": [
+    "7B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "7B-E11",
+   "heading": "Acceleration–time graphs",
+   "text": "Acceleration-time graphs display the acceleration of an object at a given point in time. This can be demonstrated by the acceleration–time graph of a car travelling east that is braking as it comes up to a stop sign.\nAs seen in the acceleration–time graph in Figure 7B–16, when the car brakes, it accelerates at a constant rate of −4 $\\text{m s}^{-2}$ for 6 s. The negative value means that the car is accelerating in the west direction and therefore the velocity of the car is being reduced. The car then remains stationary at the lights for 4 s before accelerating uniformly by 3 $\\text{m s}^{-2}$. Even though the car’s acceleration was directed west for the first 6 seconds, the car did not travel west through its entire journey.",
+   "figures": [
+    "7B-F16"
+   ],
+   "criteria": [
+    "7B.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 29
+   }
+  },
+  {
+   "id": "7B-E12",
+   "heading": "The area under an acceleration–time graph",
+   "text": "In an acceleration–time graph, acceleration, $a$, is on the $y$-axis and time, $t$, is on the $x$-axis. The area under an acceleration–time graph is the change in velocity as:\n$\\text{area} = \\Delta v = at$\nFor non-constant acceleration, the change in velocity is still found using the area under the acceleration–time graph. The unit is given by multiplying the units on the $x$ and $y$-axis together to give $\\text{m s}^{-2} \\times \\text{s} = \\text{m s}^{-1}$.",
+   "figures": [],
+   "criteria": [
+    "7B.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 29
+   }
+  },
+  {
+   "id": "7B-E13",
+   "heading": "Instantaneous velocity versus average velocity",
+   "text": "Speed and velocity can be either instantaneous or average. Imagine a truck is moving down a straight road. A displacement–time graph of the truck’s motion is shown in Figure 7B–17.\nThe gradient of this line will be the velocity because:\n$\\text{gradient} = \\frac{\\text{rise}}{\\text{run}} = \\frac{\\Delta s}{\\Delta t} = v$\nBut the gradient changes after 6 seconds and the line becomes steeper, indicating an increase in velocity. This means that the velocity for the first 6 seconds is:\n$v_{\\text{av}} = \\frac{\\Delta s}{\\Delta t} = \\frac{20 - 0}{6 - 0} = 3.33$ $\\text{m s}^{-1}$\nThe velocity for the next 4 seconds is:\n$v_{\\text{av}} = \\frac{\\Delta s}{\\Delta t} = \\frac{80 - 20}{10 - 6} = 15$ $\\text{m s}^{-1}$\nThe average velocity for the whole 10-second trip is:\n$v_{\\text{av}} = \\frac{\\Delta s}{\\Delta t} = \\frac{80 - 0}{10 - 0} = 8$ $\\text{m s}^{-1}$\nThe formula for average speed and velocity must be used with care. As you can see from Figure 7B–17, considering different parts of the graph will give different results as the velocity of the object changes. You should remember that this formula gives the average velocity of a body and should not be confused with a formula that gives the final velocity.\nMeasuring instantaneous velocity is much more difficult. In fact, any real-world measurement of velocity will always be an average because it is calculated by dividing the distance travelled by the time that it took the body to travel that distance. As the time interval approaches zero, the velocity becomes closer to the instantaneous velocity.\nFor example, imagine a car that is accelerating and therefore its velocity is constantly increasing. The displacement–time graph for the accelerating car is shown in Figure 7B–18.\nAs the gradient is constantly changing, the velocity is also constantly changing.",
+   "figures": [
+    "7B-F17",
+    "7B-F18"
+   ],
+   "criteria": [
+    "7B.1",
+    "7B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 32
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "7B-F1",
+   "label": "Figure 7B–1",
+   "caption": "A group of BASE jumpers look over the cliff that they are about to jump off in Norway.",
+   "img": null,
+   "important": false,
+   "why": "Engage photo; not cropped",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 14
+   }
+  },
+  {
+   "id": "7B-F2",
+   "label": "Figure 7B–2",
+   "caption": "The above shows that the acceleration due to gravity is significant. It is about one-quarter of the maximum acceleration of the Saturn V rocket (38.4 $\\text{m s}^{-2}$) that launched the Apollo space shuttles destined for the Moon.",
+   "img": "img/7B_fig7B-2.png",
+   "important": true,
+   "why": "Engage: gravity's acceleration compared with F1 car, cheetah, Usain Bolt",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "7B-F3",
+   "label": "Figure 7B–3",
+   "caption": "This velocity–time graph shows how the velocity of a free-falling object increases with time if air resistance is ignored.",
+   "img": "img/7B_fig7B-3.png",
+   "important": true,
+   "why": "Straight-line v–t graph for free fall",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "7B-F4",
+   "label": "Figure 7B–4",
+   "caption": "The displacement–time graph shows the distance an object would travel as time passes, if the object was initially at rest and free-falling under gravity. This graph ignores the effect of air resistance.",
+   "img": "img/7B_fig7B-4.png",
+   "important": true,
+   "why": "Curved s–t graph for constant acceleration",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 16
+   }
+  },
+  {
+   "id": "7B-F5",
+   "label": "Figure 7B–5",
+   "caption": "A helicopter drops off skiers on a steep mountain. The skiers will descend the mountain with velocities similar to a that of high-performance car.",
+   "img": null,
+   "important": false,
+   "why": "Photo; not cropped",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 16
+   }
+  },
+  {
+   "id": "7B-F6",
+   "label": "Figure 7B–6",
+   "caption": "When hiking, the distance travelled and displacement are usually very different.",
+   "img": null,
+   "important": false,
+   "why": "Photo; not cropped",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 17
+   }
+  },
+  {
+   "id": "7B-F7",
+   "label": "Figure 7B–7",
+   "caption": "Example of a hike with a displacement of 10 km and a distance of 11.7 km",
+   "img": "img/7B_fig7B-7.png",
+   "important": true,
+   "why": "Distance vs displacement diagram",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 17
+   }
+  },
+  {
+   "id": "7B-F8",
+   "label": "Figure 7B–8",
+   "caption": "Conversion between kilometres per hour and metres per second",
+   "img": "img/7B_fig7B-8.png",
+   "important": true,
+   "why": "÷3.6 / ×3.6 conversion diagram",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 18
+   }
+  },
+  {
+   "id": "7B-F9",
+   "label": "Figure 7B–9",
+   "caption": "As a raft moves into water that is moving more quickly, it will begin to accelerate in the direction of flow.",
+   "img": null,
+   "important": false,
+   "why": "Photo; not cropped",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 19
+   }
+  },
+  {
+   "id": "7B-F10",
+   "label": "Figure 7B–10",
+   "caption": "The displacement–time graph of a jogger",
+   "img": "img/7B_fig7B-10.png",
+   "important": true,
+   "why": "Reading an s–t graph: moving away, resting, returning, passing origin",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 19
+   }
+  },
+  {
+   "id": "7B-F11",
+   "label": "Figure 7B–11",
+   "caption": "The displacement–time graph of a body moving in a straight line with a variety of different velocities",
+   "img": "img/7B_fig7B-11.png",
+   "important": true,
+   "why": "Pair with 7B–12: gradient of s–t gives v–t",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 22
+   }
+  },
+  {
+   "id": "7B-F12",
+   "label": "Figure 7B–12",
+   "caption": "The velocity–time graph of the body in Figure 7B–11 displays information about how the gradient of its displacement–time graph changes with time.",
+   "img": "img/7B_fig7B-12.png",
+   "important": true,
+   "why": "v–t graph built from s–t gradients",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 22
+   }
+  },
+  {
+   "id": "7B-F13",
+   "label": "Figure 7B–13",
+   "caption": "The velocity–time graph of a car doing a U-turn at a set of traffic lights on a straight stretch of road",
+   "img": "img/7B_fig7B-13.png",
+   "important": true,
+   "why": "Reading a v–t graph including negative velocity",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "7B-F14",
+   "label": "Figure 7B–14",
+   "caption": "The velocity–time graph of a hiker walking at 1 $\\text{m s}^{-1}$ for 5 seconds",
+   "img": "img/7B_fig7B-14.png",
+   "important": true,
+   "why": "Area under v–t = displacement (rectangle)",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "7B-F15",
+   "label": "Figure 7B–15",
+   "caption": "The area under a velocity–time graph gives the change is displacement, even if the velocity changes with time.",
+   "img": "img/7B_fig7B-15.png",
+   "important": true,
+   "why": "Area under v–t for constant, uniform and non-uniform velocity",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "7B-F16",
+   "label": "Figure 7B–16",
+   "caption": "Acceleration–time graph of a car braking as it approaches a stop sign",
+   "img": "img/7B_fig7B-16.png",
+   "important": true,
+   "why": "Reading an a–t graph",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 29
+   }
+  },
+  {
+   "id": "7B-F17",
+   "label": "Figure 7B–17",
+   "caption": "Displacement–time graph of a truck driving along a road",
+   "img": "img/7B_fig7B-17.png",
+   "important": true,
+   "why": "Average velocity over different intervals",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 32
+   }
+  },
+  {
+   "id": "7B-F18",
+   "label": "Figure 7B–18",
+   "caption": "Displacement–time graph of an accelerating car. The value of the instantaneous speed is given by the gradient of the tangent at that point in time. As time passes, the gradient of the tangent increases, showing that the instantaneous velocity is also increasing.",
+   "img": "img/7B_fig7B-18.png",
+   "important": true,
+   "why": "Tangents for instantaneous velocity",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 33
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE7B-1",
+   "title": "Distance and displacement",
+   "question": "A track runner is running around a circular track that has a circumference of 500 m. The runner does exactly four laps, finishing where they started.\na Calculate the distance travelled by the runner.\nb Calculate the displacement of the runner once they complete one full lap.",
+   "steps": [
+    "a $500 \\times 4 = 2000$ m",
+    "b Since the runner finishes where they start, they will have zero net displacement because they have not moved relative to the origin."
+   ],
+   "answer": "a 2000 m; b zero",
+   "img": [],
+   "criteria": [
+    "7B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 18
+   }
+  },
+  {
+   "id": "WE7B-2",
+   "title": "Displacement–time graph gradient",
+   "question": "A body moves from rest in a straight line. Its motion is displayed in the displacement–time graph (right).\nWhat is the gradient of the graph? Include a unit in your answer and state what the gradient represents.",
+   "steps": [
+    "The first step in determining the gradient of a graph is to take two clear points from the line, determine the rise and the run and then divide the rise by the run.",
+    "$\\text{gradient} = \\frac{\\text{rise}}{\\text{run}}$",
+    "$= \\frac{8 - 2}{4 - 1}$",
+    "$= 2$",
+    "As you are dividing the values on the $y$-axis (rise) by the values of the $x$-axis (run), the gradient represents the velocity as $v = \\frac{\\Delta d}{\\Delta t}$. The unit for this graph is $\\frac{\\text{m}}{\\text{s}} = \\text{m s}^{-1}$."
+   ],
+   "answer": "2 $\\text{m s}^{-1}$; the gradient is the velocity",
+   "img": [
+    "img/7B_WE7B-2.png"
+   ],
+   "criteria": [
+    "7B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "WE7B-3",
+   "title": "Reading a velocity–time graph",
+   "question": "A ball is thrown vertically into the air and it leaves the thrower’s hand at an initial velocity of 10 $\\text{m s}^{-1}$. The velocity–time graph of the ball from the moment it leaves the thrower’s hand is shown below (air resistance is ignored).\na When the velocity of the ball is zero, the time is 1.02 s. In terms of the ball’s height, what is the significance of when the velocity is zero?\nb Calculate the gradient of the line and comment on the significance of this gradient.",
+   "steps": [
+    "a When the velocity of the ball is zero, the ball will be at its maximum height.",
+    "b $\\text{gradient} = \\frac{\\text{rise}}{\\text{run}}$",
+    "$= \\frac{0 - 10}{1.02 - 0}$",
+    "$= -9.8$ $\\text{m s}^{-2}$",
+    "This gradient is the acceleration due to gravity.",
+    "Note that the acceleration is changing the velocity. As seen above, the velocity has gone from being positive to zero to negative."
+   ],
+   "answer": "a maximum height; b −9.8 $\\text{m s}^{-2}$, the acceleration due to gravity",
+   "img": [
+    "img/7B_WE7B-3.png"
+   ],
+   "criteria": [
+    "7B.3",
+    "7B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 25
+   }
+  },
+  {
+   "id": "WE7B-4",
+   "title": "Area under a velocity–time graph",
+   "question": "A cyclist rides north up a straight road, turns around and then returns to where they started. A velocity–time graph of this situation is shown below.\na Find the displacement of the cyclist once they have travelled for 120 s.\nb What is the displacement after 180 s?\nc What is the total distance covered after 180 s?",
+   "steps": [
+    "a The displacement is the area under the graph. To find the area under the graph, divide the graph into a series of triangles and rectangles as shown on the next page.",
+    "The area under the graph up to 120 s, and therefore the displacement, can then be found by adding the area of all the shapes:",
+    "$\\frac{1}{2}(20)(5) + (60)(5) + \\frac{1}{2}(40)(5) = 450$ m",
+    "As this question asked for displacement (a vector quantity), a direction is required. The direction is north.",
+    "b Note that this graph has a negative value for velocity; this indicates that the cyclist is travelling south. To calculate the displacement after 180 s, the graph needs to be divided into a rectangle and triangles as shown below.",
+    "The important point to remember is that when calculating the displacement, the negative value for velocity needs to be considered. Therefore, the area for the blue triangle is:",
+    "$\\text{area} = \\frac{1}{2}(60)(-15)$",
+    "$= -450$ m",
+    "The negative does not indicate negative area but rather the direction travelled: south. Therefore, the total displacement of the bike after 180 s is:",
+    "$450 + -450 = 0$ m",
+    "c Distance is a scalar quantity. Therefore, no direction is required. This means that any negative velocities must be turned into positive values. This is because in the first 120 s the cyclist travels 450 m, and from 120 s to 180 s the cyclist travels another 450 m. This gives a total distance covered of 900 m."
+   ],
+   "answer": "a 450 m north; b 0 m; c 900 m",
+   "img": [
+    "img/7B_WE7B-4.png",
+    "img/7B_WE7B-4a.png",
+    "img/7B_WE7B-4b.png"
+   ],
+   "criteria": [
+    "7B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "WE7B-5",
+   "title": "Area under an acceleration–time graph",
+   "question": "A car, initially travelling at 72 $\\text{km h}^{-1}$, is travelling on a straight road when it approaches to some roadworks. The car slows to the new speed limit and then accelerates again once it has passed the roadworks. The acceleration–time graph of the car’s journey is shown below.\na Calculate the speed that the car travelled past the roadworks in kilometres per hour.\nb Calculate the speed, in $\\text{km h}^{-1}$, of the car at the end of the 50 s.",
+   "steps": [
+    "a The first step is to interpret this diagram. The car is accelerating at a rate of −1 $\\text{m s}^{-2}$ for 8 s as it approaches the roadworks. The car is passing through the roadworks at a constant velocity (as there is no acceleration) from 8 s to 42 s. After 42 s, the car has left the roadworks and accelerates. Therefore:",
+    "initial velocity of the car $= \\frac{72}{3.6}$ $= 20$ $\\text{m s}^{-1}$",
+    "change in velocity = area under the graph $= (-1)(8)$ $= -8$ $\\text{m s}^{-1}$",
+    "final velocity $= 20 - 8$ $= 12$ $\\text{m s}^{-1}$",
+    "convert $\\text{m s}^{-1}$ to $\\text{km h}^{-1}$ $= (12)(3.6)$ $= 43.2$ $\\text{km h}^{-1}$",
+    "b Since you know from part a that the car will be travelling at 12 $\\text{m s}^{-1}$ after 42 s, you only need to consider the change in velocity after this point.",
+    "change in velocity of the car = area under the graph $= (2)(8)$ $= 16$ $\\text{m s}^{-1}$",
+    "final velocity $= 12 + 16$ $= 28$ $\\text{m s}^{-1}$",
+    "convert $\\text{m s}^{-1}$ to $\\text{km h}^{-1}$ $= (28)(3.6)$ $= 101$ $\\text{km h}^{-1}$"
+   ],
+   "answer": "a 43.2 $\\text{km h}^{-1}$; b 101 $\\text{km h}^{-1}$",
+   "img": [
+    "img/7B_WE7B-5_graph.png",
+    "img/7B_WE7B-5.png"
+   ],
+   "criteria": [
+    "7B.6",
+    "7B.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "WE7B-6",
+   "title": "Average velocity and the instantaneous velocity",
+   "question": "What is the difference between the average velocity and the instantaneous velocity? Use Figure 7B–18 to help answer your question.",
+   "steps": [
+    "The average velocity of an object is the change in the displacement of an object divided by the time. The instantaneous velocity of an object is the velocity of an object at a specific point in time.",
+    "In Figure 7B–18 the average velocity is:",
+    "$v = \\frac{\\Delta s}{\\Delta t} = \\frac{128 - 0}{8 - 0} = 16$ $\\text{m s}^{-1}$",
+    "The instantaneous velocity when $t = 2$ and when $t = 6$ is:",
+    "$v_{t=2} = \\frac{40 - 0}{6 - 1} = 8$ $\\text{m s}^{-1}$",
+    "$v_{t=6} = \\frac{120 - 0}{8 - 3} = 24$ $\\text{m s}^{-1}$"
+   ],
+   "answer": "average 16 $\\text{m s}^{-1}$; instantaneous 8 $\\text{m s}^{-1}$ at t = 2 s and 24 $\\text{m s}^{-1}$ at t = 6 s",
+   "img": [
+    "img/7B_fig7B-18.png",
+    "img/7B_WE7B-6.png"
+   ],
+   "criteria": [
+    "7B.1",
+    "7B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 33
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "7B-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "Convert the following from $\\text{m s}^{-1}$ to $\\text{km h}^{-1}$.\na 32.5 $\\text{m s}^{-1}$\nb 25 $\\text{m s}^{-1}$\nc 12.5 $\\text{m s}^{-1}$\nd 50 $\\text{m s}^{-1}$",
+   "answer": "a 117 $\\text{km h}^{-1}$\nb 90 $\\text{km h}^{-1}$\nc 45 $\\text{km h}^{-1}$\nd 180 $\\text{km h}^{-1}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "7B-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "Convert the following from $\\text{km h}^{-1}$ to $\\text{m s}^{-1}$.\na 9 $\\text{km h}^{-1}$\nb 81 $\\text{km h}^{-1}$\nc 99 $\\text{km h}^{-1}$\nd 54 $\\text{km h}^{-1}$",
+   "answer": "a 2.5 $\\text{m s}^{-1}$\nb 22.5 $\\text{m s}^{-1}$\nc 27.5 $\\text{m s}^{-1}$\nd 15 $\\text{m s}^{-1}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "7B-CI1.3a",
+   "set": 1,
+   "n": "3a",
+   "question": "A football team is doing pre-season running training. They are performing 20 m sprints to a cone and then back again. A displacement–time graph of one runner is shown below.\na What is the magnitude of the velocity of the runner from G to H?",
+   "answer": "$v = \\frac{20}{4} = 5$ $\\text{m s}^{-1}$",
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "7B.1",
+    "7B.2"
+   ],
+   "img": [
+    "img/7B_CI1.3.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "7B-CI1.3b",
+   "set": 1,
+   "n": "3b",
+   "question": "b What is the displacement of the runner after 50 s?",
+   "answer": "0",
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "7B.1"
+   ],
+   "img": [
+    "img/7B_CI1.3.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "7B-CI1.3c",
+   "set": 1,
+   "n": "3c",
+   "question": "c What is the speed of the runner over the 60-second time period?",
+   "answer": "Total distance covered = (20)(6) = 120 m; $v = \\frac{120}{60} = 2$ $\\text{m s}^{-1}$",
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "7B.1",
+    "7B.2"
+   ],
+   "img": [
+    "img/7B_CI1.3.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "7B-CI1.3d",
+   "set": 1,
+   "n": "3d",
+   "question": "d During which segments was the runner stationary?",
+   "answer": "C–D, F–G, I–J",
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "7B.1"
+   ],
+   "img": [
+    "img/7B_CI1.3.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "7B-CI2.1a",
+   "set": 2,
+   "n": "1a",
+   "question": "The velocity–time graph on the right shows the motion of a car that is initially moving north along a straight road of a testing facility.\na What is the acceleration of the car in the first 300 s? Include a direction in your answer.",
+   "answer": "$a = \\frac{-20 - 20}{300} = -0.133$ $\\text{m s}^{-2}$. Therefore, the acceleration is 0.133 $\\text{m s}^{-2}$ south",
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "7B.4"
+   ],
+   "img": [
+    "img/7B_CI2.1.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 29
+   }
+  },
+  {
+   "id": "7B-CI2.1b",
+   "set": 2,
+   "n": "1b",
+   "question": "b When was the car stationary?",
+   "answer": "t = 150 s",
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "7B.3"
+   ],
+   "img": [
+    "img/7B_CI2.1.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 29
+   }
+  },
+  {
+   "id": "7B-CI2.1c",
+   "set": 2,
+   "n": "1c",
+   "question": "c Describe the motion of the car in the first 300 s of its journey.",
+   "answer": "The car is moving north with a velocity of 20 $\\text{m s}^{-1}$ north. The car then accelerated at a rate of 0.133 $\\text{m s}^{-2}$ south throughout the 300-second journey. After 150 s, the car is momentarily stationary and from 150 to 300 s the car is accelerating at 0.133 $\\text{m s}^{-2}$ south and it’s velocity is increasing in the southern direction.",
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "7B.3"
+   ],
+   "img": [
+    "img/7B_CI2.1.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 29
+   }
+  },
+  {
+   "id": "7B-CI2.1d",
+   "set": 2,
+   "n": "1d",
+   "question": "d If the car started at its origin, what is the displacement of the car after its 400 second journey. Include a direction in your answer.",
+   "answer": "$s = \\frac{1}{2}(20)(150) + \\frac{1}{2}(-20)(150) + \\left(\\frac{-20 - 5}{2}\\right)(50) + (-5)(50) = -875$ m. Therefore, the displacement is 875 m south.",
+   "kind": "graph",
+   "size": "medium",
+   "criteria": [
+    "7B.5"
+   ],
+   "img": [
+    "img/7B_CI2.1.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 29
+   }
+  },
+  {
+   "id": "7B-CI3.1a",
+   "set": 3,
+   "n": "1a",
+   "question": "A ball is initially travelling at 3.75 $\\text{m s}^{-1}$ east. A fan applies a near constant westward force on the ball until it changes direction. After 1 second, the velocity of the fan’s blades is lowered, which reduces the constant force on the ball. Soon after, the fan is turned off. A diagram of this situation is shown below.\nThe acceleration–time graph of the ball is shown below.\na How long does it take before the ball is momentarily stationary?",
+   "answer": "1 s",
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "7B.6"
+   ],
+   "img": [
+    "img/7B_CI3.1_diagram.png",
+    "img/7B_CI3.1_graph.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 31
+   }
+  },
+  {
+   "id": "7B-CI3.1b",
+   "set": 3,
+   "n": "1b",
+   "question": "b During what time period is the ball moving west?",
+   "answer": "From $t > 1$",
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "7B.6"
+   ],
+   "img": [
+    "img/7B_CI3.1_graph.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 31
+   }
+  },
+  {
+   "id": "7B-CI3.1c",
+   "set": 3,
+   "n": "1c",
+   "question": "c Copy the graph grid below and plot the velocity–time graph of the ball on it.",
+   "answer": "[graph answer: see img/7B_CI3.1c_ans.png]",
+   "kind": "graph",
+   "size": "medium",
+   "criteria": [
+    "7B.6",
+    "7B.7"
+   ],
+   "img": [
+    "img/7B_CI3.1c_grid.png",
+    "img/7B_CI3.1c_ans.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 31
+   }
+  },
+  {
+   "id": "7B-CI3.1d",
+   "set": 3,
+   "n": "1d",
+   "question": "d Use the graph to calculate the change in velocity of the ball over the 4 s.",
+   "answer": "$\\Delta v = (3.75)(1) + (2)(2) = 7.75$ $\\text{m s}^{-1}$ west",
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "7B.7"
+   ],
+   "img": [
+    "img/7B_CI3.1_graph.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 31
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "7B-SQ1",
+   "n": "1",
+   "question": "A hiker starts 200 m due east of their camp. A displacement–time graph of their hike is shown below.\nWhich of the following statements is the best description of the hiker’s motion?",
+   "options": [
+    "A The hiker walks east for 150 s before turning around and travelling west back to their camp.",
+    "B The hiker’s velocity is becoming smaller and smaller until, at 150 s, the hiker’s velocity becomes momentarily zero and then becomes increasingly negative.",
+    "C The net displacement of the hiker after their journey is zero.",
+    "D The hiker walks west with a constant velocity."
+   ],
+   "answer": "D",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "7B.1"
+   ],
+   "img": [
+    "img/7B_SQ1.png"
+   ],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ2",
+   "n": "2",
+   "question": "Use the following information to answer Questions 2 and 3.\nA runner goes out for a training session. A displacement–time graph of the runner’s session is shown below.\nIn which time interval(s) was the runner stationary?",
+   "options": [
+    "A 250 to 600 s",
+    "B 200 to 250 s, 600 to 700 s and 800 to 900 s",
+    "C 0 to 200 s and 700 to 800 s",
+    "D 0 to 600 s only"
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "7B.1"
+   ],
+   "img": [
+    "img/7B_SQ2-3.png"
+   ],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ3",
+   "n": "3",
+   "question": "What is the maximum speed of the runner during the running session?",
+   "options": [
+    "A 3.00 $\\text{m s}^{-1}$",
+    "B 1.71 $\\text{m s}^{-1}$",
+    "C 0.583 $\\text{m s}^{-1}$",
+    "D 0.333 $\\text{m s}^{-1}$"
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "7B.2"
+   ],
+   "img": [
+    "img/7B_SQ2-3.png"
+   ],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ4",
+   "n": "4",
+   "question": "Use the following information to answer Questions 4 and 5.\nA runner completes a 30-minute running session on a straight road. The runner starts at their house and immediately travels north. The velocity–time graph of the runner’s session is shown below.\nWhich of the following statements is not true?",
+   "options": [
+    "A From 10 to 15 minutes, the runner is running back towards the origin.",
+    "B The runner does not finish their run back at their house.",
+    "C The runner stops running for 5 minutes once 15 minutes passes.",
+    "D The runner is travelling south in the last 10 minutes."
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "7B.3"
+   ],
+   "img": [
+    "img/7B_SQ4-5.png"
+   ],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ5",
+   "n": "5",
+   "question": "What is the acceleration of the runner in the last 10 minutes?",
+   "options": [
+    "A $6.67 \\times 10^{-3}$ $\\text{m s}^{-2}$ north",
+    "B $6.67 \\times 10^{-3}$ $\\text{m s}^{-2}$ south",
+    "C 0.400 $\\text{m s}^{-2}$ north",
+    "D 0.400 $\\text{m s}^{-2}$ south"
+   ],
+   "answer": "D",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "7B.4"
+   ],
+   "img": [
+    "img/7B_SQ4-5.png"
+   ],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ6a",
+   "n": "6a",
+   "question": "A car is travelling initially at 13 $\\text{m s}^{-1}$ in heavy traffic. An acceleration–time graph of part of the car’s journey is shown below.\na List all of the times that the car is braking.",
+   "answer": "Between 8 to 9 minutes and 13 to 14 minutes.",
+   "marks": null,
+   "kind": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "7B.6"
+   ],
+   "img": [
+    "img/7B_SQ6.png"
+   ],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ6b",
+   "n": "6b",
+   "question": "b What is the maximum velocity of the car?",
+   "answer": "13 + (2)(5) = 23 $\\text{m s}^{-1}$",
+   "marks": null,
+   "kind": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "7B.7"
+   ],
+   "img": [
+    "img/7B_SQ6.png"
+   ],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ6c",
+   "n": "6c",
+   "question": "c Calculate the final velocity of the car.",
+   "answer": "13 + (2)(5) + (−4)(1) + (−3)(1) = 16 $\\text{m s}^{-1}$",
+   "marks": null,
+   "kind": "graph",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7B.7"
+   ],
+   "img": [
+    "img/7B_SQ6.png"
+   ],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ7a",
+   "n": "7a",
+   "question": "A cyclist is initially travelling north with a velocity of 10 $\\text{m s}^{-1}$. The cyclist travels for 10 minutes and a velocity–time graph of the journey is shown below.\na Describe how the velocity and acceleration of the cyclist changes with time throughout the 10-minute journey. No exact values for acceleration are required.",
+   "answer": "The cyclist has a velocity of 10 $\\text{m s}^{-1}$ north for 4 minutes; the acceleration is zero during this time. The cyclist begins to slow down to zero over the next 2 minutes; the acceleration is constant and directed south. The cyclist then begins travelling south and the constant southward acceleration increases the cyclist velocity to 10 $\\text{m s}^{-1}$ south in the next 2 minutes. For the last 3 minutes there is a constant acceleration to the north, which slows the cyclist to a stop by 10 minutes.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7B.3",
+    "7B.4"
+   ],
+   "img": [
+    "img/7B_SQ7.png"
+   ],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ7b",
+   "n": "7b",
+   "question": "b What is the cyclist’s velocity after 7 minutes?",
+   "answer": "5 $\\text{m s}^{-1}$ south",
+   "marks": null,
+   "kind": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "7B.3"
+   ],
+   "img": [
+    "img/7B_SQ7.png"
+   ],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ7c",
+   "n": "7c",
+   "question": "c If the cyclist starts from the origin, how far away from the origin are they after 10 minutes?",
+   "answer": "$(10)(4)(60) + \\frac{1}{2}(10)(2)(60) + 2\\left(\\frac{1}{2}(-10)(2)(60)\\right) = 1800$ m",
+   "marks": null,
+   "kind": "graph",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7B.5"
+   ],
+   "img": [
+    "img/7B_SQ7.png"
+   ],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ7d",
+   "n": "7d",
+   "question": "d What is the total distance the cyclist covered in the journey?",
+   "answer": "$(10)(4)(60) + \\frac{1}{2}(10)(2)(60) + 2\\left(\\frac{1}{2}(10)(2)(60)\\right) = 4200$ m",
+   "marks": null,
+   "kind": "graph",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7B.5"
+   ],
+   "img": [
+    "img/7B_SQ7.png"
+   ],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ7e",
+   "n": "7e",
+   "question": "e Use the graph to calculate the cyclist’s acceleration between 4 and 8 minutes. Include a direction in your answer.",
+   "answer": "$a = \\text{gradient} = \\frac{-10 - 10}{(4)(60)} = -0.0833$ $\\text{m s}^{-2}$; the negative indicates the direction, south.",
+   "marks": null,
+   "kind": "graph",
+   "size": "quick",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "7B.4"
+   ],
+   "img": [
+    "img/7B_SQ7.png"
+   ],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ8a",
+   "n": "8a",
+   "question": "A ball is thrown straight up in the air at 9.8 $\\text{m s}^{-1}$; once 2 seconds have passed the ball is caught at the same height that the ball was released from. Assume that the ball reaches a maximum height of 4.90 m above its origin.\na Draw a displacement–time graph of the motion of the ball. An appropriate scale, units, and $x$- and $y$-axis labels should be included.",
+   "answer": "Maximum 4.9 m; turning point 1 s; end at 2 s",
+   "marks": null,
+   "kind": "graph",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7B Section questions.docx"
+   },
+   "answer_img": [
+    "img/7B_SQ8a_ans.png"
+   ]
+  },
+  {
+   "id": "7B-SQ8b",
+   "n": "8b",
+   "question": "b Draw a velocity–time graph of the motion of the ball. An appropriate scale, units, and $x$- and $y$-axis labels should be included.",
+   "answer": "Start at 9.8 $\\text{m s}^{-1}$ down, cross the $x$-axis when t = 1, reaches −9.8 $\\text{m s}^{-1}$ when $t$ = 2. Can also be the inverse graph.",
+   "marks": null,
+   "kind": "graph",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7B.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "7B Section questions.docx"
+   },
+   "answer_img": [
+    "img/7B_SQ8b_ans.png"
+   ]
+  },
+  {
+   "id": "7B-SQ8c",
+   "n": "8c",
+   "question": "c Draw an acceleration–time graph of the motion of the ball. An appropriate scale, units, and $x$- and $y$-axis labels should be included.",
+   "answer": "At 9.8 or −9.8 $\\text{m s}^{-1}$",
+   "marks": null,
+   "kind": "graph",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7B.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "7B Section questions.docx"
+   },
+   "answer_img": [
+    "img/7B_SQ8c_ans.png"
+   ]
+  },
+  {
+   "id": "7B-SQ9a",
+   "n": "9a",
+   "question": "Some hikers start walking from a point 200 m north of their camp, which is considered the origin. They walk north at a constant velocity for 200 m over 100 seconds. They then stop and rest for 20 seconds before taking 200 seconds to walk back to their camp. The hikers rest at camp for 80 seconds and then travel 400 m south in 100 seconds.\na Draw a displacement–time graph of the motion of the hikers. An appropriate scale, units, and $x$- and $y$-axis labels should be included.",
+   "answer": "Can do the inverse of this graph also",
+   "marks": null,
+   "kind": "graph",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7B Section questions.docx"
+   },
+   "answer_img": [
+    "img/7B_SQ9a_ans.png"
+   ]
+  },
+  {
+   "id": "7B-SQ9b",
+   "n": "9b",
+   "question": "b During which time interval is the hikers’ speed the greatest?",
+   "answer": "Between 400 and 500 s. The gradient of the graph is the speed, and the gradient is the steepest in this time interval.",
+   "marks": null,
+   "kind": "graph",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ9c",
+   "n": "9c",
+   "question": "c What is the average speed in the first 110 s?",
+   "answer": "Because the hikers started at 200 m away from the origin (camp), they only travelled 200 m in the first 110 s. $v_{\\text{avg}} = \\frac{d}{t} = \\frac{200}{110} = 1.81$ $\\text{m s}^{-1}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ10a",
+   "n": "10a",
+   "question": "A banker accidently dropped a one-dollar coin, initially at rest, off a building. The building is 70.8 m tall and it takes the coin 3.80 s to fall. The displacement–time graph of the coin’s velocity is shown below.\na Explain how the velocity of the coin changes with time.",
+   "answer": "Because the acceleration due to gravity is 9.8 $\\text{m s}^{-2}$, the velocity will constantly increase in the downwards direction. This is shown in the graph, as the instantaneous gradient is constantly increasing.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7B.1",
+    "7B.2"
+   ],
+   "img": [
+    "img/7B_SQ10.png"
+   ],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ10b",
+   "n": "10b",
+   "question": "b Calculate the average velocity for the coin for its 3.80-second fall and comment on how this would differ from the instantaneous velocity of the coin at this point.",
+   "answer": "$v_{\\text{avg}} = \\frac{d}{t} = \\frac{70.8}{3.8} = 18.6$ $\\text{m s}^{-1}$. The average velocity would be less than the instantaneous velocity. Gravity would continue to accelerate the coin until it struck the ground below. This means it would be at a maximum velocity before it hit the ground.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7B.2"
+   ],
+   "img": [
+    "img/7B_SQ10.png"
+   ],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ10c",
+   "n": "10c",
+   "question": "c Which of the following is the velocity–time graph that matches the motion of the coin? Explain your choice.",
+   "answer": "B. The velocity should increase at a constant rate of 9.8 $\\text{m s}^{-1}$ down due to gravity, as shown in this graph.",
+   "marks": null,
+   "kind": "graph",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7B.3"
+   ],
+   "img": [
+    "img/7B_SQ10c_1.png",
+    "img/7B_SQ10c_2.png",
+    "img/7B_SQ10c_3.png",
+    "img/7B_SQ10c_4.png"
+   ],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  },
+  {
+   "id": "7B-SQ10d",
+   "n": "10d",
+   "question": "d Draw an acceleration–time graph of the motion of the coin. An appropriate scale, units, and $x$- and $y$-axis labels should be included.",
+   "answer": "[graph answer: see answer_img]",
+   "marks": null,
+   "kind": "graph",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7B.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "7B Section questions.docx"
+   },
+   "answer_img": [
+    "img/7B_SQ10d_ans.png"
+   ]
+  },
+  {
+   "id": "7B-SQ10e",
+   "n": "10e",
+   "question": "e What was the total distance covered by the coin?",
+   "answer": "70.8 m",
+   "marks": null,
+   "kind": "recall",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7B Section questions.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 7B–1 Analysing motion through graphs",
+  "total": 38,
+  "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx",
+  "answers_file": "7B Worksheet 7B–1 Answers.docx",
+  "questions": [
+   {
+    "id": "WS7B-1a",
+    "n": "1a",
+    "question": "A track runner is running around a circular track that has a circumference of 200 m. The runner does exactly three laps, finishing where they started.\na Calculate the distance travelled by the runner. (1 mark)",
+    "answer": "(200)(3) = 600 m",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "7B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": "WE7B-1"
+   },
+   {
+    "id": "WS7B-1b",
+    "n": "1b",
+    "question": "b Calculate the displacement of the runner once they finish. (1 mark)",
+    "answer": "Since the runner finishes where they start, they will have zero net displacement as they have not moved relative to the origin.",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "criteria": [
+     "7B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": "WE7B-1"
+   },
+   {
+    "id": "WS7B-2a",
+    "n": "2a",
+    "question": "A car is travelling on a straight road. The car’s motion is modelled by the displacement–time graph below\na What is the velocity of the car between 5 s and 15 s? (1 mark)",
+    "answer": "$v = \\frac{d}{t} = \\frac{50}{10} = 5$ $\\text{m s}^{-1}$",
+    "marks": 1,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "criteria": [
+     "7B.2"
+    ],
+    "img": [
+     "img/7B_WS2.png"
+    ],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": "WE7B-2"
+   },
+   {
+    "id": "WS7B-2b",
+    "n": "2b",
+    "question": "b What is the maximum velocity of the car throughout this 25 s journey? (2 marks)",
+    "answer": "The maximum velocity is the steepest gradient between 0–5 seconds: $v = \\frac{d}{t} = \\frac{100}{5}$ (1 mark) $= 20$ $\\text{m s}^{-1}$ (1 mark)",
+    "marks": 2,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "7B.2"
+    ],
+    "img": [
+     "img/7B_WS2.png"
+    ],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": "WE7B-2"
+   },
+   {
+    "id": "WS7B-2c",
+    "n": "2c",
+    "question": "c Describe the motion of the car in the last 10 seconds. (1 mark)",
+    "answer": "Stationary, as the position is not changing with time.",
+    "marks": 1,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "criteria": [
+     "7B.1"
+    ],
+    "img": [
+     "img/7B_WS2.png"
+    ],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS7B-2d",
+    "n": "2d",
+    "question": "d Explain the difference between instantaneous speed and average speed. Use the graph above to help you to highlight the difference between the two. (4 marks)",
+    "answer": "Instantaneous speed is the speed that a body is moving at a particular moment in time (1 mark), while average speed is the speed that a body would have to maintain to travel the same distance as the distance covered in the trip (1 mark). For example, at 4 seconds the car has an instantaneous speed of 20 $\\text{m s}^{-1}$ (1 mark) but throughout the journey the car has an average velocity of $v_{avg} = \\frac{s}{t} = \\frac{150}{25} = 6$ $\\text{m s}^{-1}$ (1 mark).",
+    "marks": 4,
+    "kind": "explain",
+    "size": "long",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "7B.1",
+     "7B.2"
+    ],
+    "img": [
+     "img/7B_WS2.png"
+    ],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": "WE7B-6"
+   },
+   {
+    "id": "WS7B-3",
+    "n": "3",
+    "question": "A ball is thrown vertically into the air, and it leaves the thrower’s hand at an initial velocity of $v$ in the upwards direction. The ball is caught at the same height that it is released from. On the axes below, sketch the displacement–time, velocity–time and acceleration–time graph of the ball from the moment it leaves the thrower’s hand to the moment that it is caught. (3 marks)",
+    "answer": "(1 mark for each correct graph) [graphs: see answer_img]. Would also be correct if graphs are inverted",
+    "marks": 3,
+    "kind": "graph",
+    "size": "long",
+    "phase": [
+     "practice"
+    ],
+    "criteria": [
+     "7B.1",
+     "7B.3",
+     "7B.6"
+    ],
+    "img": [
+     "img/7B_WS3a_axes.png",
+     "img/7B_WS3b_axes.png",
+     "img/7B_WS3c_axes.png"
+    ],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": null,
+    "answer_img": [
+     "img/7B_WS3_ans1.png",
+     "img/7B_WS3_ans2.png",
+     "img/7B_WS3_ans3.png"
+    ]
+   },
+   {
+    "id": "WS7B-4a",
+    "n": "4a",
+    "question": "A driver gets into their car and drives directly west from their house up a straight road. The driver then reaches a roundabout at the end of the road and turns back down the same road towards their house. A velocity–time graph of this situation is shown below.\na During which segment(s) is the car moving west? (1 mark)",
+    "answer": "AB, BC and the first half of CD.",
+    "marks": 1,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "criteria": [
+     "7B.3"
+    ],
+    "img": [
+     "img/7B_WS4.png"
+    ],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS7B-4b",
+    "n": "4b",
+    "question": "b During which segment(s) is the car accelerating? (1 mark)",
+    "answer": "AB, CD",
+    "marks": 1,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "criteria": [
+     "7B.3",
+     "7B.4"
+    ],
+    "img": [
+     "img/7B_WS4.png"
+    ],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS7B-4c",
+    "n": "4c",
+    "question": "c When, if at all, is the car stationary? (1 mark)",
+    "answer": "The car is momentarily stationary when $t$ = 7 min.",
+    "marks": 1,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "criteria": [
+     "7B.3"
+    ],
+    "img": [
+     "img/7B_WS4.png"
+    ],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS7B-4d",
+    "n": "4d",
+    "question": "d Find the displacement of the driver once they have travelled for 6 minutes. (2 marks)",
+    "answer": "$s = \\text{area} = \\frac{1}{2}(2)(60)(15) + (15)(4)(60)$ (1 mark) $= 4500$ m west (1 mark)",
+    "marks": 2,
+    "kind": "graph",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "7B.5"
+    ],
+    "img": [
+     "img/7B_WS4.png"
+    ],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": "WE7B-4"
+   },
+   {
+    "id": "WS7B-4e",
+    "n": "4e",
+    "question": "e What is the displacement after 10 minutes? Include a direction in your answer. (2 marks)",
+    "answer": "$s = \\text{area} = 4500 + \\frac{1}{2}(0.5)(60)(15) + \\frac{1}{2}(0.5)(60)(-15) + (2)(60)(-15)$ (1 mark) $= 2700$ m west (1 mark)",
+    "marks": 2,
+    "kind": "graph",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "7B.5"
+    ],
+    "img": [
+     "img/7B_WS4.png"
+    ],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": "WE7B-4"
+   },
+   {
+    "id": "WS7B-4f",
+    "n": "4f",
+    "question": "f What is the average speed of the car for its 10-minute trip? (3 marks)",
+    "answer": "$s = 4500 + \\frac{1}{2}(0.5)(60)(15) + \\left(\\frac{1}{2}(0.5)(60)(-15)\\right) + \\left((2)(60)(-15)\\right)$ (1 mark) $= 6525$ m (1 mark); $v = \\frac{s}{t} = \\frac{6525}{(10)(60)} = 10.9$ $\\text{m s}^{-1}$ (1 mark)",
+    "marks": 3,
+    "kind": "graph",
+    "size": "long",
+    "phase": [
+     "practice"
+    ],
+    "criteria": [
+     "7B.5"
+    ],
+    "img": [
+     "img/7B_WS4.png"
+    ],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS7B-4g",
+    "n": "4g",
+    "question": "g What is the acceleration of the car between during segment CD? Include a direction in your answer. (2 marks)",
+    "answer": "$a = \\frac{v - u}{t} = \\frac{-15 - 15}{(2)(60)} = -0.25$ $\\text{m s}^{-2}$ (1 mark). The negative sign indicates the direction, east. (1 mark)",
+    "marks": 2,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "7B.4"
+    ],
+    "img": [
+     "img/7B_WS4.png"
+    ],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": "WE7B-3"
+   },
+   {
+    "id": "WS7B-5a",
+    "n": "5a",
+    "question": "A car, initially travelling at 81 $\\text{km h}^{-1}$, is travelling down a road when it comes up to a school zone. The driver approaches the school zone and slows. Once the driver has passed the school zone, the driver accelerates again. The acceleration–time graph of the car’s 40 s journey is shown below.\na A mobile police camera is set up in the school zone to capture any speeding motorists. A speeding motorist is a motorist that travels through the school zone with a speed greater than 40 $\\text{km h}^{-1}$. Calculate the speed that the car travelled through the school zone to determine if the car will get a speeding ticket. (4 marks)",
+    "answer": "$u = \\frac{81}{3.6} = 22.5$ $\\text{m s}^{-1}$ (1 mark); $v = u + at = 22.5 + (-1.5)(5) = 15$ $\\text{m s}^{-1}$ (1 mark) $= (15)(3.6) = 54$ $\\text{km h}^{-1}$ (1 mark). Therefore, the car will get a speeding ticket as it is going faster than 40 $\\text{km h}^{-1}$. (1 mark)",
+    "marks": 4,
+    "kind": "graph",
+    "size": "long",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "7B.6",
+     "7B.7"
+    ],
+    "img": [
+     "img/7B_WS5.png"
+    ],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": "WE7B-5"
+   },
+   {
+    "id": "WS7B-5b",
+    "n": "5b",
+    "question": "b Calculate the length of the school zone. (1 mark)",
+    "answer": "$s = vt = (15)(20) = 300$ m",
+    "marks": 1,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "criteria": [
+     "7B.6"
+    ],
+    "img": [
+     "img/7B_WS5.png"
+    ],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS7B-5c",
+    "n": "5c",
+    "question": "c Calculate the speed, in $\\text{km h}^{-1}$, of the car at the end of the 40 seconds. (2 marks)",
+    "answer": "$v = 15 + (2.5)(4) = 25$ $\\text{m s}^{-1}$ (1 mark) $= (25)(3.6) = 90$ $\\text{km h}^{-1}$ (1 mark)",
+    "marks": 2,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "7B.7"
+    ],
+    "img": [
+     "img/7B_WS5.png"
+    ],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": "WE7B-5"
+   },
+   {
+    "id": "WS7B-5d",
+    "n": "5d",
+    "question": "d Is the car stationary at any point along its journey? Justify your answer. (2 marks)",
+    "answer": "No (1 mark), the brief deceleration is not enough to reduce the car’s velocity to zero. (1 mark)",
+    "marks": 2,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "criteria": [
+     "7B.6",
+     "7B.7"
+    ],
+    "img": [
+     "img/7B_WS5.png"
+    ],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS7B-6",
+    "n": "6",
+    "question": "What is the difference between the average velocity and the instantaneous velocity? Give an example to support your answer. (4 marks)",
+    "answer": "The average velocity of an object is the change in the displacement of an object divided by the time. (1 mark)\nThe instantaneous velocity of an object is the velocity of an object at a specific point in time. (1 mark)\nFor example, if a hiker walks 5 km in an hour, the magnitude of their average velocity would be 5 $\\text{km h}^{-1}$. (1 mark)\nHowever, in their hike the hiker may have run, walked or stopped and rested in sections; at any given instant their velocity can be different. (1 mark)",
+    "marks": 4,
+    "kind": "explain",
+    "size": "long",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "7B.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "7B Worksheet 7B–1 Analysing motion through graphs.docx"
+    },
+    "pair_with": "WE7B-6"
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "7B.1"
+   ],
+   "wedo": "WE7B-1",
+   "youtry": [
+    "WS7B-1a",
+    "WS7B-1b"
+   ],
+   "note": "Same circular-track context: distance vs zero displacement."
+  },
+  {
+   "criteria": [
+    "7B.2"
+   ],
+   "wedo": "WE7B-2",
+   "youtry": [
+    "WS7B-2a",
+    "WS7B-2b"
+   ],
+   "note": "Rise over run on a displacement–time graph gives velocity."
+  },
+  {
+   "criteria": [
+    "7B.3",
+    "7B.4"
+   ],
+   "wedo": "WE7B-3",
+   "youtry": [
+    "WS7B-4g",
+    "7B-SQ7e"
+   ],
+   "note": "Gradient of a velocity–time graph gives acceleration, with direction."
+  },
+  {
+   "criteria": [
+    "7B.5"
+   ],
+   "wedo": "WE7B-4",
+   "youtry": [
+    "WS7B-4d",
+    "WS7B-4e"
+   ],
+   "note": "Area under v–t split into shapes; negative area for return trip."
+  },
+  {
+   "criteria": [
+    "7B.6",
+    "7B.7"
+   ],
+   "wedo": "WE7B-5",
+   "youtry": [
+    "WS7B-5a",
+    "WS7B-5c"
+   ],
+   "note": "Near-identical context (car slowing for a zone): area under a–t gives Δv, km/h conversion."
+  },
+  {
+   "criteria": [
+    "7B.1",
+    "7B.2"
+   ],
+   "wedo": "WE7B-6",
+   "youtry": [
+    "WS7B-2d",
+    "WS7B-6"
+   ],
+   "note": "Average vs instantaneous velocity (tangent)."
+  }
+ ],
+ "skills": [
+  {
+   "id": "7B-SK1",
+   "heading": "Understanding the gradient of a graph and how to use it",
+   "text": "The gradient of a graph tells you how steep the graph is. It is calculated by the change in the y-value, $\\Delta y$, and divided by the change in the x-value, $\\Delta x$.\n$\\frac{\\Delta y}{\\Delta x} = \\text{gradient} = \\frac{\\text{rise}}{\\text{run}}$\nThis means that the unit for the gradient will always be the y-axis unit divided by the x-axis unit. Using this principle, we can derive the unit for the gradient of the distance–time graph.\nThis means the unit for this graph is $\\frac{\\text{m}}{\\text{s}} = \\text{m s}^{-1}$. The gradient of the displacement–time graph is the velocity:\n$\\text{gradient} = \\frac{\\Delta d}{\\Delta t} = v$\nUnderstanding how to derive the unit for the gradient and how to interpret the meaning of the gradient is an essential skill in physics.\nQuestion\nA group of students set up an experiment to test the acceleration due to gravity. They drop a ball, initially at rest, from different heights and use an accurate device that can measure the instantaneous velocity of the ball. The students then record the final velocity at which the ball strikes the ground. The students aim to test the acceleration due to gravity by using the following equation:\n$v^2 = u^2 + 2as$\nSince the initial velocity is zero, the students rearrange the equation to:\n$a = \\frac{v^2}{2s}$\nThe students gain a set of results and then graph the height of the ball drop, $s$, on the x-axis and the velocity squared, $v^2$, on the y-axis.\na Determine the gradient of the graph. Include the unit for the gradient in your answer.\nb Use the gradient of the graph to determine the acceleration due to gravity, as measured by the students’ experiment.\nSolution\na Take two clear points, which are well separated from the line of best fit:\n$\\text{gradient} = \\frac{\\text{rise}}{\\text{run}} = \\frac{48 - 0}{2.5 - 0} = 18$\n$\\text{unit} = \\frac{\\text{m}^2}{\\text{m}} = \\text{m s}^{-2}$\nTherefore, the gradient of the line of best fit is 19.2 $\\text{m s}^{-2}$\nb This question requires you to recognise that the gradient represents the following:\n$\\text{gradient} = \\frac{v^2}{s} = \\frac{\\text{rise}}{\\text{run}} = v^2$\nOnce you recognises the significance of the gradient, you can then substitute it into the formula from the question and solve the acceleration due to gravity as follows:\n$a = \\frac{v^2}{2s}$\nTherefore:\n$a = \\frac{1}{2} \\times \\text{gradient} = \\frac{1}{2} \\times 19.2 = 9.6$ $\\text{m s}^{-2}$\nThis means the students’ data revealed that the acceleration due to gravity is 9.6 $\\text{m s}^{-2}$.\nNote that this value is below the real acceleration due to gravity. This is not uncommon and you should not get discouraged if the value you have calculated does not match the accepted value. This is because this experiment may have had measurement uncertainties such as air resistance that decreased the final velocity of the ball and gave an acceleration due to gravity that was consistently lower than expected.",
+   "img": [
+    "img/7B_SK1.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 34
+   }
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P7B-1",
+   "title": "Practical 7B–1 Motion graphs",
+   "file": "7B Practical 7B–1 Motion graphs.docx",
+   "aim": "To build a practical understanding of motion graphs."
+  }
+ ],
+ "notes": "Every 7B criterion has a worked example. Check-in Set 1 Q1–2 (unit conversions) have no matching checklist criterion: criteria left empty. Textbook typos kept verbatim: skills box says '= 18' then '19.2' (48/2.5 = 19.2); 7B-SQ8c answer unit printed as m s^-1 (should be m s^-2); 7B-CI2.1d answer's middle term printed as (-20 ±5)/2 in the rendered PDF, indexed as (-20-5)/2. Worksheet 7B–1 Q2 and Q4 parts are mis-lettered in the docx (a, c, d, e / a, f, g...); indexed by the answer-sheet letters. 'TEACHER ONLY/7B Worksheet 7B–1 Answers (2).docx' is a duplicate of the answers file. 7B-SQ10c options are four graph images (A–D order assumed from docx order). Many questions are graph-heavy: always show the img."
+}

@@ -1,0 +1,899 @@
+{
+ "chapter": 7,
+ "title": "Modelling motion",
+ "unit": 2,
+ "aos": 1,
+ "sections": [
+  "7A",
+  "7B",
+  "7C"
+ ],
+ "criteria": [
+  {
+   "id": "7A.1",
+   "text": "Recall that a vector requires a magnitude and direction while a scalar only needs a magnitude",
+   "section": "7A",
+   "review_qs": [
+    "14"
+   ],
+   "exit_candidates": [
+    "CH7-RQ14a",
+    "7A-SQ3"
+   ]
+  },
+  {
+   "id": "7A.2",
+   "text": "Recall common types of vectors and scalars",
+   "section": "7A",
+   "review_qs": [
+    "2"
+   ],
+   "exit_candidates": [
+    "CH7-RQ2",
+    "7A-SQ1"
+   ]
+  },
+  {
+   "id": "7A.3",
+   "text": "Perform basic straight-line addition of vectors",
+   "section": "7A",
+   "review_qs": [
+    "1",
+    "7",
+    "14"
+   ],
+   "exit_candidates": [
+    "CH7-RQ1",
+    "CH7-RQ14b",
+    "7A-CI2.2"
+   ]
+  },
+  {
+   "id": "7A.4",
+   "text": "Determine the components of vectors.",
+   "section": "7A",
+   "review_qs": [
+    "3",
+    "16"
+   ],
+   "exit_candidates": [
+    "CH7-RQ3",
+    "7A-SQ2"
+   ]
+  },
+  {
+   "id": "7A.5",
+   "text": "Determine an unknown vector when when given the initial vector and the resultant vector",
+   "section": "7A",
+   "review_qs": [
+    "4",
+    "15"
+   ],
+   "exit_candidates": [
+    "CH7-RQ4",
+    "CH7-RQ15a"
+   ]
+  },
+  {
+   "id": "7B.1",
+   "text": "Interpret a displacement–time graph",
+   "section": "7B",
+   "review_qs": [
+    "6",
+    "13"
+   ],
+   "exit_candidates": [
+    "CH7-RQ13b",
+    "7B-SQ2"
+   ]
+  },
+  {
+   "id": "7B.2",
+   "text": "Apply the knowledge that the gradient of a displacement–time graph is the velocity",
+   "section": "7B",
+   "review_qs": [
+    "6",
+    "13"
+   ],
+   "exit_candidates": [
+    "CH7-RQ13c",
+    "7B-SQ3"
+   ]
+  },
+  {
+   "id": "7B.3",
+   "text": "Interpret a velocity–time graph",
+   "section": "7B",
+   "review_qs": [
+    "5",
+    "19",
+    "20"
+   ],
+   "exit_candidates": [
+    "CH7-RQ5",
+    "7B-SQ4"
+   ]
+  },
+  {
+   "id": "7B.4",
+   "text": "Apply the knowledge that the gradient of a velocity–time graph is the acceleration",
+   "section": "7B",
+   "review_qs": [
+    "5",
+    "8",
+    "19b",
+    "19c"
+   ],
+   "exit_candidates": [
+    "CH7-RQ8",
+    "CH7-RQ19b"
+   ]
+  },
+  {
+   "id": "7B.5",
+   "text": "Apply the knowledge that the area under a velocity–time graph is the total displacement and the absolute values of the area under the graph is the total distance travelled",
+   "section": "7B",
+   "review_qs": [
+    "9",
+    "19b",
+    "19c"
+   ],
+   "exit_candidates": [
+    "CH7-RQ9",
+    "7B-CI3.1d"
+   ]
+  },
+  {
+   "id": "7B.6",
+   "text": "Interpret an acceleration–time graph",
+   "section": "7B",
+   "review_qs": [
+    "12"
+   ],
+   "exit_candidates": [
+    "7B-SQ6a",
+    "7B-CI3.1a"
+   ]
+  },
+  {
+   "id": "7B.7",
+   "text": "Apply the knowledge that the area under an acceleration–time graph is the change in velocity",
+   "section": "7B",
+   "review_qs": [
+    "12"
+   ],
+   "exit_candidates": [
+    "CH7-RQ12b",
+    "7B-SQ6b"
+   ]
+  },
+  {
+   "id": "7C.1",
+   "text": "Analyse numerically and algebraically, straight-line motion under constant acceleration using the formulas: $v = u + at$, $v^2 = u^2 + 2as$ and $s = \\frac{1}{2}(u + v)t$, $s = ut + \\frac{1}{2}at^2$, $s = vt - \\frac{1}{2}at^2$",
+   "section": "7C",
+   "review_qs": [
+    "11",
+    "14",
+    "15",
+    "17",
+    "18",
+    "19",
+    "20"
+   ],
+   "exit_candidates": [
+    "CH7-RQ17a",
+    "CH7-RQ14c",
+    "7C-SQ4",
+    "7C-SQ5"
+   ]
+  }
+ ],
+ "review_questions": [
+  {
+   "id": "CH7-RQ1",
+   "n": "1",
+   "question": "Two men are having a tug of war. One man pulls on one end of the rope with a force of 200 N to the left and the other man pulls on the opposite end of the rope with a force of 150 N right. A diagram of this situation is shown below.\nThe net force applied to the centre of the rope is",
+   "options": [
+    "A 350 N left.",
+    "B 200 N right.",
+    "C 50 N right.",
+    "D 50 N left."
+   ],
+   "answer": "D",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "7A.3"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH7_RQ1.png"
+   ],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ2",
+   "n": "2",
+   "question": "Which of the following is a not scalar quantity?",
+   "options": [
+    "A mass",
+    "B time",
+    "C acceleration",
+    "D speed"
+   ],
+   "answer": "C",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "7A.2"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ3",
+   "n": "3",
+   "question": "A towing cable is placed between two cars. The tension in the cable is 20 000 N and the cable makes an angle of 15° to the horizontal. The horizontal component of the tension force is",
+   "options": [
+    "A 20 000 N",
+    "B 19320 N",
+    "C 1456",
+    "D 518 N"
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "7A.4"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ4",
+   "n": "4",
+   "question": "A basketball player is bouncing a basketball up and down. On one particular bounce the ball hits the ground with a velocity of 7.80 $\\text{m s}^{-1}$ down and rebounds with a velocity of 5.30 $\\text{m s}^{-1}$ up. The change in the velocity is",
+   "options": [
+    "A 13.1 $\\text{m s}^{-1}$ up.",
+    "B 13.1 $\\text{m s}^{-1}$ down.",
+    "C 2.50 $\\text{m s}^{-1}$ up.",
+    "D 2.50 $\\text{m s}^{-1}$ down."
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "7A.5"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ5",
+   "n": "5",
+   "question": "A car accelerates from rest at a constant rate for 3 s. The car then stays at a constant velocity for 27 s before slowing down at a constant rate for 5 s. Which of the following is an accurate graph for the motion of the car?",
+   "options": [
+    "A [graph]",
+    "B [graph]",
+    "C [graph]",
+    "D [graph]"
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "criteria": [
+    "7B.3",
+    "7B.4"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH7_RQ5A.png",
+    "img/CH7_RQ5B.png",
+    "img/CH7_RQ5C.png",
+    "img/CH7_RQ5D.png"
+   ],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ6",
+   "n": "6",
+   "question": "A ball is thrown vertically up into the air. Ignoring air resistance, which of the following is the best graph of the total distance travelled by the ball?",
+   "options": [
+    "A [graph]",
+    "B [graph]",
+    "C [graph]",
+    "D [graph]"
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "criteria": [
+    "7B.1",
+    "7B.2"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH7_RQ6A.png",
+    "img/CH7_RQ6B.png",
+    "img/CH7_RQ6C.png",
+    "img/CH7_RQ6D.png"
+   ],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ7",
+   "n": "7",
+   "question": "A person in a car travels past a bus stop at a constant velocity of 72 $\\text{km h}^{-1}$. While passing the pedestrians at the bus stop, the driver accidentally drops his sunglasses out of the window. Which one of the following statements correctly describes the motion of the sunglasses? Ignore air resistance.",
+   "options": [
+    "A The sunglasses will move back and down, as seen by the driver.",
+    "B The sunglasses will move vertically down and not move horizontally, as seen by the driver.",
+    "C The sunglasses will move vertically down and back, as seen by the pedestrians at the bus stop.",
+    "D Both A and C are correct."
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "criteria": [
+    "7A.3"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ8",
+   "n": "8",
+   "question": "Use the following information to answer Question 8, 9 and 10.\nOn a vehicle-testing site, a new car is having its brakes tested. The car moves along a straight road before braking. Set up along the road are two infrared timing gates A and B that are used to measure the motion of the car midway through its brake test. A diagram of this situation is shown below.\nThe velocity–time graph of the car’s motion once the car starts braking is shown below. At times $A$ and $B$, the car crosses the timing gates A and B.\nCalculate the average acceleration of the car between times $A$ and $B$.",
+   "options": [
+    "A 3.66 $\\text{m s}^{-2}$",
+    "B 1.11 $\\text{m s}^{-2}$",
+    "C −3.6 $\\text{m s}^{-2}$",
+    "D −4.00 $\\text{m s}^{-2}$"
+   ],
+   "answer": "D",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "criteria": [
+    "7B.4"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH7_RQ8-10_gates.png",
+    "img/CH7_RQ8-10_graph.png"
+   ],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ9",
+   "n": "9",
+   "question": "What is the distance covered by the car between points $A$ and $B$?",
+   "options": [
+    "A 144 m",
+    "B 96 m",
+    "C 48 m",
+    "D 24 m"
+   ],
+   "answer": "C",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "criteria": [
+    "7B.5"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH7_RQ8-10_graph.png"
+   ],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ10",
+   "n": "10",
+   "question": "What is the average speed of the car measured by the infrared timing gates A and B?",
+   "options": [
+    "A 22 $\\text{m s}^{-1}$",
+    "B 16 $\\text{m s}^{-1}$",
+    "C −16 $\\text{m s}^{-1}$",
+    "D −4 $\\text{m s}^{-1}$"
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "criteria": [
+    "7B.5"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH7_RQ8-10_graph.png"
+   ],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ11",
+   "n": "11",
+   "question": "A skydiver is falling vertically down with a constant velocity of 5 $\\text{m s}^{-1}$ downwards. When the skydiver is 100 m above the ground, a pen falls from their pocket. Assume that the pen falls with no air resistance and that the skydiver continues to fall with a constant velocity of 5 $\\text{m s}^{-1}$ down.",
+   "options": [],
+   "answer": null,
+   "marks": 6,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "7C.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the speed with which the pen strikes the ground. (2 marks)",
+     "answer": "$v^2 = u^2 + 2as$; $v = \\sqrt{u^2 + 2as} = \\sqrt{(-5)^2 + 2(-9.8)(-100)} = -44.6$ $\\text{m s}^{-1}$. Note you take the negative square root because the direction is downwards.",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "How much time passes before the pen hits the ground? (2 marks)",
+     "answer": "$v = u + at$; $t = \\frac{v - u}{a} = \\frac{(-44.6) - (-5)}{(-9.8)} = 4.04$ s",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "How much time passes once the pen hits the ground before the skydiver lands on the ground? (2 marks)",
+     "answer": "$t_{\\text{skydiver}} = \\frac{d}{v} = \\frac{100}{5} = 20$ s; $t_{\\text{difference}} = 20 - 4.04 = 15.96$ ss",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ12",
+   "n": "12",
+   "question": "A track cyclist starts from rest and the first 5 s of their start is recorded in the acceleration–time graph on the right.",
+   "options": [],
+   "answer": null,
+   "marks": 4,
+   "kind": "graph",
+   "size": "long",
+   "criteria": [
+    "7B.6",
+    "7B.7"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Sketch a velocity–time graph of the cyclist’s motion in the first 5 s. (2 marks)",
+     "answer": "[graph answer: see answer_img CH7_RQ12a_ans.png]",
+     "size": "medium",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "Another cyclist sets off, and their acceleration–time graph is given on the right.\nCalculate the final velocity of the cyclist after these 5 s have gone by. (2 marks)",
+     "answer": "Velocity = area under the graph $= (4)(2) + 1 \\times 3 = 11$ $\\text{m s}^{-1}$",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [
+    "img/CH7_RQ12a.png",
+    "img/CH7_RQ12b.png"
+   ],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   },
+   "answer_img": [
+    "img/CH7_RQ12a_ans.png"
+   ]
+  },
+  {
+   "id": "CH7-RQ13",
+   "n": "13",
+   "question": "A runner places their water bottle on the ground and begins doing sprints to and past the water bottle. A displacement–time graph of the runner’s motion is shown below, where the position of the bottle represents the origin.",
+   "options": [],
+   "answer": null,
+   "marks": 5,
+   "kind": "graph",
+   "size": "long",
+   "criteria": [
+    "7B.1",
+    "7B.2"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "What is the total distance covered by the runner? (2 marks)",
+     "answer": "Distance = 200 + 400 + 200 = 800 m",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "What is the longest distance that the runner completes without stopping for a break. (1 mark)",
+     "answer": "400 m. From 50 s to 150 s.",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "c",
+     "question": "What is the maximum speed of the runner throughout their 300 s run? (2 marks)",
+     "answer": "$v = \\text{gradient} = \\frac{\\text{rise}}{\\text{run}} = \\frac{200 - 0}{30} = 6.67$ $\\text{m s}^{-1}$",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [
+    "img/CH7_RQ13.png"
+   ],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ14",
+   "n": "14",
+   "question": "A water rocket is launched into the air. It has a thrust force of 1.5 N up and a weight force of 0.5 N down. Assume that air resistance is negligible.",
+   "options": [],
+   "answer": null,
+   "marks": 6,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "7A.1",
+    "7A.3",
+    "7C.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Is force a vector or a scalar? Justify your answer. (2 marks)",
+     "answer": "Vector; it needs both a magnitude and direction",
+     "size": "quick",
+     "marks": 2,
+     "criteria": [
+      "7A.1"
+     ]
+    },
+    {
+     "n": "b",
+     "question": "What is the net force on the rocket? (2 marks)",
+     "answer": "1.5 – 0.5 = 1 N up",
+     "size": "quick",
+     "marks": 2,
+     "criteria": [
+      "7A.3"
+     ]
+    },
+    {
+     "n": "c",
+     "question": "After 0.433 s, the rocket is travelling with a velocity of 8.55 $\\text{m s}^{-1}$ up and it is 4.33 m above the ground. The rocket has used up all its water and so the only force acting on the rocket is the force due to gravity.\nCalculate the time to reach the maximum height. (2 marks)",
+     "answer": "$v = u + at$; $t = \\frac{v - u}{a} = \\frac{(0) - (8.55)}{(-9.8)} = 0.872$ s",
+     "size": "quick",
+     "marks": 2,
+     "criteria": [
+      "7C.1"
+     ]
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ15",
+   "n": "15",
+   "question": "A car is travelling with a velocity of 20 $\\text{m s}^{-1}$ north but slows down for a school zone to a velocity of 11 $\\text{m s}^{-1}$ north.",
+   "options": [],
+   "answer": null,
+   "marks": 8,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "7A.5",
+    "7C.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "What is the change in velocity of the car? Include a direction in your answer. (3 marks)",
+     "answer": "$\\Delta v = v_{\\text{final}} - v_{\\text{initial}} = 11 - 20 = -9$ $\\text{m s}^{-1}$; the negative indicates the direction, south.",
+     "size": "quick",
+     "marks": 3,
+     "criteria": [
+      "7A.5"
+     ]
+    },
+    {
+     "n": "b",
+     "question": "If the car travelled 88.7 m while braking, how much time was the driver braking for? (2 marks)",
+     "answer": "$s = \\frac{1}{2}(u + v)t$; $t = \\frac{2s}{u + v} = \\frac{(2)(88.7)}{(20 + 11)} = 5.72$ s",
+     "size": "quick",
+     "marks": 2,
+     "criteria": [
+      "7C.1"
+     ]
+    },
+    {
+     "n": "c",
+     "question": "What is the acceleration of the car? Include a direction in your answer. (3 marks)",
+     "answer": "$a = \\frac{v - u}{\\Delta t} = \\frac{11 - 20}{5.72} = -1.57$ $\\text{m s}^{-2}$; the negative indicates the direction, south.",
+     "size": "quick",
+     "marks": 3,
+     "criteria": [
+      "7C.1"
+     ]
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ16",
+   "n": "16",
+   "question": "A charged metal ball is suspended by a string between two electric plates. When the plates are turned on, they apply an electrostatic attractive force on the ball to the right of 200 N. The force due to gravity on the ball is 550 N.\nCalculate the angle that the string makes with the vertical. (3 marks)",
+   "options": [],
+   "answer": "Draw a vector diagram that adds the forces. Solve for $\\theta$: $\\theta = \\tan^{-1}\\frac{200}{550} = 20.0^\\circ$",
+   "marks": 3,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "7A.4"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH7_RQ16.png"
+   ],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   },
+   "answer_img": [
+    "img/CH7_RQ16_ans.png"
+   ]
+  },
+  {
+   "id": "CH7-RQ17",
+   "n": "17",
+   "question": "A car is at rest at a set of lights. When the green light turns on, the car accelerates to a velocity of 99 $\\text{km h}^{-1}$ in 7.91 s.",
+   "options": [],
+   "answer": null,
+   "marks": 5,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "7C.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the magnitude of the acceleration of the car during this time. (3 marks)",
+     "answer": "$v = \\frac{99}{3.6} = 27.5$ $\\text{m s}^{-1}$; $a = \\frac{v - u}{\\Delta t} = \\frac{27.5 - 0}{7.91} = 3.48$ $\\text{m s}^{-2}$",
+     "size": "quick",
+     "marks": 3
+    },
+    {
+     "n": "b",
+     "question": "Calculate the distance travelled by the car while accelerating. (2 marks)",
+     "answer": "$s = ut + \\frac{1}{2}at^2 = (0)(7.91) + \\frac{1}{2}(3.48)(7.91)^2 = 109$ m",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ18",
+   "n": "18",
+   "question": "A person is standing by a deep wishing well. They hold their coin 5 m above the surface of the water in the well and flick it up with a speed of 3.75 $\\text{m s}^{-1}$. The coin travels up and then falls down into the well. A diagram of this is shown below.",
+   "options": [],
+   "answer": null,
+   "marks": 7,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "7C.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the maximum distance above the water of the well that the coin reaches. (3 marks)",
+     "answer": "$v^2 = u^2 + 2as$; $s = \\frac{v^2 - u^2}{2a} = \\frac{(0)^2 - (3.75)^2}{(2)(-9.8)} = 0.717$ m; $s_{\\text{total}} = 0.717 + 5 = 5.72$ m",
+     "size": "medium",
+     "marks": 3
+    },
+    {
+     "n": "b",
+     "question": "Calculate the speed with which the coin strikes the water. (2 marks)",
+     "answer": "$v^2 = u^2 + 2as$; $v = \\sqrt{u^2 + 2as} = \\sqrt{(0)^2 + 2(-9.8)^2(-5.72)} = -10.6$ $\\text{m s}^{-1}$. Note you take the negative square root because the coin is travelling downwards.",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "Calculate the total flight time. (2 marks)",
+     "answer": "Time to reach the maximum height: Take up as positive. $s = \\frac{1}{2}(u + v)t$; $t = \\frac{2s}{u + v} = \\frac{(2)(-5)}{3.75 \\pm 10.6} = 1.46$ s",
+     "size": "medium",
+     "marks": 2
+    }
+   ],
+   "img": [
+    "img/CH7_RQ18.png"
+   ],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ19",
+   "n": "19",
+   "question": "A truck is driving down a straight road when it passes a car at $t$ = 0, the car then sets off and travels along the same straight road. A velocity–time graph of the two vehicles is shown below.",
+   "options": [],
+   "answer": null,
+   "marks": 8,
+   "kind": "graph",
+   "size": "long",
+   "criteria": [
+    "7B.3",
+    "7B.4",
+    "7B.5",
+    "7C.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Describe the motion of the car. (3 marks)",
+     "answer": "The car starts from rest then accelerates at 4 $\\text{m s}^{-2}$ for the first 5 s. In the next 5 s, the car accelerates at 1 $\\text{m s}^{-2}$ for 5 s. The car then maintains a constant velocity of 25 $\\text{m s}^{-1}$ for the rest of the journey.",
+     "size": "medium",
+     "marks": 3,
+     "criteria": [
+      "7B.3"
+     ]
+    },
+    {
+     "n": "b",
+     "question": "What is the average acceleration, in metres per second, of the car during the first 10 s? (2 marks)",
+     "answer": "$a = \\frac{v - u}{\\Delta t} = \\frac{25 - 0}{10} = 2.50$ $\\text{m s}^{-2}$",
+     "size": "quick",
+     "marks": 2,
+     "criteria": [
+      "7B.4"
+     ]
+    },
+    {
+     "n": "c",
+     "question": "At what time does the car overtake the truck? (3 marks)",
+     "answer": "Recall that the displacement is equivalent to the area under the velocity–time graph. $s_{\\text{truck}} = 20t$; $s_{\\text{car}} = \\frac{1}{2}(5)(20) + \\frac{25 + 20}{2}(5) + (25)(t - 10) = (25)t - 87.5$; $s_{\\text{truck}} = s_{\\text{car}}$; $20t = 25t - 87.5$; $t = 17.5$ s",
+     "size": "long",
+     "marks": 3,
+     "criteria": [
+      "7B.5",
+      "7C.1"
+     ]
+    }
+   ],
+   "img": [
+    "img/CH7_RQ19.png"
+   ],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH7-RQ20",
+   "n": "20",
+   "question": "A man in a hot air balloon is filming a hawk. The man drops some of the hawk’s food, which is initially at rest, from the balloon. Seeing the food drop, the hawk flies down and passes the point where the food was initially dropped 0.730 s later with a velocity of 20 $\\text{m s}^{-1}$. Once the hawk is level with where the food was initially dropped from, it tucks into a dive position, which means only gravity is accelerating the hawk down.",
+   "options": [],
+   "answer": null,
+   "marks": 7,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "7B.3",
+    "7C.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "How much time passes after the hawk takes off when the food is caught by the hawk? (3 marks)",
+     "answer": "$s_{\\text{hawk}} = s_{\\text{food}}$; $u_{\\text{hawk}}t + \\frac{1}{2}at^2 = u_{\\text{food}}t_{\\text{food}} + \\frac{1}{2}a(t_{\\text{food}})^2$; $20(t - 0.73) + 4.9(t - 0.73)^2 = 4.9t^2$; $4.9t^2 + 12.846t - 11.9888 = 4.9t^2$; $t = 0.933s$",
+     "size": "long",
+     "marks": 3,
+     "criteria": [
+      "7C.1"
+     ]
+    },
+    {
+     "n": "b",
+     "question": "How much distance does the food travel before getting caught? (2 marks)",
+     "answer": "The food travelled 23.8 m. $s = ut + \\frac{1}{2}at^2 = (0)(2.203) + \\frac{1}{2}(-9.8)(2.203)^2 = -23.8$ m",
+     "size": "medium",
+     "marks": 2,
+     "criteria": [
+      "7C.1"
+     ]
+    },
+    {
+     "n": "c",
+     "question": "Use a velocity–time graph to sketch the motion of the hawk and its food. (2 marks)",
+     "answer": "[graph answer: see answer_img] The red and black lines are the motion of the hawk and food respectively.",
+     "size": "medium",
+     "marks": 2,
+     "criteria": [
+      "7B.3"
+     ]
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch07 Review questions.docx"
+   },
+   "answer_img": [
+    "img/CH7_RQ20c_ans.png"
+   ]
+  }
+ ],
+ "summary": "Chapter 7 Summary\n\n7A Concepts used to model motion\n\nVectors need a magnitude and direction\n\nScalars only need a magnitude\n\nCommon vectors and scalars\n\nVectors:  Scalars\n\n-  Displacement  -  Distance\n\n-  Velocity  -  Speed\n\n-  Acceleration  -  Mass\n\n-  Force  -  Volume\n\n-  Momentum  -  Area\n\n-  Impulse  -  Energy\n\n-  Torque  -  Power\n\n-  Electrical field  -  Temperature\n\n-  Magnetic field  -  Time\n\nVector addition\n\n-  Only the same types of vectors can be added.\n\n-  Vectors are often represented by arrows, indicating direction, and magnitude by length.\n\n-  Direction such as left/right or up/down can also be represented by + / –\n\n-  V_(final) = V₁ + V₂\n\n-  Add vectors head-to-tail, the vector being added should start where the previous vector finished. The resultant vector is then drawn from the tail of the first vector to the head of the final vector.\n\n-  In two dimensions, vector addition may require Pythagoras’ theorem and trigonometry.\n\n-  Analysis of an object’s motion path sequence often involves working out its displacement, i.e. the shortest distance from its starting point to its end point.\n\nFriction\n\n-  Friction is a force that resists the relative motion of solid surfaces and fluid layers sliding against each other.\n\nComponent vectors\n\n-  Break a vector into component vectors by forming a right-angled triangle and using a trigonometry to solve for the components.\n\nFinding an unknown vector\n\n-  Unknown vector:\n\n[]\n\n7B Analysing motion through graphs\n\nDistance versus displacement\n\n-  Distance is the length of a motion path, displacement is the shortest distance between origin (start) and end point.\n\nAverage velocity and average speed\n\n-  [Text Description automatically generated]\n\nAcceleration\n\n-  Acceleration is the rate of change of velocity. The SI unit of acceleration is metres per second per second (m s^(–2)).\n\n[Text Description automatically generated]\n\nMotion graphs\n\n-  The gradient of a straight line plot on a graph can be calculated as the rise divided by the run.\n\n-  If the plotline goes up with time, it is positive\n\n-  If the plotline goes down with time, it is negative\n\n-  If the plotline is flat, the gradient is zero.\n\n-  What the gradient represents can be determined from the axis labels and units. In a displacement-time graph, the gradient is displacement (m) over time (s), which is velocity (m/s).\n\nType of graph  What different aspects represent\nDisplacement-time  Gradient represents velocity\n[]\nSlope up (positive gradient) represents motion away from origin\n\nSlope down (negative gradient) represents motion towards the origin\n\nSteeper gradient represents greater velocity\n\nFlat line represents no motion (immobility)\nVelocity-time  Gradient represents acceleration\n[][]\nFlat line represents an unchanging velocity (no acceleration).\n[]\nA vertical line represents instaneous acceleration (unrealistic but can be ignored)\n\nPositive velocities (above the horizontal axis) represent motion away from the origin\n\nNegative velocities (below the horizontal axis) represent motion towards the origin\n\nArea under the graph represents change in displacement.\nAcceleration-time  A flat line represents constant acceleration.\n[]\nPositive acceleration means going faster.\n\nNegative acceleration means slowing down.\n\nThe area under an acceleration–time graph is the change in velocity as:\n\narea = Δv = at\n\nInstantaneous velocity\n\n-  In a displacement time graph, instantaneous velocity at a point in time is the value of the gradient to the tangent to plotline at that point in time. If an object is accelerating:\n\n[]\n\n7C Analysing straight-line motion with uniform acceleration\n\nFormulas for constant acceleration\n\nv = u + at\n\nv² = u² + 2as\n\ns = ½ (u + v)t, s = ut + ½ at², s = vt – ½ at²\n\n[]\n\n-  The figure shows that even though the cyclist has an ever-changing velocity over time, they will cover the same distance in 5 seconds as a cyclist moving at a constant velocity of\n5 m s^(–1).\n\nHorizontal motion\n\nWhen solving horizontal motion questions about objects with constant straight-line acceleration:\n\n-  draw a diagram of the situation and put all the information that you have on the diagram in SI units\n\n-  choose an appropriate equation based on the data that you have and the data that you need. Remember that when vectors act in opposite directions, set one direction as positive; the opposite direction will then have a negative sign (except for t)\n\n-  round your final answer to three significant figures. Include units in your answer and, if your answer is a vector, a direction as well.\n\nTips for vertical motion questions\n\n-  Ignoring air resistance, objects with mass near the surface of the Earth free fall with constant acceleration of 9.8 m s⁻² down.\n\n-  Gravity is usually given a negative sign in an equation of motion and velocities directed upwards are given a positive sign.\n\n-  An object that is thrown upwards will slow down until it comes to a stop; gravity will then begin to bring the object back down to Earth.\n\n-  The stationary point of an object that is projected up in the air is its maximum height and half of the total flight time if the object lands at the same level that it was launched.",
+ "summary_src": {
+  "file": "Ch07 Summary.docx"
+ },
+ "test": {
+  "file": "Chapter 7 Test.docx",
+  "questions": 18,
+  "marks": 46,
+  "note": "TEACHER ONLY. 10 multiple-choice + 8 short-answer questions; not indexed question by question. Answers appear to be in the same file (second half)."
+ },
+ "curated_resources": {
+  "file": "Ch07 Curated internet resources.docx",
+  "note": "not indexed"
+ },
+ "notes": "Review question answers transcribed from 'Chapter 7 Suggested responses.docx', whose maths are equation objects (rendered via LibreOffice and read visually). Source errors kept verbatim: RQ11c '15.96 ss'; RQ18b writes (-9.8)^2; RQ18c writes '3.75 ±10.6'; RQ19b says 'in metres per second'. Checklist gives no review question for RQ10: tagged 7B.5 (judgement). 7C.1 criterion text in the checklist ends with an equation image; the three s formulas were filled from the study design (Formula 7C–1)."
+}

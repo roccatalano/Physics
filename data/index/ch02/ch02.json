@@ -1,0 +1,870 @@
+{
+ "chapter": 2,
+ "title": "Thermal energy and electromagnetic radiation",
+ "unit": 1,
+ "aos": 1,
+ "sections": [
+  "2A",
+  "2B"
+ ],
+ "criteria": [
+  {
+   "id": "2A.1",
+   "text": "Describe thermal energy as the sum of the random kinetic energy and potential energy of the atoms and molecules of an object or system",
+   "section": "2A",
+   "review_qs": [
+    "2"
+   ],
+   "exit_candidates": [
+    "CH2-RQ2",
+    "2A-CI1.3"
+   ]
+  },
+  {
+   "id": "2A.2",
+   "text": "Understand that increases and decreases of temperature are related to increases and decreases of thermal energy in a system",
+   "section": "2A",
+   "review_qs": [
+    "3"
+   ],
+   "exit_candidates": [
+    "CH2-RQ3",
+    "WS2A-4"
+   ]
+  },
+  {
+   "id": "2A.3",
+   "text": "Convert temperatures between Celsius and kelvin",
+   "section": "2A",
+   "review_qs": [
+    "1"
+   ],
+   "exit_candidates": [
+    "CH2-RQ1",
+    "2A-SQ1",
+    "2A-CI1.2"
+   ]
+  },
+  {
+   "id": "2A.4",
+   "text": "Analyse qualitatively thermal energy transfers in terms of conduction, convection, radiation and evaporation using a particle model",
+   "section": "2A",
+   "review_qs": [
+    "4",
+    "5",
+    "13",
+    "14",
+    "15",
+    "16",
+    "20"
+   ],
+   "exit_candidates": [
+    "CH2-RQ4",
+    "CH2-RQ5",
+    "CH2-RQ16",
+    "2A-SQ3"
+   ]
+  },
+  {
+   "id": "2A.5",
+   "text": "Define specific heat capacity, $c$",
+   "section": "2A",
+   "review_qs": [
+    "6"
+   ],
+   "exit_candidates": [
+    "CH2-RQ6"
+   ]
+  },
+  {
+   "id": "2A.6",
+   "text": "Define specific latent heats of vaporisation (condensation) and fusion (melting), $L$",
+   "section": "2A",
+   "review_qs": [
+    "7",
+    "8"
+   ],
+   "exit_candidates": [
+    "CH2-RQ7",
+    "CH2-RQ8"
+   ]
+  },
+  {
+   "id": "2A.7",
+   "text": "Carry out practical investigations involving changing the temperature or state of a substance",
+   "section": "2A",
+   "review_qs": [
+    "22",
+    "23"
+   ],
+   "exit_candidates": []
+  },
+  {
+   "id": "2A.8",
+   "text": "Analyse quantitatively the thermal energy changes associated with temperature and state changes",
+   "section": "2A",
+   "review_qs": [
+    "9",
+    "17",
+    "18"
+   ],
+   "exit_candidates": [
+    "CH2-RQ9",
+    "CH2-RQ18c"
+   ]
+  },
+  {
+   "id": "2A.9",
+   "text": "Use the equation $Q = mc\\Delta T$ to calculate the energy needed to raise the temperature of a substance",
+   "section": "2A",
+   "review_qs": [
+    "17"
+   ],
+   "exit_candidates": [
+    "CH2-RQ18b",
+    "WS2A-9a",
+    "2A-CI3.3"
+   ]
+  },
+  {
+   "id": "2A.10",
+   "text": "Use the equation $Q = mL$ to calculate the energy needed to change the state of a substance",
+   "section": "2A",
+   "review_qs": [
+    "18"
+   ],
+   "exit_candidates": [
+    "CH2-RQ18a",
+    "WS2A-9b",
+    "2A-CI3.2"
+   ]
+  },
+  {
+   "id": "2B.1",
+   "text": "Describe the general features of a blackbody object",
+   "section": "2B",
+   "review_qs": [
+    "10",
+    "11"
+   ],
+   "exit_candidates": [
+    "CH2-RQ10",
+    "CH2-RQ11",
+    "2B-SQ1"
+   ]
+  },
+  {
+   "id": "2B.2",
+   "text": "Use Wien’s law ($\\lambda_{max}T = 2.90 \\times 10^{-3}$ m K) to calculate the peak emitting wavelengths of objects modelled as blackbodies",
+   "section": "2B",
+   "review_qs": [
+    "12",
+    "19"
+   ],
+   "exit_candidates": [
+    "CH2-RQ12",
+    "CH2-RQ19c",
+    "2B-SQ5a"
+   ]
+  },
+  {
+   "id": "2B.3",
+   "text": "Use graphical methods to compare total energy radiated by objects modelled as blackbodies",
+   "section": "2B",
+   "review_qs": [
+    "19"
+   ],
+   "exit_candidates": [
+    "CH2-RQ19d",
+    "2B-SQ4"
+   ]
+  },
+  {
+   "id": "2B.4",
+   "text": "Identify the way concepts of thermal energy and electromagnetic radiation can help understanding of global warming and climate change",
+   "section": "2B",
+   "review_qs": [
+    "21"
+   ],
+   "exit_candidates": [
+    "CH2-RQ13",
+    "CH2-RQ21e",
+    "2B-CI2.3"
+   ]
+  }
+ ],
+ "review_questions": [
+  {
+   "id": "CH2-RQ1",
+   "n": "1",
+   "question": "Which of the following are correct (to within one degree)?",
+   "options": [
+    "A. 100 Celsius degrees are equal to 273 kelvin",
+    "B. –273 K is equal to 100°C",
+    "C. –273 K is equal to 0°C",
+    "D. 100 K is equal to –173°"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "2A.3"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 31,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ2",
+   "n": "2",
+   "question": "Which of the following statements about thermal energy is correct?",
+   "options": [
+    "A. The thermal energy of an object can be increased by increasing its thermal conductivity.",
+    "B. Increasing the total potential energy of an object’s molecules increases its thermal energy.",
+    "C. Increasing the heat capacity of an object will increase its thermal energy.",
+    "D. Changing the temperature of an object is unlikely to change its thermal energy."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "2A.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 31,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ3",
+   "n": "3",
+   "question": "Which of the following changes will increase the temperature of an object?",
+   "options": [
+    "A. increasing its heat capacity",
+    "B. increasing the random kinetic energy of its molecules",
+    "C. decreasing its thermal conductivity",
+    "D. converting the potential energy of some of its molecules to random kinetic energy"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "criteria": [
+    "2A.2"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 31,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ4",
+   "n": "4",
+   "question": "A Coolgardie safe is a mesh box covered with damp hessian sacking. The interior of the mesh box keeps food cool because",
+   "options": [
+    "A. evaporation of water from the damp hessian sacking removes thermal energy from the box.",
+    "B. the water in the hessian sacking conducts thermal energy away from the box.",
+    "C. a convection cell is set up in the mesh box, keeping it cool.",
+    "D. the evaporating water from the sacking raises thermal energy away from the safe."
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "criteria": [
+    "2A.4"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 31,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ5",
+   "n": "5",
+   "question": "Many modern houses, particularly in cooler climates, use double-glazed windows to reduce thermal energy losses through them. A basic type comprises two panes of glass that are separated by a thin layer of air.\nGlass is a poor insulator, but these windows are used because",
+   "options": [
+    "A. two thicknesses of glass give double the insulation of one layer.",
+    "B. air and inert gases are good insulators provided convection can be minimised.",
+    "C. evaporation losses are minimised by using air in the space between the glass panes.",
+    "D. they are good sound insulators when noise pollution is a problem."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "criteria": [
+    "2A.4"
+   ],
+   "parts": [],
+   "img": [
+    "img/ch02_RQ5.png"
+   ],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 31,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ6",
+   "n": "6",
+   "question": "Which of the following is the best definition of the specific heat capacity of an object?",
+   "options": [
+    "A. the energy required to raise the temperature of a body by 1 K",
+    "B. the energy required to raise the temperature of a body by 1 K in 1 s",
+    "C. the energy per kg required to raise the temperature of a body by 1 K in 1 s",
+    "D. the energy per kg required to raise the temperature of a body by 1 K"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "2A.5"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 31,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ7",
+   "n": "7",
+   "question": "Which of the following is the best definition of the specific latent heat of vaporisation?",
+   "options": [
+    "A. the energy required to vaporise 1 kg of the material involved",
+    "B. the energy required to vaporise 1 kg of the material involved in 1 s",
+    "C. the energy required to raise the temperature enough to vaporise 1 kg of the material involved",
+    "D. the energy required to raise the temperature enough to vaporise 1 kg of the material involved in 1 s"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "2A.6"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 31,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ8",
+   "n": "8",
+   "question": "Which of the following is the best definition of the specific latent heat of fusion?",
+   "options": [
+    "A. the energy required to melt 1 kg of the material involved in 1 s",
+    "B. the energy required to melt 1 kg of the material involved",
+    "C. the energy required to raise the temperature enough to melt 1 kg of the material involved",
+    "D. the energy required to raise the temperature enough to melt 1 kg of the material involved in 1 s"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "2A.6"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 32,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ9",
+   "n": "9",
+   "question": "A 250 W immersion heater is used to bring 0.50 kg of water at 20°C to the boil. The specific heat capacity of water is 4190 J kg$^{-1}$ K$^{-1}$. Ignoring thermal energy losses, and the energy to heat the heater itself, the time that this would take is closest to",
+   "options": [
+    "A. 11 minutes.",
+    "B. 14 minutes.",
+    "C. 22 minutes.",
+    "D. 28 minutes."
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "2A.8",
+    "2A.9"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 32,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ10",
+   "n": "10",
+   "question": "A blackbody can be identified by the",
+   "options": [
+    "A. longest wavelength that it emits.",
+    "B. shape of the emission intensity vs wavelength curve.",
+    "C. material it is made of.",
+    "D. shape of the material it is made of."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "2B.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 32,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ11",
+   "n": "11",
+   "question": "A blackbody is an object that",
+   "options": [
+    "A. is painted with black paint.",
+    "B. is only visible when black light shines on it",
+    "C. does not reflect any frequencies of electromagnetic radiation",
+    "D. only emits certain electromagnetic radiation frequencies"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "2B.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 32,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ12",
+   "n": "12",
+   "question": "A temperature sensor measures the forehead of a person’s temperature to be 36.6°C.\nUse Wien’s law to estimate which of the following wavelengths is closest to the peak wavelength.",
+   "options": [
+    "A. 9.4 μm",
+    "B. 9.7 μm",
+    "C. 11 μm",
+    "D. 79 μm"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "2B.2"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 32,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ13",
+   "n": "13",
+   "question": "The surface of Earth radiates about 400 W m$^{-2}$ of infrared radiation. Which of the following best describes what happens to this radiation?",
+   "options": [
+    "A. About 10% of this radiation is absorbed by greenhouse gases; the rest escapes into space.",
+    "B. About 10% of this radiation escapes into space; the rest is converted into visible wavelengths.",
+    "C. About 10% of this radiation escapes into space; the rest is absorbed by the atmosphere.",
+    "D. Almost all of this radiation is reflected back to the surface."
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "2A.4",
+    "2B.4"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 32,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ14",
+   "n": "14",
+   "question": "A vacuum flask can be used to keep drinks hot or cold. Explain the ways in which these flasks reduce heat transfer by convection, conduction, radiation and evaporation. (8 marks)",
+   "options": [],
+   "answer": "Heat transfer by convection and conduction is prevented across the vacuum space in the flask walls. The silvered surfaces reduce radiation losses considerably, there can be some conduction losses through the plastic cap, but these are minimal as plastic is a good insulator. The bottle is also sealed, which prevents heat transfer by evaporation.",
+   "marks": 8,
+   "kind": "explain",
+   "size": "long",
+   "criteria": [
+    "2A.4"
+   ],
+   "parts": [],
+   "img": [
+    "img/ch02_RQ14.png"
+   ],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 33,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ15",
+   "n": "15",
+   "question": "A cup of freshly brewed coffee sits on a table. Describe the various ways in which heat transfers occur from the hot coffee to the environment. (4 marks)",
+   "options": [],
+   "answer": "There will be conduction through the walls of the cup, evaporation from the top surface of the coffee, radiation from the sides of the cup and from the surface of the coffee, and some convection in the air near the sides of the cup and near the coffee surface. Heat will be lost from the surface due to evaporative cooling.",
+   "marks": 4,
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "2A.4"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 33,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ16",
+   "n": "16",
+   "question": "A silver spoon is placed in a hot cup of tea. After a short time, the handle of the spoon becomes much warmer. Describe the mechanism by which thermal energy is transferred along the spoon. (2 marks)",
+   "options": [],
+   "answer": "Thermal energy will be transferred by the interactions of loose electrons, primarily by conduction along the metal of the spoon.",
+   "marks": 2,
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "2A.4"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 33,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ17",
+   "n": "17",
+   "question": "Students measure the specific heat capacity of an unknown alloy by immersing 500 g of the alloy at room temperature (20°C) in an insulated container with 500 g of water at 80°C and waiting until the water and the alloy are at the same temperature. They measure the final temperature as 70°C. Ignoring thermal losses to the environment, calculate the specific heat capacity of the alloy. (3 marks)",
+   "options": [],
+   "answer": "Equilibrium is reached when thermal energy gained by the alloy equals thermal energy lost by the water:\n$m_{alloy}c_{alloy}\\Delta T_{alloy} = m_{water}c_{water}\\Delta T_{water}$\nwhere: $m_{alloy} = 0.5$ kg, $m_{water} = 0.5$ kg, $\\Delta T_{alloy} = 50$ K, $\\Delta T_{water} = 10$ K, $c_{water} = 4190$ J kg$^{-1}$ K$^{-1}$\nAnswer is 838 J kg$^{-1}$ K$^{-1}$.",
+   "marks": 3,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "2A.8",
+    "2A.9"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 33,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ18",
+   "n": "18",
+   "question": "Students observe a dish of ice melting in the sunlight. There is 250 g of ice; it is initially at 0°C. They stop the observation when all the ice has turned to water at 15°C.",
+   "options": [],
+   "answer": null,
+   "marks": 6,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "2A.8",
+    "2A.10",
+    "2A.9"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "How much energy in kJ is required to convert the ice at 0°C to water at 0°C? (2 marks)",
+     "answer": "$Q = m_{ice}L_{ice} = 0.250 \\times 334\\,000 = 83.5$ kJ",
+     "size": "quick",
+     "criteria": [
+      "2A.10"
+     ]
+    },
+    {
+     "n": "b",
+     "question": "How much energy is required to raise the 250 g of water at 0°C to 15°C? (2 marks)",
+     "answer": "$Q = m_{water}c_{water}\\Delta T = 0.250 \\times 4190 \\times 15 = 15.7$ kJ",
+     "size": "quick",
+     "criteria": [
+      "2A.9"
+     ]
+    },
+    {
+     "n": "c",
+     "question": "The students use their results to estimate the average solar radiation power falling on the dish. Neglecting thermal energy losses, calculate their result in W if the time taken is 10 min. (2 marks)",
+     "answer": "$P = \\frac{Q}{t} = \\frac{(83\\,500 + 15\\,700)}{600} = 165$ W",
+     "size": "quick",
+     "criteria": [
+      "2A.8"
+     ]
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 33,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ19",
+   "n": "19",
+   "question": "The idealised spectra of three stars, Spica, the Sun and Antares are shown below. The units on the $y$-axis are relative emission intensities. The three stars can be modelled as blackbodies.",
+   "options": [],
+   "answer": null,
+   "marks": 8,
+   "kind": "graph",
+   "size": "long",
+   "criteria": [
+    "2B.2",
+    "2B.3"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Estimate from the graph the peak wavelengths of Spica and Antares. (1 mark)",
+     "answer": "Spica 130 nm; Antares 850 nm",
+     "size": "quick",
+     "criteria": [
+      "2B.2"
+     ]
+    },
+    {
+     "n": "b",
+     "question": "Use Wien's law and the data for the Sun to estimate the constant in Wien's law. (2 marks)",
+     "answer": "Use Wien’s law: $b = \\lambda_{max}T = 5000 \\times 10^{-10} \\times 5800 = 0.0029$",
+     "size": "quick",
+     "criteria": [
+      "2B.2"
+     ]
+    },
+    {
+     "n": "c",
+     "question": "Estimate the temperature of Spica and Antares. (4 marks)",
+     "answer": "Spica: 22 300 K; Antares: 3410 K (apply Wien’s law)",
+     "size": "medium",
+     "criteria": [
+      "2B.2"
+     ]
+    },
+    {
+     "n": "d",
+     "question": "Rank the three stars in order of increasing total energy emission. (1 mark)",
+     "answer": "Spica > Sun > Antares (increasing area under the graph)",
+     "size": "quick",
+     "criteria": [
+      "2B.3"
+     ]
+    }
+   ],
+   "img": [
+    "img/ch02_RQ19.png"
+   ],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 33,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ20",
+   "n": "20",
+   "question": "Summarise briefly why the inside of a car warms up on a cool but sunny day if the windows are up. (3 marks)",
+   "options": [],
+   "answer": "The inside starts to warm when infrared and visible radiation enters through windows and is absorbed by surfaces within the car. These materials inside the car re-radiate, at a much longer wavelength (Wien's law). This is reflected back into the car because the glass windows are nearly opaque to long infrared frequencies. The temperature keeps rising until equilibrium is achieved by thermal energy leaving the interior of the car (by conduction, convection and radiation).",
+   "marks": 3,
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "2A.4",
+    "2B.4"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 34,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ21",
+   "n": "21",
+   "question": "The diagram below shows some approximate data on Earth’s global energy flows in 2009.\nIdentify on the diagram where the following physical processes occur.",
+   "options": [],
+   "answer": null,
+   "marks": 5,
+   "kind": "graph",
+   "size": "long",
+   "criteria": [
+    "2B.4"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "reflection of electromagnetic radiation (1 mark)",
+     "answer": "reflection from clouds, atmosphere and surface on left of diagram",
+     "size": "quick",
+     "criteria": [
+      "2B.4"
+     ]
+    },
+    {
+     "n": "b",
+     "question": "release of latent heat of evaporation (1 mark)",
+     "answer": "centre of diagram, labelled ‘Evapotranspiration’",
+     "size": "quick",
+     "criteria": [
+      "2B.4"
+     ]
+    },
+    {
+     "n": "c",
+     "question": "convection currents involving thermals (1 mark)",
+     "answer": "centre of diagram, labelled ‘Thermals’",
+     "size": "quick",
+     "criteria": [
+      "2B.4"
+     ]
+    },
+    {
+     "n": "d",
+     "question": "IR radiation from Earth’s surface (1 mark)",
+     "answer": "right side of diagram, labelled ‘Surface radiation’",
+     "size": "quick",
+     "criteria": [
+      "2B.4"
+     ]
+    },
+    {
+     "n": "e",
+     "question": "IR radiation from gases in the atmosphere (1 mark)",
+     "answer": "right side of diagram, labelled ‘Back radiation’",
+     "size": "quick",
+     "criteria": [
+      "2B.4"
+     ]
+    }
+   ],
+   "img": [
+    "img/ch02_RQ21.png"
+   ],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 34,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ22",
+   "n": "22",
+   "question": "Describe a practical investigation using simple laboratory equipment that could estimate the specific heat capacity of aluminium. (5 marks)",
+   "options": [],
+   "answer": "Various methods are possible. One way is to combine hot water at 70°C in an insulated container with small, room temperature aluminium blocks and measure the equilibrium temperature. Then use the method of mixtures to deduce the specific heat capacity of the aluminium. The specific heat capacity of water would need to be assumed. Consideration would need to be given to thermal energy losses.",
+   "marks": 5,
+   "kind": "explain",
+   "size": "long",
+   "criteria": [
+    "2A.7"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 34,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "CH2-RQ23",
+   "n": "23",
+   "question": "Describe a practical investigation using simple laboratory equipment that could estimate the specific latent heat of ice. (5 marks)",
+   "options": [],
+   "answer": "Various methods are possible. One way is to combine hot water at 40°C in an insulated container with ice blocks at –3°C (typically) from a freezer and measure the equilibrium temperature. Then use the method of mixtures to deduce the specific latent heat of ice. The specific heat capacity of both water and ice would need to be assumed. Consideration would need to be given to thermal energy losses.",
+   "marks": 5,
+   "kind": "explain",
+   "size": "long",
+   "criteria": [
+    "2A.7"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch02 Review questions.docx",
+    "page": 34,
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  }
+ ],
+ "summary": "**Chapter 2 Summary**\n\n**2A Thermal energy**\n\n**Temperature**\n\n-   Temperature is a measure of how hot a body is and is measured by\n    thermometers.\n\n-   Two temperature scales commonly used in physics are the Celsius and\n    kelvin scales.\n\n-   Celsius temperatures are measured in Celsius degrees (°C); kelvin\n    temperatures are measured in kelvins (K).\n\n-   0 K is the lowest possible temperature and is called absolute zero;\n    it is equal to -273.15 °C.\n\n-   1 K is equal in size to 1°C.\n\n-   To convert temperatures in Celsius degrees to kelvins add 273.15.\n\n-   To convert kelvins to Celsius degrees, subtract 273.15.\n\n**Connection between the thermal energy of a body and its temperature**\n\n-   The thermal energy of a body is the sum of all the random potential\n    and kinetic energies of its particles.\n\n-   The temperature of a body is the measure of the average kinetic\n    energy of its particles.\n\n-   When thermal energy moves from one body to another it moves from\n    higher to lower temperatures (from hotter to cooler bodies).\n\n-   The movement or (flow) of thermal energy can be described as 'heat'.\n\n-   Note that 'heat' is not a property of a body; it only describes the\n    amount of thermal energy transferred.\n\n    **Thermal energy transfer by conduction**\n\n-   Most significant method of thermal energy transfer in solids.\n\n-   Particles of solids are closely packed, so vibrations caused by\n    heating cause nearby particles to vibrate, transferring the thermal\n    energy from hotter to cooler parts of the substance.\n\n-   The rate at which conduction occurs depends on the substance\n    involved, some conduct better than others.\n\n-   Metals are generally good conductors, due to their many loosely\n    bound outer electrons to collide freely throughout the metal.\n\n-   Non-metals do not have as many loosely bound electrons and are\n    generally poor conductors and hence good insulators.\n\n-   Gases are very poor conductors because their particles are so far\n    apart, and collisions are rare.\n\n    **Thermal energy transfer by convection**\n\n-   Most significant method of thermal energy transfer in liquids and\n    gases.\n\n-   It is the process of energy transfer through the bodily movement of\n    fluids or gases.\n\n-   It can be natural, driven by warmer fluid rising and cooler fluid\n    falling due to density differences, or it can be forced by fans.\n\n    \n    \n\n    Natural convection Forced convection\n\n-   Sea and land breezes are examples of natural convection.\n\n    **Thermal energy transfer by electromagnetic radiation**\n\n-   Thermal energy from the Sun reaches Earth after travelling through\n    space\n\n-   The Sun's electromagnetic spectrum is 49% infra-red, 43% visible and\n    7% ultraviolet.\n\n-   Some of this radiation is reflected, but most is absorbed and\n    transformed to thermal energy.\n\n-   All objects with *T* \\> 0 K emit electromagnetic radiation\n\n-   Earth re-radiates electromagnetic radiation at long wavelength\n    infrared (IR)\n\n-   The hotter an object is, the shorter the wavelength of this\n    radiation.\n\n-   Once objects reach *T* = 700 K objects become 'red hot' and the\n    radiation becomes visible\n\n-   Even below this temperature, significant amounts of radiated energy\n    can be felt.\n\n-   The nature of the radiating surface affects how well objects emit\n    radiation.\n\n-   Perfect radiators are called 'blackbody' radiators; they are also\n    perfect absorbers.\n\n-   For the warming effect of IR to occur, it has to be absorbed and\n    then transformed into thermal energy; the nature of the surface\n    affects this.\n\n-   Shiny and white surfaces reflect most radiation, black and matt\n    surfaces are more likely to absorb radiated energy\n\n**\\\n**\n\n**Evaporative cooling**\n\n-   Evaporative cooling of liquids occurs when high energy molecules\n    evaporate from a liquid surface and carry away energy, reducing its\n    temperature.\n\n-   The process can be described using a simple kinetic energy model.\n\n-   In the liquid molecules move freely around, colliding with each\n    other, resulting in a range of kinetic energies.\n\n-   Some molecules will have a higher kinetic energy than the average.\n\n-   If this occurs near a surface some of these with higher energy will\n    have enough to escape from the liquid and move into air.\n\n-   Now in a gas state they can move away from the liquid; they have\n    evaporated from the liquid.\n\n-   They carry with them the extra energy obtained from collisions in\n    the liquid.\n\n-   This means that evaporating molecules reduce the thermal energy of\n    the liquid and lower its temperature.\n\n-   Coolgardie safes and evaporative air-conditioning both make use of\n    this effect.\n\n    **Energy to change the temperature of an object**\n\n-   To change the temperature of an object, its thermal energy has to be\n    changed.\n\n-   The amount required to be added or taken away depends on the\n    temperature change and the substance involved.\n\n-   The formula involved is given by *Q = mc*∆*T* where *Q* is the\n    thermal energy change, *m* is the mass involved, ∆*T* is the\n    temperature change and *c* is the specific heat capacity of the\n    substance.\n\n-   The units involved are kg (for *m*), J (for *Q*), K (for ∆*T)* and J\n    kg^--1^ K^-1^ (for *c*).\n\n-   Water has a high specific heat of 4190 J kg^--1^ K^­1^; higher than\n    most other substances.\n\n    **Energy to change the state of a substance**\n\n-   When substances change from one state (solid, liquid or gas) to\n    another, energy is absorbed or released.\n\n    -   For example, when water boils and changes into steam, energy\n        must be absorbed; and when the reverse happens, energy is\n        released.\n\n-   When ice melts, energy is absorbed and when water freezes energy is\n    released.\n\n-   The amount of energy absorbed or released is called the specific\n    latent heat of vaporisation (liquid to gas) or the specific latent\n    heat of fusion (liquid to solid).\n\n-   Note that the specific latent heat of fusion equals the specific\n    latent heat of melting, and the specific latent heat of vaporisation\n    equals the specific latent heat of condensation.\n\n-   The units of specific latent heat are J kg^--1^.\n\n-   Note that no temperature change is involved in a change of state.\n\n    \n\n    Idealised heating and change of state graph from ice to steam\n\n**2B Thermal energy, electromagnetic radiation and global warming**\n\n**Solar radiation and Earth's temperature**\n\n-   The surface of Earth is almost entirely warmed by electromagnetic\n    energy from the Sun.\n\n-   Understanding the effect of this solar energy requires us to\n    understand the make-up of this solar radiation.\n\nSolar radiation spectrum\n\n**Blackbody radiators**\n\n-   The Sun can be modelled as an ideal blackbody radiator.\n\n-   All objects above 0 K emit electromagnetic radiation; the energy\n    comes from their thermal energy .\n\n-   Some bodies emit radiation more efficiently than others.\n\n-   When an object emits all frequencies produced by its thermal energy\n    it is called a *blackbody*, and the radiation produced is called\n    *blackbody radiation*.\n\n-   Blackbodies also absorb all frequencies of radiation that fall on\n    it.\n\n![Diagram Description automatically\ngenerated](/tmp/c2/media/Ch02 Summary/media/image6.png){width=\"3.842273622047244in\"\nheight=\"2.3in\"}\n\n-   The shape of the graphs above varies with *T*\n\n-   Two blackbodies at the same *T* will have the same graphs, even if\n    made of different materials.\n\n-   Total emitted energy by a blackbody is the area under the graph.\n\n    **Wien's law**\n\n-   Note the graphs show that the peak wavelength shortens as *T*\n    increases.\n\n-   The peak wavelength is related to *T* by *Wien's law*; *λ*~max~*T* =\n    *b* where *b* = 0.002898 m K.\n\n-   ![Chart Description automatically\n    generated](/tmp/c2/media/Ch02 Summary/media/image7.png){width=\"4.670138888888889in\"\n    height=\"3.55in\"}Wien's law can be used to estimate the temperature\n    of distant stars from *λ*~max~.\n\n    **Global warming**\n\n-   As well as receiving radiation, Earth re-radiates energy into space,\n    as it has *T* \\> 0 K.\n\n-   Modelling Earth as a blackbody with T = 15° C gives the radiation\n    graph on the right for both Earth and the Sun (the Sun graph is\n    scaled down).\n\n-   Life on Earth depends on equilibrium between energy received from\n    the Sun and the energy that Earth reflects and radiates into space.\n\n-   If this equilibrium is disturbed, the planet either warms or cools.\n\n-   At present the planet is undergoing global warming, as shown in the\n    graph from NASA:\n\n![Chart, line chart, histogram Description automatically\ngenerated](/tmp/c2/media/Ch02 Summary/media/image8.png){width=\"5.003853893263342in\"\nheight=\"3.15in\"}\n\nGlobal temperatures from 1880 to 2020\n\n-   Global warming of only a small amount, causes significant changes in\n    Earth's climate.\n\n-   The term 'climate' covers local, regional and global average weather\n    patterns.\n\n-   A warming climate will raise sea levels, glacier ice loss, more\n    frequent extreme weather events such as cyclones, heatwaves,\n    bushfires, droughts and floods.\n\n-   Patterns of rainfall can also shift, making land more or less\n    suitable for agriculture and human/animal habitats.\n\n**Earth's energy budget**\n\n-   Almost all the energy input to the Earth's system comes from solar\n    radiation (a tiny amount comes from Earth's interior).\n\n-   Data from NASA outlines what happens to the incoming solar radiation\n    and the infrared radiation emitted by Earth.\n\n-   On average, Earth receives 340 W m^--2^ from the sun; about 100 W\n    m^--2^ is reflected back into space.\n\n-   The rest (\\~ 240 W m^--2^) is absorbed by the atmosphere and the\n    surface and converted to thermal energy.\n\n-   The atmosphere also receives energy from thermal convection cells,\n    the latent heat of evaporation and infrared radiation from Earth's\n    surface.\n\n-   Earth radiates an almost equal amount of infrared radiation back\n    into space, but a small residual of about 0.8 W m^--2^ contributes\n    to global warming, mostly stored in warmer oceans.\n\n-   This residual has been growing according to NASA.\n\n-   If the Earth's system is unbalanced like this, its temperature will\n    increase to restore balance.\n\n-   Earth's infrared emissions are complex. The surface radiates about\n    400 W m^--2^, of which about 40 W m^--2^ lie in an atmospheric\n    'window' and escape to space.\n\n-   Most of the infrared, however, is absorbed by the atmosphere --\n    particularly by the 'greenhouse' gases like H~2~O, CH~4~ and CO~2~,\n    which then re-radiate much back towards the surface.\n\n-   If the percentage of these gases in the atmosphere increases, this\n    re-radiation will also grow, increasing the residual energy, and\n    consequently global warming.",
+ "test": {
+  "file": "Chapter 2 Test.docx",
+  "questions": 13,
+  "marks": 22,
+  "note": "not indexed question by question (10 MC + 3 short answer, answers included in the docx)"
+ },
+ "notes": "Suggested responses are a PDF (TEACHER ONLY/Chapter 2 Suggested responses.pdf); fraction answers (2B CI1.1, 2B SQ5a, RQ18c) were read from the rendered page. RQ17 text taken from the textbook (the review docx omits 'with 500 g of water'). 2A.7 has no exit candidate (only long prac-design questions RQ22, RQ23). Summary docx images (8) not extracted. Curated internet resources docx not indexed."
+}

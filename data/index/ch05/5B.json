@@ -1,0 +1,1236 @@
+{
+ "code": "5B",
+ "title": "Electrical energy and potential difference",
+ "chapter": 5,
+ "unit": 1,
+ "aos": 3,
+ "study_design": [
+  "Apply concepts of charge (Q), electric current (I), potential difference (V), energy (E) and power (P), in electric circuits",
+  "Analyse and evaluate different analogies used to describe electric current and potential difference",
+  "Investigate and analyse theoretically and practically electric circuits using the relationships: $I = \\frac{Q}{t}$, $V = \\frac{E}{Q}$, $P = \\frac{E}{t} = VI$",
+  "Justify the use of selected meters (ammeter, voltmeter, multimeter) in circuits"
+ ],
+ "criteria": [
+  "5B.1",
+  "5B.2",
+  "5B.3",
+  "5B.4",
+  "5B.5"
+ ],
+ "glossary": [
+  {
+   "id": "5B-G1",
+   "term": "Electric cell",
+   "def": "a device that stores chemical energy, and can produce an electric current when a circuit is created between the two terminals of the cell",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "5B-G2",
+   "term": "Electric generator",
+   "def": "a device that converts kinetic energy into electrical energy; usually a coil rotating in a magnetic field.",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "5B-G3",
+   "term": "Electrical potential energy",
+   "def": "potential energy due to the concentration of charge in part of an electric circuit",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 25
+   }
+  },
+  {
+   "id": "5B-G4",
+   "term": "Potential difference",
+   "def": "the difference in electric potential between two points in a circuit; measured by a voltmeter when connected across a circuit component. A battery creates a potential difference across a circuit, which causes current to flow.",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "5B-G5",
+   "term": "Volt (V)",
+   "def": "the SI unit of measurement for potential difference",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "5B-G6",
+   "term": "Joule (J)",
+   "def": "the SI unit of measurement for energy",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "5B-G7",
+   "term": "Voltmeter",
+   "def": "an instrument used to measure potential difference (in V) between two points in a circuit",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 35
+   }
+  },
+  {
+   "id": "5B-G8",
+   "term": "Parallel",
+   "def": "when two components are connected, creating alternative paths around an electric circuit",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 35
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F5B-1",
+   "name": "Formula 5B–1 Potential difference",
+   "latex": "V = \\frac{E}{Q} \\quad (E = QV)",
+   "where": [
+    {
+     "sym": "V",
+     "meaning": "Potential difference",
+     "unit": "V"
+    },
+    {
+     "sym": "E",
+     "meaning": "Electrical potential energy",
+     "unit": "J"
+    },
+    {
+     "sym": "Q",
+     "meaning": "Amount of charge that passes through the battery",
+     "unit": "C"
+    }
+   ],
+   "criteria": [
+    "5B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "F5B-2",
+   "name": "Formula 5B–2 Electrical energy",
+   "latex": "E = VIt",
+   "where": [
+    {
+     "sym": "E",
+     "meaning": "Electrical energy",
+     "unit": "J"
+    },
+    {
+     "sym": "V",
+     "meaning": "Potential difference",
+     "unit": "V"
+    },
+    {
+     "sym": "I",
+     "meaning": "Current",
+     "unit": "A"
+    },
+    {
+     "sym": "t",
+     "meaning": "Time",
+     "unit": "s"
+    }
+   ],
+   "criteria": [
+    "5B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 37
+   }
+  }
+ ],
+ "engage": {
+  "heading": "News flash: piezoelectric materials measure the force of an insect bite",
+  "text": "There are some materials (some types of quartz crystal, tourmaline, rochelle salt and nano materials ZnO and BaTi3 to mention a few) that separate charge to produce a potential difference when they are squeezed or compressed under pressure. If there is a complete circuit between the ends of this piezoelectric crystal, a current will flow. While no useful battery or generator has yet been developed using piezoelectric materials, they are widely used in microphones and have been put to good use as sensors in a range of experiments. In 2021, German researcher Peter Rühr reported the results of an experiment to measure the strength of the jaws of hundreds of insects collected from Australia, China, Europe and Panama between 2018 and 2021. Rühr used a tiny metal device containing a piezoelectric crystal that, when compressed, converts mechanical energy into potential difference; if there is a complete circuit, a current will flow. Each cricket, wasp, termite, stag beetle, bee and ant had the sensor placed between the tips of its mouthparts (called mandibles). When the insect chomped down, the tiny crystal compressed and created a current that could be measured, with the size of the current indicating the force of the bite. The researcher compared hundreds of insects. The one with the strongest bite was not a predator, but the raspy cricket, an Australian insect that bites into living wood to dig out nests. Another Australian species claimed the prize for the weakest bite, a wasp (Netelia) whose bite force was roughly 1200 times smaller than the raspy cricket.",
+  "src": {
+   "file": "Physics12_Ch05.pdf",
+   "page": 22
+  }
+ },
+ "chunks": [
+  {
+   "id": "5B-E1",
+   "heading": "Creating potential difference: energy and charge",
+   "text": "Friction is one way to separate charges and create electrical potential energy. Early experiments with electricity used this technique; for example, in a Van de Graaff generator. A moving rubber or plastic belt scrapes against a strip of metal, removing electrons from the metal and leaving the whole metal dome positively charged. You may also see this effect when a spark flies as you step out of a car, take off a jumper made of synthetic fibres or even open the paper packet of a bandaid. Van de Graaff generators were originally turned by hand, but now the belt is usually driven by an electric motor. Clearly this motor requires electrical energy to run, so where does this come from? Our energy needs are increasingly being met by electrical energy from solar panels, wind turbines and hydro power as well as the more traditional fossil fuel-burning technologies of coal, gas and oil.",
+   "figures": [
+    "5B-F4"
+   ],
+   "criteria": [
+    "5B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "5B-E2",
+   "heading": "Charge separation",
+   "text": "The process that transfers electrons from one substance to another, leaving one negatively charged and the other positively charged, is called charge separation. Charges can be separated in several ways; for example, by an electric cell (or a collection of cells known as a battery); by an electric generator run by diesel, wind, hydro or tidal energy; by a solar cell; and even by some animals such as electric eels. In each case, electrical energy is produced by separating the charges using a different form of energy: • in the battery: chemical energy → electrical energy • in a hydro generator: kinetic energy of water → electrical energy • in a diesel generator: chemical energy → kinetic energy → electrical energy • in a coal-fired power station: chemical energy → kinetic and thermal energy of steam → electrical energy • in a solar cell: radiant energy → electrical energy",
+   "figures": [],
+   "criteria": [
+    "5B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "5B-E3",
+   "heading": "Batteries",
+   "text": "In a battery, a chemical reaction keeps one terminal positively charged and the other negatively charged. You will recall from earlier in this section that when the terminals are connected to a conducting circuit, electrons flow freely through the circuit from one terminal to the other, causing a current, which can be measured using an ammeter. Recall that current conventionally flows from the + towards the − side of the battery. Now, the amount of energy each coulomb of charge carries from the battery (and transfers to the load components in the circuit) depends on the charges at the battery terminals. The electrical potential energy the charges gain as they pass through the battery is converted to other forms of energy in the load (and sometimes to thermal energy in the wires and battery too). By the time the charges return to the battery, they have zero electrical potential energy left and need to gain more from the battery to continue flowing. The potential difference is a measure of the electrical potential energy each coulomb of charge carries from the battery. Sometimes this formula is written as E = QV. You can see that if more charge, Q, flows (if the current is larger) or if a battery of greater potential difference, V (more volts) is used, then there will be more energy, E, taken from the battery and delivered to the circuit components. The energy is measured in joules.",
+   "figures": [],
+   "criteria": [
+    "5B.1",
+    "5B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 25
+   }
+  },
+  {
+   "id": "5B-E4",
+   "heading": "Modelling electrical energy",
+   "text": "Where does the energy come from to move charges around the circuit? Batteries are a familiar source of electrical energy and are one way to chemically separate positive and negative charges, which then have a tendency to recombine. Batteries have electrical potential energy in the same way that a kayaker at the top of a waterfall (or a set of rapids) has gravitational potential energy. If there is a path between the high and low potential, then the current will flow, in the same way that kayakers drop down through the rapids.",
+   "figures": [],
+   "criteria": [
+    "5B.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 28
+   }
+  },
+  {
+   "id": "5B-E5",
+   "heading": "Kayaking a gravitational analogy for electric current and potential difference",
+   "text": "Let’s use a model that compares electric current to kayakers to help understand the relationship between potential difference and current. Current, I: The more kayakers that travel down the river, the greater the current since more kayakers pass a given point per second. Potential difference, V: The greater the drop from the top of the rapids or waterfall to the bottom, the greater the potential difference; the kayakers will have more energy to get through any obstacles such as rapids or whirlpools. The total energy of all the kayakers depends on both how many kayakers pass the waterfall and how much potential difference each one drops through: Total energy = charge × potential difference or E = V × Q The height of the waterfall above the pool below determines the gravitational potential difference. In the battery it’s the number of cells and the chemical make-up of them that determines the electrical potential difference, which is usually given symbol V because it’s measured in volts. (You will sometimes see potential difference referred to as voltage, but it’s easier to remember that we’re dealing with electrical energy if we keep the word ‘potential’ in the name. A better abbreviation is ‘p.d.’ or just ‘V’.)",
+   "figures": [
+    "5B-F8",
+    "5B-F9"
+   ],
+   "criteria": [
+    "5B.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 28
+   }
+  },
+  {
+   "id": "5B-E6",
+   "heading": "Bowling balls: another gravitational analogy",
+   "text": "Consider a simple electrical circuit, in which a light globe is connected to a battery (Figure 5B–10). As electric charge flows around the circuit, stored chemical energy is taken from the battery as electrical potential energy, then transformed to other forms of energy, namely thermal energy and light as the charge flows. One way to picture this process is shown in Figure 5B–11. In this analogy, the person represents the battery. They give gravitational potential energy to a bowling ball by raising it to the top plank. The balls are like coulombs of charge in the electric circuit. As the ball falls through the liquid, the gravitational potential energy is converted to thermal energy. The ball then then returns to the person to begin the next circuit. There are several points to notice in this analogy of an electrical circuit. • The person supplies energy to the bowling balls, which transport the energy until they give it up as heat. Each ball acquires the same amount of energy from the ‘battery’ and gives up that amount of energy to the liquid through friction. The overall result is a conversion of potential (stored) energy to thermal energy. The total amount of energy delivered to the liquid depends on two things: the number of bowling balls that fall through it (the current) and the height they fall from (the potential difference). • The total number of balls remains constant and, once the height of the top plank is set, a constant number of balls passes any point in the circuit each second. In electrical terms, the battery contains chemical potential energy. This is converted to electrical potential energy of the charge, which is then converted to kinetic energy as the charges move around the circuit and collide with each other and with the atoms of the various parts of the circuit through which they are passing (Figure 5B–12). The energy lost by the electrons in the collisions becomes vibrational energy of the atoms (internal or thermal energy), so the circuit gets hot. If a globe is one of the components of the circuit, the filament inside the globe will give off light when it is hot. Both the current and the potential difference affect the total energy transferred to the globe from the battery. These same ideas can be extended to circuits containing more components, as shown in Figure 5B–13, which shows a motor and a light indicating when it is on. The electrons gain electrical energy from the source and transport it to the light globe, where it appears as light (and thermal energy), and to the motor where it becomes kinetic energy (energy of motion). Each component has a potential difference, or potential drop, across it that corresponds to the amount of energy each coulomb of charge loses as it passes through the component. A voltmeter connected across the component as shown will measure the potential difference (Figure 5B–13 right).",
+   "figures": [
+    "5B-F10",
+    "5B-F11",
+    "5B-F12",
+    "5B-F13"
+   ],
+   "criteria": [
+    "5B.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "5B-E7",
+   "heading": "Bicycle chain analogy revisited",
+   "text": "In the analogy comparing a bicycle chain as the electric circuit, we said that the links in the chain represented the coulombs of charge moving around the circuit. The energy obviously must come from the person pushing the pedals, so the amount of energy they put into their pedalling would be the joules of energy available to the chain (coulombs of charge). That is, the potential difference (in volts) is the energy per coloumb. This energy is then transferred to the axle to move the wheels and get the bicycle moving (kinetic energy).",
+   "figures": [
+    "5B-F14"
+   ],
+   "criteria": [
+    "5B.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 32
+   }
+  },
+  {
+   "id": "5B-E8",
+   "heading": "AC or DC: what’s the difference?",
+   "text": "In a direct current (DC) circuit, the polarity of the potential difference stays constant. In other words, the positive terminal is always positive and the negative terminal is always negative, as in the case of a battery. When a battery is connected into a circuit, the charge always flows along the wire in the same direction. This is the type of current studied in Section 5A. In an alternating current (AC), circuit the polarity of the potential difference changes in a regular way, so that the charge first flows in one direction then in the other. The Australian mains electricity supply is AC, changing polarity first one way then back again 50 times per second; that is, with a frequency of 50 hertz. The choice of AC or DC is determined by the situation in which electricity is needed. Any battery-powered supply will be DC, while the domestic mains supply is AC, because an alternating potential difference is needed for the transformers that form an essential part of the mains supply system.",
+   "figures": [],
+   "criteria": [
+    "5B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 34
+   }
+  },
+  {
+   "id": "5B-E9",
+   "heading": "Measuring potential difference",
+   "text": "A voltmeter is used to measure the potential difference produced by a battery or generator, or consumed by a circuit component. Like the ammeter, it is named for the units it measures. Voltmeters are always connected in parallel with other components in an electric circuit (Figure 5B–17) because their job is to compare the energy carried by each charge entering with the energy per charge leaving the component. It’s the ‘difference in potential energy’ of each coulomb of charge that registers as the number of volts. (If needed, you can refresh your understanding at the start of this section.)",
+   "figures": [
+    "5B-F17"
+   ],
+   "criteria": [
+    "5B.4",
+    "5B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 35
+   }
+  },
+  {
+   "id": "5B-E10",
+   "heading": "Calculations of current, potential difference, charge and energy",
+   "text": "It can be useful to know how much energy a particular component or appliance will need. A useful expression for energy (in joules) can be derived by combining two previous formulas from Section 5A and earlier in this Section 5B. Q Recall the formula for current, I = , where I = current (A), Q = charge (C) and t = time (s) t and rearrange: Q = It Equation 1 E Recall the formula for potential difference: V = , where V = potential difference (V), Q E = energy (J) and Q = charge (C) and rearrange: E = QV Equation 2 Now substitute It for Q (from Equation 1) into Equation 2. E = QV = It × V So, E = VIt. This is particularly useful for calculating electrical energy because it is simple to use a voltmeter and an ammeter to measure the first two terms, then multiply by the time the appliance is running for. Remember to convert from minutes, hours or days into seconds to get the answer in joules.",
+   "figures": [],
+   "criteria": [
+    "5B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 37
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "5B-F1",
+   "label": "Figure 5B–1",
+   "caption": "A slice of piezoelectric crystal, when compressed, converts mechanical energy into potential difference and, if there is a complete circuit, a current will flow.",
+   "img": null,
+   "important": false,
+   "why": "Piezoelectric crystal (engage)",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 22
+   }
+  },
+  {
+   "id": "5B-F2",
+   "label": "Figure 5B–2",
+   "caption": "Potential difference created by compressing a piezoelectric crystal sensor has been used to measure the bite force of 650 insects from around the world. The strongest bite was from a raspy cricket (Chauliogryllacris acaropenates) and the weakest from a wasp (species Netelia, shown here), both native to Australia.",
+   "img": null,
+   "important": false,
+   "why": "Insect photo (engage)",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "5B-F3",
+   "label": "Figure 5B–3",
+   "caption": "The phenomenon of lightning is extremely complex and a topic for study at PhD level and beyond. Difficulties measuring in situ and in reproducing the conditions that create lightning in thunderclouds make it challenging to research. A simplified understanding is that the friction between molecules in a thunder cloud, as moist warm air currents rise rapidly while cooler air falls, causes loosely bound outer electrons to be separated from their atomic nuclei and attached to other molecules. This creates an electrical potential difference within the cloud.",
+   "img": null,
+   "important": false,
+   "why": "Lightning photo",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "5B-F4",
+   "label": "Figure 5B–4",
+   "caption": "Van de Graaff generators are common in school laboratories. The insulating belt scrapes against the brushes, and removes electrons from the metal dome (and anything connected to it), then delivers them to an earthed brush in the base of the generator. The dome becomes positively charged.",
+   "img": "img/5B_fig5B-4.png",
+   "important": false,
+   "why": "Van de Graaff generator diagram: charge separation by friction",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "5B-F5",
+   "label": "Figure 5B–5",
+   "caption": "From the 1940s, an Eveready 4 2 volt battery for electrical instruments, toys, telegraph sets and other battery-operated devices. The multiple terminals allow for varying the output voltage from 1.5, 3.0 and 4.5 V, or using subsections of the cells such as one cell for 1.5 V and two cells for 3.0 V.",
+   "img": null,
+   "important": false,
+   "why": "Old battery photo",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 25
+   }
+  },
+  {
+   "id": "5B-F6",
+   "label": "Figure 5B–6",
+   "caption": "Batteries supply different amounts of electrical energy. For household use a potential difference of 1.5 V up to 6 or 12 V is sufficient. The battery that drives an electric vehicle is between 300 and 500 V, with energy storage capacity of 150–400 kW h.",
+   "img": null,
+   "important": false,
+   "why": "Batteries photo",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "5B-F7",
+   "label": "Figure 5B–7",
+   "caption": "The Tesla Model 3 has a battery pack under the floor and direct drive electric motors. The low centre of mass contributes to stability, especially when cornering.",
+   "img": null,
+   "important": false,
+   "why": "Tesla photo",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "5B-F8",
+   "label": "Figure 5B–8",
+   "caption": "One kayaker drops down a small height (left) and another kayakers dops down a large waterfall (right)",
+   "img": "img/5B_fig5B-8.png",
+   "important": false,
+   "why": "Kayakers: small drop vs large waterfall (photos for the analogy)",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 29
+   }
+  },
+  {
+   "id": "5B-F9",
+   "label": "Figure 5B–9",
+   "caption": "The potential energy of a kayaker depends on the height of the waterfall (right), while the potential energy of a coulomb of electric charge depends on the state of the battery.",
+   "img": "img/5B_fig5B-9.png",
+   "important": true,
+   "why": "Waterfall analogy beside a battery: potential difference as height drop",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 29
+   }
+  },
+  {
+   "id": "5B-F10",
+   "label": "Figure 5B–10",
+   "caption": "A simple electrical circuit (shown as a drawing and a circuit diagram) transforms electrical energy into light and thermal energy.",
+   "img": "img/5B_fig5B-10.png",
+   "important": true,
+   "why": "Simple circuit as drawing and circuit diagram",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "5B-F11",
+   "label": "Figure 5B–11",
+   "caption": "A bowling ball analogy for an electric circuit",
+   "img": "img/5B_fig5B-11.png",
+   "important": true,
+   "why": "Bowling ball analogy for a circuit",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "5B-F12",
+   "label": "Figure 5B–12",
+   "caption": "Conversion of electrical energy to thermal and light energy in a simple circuit",
+   "img": "img/5B_fig5B-12.png",
+   "important": true,
+   "why": "Energy conversions in a simple circuit",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 31
+   }
+  },
+  {
+   "id": "5B-F13",
+   "label": "Figure 5B–13",
+   "caption": "The circuit on the left shows a motor and a light indicating when the switch is closed. Voltmeters in parallel will measure the potential difference (energy per charge) across each component (right).",
+   "img": "img/5B_fig5B-13.png",
+   "important": true,
+   "why": "Motor and indicator light circuit; voltmeters in parallel",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 32
+   }
+  },
+  {
+   "id": "5B-F14",
+   "label": "Figure 5B–14",
+   "caption": "Input: energy from the person pedalling represents the electric potential energy supplied by the battery. Output: kinetic (movement) energy represents light/sound/motion or thermal energy in the load of the circuit, whether that is a globe, an LED, a speaker, a motor, or a heating element.",
+   "img": "img/5B_fig5B-14.png",
+   "important": true,
+   "why": "Bicycle chain analogy revisited: input and output energy",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 32
+   }
+  },
+  {
+   "id": "5B-F15",
+   "label": "Figure 5B–15",
+   "caption": "Left: Solar panels produce DC, which must be converted to AC by the inverter before it can be used in the house or fed into the electricity grid. Individual panels may instead each have a small ‘microinverter’ connected to them on the roof, which ensures that if one microinverter fails there isn’t too much energy production lost before it is noticed and replaced. Right: caravans generally run on DC, so a solar panel can be set up to recharge the battery without needing an inverter.",
+   "img": null,
+   "important": false,
+   "why": "Solar panel / caravan photos",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 34
+   }
+  },
+  {
+   "id": "5B-F16",
+   "label": "Figure 5B–16",
+   "caption": "A laboratory power supply can usually provide both AC and DC. Take care if using these in experiments to connect to the red and black terminals for DC. For most circuits you will not need the AC terminals, which are often yellow.",
+   "img": null,
+   "important": false,
+   "why": "Lab power supply photo",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 34
+   }
+  },
+  {
+   "id": "5B-F17",
+   "label": "Figure 5B–17",
+   "caption": "A voltmeter is used to measure the potential difference, the energy transferred by each coulomb of charge, or the energy supplied by the battery to each coulomb of charge. Note that the voltmeter is always connected across the component it is measuring (in parallel) to compare the energy before and energy after – the meter shows the potential difference. Like ammeters, there is often a particular orientation. Left: a picture of simple circuit with voltmeters across globe and across battery. Right: a circuit diagram of the same circuit using correct symbols. Note that there are many different ways to draw the circuit diagram, but the simplest is usually the best and following the layout of the picture makes it easier.",
+   "img": "img/5B_fig5B-17.png",
+   "important": true,
+   "why": "Voltmeters across globe and battery: picture and circuit diagram",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 35
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE5B-1",
+   "title": "Potential difference in a battery",
+   "question": "a Calculate the energy supplied to an electric drill when 2000 C of charge pass through it. The potential difference across the battery terminals was measured to be 18 V. b Calculate the energy supplied to a charge of 2000 C in the same drill if the battery is replaced with a 9 V one.",
+   "steps": [
+    "a Rearrange Formula 5B–1, $V = \\frac{E}{Q}$, to make $E$ the subject:",
+    "$E = QV$",
+    "From the question, $V = 18$ V and $Q = 2000$ C.",
+    "Substitute into the formula:",
+    "$E = 2000 \\times 18$",
+    "$= 36\\,000$ J",
+    "$= 36$ kJ",
+    "Therefore, the energy supplied is 36 kJ.",
+    "b For a 9 V battery (which is half of 18 V), we expect half the energy will be transferred. Checking with the formula gives:",
+    "$E = QV$",
+    "$= 2000 \\times 9$",
+    "$= 18\\,000$ J",
+    "$= 18$ kJ"
+   ],
+   "answer": "a 36 kJ; b 18 kJ",
+   "img": [
+    "img/5B_WE5B-1.png"
+   ],
+   "criteria": [
+    "5B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "WE5B-2",
+   "title": "Electrical energy of appliances",
+   "question": "a An electric induction cooktop draws a current of 32 A. Calculate the electrical energy used by the cooktop during 10 minutes of cooking. b The same cooktop is now turned down to low. If the cooktop now uses 360 kJ of energy in 1 minute, calculate the current and the amount of charge flowing through the cooktop during that minute.",
+   "steps": [
+    "a Use the formula for electrical energy, $E = VIt$. From the question, $V = 230$ V (because the cooktop is on mains power supply), $I = 32$ A and $t = 10 \\times 60 = 600$ s.",
+    "Substitute into the formula:",
+    "$E = 230 \\times 32 \\times 600$",
+    "$= 4\\,416\\,000$ J",
+    "$= 4.416$ MJ",
+    "Therefore, in 10 minutes the cooktop uses 4.416 kJ of electrical energy.",
+    "b Rearrange the formula for electrical energy to make $I$ the subject:",
+    "$I = \\frac{E}{Vt}$",
+    "From the question, $V = 230$ V, $E = 360$ kJ and $t = 60$ s.",
+    "Substitute into the formula:",
+    "$I = \\frac{360 \\times 10^{3}}{230 \\times 60}$",
+    "$= 26$ A",
+    "Hence, the cooktop on low draws 26 A of current.",
+    "In order to find how much charge flows through the cooktop in 1 minute, use the relationship $I = \\frac{Q}{t}$, which can be rearranged to give:",
+    "$Q = It$",
+    "Substitute and calculate:",
+    "$Q = 26 \\times 60$",
+    "$= 1560$ C",
+    "So, in 1 minute 1560 C of charge passes through the cooktop."
+   ],
+   "answer": "a 4.416 MJ; b 26 A, 1560 C",
+   "img": [
+    "img/5B_WE5B-2.png"
+   ],
+   "criteria": [
+    "5B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 37
+   },
+   "note": "Textbook line says \"4.416 kJ\" in the concluding sentence; the working gives 4.416 MJ (textbook typo)."
+  }
+ ],
+ "checkins": [
+  {
+   "id": "5B-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "Make a table that shows the symbol and SI units for electrical potential difference, electrical energy and electric charge.",
+   "answer": "Electrical potential difference: $V$, Volt (V); Electrical energy: $E$, Joule (J); Electric charge: $Q$, Coulomb (C)",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "5B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5B Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "5B-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "How much electrical energy (in joules) does a 9 V battery supply to each coulomb of charge that passes through it?",
+   "answer": "By the definition of potential difference, $V = \\frac{E}{Q}$, $V$ is the energy per coulomb of charge that passes through the battery. Therefore, a 9 V battery gives 9 J of energy to one coulomb of charge.",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "5B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5B Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "5B-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "In the bowling ball analogy in Figure 5B–11, several variations are possible. Match the variation in the analogy below with the effect in the electric circuit. Analogy: 1 An extra person joins her friend in lifting the bowling balls up to the top plank. 2 The top plank is raised higher off the ground, so more energy is needed to lift the ball up to the plank. 3 More bowling balls are added to the circuit. 4 The tube of liquid is made thinner, with oil instead of water. Electric circuit: A An extra battery is added (in series) in the circuit, increasing the potential difference provided. B A battery of larger capacity (e.g. from AA to D size) is used but with the same potential difference. C More energy is required to pass through the component so the battery will 'run flat' sooner. (The 'resistance' is increased.) D An extra battery is added beside the original one (in parallel), increasing the amount of charge that can flow without increasing the potential difference",
+   "answer": "1 D; 2 A; 3 B; 4 C",
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "5B.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "5B Check-in – Set 2.docx"
+   }
+  },
+  {
+   "id": "5B-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "When the sun is shining, a solar panel provides energy to a pump that makes a small fountain in a bowl of water. Use this as an analogy for potential difference and current in an electric circuit. What would the pump and solar panel together represent, and what represents the electric current in this model? How is the potential difference increased, and what effect does this have in the circuit?",
+   "answer": "The pump and solar panel represent the battery in a circuit model, and the current is represented by the water flowing through the pipes and into the air. 'Potential difference' is increased when the sun shines more brightly, and the energy gained by the water from this increased potential difference is seen as a higher water spout.",
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "5B.3"
+   ],
+   "img": [
+    "img/5B_CI2.2.png"
+   ],
+   "src": {
+    "file": "5B Check-in – Set 2.docx"
+   }
+  },
+  {
+   "id": "5B-CI3.1",
+   "set": 3,
+   "n": 1,
+   "question": "Redraw the circuit diagram and show where you would connect the voltmeter to check the potential difference across each of the motor, the indicator light and the battery in this circuit.",
+   "answer": "One (red) terminal of the voltmeter should be connected to the left of the motor and the other (black) terminal to the right. One (red) terminal of the voltmeter should be connected to the left of the light bulb and the other (black) terminal to the right. One (red) terminal of the voltmeter should be connected to the left of the battery and the other (black) terminal to the right.",
+   "kind": "graph",
+   "size": "medium",
+   "criteria": [
+    "5B.4",
+    "5B.5"
+   ],
+   "img": [
+    "img/5B_CI3.png"
+   ],
+   "src": {
+    "file": "5B Check-in – Set 3.docx"
+   },
+   "answer_img": [
+    "img/5B_CI3.1_ans.png"
+   ]
+  },
+  {
+   "id": "5B-CI3.2",
+   "set": 3,
+   "n": 2,
+   "question": "Show how you would connect an ammeter to check the current through the motor in this circuit.",
+   "answer": "Disconnect a single wire from any component in the circuit and connect it to the appropriate side of the ammeter. The + side of ammeter should connect (directly or indirectly) to the + side of the battery, or the – side of ammeter should connect directly or indirectly to the – side of the battery. Use one extra connecting wire to connect the other side of the ammeter to the component. Note: it doesn't matter where in the circuit you put the ammeter, the current is the same all the way around.",
+   "kind": "graph",
+   "size": "medium",
+   "criteria": [
+    "5B.5"
+   ],
+   "img": [
+    "img/5B_CI3.png"
+   ],
+   "src": {
+    "file": "5B Check-in – Set 3.docx"
+   },
+   "answer_img": [
+    "img/5B_CI3.2_ans.png"
+   ]
+  },
+  {
+   "id": "5B-CI3.3",
+   "set": 3,
+   "n": 3,
+   "question": "When the switch is closed both the motor and the indicator light turn on. Describe the energy transfers in each of these components when the switch is closed.",
+   "answer": "Motor turns electrical energy into kinetic energy. Light globe turns electrical energy into light and thermal energy.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "5B.1"
+   ],
+   "img": [
+    "img/5B_CI3.png"
+   ],
+   "src": {
+    "file": "5B Check-in – Set 3.docx"
+   }
+  },
+  {
+   "id": "5B-CI4.1",
+   "set": 4,
+   "n": 1,
+   "question": "Explain the application of the formula $E = VIt$ to a real-world situation such as, a torch.",
+   "answer": "The equation is so significant because $V$, $t$ and $I$ are all easily measured in the real world using a voltmeter, clock and ammeter. Compared to measuring something like total charge in a circuit.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "5B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5B Check-in – Set 4.docx"
+   }
+  },
+  {
+   "id": "5B-CI4.2",
+   "set": 4,
+   "n": 2,
+   "question": "Calculate the electrical energy used in a torch circuit during 1 minute, if an ammeter measures the current through the bulb as 0.5 A and a voltmeter measures a potential difference of 5.9 V across the bulb.",
+   "answer": "Use $E = VIt$ with $V = 6$ V, $I = 0.5$ A and $t = 60$ s. $E = 6 \\times 0.5 \\times 60 = 180$ J",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "5B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5B Check-in – Set 4.docx"
+   },
+   "note": "Suggested response uses 6 V (question says 5.9 V); 5.9 V gives 177 J."
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "5B-SQ1",
+   "n": "1",
+   "question": "How much energy is given to each coulomb of charge by the 240 V mains supply?",
+   "options": [
+    "A. 240 J",
+    "B. 1 J",
+    "C. 100 J",
+    "D. 240 V"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "5B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5B Section questions.docx"
+   }
+  },
+  {
+   "id": "5B-SQ2",
+   "n": "2",
+   "question": "How much energy does each electron receive in the situation in Question 1?",
+   "options": [
+    "A. 240 J",
+    "B. 1 J",
+    "C. $6.25\\times10^{18}$ J",
+    "D. $3.84\\times10^{-17}$ J"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "5B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5B Section questions.docx"
+   }
+  },
+  {
+   "id": "5B-SQ3",
+   "n": "3",
+   "question": "How much energy is delivered to a 240 V mains appliance by each 20 C of charge passing through it?",
+   "options": [
+    "A. 20 J",
+    "B. 240 J",
+    "C. 240 V",
+    "D. 4800 J"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "5B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5B Section questions.docx"
+   }
+  },
+  {
+   "id": "5B-SQ4",
+   "n": "4",
+   "question": "Which of the following circuits best shows a correctly positioned voltmeter?",
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "5B.4",
+    "5B.5"
+   ],
+   "img": [
+    "img/5B_SQ4.png"
+   ],
+   "src": {
+    "file": "5B Section questions.docx"
+   }
+  },
+  {
+   "id": "5B-SQ5",
+   "n": "5",
+   "question": "a How much energy is given to each coulomb of charge as it passes through a 12 V car battery? b How much energy does each electron receive?",
+   "answer": "a $Q = 1$ C, $V = 12$ V, $E = VQ = 12\\times1 = 12$ J b Each coulomb contains $6.25\\times10^{18}$ electrons. So, each electron gets $\\frac{12}{6.25\\times10^{18}}$. Energy per electron $= 1.92\\times10^{-18}$ J",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice",
+    "youtry"
+   ],
+   "criteria": [
+    "5B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5B Section questions.docx"
+   },
+   "note": "Suggested responses print \"= 125 J\" for part a (typo for 12 J)."
+  },
+  {
+   "id": "5B-SQ6",
+   "n": "6",
+   "question": "What energy is gained by a charge of 15 C when it passes through a generator producing 12 V?",
+   "answer": "$Q = 15$ C, $V = 12$ V, $E = VQ = 15\\times12 = 180$ J",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "youtry"
+   ],
+   "criteria": [
+    "5B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5B Section questions.docx"
+   }
+  },
+  {
+   "id": "5B-SQ7",
+   "n": "7",
+   "question": "Each item below represents one component of an electric circuit according to the bowling ball analogy in Figure 5B–11 for a conventional current circuit. Match the analogy item to the circuit component. Circuit component: 1 Battery; 2 Coulombs of charge; 3 Water; 4 High plank. Analogy: A Bowling balls; B Positive side of battery; C Person lifting the bowling balls; D The components of the circuit that convert electrical energy to other forms, such as a light globe (the 'load')",
+   "answer": "1 C; 2 A; 3 D; 4 B",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice",
+    "donow"
+   ],
+   "criteria": [
+    "5B.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "5B Section questions.docx"
+   }
+  },
+  {
+   "id": "5B-SQ8",
+   "n": "8",
+   "question": "A garden water feature could be an analogy for an electric circuit. Suggest parts of the fountain that could represent these circuit components in the following circuit and justify your reasoning. a Battery b Current c Motor",
+   "answer": "a pump b flowing water c top of the waterspout",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "5B.3"
+   ],
+   "img": [
+    "img/5B_SQ8.png"
+   ],
+   "src": {
+    "file": "5B Section questions.docx"
+   }
+  },
+  {
+   "id": "5B-SQ9",
+   "n": "9",
+   "question": "The position of a voltmeter is always *across* the component whose potential difference is being measured (it is 'in parallel'). a Explain this in terms of the energy changes in the circuit. b What value will the voltmeter V1 show in the following circuit?",
+   "answer": "a The voltmeter compares the energy carried by each coulomb of charge before and after the charge passes through the component. Connecting it with one lead (i.e. one wire) to each side of the component makes this possible. b 6 V",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice",
+    "exit"
+   ],
+   "criteria": [
+    "5B.5",
+    "5B.4"
+   ],
+   "img": [
+    "img/5B_SQ9.png"
+   ],
+   "src": {
+    "file": "5B Section questions.docx"
+   },
+   "note": "Part b circuit image cropped from textbook p236 (not in the docx)."
+  },
+  {
+   "id": "5B-SQ10",
+   "n": "10",
+   "question": "The reading on a voltmeter connected directly across a battery or power pack is often different depending on whether there is current flowing (a complete circuit) or not (an open circuit). Can you suggest why this might be?",
+   "answer": "When no current flows (because the voltmeter has very high resistance), the voltmeter measures the full potential difference of the battery (called the emf). When a current is flowing, some of the available potential difference is converted to thermal energy within the battery, so the reading at the terminals is lower. In fact, if a low resistance wire is connected across the battery terminals to make a short circuit, a very large current flows and rapidly converts electrical energy to thermal energy in both the wire and the battery (which probably has a larger resistance than the wire).",
+   "marks": null,
+   "kind": "explain",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "5B.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "5B Section questions.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 5B–1 Electrical energy and potential difference",
+  "total": 16,
+  "file": "5B Worksheet 5B–1 Electrical energy and potential difference.docx",
+  "answers_file": "5B Worksheet 5B–1 Answers.docx",
+  "questions": [
+   {
+    "id": "WS5B-1",
+    "n": "1",
+    "question": "Match the term with its definition. Terms: i Electric generator; ii Electrical potential energy; iii Joule; iv Potential difference; v Voltmeter; vi Volt. Definitions: a the difference in electrical potential between two points in a circuit; b energy due to the concentration of charge in part of an electric circuit; c an instrument used to measure potential difference between two points in a circuit; d SI unit of measurement for energy; e SI unit of measurement for potential difference; f a device that converts kinetic energy into electrical energy",
+    "answer": "i f; ii b; iii d; iv a; v c; vi e (1/2 mark per correct answer)",
+    "marks": 3,
+    "kind": "recall",
+    "size": "medium",
+    "phase": [
+     "donow",
+     "practice"
+    ],
+    "criteria": [
+     "5B.1",
+     "5B.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "5B Worksheet 5B–1 Electrical energy and potential difference.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS5B-2",
+    "n": "2",
+    "question": "Complete the definition of AC and DC by selecting the correct words from the list. (AC, constant, changing, charge, DC, frequency) In a direct current (____) circuit, the polarity of the potential difference is ____. The ____ always flows in the same direction. In an alternating current (____) circuit, the polarity of the potential difference is ____ in a regular way. The ____ for the Australian alternating current supply is 50 Hz.",
+    "answer": "In a direct current (DC) circuit, the polarity of the potential difference is constant. The charge always flows in the same direction. In an alternating current (AC) circuit, the polarity of the potential difference is changing in a regular way. The frequency for the Australian alternating current supply is 50 Hz.",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "donow"
+    ],
+    "criteria": [
+     "5B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "5B Worksheet 5B–1 Electrical energy and potential difference.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS5B-3",
+    "n": "3",
+    "question": "Place voltmeters into the circuit below so that the voltage of the battery and the globe can be measured.",
+    "answer": "(voltmeters across battery and globe; see answer image)",
+    "marks": 1,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "wedo",
+     "exit"
+    ],
+    "criteria": [
+     "5B.4",
+     "5B.5"
+    ],
+    "img": [
+     "img/5B_WS3.png"
+    ],
+    "src": {
+     "file": "5B Worksheet 5B–1 Electrical energy and potential difference.docx"
+    },
+    "answer_img": [
+     "img/5B_WS3_ans.png"
+    ],
+    "pair_with": null
+   },
+   {
+    "id": "WS5B-4",
+    "n": "4",
+    "question": "Identify the mistakes in the circuit below by circling the components that are placed incorrectly.",
+    "answer": "Incorrect: ammeter in parallel, voltmeter in series. (1 mark each)",
+    "marks": 2,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "criteria": [
+     "5B.5"
+    ],
+    "img": [
+     "img/5B_WS4.png"
+    ],
+    "src": {
+     "file": "5B Worksheet 5B–1 Electrical energy and potential difference.docx"
+    },
+    "pair_with": "WS5B-3"
+   },
+   {
+    "id": "WS5B-5",
+    "n": "5",
+    "question": "Calculate the energy (in kJ) supplied to an electric lawnmower when 2500 C of charge passes through it. The potential difference across the battery terminals is 16 V.",
+    "answer": "$E = QV = 2500\\times16 = 40\\,000$ J $= 40$ kJ",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "criteria": [
+     "5B.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "5B Worksheet 5B–1 Electrical energy and potential difference.docx"
+    },
+    "pair_with": "WE5B-1"
+   },
+   {
+    "id": "WS5B-6",
+    "n": "6",
+    "question": "The charge that passes through a mobile phone is 1000 C. The energy supplied to the phone is 25 kJ. Calculate the potential difference across the battery terminals.",
+    "answer": "$E = QV$; $V = \\frac{E}{Q} = \\frac{25\\times1000}{1000} = 25$ V",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "5B.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "5B Worksheet 5B–1 Electrical energy and potential difference.docx"
+    },
+    "pair_with": "WE5B-1"
+   },
+   {
+    "id": "WS5B-7",
+    "n": "7",
+    "question": "Complete derivation of $E = VIt$ by inserting the missing values. The formula for current is $I = \\frac{Q}{t}$, where $I$ = ____, $Q$ = ____ and $t$ = ____. This equation can be rearranged so that: $Q$ = ____ Equation 1. The formula for potential difference, $V = \\frac{\\ }{\\ }$, can be rearranged so that: $E$ = ____ Equation 2. Substitute ____ for $Q$ (from Equation 1) into Equation 2: $E = QV$ = ____. So, $E = VIt$.",
+    "answer": "$I$ = current, $Q$ = charge and $t$ = time. $Q = It$ (Equation 1). $V = \\frac{E}{Q}$ can be rearranged so that $E = QV$ (Equation 2). Substitute $It$ for $Q$: $E = QV = (It)V$. So, $E = VIt$.",
+    "marks": 2,
+    "kind": "recall",
+    "size": "medium",
+    "phase": [
+     "practice",
+     "newknowledge"
+    ],
+    "criteria": [
+     "5B.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "5B Worksheet 5B–1 Electrical energy and potential difference.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS5B-8",
+    "n": "8",
+    "question": "a Calculate the electrical energy, in kJ, used by a hairdryer plugged into the mains power supply. The hairdryer draws a current of 25 A in 5 minutes of being used on its highest setting. b When the hairdryer is used on its lowest setting for the same amount of time, it uses 575 kJ of energy. Calculate the amount of charge that runs through the hairdryer in that time.",
+    "answer": "a $E = VIt = 230\\times25\\times5\\times60 = 1\\,725\\,000$ J $= 1725$ kJ b $Q = \\frac{E}{V} = \\frac{575\\times1000}{230} = 2500$ C",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "5B.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "5B Worksheet 5B–1 Electrical energy and potential difference.docx"
+    },
+    "pair_with": "WE5B-2"
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "5B.2"
+   ],
+   "wedo": "WE5B-1",
+   "youtry": [
+    "WS5B-5",
+    "WS5B-6"
+   ],
+   "note": "E = QV, forwards and rearranged"
+  },
+  {
+   "criteria": [
+    "5B.2"
+   ],
+   "wedo": "WE5B-2",
+   "youtry": [
+    "WS5B-8"
+   ],
+   "note": "E = VIt with mains 230 V, then Q = It / Q = E/V"
+  },
+  {
+   "criteria": [
+    "5B.4",
+    "5B.5"
+   ],
+   "wedo": "WS5B-3",
+   "youtry": [
+    "WS5B-4"
+   ],
+   "origin": "adapted",
+   "note": "No worked example on meter placement; worksheet Q3 as We do"
+  },
+  {
+   "criteria": [
+    "5B.3"
+   ],
+   "wedo": "5B-CI2.2",
+   "youtry": [
+    "5B-SQ8"
+   ],
+   "origin": "adapted",
+   "note": "Analogies: fountain analogy check-in then garden water feature"
+  }
+ ],
+ "skills": [
+  {
+   "id": "5B-SK1",
+   "heading": "Connecting a voltmeter in a circuit to measure potential difference",
+   "text": "In practice, it is easiest to build the main loop(s) of the circuit first. Connect a wire to each terminal of the voltmeter. Then attach the wires either side of the component to measure the potential difference. Think about how large you expect the potential difference to be (hint: it will always be smaller than the battery voltage) and choose the voltmeter scale to be larger than that maximum possible. Most analogue voltmeters have two or three red terminals, from which you select the best scale, and a black terminal that should always be connected facing towards the negative terminal of the battery. If the reading is too small to see accurately on an analogue meter, you can always switch down a scale, but choosing a small scale and finding it’s a larger potential difference could damage the meter. Multimeters, which are digital, have built-in protection, but you still need to think about what quantity you’re measuring. The scales are often labelled with the units: V for potential difference (in volts), A for current (in amps). Multimeters can usually also measure resistance, R, in ohms (Ω) (see Sections 5C and 5D) and even AC (see Chapter 6).",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 39
+   }
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P5B-1",
+   "title": "Practical 5B–1 Using an ammeter and voltmeter in electrical circuits",
+   "file": "5B Practical 5B–1 Using an ammeter and voltmeter in electrical circuits.docx",
+   "aim": "To position ammeters and voltmeters correctly in an electrical circuit."
+  }
+ ],
+ "notes": "Section questions use 240 V mains (textbook note) while worked examples use 230 V. 5B-SQ4 answer C is from Suggested responses. Suggested-response typos: SQ5a \"125 J\" (12 J); CI4.2 uses 6 V not 5.9 V. WE5B-2 text says 4.416 kJ but working gives 4.416 MJ."
+}

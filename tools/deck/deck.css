@@ -1,0 +1,81 @@
+/* Physics lesson decks: navy look (physics decks) + 12MAG/10MA structure (title bar, key idea box, one line per click, answer box) */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#070b1f;overflow:hidden}
+body{font-family:Inter,"Segoe UI",system-ui,sans-serif;color:#eef2ff}
+#stage{position:absolute;left:50%;top:50%;width:1280px;height:720px;transform-origin:center;background:#0d1330;overflow:hidden}
+#bg{position:absolute;inset:0;pointer-events:none}
+.slide{position:absolute;inset:0;padding:30px 44px 40px;display:none;flex-direction:column;gap:16px}
+.slide.on{display:flex}
+h1,h2,h3{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-.01em}
+/* title bar: "1A | We do · Period and frequency"   section on the right   timer */
+.bar{display:flex;align-items:center;gap:16px;border-bottom:3px solid var(--ac);padding-bottom:10px}
+.bar .code{font:700 30px "Space Grotesk";color:var(--ac)}
+.bar .sep{width:3px;height:30px;background:#36418a}
+.bar h2{font-size:34px;line-height:1.1}
+.bar h2 small{font:600 22px Inter;color:#a5b4d8;margin-left:10px}
+.bar .sec{margin-left:auto;font-size:16px;color:#94a3c8;text-align:right}
+.timer{font:700 22px/1 "Space Grotesk",monospace;color:var(--ac);border:2px solid var(--ac);border-radius:10px;padding:7px 12px;min-width:84px;text-align:center}
+.timer.over{background:#f472b6;border-color:#f472b6;color:#0d1330}
+.foot{position:absolute;left:44px;right:44px;bottom:12px;display:flex;justify-content:space-between;font-size:13px;color:#5b6690}
+.foot .own{color:#fbb040}
+/* boxes */
+.card{background:#1a2150;border-radius:16px;padding:16px 20px;border-left:7px solid var(--c,var(--ac))}
+.card h3{font:700 14px/1 Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--c,var(--ac));margin-bottom:10px}
+.lead{font-size:22px;line-height:1.4;color:#cfd7f5}
+.grid{display:grid;gap:14px;flex:1;min-height:0}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr 1fr}
+.q{font-size:22px;line-height:1.45}
+.q .tag{display:inline-block;font:700 13px Inter;letter-spacing:.06em;text-transform:uppercase;color:#94a3c8;margin-bottom:6px}
+.kib{background:#141a40;border:2px dashed #36418a;border-radius:12px;padding:10px 14px;font-size:17px;line-height:1.4;color:#cfd7f5}
+.kib b{color:#fff}.kib .kt{font:700 12px Inter;letter-spacing:.08em;text-transform:uppercase;color:#94a3c8;display:block;margin-bottom:4px}
+/* working: one line per click */
+.work{display:flex;flex-direction:column;gap:6px;font-size:23px;line-height:1.35}
+.st{opacity:0;transform:translateY(-6px);transition:opacity .25s,transform .25s}
+.st.shown{opacity:1;transform:none}
+.wl{color:#fbb040}.wl.txt{color:#cfd7f5;font-size:20px}
+.ans{background:#123526;border:2px solid #4ade80;border-radius:12px;padding:8px 14px;font-weight:700;color:#eafff1;font-size:22px;align-self:flex-start;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.ans:before{content:"✓ ";color:#4ade80}
+.sol{background:#141a40;border-radius:12px;padding:10px 14px;box-shadow:0 8px 22px rgba(0,0,0,.45);font-size:20px;line-height:1.4;color:#eafff1}
+/* rows: question | solution, equal height */
+.rows{display:grid;gap:10px;flex:1;min-height:0;grid-auto-rows:minmax(0,1fr)}.rows .card,.rows .sol{overflow:hidden;padding-top:10px;padding-bottom:10px}
+.qrow{display:grid;grid-template-columns:1.15fr 1fr;gap:14px}
+.qrow>.card{display:flex;flex-direction:column;justify-content:center}
+.lbl{font:700 13px Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--c,var(--ac));margin-bottom:6px}
+/* goals */
+.goals{display:flex;flex-direction:column;gap:16px;flex:1;justify-content:center}
+.goal{display:flex;gap:22px;align-items:center;font-size:28px;line-height:1.35}
+.goal .n{font:700 34px "Space Grotesk";color:var(--c)}
+.goal small{display:block;font-size:15px;color:#94a3c8}
+/* key ideas */
+.kd{display:flex;flex-direction:column}
+.kd>div{border-bottom:1.5px dashed #36418a;padding:9px 0;font-size:20px;line-height:1.4;flex:1;display:flex;flex-direction:column;justify-content:center}
+.kd>div:last-child{border-bottom:0}.kd b{color:#7dd3fc}
+.fm{font-size:30px;text-align:center;padding:8px 0}
+.where{font-size:17px;color:#cfd7f5;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin-top:6px}
+/* figures */
+.fig{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:0}
+.fig img{max-width:100%;max-height:440px;border-radius:10px;background:#fff;padding:6px}
+.fig .cap{font-size:15px;color:#94a3c8;text-align:center}
+.txt p,.txt li{font-size:22px;line-height:1.45;margin-bottom:10px}.txt ul{padding-left:24px}
+/* exit */
+.ican{font-weight:700;font-size:17px;display:flex;gap:10px;align-items:flex-start;margin-bottom:6px}
+.ican:before{content:"";flex:none;width:20px;height:20px;border:2.5px solid #eef2ff;border-radius:4px;margin-top:3px}
+.rag{display:flex;gap:8px;margin-top:6px}.rag i{width:22px;height:22px;border-radius:50%;border:2.5px solid}
+.rag i:nth-child(1){border-color:#f87171}.rag i:nth-child(2){border-color:#fbbf24}.rag i:nth-child(3){border-color:#4ade80}
+/* practice table */
+table.pr{width:100%;border-collapse:collapse;font-size:22px}
+table.pr th{font:700 14px Inter;letter-spacing:.07em;text-transform:uppercase;color:#94a3c8;text-align:left;padding:10px 14px;border-bottom:2px solid #36418a}
+table.pr td{padding:14px;border-bottom:1.5px solid #232c63;vertical-align:top}
+/* title slide */
+.title{justify-content:center;padding:56px 72px}
+.tags{display:flex;gap:12px;margin-bottom:22px}.tags span{font:700 22px/1 "Space Grotesk";color:var(--k);border:2px solid var(--k);border-radius:999px;padding:9px 18px}
+.title h1{font-size:68px;line-height:1.05;max-width:720px}
+.title .sub{font-size:22px;color:#a5b4d8;margin-top:16px;max-width:700px}
+.seq{position:absolute;right:64px;top:50%;transform:translateY(-50%);width:360px;background:#1a2150;border-radius:16px;padding:18px 22px}
+.seq h3{font:700 14px Inter;letter-spacing:.07em;text-transform:uppercase;color:#94a3c8;margin-bottom:8px}
+.seq div{display:flex;justify-content:space-between;font-size:19px;padding:6px 0;border-bottom:1px solid #232c63}.seq div:last-child{border:0;font-weight:700}
+.seq span:last-child{color:#fbb040;font-family:"Space Grotesk"}
+/* interactive */
+.ixf{flex:1;border:0;border-radius:14px;width:100%;min-height:0;background:#0d1330}
+.help{position:absolute;right:12px;bottom:2px;font-size:11px;color:#3b4570}
+@media print{html,body{overflow:visible;background:#0d1330}#stage{position:relative;left:0;top:0;transform:none!important}.slide{display:flex!important;position:relative;height:720px;page-break-after:always}.st{opacity:1;transform:none}}

@@ -27,6 +27,8 @@ Start a new chat with: "Read HANDOFF.md and CLAUDE.md in roccatalano/Physics and
 
 * Year 12 interactives: 27 (Units 3&4), same gallery with a Year 11/12 toggle; share https://roccatalano.github.io/Physics/interactives/#y12. Skipped: Y12 particle accelerator view.
 
+* Index copied into the repo (data/index). Slide templates + deck builder (tools/deck): 12 slide types, Do now half-sheet; template deck for 1A in lessons/.
+
 ## Next
 1. Year-by-year tabs (e.g. 2027 overview calendar like 12MAG).
 2. Lay out Unit 1 lessons on the calendar.

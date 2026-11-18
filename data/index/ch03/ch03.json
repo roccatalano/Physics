@@ -1,0 +1,1193 @@
+{
+ "chapter": 3,
+ "title": "Radiation from the nucleus",
+ "unit": 1,
+ "aos": 2,
+ "sections": [
+  "3A",
+  "3B",
+  "3C",
+  "3D",
+  "3E"
+ ],
+ "criteria": [
+  {
+   "id": "3A.1",
+   "text": "Know that nuclear stability depends on proton to neutron ratios",
+   "section": "3A",
+   "review_qs": [
+    "1",
+    "2",
+    "11",
+    "12",
+    "13"
+   ],
+   "exit_candidates": [
+    "CH3-RQ1",
+    "CH3-RQ12a",
+    "3A-SQ2"
+   ]
+  },
+  {
+   "id": "3A.2",
+   "text": "Understand the roles of the electrostatic force, the strong nuclear force and the weak nuclear force",
+   "section": "3A",
+   "review_qs": [
+    "3",
+    "14"
+   ],
+   "exit_candidates": [
+    "CH3-RQ3",
+    "WS3A-5a"
+   ]
+  },
+  {
+   "id": "3A.3",
+   "text": "Know that electrostatic forces on protons in the nucleus are extremely large repulsive forces",
+   "section": "3A",
+   "review_qs": [
+    "13"
+   ],
+   "exit_candidates": [
+    "CH3-RQ13b",
+    "3A-SQ4"
+   ]
+  },
+  {
+   "id": "3A.4",
+   "text": "Know that the nucleus contains a short-range strong nuclear force that can overcome electrostatic repulsion forces",
+   "section": "3A",
+   "review_qs": [
+    "13"
+   ],
+   "exit_candidates": [
+    "CH3-RQ13b",
+    "3A-SQ5"
+   ]
+  },
+  {
+   "id": "3A.5",
+   "text": "Know that the weak force explains the transformation of protons into neutrons and vice versa",
+   "section": "3A",
+   "review_qs": [
+    "3"
+   ],
+   "exit_candidates": [
+    "CH3-RQ3",
+    "3A-SQ11"
+   ]
+  },
+  {
+   "id": "3A.6",
+   "text": "Interpret the binding energy curve",
+   "section": "3A",
+   "review_qs": [
+    "15"
+   ],
+   "exit_candidates": [
+    "CH3-RQ15",
+    "3A-CI4.3"
+   ]
+  },
+  {
+   "id": "3B.1",
+   "text": "Know the properties of α-, β⁻-, β⁺- and γ-radiation",
+   "section": "3B",
+   "review_qs": [
+    "4",
+    "5",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "25"
+   ],
+   "exit_candidates": [
+    "CH3-RQ5",
+    "CH3-RQ16",
+    "CH3-RQ18b"
+   ]
+  },
+  {
+   "id": "3B.2",
+   "text": "Explain nuclear transformations using decay equations involving α-, β⁻-, β⁺- and γ-radiation",
+   "section": "3B",
+   "review_qs": [
+    "19",
+    "20"
+   ],
+   "exit_candidates": [
+    "CH3-RQ19b",
+    "3B-SQ8"
+   ]
+  },
+  {
+   "id": "3C.1",
+   "text": "Understand the concept of half-life for radioactive sources",
+   "section": "3C",
+   "review_qs": [
+    "6",
+    "21",
+    "22"
+   ],
+   "exit_candidates": [
+    "CH3-RQ6",
+    "CH3-RQ21a",
+    "3C-SQ2"
+   ]
+  },
+  {
+   "id": "3C.2",
+   "text": "Determine the strength (activity) of radioactive sources after a whole number of half-lives have elapsed",
+   "section": "3C",
+   "review_qs": [
+    "10",
+    "21",
+    "22"
+   ],
+   "exit_candidates": [
+    "CH3-RQ21c",
+    "CH3-RQ22b",
+    "3C-SQ6"
+   ]
+  },
+  {
+   "id": "3D.1",
+   "text": "Analyse radioactive isotope decay chains (e.g. U-238) and understand that a decay series is a sequence of stages a radioisotope passes through before eventually reaching a stable isotope",
+   "section": "3D",
+   "review_qs": [
+    "7",
+    "23"
+   ],
+   "exit_candidates": [
+    "CH3-RQ7",
+    "CH3-RQ23b",
+    "3D-SQ2"
+   ]
+  },
+  {
+   "id": "3E.1",
+   "text": "Explain effects of α-, β⁻-, β⁺- and γ-radiation on humans",
+   "section": "3E",
+   "review_qs": [
+    "10"
+   ],
+   "exit_candidates": [
+    "CH3-RQ29",
+    "3E-CI4.3"
+   ]
+  },
+  {
+   "id": "3E.2",
+   "text": "Understand the different capacity of α-, β⁻-, β⁺- and γ-radiation to cause cell damage",
+   "section": "3E",
+   "review_qs": [
+    "24",
+    "25",
+    "26",
+    "27",
+    "28"
+   ],
+   "exit_candidates": [
+    "CH3-RQ18a",
+    "CH3-RQ25a",
+    "3E-SQ1"
+   ]
+  },
+  {
+   "id": "3E.3",
+   "text": "Understand the short- and long-term effects of low and high doses of radiation",
+   "section": "3E",
+   "review_qs": [
+    "29",
+    "30"
+   ],
+   "exit_candidates": [
+    "CH3-RQ28",
+    "3E-CI3.1"
+   ]
+  },
+  {
+   "id": "3E.4",
+   "text": "Understand the ionising impacts of external and internal radiation sources",
+   "section": "3E",
+   "review_qs": [
+    "9",
+    "26"
+   ],
+   "exit_candidates": [
+    "CH3-RQ9",
+    "3E-CI4.1"
+   ]
+  },
+  {
+   "id": "3E.5",
+   "text": "Be able to calculate absorbed dose (gray), equivalent dose (sievert) and effective dose (sievert)",
+   "section": "3E",
+   "review_qs": [
+    "8"
+   ],
+   "exit_candidates": [
+    "CH3-RQ8",
+    "3E-SQ8"
+   ]
+  },
+  {
+   "id": "3E.6",
+   "text": "Evaluate the use of medical radioisotopes in therapy including the effects on healthy and damaged tissues and cells",
+   "section": "3E",
+   "review_qs": [
+    "10",
+    "22",
+    "24",
+    "25",
+    "28",
+    "29",
+    "30"
+   ],
+   "exit_candidates": [
+    "CH3-RQ22c",
+    "CH3-RQ24a",
+    "3E-CI5.3"
+   ]
+  }
+ ],
+ "review_questions": [
+  {
+   "id": "CH3-RQ1",
+   "n": "1",
+   "question": "Uranium-234 has 92 protons in the nucleus. The number of neutrons in the nucleus is",
+   "options": [
+    "A. 92",
+    "B. 142",
+    "C. 234",
+    "D. 326"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "3A.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ2",
+   "n": "2",
+   "question": "The element carbon has a number of isotopes. Two isotopes of carbon are carbon-12 and carbon-14. Which one of the following statements is true?",
+   "options": [
+    "A. The two isotopes of carbon are physically identical but chemically different.",
+    "B. The two isotopes of carbon are chemically identical but physically different.",
+    "C. Carbon-14 has more protons in its nucleus than carbon-12.",
+    "D. Carbon-14 has more electrons in its nucleus than carbon-12."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "3A.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ3",
+   "n": "3",
+   "question": "The weak force or weak interaction is used to explain",
+   "options": [
+    "A. α-decay.",
+    "B. β-decay.",
+    "C. γ-decay.",
+    "D. none of the above."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "3A.2",
+    "3A.5"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ4",
+   "n": "4",
+   "question": "A radioactive source is placed 2 cm from a detector. The count rate decreases slightly if a sheet of paper is inserted between the source and the detector. It is reduced to background radiation level if the sheet of paper is replaced by a 1 cm thick sheet of aluminium. The radiation emitted by the radioactive source is most likely to be",
+   "options": [
+    "A. α only.",
+    "B. α and β.",
+    "C. β and γ.",
+    "D. γ only."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "criteria": [
+    "3B.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ5",
+   "n": "5",
+   "question": "Which one of the following correctly identifies α-particles, β⁻-particles, β⁺-particles and γ-rays? (α-particles | β⁻-particles | β⁺-particles | γ-rays)",
+   "options": [
+    "A. Helium nuclei | Electrons | Photons | Positrons",
+    "B. Electrons | Negative helium ions | Positive helium ions | Photons",
+    "C. Photons | Negative photons | Positive photons | Helium nuclei",
+    "D. Helium nuclei | Electrons | Positrons | Photons"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "3B.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ6",
+   "n": "6",
+   "question": "The half-life of Zn-69 is 56 minutes. There is 100.0 g of Zn-69 initially. Which one of the following is closest to the number of grams that would be left after 168 minutes have elapsed?",
+   "options": [
+    "A. 12.5 g",
+    "B. 25 g",
+    "C. 50 g",
+    "D. 100 g"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "3C.1",
+    "3C.2"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ7",
+   "n": "7",
+   "question": "A radioactive decay chain stops when the",
+   "options": [
+    "A. first parent radioisotope no longer exists.",
+    "B. first daughter radioisotope no longer exists.",
+    "C. last daughter radioisotope is a stable element.",
+    "D. last daughter isotope is a stable element."
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "3D.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ8",
+   "n": "8",
+   "question": "A 50 kg person absorbs 200 mJ of energy due to ionising α-particle radiation. The dose equivalent is closest to",
+   "options": [
+    "A. 4 mGy",
+    "B. 4 mSv",
+    "C. 80 mGy",
+    "D. 80 mSv"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "3E.5"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ9",
+   "n": "9",
+   "question": "Which one of the following is not a use for ionising radiation?",
+   "options": [
+    "A. in radiotherapy",
+    "B. to sterilise food",
+    "C. microwave ovens",
+    "D. as a tracer in the body"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "3E.4"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ10",
+   "n": "10",
+   "question": "A point radioactive source is emitting γ-radiation in all directions. A Geiger counter measures a reading of 200 Bq at a distance of 1 m from the source. The Geiger counter reading at a distance of 2 m from the source",
+   "options": [
+    "A. will be less than 200 Bq.",
+    "B. will be 200 Bq.",
+    "C. will be more than 200 Bq.",
+    "D. cannot be determined from the information given."
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "criteria": [
+    "3C.2",
+    "3E.1",
+    "3E.6"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ11",
+   "n": "11",
+   "question": "Use the periodic table (Figure 3A–4 or see page 551 of Appendix 2) and the internationally accepted format $^{A}_{Z}\\text{X}$ to write the elements containing the following nucleons and name them as isotopes.",
+   "options": [],
+   "answer": "a $^{12}_{6}\\text{C}$; carbon-12\nb $^{31}_{15}\\text{P}$; phosphorous-31\nc $^{70}_{30}\\text{Zn}$; zinc-70",
+   "marks": 3,
+   "kind": "recall",
+   "size": "medium",
+   "criteria": [
+    "3A.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "6 neutrons and 6 protons",
+     "answer": "$^{12}_{6}\\text{C}$; carbon-12",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "15 protons and 31 nucleons",
+     "answer": "$^{31}_{15}\\text{P}$; phosphorous-31",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "c",
+     "question": "30 protons and 40 neutrons",
+     "answer": "$^{70}_{30}\\text{Zn}$; zinc-70",
+     "size": "quick",
+     "marks": 1
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ12",
+   "n": "12",
+   "question": "The stability of any nucleus depends on the number of protons and neutrons in the nucleus. What is the approximate neutron/proton ratio for:",
+   "options": [],
+   "answer": "a For small nuclei to be stable, the number of protons must roughly equal the number of neutrons.\nb For larger nuclei, as the number of protons increases, more neutrons are needed to maintain nuclear stability at the larger end the ratio is approximately 1.5:1.",
+   "marks": 2,
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3A.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "small nuclei to be stable",
+     "answer": "For small nuclei to be stable, the number of protons must roughly equal the number of neutrons.",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "larger nuclei to be stable.",
+     "answer": "For larger nuclei, as the number of protons increases, more neutrons are needed to maintain nuclear stability at the larger end the ratio is approximately 1.5:1.",
+     "size": "quick",
+     "marks": 1
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ13",
+   "n": "13",
+   "question": "a What are nucleons?\nb Explain how individual nucleons are held together in a nucleus, given that like charges repel.",
+   "options": [],
+   "answer": "a All of the protons and neutrons in the nucleus of an atom.\nb The pull of the strong nuclear force on the nucleons is greater than the electrostatic repulsion of the protons.",
+   "marks": 3,
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "3A.1",
+    "3A.3",
+    "3A.4"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "What are nucleons?",
+     "answer": "All of the protons and neutrons in the nucleus of an atom.",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "Explain how individual nucleons are held together in a nucleus, given that like charges repel.",
+     "answer": "The pull of the strong nuclear force on the nucleons is greater than the electrostatic repulsion of the protons.",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ14",
+   "n": "14",
+   "question": "a What particle was proposed by Wolfgang Pauli in 1930 to ensure that the law of conservation of energy held in radioactive beta decay?\nb What were the properties of this hypothetical particle?",
+   "options": [],
+   "answer": "a Neutrino (and antineutrino) represented by v and $\\bar{v}$ respectively.\nb No charge (neutral), negligible mass, carrier of excess energy to ensure the law of conservation of energy held in radioactive beta decay.",
+   "marks": 3,
+   "kind": "recall",
+   "size": "medium",
+   "criteria": [
+    "3A.2"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "What particle was proposed by Wolfgang Pauli in 1930 to ensure that the law of conservation of energy held in radioactive beta decay?",
+     "answer": "Neutrino (and antineutrino) represented by v and $\\bar{v}$ respectively.",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "What were the properties of this hypothetical particle?",
+     "answer": "No charge (neutral), negligible mass, carrier of excess energy to ensure the law of conservation of energy held in radioactive beta decay.",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ15",
+   "n": "15",
+   "question": "What is the binding energy of a nucleus?",
+   "options": [],
+   "answer": "The binding energy of a nucleus is the amount of energy required to split a nucleus into its individual nucleons.",
+   "marks": 2,
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3A.6"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ16",
+   "n": "16",
+   "question": "From where in an atom are α- and β-particles and γ-rays emitted?",
+   "options": [],
+   "answer": "From the nucleus of the atom",
+   "marks": 1,
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3B.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ17",
+   "n": "17",
+   "question": "Label this diagram with the correct nuclear radiations.",
+   "options": [],
+   "answer": "See labelled diagram (img/CH3_RQ17_answer.png).",
+   "marks": 3,
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "3B.1",
+    "3E.2"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH3_RQ17.png",
+    "img/CH3_RQ17_answer.png"
+   ],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ18",
+   "n": "18",
+   "question": "List the three types of radiation in order of:",
+   "options": [],
+   "answer": "a γ, β and α\nb α, β and γ",
+   "marks": 6,
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3B.1",
+    "3E.2"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "least ionising power to greatest ionising power",
+     "answer": "γ, β and α",
+     "size": "quick",
+     "marks": 3
+    },
+    {
+     "n": "b",
+     "question": "least penetrating power to greatest penetrating power.",
+     "answer": "α, β and γ",
+     "size": "quick",
+     "marks": 3
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ19",
+   "n": "19",
+   "question": "Americium-241 (Am-241) used in smoke detectors is made in the core of a nuclear reactor from plutonium-239 (Pu-239) when it captures 2 neutrons. The atomic number of americium is 95 and the atomic number of plutonium is 94.",
+   "options": [],
+   "answer": "a $^{239}_{94}\\text{Pu} + 2\\,{}^{1}_{0}\\text{n} \\rightarrow {}^{241}_{94}\\text{Pu} \\rightarrow {}^{241}_{95}\\text{Am} + {}^{0}_{-1}\\beta$\nb $^{241}_{95}\\text{Am} \\rightarrow {}^{237}_{93}\\text{Np} + {}^{4}_{2}\\text{He}$\nc Strong ionisation and short range. A small amount of smoke immediately blocks the alpha radiation from reaching the detection device triggering the alarm.",
+   "marks": 6,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "3B.1",
+    "3B.2"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Write the nuclear transformation equation for making americium-241.",
+     "answer": "$^{239}_{94}\\text{Pu} + 2\\,{}^{1}_{0}\\text{n} \\rightarrow {}^{241}_{94}\\text{Pu} \\rightarrow {}^{241}_{95}\\text{Am} + {}^{0}_{-1}\\beta$",
+     "size": "medium",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "Write the nuclear transformation equation for americium-241 when it decays via alpha decay to neptunium-237 (Np-237).",
+     "answer": "$^{241}_{95}\\text{Am} \\rightarrow {}^{237}_{93}\\text{Np} + {}^{4}_{2}\\text{He}$",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "Explain why alpha radiation emitters are used in preference to gamma or beta radiation emitters for smoke detectors.",
+     "answer": "Strong ionisation and short range. A small amount of smoke immediately blocks the alpha radiation from reaching the detection device triggering the alarm.",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ20",
+   "n": "20",
+   "question": "a How is β⁻-decay of a nucleus possible when a nucleus does not contain any electrons?\nb How is β⁺-decay of a nucleus possible when a nucleus does not contain any positrons?",
+   "options": [],
+   "answer": "a A neutron turns into a proton and emits an electron (β⁻): $^{1}_{0}\\text{n} \\rightarrow {}^{1}_{1}\\text{p} + {}^{0}_{-1}\\text{e}$\nb A proton turns into a neutron emitting a positron or beta-plus particle (β⁺): $^{1}_{1}\\text{p} \\rightarrow {}^{1}_{0}\\text{n} + {}^{0}_{+1}\\text{e}$",
+   "marks": 2,
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "3B.1",
+    "3B.2",
+    "3A.5"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "How is β⁻-decay of a nucleus possible when a nucleus does not contain any electrons?",
+     "answer": "A neutron turns into a proton and emits an electron (β⁻): $^{1}_{0}\\text{n} \\rightarrow {}^{1}_{1}\\text{p} + {}^{0}_{-1}\\text{e}$",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "How is β⁺-decay of a nucleus possible when a nucleus does not contain any positrons?",
+     "answer": "A proton turns into a neutron emitting a positron or beta-plus particle (β⁺): $^{1}_{1}\\text{p} \\rightarrow {}^{1}_{0}\\text{n} + {}^{0}_{+1}\\text{e}$",
+     "size": "quick",
+     "marks": 1
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ21",
+   "n": "21",
+   "question": "Uranium-238 decays via alpha decay. The half-life of U-238 is 4.5 billion years. A physicist is studying a rock sample containing uranium-238 with an activity of 400 kBq.",
+   "options": [],
+   "answer": "a The half-life is the time taken for half of a group of unstable nuclei to decay.\nb The activity is the number of radioactive nuclei that decay each second, measured in bequerel (Bq).\nc 13.5 billion years\nn = 3 half-lives as $\\frac{50}{400} = \\frac{1}{8} = \\left(\\frac{1}{2}\\right)^{3}$ (4.5 billion years × 3)",
+   "marks": 4,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "3C.1",
+    "3C.2"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Explain what is meant by the term ‘half-life’.",
+     "answer": "The half-life is the time taken for half of a group of unstable nuclei to decay.",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "Explain what is meant by the term ‘activity’.",
+     "answer": "The activity is the number of radioactive nuclei that decay each second, measured in bequerel (Bq).",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "c",
+     "question": "How many years will it take before the activity of the uranium-238 sample is 50 kBq?",
+     "answer": "13.5 billion years\nn = 3 half-lives as $\\frac{50}{400} = \\frac{1}{8} = \\left(\\frac{1}{2}\\right)^{3}$ (4.5 billion years × 3)",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ22",
+   "n": "22",
+   "question": "The manufactured radioactive element technetium-99m is often used for medical diagnosis. The activity versus time graph for a sample of technetium-99m is shown below.",
+   "options": [],
+   "answer": "a 6 hours\nb 1.25 kBq as n = 3 half-lives: $\\left(\\frac{1}{2}\\right)^{3} = \\frac{1}{8}$\nc The half-life of 6 hours for technetium-99m makes it a useful radioisotope for medical diagnostics as after one day only $\\frac{1}{16}$ of the original technetium-99m remains.",
+   "marks": 4,
+   "kind": "graph",
+   "size": "medium",
+   "criteria": [
+    "3C.1",
+    "3C.2",
+    "3E.6"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Determine the half-life (in hours) of technetium-99m.",
+     "answer": "6 hours",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "What will the activity be after 18 hours have elapsed?",
+     "answer": "1.25 kBq as n = 3 half-lives: $\\left(\\frac{1}{2}\\right)^{3} = \\frac{1}{8}$",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "c",
+     "question": "Explain why the half-life of technetium-99m makes it a useful radioisotope for medical diagnostics.",
+     "answer": "The half-life of 6 hours for technetium-99m makes it a useful radioisotope for medical diagnostics as after one day only $\\frac{1}{16}$ of the original technetium-99m remains.",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [
+    "img/CH3_RQ22.png"
+   ],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ23",
+   "n": "23",
+   "question": "a When mining uranium-238, miners have to be aware that there will be a deadly cocktail of radioactive substances. Explain why this is the case.\nb What is the stable nucleus produced for the uranium-238 decay chain?",
+   "options": [],
+   "answer": "a Uranium-238 is the parent nucleus of a decay chain that involves 14 generations of different radionuclides before a stable nucleus is produced.\nb Lead-206",
+   "marks": 4,
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "3D.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "When mining uranium-238, miners have to be aware that there will be a deadly cocktail of radioactive substances. Explain why this is the case.",
+     "answer": "Uranium-238 is the parent nucleus of a decay chain that involves 14 generations of different radionuclides before a stable nucleus is produced.",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "What is the stable nucleus produced for the uranium-238 decay chain?",
+     "answer": "Lead-206",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ24",
+   "n": "24",
+   "question": "Radioactive isotopes are used for both diagnostic and treatment purposes in medicine.",
+   "options": [],
+   "answer": "a Low activity (minimise radiation damage), short half-life (don't linger in the patient), low ionisation (minimise radiation damage) and good penetration (can escape the body and can be seen using γ-ray cameras).\nb High activity (maximise damage to cancerous cells), long half-life (no need to replace hospital radiotherapy units too often), low ionisation (minimise radiation damage to healthy surrounding cells) and good penetration (can travel through the body to the spot where the beams are all concentrated).",
+   "marks": 6,
+   "kind": "explain",
+   "size": "long",
+   "criteria": [
+    "3E.2",
+    "3E.6"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Explain some of the characteristics needed for γ-ray radioisotopes used for medical diagnostic purposes.",
+     "answer": "Low activity (minimise radiation damage), short half-life (don't linger in the patient), low ionisation (minimise radiation damage) and good penetration (can escape the body and can be seen using γ-ray cameras).",
+     "size": "medium",
+     "marks": 3
+    },
+    {
+     "n": "b",
+     "question": "Explain some of the characteristics needed for γ-ray radioisotopes used for external medical treatment of malignant cancers.",
+     "answer": "High activity (maximise damage to cancerous cells), long half-life (no need to replace hospital radiotherapy units too often), low ionisation (minimise radiation damage to healthy surrounding cells) and good penetration (can travel through the body to the spot where the beams are all concentrated).",
+     "size": "medium",
+     "marks": 3
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ25",
+   "n": "25",
+   "question": "The radioactive isotope chromium-51 is used in medical diagnosis (e.g. gastrointestinal bleeding) to label red blood cells. The half-life of Cr-51 is 27.7 days. It is a γ-ray emitter. It is stored behind lead shielding. An unshielded vial of Cr-51 has an activity of 37 MBq.",
+   "options": [],
+   "answer": "a To ensure that all the staff are shielded from the gamma rays.\nb To monitor their overall exposure while working in the radioisotope laboratory.\nc ≈ 2.3 MBq 4 months is approximately 4 half-lives.\n$\\left(\\frac{1}{2}\\right)^{4} = \\frac{1}{16}$ ($\\frac{37}{16}$) MBq",
+   "marks": 6,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "3B.1",
+    "3E.2",
+    "3E.6",
+    "3C.2"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Why is chromium-51 stored behind lead shielding?",
+     "answer": "To ensure that all the staff are shielded from the gamma rays.",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "Why do staff handling chromium-51 have to wear whole body dosimeters while handling Cr-51 sources with activities of 37 MBq or more?",
+     "answer": "To monitor their overall exposure while working in the radioisotope laboratory.",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "What is the approximate activity of Cr-51 after 4 months have elapsed?",
+     "answer": "≈ 2.3 MBq 4 months is approximately 4 half-lives.\n$\\left(\\frac{1}{2}\\right)^{4} = \\frac{1}{16}$ ($\\frac{37}{16}$) MBq",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ26",
+   "n": "26",
+   "question": "A patient has a 20 g cancerous tumour, which absorbs 0.006 J of energy from an external cobalt-60 γ-emitter radiotherapy unit.\n(c, d) Another patient with advanced prostate cancer has a 40 g cancerous tumour, which absorbs 0.004 J of energy from internally implanted radium-223 α-emitting pellets.",
+   "options": [],
+   "answer": "a Absorbed dose = $\\frac{\\text{energy}}{\\text{mass}} = \\frac{0.006}{0.02}$ = 0.02 J $kg^{-1}$ = 0.30 Gy\nb Dose equivalent = absorbed dose × radiation weighting factor = 0.30 × 1 = 0.30 Sv\nc Absorbed dose = $\\frac{\\text{energy}}{\\text{mass}} = \\frac{0.004}{0.04}$ = 0.01 J $kg^{-1}$ = 0.10 Gy\nd Dose equivalent = absorbed dose × radiation weighting factor = 0.10 × 20 = 2.0 Sv",
+   "marks": 8,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "3E.4",
+    "3E.5",
+    "3E.6"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the absorbed dose for this tumour.",
+     "answer": "Absorbed dose = $\\frac{\\text{energy}}{\\text{mass}} = \\frac{0.006}{0.02}$ = 0.02 J $kg^{-1}$ = 0.30 Gy",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "Calculate the dose equivalent of the source.",
+     "answer": "Dose equivalent = absorbed dose × radiation weighting factor = 0.30 × 1 = 0.30 Sv",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "(40 g tumour, 0.004 J, radium-223 α-emitting pellets) Calculate the absorbed dose for this tumour.",
+     "answer": "Absorbed dose = $\\frac{\\text{energy}}{\\text{mass}} = \\frac{0.004}{0.04}$ = 0.01 J $kg^{-1}$ = 0.10 Gy",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "d",
+     "question": "Calculate the dose equivalent of the source.",
+     "answer": "Dose equivalent = absorbed dose × radiation weighting factor = 0.10 × 20 = 2.0 Sv",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ27",
+   "n": "27",
+   "question": "a Why are none of our senses useful in detecting radiation?\nb What is the difference between using a Geiger counter or an OLP dosimeter for measuring radiation exposure?",
+   "options": [],
+   "answer": "a For 99% of radioactive sources that most people come into contact with, you can't see, smell, taste or hear them, or know that they are radioactive by touching them. Note however that some radioactive sources glow in the dark.\nb The Geiger counter gives you an immediate reading of the activity, the film badge dosimeter tells you the amount of radiation you have been exposed to over a certain time interval.",
+   "marks": 4,
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "3E.1",
+    "3E.2"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Why are none of our senses useful in detecting radiation?",
+     "answer": "For 99% of radioactive sources that most people come into contact with, you can't see, smell, taste or hear them, or know that they are radioactive by touching them. Note however that some radioactive sources glow in the dark.",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "What is the difference between using a Geiger counter or an OLP dosimeter for measuring radiation exposure?",
+     "answer": "The Geiger counter gives you an immediate reading of the activity, the film badge dosimeter tells you the amount of radiation you have been exposed to over a certain time interval.",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ28",
+   "n": "28",
+   "question": "What is the difference between the somatic effects and genetic effects of ionising radiation?",
+   "options": [],
+   "answer": "Genetic effects are those that occur in the descendants of a parent whose DNA molecules are modified due to exposure to ionising radiation. Somatic effects are those that occur in the exposed individual including damage that is caused to the chromosomes in individual body tissue cells.",
+   "marks": 2,
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "3E.2",
+    "3E.3",
+    "3E.6"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ29",
+   "n": "29",
+   "question": "Ionising radiation creates ions such as $OH^{-}$ and $H^{+}$. Why are these ions dangerous for humans?",
+   "options": [],
+   "answer": "The ions are chemically reactive and can cause cell damage, disturb the regulation of cell reproduction and even cause cell death.",
+   "marks": 2,
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "3E.1",
+    "3E.3",
+    "3E.6"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH3-RQ30",
+   "n": "30",
+   "question": "In external beam radiotherapy, why are there a large number of low-dose beams aimed at a brain tumour from different angles rather than just a single, fixed, high-dose beam of radiation from only one angle? You should use the diagram below in your explanation. The brain tumour is shown in yellow.",
+   "options": [],
+   "answer": "The radiotherapy equipment focuses many small beams of radiation on the tumour. Each beam has very little effect on the healthy tissue it passes through, but a targeted dose of radiation of high intensity is delivered to the site where all the beams intersect.",
+   "marks": 4,
+   "kind": "explain",
+   "size": "long",
+   "criteria": [
+    "3E.3",
+    "3E.6"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH3_RQ30.png",
+    "img/CH3_RQ30_answer.png"
+   ],
+   "src": {
+    "file": "Ch03 Review questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  }
+ ],
+ "summary": "Chapter 3 Summary\n\n3A Nuclear stability: forces in the nucleus\n\n-   Nuclear model atom: electrons circulate about a nucleus of neutrons and protons. Number of protons defines each element.\n\n-   Artificial elements with more than 92 protons are unstable.\n\n-   Nucleon: a proton or a neutron in a nucleus.\n\n-   Nucleus: the solid centre of an atom where most of the mass of an atom is concentrated.\n\n-   Proton: a positively charged particle in the nucleus of an atom.\n\n-   Element: a pure substance consisting only of atoms that all have the same numbers of protons in their nuclei.\n\n-   Neutron: an uncharged particle in the nucleus of an atom.\n\n-   Z = symbol for atomic number = count of protons in an element.\n\n-   A = symbol for atomic mass = number of protons and neutrons.\n\n-   Periodic Table displays elements in a periodic way depending on chemical properties of elements.\n\n-   Convention is to display element with symbol X as AXZ.\n\n-   Isotope is a form of the same element with the same numbers of protons but different numbers of neutrons in their nuclei.\n\n-   Radioactive Isotope any isotope of an element whose nuclei are unstable and dissipate energy by spontaneously emitting radiation.\n\n-   In nuclear physics, radiation is a group-name for any radiated particle or energy, including electromagnetic radiation and electrons, for example.\n\n-   Some radiation is useful in medicine to target cancerous cells (e.g.in tumours).\n\n-   Nuclear stability depends on ratio of number of neutrons to protons: about 1:1 for elements with Z up to about 20; increasing to 1.4 for Z = 50; and to 1.5 for Z = 80.\n\n-   More neutrons are needed to maintain stability for large number of protons to moderate the competing electrostatic force and the strong nuclear force in the nucleus.\n\n-   In the nucleus, between protons electrostatic forces are extremely large, repulsive forces.\n\n-   Four fundamental forces: gravitational, weak nuclear, electromagnetic (a.k.a. electrostatic), and the strong nuclear.\n\n-   The short-range strong nuclear force overcomes electrostatic repulsion forces between protons.\n\n-   The weak force explains the transformation of neutrons into protons with emission of negative beta particle (i.e. an electron), and vice versa (i.e. protons into neutrons with emission of positive beta).\n\n> [image]\n\n[image]\n\n-   Binding energy is the amount of energy required to reverse the original process of binding the nucleons in the nucleus.\n\n-   Putting a proton and neutron together to create a Hydrogen nucleus would release 2.23 MeV of energy (and the nucleus would have less mass than the sum of the p and n by an amount m = E/c^2\n\n-   Binding energy per nucleon is a measure of stability for atoms of elements of larger number of nucleons.\n\n-   Iron (Fe) is most stable (has highest binding energy per nucleon); elements up to Fe created in stars. Elements with nucleons greater than that of Fe must be created in cosmic events of greater energy than fusion in stars.\n\n3B Alpha, beta and gamma radiation\n\n-   α (helium nuclei), β-- (electrons), β+ (positrons) and γ-radiation (electromagnetic energy) the first three decay-products discovered) have different penetrating power.\n\n[image]\n\n-   α (due to mass and speed) is a very strong ionising agent of anything within close range.\n\n-   Decay equations for nuclear transformations:\n\n[image]\n\n[image]\n\n[image]\n\n-   Beta carries a range of energies, and decay by beta is accompanied by emission of a neutrino (so total energy of reaction is conserved).\n\n-   Alpha particles have a specific energy for each element.\n\n-   Gamma rays have smaller amount of energy but due to greater penetrating power are dangerous even at a distance.\n\n-   Nuclear transformation is conversion of a nuclide into another (as above for Uranium to Thorium) and below:\n\n> [image]\n\n-   After emission of alpha or beta, nucleons re-arrange to lower energy-state, and emit gamma.\n\n-   In each equation note conservation of Mass Number (superscript on each symbol) on each side of equation, and of Atomic Number (subscript on each symbol).\n\n3C Modelling radioactive decay\n\n-   Radioactive decay of any one nucleus is random (i.e. unpredictable).\n\n-   Half-life is the time taken, on average, for the decay of half of the nuclei in a large sample of radioactive nuclei (so is also the time for radioactivity to be halved).\n\n-   Because decay-rate depends on number of nucleons, mathematically N = N_0(1/2)^n is an exponential curve (N = number now, N_0 = original number, n = number of half-lives).\n\n-   For medical uses, need an isotope that has a short half-life (so it passes quickly through a body).\n\n-   Activity (a.k.a. strength) of decay is rate of decay: unit -- becquerel (Bq) = 1 decay per second.\n\n-   Radiocarbon dating is a method for determining the age of an object that contains organic material by using the decay of radioactive carbon-14 (the date being that of the death of the organic matter).\n\n3D Analysing decay series diagrams\n\n-   Radioactive isotope decay chains (e.g. U-238) produce intermediate radioactive products (also known as daughter products) until a final stable element (e.g. lead) is reached.\n\n-   Elements in the chain are called a family, also known as series.\n\n-   For decay by electron emission, the daughter will have a higher Atomic Number.\n\n3E The effect of radiation on humans\n\n-   α, β--, β+ and γ-radiation ionise atoms and within cells in a body that is dangerous especially to cell-division.\n\n-   Cells that are damaged but survive unrepaired may lead to cancer.\n\n-   The different capacity of α, β--, β+ and γ-radiation to cause cell damage depends on penetrating power, and energy.\n\n[image]\n\n-   Absorbed dose is the amount of energy absorbed by each kilogram of tissue that is irradiated; measured in grays (Gy).\n\n-   Gray (Gy) the SI unit of the absorbed dose of ionising radiation, corresponding to 1 J kg^--1\n\n-   Sievert (Sv) the SI unit of dose equivalent (the biological effect of ionising radiation), equal to an effective dose of a joule of energy per kilogram of recipient mass.\n\n-   Ionisations in a cell for a given dose of radiation are much greater for alpha than for beta or gamma, so a weighting factor is applied.\n\n-   Dose equivalent dose equivalent (Sv) = absorbed dose (Gy) × radiation weighting factor.\n\n-   Radiation weighting factor a factor by which the absorbed dose (Gy) is to be multiplied to obtain a quantity that expresses, on a common scale for all ionising radiation, the biological damage (Sv) to an exposed individual.\n\n-   Weighting factors differs for diverse body-parts.\n\n-   Genetic effects uncertain: 2 types = chromosomal aberration (i.e. changes in number or structure of chromosomes) and genetic mutations (i.e. altering sequence in a gene).\n\n-   Radiotherapy a strategy to target cancerous tumours with maximum effect by using large doses of lethal (to the targeted cells) radiation while minimising collateral damage to healthy cells.",
+ "test": {
+  "file": "Chapter 3 Test.docx",
+  "questions": 10,
+  "marks": 25,
+  "note": "not indexed question by question (TEACHER ONLY; answers at the end of the same file)"
+ },
+ "curated_resources": {
+  "file": "Ch03 Curated internet resources.docx",
+  "note": "not indexed"
+ },
+ "notes": "Textbook page numbers: src.page is the PDF page of Physics12_Ch03.pdf; src.book_page is the printed page (pdf page + 79). Glossary terms are the textbook margin definitions. Summary images (tables/diagrams in Ch03 Summary.docx) are shown as [image]. Review Q10 (inverse square) is outside Chapter 3 content. Review Q29 and Q30 are linked by the checklist to 3E.3 (so the checklist's 3E.3 links look shifted by one; Q28 fits 3E.3 better: Rocco to check)."
+}

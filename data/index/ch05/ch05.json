@@ -1,0 +1,1397 @@
+{
+ "chapter": 5,
+ "title": "Electricity and energy transfer",
+ "unit": 1,
+ "aos": 3,
+ "sections": [
+  "5A",
+  "5B",
+  "5C",
+  "5D",
+  "5E"
+ ],
+ "criteria": [
+  {
+   "id": "5A.1",
+   "text": "Model a metal as having a sea of electrons free to move",
+   "section": "5A",
+   "review_qs": [
+    "4",
+    "5"
+   ],
+   "exit_candidates": [
+    "CH5-RQ4",
+    "CH5-RQ5"
+   ]
+  },
+  {
+   "id": "5A.2",
+   "text": "Describe current in a metal in terms of drift velocity of negatively charged electrons",
+   "section": "5A",
+   "review_qs": [
+    "6"
+   ],
+   "exit_candidates": [
+    "CH5-RQ6",
+    "5A-SQ4"
+   ]
+  },
+  {
+   "id": "5A.3",
+   "text": "Use analogies to model charge and current in a circuit",
+   "section": "5A",
+   "review_qs": [
+    "18"
+   ],
+   "exit_candidates": [
+    "CH5-RQ18a",
+    "5A-SQ8"
+   ]
+  },
+  {
+   "id": "5A.4",
+   "text": "Use circuit symbols to draw a circuit diagram from a given picture, practical simple circuit or description in words",
+   "section": "5A",
+   "review_qs": [
+    "13",
+    "22",
+    "23",
+    "17",
+    "19",
+    "24",
+    "25",
+    "26",
+    "28",
+    "30"
+   ],
+   "exit_candidates": [
+    "5A-SQ9",
+    "5A-CI3.1"
+   ]
+  },
+  {
+   "id": "5A.5",
+   "text": "Use an ammeter to measure current in a simple circuit; construct a circuit and a suitable circuit diagram to show the use of an ammeter",
+   "section": "5A",
+   "review_qs": [
+    "3",
+    "17",
+    "22"
+   ],
+   "exit_candidates": [
+    "CH5-RQ3",
+    "WS5A-5"
+   ]
+  },
+  {
+   "id": "5A.6",
+   "text": "Apply the formula $I = \\frac{Q}{t}$ for calculations involving current, charge and time",
+   "section": "5A",
+   "review_qs": [
+    "1",
+    "11",
+    "12"
+   ],
+   "exit_candidates": [
+    "CH5-RQ1",
+    "CH5-RQ12a",
+    "5A-SQ11"
+   ]
+  },
+  {
+   "id": "5B.1",
+   "text": "Recall that separating positive and negative charges creates a potential difference, $V$, and requires an input of energy, $E$",
+   "section": "5B",
+   "review_qs": [
+    "6"
+   ],
+   "exit_candidates": [
+    "5B-CI3.3",
+    "WS5B-2"
+   ]
+  },
+  {
+   "id": "5B.2",
+   "text": "Apply the formulas $V = \\frac{E}{Q}$ and $E = VIt$ to calculate the energy supplied to a charge flowing in a circuit",
+   "section": "5B",
+   "review_qs": [
+    "2",
+    "14",
+    "18"
+   ],
+   "exit_candidates": [
+    "CH5-RQ2",
+    "CH5-RQ14a",
+    "5B-SQ6"
+   ]
+  },
+  {
+   "id": "5B.3",
+   "text": "Use analogies to model potential difference and current in a circuit",
+   "section": "5B",
+   "review_qs": [
+    "18"
+   ],
+   "exit_candidates": [
+    "CH5-RQ18b",
+    "5B-SQ8"
+   ]
+  },
+  {
+   "id": "5B.4",
+   "text": "Use a voltmeter to measure potential difference in a simple circuit; construct a circuit and draw a suitable circuit diagram to show the role of an ammeter",
+   "section": "5B",
+   "review_qs": [
+    "3",
+    "17",
+    "22"
+   ],
+   "exit_candidates": [
+    "5B-SQ4",
+    "CH5-RQ3"
+   ]
+  },
+  {
+   "id": "5B.5",
+   "text": "Distinguish between the positioning of an ammeter (in series) and a voltmeter (in parallel) in a simple circuit",
+   "section": "5B",
+   "review_qs": [
+    "3",
+    "17",
+    "22"
+   ],
+   "exit_candidates": [
+    "CH5-RQ3",
+    "WS5B-4"
+   ]
+  },
+  {
+   "id": "5C.1",
+   "text": "Construct a simple circuit to measure current and potential difference across an ohmic resistance; change potential difference and record data in a table of $I$ vs $V$; plot or create $I$ vs $V$ graph",
+   "section": "5C",
+   "review_qs": [
+    "9",
+    "20",
+    "26",
+    "27"
+   ],
+   "exit_candidates": [
+    "CH5-RQ9",
+    "5C-SQ4"
+   ]
+  },
+  {
+   "id": "5C.2",
+   "text": "Recall that resistance is the ratio of potential difference to current, including $R$ = constant for ohmic devices",
+   "section": "5C",
+   "review_qs": [
+    "9",
+    "20",
+    "21",
+    "24",
+    "30"
+   ],
+   "exit_candidates": [
+    "CH5-RQ20a",
+    "CH5-RQ20c",
+    "5C-SQ1"
+   ]
+  },
+  {
+   "id": "5C.3",
+   "text": "Recognise that: the current flows continuously through resistors in a series circuit, without reducing; current is constant at all points in a series circuit",
+   "section": "5C",
+   "review_qs": [
+    "3",
+    "13",
+    "22",
+    "24",
+    "30"
+   ],
+   "exit_candidates": [
+    "CH5-RQ13",
+    "5C-CI2.2"
+   ]
+  },
+  {
+   "id": "5C.4",
+   "text": "Recall that the potential difference drops across each resistance in a series circuit, as energy is converted to other forms: $V_{\\text{supply}} = V_1 + V_2 + \\dots + V_n$",
+   "section": "5C",
+   "review_qs": [
+    "22",
+    "24",
+    "30"
+   ],
+   "exit_candidates": [
+    "5C-CI2.1",
+    "CH5-RQ24d"
+   ]
+  },
+  {
+   "id": "5C.5",
+   "text": "Recognise and calculate that equivalent resistance in a series circuit is the sum of each resistance: $R_{\\text{equivalent}} = R_1 + R_2 + \\dots + R_n$",
+   "section": "5C",
+   "review_qs": [
+    "19",
+    "24",
+    "30"
+   ],
+   "exit_candidates": [
+    "CH5-RQ19a",
+    "5C-SQ7"
+   ]
+  },
+  {
+   "id": "5C.6",
+   "text": "Calculate the potential difference output of a potential divider, $V_{\\text{out}}$, given the ratio of resistances and the supply voltage",
+   "section": "5C",
+   "review_qs": [
+    "23",
+    "30"
+   ],
+   "exit_candidates": [
+    "CH5-RQ23a",
+    "5C-SQ12"
+   ]
+  },
+  {
+   "id": "5D.1",
+   "text": "Recognise a parallel circuit as one with junctions, where the current takes more than one path around the circuit",
+   "section": "5D",
+   "review_qs": [
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30"
+   ],
+   "exit_candidates": [
+    "5D-CI1.1",
+    "5D-SQ1"
+   ]
+  },
+  {
+   "id": "5D.2",
+   "text": "Recall that the current flows continuously through resistors without reducing, but splits at the junctions in a parallel circuit and reunites to return to the main branch through the battery: total current supplied by the battery is $I_{\\text{supply}} = I_1 + I_2 + \\dots + I_n$",
+   "section": "5D",
+   "review_qs": [
+    "26",
+    "25",
+    "30"
+   ],
+   "exit_candidates": [
+    "5D-SQ4",
+    "5D-SQ5"
+   ]
+  },
+  {
+   "id": "5D.3",
+   "text": "Recognise that the potential difference across each branch of a parallel circuit is the same, as energy is converted to other forms",
+   "section": "5D",
+   "review_qs": [
+    "25",
+    "30"
+   ],
+   "exit_candidates": [
+    "5D-SQ3",
+    "CH5-RQ25c"
+   ]
+  },
+  {
+   "id": "5D.4",
+   "text": "Recognise and calculate that equivalent resistance in a parallel circuit is $\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\dots + \\frac{1}{R_n}$",
+   "section": "5D",
+   "review_qs": [
+    "25",
+    "28",
+    "30"
+   ],
+   "exit_candidates": [
+    "CH5-RQ28a",
+    "5D-SQ7"
+   ]
+  },
+  {
+   "id": "5D.5",
+   "text": "Use $I$–$V$ graphs of individual components to predict the equivalent resistance of those components in series and in parallel",
+   "section": "5D",
+   "review_qs": [
+    "21",
+    "26"
+   ],
+   "exit_candidates": [
+    "5D-CI2.2",
+    "CH5-RQ26c"
+   ]
+  },
+  {
+   "id": "5E.1",
+   "text": "Calculate power as the rate of energy transfer $P = \\frac{E}{t}$ in a simple circuit",
+   "section": "5E",
+   "review_qs": [
+    "15",
+    "16"
+   ],
+   "exit_candidates": [
+    "CH5-RQ16b",
+    "5E-CI1.2"
+   ]
+  },
+  {
+   "id": "5E.2",
+   "text": "Calculate power from $P = VI$ supplied and consumed in a simple circuit; use alternative formulas $P = I^{2}R = \\frac{V^{2}}{R}$",
+   "section": "5E",
+   "review_qs": [
+    "7",
+    "8",
+    "10",
+    "16",
+    "30"
+   ],
+   "exit_candidates": [
+    "CH5-RQ7",
+    "CH5-RQ8",
+    "CH5-RQ10"
+   ]
+  },
+  {
+   "id": "5E.3",
+   "text": "Calculate the power supplied to loads in series and in parallel",
+   "section": "5E",
+   "review_qs": [
+    "24",
+    "29",
+    "30"
+   ],
+   "exit_candidates": [
+    "CH5-RQ29a",
+    "5E-CI4.1"
+   ]
+  },
+  {
+   "id": "5E.4",
+   "text": "Explain the advantages and disadvantages of series and parallel circuits, in particular relating to household circuits",
+   "section": "5E",
+   "review_qs": [
+    "27",
+    "30"
+   ],
+   "exit_candidates": [
+    "5E-CI4.2",
+    "CH5-RQ27a"
+   ]
+  }
+ ],
+ "review_questions": [
+  {
+   "id": "CH5-RQ1",
+   "n": "1",
+   "question": "How many coulombs of charge pass through a motor in which a current of 0.25A is maintained for 1 h?",
+   "options": [
+    "A. 25 C",
+    "B. 60 C",
+    "C. 900 C",
+    "D. 9000 C"
+   ],
+   "answer": "C",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "5A.6"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ2",
+   "n": "2",
+   "question": "What energy is gained by a charge of 15 C when it passes through a generator producing a potential difference of 110 V?",
+   "options": [
+    "A. 7.3 J",
+    "B. 110 J",
+    "C. 110 V",
+    "D. 1650 J"
+   ],
+   "answer": "D",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "5B.2"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ3",
+   "n": "3",
+   "question": "The current flowing through a circuit can be measured using an ammeter. The potential difference between two points in a circuit can be measured using a voltmeter. When they are placed in their correct positions, the",
+   "options": [
+    "A. ammeter is in parallel and the voltmeter in series.",
+    "B. voltmeter is in parallel and the ammeter in series.",
+    "C. voltmeter and the ammeter are both in parallel.",
+    "D. voltmeter and the ammeter are both in series."
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "5A.5",
+    "5B.4",
+    "5B.5"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ4",
+   "n": "4",
+   "question": "Which of the descriptions below best matches an electrical conductor?",
+   "options": [
+    "A. tightly bound molecules with + and – polarity",
+    "B. lattice of negative ions in a sea of positive charges",
+    "C. lattice of positive ions in a sea of electrons",
+    "D. tightly bound atoms or molecules, no free charges"
+   ],
+   "answer": "C",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "5A.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ5",
+   "n": "5",
+   "question": "Which of the descriptions below best represents an electrical insulator?",
+   "options": [
+    "A. tightly bound molecules with + and – polarity",
+    "B. lattice of negative ions in a sea of positive charges",
+    "C. lattice of positive ions in a sea of electrons",
+    "D. tightly bound atoms or molecules, no free charges"
+   ],
+   "answer": "D",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "5A.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ6",
+   "n": "6",
+   "question": "Which of the following descriptions does *not* describe the flow of current in a metal wire?",
+   "options": [
+    "A. Positive current drifts around the circuit from negative terminal to positive terminal of a battery.",
+    "B. Negative electrons drift around the circuit from negative terminal to positive terminal of a battery.",
+    "C. Chemical energy separates positive and negative charges in the battery, which allows negative electrons to drift around the circuit from negative terminal to positive terminal of a battery.",
+    "D. The potential difference created by separating charges causes electrons to drift towards the positive terminal of a battery."
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "criteria": [
+    "5A.2",
+    "5B.1"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ7",
+   "n": "7",
+   "question": "How much current is drawn by a USB fan rated 5 V, 4 W?",
+   "options": [
+    "A. 20 A",
+    "B. 5.0 A",
+    "C. 4.0 A",
+    "D. 0.80 A"
+   ],
+   "answer": "D",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "5E.2"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ8",
+   "n": "8",
+   "question": "How much power is dissipated in a 10 Ω speaker with potential difference of 9 V?",
+   "options": [
+    "A. 0.9 W",
+    "B. 8.1 W",
+    "C. 81 W",
+    "D. 90 W"
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "5E.2"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ9",
+   "n": "9",
+   "question": "An ohmic conductor is one in which, as the potential difference across it is increased, the current through it would",
+   "options": [
+    "A. increase proportionally.",
+    "B. decrease proportionally.",
+    "C. be inversely proportional.",
+    "D. remain constant."
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "5C.1",
+    "5C.2"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ10",
+   "n": "10",
+   "question": "A student looked at an electric light globe but noticed that the power rating had worn off. The student found that the globe carried a current of 250 mA when used on a 24 V battery. What was the power rating of the globe?",
+   "options": [
+    "A. 6 W",
+    "B. 60 W",
+    "C. 96 W",
+    "D. 600 W"
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "5E.2"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ11",
+   "n": "11",
+   "question": "How many electrons are there in the following charges?",
+   "options": [],
+   "answer": "a $1.25\\times10^{19}$ b $9.375\\times10^{19}$ c $6.25\\times10^{21}$",
+   "marks": 3,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "5A.6"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "2 C",
+     "answer": "$1.25\\times10^{19}$",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "15 C",
+     "answer": "$9.375\\times10^{19}$",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "c",
+     "question": "1000 C",
+     "answer": "$6.25\\times10^{21}$",
+     "size": "quick",
+     "marks": 1
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ12",
+   "n": "12",
+   "question": "What is the current in a circuit in the following circumstances?",
+   "options": [],
+   "answer": "a 4 A b 0.5 A c 1 A",
+   "marks": 3,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "5A.6"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "20 C of charge passes a point in 5 s.",
+     "answer": "4 A",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "10 C of charge passes a point in 20 s.",
+     "answer": "0.5 A",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "c",
+     "question": "180 C of charge passes a point in 3 min.",
+     "answer": "1 A",
+     "size": "quick",
+     "marks": 1
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ13",
+   "n": "13",
+   "question": "What would each ammeter ($A_1$, $A_2$ etc.) read in the following circuit? The reading on $A_4$ is 0.2 A.",
+   "options": [],
+   "answer": "Each ammeter reads the same 0.2 A as it's a series circuit, so the same current flows all the way around the circuit.",
+   "marks": 2,
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "5C.3",
+    "5A.5"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH5_RQ13.png"
+   ],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ14",
+   "n": "14",
+   "question": "The potential difference across a lamp is 12 V. How many joules of thermal and light energy are produced when",
+   "options": [],
+   "answer": "a 72 J b 360 J c 1440 J",
+   "marks": 3,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "5B.2"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "6 C passes through it?",
+     "answer": "72 J",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "30 C passes through it?",
+     "answer": "360 J",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "c",
+     "question": "it carries a current of 1 A for 2 min?",
+     "answer": "1440 J",
+     "size": "quick",
+     "marks": 1
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ15",
+   "n": "15",
+   "question": "(three parts)",
+   "options": [],
+   "answer": "a 6 J per second b $1.62\\times10^{5}$ J c 720 J",
+   "marks": 3,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "5E.1",
+    "5B.2"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "How many joules of energy are generated each second by a 12 V battery supplying a current of 0.5 A?",
+     "answer": "6 J per second",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "How many joules of thermal and light energy are produced if a 12 V car battery supplies a current of 15 A for 15 min?",
+     "answer": "$1.62\\times10^{5}$ J",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "c",
+     "question": "How many joules of thermal energy are generated by a coil of wire connected to a 12 V battery if there is a current of 0.5 A in it for 2 min?",
+     "answer": "720 J",
+     "size": "quick",
+     "marks": 1
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ16",
+   "n": "16",
+   "question": "A passenger reading light operates from a 12 V car battery.",
+   "options": [],
+   "answer": "a $1.62\\times10^{4}$ J b 18 W",
+   "marks": 2,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "5E.1",
+    "5E.2"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "How much energy is converted to thermal and light by the bulb if it draws a current of 1.5 A for a time of 15 min?",
+     "answer": "$1.62\\times10^{4}$ J",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "What power does the light draw during this time?",
+     "answer": "18 W",
+     "size": "quick",
+     "marks": 1
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ17",
+   "n": "17",
+   "question": "Draw a circuit diagram including a power supply, resistor and both an ammeter and a voltmeter correctly positioned.",
+   "options": [],
+   "answer": "Any diagram with power supply (battery) in series with a resistor and ammeter, plus a voltmeter in parallel with the resistor. Order and arrangement may vary. Correct as long as correct symbols and series connection for ammeter, parallel connection for voltmeter.",
+   "marks": 3,
+   "kind": "graph",
+   "size": "medium",
+   "criteria": [
+    "5A.4",
+    "5A.5",
+    "5B.4",
+    "5B.5"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ18",
+   "n": "18",
+   "question": "Answer the following questions using the kayaking analogy for electric circuits in Section 5B.",
+   "options": [],
+   "answer": "a Current = flow of kayaks b Potential difference = drop in height of river/waterfall c Power dissipated is current × potential difference, so both the number of kayaks and the drop in height give the power. As a kayak drops down, it loses gravitational potential energy and gains kinetic energy, so generally goes faster (unlike real current!) So, a rough idea of power could be how many kayaks are passing per minute and how fast they're going.",
+   "marks": 6,
+   "kind": "explain",
+   "size": "long",
+   "criteria": [
+    "5A.3",
+    "5B.3",
+    "5B.2"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "What part of the analogy represents electric current?",
+     "answer": "Current = flow of kayaks",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "What part of the analogy represents potential difference?",
+     "answer": "Potential difference = drop in height of river/waterfall",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "How could this analogy represent power dissipated in a circuit?",
+     "answer": "Power dissipated is current × potential difference, so both the number of kayaks and the drop in height give the power. As a kayak drops down, it loses gravitational potential energy and gains kinetic energy, so generally goes faster (unlike real current!) So, a rough idea of power could be how many kayaks are passing per minute and how fast they're going.",
+     "size": "medium",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ19",
+   "n": "19",
+   "question": "Draw a circuit diagram, then work out the equivalent resistance for each of the following.",
+   "options": [],
+   "answer": "a 30 Ω b 30 Ω",
+   "marks": 4,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "5C.5",
+    "5A.4"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "a 20 Ω resistance in series with a 10 Ω resistance",
+     "answer": "30 Ω",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "20 Ω, 8 Ω and 2 Ω resistances in series.",
+     "answer": "30 Ω",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ20",
+   "n": "20",
+   "question": "Use Ohm's law to calculate the",
+   "options": [],
+   "answer": "a 20 Ω b 125 V c 0.024 A",
+   "marks": 3,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "5C.2",
+    "5C.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "resistance of a light bulb in which the current is 0.6 A when it is connected to a potential difference of 12 V",
+     "answer": "20 Ω",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "potential difference across a 25 Ω resistance when there is a 5 A current in it",
+     "answer": "125 V",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "c",
+     "question": "current in a resistance of 500 Ω when it is connected to a 12 V battery.",
+     "answer": "0.024 A",
+     "size": "quick",
+     "marks": 1
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ21",
+   "n": "21",
+   "question": "Refer to the $I$–$V$ characteristic graph below.",
+   "options": [],
+   "answer": "a $\\frac{3}{1.8} = 1.7\\ \\Omega$ b $\\frac{6}{2.2} = 2.7\\ \\Omega$ c ∞ very large",
+   "marks": 4,
+   "kind": "graph",
+   "size": "medium",
+   "criteria": [
+    "5C.2",
+    "5D.5"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Find the resistance of component Y when the potential difference across it is 3 V.",
+     "answer": "$\\frac{3}{1.8} = 1.7\\ \\Omega$",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "Find the resistance of component Y when the potential difference across it is 6 V.",
+     "answer": "$\\frac{6}{2.2} = 2.7\\ \\Omega$",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "c",
+     "question": "What would the resistance be when the potential difference is 6 V and the battery is reversed?",
+     "answer": "∞ very large",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [
+    "img/CH5_RQ21.png"
+   ],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ22",
+   "n": "22",
+   "question": "All the resistors in the following circuit are identical. What would the readings on the meters be, given the potential difference of the battery is 9 V, and that the reading on $A_1$ is 0.4 A.",
+   "options": [],
+   "answer": "All ammeters read 0.4 A, all voltmeters read 3 V",
+   "marks": 3,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "5C.3",
+    "5C.4",
+    "5A.5",
+    "5B.5"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH5_RQ22.png"
+   ],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ23",
+   "n": "23",
+   "question": "What would the output potential difference, $V_{\\text{out}}$, be in the following potential divider circuit, where the two resistors $R_1$ and $R_2$ are varied? $V_{\\text{in}}$ is steady at 16 V.",
+   "options": [],
+   "answer": "a 8 V b 15.2 V c 5.3 V d 12.8 V e 3.2 V",
+   "marks": 10,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "5C.6"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "$R_1$ = 20 Ω, $R_2$ = 20 Ω",
+     "answer": "8 V",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "$R_1$ = 50 Ω, $R_2$ = 1000 Ω",
+     "answer": "15.2 V",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "$R_1$ = 100 Ω, $R_2$ = 50 Ω",
+     "answer": "5.3 V",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "d",
+     "question": "$R_1$ = 200 Ω, $R_2$ = 800 Ω",
+     "answer": "12.8 V",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "e",
+     "question": "$R_1$ = 800 Ω, $R_2$ = 200 Ω",
+     "answer": "3.2 V",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [
+    "img/CH5_RQ23.png"
+   ],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ24",
+   "n": "24",
+   "question": "Resistances of 12 Ω, 20 Ω and 40 Ω are joined in series and connected to a 12 V battery.",
+   "options": [],
+   "answer": "a Answers will vary b 72 Ω c 0.17 A d 2 V; 3.3 V; 6.7 V",
+   "marks": 6,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "5C.5",
+    "5C.4",
+    "5C.3"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Draw a circuit diagram of the arrangement.",
+     "answer": "Answers will vary",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "What is the equivalent resistance in the circuit?",
+     "answer": "72 Ω",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "c",
+     "question": "What is the current in the circuit?",
+     "answer": "0.17 A",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "d",
+     "question": "Find the potential difference across each of the three resistors.",
+     "answer": "2 V; 3.3 V; 6.7 V",
+     "size": "medium",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ25",
+   "n": "25",
+   "question": "Lamps of resistance 300 Ω, 400 Ω and 600 Ω are joined in parallel and connected to the 240 V mains supply.",
+   "options": [],
+   "answer": "a Answers will vary b 133.3 Ω c 0.8 A in 300 Ω; 0.6 A in 400 Ω; 0.4 A in 600 Ω d 1.8 A",
+   "marks": 5,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "5D.2",
+    "5D.3",
+    "5D.4"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Draw a circuit diagram of the arrangement.",
+     "answer": "Answers will vary",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "What is the equivalent resistance in the circuit?",
+     "answer": "133.3 Ω",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "c",
+     "question": "What is the current in each resistance?",
+     "answer": "0.8 A in 300 Ω; 0.6 A in 400 Ω; 0.4 A in 600 Ω",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "d",
+     "question": "What is the total current in the circuit?",
+     "answer": "1.8 A",
+     "size": "quick",
+     "marks": 1
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ26",
+   "n": "26",
+   "question": "The $I$–$V$ characteristics of two components (A and B) are shown below.",
+   "options": [],
+   "answer": "a Answers will vary b In series, current is same in both, potential differences add up to 10 V. Current of 1.0 A in each gives $V_A = V_B = 5$ V, so in series this would give $V_{\\text{battery}} = 10$ V c In parallel, each receives potential difference 10 V, currents add up to total current through battery: 2.0 + 1.5 = 3.5 A d Calculate resistance of each component when $V$ = 30 V; from graphs read $I$ at $V$ = 30 V, then $R = \\frac{V}{I}$.",
+   "marks": 9,
+   "kind": "graph",
+   "size": "long",
+   "criteria": [
+    "5D.5",
+    "5C.1",
+    "5D.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Draw a circuit diagram that could be used to obtain the measurements required to plot one of these $I$–$V$ graphs.",
+     "answer": "Answers will vary",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "What would the total current be if components A and B were placed in series and connected to a 10 V battery?",
+     "answer": "In series, current is same in both, potential differences add up to 10 V. Current of 1.0 A in each gives $V_A = V_B = 5$ V, so in series this would give $V_{\\text{battery}} = 10$ V",
+     "size": "medium",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "What would the total current be if components A and B were placed in parallel and connected to a 10 V battery?",
+     "answer": "In parallel, each receives potential difference 10 V, currents add up to total current through battery: 2.0 + 1.5 = 3.5 A",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "d",
+     "question": "What would be an alternative way to calculate the total current through components A and B in series or parallel?",
+     "answer": "Calculate resistance of each component when $V$ = 30 V; from graphs read $I$ at $V$ = 30 V, then $R = \\frac{V}{I}$.",
+     "size": "medium",
+     "marks": 3
+    }
+   ],
+   "img": [
+    "img/CH5_RQ26.png"
+   ],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ27",
+   "n": "27",
+   "question": "(two parts)",
+   "options": [],
+   "answer": "a/b Answer should involve ease of switching, need for equal potential difference (parallel) or equal current (series).",
+   "marks": 6,
+   "kind": "explain",
+   "size": "long",
+   "criteria": [
+    "5E.4",
+    "5D.1",
+    "5C.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Give an example where a parallel circuit is more useful than a series circuit and explain why.",
+     "answer": "Answer should involve ease of switching, need for equal potential difference (parallel) or equal current (series).",
+     "size": "medium",
+     "marks": 3
+    },
+    {
+     "n": "b",
+     "question": "Give an example where a series circuit is more useful than a parallel circuit and explain why.",
+     "answer": "Answer should involve ease of switching, need for equal potential difference (parallel) or equal current (series).",
+     "size": "medium",
+     "marks": 3
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ28",
+   "n": "28",
+   "question": "Draw a circuit diagram and then work out the equivalent resistance for",
+   "options": [],
+   "answer": "a 333.3 Ω b 1.96 Ω",
+   "marks": 4,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "5D.4",
+    "5A.4"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "a 1000 Ω resistance in parallel with a 500 Ω resistance",
+     "answer": "333.3 Ω",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "5 Ω, 6 Ω and 7 Ω resistances in parallel.",
+     "answer": "1.96 Ω",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH5-RQ29",
+   "n": "29",
+   "question": "(three parts)",
+   "options": [],
+   "answer": "a/b They will only use 11 W when they are connected to a 240 V supply. c Answers will vary.",
+   "marks": 7,
+   "kind": "explain",
+   "size": "long",
+   "criteria": [
+    "5E.3",
+    "5D.1"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Find the power used by three 11 W LED light globes connected in series to a 240 V supply.",
+     "answer": "They will only use 11 W when they are connected to a 240 V supply.",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "Find the power used by three 11 W LED light globes connected in parallel to a 240 V supply",
+     "answer": "They will only use 11 W when they are connected to a 240 V supply.",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "Compare the power used in series and in parallel and suggest reasons for this. Which would be the best arrangement for lighting a benchtop in the kitchen?",
+     "answer": "Answers will vary.",
+     "size": "medium",
+     "marks": 3
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   },
+   "note": "Suggested answers for 29a/b are vague (not numerical)."
+  },
+  {
+   "id": "CH5-RQ30",
+   "n": "30",
+   "question": "Design and build a circuit that would turn on and off the turning indicators in a car. Include both the front and back turning lights and the dash lights that tell the driver his indicator is on.",
+   "options": [],
+   "answer": "Answers will vary.",
+   "marks": 3,
+   "kind": "graph",
+   "size": "long",
+   "criteria": [
+    "5A.4",
+    "5D.1",
+    "5E.4"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch05 Review questions.docx"
+   }
+  }
+ ],
+ "summary": "Chapter 5 Summary\n5A Charge (Q) and current (I)\n-   An atom has a central nucleus composed of positive protons and uncharged neutrons.\n-   Electrons orbit the nucleus and carry a negative charge.\n-   In conductors such as metals, the outer shell electrons behave as a 'sea' of electrons and are free to move.\n-   The movement of free outer electrons in conductors result in a current in an electric circuit.\n-   An electric circuit consists of a source of energy (battery) and a load that converts electrical energy to another form of energy, connect with metal wires.\n-   When the battery is connected to the circuit, the free electrons drift toward the positive side, creating a current.\n-   The direction of current flow is referred to as 'conventional current' which is from the positive terminal of a battery to the negative terminal of a battery.\n-   Materials with few or no free electrons are insulators, while materials that conduct partially are semi-conductors.\n-   Components in electric circuits are represented through diagrams using an agreed upon set of symbols.\n-   The current in an electric circuit can be measured using an ammeter, placed in series\n-   Current is measured in ampere or amp (A).\n-   Charged is measured in coulomb (C), where 1 C is the amount of charge that passes through a point when a current of 1A flows for a time of 1 second.\n-   Charge calculated using the formula where $I$ is electrical current (A); $Q$ is charge (C) and $t$ is time (s).\n5B Electrical energy and potential difference\n-   Charge separation occurs when electrons are transferred from one substance to another.\n-   In a battery, a chemical reaction keeps one terminal positively charged and other negatively charged.\n-   The amount of energy each coulomb of charge carries from the battery to the components depends on the electrical potential energy of the separate charges in the battery.\n-   Potential difference is a measure of the electrical potential energy each charge carries from the battery and is calculated using the formula where $V$ is potential difference (V); $E\\ $is electrical potential energy (J) and $Q$ is charge (C).\n-   A voltmeter is placed parallel in a circuit is used to measure potential difference in the unit volt (V).\n-   The formulas for potential difference and charge can be combined to calculate electrical energy so that $E = VIt$.\n5C Modelling resistance in series circuits\n-   The ratio of voltage (V) to current (I) for a circuit component is called its resistance (R) and is measured in ohm (Ω).\n-   In ohmic resistors this ratio of is constant, and for non-ohmic resistors the ratio varies with current and temperature.\n-   The relationships between potential difference and current is expressed by the equation below and is known as Ohm's law where\n-   Resistance can also be calculate using from of the *I-V* graph.\n-   When analysing a circuit, the equivalent resistance must be found before the circuit can be analysed fully.\n-   For series circuits:\n    -   There is only one current path through all the resistors, so the current is the same in each.\n    -   The sum of the potential differences across all the resistors must equal the potential difference the battery provides:\n> \n-   The equivalent resistance is the sum of the individual resistors so that:\n> \n-   A series circuit with two or more components where the voltage is shared between the components of the circuit is called a potential or voltage divider.\n    -   By varying the values of each resistor, any number of volts can be supplied at the output from a fixed input using the formula:\n> \n5D Modelling resistance in parallel circuits\n-   In a parallel circuit, the path of the current branches so there is more than one way for the current to go around the circuit.\n-   For parallel circuits:\n    -   The same potential difference, V, is across each component in the parallel section.\n    -   The current *I~total~* is divided between each component so that:\n> \n-   The equivalent resistance using the general formula:\n> \n5E Electric power\n-   Power is the rate at which work is done or energy is transformed. It is a scalar quantity measured in watts (W) and calculated using the formula:\n-   The power supplied or consumed in a circuit depends on the current and the potential difference and is calculated using one of three formulae:\n    -   $P = VI$ -- used in general calculations.\n    -   *P = I^2^R* -- used when considering power lost as thermal energy in wires.\n    -    -- used for finding the power used in circuits of differing resistance.\n-   Parallel circuits have advantages over series circuits, which is why household electrical circuits and wired in parallel:\n    -   Individual components can receive the same potential difference.\n    -   Components can be switched off independently.\n    -   If one component breaks the supply to the other components is not interrupted.",
+ "summary_note": "Formulas in the Summary docx are images and are omitted here; see each section formulas list.",
+ "test": {
+  "file": "Chapter 5 Test.docx",
+  "questions": 20,
+  "marks": 58,
+  "note": "not indexed question by question; 10 multiple-choice + 10 short-answer, answers at end of docx"
+ },
+ "notes": "Review answers are brief (from Chapter 5 Suggested responses). Several criteria link to Q30 (open design task, \"Answers will vary\"). 5B.4 wording in the Checklist says \"role of an ammeter\" (verbatim; probably means voltmeter)."
+}

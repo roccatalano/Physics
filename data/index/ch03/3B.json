@@ -1,0 +1,1250 @@
+{
+ "code": "3B",
+ "title": "Alpha, beta and gamma radiation",
+ "chapter": 3,
+ "unit": 1,
+ "aos": 2,
+ "study_design": [
+  "Describe the properties of α, β−, β+ and γ radiation",
+  "Explain nuclear transformations using decay equations involving α, β−, β+ and γ radiation"
+ ],
+ "criteria": [
+  "3B.1",
+  "3B.2"
+ ],
+ "glossary": [
+  {
+   "id": "3B-G1",
+   "term": "Photon",
+   "def": "a quantum of light or other electromagnetic radiation",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 21,
+    "book_page": 100
+   }
+  },
+  {
+   "id": "3B-G2",
+   "term": "Ionise",
+   "def": "the removal or addition of electrons from a neutral atom",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 21,
+    "book_page": 100
+   }
+  },
+  {
+   "id": "3B-G3",
+   "term": "Alpha (α) particle",
+   "def": "a radioactive decay product comprising two protons and two neutrons; the same as a He nucleus",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 21,
+    "book_page": 100
+   }
+  },
+  {
+   "id": "3B-G4",
+   "term": "Transmutation",
+   "def": "a change in the structure of atomic nuclei that converts one element into another element",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 22,
+    "book_page": 101
+   }
+  },
+  {
+   "id": "3B-G5",
+   "term": "Beta (β) particle",
+   "def": "a high-energy, high-speed electron (β−) or positron (β+) that is ejected from the nucleus by some radionuclides during a form of radioactive decay",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 24,
+    "book_page": 103
+   }
+  },
+  {
+   "id": "3B-G6",
+   "term": "Gamma (γ) ray",
+   "def": "a high-energy photon released when a nucleus remains unstable after alpha or beta decay. Gamma rays travel at the speed of light and carry no charge.",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 25,
+    "book_page": 104
+   }
+  },
+  {
+   "id": "3B-G7",
+   "term": "Nuclear transformation",
+   "def": "the conversion of one nuclide into another nuclide",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 28,
+    "book_page": 107
+   }
+  }
+ ],
+ "formulas": [],
+ "engage": {
+  "heading": "Lead into gold",
+  "text": "A common aim of alchemy was to turn ‘base metals’ (common and cheap lead and iron, for instance) into ‘noble metals’ (rare and valuable metals such as gold and silver). Alchemists failed to turn lead into gold but they did discover much of chemistry along the way. An element cannot be converted into another by chemical means but the spontaneous emission of alpha (α) radiation and beta (β) radiation automatically generates other elements. (See also radioactive decay chains in Section 3D.)\n\nParticle accelerators can be used to create gold but at a much higher cost than digging it up from the ground. Gold was created by neutron bombardment of the element mercury in 1941, but all of the isotopes of gold produced were radioactive.",
+  "figures": [],
+  "src": {
+   "file": "Physics12_Ch03.pdf",
+   "page": 19,
+   "book_page": 98
+  }
+ },
+ "chunks": [
+  {
+   "id": "3B-E1",
+   "heading": "Different types of radiation",
+   "text": "Following the 1896 discovery of radioactivity by Henri Becquerel, Ernest Rutherford (Figure 3B–2 left) in 1899 studied the absorption of radioactivity by thin sheets of metal foil and found two components: alpha (represented by the symbol α) radiation, which is absorbed by a few thousandths of a centimetre of metal foil or a sheet of paper, and beta (represented by the symbol β) radiation, which can pass through 100 times as much foil before it was absorbed. Shortly afterwards, a third form of radiation, named gamma (represented by the symbol γ) rays, were discovered that can penetrate as much as several centimetres of lead (Figure 3B–2 right).\n\nUnstable isotopes emit various types of radiation as they transform to stable isotopes. There are three naturally occurring forms of nuclear radiation: α-, β- and γ-radiation (Figure 3B–3).\n\nWhen these different types of radiation were first discovered, Ernest Rutherford did not know exactly what they were. So each type of radiation was given a different Greek letter (in this case the first three letters of the Greek alphabet) from least penetrating (α) to most penetrating (γ) radiation.\n\nLater it was discovered that alpha particles were actually helium nuclei, beta particles came in both negative and positive forms and were actually electrons (–) and positrons (+) emitted from the nucleus, and gamma rays were very high-energy photons.\n\nThese three nuclear radiations are energetic enough to ionise atoms. Figure 3B–4 shows a gamma ray ionising a helium atom to create a $He^{+}$ ion.\n\nNOTE: \n• Atoms with an overall positive or negative charge are referred to as ions.\n• Positive ions form when electrons are removed from a neutral atom.\n• Negative ions form when electrons are gained by a neutral atom.\n• α-, β- and γ-radiation all have the ability to ionise atoms that they come into contact with.\n\nThese three nuclear radiations differ in many important properties; for example, their charge, mass, energy, capacity to penetrate substances, capacity to ionise materials and their behaviour in electric and magnetic fields.",
+   "figures": [
+    "3B-F2",
+    "3B-F3",
+    "3B-F4"
+   ],
+   "criteria": [
+    "3B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 20,
+    "book_page": 99,
+    "pages": [
+     20,
+     21
+    ]
+   }
+  },
+  {
+   "id": "3B-E2",
+   "heading": "Alpha particle radiation (α)",
+   "text": "Alpha particle radiation consists of two neutrons and two protons (that is the same as a helium nucleus) ejected as a package from the nucleus of a radioactive atom. The package carries two positive charges. Their charged nature means that they are affected by both electric and magnetic fields. The speed of the alpha (α) particles depends very much on the nature of the radioactive source, but typically their maximum speed (~30 000 km $s^{-1}$) is about 10% of the speed of light (Figure 3B–5).\n\nThe capacity of α-particle radiation to penetrate materials is not very great: it usually penetrates no more than a few centimetres in air and is absorbed even by a relatively small thickness of paper or human skin. However, because they are travelling so fast, and are relatively massive (compared, say, with β-particles), α-particles can ionise a large number of atoms over their very short range of penetration as they dissipate their kinetic energy. This makes α-particle radiation relatively harmless for most external sources that are about a metre or more away from us, as the radiation will be easily absorbed by the intervening air. But if radiation sources are close to or within sensitive organs α-particle radiation is extremely dangerous.\n\nAlpha particle radiation results in transmutation of elements. The decaying radioactive nucleus is called the parent nucleus and the produced radionuclide is called the daughter nucleus. For example, when uranium-238 decays by emitting an α-particle, the original (parent) nucleus is left with four less nucleons (2 protons and 2 neutrons). The daughter nucleus now has 90 protons, which is the element thorium-234.\n\nThis can be written as follows:\n\n$^{238}_{92}\\text{U} \\rightarrow {}^{234}_{90}\\text{Th} + {}^{4}_{2}\\text{He}$ + energy\n\nAlpha particles are emitted with specific energies that are unique to the properties of the parent nucleus. In the case of the uranium-238 nucleus, the α-particle emitted has an energy of 4.3 MeV.",
+   "figures": [
+    "3B-F5"
+   ],
+   "criteria": [
+    "3B.1",
+    "3B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 21,
+    "book_page": 100,
+    "pages": [
+     21,
+     22
+    ]
+   }
+  },
+  {
+   "id": "3B-E3",
+   "heading": "Useful applications of alpha radiation",
+   "text": "Although α-particles have low penetrating power, they still provide a range of useful applications:\n• smoke detectors – americium-241 is commonly used in ionising smoke detectors. Smoke that enters the detector reduces the amount of α-particles that are detected and triggers the alarm\n• static eliminators typically use α-particles from polonium-210 to remove static electric charges from equipment\n• α-emitters are used in radiotherapy to treat cancers\n• radioisotope thermoelectric generators use α-particle decay from plutonium-238 to generate heat that is converted to electricity; they are commonly used in space probes and robotic planetary explorers (Figure 3B–7).",
+   "figures": [
+    "3B-F7"
+   ],
+   "criteria": [
+    "3B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 23,
+    "book_page": 102,
+    "pages": [
+     23
+    ]
+   }
+  },
+  {
+   "id": "3B-E4",
+   "heading": "Beta radiation (β)",
+   "text": "Beta particle radiation usually consists of very fast-moving electrons or positrons. Every beta (β) particle carries either one negative or one positive electronic charge (i.e. ±1.6 × $10^{-19}$ coulomb: electron –e, positron +e). Their charged nature means that they are affected by both electric and magnetic fields (as α-particles are), and this property was also important for their original discovery. The velocity of β-particles also varies over a wide range, depending on the nature of the radioactive source, but it is usually never more than 90% of the speed of light, c (0.9c or 270 000 km $s^{-1}$).\n\nBeta particles can penetrate up to 1 metre of air. They can be absorbed by aluminium a few millimetres thick. Their ionising capacity is considerably less than that of α-radiation. However, they penetrate further through materials so they can be dangerous if the source is closer than a metre externally, or very dangerous if the source is ingested internally, for much the same sort of reasons as for α-particle radiation.\n\nIn $β^{-}$-decay an electron is emitted from inside the nucleus. However, since a nucleus does not contain any electrons, how is this possible? The electrons emitted do not come from the electron shell surrounding the nucleus.\n\nSome very interesting changes take place inside a radioactive nucleus when it emits an electron. A neutron turns into a proton and emits an electron ($β^{-}$). This can be written as:\n\n$^{1}_{0}\\text{n} \\rightarrow {}^{1}_{1}\\text{p} + {}^{0}_{-1}\\text{e}$ + energy or $^{1}_{0}\\text{n} \\rightarrow {}^{1}_{1}\\text{p} + {}^{0}_{-1}\\beta$ + energy\n\nIn a similar manner, a proton can also turn into a neutron, emitting a positron or beta-plus particle ($β^{+}$).\n\n$^{1}_{1}\\text{p} \\rightarrow {}^{1}_{0}\\text{n} + {}^{0}_{+1}\\text{e}$ + energy or $^{1}_{1}\\text{p} \\rightarrow {}^{1}_{0}\\text{n} + {}^{0}_{+1}\\beta$ + energy\n\nThese $β^{-}$- and $β^{+}$-emissions are shown in Figure 3B–8.\n\nAs noted previously, α-particles are emitted with specific energies that are unique to the parent nucleus. Beta particles are emitted with any energy up to a maximum value, but not all of the initial energy can be accounted for in the products.\n\nDoes this mean that energy is not conserved in this β-decay nuclear process?\n\nAs introduced in Section 3A, Wolfgang Pauli (a theoretical physicist) in 1930 suggested that another particle, as yet undetected, was emitted. This particle would have no charge, as all the charge was accounted for, and have negligible mass. Enrico Fermi named the particle ‘neutrino’, from the Italian for ‘little neutral one’. It was first experimentally detected in 1956.\n\nThe complete $β^{-}$-decay process is:\n\n$^{1}_{0}\\text{n} \\rightarrow {}^{1}_{1}\\text{p} + {}^{0}_{-1}\\beta$ + neutrino\n\nwhere the neutrino is the carrier of the ‘missing’ energy.\n\nThe complete $β^{+}$-decay process is:\n\n$^{1}_{1}\\text{p} \\rightarrow {}^{1}_{0}\\text{n} + {}^{0}_{+1}\\beta$ + neutrino\n\nwhere again the neutrino is the carrier of the ‘missing’ energy.",
+   "figures": [
+    "3B-F8"
+   ],
+   "criteria": [
+    "3B.1",
+    "3B.2",
+    "3A.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 24,
+    "book_page": 103,
+    "pages": [
+     24,
+     25
+    ]
+   }
+  },
+  {
+   "id": "3B-E5",
+   "heading": "Useful applications of beta radiation",
+   "text": "The medium penetrating power of β-particles provides a range of useful applications that include:\n• thickness detectors for the quality control of thin materials, i.e. paper\n• treatment of eye and bone cancers; strontium-89 is commonly used\n• fluorine-18 as a tracer for positron emission tomography (PET).",
+   "figures": [],
+   "criteria": [
+    "3B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 25,
+    "book_page": 104,
+    "pages": [
+     25
+    ]
+   }
+  },
+  {
+   "id": "3B-E6",
+   "heading": "Gamma radiation (γ)",
+   "text": "Gamma radiation does not consist of charged particles. It is a form of very short wavelength electromagnetic energy similar to X-ray radiation.\n\nThese forms of electromagnetic radiation can be considered as small discrete packages of energy called photons. The speed of γ-radiation is the speed of light (300 000 km $s^{-1}$ or c).\n\nGamma radiation is very difficult to stop: even lead that is several centimetres thick does not absorb all of the radiation. Although the ionising capacity of gamma (γ) rays is considerably smaller than that of β-radiation, their high penetration ability means that they are dangerous even at a distance as they can penetrate our bodies and hit sensitive organs. This makes γ-radiation extremely dangerous to us, both as an external source and if internally ingested or inhaled.\n\nNOTE: Both γ-rays and X-rays are part of the electromagnetic spectrum and as seen in Figure 3B–10 these two regions of the electromagnetic spectrum overlap. X-rays and γ-rays have the same basic properties but originate from different parts of the atom. X-rays are emitted from processes outside the nucleus, but γ-rays originate inside the nucleus. X-rays are also generally lower in energy and therefore less penetrating than γ-rays but both have enough energy to ionise atoms.",
+   "figures": [
+    "3B-F10"
+   ],
+   "criteria": [
+    "3B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 25,
+    "book_page": 104,
+    "pages": [
+     25,
+     26
+    ]
+   }
+  },
+  {
+   "id": "3B-E7",
+   "heading": "Useful applications of gamma radiation",
+   "text": "Gamma-emitting radioisotopes are the most widely used radiation sources. The strong penetrating power of gamma rays has many applications. The three radioisotopes that are by far the most useful gamma ray emitters are caesium-137, technetium-99m and cobalt-60.\n\nSterilisation of medical equipment in hospitals; pasteurisation, via irradiation, of certain foodstuffs; levelling or thickness gauges (i.e. food packaging, steel mills); industrial radiography; and medical radiation treatment of cancerous tumours using a gamma ‘knife’ (see Figure 3B–11).\n\nMeasurement and control of the flow of liquids in industrial processes; investigation of subterranean strata (i.e. oil, coal, gas and other mineralisation); measurement of soil moisture-density at construction sites; and medical radiation treatment of cancerous tumours.\n\nTc-99m is the most widely used radioactive isotope for medical diagnostic studies in different chemical forms for brain, bone, liver, spleen and kidney imaging. It is also used for blood flow studies.\n\nCobalt-60 decays by emitting a low-energy electron (beta particle) from the nucleus and high-energy electromagnetic radiation (gamma rays). It is an extremely useful radioactive isotope that is used in radiation treatment of cancerous tumours. It does not exist in nature but can be produced as an artificial radioactive isotope in nuclear reactors.",
+   "figures": [
+    "3B-F11"
+   ],
+   "criteria": [
+    "3B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 26,
+    "book_page": 105,
+    "pages": [
+     26,
+     27
+    ]
+   }
+  },
+  {
+   "id": "3B-E8",
+   "heading": "Nuclear transformations",
+   "text": "A nuclear transformation is the conversion of one nuclide into another. It can occur by the natural radioactive decay of a nucleus.\n\nFor example, carbon-14, a naturally occurring radioactive isotope of carbon, decays via $β^{-}$-decay into nitrogen-14 during which one of the neutrons in the carbon atom becomes a proton. This increases the number of protons in the atom by one, creating a nitrogen atom rather than a carbon atom:\n\n$^{14}_{6}\\text{C} \\rightarrow {}^{14}_{7}\\text{N} + {}^{0}_{-1}\\beta$\n\nα-, β- and γ-radiation all change the nucleus in different ways. Because both α-radiation and β-radiation are accompanied by changes in the number of protons and neutrons in the nucleus, they give rise to the formation of a different element.\n\nOther nuclear transformations can be induced by bombarding elements with other nuclear particles – protons, neutrons, α-particles and so on.\n\nThe first artificial nucleus produced by this technique was in Ernest Rutherford’s laboratory in 1917. Rutherford bombarded nitrogen atoms with high-speed α-particles from a natural radioactive isotope of radium, and observed both protons and an isotope of oxygen resulting from the reaction:\n\n$^{14}_{7}\\text{N} + {}^{4}_{2}\\text{He} \\rightarrow {}^{17}_{8}\\text{O} + {}^{1}_{1}\\text{H}$\n\nBoth the $^{17}_{8}\\text{O}$ and $^{1}_{1}\\text{H}$ nuclei that are produced are stable.\n\nThe advent of particle accelerators in the early 1930s enabled charged particles such as protons to be fired at atoms. The advantage of using a particle accelerator is that the energy of the bombarding particle can be accurately controlled. The limitation of using positively charged particles, however, is that they have to be travelling at very high speed to overcome the electrostatic repulsion of the positively charged nucleus.\n\nIn 1932, the physicist James Chadwick bombarded beryllium with α-particles. The resulting radiation went through a lead shield, but it was completely unaffected by electric or magnetic fields. Chadwick had discovered the neutron – a neutral particle with almost the same mass as a proton.\n\nAfter the neutron was discovered, physicists realised that it would make a good probe for exploring the atomic nucleus as there would be no electrostatic repulsion acting on the neutron.\n\nNuclear physicists can also use neutrons in breeder nuclear reactors to ‘breed’ fissile plutonium-239 from non-fissile uranium-238. This will be important when we look at nuclear reactors and nuclear weapons in Chapter 4.\n\nAlpha particle radiation involves the ejection of two neutrons and two protons (helium nucleus or α-particle) from the nucleus of the radioactive element. For example, the isotope uranium-238 has 92 protons and 146 neutrons. In order to achieve greater stability, the nucleus may emit an α-particle, so reducing its number of protons to 90 and its number of neutrons to 144. However, it is no longer a uranium nucleus. Checking the periodic table for Z = 90 indicates it is now an isotope of the element thorium (Th) with atomic number 90 and mass number 234 (90 + 144). In fact, it is thorium-234. The decay process can be represented as follows:\n\n$^{238}_{92}\\text{U} \\rightarrow {}^{234}_{90}\\text{Th} + {}^{4}_{2}\\text{He}$\n\nThe overall effect of α-particle emission is to produce neutron-rich nuclei; that is, nuclei that have too many neutrons to be stable. The nucleus does not simply eject a neutron (or neutrons) to correct this instability. Instead, one of the neutrons in the nucleus changes into a proton by emitting a $β^{-}$-particle; that is, a high-speed electron:\n\n$^{1}_{0}\\text{n} \\rightarrow {}^{1}_{1}\\text{p} + {}^{0}_{-1}\\text{e}$\n\nThis phenomenon is known as $β^{-}$-emission and is an example of the weak nuclear force in action (see Section 3A). For instance, in the case of thorium-234 (which was formed by the α-particle decay of uranium-238) the nucleus further decays by $β^{-}$-emission to protactinium-234 (Pa):\n\n$^{234}_{90}\\text{Th} \\rightarrow {}^{234}_{91}\\text{Pa} + {}^{0}_{-1}\\text{e}$\n\nIn most cases after the emission of an α-particle or a $β^{-}$-particle, the nucleus rearranges slightly to minimise its internal energy state. This rearrangement of the nucleus releases energy in the form of a γ-ray. Since γ-ray emission is the emission of energy rather than a particle, it causes no change in either the mass number (A) or the atomic number (Z). This process occurs almost instantaneously after the α-particle or $β^{-}$-particle emission, so γ-rays are emitted along with either an α-particle or a $β^{-}$-particle. For example, sodium-24 decays by emitting a $β^{-}$-particle and a γ-ray as follows:\n\n$^{24}_{11}\\text{Na} \\rightarrow {}^{24}_{12}\\text{Mg}^{*} + {}^{0}_{-1}\\text{e}$\n\n$^{24}_{12}\\text{Mg}^{*} \\rightarrow {}^{24}_{12}\\text{Mg} + {}^{0}_{0}\\gamma$\n\nThe asterisk (*) signifies that the nucleus is excited (i.e. unstable) and has excessive internal energy. Eventually sodium-24 decays to stable magnesium-24.\n\nTable 3B–1 summarises the nuclear transformation equations involved in α-, $β^{-}$-, $β^{+}$- and γ-radioactive decay.",
+   "figures": [
+    "3B-F12"
+   ],
+   "criteria": [
+    "3B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 28,
+    "book_page": 107,
+    "pages": [
+     28,
+     29
+    ]
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "3B-F1",
+   "label": "Figure 3B–1",
+   "caption": "Heating the Pot by David Teniers the Younger (1610–1690), one of a number of paintings he made depicting alchemy",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 19,
+    "book_page": 98
+   }
+  },
+  {
+   "id": "3B-F2",
+   "label": "Figure 3B–2",
+   "caption": "Only three years after the discovery of radioactivity, the physicist Ernest Rutherford (left) found that three different kinds of radiation are emitted in the decay of radioactive substances; these he called alpha, beta and gamma rays in sequence based on how far they could penetrate matter (right).",
+   "img": "img/3B_fig3B-2.png",
+   "important": true,
+   "why": "Penetration of α, β, γ through paper, aluminium, lead",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 20,
+    "book_page": 99
+   }
+  },
+  {
+   "id": "3B-F3",
+   "label": "Figure 3B–3",
+   "caption": "A radioactive nucleus spontaneously emitting (from left to right) an alpha (α) particle, a beta (β) particle and a gamma (γ) ray",
+   "img": "img/3B_fig3B-3.png",
+   "important": true,
+   "why": "Nucleus emitting α, β and γ",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 20,
+    "book_page": 99
+   }
+  },
+  {
+   "id": "3B-F4",
+   "label": "Figure 3B–4",
+   "caption": "A γ-ray ionising a helium atom, by ejecting an electron, to create a He+ ion",
+   "img": "img/3B_fig3B-4.png",
+   "important": true,
+   "why": "γ-ray ionising a helium atom (ejected electron)",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 21,
+    "book_page": 100
+   }
+  },
+  {
+   "id": "3B-F5",
+   "label": "Figure 3B–5",
+   "caption": "A radioactive nucleus is shown ejecting two protons and two neutrons bound together as a helium nucleus, reducing its mass and becoming a different element. The ejected helium nucleus is called an α-particle, which carries a positive charge. α-particles cannot penetrate a piece of paper or skin but are very dangerous when substances emitting them are ingested or inhaled.",
+   "img": "img/3B_fig3B-5.png",
+   "important": true,
+   "why": "Alpha particle ejected at 30 000 km/s",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 22,
+    "book_page": 101
+   }
+  },
+  {
+   "id": "3B-F6",
+   "label": "Figure 3B–6",
+   "caption": "The transmutation of uranium-238 (parent nucleus) to thorium-234 (daughter nucleus) as a result of the emission of an alpha particle",
+   "img": "img/3B_fig3B-6.png",
+   "important": true,
+   "why": "U-238 to Th-234 alpha transmutation (parent/daughter)",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 22,
+    "book_page": 101
+   }
+  },
+  {
+   "id": "3B-F7",
+   "label": "Figure 3B–7",
+   "caption": "The Mars Perseverance Rover uses a plutonium-238 radioisotope thermoelectric generator (circled) to generate 110 W of electrical energy. This power system produces a dependable flow of electricity using the heat of the plutonium’s radioactive α-decay as its ‘fuel’.",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 23,
+    "book_page": 102
+   }
+  },
+  {
+   "id": "3B-F8",
+   "label": "Figure 3B–8",
+   "caption": "Diagram of β⁻-radiation (electrons, left) and β⁺-radiation (positrons, right). The electrons and positrons can move at 90% of the speed of light, c, hence ‘0.9c’. They can penetrate paper or several millimetres of skin. Like α-particles they are harmful when emitted inside the human body.",
+   "img": "img/3B_fig3B-8.png",
+   "important": true,
+   "why": "β⁻ and β⁺ emission diagram",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 24,
+    "book_page": 103
+   }
+  },
+  {
+   "id": "3B-F9",
+   "label": "Figure 3B–9",
+   "caption": "An unstable nucleus can sometimes remain excited even after emitting alpha or beta particles. It usually rids itself of excess energy by emitting a gamma ray – a photon of high frequency. With very high energy and no electrical charge, gamma rays have great penetrating power. Not even a thick piece of lead or concrete will stop all of them and they pass easily into the human body, possibly damaging tissue in the process.",
+   "img": "img/3B_fig3B-9.png",
+   "important": true,
+   "why": "Excited nucleus emitting a gamma ray",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 26,
+    "book_page": 105
+   }
+  },
+  {
+   "id": "3B-F10",
+   "label": "Figure 3B–10",
+   "caption": "X-rays and gamma rays overlap in the electromagnetic spectrum.",
+   "img": "img/3B_fig3B-10.png",
+   "important": true,
+   "why": "X-ray and gamma-ray overlap on the EM spectrum",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 26,
+    "book_page": 105
+   }
+  },
+  {
+   "id": "3B-F11",
+   "label": "Figure 3B–11",
+   "caption": "A medical gamma ray ‘knife’ containing 192 cobalt-60 radioactive sources used to treat cancerous brain tumours",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 27,
+    "book_page": 106
+   }
+  },
+  {
+   "id": "3B-F12",
+   "label": "Table 3B–1",
+   "caption": "Nuclear transformation equations involved in α-, β–-, β+- and γ-radioactive decay",
+   "img": "img/3B_tab3B-1.png",
+   "important": true,
+   "why": "Summary of α, β⁻, β⁺ and γ decay equations and changes to A and Z",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 29,
+    "book_page": 108
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE3B-1",
+   "title": "Energy of an α-particle",
+   "question": "An α-particle emitted from a radioactive element has an energy of 2.99 × $10^{-12}$ J.\nHow much energy does this represent in electronvolts (eV)?",
+   "steps": [
+    "The conversion factor between eV and joule is:",
+    "1 eV = 1.6 × $10^{-19}$ J",
+    "Therefore, the energy of the α-particle can be written as:",
+    "$\\frac{2.99 \\times 10^{-12}}{1.6 \\times 10^{-19}}$ = 1.87 × $10^{7}$ eV",
+    "= 18.7 MeV"
+   ],
+   "answer": "1.87 × $10^{7}$ eV = 18.7 MeV",
+   "img": [
+    "img/3B_WE3B-1.png"
+   ],
+   "criteria": [
+    "3B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 23,
+    "book_page": 102
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "3B-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "a What were the names given by Ernest Rutherford for the three different radiations he discovered?\nb Give the order of the three different radiations from least penetrating to most penetrating.",
+   "answer": "a alpha (α), beta (β) and gamma (γ)\nb α, β, γ",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Check-in – Set 1.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "How can nuclear radiation ionise a neutral atom to create a positive ion?",
+   "answer": "By removing (or ejecting) an electron from an atom.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "3B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Check-in – Set 1.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "a What is another name for an alpha (α) particle?\nb What charge does an α-particle carry?",
+   "answer": "a Helium nucleus\nb Two positive charges",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Check-in – Set 2.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "a Write the complete equation for the transmutation of uranium-238 to thorium-234.\nb In this transmutation, which element is the parent nucleus and which is the daughter nucleus?",
+   "answer": "a $^{238}_{92}\\text{U} \\rightarrow {}^{234}_{90}\\text{Th} + {}^{4}_{2}\\text{He}$ + energy\nb $^{238}_{92}\\text{U}$ is the parent nucleus and $^{234}_{90}\\text{Th}$ is the daughter nucleus.",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "3B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Check-in – Set 2.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-CI2.3",
+   "set": 2,
+   "n": 3,
+   "question": "An α-particle has a kinetic energy of 2.00 × $10^{-12}$ J. Calculate the energy of the α-particle in MeV.",
+   "answer": "$\\frac{2.00 \\times 10^{-12}}{1.6 \\times 10^{-19}}$ = 12.5 MeV",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "3B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Check-in – Set 2.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-CI3.1",
+   "set": 3,
+   "n": 1,
+   "question": "a What are other names for beta (β) particles?\nb What charges do β-particles carry?",
+   "answer": "a Electrons (β⁻), positrons (β⁺)\nb Electron: negative; positron: positive",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Check-in – Set 3.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-CI3.2",
+   "set": 3,
+   "n": 2,
+   "question": "a Write the equation for when a neutron in the nucleus changes into a proton.\nb Write the equation for when a proton in the nucleus changes into a neutron.",
+   "answer": "a $^{1}_{0}\\text{n} \\rightarrow {}^{1}_{1}\\text{p} + {}^{0}_{-1}\\beta + \\bar{v}$\nwhere $\\bar{v}$ represents an antineutrino and is the carrier of the ‘missing’ energy\nb $^{1}_{1}\\text{p} \\rightarrow {}^{1}_{0}\\text{n} + {}^{0}_{+1}\\beta + v$\nwhere v represents a neutrino and is the carrier of the ‘missing’ energy.",
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "3B.2",
+    "3A.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Check-in – Set 3.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-CI4.1",
+   "set": 4,
+   "n": 1,
+   "question": "What charge does a gamma (γ) ray carry?",
+   "answer": "No charge",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Check-in – Set 4.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-CI4.2",
+   "set": 4,
+   "n": 2,
+   "question": "At what speed does γ-radiation travel?",
+   "answer": "Speed of light (c) 300 000 km $s^{-1}$",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Check-in – Set 4.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-CI4.3",
+   "set": 4,
+   "n": 3,
+   "question": "Why do γ-rays have lower ionising power?",
+   "answer": "They have a very high energy, carry no charge and are poor ionisers",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "3B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Check-in – Set 4.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-CI5.1",
+   "set": 5,
+   "n": 1,
+   "question": "a Complete the following radioactive decay equation:\n$^{234}_{92}\\text{Au} \\rightarrow {}^{230}_{90}\\text{Th} + ?$\nb What type of radioactive decay does this represent?",
+   "answer": "a $^{234}_{92}\\text{Au} \\rightarrow {}^{230}_{90}\\text{Th} + {}^{4}_{2}\\text{He}$\nb Alpha decay",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "3B.2"
+   ],
+   "img": [
+    "img/3B_CI5.png"
+   ],
+   "src": {
+    "file": "3B Check-in – Set 5.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-CI5.2",
+   "set": 5,
+   "n": 2,
+   "question": "a Complete the following radioactive decay equation:\n$^{210}_{82}\\text{Pb} \\rightarrow {}^{210}_{83}\\text{Bi} + ?$\nb What type of radioactive decay does this represent?",
+   "answer": "a $^{210}_{82}\\text{Pb} \\rightarrow {}^{210}_{83}\\text{Bi} + {}^{0}_{-1}\\text{e}$\nb Beta minus decay",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "3B.2"
+   ],
+   "img": [
+    "img/3B_CI5.png"
+   ],
+   "src": {
+    "file": "3B Check-in – Set 5.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-CI5.3",
+   "set": 5,
+   "n": 3,
+   "question": "a Complete the following radioactive decay equation:\n$^{210}_{83}\\text{Bi}^{*} \\rightarrow {}^{210}_{83}\\text{Bi} + ?$\nb What type of radioactive decay does this represent?",
+   "answer": "a $^{210}_{83}\\text{Bi}^{*} \\rightarrow {}^{210}_{83}\\text{Bi} + {}^{0}_{0}\\gamma$\nb Gamma decay",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "3B.2"
+   ],
+   "img": [
+    "img/3B_CI5.png"
+   ],
+   "src": {
+    "file": "3B Check-in – Set 5.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "3B-SQ1",
+   "n": "1",
+   "question": "Which one of the following correctly identifies β⁻-particles and β⁺-particles? (β⁻-particles | β⁺-particles)",
+   "options": [
+    "A. Electrons | Photons",
+    "B. Electrons | Protons",
+    "C. Negative photons | Positive photons",
+    "D. Electrons | Positrons"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3B.1"
+   ],
+   "img": [
+    "img/3B_SQ1.png"
+   ],
+   "src": {
+    "file": "3B Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-SQ2",
+   "n": "2",
+   "question": "Which one of the following best explains the ionising properties of nuclear radiations and their penetration power?",
+   "options": [
+    "A. α-particles are not very ionising so they are easily stopped by a thin sheet of paper.",
+    "B. α-particles are very ionising so they only travel a few centimetres in air.",
+    "C. γ-radiation can easily penetrate a sheet of card because it is very ionising.",
+    "D. γ-radiation is not very penetrating because it is very ionising."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3B.1",
+    "3E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-SQ3",
+   "n": "3",
+   "question": "An α-particle has an energy of 1.0 × $10^{-12}$ J. The energy of the α-particle in MeV is closest to:",
+   "options": [
+    "A. 1.0 MeV",
+    "B. 6.2 MeV",
+    "C. 9.4 MeV",
+    "D. 18.7 MeV"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice",
+    "youtry"
+   ],
+   "criteria": [
+    "3B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-SQ4",
+   "n": "4",
+   "question": "A radioactive source is placed 2 cm from a detector. The count rate decreases slightly if a sheet of paper is inserted between the source and the detector. It is reduced to background radiation level if the sheet of paper is replaced by a 1 cm thick sheet of aluminium.\nThe radiation emitted by the radioactive source is most likely to be",
+   "options": [
+    "A. α only.",
+    "B. α and β.",
+    "C. β and γ.",
+    "D. γ only."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "3B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-SQ5",
+   "n": "5",
+   "question": "From which part of an atom are α- and β-particles and γ-rays emitted from?",
+   "options": [],
+   "answer": "The nucleus of an atom",
+   "marks": null,
+   "kind": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-SQ6",
+   "n": "6",
+   "question": "a Complete the nuclear transformation equation of thorium-230 to radium-226:\n$^{230}_{90}\\text{Th} \\rightarrow {}^{226}_{88}\\text{Ra} + ?$\nb Which element is the parent nucleus and which element is the daughter nucleus?\nc What is the name of the particle emitted?",
+   "options": [],
+   "answer": "a $^{230}_{90}\\text{Th} \\rightarrow {}^{226}_{88}\\text{Ra} + {}^{4}_{2}\\text{He}$\nb Thorium-230 (parent) and radium-226 (daughter)\nc Alpha particle",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "3B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-SQ7",
+   "n": "7",
+   "question": "a What particle was proposed by Wolfgang Pauli in 1930 to ensure that the law of conservation of energy held in radioactive beta decay?\nb What were the properties of this hypothetical particle?",
+   "options": [],
+   "answer": "a Neutrino (and antineutrino) represented by v (and $\\bar{v}$) respectively\nb No charge (neutral), negligible mass, carrier of excess energy to ensure the law of conservation of energy held in radioactive beta decay",
+   "marks": null,
+   "kind": "recall",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "3B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-SQ8",
+   "n": "8",
+   "question": "a Complete the nuclear transformation equation of thorium-234 to protactinium-234:\n$^{234}_{90}\\text{Th} \\rightarrow {}^{234}_{91}\\text{Pa} + ?$\nb What is the name of the particle emitted?",
+   "options": [],
+   "answer": "a $^{234}_{90}\\text{Th} \\rightarrow {}^{234}_{91}\\text{Pa} + {}^{0}_{-1}\\text{e}$\nb Electron (beta particle)",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "youtry",
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3B-SQ9",
+   "n": "9",
+   "question": "a Complete the nuclear transformation equation of magnesium-24:\n$^{24}_{12}\\text{Mg}^{*} \\rightarrow ? + ?$\nb What is the name of the emission?\nc What does the asterisk (*) stand for?",
+   "options": [],
+   "answer": "a $^{24}_{12}\\text{Mg}^{*} \\rightarrow {}^{24}_{12}\\text{Mg} + {}^{0}_{0}\\gamma$\nb Gamma ray (gamma photon)\nc Excited nucleus",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "practice",
+    "exit"
+   ],
+   "criteria": [
+    "3B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3B Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 3B–1 Alpha, beta and gamma radiation",
+  "total": 18,
+  "file": "3B Worksheet 3B–1 Alpha, beta and gamma radiation.docx",
+  "questions": [
+   {
+    "id": "WS3B-1a",
+    "n": "1a",
+    "question": "Naturally occurring radioactive elements emit various forms of radiation. These include alpha particles (α), beta particles (β) and gamma rays (γ). Determine whether the radiation described is alpha, beta or gamma: The radiation is negatively charged.",
+    "answer": "β⁻",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit",
+     "donow"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3B Worksheet 3B–1 Alpha, beta and gamma radiation.docx",
+     "answer_file": "3B Worksheet 3B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3B-1b",
+    "n": "1b",
+    "question": "Naturally occurring radioactive elements emit various forms of radiation. These include alpha particles (α), beta particles (β) and gamma rays (γ). Determine whether the radiation described is alpha, beta or gamma: The radiation is positively charged.",
+    "answer": "α or β⁺",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit",
+     "donow"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3B Worksheet 3B–1 Alpha, beta and gamma radiation.docx",
+     "answer_file": "3B Worksheet 3B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3B-1c",
+    "n": "1c",
+    "question": "Naturally occurring radioactive elements emit various forms of radiation. These include alpha particles (α), beta particles (β) and gamma rays (γ). Determine whether the radiation described is alpha, beta or gamma: The radiation carries no charge.",
+    "answer": "γ",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit",
+     "donow"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3B Worksheet 3B–1 Alpha, beta and gamma radiation.docx",
+     "answer_file": "3B Worksheet 3B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3B-1d",
+    "n": "1d",
+    "question": "Naturally occurring radioactive elements emit various forms of radiation. These include alpha particles (α), beta particles (β) and gamma rays (γ). Determine whether the radiation described is alpha, beta or gamma: The radiation is part of the electromagnetic spectrum.",
+    "answer": "γ",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit",
+     "donow"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3B Worksheet 3B–1 Alpha, beta and gamma radiation.docx",
+     "answer_file": "3B Worksheet 3B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3B-1e",
+    "n": "1e",
+    "question": "Naturally occurring radioactive elements emit various forms of radiation. These include alpha particles (α), beta particles (β) and gamma rays (γ). Determine whether the radiation described is alpha, beta or gamma: The radiation has poor penetration and is absorbed in a few centimetres of air.",
+    "answer": "α",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit",
+     "donow"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3B Worksheet 3B–1 Alpha, beta and gamma radiation.docx",
+     "answer_file": "3B Worksheet 3B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3B-1f",
+    "n": "1f",
+    "question": "Naturally occurring radioactive elements emit various forms of radiation. These include alpha particles (α), beta particles (β) and gamma rays (γ). Determine whether the radiation described is alpha, beta or gamma: The radiation has very good penetration.",
+    "answer": "γ",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit",
+     "donow"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3B Worksheet 3B–1 Alpha, beta and gamma radiation.docx",
+     "answer_file": "3B Worksheet 3B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3B-1g",
+    "n": "1g",
+    "question": "Naturally occurring radioactive elements emit various forms of radiation. These include alpha particles (α), beta particles (β) and gamma rays (γ). Determine whether the radiation described is alpha, beta or gamma: The radiation has the same mass as the mass of an electron.",
+    "answer": "β⁻ or β⁺",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit",
+     "donow"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3B Worksheet 3B–1 Alpha, beta and gamma radiation.docx",
+     "answer_file": "3B Worksheet 3B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3B-1h",
+    "n": "1h",
+    "question": "Naturally occurring radioactive elements emit various forms of radiation. These include alpha particles (α), beta particles (β) and gamma rays (γ). Determine whether the radiation described is alpha, beta or gamma: The radiation has a mass approximately the same as the mass of four neutrons.",
+    "answer": "α",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit",
+     "donow"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3B Worksheet 3B–1 Alpha, beta and gamma radiation.docx",
+     "answer_file": "3B Worksheet 3B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3B-2",
+    "n": "2",
+    "question": "The thorium-234 (Th) nucleus decays by β⁻ emission to protactinium-234 (Pa). Complete the equation for this radioactive decay.\n$^{234}_{90}\\text{Th} \\rightarrow \\text{Pa} + $",
+    "answer": "$^{234}_{90}\\text{Th} \\rightarrow {}^{234}_{91}\\text{Pa} + {}^{0}_{-1}\\text{e}$ (3 marks)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "wedo"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3B.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "3B Worksheet 3B–1 Alpha, beta and gamma radiation.docx",
+     "answer_file": "3B Worksheet 3B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3B-3a",
+    "n": "3a",
+    "question": "An α-particle emitted from a particular radioactive element is travelling at 20 000 km $s^{-1}$. The mass of an α-particle is 6.64 × $10^{-27}$ kg.\nHow much energy does this represent in joules (J)?",
+    "answer": "The energy of motion of the α-particle is given by the formula $E_K = \\frac{1}{2}mv^{2}$, where m is the mass of the particle and v is the speed.\n$E_K = \\frac{1}{2} \\times 6.64 \\times 10^{-27} \\times (2 \\times 10^{7})^{2}$\n= 1.33 × $10^{-12}$ J (2 marks)",
+    "marks": 1,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3B Worksheet 3B–1 Alpha, beta and gamma radiation.docx",
+     "answer_file": "3B Worksheet 3B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3B-3b",
+    "n": "3b",
+    "question": "An α-particle emitted from a particular radioactive element is travelling at 20 000 km $s^{-1}$. The mass of an α-particle is 6.64 × $10^{-27}$ kg.\nHow much energy does this represent in electronvolts (eV) for the α-particle?",
+    "answer": "The conversion factor between electronvolts and joules is:\n1 eV = 1.6 × $10^{-19}$ J\nTherefore, the energy of the α-particle can be written as:\n$\\frac{1.33 \\times 10^{-12}}{1.6 \\times 10^{-19}}$ = 8.3 × $10^{6}$ eV = 8.3 MeV (2 marks)",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3B Worksheet 3B–1 Alpha, beta and gamma radiation.docx",
+     "answer_file": "3B Worksheet 3B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3B-4a",
+    "n": "4a",
+    "question": "What particle was proposed by Wolfgang Pauli in 1930 to ensure that the law of conservation of energy held in radioactive beta decay?",
+    "answer": "Neutrino (and antineutrino) represented by v (and $\\bar{v}$) respectively. (2 marks)",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3B Worksheet 3B–1 Alpha, beta and gamma radiation.docx",
+     "answer_file": "3B Worksheet 3B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3B-4b",
+    "n": "4b",
+    "question": "What were the properties of this hypothetical particle?",
+    "answer": "No charge (neutral), negligible mass, carrier of excess energy to ensure the law of conservation of energy holds in radioactive beta decay. (3 marks)",
+    "marks": 3,
+    "kind": "recall",
+    "size": "medium",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3B Worksheet 3B–1 Alpha, beta and gamma radiation.docx",
+     "answer_file": "3B Worksheet 3B–1 Answers.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "3B.1"
+   ],
+   "wedo": "WE3B-1",
+   "youtry": [
+    "3B-CI2.3",
+    "WS3B-3b"
+   ],
+   "note": "J to eV/MeV conversion; CI2.3 is the same skill with different numbers. WS3B-3b needs the KE from 3a first. 3B-SQ3 (MC) also fits."
+  },
+  {
+   "criteria": [
+    "3B.2"
+   ],
+   "wedo": "WS3B-2",
+   "youtry": [
+    "3B-SQ6",
+    "3B-SQ8"
+   ],
+   "origin": "adapted",
+   "note": "No textbook worked example for decay equations (3B Skills box shows the conservation check for U-238 alpha and C-14 beta; use it for the We do steps). SQ6 alpha, SQ8 beta-minus."
+  }
+ ],
+ "skills": [
+  {
+   "id": "3B-SK1",
+   "heading": "Writing nuclear transformation equations",
+   "text": "Equations can be written to show how a nucleus changes during a nuclear decay process. With these nuclear equations we track both the atomic number and the mass number.\n\nFor any particular element X, the atomic number (Z) and the mass number (A) are written in the following accepted format:\n\n$^{A}_{Z}\\text{X}$\n\nIn writing nuclear equations it is important to correctly write each of the symbols for each of the particles involved. A nuclear equation is written for an alpha decay and a beta decay below. Notice that the sum of the atomic numbers is equal on both sides of the arrow. The sum of the mass numbers is also equal on both sides:\n\n$^{238}_{92}\\text{U} \\rightarrow {}^{234}_{90}\\text{Th} + {}^{4}_{2}\\text{He}$\n\nFor uranium-238 alpha decay:\natomic numbers (Z) LHS = 92, RHS = 90 + 2 = 92\nmass numbers (A) LHS = 238, RHS = 234 + 4 = 238\n\n$^{14}_{6}\\text{C} \\rightarrow {}^{14}_{7}\\text{N} + {}^{0}_{-1}\\beta$\n\nFor carbon-14 beta decay:\natomic numbers (Z) LHS = 6, RHS = 7 – 1 = 6\nmass numbers (A) LHS = 14, RHS = 14 + 0 = 14",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 30,
+    "book_page": 109
+   }
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P3B-1",
+   "title": "Practical 3B–1 Alpha decay simulation",
+   "file": "3B Practical 3B–1 Alpha decay simulation.docx",
+   "aim": "To use an online simulation of alpha decay to determine whether knowing the half-life of an isotope means that the quantity of matter remaining at any specified time is certain."
+  },
+  {
+   "id": "P3B-2",
+   "title": "Practical 3B–2 Beta decay simulation",
+   "file": "3B Practical 3B–2 Beta decay simulation.docx",
+   "aim": "To use an online simulation of beta decay to determine whether the concept of half-life in alpha decay is also valid for beta decay."
+  }
+ ],
+ "notes": "Check-in Set 5 Q1 uses 'Au' with Z = 92 (typo in Cambridge source; should be U). Decay equations rebuilt in LaTeX from the textbook images. Table 3B–1 is image-only (img/3B_tab3B-1.png). 3B Skills box gives the conservation check for decay equations."
+}

@@ -1,0 +1,1173 @@
+{
+ "code": "9B",
+ "title": "Energy, power and energy efficiency",
+ "chapter": 9,
+ "unit": 2,
+ "aos": 1,
+ "study_design": [
+  "Analyse and model mechanical energy transfers and transformations using energy conservation: changes in gravitational potential energy near Earth’s surface: $E_{\\text{g}} = mg\\Delta h$",
+  "kinetic energy: $E_{\\text{k}} = \\frac{1}{2}mv^{2}$",
+  "Analyse rate of energy transfer using power: $P = \\frac{E}{t}$",
+  "Calculate the efficiency of an energy transfer system: $\\eta = \\frac{\\text{useful energy out}}{\\text{total energy in}}$"
+ ],
+ "criteria": [
+  "9B.1",
+  "9B.2",
+  "9B.3",
+  "9B.4",
+  "9B.5",
+  "9B.6",
+  "9B.7",
+  "9B.8"
+ ],
+ "glossary": [
+  {
+   "id": "9B-G1",
+   "term": "Energy",
+   "def": "the measurable property of a body or system with the ability to do work",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 14
+   }
+  },
+  {
+   "id": "9B-G2",
+   "term": "Gravitational potential energy",
+   "def": "the amount of energy an object has stored due to its position in a gravitational field; measured in joules (J)",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "9B-G3",
+   "term": "System",
+   "def": "a collection of objects that can interact with each other",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 18
+   }
+  },
+  {
+   "id": "9B-G4",
+   "term": "Closed system",
+   "def": "a system that does not allow the transfer of mass or energy to the surrounding environment",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 18
+   }
+  },
+  {
+   "id": "9B-G5",
+   "term": "Open system",
+   "def": "a system that does allow the transfer of mass or energy to the surrounding environment",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 18
+   }
+  },
+  {
+   "id": "9B-G6",
+   "term": "Efficiency",
+   "def": "the ratio of the energy output to the energy input of a system",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 22
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F9B-1",
+   "name": "Gravitational potential energy",
+   "latex": "E_{\\text{g}} = mg\\Delta h",
+   "where": [
+    {
+     "sym": "E_{\\text{g}}",
+     "meaning": "Gravitational potential energy",
+     "unit": "J"
+    },
+    {
+     "sym": "m",
+     "meaning": "Mass",
+     "unit": "kg"
+    },
+    {
+     "sym": "g",
+     "meaning": "Gravitational field strength (9.8 N kg$^{-1}$ on the surface of Earth)",
+     "unit": "N kg$^{-1}$"
+    },
+    {
+     "sym": "\\Delta h",
+     "meaning": "Change in height",
+     "unit": "m"
+    }
+   ],
+   "criteria": [
+    "9B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "F9B-2",
+   "name": "Kinetic energy",
+   "latex": "E_{\\text{k}} = \\frac{1}{2}mv^{2}",
+   "where": [
+    {
+     "sym": "E_{\\text{k}}",
+     "meaning": "Kinetic energy",
+     "unit": "J"
+    },
+    {
+     "sym": "m",
+     "meaning": "Mass",
+     "unit": "kg"
+    },
+    {
+     "sym": "v",
+     "meaning": "Velocity",
+     "unit": "m s$^{-1}$"
+    }
+   ],
+   "criteria": [
+    "9B.2",
+    "9B.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 16
+   }
+  },
+  {
+   "id": "F9B-2b",
+   "name": "Work–kinetic energy (derived in text)",
+   "latex": "W = \\frac{1}{2}mv^{2} - \\frac{1}{2}mu^{2} = \\Delta E_{\\text{k}}",
+   "where": [],
+   "criteria": [
+    "9B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 16
+   }
+  },
+  {
+   "id": "F9B-2c",
+   "name": "Conservation of mechanical energy (in text)",
+   "latex": "\\frac{1}{2}mv_{\\text{i}}^{2} + mg\\Delta h_{\\text{i}} = \\frac{1}{2}mv_{\\text{f}}^{2} + mg\\Delta h_{\\text{f}}",
+   "where": [],
+   "criteria": [
+    "9B.5",
+    "9B.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 18
+   }
+  },
+  {
+   "id": "F9B-3",
+   "name": "Power",
+   "latex": "P = \\frac{E}{t}",
+   "where": [
+    {
+     "sym": "P",
+     "meaning": "Power",
+     "unit": "W or J s$^{-1}$"
+    },
+    {
+     "sym": "E",
+     "meaning": "Energy or work",
+     "unit": "J"
+    },
+    {
+     "sym": "t",
+     "meaning": "Time",
+     "unit": "s"
+    }
+   ],
+   "criteria": [
+    "9B.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 21
+   }
+  },
+  {
+   "id": "F9B-3b",
+   "name": "Power to overcome friction (in text)",
+   "latex": "P = Fv_{\\text{av}}",
+   "where": [],
+   "criteria": [
+    "9B.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 22
+   }
+  },
+  {
+   "id": "F9B-4",
+   "name": "Energy efficiency",
+   "latex": "\\eta = \\frac{\\text{useful energy out}}{\\text{total energy in}}",
+   "where": [
+    {
+     "sym": "\\eta",
+     "meaning": "Energy efficiency",
+     "unit": ""
+    }
+   ],
+   "criteria": [
+    "9B.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 23
+   }
+  }
+ ],
+ "engage": {
+  "heading": "Land diving in Vanuatu",
+  "text": "Every year on the small island of Pentecost in Vanuatu, the local people perform the ritual of land diving at a festival called ‘Naghol’ as a rite of passage. Tribe members as young as five years risk their lives jumping off the top of towers with just two jungle vines attached to their feet.\nThe towers are constructed with wood that is held together with vines. These towers can be up to 30 metres tall. As the land divers climb the tower, they are storing gravitational potential energy. At the top of the tower, the diver has stored energy that is roughly equivalent to a 1-tonne car moving at 25 km h$^{-1}$. When the diver jumps, he is accelerated down to Earth by gravity and will reach velocities approaching 85 km h$^{-1}$. The diver’s fall is arrested by the vines that are carefully selected by a village elder. The jumping is thought to bring a good yam crop and provide security to the community the higher the jump, the bigger the blessing.",
+  "figures": [],
+  "src": {
+   "file": "Physics12_Ch09.pdf",
+   "page": 14
+  }
+ },
+ "chunks": [
+  {
+   "id": "9B-E1",
+   "heading": "What is energy?",
+   "text": "Energy is defined as the measurable property of a body or system with the ability to do work. Energy can be transformed from one form of energy into another, the same type of energy can be transferred from one object to another, and energy cannot be created or destroyed.",
+   "figures": [],
+   "criteria": [
+    "9B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 14
+   }
+  },
+  {
+   "id": "9B-E2",
+   "heading": "Gravitational potential energy",
+   "text": "Gravitational potential energy is the amount of energy that an object has stored due to its position in a gravitational field. For objects that are close to the surface of Earth it is assumed that the strength of the gravitational field is a constant, 9.8 N kg$^{-1}$.\n$E_{\\text{g}} = mg\\Delta h$\nFigure 9B–2 The diver on top of the cliff has a lot of gravitational potential energy, as they have done work against the gravitational field to reach the top of the cliff. When the diver jumps off, the gravitational field will do work on them and pull them down towards the ocean.",
+   "figures": [],
+   "criteria": [
+    "9B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "9B-E3",
+   "heading": "Kinetic energy",
+   "text": "Kinetic energy is the energy of motion. The kinetic energy of a body can be calculated by:\n$E_{\\text{k}} = \\frac{1}{2}mv^{2}$\nIf the car in Worked example 9B–2 was to speed up, then the engine would need to do work to increase the car’s velocity. If work is done on an object, then the work done will be equal to the increase in kinetic energy if no other forms of energy are available, such as thermal energy, light energy and gravitational potential energy. This can be shown by:\n$v^{2} = u^{2} + 2as$\n$s = \\frac{v^{2} - u^{2}}{2a}$\n$W = Fs\\cos\\theta = (ma)\\left(\\frac{v^{2} - u^{2}}{2a}\\right)\\cos 0^\\circ = \\frac{1}{2}mv^{2} - \\frac{1}{2}mu^{2} = \\Delta E_{\\text{k}}$",
+   "figures": [],
+   "criteria": [
+    "9B.2",
+    "9B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 16
+   }
+  },
+  {
+   "id": "9B-E4",
+   "heading": "Kinetic energy and velocity squared",
+   "text": "As the kinetic energy is directly proportional to the square of the velocity, it requires more and more energy to increase the velocity by 1 m s$^{-1}$; the higher the initial velocity is, the more kinetic energy is required. The kinetic energy–velocity graph of a mass of 1 kg in Figure 9B–3 demonstrates this. To increase the velocity from 0 m s$^{-1}$ to 1 m s$^{-1}$ takes 0.5 J of energy. But to increase the velocity from 3 m s$^{-1}$ to 4 m s$^{-1}$ takes 8 − 4.5 = 3.5 J.",
+   "figures": [
+    "9B-F3"
+   ],
+   "criteria": [
+    "9B.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 17
+   }
+  },
+  {
+   "id": "9B-E5",
+   "heading": "Energy transfers, transformations and the law of conservation of energy",
+   "text": "Energy can be transferred from one object to another. For example, if you hit a golf ball with a golf club, the kinetic energy in the swinging golf club is partially transferred into the kinetic energy of the ball.\nEnergy can also be transformed from one form of energy into another, but it cannot be created or destroyed. Let’s say you are riding on the roller-coaster that is shown in Figure 9B–4.\nAt point A, you would have the maximum amount of gravitational potential energy and your kinetic energy will be at a minimum. Then as you fall from point A to point B, your gravitational potential energy will decrease as it is being transformed into kinetic energy. From point B to point C, the kinetic energy is being transformed into gravitational potential energy. Point C is exactly half the starting height, which means half of your initial energy will be kinetic and the other half will be stored as gravitational potential. Point D is exactly the same height as point A, and if the effects of friction and air resistance are ignored then the total energy should remain the same at all points during the roller-coaster ride. This means that at any point on the roller-coaster, or in any situation where gravitational potential energy and kinetic energy are being transformed, the following equation holds true:\n$E_{\\text{k initial}} + E_{\\text{g initial}} = E_{\\text{k final}} + E_{\\text{g final}}$\n$\\frac{1}{2}mv_{\\text{i}}^{2} + mg\\Delta h_{\\text{i}} = \\frac{1}{2}mv_{\\text{f}}^{2} + mg\\Delta h_{\\text{f}}$\nWhen analysing the motion and energy of objects, we consider the system closed. A closed system, sometimes called an isolated system, does not allow transfer of mass or energy to the surrounding environment. This means that the total amount of energy within a closed system will remain the same. The physics of collisions is the only open system that is commonly discussed. Collisions are often inelastic, as much of the energy is lost as thermal energy and sound energy to the surrounding environment.",
+   "figures": [
+    "9B-F4"
+   ],
+   "criteria": [
+    "9B.5",
+    "9B.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 18
+   }
+  },
+  {
+   "id": "9B-E6",
+   "heading": "Power",
+   "text": "A Mazda 3 hatchback and a V8 supercar, seen in Figure 9B–5, have approximately the same mass. If friction and drag are ignored, then the two cars will have the same kinetic energy at the same speed. This means that if both cars start from rest and accelerate to 100 km h$^{-1}$, it will take the same amount of energy to accelerate both of these two cars to this velocity. However, the Mazda 3 will take about 7.9 seconds to reach this speed while the V8 supercar can do it in approximately 3.6 seconds. The V8 supercar can increase the kinetic energy of the car much more quickly than the Mazda 3. Power is the rate of work done. As the V8 supercar can do work much more quickly than the Mazda 3, it is a much more powerful car.\nPower can be expressed mathematically as:\n$P = \\frac{E}{t}$\nTo calculate power, joules are divided by seconds to give the unit, J s$^{-1}$. This unit is also called the watt (W) after James Watt, the inventor of the steam engine.",
+   "figures": [],
+   "criteria": [
+    "9B.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "9B-E7",
+   "heading": "Watt about friction?",
+   "text": "If you drive down a straight stretch of road with a constant speed, your car is using energy because you are using fuel to maintain the constant speed of the car. But where is this energy going? It can’t be going into the car because the velocity of the car is constant, which means the kinetic energy of the car is also constant. The energy is going into the car to turn its wheels, but that additional energy is immediately lost and given to the surrounding air particles and the road to overcome air resistance and friction. The work done to overcome the frictional forces and maintain a constant velocity is given below.\n$P = \\frac{W}{\\Delta t}$ and $W = Fs\\cos\\theta = Fs$\nThen:\n$P = F\\frac{s}{t} = Fv_{\\text{av}}$",
+   "figures": [],
+   "criteria": [
+    "9B.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 22
+   }
+  },
+  {
+   "id": "9B-E8",
+   "heading": "Energy efficiency",
+   "text": "Everything that we do requires energy – driving a car, using a computer, using an air conditioner. But how much of the energy that we put in are we getting back out as useful energy? The energy efficiency of something tells us, normally as a percentage, how much of the energy put in is useful and how much is wasted. For example, a combustion engine car is about 30% efficient; meaning that 30% of the energy that you put into your car is converted into the useful kinetic energy of the car. The other 70% of the energy is converted into other forms of energy such as sound and heat.\nThe energy efficiency can be expressed mathematically as:\n$\\eta = \\frac{\\text{useful energy out}}{\\text{total energy in}}$",
+   "figures": [],
+   "criteria": [
+    "9B.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 22
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "9B-F3",
+   "label": "Figure 9B–3",
+   "caption": "The kinetic energy–velocity graph of an object of mass 1 kg. It takes far less energy to change the velocity of an object from 0 m s$^{-1}$ to 1 m s$^{-1}$ than it does to change the velocity of the same object from 3 m s$^{-1}$ to 4 m s$^{-1}$.",
+   "img": "img/9B_fig9B-3.png",
+   "important": true,
+   "why": "Ek ∝ v²: parabola showing growing energy cost per 1 m/s",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 17
+   }
+  },
+  {
+   "id": "9B-F4",
+   "label": "Figure 9B–4",
+   "caption": "A section of a theoretical roller-coaster track where friction and air resistance are ignored",
+   "img": "img/9B_fig9B-4.png",
+   "important": true,
+   "why": "Energy transformation Eg ↔ Ek, conservation at A, B, C, D",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 18
+   }
+  },
+  {
+   "id": "9B-F6",
+   "label": "Skills 9B graphs",
+   "caption": "Kinetic energy versus mass; Kinetic energy versus velocity squared",
+   "img": "img/9B_SK-proportional-graphs.png",
+   "important": true,
+   "why": "Direct proportionality as straight-line graphs",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 24
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE9B-1",
+   "title": "Work done by an elevator",
+   "question": "An elevator moves a person who has a mass of 76.5 kg from the fifth floor of a tower, which is 18 m above the ground, to the 26th floor, which is 112 m above the ground. Calculate the work done on the person by the elevator.",
+   "steps": [
+    "The work done by the elevator on the person is equivalent to the change in gravitational potential energy of the person.",
+    "$E_{\\text{g}} = mg\\Delta h$",
+    "$= (76.5)(9.8)(112 - 18)$",
+    "$= 7.05\\times10^{4}\\ \\text{J}$"
+   ],
+   "answer": "$7.05\\times10^{4}$ J",
+   "img": [],
+   "criteria": [
+    "9B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "WE9B-2",
+   "title": "Kinetic energy of a car",
+   "question": "Calculate the kinetic energy of a car of mass 1000 kg that is driving at 60 km h$^{-1}$ along the Great Ocean Road.",
+   "steps": [
+    "All units should be converted to SI units:",
+    "$v = \\frac{60}{3.6} = 16.67\\ \\text{m s}^{-1}$",
+    "$E_{\\text{k}} = \\frac{1}{2}mv^{2}$",
+    "$= \\frac{1}{2}(1000)(16.67^{2})$",
+    "$= 1.39\\times10^{5}\\ \\text{J}$"
+   ],
+   "answer": "$1.39\\times10^{5}$ J",
+   "img": [],
+   "criteria": [
+    "9B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 16
+   }
+  },
+  {
+   "id": "WE9B-3",
+   "title": "Work done by car brakes",
+   "question": "A car of mass 1050 kg that is travelling at 72 km h$^{-1}$ along the Great Ocean Road passes through a town and slows to 45 km h$^{-1}$. Calculate the amount of work that the brakes do on the car to slow it down.",
+   "steps": [
+    "Convert all units to SI units:",
+    "$u = \\frac{72}{3.6} = 20\\ \\text{m s}^{-1},\\ v = \\frac{45}{3.6} = 12.5\\ \\text{m s}^{-1}$",
+    "$W = \\frac{1}{2}mv^{2} - \\frac{1}{2}mu^{2}$",
+    "$= \\frac{1}{2}(1050)(12.5)^{2} - \\frac{1}{2}(1050)(20)^{2}$",
+    "$= -1.28\\times10^{5}\\ \\text{J}$",
+    "Note that the negative sign indicates that the energy is lost by the car."
+   ],
+   "answer": "$-1.28\\times10^{5}$ J",
+   "img": [],
+   "criteria": [
+    "9B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 17
+   }
+  },
+  {
+   "id": "WE9B-4",
+   "title": "Kinetic energy from gravity",
+   "question": "A woman is on a ski route that starts 50 m vertically above its end point. Given that she starts from rest, calculate the speed of the woman when she is 30 m vertically above the end point. Ignore any effects due to air resistance and friction between her skis and the snow.",
+   "steps": [
+    "In this question, only some of the gravitational potential energy is being converted into kinetic energy, therefore:",
+    "$\\frac{1}{2}\\cancel{m}v_{\\text{i}}^{2} + \\cancel{m}g\\Delta h_{\\text{i}} = \\frac{1}{2}\\cancel{m}v_{\\text{f}}^{2} + \\cancel{m}g\\Delta h_{\\text{f}}$",
+    "$v_{\\text{f}} = \\sqrt{2\\left(\\frac{1}{2}v_{\\text{i}}^{2} + g\\Delta h_{\\text{i}} - g\\Delta h_{\\text{f}}\\right)}$",
+    "$= \\sqrt{2\\left(\\frac{1}{2}(0)^{2} + (9.8)(50) - (9.8)(30)\\right)}$",
+    "$= 19.8\\ \\text{m s}^{-1}$"
+   ],
+   "answer": "19.8 m s$^{-1}$",
+   "img": [],
+   "criteria": [
+    "9B.5",
+    "9B.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 19
+   }
+  },
+  {
+   "id": "WE9B-5",
+   "title": "Power and gravity",
+   "question": "A diver of mass 63 kg climbs up from the ground level to the 10-metre diving platform in 95 seconds. It takes the diver 1.43 seconds to hit the water after they jump off the platform.\na Calculate the amount of gravitational potential energy that the diver has when they are standing on top of the diving platform.\nb After jumping from the platform, how much kinetic energy does the diver have when they hit the water?\nc Calculate the power of the diver as the diver climbs up the platform. Assume the diver climbs at a constant speed.\nd Calculate the average power of the gravitational field as it pulls the diver down to the water.",
+   "steps": [
+    "a $E_{\\text{g}} = mg\\Delta h = (63)(9.8)(10) = 6.17\\times10^{3}\\ \\text{J}$",
+    "b As all of the gravitational potential energy will be converted into kinetic energy, the amount is $6.17\\times10^{3}$ J.",
+    "c $P = \\frac{E}{t} = \\frac{6.17\\times10^{3}}{95} = 65.0\\ \\text{W}$",
+    "d $P = \\frac{E}{t} = \\frac{6.17\\times10^{3}}{1.43} = 4.32\\times10^{3}\\ \\text{W}$"
+   ],
+   "answer": "a $6.17\\times10^{3}$ J; b $6.17\\times10^{3}$ J; c 65.0 W; d $4.32\\times10^{3}$ W",
+   "img": [],
+   "criteria": [
+    "9B.1",
+    "9B.5",
+    "9B.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 21
+   }
+  },
+  {
+   "id": "WE9B-6",
+   "title": "Power of a car",
+   "question": "Calculate the power of a car that maintains a constant velocity of 63 km h$^{-1}$ when encountering a constant resistance forces of 577 N.",
+   "steps": [
+    "First, convert all units into SI units:",
+    "$v = \\frac{63}{3.6} = 17.5\\ \\text{m s}^{-1}$",
+    "$P = Fv_{\\text{av}} = (577)(17.5) = 1.01\\times10^{4}\\ \\text{W}$"
+   ],
+   "answer": "$1.01\\times10^{4}$ W",
+   "img": [],
+   "criteria": [
+    "9B.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 22
+   }
+  },
+  {
+   "id": "WE9B-7",
+   "title": "Power of an appliance",
+   "question": "An electric toothbrush that has a power rating of 6 W runs for 2 minutes. If 194 J is transformed into useful kinetic energy of the brush, calculate the energy efficiency of the electric toothbrush.",
+   "steps": [
+    "First, convert all units into SI units:",
+    "$t = 2\\times60 = 120\\ \\text{s}$",
+    "Rearrange the power formula to get total energy in:",
+    "$E = Pt = (6)(120) = 720\\ \\text{J}$",
+    "Then, use the energy efficiency formula:",
+    "$\\eta = \\frac{\\text{useful energy out}}{\\text{total energy in}}\\times100 = \\frac{194}{720}\\times100 = 26.9\\%$"
+   ],
+   "answer": "26.9%",
+   "img": [],
+   "criteria": [
+    "9B.7",
+    "9B.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 23
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "9B-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "A cart on a roller-coaster that has a mass of 140 kg and is initially at rest, rolls down an incline and then goes around the loop on the inside of the track. When the cart is at point A, the top of the loop, the cart has a speed of 6.26 m s$^{-1}$. A diagram of this situation is shown below.\na Calculate the gravitational potential energy of the cart, relative to the horizontal track, when it is at point A.\nb Calculate the kinetic energy of the cart at point A.\nc What is the total energy in the system?\nd Calculate the height, h, that the cart started from.",
+   "answer": "a $E_{\\text{g, A}} = mg\\Delta h = (140)(9.8)(6.5) = 8.92\\times10^{3}\\ \\text{J}$\nb $E_{\\text{k, A}} = \\frac{1}{2}(140)(6.26)^{2} = 2.74\\times10^{3}\\ \\text{J}$\nc $E_{\\text{total}} = 8920 + 2740 = 1.17\\times10^{4}\\ \\text{J}$\nd $E_{\\text{total}} = mgh$\n$h = \\frac{E_{\\text{total}}}{mg} = \\frac{(1.17\\times10^{4})}{(140)(9.8)} = 8.53\\ \\text{m}$",
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "9B.1",
+    "9B.2",
+    "9B.5",
+    "9B.6"
+   ],
+   "img": [
+    "img/9B_CI1.1.png"
+   ],
+   "src": {
+    "file": "9B Check-in – Set 1.docx"
+   },
+   "phase": [
+    "practice",
+    "donow"
+   ]
+  },
+  {
+   "id": "9B-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "A train that has a mass of $2.00\\times10^{6}$ kg is travelling at 27 km h$^{-1}$ along a straight track.\na Calculate the kinetic energy of the train.\nb If the train accelerates to 54 km h$^{-1}$, calculate the increase in the train’s kinetic energy.",
+   "answer": "a $v = \\frac{27}{3.6} = 7.5\\ \\text{m s}^{-1}$\n$E_{\\text{k}} = \\frac{1}{2}(2\\times10^{6})(7.5)^{2} = 5.625\\times10^{7}\\ \\text{J}$\nb $v = \\frac{54}{3.6} = 15\\ \\text{m s}^{-1}$\n$\\Delta E_{\\text{k}} = \\frac{1}{2}mv^{2} - \\frac{1}{2}mu^{2} = \\frac{1}{2}(2\\times10^{6})(15)^{2} - \\frac{1}{2}(2\\times10^{6})(7.5)^{2} = 1.69\\times10^{8}\\ \\text{J}$",
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "9B.2",
+    "9B.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "9B Check-in – Set 1.docx"
+   },
+   "phase": [
+    "donow",
+    "youtry"
+   ]
+  },
+  {
+   "id": "9B-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "In 72 seconds, a kettle uses $1.80\\times10^{5}$ J. What is the power rating of the kettle?",
+   "answer": "$P = \\frac{W}{t} = \\frac{1.8\\times10^{5}}{72} = 2.50\\times10^{3}\\ \\text{W}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "9B.7"
+   ],
+   "img": [],
+   "src": {
+    "file": "9B Check-in – Set 2.docx"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  },
+  {
+   "id": "9B-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "A car is moving at a constant velocity of 72 km h$^{-1}$ and is experiencing an average total retarding frictional force of 2500 N. Calculate the power of the car.",
+   "answer": "$v = \\frac{72}{3.6} = 20\\ \\text{m s}^{-1}$\n$P = Fv_{\\text{avg}} = (2500)(20) = 5.00\\times10^{4}\\ \\text{W}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "9B.7"
+   ],
+   "img": [],
+   "src": {
+    "file": "9B Check-in – Set 2.docx"
+   },
+   "phase": [
+    "youtry",
+    "exit"
+   ]
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "9B-SQ1",
+   "n": "1",
+   "question": "A light-emitting diode (LED) uses 500 J of energy in total, 400 J is converted into light and the rest is converted into thermal energy and sound energy. What is the energy efficiency of this light globe?",
+   "options": [
+    "A 80%",
+    "B 70%",
+    "C 30%",
+    "D 20%"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "9B.8"
+   ],
+   "img": [],
+   "src": {
+    "file": "9B Section questions.docx"
+   }
+  },
+  {
+   "id": "9B-SQ2",
+   "n": "2",
+   "question": "A medium-sized fridge requires about 5000 W of power to run. The amount of energy that a 5000 W fridge would use in a day is",
+   "options": [
+    "A 120 kJ",
+    "B 7.2 MJ",
+    "C 57.9 MJ",
+    "D 432 MJ"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "9B.7"
+   ],
+   "img": [],
+   "src": {
+    "file": "9B Section questions.docx"
+   }
+  },
+  {
+   "id": "9B-SQ3",
+   "n": "3",
+   "question": "Calculate the work done for a cyclist to accelerate from 8 m s$^{-1}$ to 12 m s$^{-1}$. The cyclist and bicycle have a combined mass of 97.5 kg.",
+   "options": [
+    "A 195 J",
+    "B 780 J",
+    "C $3.90\\times10^{3}$ J",
+    "D $5.85\\times10^{3}$ J"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "9B.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "9B Section questions.docx"
+   }
+  },
+  {
+   "id": "9B-SQ4",
+   "n": "4",
+   "question": "Use the following information to answer Questions 4 and 5.\nA diver is diving from the 3-metre diving board. He jumps up and leaves the diving board with a velocity of 5.55 m s$^{-1}$ vertically up. A diagram of this situation is shown below.\nThe maximum height that the diver will reach above the surface of the water",
+   "options": [
+    "A is 1.57 m.",
+    "B is 3.28 m.",
+    "C is 4.47 m.",
+    "D cannot be solved as the mass of the diver is not given."
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "9B.6"
+   ],
+   "img": [
+    "img/9B_SQ4.png"
+   ],
+   "src": {
+    "file": "9B Section questions.docx"
+   }
+  },
+  {
+   "id": "9B-SQ5",
+   "n": "5",
+   "question": "If the diver has a mass of 63 kg, what is the final kinetic energy of the diver when he hits the water?",
+   "options": [
+    "A $1.55\\times10^{3}$ J",
+    "B $2.03\\times10^{3}$ J",
+    "C $2.82\\times10^{3}$ J",
+    "D $5.89\\times10^{3}$ J"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "9B.5",
+    "9B.6"
+   ],
+   "img": [
+    "img/9B_SQ4.png"
+   ],
+   "src": {
+    "file": "9B Section questions.docx"
+   }
+  },
+  {
+   "id": "9B-SQ6",
+   "n": "6",
+   "question": "A person rides a motorbike at a speed of 153 km h$^{-1}$ on a racetrack. The combined mass of the motorbike and the person is 185 kg.\na How much kinetic energy does the motorbike and rider have?\nb When approaching the corner, the bike rider slows to a velocity of 63 km h$^{-1}$. Calculate the amount of work that the brakes do on the motorbike.",
+   "answer": "a $v = \\frac{153}{3.6} = 42.5\\ \\text{m s}^{-1}$\n$E_{\\text{k}} = \\frac{1}{2}mv^{2} = \\frac{1}{2}(185)(42.5)^{2} = 1.67\\times10^{5}\\ \\text{J}$\nb $v = \\frac{63}{3.6} = 17.5\\ \\text{m s}^{-1}$\n$W = \\frac{1}{2}mv^{2} - \\frac{1}{2}mu^{2} = \\frac{1}{2}(185)(17.5)^{2} - \\frac{1}{2}(185)(42.5)^{2} = -1.39\\times10^{5}\\ \\text{J}$\nNote that the negative sign indicates that the bike was losing energy.",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice",
+    "youtry"
+   ],
+   "criteria": [
+    "9B.2",
+    "9B.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "9B Section questions.docx"
+   }
+  },
+  {
+   "id": "9B-SQ7",
+   "n": "7",
+   "question": "A smooth ball rolls on a table that is 1.5 m long; the first 1 m is highly polished and the next 0.5 m is rough. The kinetic energy–distance graph below shows how the kinetic energy of the ball changes as it moves along the table. The mass of the ball is 2.5 kg.\na What is the initial velocity of the ball?\nb How much work was done to overcome the frictional forces of the rough area of the table?\nc When the ball reaches the edge of the table, it falls 1.27 m down to the floor. What is the total energy of the ball just before striking the floor? Assume no energy is lost to the surrounding environment as the ball falls.",
+   "answer": "a $E_{\\text{k}} = \\frac{1}{2}mv^{2}$\n$v = \\sqrt{\\frac{2E_{\\text{k}}}{m}} = \\sqrt{\\frac{2(9)}{(2.5)}} = 2.68\\ \\text{m s}^{-1}$\nb $W = \\Delta E_{\\text{k}} = E_{\\text{k final}} - E_{\\text{k initial}} = 4 - 9 = -5\\ \\text{J}$\nNote, the negative represents the work that is done on the rough area to overcome the friction.\nc $E_{\\text{total}} = E_{\\text{k}} + E_{\\text{g}} = E_{\\text{k}} + mg\\Delta h = (4) + (2.5)(9.8)(1.27) = 35.1\\ \\text{J}$",
+   "marks": null,
+   "kind": "graph",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "9B.2",
+    "9B.4",
+    "9B.5"
+   ],
+   "img": [
+    "img/9B_SQ7.png"
+   ],
+   "src": {
+    "file": "9B Section questions.docx"
+   }
+  },
+  {
+   "id": "9B-SQ8",
+   "n": "8",
+   "question": "A pendulum of mass 4.5 kg is tethered to one end of a 52.8 cm string of negligible mass. The other end of the string is attached to a rigid attachment point. The pendulum is set to swing. Point A and point C are the highest positions in the pendulum’s arc and point B is the lowest position. The highest and lowest positions are separated by a vertical distance of 15 cm. A diagram of this situation is shown below.\nCalculate the velocity of the pendulum at point B.",
+   "answer": "$E_{\\text{g, A}} = E_{\\text{k, B}}$\n$mg\\Delta h = \\frac{1}{2}mv_{\\text{B}}^{2}$\n$v_{\\text{B}} = \\sqrt{2g\\Delta h} = \\sqrt{2(9.8)(0.15)} = 1.71\\ \\text{m s}^{-1}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "9B.5",
+    "9B.6"
+   ],
+   "img": [
+    "img/9B_SQ8.png"
+   ],
+   "src": {
+    "file": "9B Section questions.docx"
+   }
+  },
+  {
+   "id": "9B-SQ9",
+   "n": "9",
+   "question": "A car is travelling along a road in Wilsons Promontory National Park at a velocity of 81 km h$^{-1}$ when a kangaroo jumps out onto the road. The driver brakes and slows down to a velocity of 40.5 km h$^{-1}$. The car and its contents have a total mass of 1153 kg.\na Calculate the kinetic energy of the car when it is travelling at 81 km h$^{-1}$.\nb Calculate the amount of work that the brakes do on the car to slow it down.",
+   "answer": "a $v = \\frac{81}{3.6} = 22.5\\ \\text{m s}^{-1}$\n$E_{\\text{k}} = \\frac{1}{2}mv^{2} = \\frac{1}{2}(1153)(22.5) = 2.92\\times10^{5}\\ \\text{J}$\nb $v = \\frac{40.5}{3.6} = 11.25\\ \\text{m s}^{-1}$\n$W = \\frac{1}{2}mv^{2} - \\frac{1}{2}mu^{2} = \\frac{1}{2}\\times1153\\times11.25^{2} - \\frac{1}{2}\\times1153\\times22.5^{2} = -2.19\\times10^{5}\\ \\text{J}$\nThe negative sign indicates that the car was losing energy.",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "9B.2",
+    "9B.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "9B Section questions.docx"
+   }
+  },
+  {
+   "id": "9B-SQ10",
+   "n": "10",
+   "question": "A skydiver with a mass of 94.5 kg travels in a light aircraft up to an altitude of 4.20 km above the surface of Earth. She then jumps out of the aircraft and falls back towards Earth, releasing her parachute when she is 0.914 km above the surface of Earth.\na Calculate the gravitational potential energy of the skydiver just before she jumps out of the aircraft.\nb Calculate the velocity of the skydiver just before she pulls her parachute. Assume that the skydiver has no initial velocity and ignore the effects of air resistance.\nc In reality, skydivers quickly reach terminal velocity. Terminal velocity is the fastest possible velocity a skydiver can achieve and it occurs when the upward force of air resistance is equal to the downward pull of gravity. Calculate the power provided by Earth's gravitational field on an 80 kg skydiver who has a terminal velocity of 67 m s$^{-1}$.",
+   "answer": "a $E_{\\text{g}} = mg\\Delta h = (94.5)(9.8)(4.2\\times10^{3}) = 3.89\\times10^{6}\\ \\text{J}$\nb $\\frac{1}{2}\\cancel{m}v_{\\text{i}}^{2} + \\cancel{m}g\\Delta h_{\\text{i}} = \\frac{1}{2}\\cancel{m}v_{\\text{f}}^{2} + \\cancel{m}g\\Delta h_{\\text{f}}$\n$v_{\\text{f}} = \\sqrt{2\\left(\\frac{1}{2}v_{\\text{i}}^{2} + g\\Delta h_{\\text{i}} - g\\Delta h_{\\text{f}}\\right)}$\n$= \\sqrt{2\\left(\\frac{1}{2}(0)^{2} + (9.8)(4.2\\times10^{3}) - (9.8)(0.914\\times10^{3})\\right)}$\n$= 254\\ \\text{m s}^{-1}$\nc $P = Fv_{\\text{avg}} = mgv_{\\text{avg}} = (80)(9.8)(67) = 5.25\\times10^{4}\\ \\text{W}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "9B.1",
+    "9B.6",
+    "9B.7"
+   ],
+   "img": [],
+   "src": {
+    "file": "9B Section questions.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 9B–1 Energy, power and energy efficiency",
+  "total": 19,
+  "questions": [
+   {
+    "id": "WS9B-1",
+    "n": "1",
+    "question": "A 72 kg cliff diver stands on top of a 32 m tall cliff about to dive into the water below. Calculate the amount of gravitational potential energy that the cliff diver has at the top of the cliff.",
+    "answer": "$E_{p} = mgh = (72)(9.8)(32) = 2.26\\times10^{4}\\ \\text{J}$",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "criteria": [
+     "9B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "9B Worksheet 9B–1 Energy, power and energy efficiency.docx"
+    },
+    "pair_with": "WE9B-1"
+   },
+   {
+    "id": "WS9B-2",
+    "n": "2",
+    "question": "Calculate the kinetic energy of a 1750 kg car that is driving at 90 km h$^{-1}$ along a highway.",
+    "answer": "All units should be converted to SI units:\n$v = \\frac{90}{3.6} = 25\\ \\text{m s}^{-1}$\n$E_{k} = \\frac{1}{2}mv^{2}$\n$= \\frac{1}{2}(1750)(25^{2})$\n$= 5.47\\times10^{5}\\ \\text{J}$",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "criteria": [
+     "9B.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "9B Worksheet 9B–1 Energy, power and energy efficiency.docx"
+    },
+    "pair_with": "WE9B-2"
+   },
+   {
+    "id": "WS9B-3",
+    "n": "3",
+    "question": "A 2500 kg car is travelling at 81 km h$^{-1}$ along a road and slows to 36 km h$^{-1}$ as it enters a school zone. Calculate the amount of work that the brakes do on the car to slow it down.",
+    "answer": "Convert all units to SI units:\n$u = \\frac{81}{3.6} = 22.5\\ \\text{m s}^{-1},\\ v = \\frac{36}{3.6} = 10\\ \\text{m s}^{-1}$\n$W = \\frac{1}{2}mv^{2} - \\frac{1}{2}mu^{2}$\n$= \\frac{1}{2}(2500)(10)^{2} - \\frac{1}{2}(2500)(22.5)^{2}$\n$= -5.08\\times10^{5}\\ \\text{J}$\nNote that the negative sign indicates that the energy is lost by the car.",
+    "marks": 2,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "9B.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "9B Worksheet 9B–1 Energy, power and energy efficiency.docx"
+    },
+    "pair_with": "WE9B-3"
+   },
+   {
+    "id": "WS9B-4",
+    "n": "4",
+    "question": "A person is riding a motorbike to make a jump from one ramp to another. Just before the person hits the ramp, they are travelling with a velocity of 63 km h$^{-1}$. When the person reaches the apex (top) of their flight path they have a velocity of 27 km h$^{-1}$.\nCalculate the height, h, of the motorbike at the top of the flight path.",
+    "answer": "In this question, only some of the gravitational potential energy is being converted into kinetic energy, therefore:\n$v_{i} = \\frac{63}{3.6} = 17.5\\ \\text{m s}^{-1},\\ v_{f} = \\frac{27}{3.6} = 7.5\\ \\text{m s}^{-1}$ (1 mark)\n$\\frac{1}{2}mv_{i}^{2} + mg\\Delta h_{i} = \\frac{1}{2}mv_{f}^{2} + mg\\Delta h_{f}$\n$\\Delta h_{f} = \\frac{\\left(\\frac{1}{2}\\right)(17.5^{2}) - \\left(\\frac{1}{2}\\right)(7.5^{2})}{9.8}$ (1 mark)\n$= 12.8\\ \\text{m}$ (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "9B.5",
+     "9B.6"
+    ],
+    "img": [
+     "img/9B_WS4.png"
+    ],
+    "src": {
+     "file": "9B Worksheet 9B–1 Energy, power and energy efficiency.docx"
+    },
+    "pair_with": "WE9B-4"
+   },
+   {
+    "id": "WS9B-5a",
+    "n": "5a",
+    "question": "A tennis player throws a 56 g tennis ball directly up into the air. The player releases the ball 2 m above the ground with a velocity of 5.42 m s$^{-1}$.\na Calculate the amount of kinetic energy that the ball has as it is released from the player’s hand.",
+    "answer": "$E_{k} = \\frac{1}{2}mv^{2} = \\left(\\frac{1}{2}\\right)(0.056)(5.42^{2})$ (1 mark)\n$= 0.823\\ \\text{J}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "criteria": [
+     "9B.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "9B Worksheet 9B–1 Energy, power and energy efficiency.docx"
+    }
+   },
+   {
+    "id": "WS9B-5b",
+    "n": "5b",
+    "question": "Calculate the maximum height above the ground reached by the ball.",
+    "answer": "At the maximum height, all of the ball’s kinetic energy would have been transformed into gravitational potential energy. Therefore:\n$0.8225 = (0.056)(9.8)h$ (1 mark)\n$h = 1.4988 + 2$ (1 mark)\n$= 3.50\\ \\text{m}$ (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "9B.5",
+     "9B.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "9B Worksheet 9B–1 Energy, power and energy efficiency.docx"
+    },
+    "pair_with": "WE9B-4"
+   },
+   {
+    "id": "WS9B-5c",
+    "n": "5c",
+    "question": "Calculate the potential energy of the ball when it reaches its maximum height.",
+    "answer": "$E_{p} = mgh = (0.056)(9.8)(3.5) = 1.92\\ \\text{J}$",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "criteria": [
+     "9B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "9B Worksheet 9B–1 Energy, power and energy efficiency.docx"
+    }
+   },
+   {
+    "id": "WS9B-6a",
+    "n": "6a",
+    "question": "An electric blender uses $1.44\\times10^{6}$ J of energy per hour.\na Calculate the power of the blender.",
+    "answer": "$P = \\frac{E}{t} = \\frac{1.44\\times10^{6}}{60^{2}} = 400\\ \\text{W}$",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "criteria": [
+     "9B.7"
+    ],
+    "img": [],
+    "src": {
+     "file": "9B Worksheet 9B–1 Energy, power and energy efficiency.docx"
+    },
+    "pair_with": "WE9B-5"
+   },
+   {
+    "id": "WS9B-6b",
+    "n": "6b",
+    "question": "If in 15 minutes the blender converts $6.84\\times10^{4}$ J into useful mechanical energy of the blades, calculate the energy efficiency of the blender.",
+    "answer": "$E_{total} = Pt = (400)(15\\times60) = 360\\,000\\ \\text{J}$\n$\\eta = \\frac{\\text{useful energy out}}{\\text{total energy in}}\\times100 = \\frac{6.84\\times10^{4}}{360\\,000}\\times100 = 19.0\\%$",
+    "marks": 2,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "9B.7",
+     "9B.8"
+    ],
+    "img": [],
+    "src": {
+     "file": "9B Worksheet 9B–1 Energy, power and energy efficiency.docx"
+    },
+    "pair_with": "WE9B-7"
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "9B.1"
+   ],
+   "wedo": "WE9B-1",
+   "youtry": [
+    "WS9B-1"
+   ],
+   "note": "Direct Eg = mgΔh substitution"
+  },
+  {
+   "criteria": [
+    "9B.2"
+   ],
+   "wedo": "WE9B-2",
+   "youtry": [
+    "WS9B-2"
+   ],
+   "note": "km/h to m/s then Ek = ½mv²; near-identical structure"
+  },
+  {
+   "criteria": [
+    "9B.4"
+   ],
+   "wedo": "WE9B-3",
+   "youtry": [
+    "WS9B-3"
+   ],
+   "note": "Braking: W = ½mv² − ½mu², negative answer; same context"
+  },
+  {
+   "criteria": [
+    "9B.5",
+    "9B.6"
+   ],
+   "wedo": "WE9B-4",
+   "youtry": [
+    "WS9B-4",
+    "9B-SQ8"
+   ],
+   "note": "Conservation Ek + Eg; WS4 solves for height, SQ8 for speed"
+  },
+  {
+   "criteria": [
+    "9B.7"
+   ],
+   "wedo": "WE9B-5",
+   "youtry": [
+    "WS9B-6a"
+   ],
+   "note": "P = E/t"
+  },
+  {
+   "criteria": [
+    "9B.7"
+   ],
+   "wedo": "WE9B-6",
+   "youtry": [
+    "9B-CI2.2"
+   ],
+   "note": "P = Fv at constant velocity; no worksheet question for this, check-in used"
+  },
+  {
+   "criteria": [
+    "9B.8"
+   ],
+   "wedo": "WE9B-7",
+   "youtry": [
+    "WS9B-6b"
+   ],
+   "note": "E = Pt then efficiency; same two-step structure"
+  }
+ ],
+ "skills": [
+  {
+   "id": "9B-SK1",
+   "heading": "Understanding how the variables in a formula relate to each other",
+   "text": "When looking at a physics formula, it is useful to determine if variables are directly proportional or inversely proportional to each other.\nWhen one variable is directly proportional to another it means that the ratio of the two variables is equal to a constant. Direct proportionality is represented by the symbol ∝.\nFor example, the formula for kinetic energy is:\n$E_{\\text{k}} = \\frac{1}{2}mv^{2}$\nIn this formula, the variables relate to each other as follows.\nThe kinetic energy is directly proportional to the mass, $E_{\\text{k}} \\propto m$.\nThe kinetic energy is directly proportional to $v^{2}$, $E_{\\text{k}} \\propto v^{2}$.\nWhen two variables that are directly proportional to each other are represented on a graph, a straight line with a constant gradient will be produced, as shown below.\nWhen one variable is inversely proportional to another, it means that as one variable goes up the other goes down. For example, consider the formula:\n$P = \\frac{E}{t}$\nIn this formula the variables relate to each other as follows.\n• The power is directly proportional to the total energy, $P \\propto E$.\n• The power is inversely proportional to the time or directly proportional to one over the time, $P \\propto \\frac{1}{t}$.\nUnderstanding proportionality can help to determine how an increase in one variable will affect the other variables. For example, $E_{\\text{k}} \\propto m$, so if mass doubles, the kinetic energy would also double, as shown below:\n$k = \\frac{E_{\\text{k}}}{m} = \\frac{2E_{\\text{k}}}{2m}$\nWhere k is a constant.\nSimilarly, as $E_{\\text{k}} \\propto v^{2}$, this means that if the velocity doubles, then the kinetic energy would quadruple, as shown below:\n$k = \\frac{E_{\\text{k}}}{v^{2}} = \\frac{4E_{\\text{k}}}{(2v)^{2}} = \\frac{4E_{\\text{k}}}{2^{2}v^{2}} = \\frac{4E_{\\text{k}}}{4v^{2}}$\nQuestion\nThe velocity of a cyclist increases from 5 m s$^{-1}$ to 15 m s$^{-1}$. If the original kinetic energy is given by $E_{\\text{k}}$, which of the following statements is true\nA The kinetic energy of the cyclist is $2E_{\\text{k}}$.\nB The kinetic energy of the cyclist is $3E_{\\text{k}}$.\nC The kinetic energy of the cyclist is $6E_{\\text{k}}$.\nD The kinetic energy of the cyclist is $9E_{\\text{k}}$.\nSolution\nD In this case, the velocity is tripled, which means the kinetic energy has increased by a factor of nine. This is because kinetic energy is directly proportional to the velocity squared not the velocity. This can be expressed mathematically as shown below:\n$k = \\frac{E_{\\text{k}}}{v^{2}} = \\frac{xE_{\\text{k}}}{(3v)^{2}} = \\frac{xE_{\\text{k}}}{3^{2}v^{2}} = \\frac{xE_{\\text{k}}}{9v^{2}}$\nTherefore, x = 9, so the kinetic energy will increase by a factor of 9.",
+   "img": [
+    "img/9B_SK-proportional-graphs.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 23
+   },
+   "criteria": [
+    "9B.3"
+   ]
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P9B-1",
+   "title": "Practical 9B–1 Energy",
+   "file": "9B Practical 9B–1 Energy.docx",
+   "aim": "Part 1: To investigate the effect of changing the release height of a cart travelling down a ramp, on the kinetic energy transferred to a second cart in a collision.\nPart 2: To investigate the effect that changing the mass of a cart has on the kinetic energy transferred to another cart."
+  }
+ ],
+ "notes": "9B.3 (Ek ∝ v²) has no worked example; the Skills box cyclist question (9B-SK1) serves as a worked example for it, and Figure 9B–3. Suggested responses typos kept as found except lost superscripts ('8.92 × 103', '5.25 × 104') which are written as powers of ten. SQ9a answer in Suggested responses omits the square on 22.5 in the working (answer value correct). WE9B-4 step 3 was garbled in pdftotext; rebuilt from the page layout. Worksheet 9B-1 Q1 answer has no mark split."
+}

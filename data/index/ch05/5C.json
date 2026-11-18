@@ -1,0 +1,1136 @@
+{
+ "code": "5C",
+ "title": "Modelling resistance in series circuits",
+ "chapter": 5,
+ "unit": 1,
+ "aos": 3,
+ "study_design": [
+  "Model resistance in series and parallel circuits using: current versus potential difference (I–V) graphs; resistance as the potential difference to current ratio, including R = constant for ohmic devices; equivalent resistance in arrangements in series: $R_{\\text{equivalent}} = R_1 + R_2 + \\dots + R_n$ and parallel: $\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\dots + \\frac{1}{R_n}$",
+  "Calculate and analyse the equivalent resistance of circuits comprising parallel and series resistance",
+  "Analyse circuits comprising voltage dividers"
+ ],
+ "criteria": [
+  "5C.1",
+  "5C.2",
+  "5C.3",
+  "5C.4",
+  "5C.5",
+  "5C.6"
+ ],
+ "glossary": [
+  {
+   "id": "5C-G1",
+   "term": "Resistance",
+   "def": "a measure of how much an object or material impedes the flow of current measured in units of ohms (Ω)",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 45
+   }
+  },
+  {
+   "id": "5C-G2",
+   "term": "Ohmic resistor",
+   "def": "a material that gives a straight line I–V graph; i.e. it obeys Ohm’s law",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 45
+   }
+  },
+  {
+   "id": "5C-G3",
+   "term": "Ohm’s law",
+   "def": "for a particular type of material that gives a straight-line characteristic I vs V graph, meaning that V = IR always holds for that material",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 46
+   }
+  },
+  {
+   "id": "5C-G4",
+   "term": "Equivalent resistance",
+   "def": "the value of a single resistor that could replace a number of individual resistors to give the same effect in the circuit",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 49
+   }
+  },
+  {
+   "id": "5C-G5",
+   "term": "Series circuit",
+   "def": "when circuit components are connected one after the other in a continuous loop, so that the same current passes through each component",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 49
+   }
+  },
+  {
+   "id": "5C-G6",
+   "term": "Potential (voltage) divider",
+   "def": "a series circuit with two or more components; where the voltage is shared (or divided) between the components in the circuit",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 51
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F5C-1",
+   "name": "Formula 5C–1 Ohm’s law",
+   "latex": "V = IR \\quad\\text{or}\\quad R = \\frac{V}{I}",
+   "where": [
+    {
+     "sym": "V",
+     "meaning": "Potential difference",
+     "unit": "V"
+    },
+    {
+     "sym": "I",
+     "meaning": "Current",
+     "unit": "A"
+    },
+    {
+     "sym": "R",
+     "meaning": "Resistance",
+     "unit": "\\Omega"
+    }
+   ],
+   "criteria": [
+    "5C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 46
+   }
+  },
+  {
+   "id": "F5C-2",
+   "name": "Formula 5C–2 Series resistance",
+   "latex": "R_{\\text{equivalent}} = R_1 + R_2 + \\dots + R_n",
+   "where": [
+    {
+     "sym": "R_{\\text{equivalent}}",
+     "meaning": "Equivalent resistance for resistors in series",
+     "unit": "\\Omega"
+    },
+    {
+     "sym": "R_1, R_2, \\dots, R_n",
+     "meaning": "Resistance of each resistor",
+     "unit": "\\Omega"
+    }
+   ],
+   "criteria": [
+    "5C.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 50
+   }
+  },
+  {
+   "id": "F5C-3",
+   "name": "Formula 5C–3 Potential divider",
+   "latex": "V_{\\text{out}} = \\frac{R_2}{R_{\\text{equivalent}}}V_{\\text{in}} = \\frac{R_2}{R_1 + R_2}V_{\\text{in}} \\quad\\text{or}\\quad \\frac{V_{\\text{out}}}{V_{\\text{in}}} = \\frac{R_2}{R_{\\text{equivalent}}}",
+   "where": [
+    {
+     "sym": "R_1, R_2",
+     "meaning": "resistances of the resistors",
+     "unit": "\\Omega"
+    },
+    {
+     "sym": "V_{\\text{in}}",
+     "meaning": "potential difference of the supply",
+     "unit": "V"
+    },
+    {
+     "sym": "V_{\\text{out}}",
+     "meaning": "output potential difference across R2",
+     "unit": "V"
+    }
+   ],
+   "criteria": [
+    "5C.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 52
+   }
+  },
+  {
+   "id": "F5C-4",
+   "name": "Series circuit potential differences",
+   "latex": "V_{\\text{supply}} = V_1 + V_2 + V_3",
+   "where": [],
+   "criteria": [
+    "5C.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 49
+   }
+  }
+ ],
+ "engage": {
+  "heading": "Can electricity be used for transport in Australia?",
+  "text": "1 1 The transport industry is one of the most carbon intensive in Australia. Nearly 20% of Australia’s CO2 emissions come from transport of various types, so electrifying as much as possible of this is key to meeting our net-zero 2050 goals. Many people now ride bikes with electric motors run from small batteries, which assist while you’re pedalling, allowing longer trips with less effort. Cars have progressively become more fuel efficient, and car companies are producing electric vehicles (EVs) and plug-in hybrids that use less petrol. When these vehicles are recharged from renewable sources of electricity, they provide a clean and quiet means of transport. EVs have the added advantage of regenerative braking. As the car slows down, some of the kinetic energy that would normally be transformed to heat in the brake pads is instead transformed into electrical potential energy stored in the battery. While it does not fully return all the energy expended to accelerate, regenerative braking is efficient enough to increase an EV’s overall range when compared to a similar car with conventional braking systems. Overall, regenerative braking is not designed to make a car more efficient; it is designed to make it less inefficient. In the public transport arena, all of the electricity used to power Melbourne’s tram network and its fleet of more than 400 trams is offset by renewable energy from two Victoria solar facilities: the 38 MW Bannerton Solar Park and the 128 MW Numurkah Solar Farm. Melbourne’s Yarra Trams is also installing large arrays of solar panels that, while not directly powering the trams, will feed electrical energy into the mains grid. The average single-occupancy Victorian car produces more than 240 grams of CO2 emissions per person per kilometre travelled, whereas trams produce approximately 20 grams and also reduce traffic congestion. Fully electric battery buses are also on the way, with the possibility of wireless charging stations under the roadway at the terminus. Other vehicles use hydrogen as fuel to burn in a small generator, which then runs the EV. As battery costs rapidly decrease, the economic benefit of EVs compared to large diesel engines for heavy road haulage becomes clearer. By their design, the torque from an electric motor is well suited to heavy loads currently towed by diesel trucks. Aside from fuel savings, EVs also save on servicing costs because there are fewer moving parts, oil changes and so on required.",
+  "src": {
+   "file": "Physics12_Ch05.pdf",
+   "page": 42
+  }
+ },
+ "chunks": [
+  {
+   "id": "5C-E1",
+   "heading": "What is electrical resistance?",
+   "text": "You have seen that the energy dissipated in a circuit can be understood using concepts of charge, current and potential difference. These quantities are related: as the energy supplied to a circuit increases, the amount of charge that flows increases. Sometimes the relationship between these quantities is simple, and other times it is more complex. Let’s start with a simple circuit. In Figure 5C–3 (left), a light bulb is connected to a power supply. The potential difference supplied can be varied from 0 to 12 V. When the switch is closed, current flows through the bulb. As the potential difference is increased, the current will increase too. The light will get brighter as more energy is supplied (recall from Section 5B that E = VIt). But are the two quantities, current and potential difference, related to each other in a simple mathematical way? To find out, a voltmeter and an ammeter must be added to the circuit as shown in Figure 5C–3 (right). The potential difference can now be increased in steps from 0 to 12 V and the value of current recorded for each step. Plotting a graph of current against potential difference (Figure 5C–4) shows that as the potential difference is increased, the current increases too, but not in a uniform (or steady) way. You can tell this because the graph is not a straight line; the gradient changes. This is because the filament of the bulb gets hotter as more current passes through it, and hotter metals become more resistant to current flow. Think of vibrations of thermal energy of the metal lattice ions getting in the way of the drifting electrons, like a rugby player with the ball trying to dodge while running through the opposition defence. If the defenders move more, it’s harder to dodge through without colliding. If a similar circuit is set up where the heating effect is as small as possible, the I–V graph will be straight. Figure 5C–5 (left) shows an example using a laboratory resistor. The current now increases steadily as the potential difference rises, shown by the graph of I vs V (Figure 5C–5 right). The ratio of V to I for a component is called its resistance, R. The unit of resistance is the ohm (given the Greek letter ‘omega’, Ω). It is constant for some components such as an ohmic resistor and varies with current and temperature for others, such as a light bulb. The relationship between potential difference and current is expressed by the equation below. This is called Ohm’s law and it is more commonly expressed as: The laboratory resistor in Figure 5C–5 has a constant value for V I , so it has a constant gradient of the I–V graph or run 1 resistance of 3 Ω. Note that this can be calculated from rise. The value of V I for the light bulb changed as the current increased, showing that in this case, the resistance was not constant. When a current of 0.5 A is flowing, the value of V I is 3 Ω, while at 1.0 A it is 5.0 Ω.",
+   "figures": [
+    "5C-F3",
+    "5C-F4",
+    "5C-F5"
+   ],
+   "criteria": [
+    "5C.1",
+    "5C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 44
+   }
+  },
+  {
+   "id": "5C-E2",
+   "heading": "Series circuits: current, potential difference and resistance",
+   "text": "So far Ohm’s law, V = IR, has been used to analyse simple circuits with only one load component. Many circuits contain several components, and their total or equivalent resistance must be found before the circuit can be analysed fully. Components may be connected in series, in parallel or in a combination of the two. Two or more components are said to be in series in a circuit if there is only one path for current to flow. The components are connected in a chain, one after the other. Note that for series circuits: • there is only one current path through R1, R2 and R3, so there must be the same current, I, in each. (Electrons do not stop anywhere on their way around the circuit.) • the sum of the potential differences across R1, R2, and R3 must equal the potential difference that the battery provides: Vsupply = V1 + V2 + V3 Using Ohm’s law repeatedly around this circuit gives R = V I for each resistor. If you then add these up, you can find the equivalent resistance of the circuit. V V V R equivalent = 1 1 2 1 3 O R 1 R 1 R 1 2 3 I I I 1 2 3 Therefore, for resistors in series, the total equivalent resistance of the combination is the sum of the individual resistances: If you connect batteries in series, the total potential difference is the sum of the individual potential differences.",
+   "figures": [
+    "5C-F6"
+   ],
+   "criteria": [
+    "5C.3",
+    "5C.4",
+    "5C.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 49
+   }
+  },
+  {
+   "id": "5C-E3",
+   "heading": "Potential (or voltage) dividers: a useful series circuit",
+   "text": "A simple potential divider (or voltage divider) consists of two resistors in series. The output potential difference is taken from the point between the two, as shown in Figure 5C–7. By varying the values of each resistor, any number of volts can be supplied at the output from a fixed input. Knowledge of series circuits and Ohm’s law are used to calculate the output as follows. The total equivalent resistance, Requivalent, in this circuit is: Requivalent = R1 + R2 Using Ohm’s law (V = IR), the current, I, through R1 + R2 is given by: V V I = = in Equation 1 R R + R equivalent 1 2 Applying Ohm’s law to R2 gives: Vout = IR2 Equation 2 Substituting Equation 1 into Equation 2 gives: V V = in R out 2 1 R R 1 2 Which is usually written as: R 2 This ratio makes sense, as you know that in a series circuit the potential drop + R R 1 2 across each component depends on the resistance of that component. So, the potential drop across R2 will be the same proportion of Vin as the proportion of R2 is in the whole circuit R1 + R2. Resistors R1 and R2 ‘divide up’ the input volts Vin in proportion; hence the name for this arrangement: potential divider (sometimes called voltage divider). By using variable resistors, or components that are sensitive to changes in temperature (thermistors) or light level (light-dependent resistors), Vout can be controlled to turn on or off refrigeration motors or streetlights at the appropriate temperature or level of darkness. You will explore this in more detail in Chapter 6.",
+   "figures": [
+    "5C-F7"
+   ],
+   "criteria": [
+    "5C.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 51
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "5C-F1",
+   "label": "Figure 5C–1",
+   "caption": "Electric vehicles capable of travelling 500 km between charges are already available. When not in use, they can be set up to rapidly supply peak load electricity to the grid.",
+   "img": null,
+   "important": false,
+   "why": "EV photo (engage)",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "5C-F2",
+   "label": "Figure 5C–2",
+   "caption": "200 solar panels were installed on the Southbank Tram Depot in 2022. Along with new skylights and LED lighting, this is expected to cut CO2 emissions by more than 1 megatonne per year.",
+   "img": null,
+   "important": false,
+   "why": "Tram photo (engage)",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 43
+   }
+  },
+  {
+   "id": "5C-F3",
+   "label": "Figure 5C–3",
+   "caption": "Left: A simple circuit showing a light bulb connected to a variable voltage power supply Right: By connecting an ammeter in series and a voltmeter in parallel as shown, the I–V (current vs potential difference) data for the bulb can be easily obtained and graphed.",
+   "img": "img/5C_fig5C-3.png",
+   "important": true,
+   "why": "Light bulb circuit, then with ammeter in series and voltmeter in parallel to get I–V data",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 44
+   }
+  },
+  {
+   "id": "5C-F4",
+   "label": "Figure 5C–4",
+   "caption": "Graph of current vs potential difference obtained from the circuit shown in Figure 5C–3 (right)",
+   "img": "img/5C_fig5C-4.png",
+   "important": true,
+   "why": "Curved I–V graph of a light bulb (non-ohmic)",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 45
+   }
+  },
+  {
+   "id": "5C-F5",
+   "label": "Figure 5C–5",
+   "caption": "Left: A laboratory resistor connected to a variable voltage power source Right: A resistor shows a straight line I–V graph. The graph is a straight line of constant gradient. This means that the ratio of V to l is constant. Such resistors are said to be ‘ohmic’. This resistor has a constant resistance of 3 Ω.",
+   "img": "img/5C_fig5C-5.png",
+   "important": true,
+   "why": "Ohmic resistor circuit and straight-line I–V graph (3 Ω)",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 45
+   }
+  },
+  {
+   "id": "5C-F6",
+   "label": "Figure 5C–6",
+   "caption": "In a series circuit, the same amount of current passes through each of the resistors and back to the battery — there is nowhere else for the electrons to go. The energy supplied by the battery (the potential difference) is shared between the resistors according to the resistance of each of them. The greater the resistance, the greater its share of the potential difference.",
+   "img": "img/5C_fig5C-6.png",
+   "important": true,
+   "why": "Three resistors in series with voltmeters: same current, shared p.d.",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 49
+   }
+  },
+  {
+   "id": "5C-F7",
+   "label": "Figure 5C–7",
+   "caption": "Two resistors in series with a fixed voltage supply can be used to give any amount of output voltage, Vout, by varying the sizes of the resistors",
+   "img": "img/5C_fig5C-7.png",
+   "important": true,
+   "why": "Potential divider: R1 and R2 with Vin and Vout",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 51
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE5C-1",
+   "title": "Applying Ohm’s law to a car headlight",
+   "question": "A car LED headlight is powered by a 12.0 V battery. Find the resistance of the car headlight when there is a current of 5.0 A through it, operating normally.",
+   "steps": [
+    "Use Ohm’s law: $V = IR$",
+    "The potential difference is provided by the battery, so $V = 12.0$ V, and the current is given as $I = 5.0$ A.",
+    "The resistance, $R$, is given by:",
+    "$R = \\frac{V}{I}$",
+    "$= \\frac{12.0}{5.0}$",
+    "$= 2.4\\ \\Omega$",
+    "The resistance of the headlight is 2.4 Ω."
+   ],
+   "answer": "2.4 Ω",
+   "img": [
+    "img/5C_WE5C-1.png"
+   ],
+   "criteria": [
+    "5C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 47
+   }
+  },
+  {
+   "id": "WE5C-2",
+   "title": "Current in a light bulb",
+   "question": "An old-fashioned incandescent light bulb has a resistance of 960 Ω when working normally, connected to the 230 V mains power supply. What current does the light bulb typically draw?",
+   "steps": [
+    "Use Ohm’s law: $V = IR$",
+    "The potential difference is provided by the mains power supply, so $V = 230$ V, and the resistance is given as $R = 960\\ \\Omega$. You want to find the current, $I$.",
+    "$I = \\frac{V}{R}$",
+    "$= \\frac{230}{960}$",
+    "$= 0.24$ A",
+    "The light bulb draws a current of 0.24 A."
+   ],
+   "answer": "0.24 A",
+   "img": [
+    "img/5C_WE5C-2.png"
+   ],
+   "criteria": [
+    "5C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 47
+   }
+  },
+  {
+   "id": "WE5C-3",
+   "title": "Meter readings in a circuit",
+   "question": "What would each of the meters read in this circuit? (circuit: 12 V battery, 4 kΩ resistor, two ammeters, voltmeter across resistor; see image)",
+   "steps": [
+    "For a circuit with a single resistor, the entire potential difference from the battery is dissipated in the 4 kΩ resistor. So, the voltmeter will read 12 V.",
+    "The current can be calculated using Ohm’s law: $V = IR$",
+    "The potential difference is $V = 12$ V, and the resistance is $R = 4$ kΩ.",
+    "Rearrange the formula to find the current, $I$.",
+    "$I = \\frac{V}{R}$",
+    "$= \\frac{12}{4\\times10^{3}}$",
+    "$= 3\\times10^{-3}$ A",
+    "It is a series circuit, so both ammeters will read 3 mA."
+   ],
+   "answer": "Voltmeter 12 V; both ammeters 3 mA",
+   "img": [
+    "img/5C_WE5C-3.png"
+   ],
+   "criteria": [
+    "5C.2",
+    "5C.3",
+    "5B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 48
+   }
+  },
+  {
+   "id": "WE5C-4",
+   "title": "Ohm’s law for series resistance",
+   "question": "Three resistors of 1 MΩ, 2 MΩ and 0.5 MΩ are connected in series and carry a current of 4.8 µA. Find the potential difference across the combination.",
+   "steps": [
+    "First draw a circuit diagram, adding all the information from the question: (see image)",
+    "Apply the series resistance Formula 5C–2 to calculate the equivalent resistance of the series combination:",
+    "$R_{\\text{equivalent}} = R_1 + R_2 + R_3$",
+    "$= 1\\times10^{6} + 2\\times10^{6} + 0.5\\times10^{6}$",
+    "$= 3.5\\times10^{6}\\ \\Omega$",
+    "Apply Ohm’s law to find the potential difference:",
+    "$V_{\\text{total}} = IR_{\\text{equivalent}}$",
+    "$= 4.8\\times10^{-6} \\times 3.5\\times10^{6}$",
+    "$= 16.8$ V",
+    "The potential difference across the series combination is 16.8 V."
+   ],
+   "answer": "16.8 V",
+   "img": [
+    "img/5C_WE5C-4.png"
+   ],
+   "criteria": [
+    "5C.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 50
+   }
+  },
+  {
+   "id": "WE5C-5",
+   "title": "Using a potential divider",
+   "question": "A particular mobile phone requires a potential difference of up to 5 V to charge correctly. The only power supply available is a 12 V battery from a caravan. A physics student thinks of using a potential divider circuit to supply the required 5 V. If one available resistor is 1.0 kΩ, what should the second resistor in the potential divider be and how should they be arranged? The other resistors available are 0.8 kΩ, 1.2 kΩ and 1.4 kΩ. Show your reasoning and a labelled diagram. What other considerations should the student take into account before operating this set-up?",
+   "steps": [
+    "First draw a diagram including all the information given in the question. (see image)",
+    "Consider whether the 1 kΩ resistor would be best placed as R1 or R2. Since 5 V required is less than half the 12 V available, put the 1 kΩ as R2 so the larger resistors can be in the top of the potential divider.",
+    "Using Formula 5C–3 we can calculate the required equivalent resistance:",
+    "$\\frac{R_2}{R_{\\text{equivalent}}} = \\frac{V_{\\text{out}}}{V_{\\text{in}}}$",
+    "$\\frac{1\\times10^{3}}{R_{\\text{total}}} = \\frac{5}{12}$",
+    "$R_{\\text{total}} = \\frac{12}{5}\\times10^{3} = 2.4\\times10^{3}\\ \\Omega$",
+    "Now, because R1 and R2 are in series:",
+    "$R_{\\text{total}} = R_1 + R_2$",
+    "Substitute into the formula:",
+    "$2.4\\times10^{3} = R_1 + 1\\times10^{3}$",
+    "So: $R_1 = 1.4\\times10^{3} = 1.4$ kΩ",
+    "Among the other considerations is the amount of current the phone will draw while recharging: can the battery supply this without overheating, and can the resistors and the connecting wires handle this current without damage? Conversely, would the battery supply more current in this set-up than the phone can handle? More detailed understanding of these and other factors is needed, and experimenting with expensive items is not recommended."
+   ],
+   "answer": "R1 = 1.4 kΩ (top), R2 = 1.0 kΩ (output across R2)",
+   "img": [
+    "img/5C_WE5C-5.png"
+   ],
+   "criteria": [
+    "5C.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 52
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "5C-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "Copy and complete the following table. (Quantity, Symbol, Units: Potential difference; Current; Resistance)",
+   "answer": "Potential difference: $V$, Volts, V; Current: $I$, Amperes, A; Resistance: $R$, Ohms, Ω",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "5C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5C Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "5C-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "Calculate the resistance of a component when the potential difference across it is 6.0 V and the current through it is 0.2 A.",
+   "answer": "$V = 6.0$ V, $I = 0.2$ A, $R = \\frac{V}{I} = \\frac{6.0}{0.2} = 30\\ \\Omega$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "5C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5C Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "5C-CI1.3",
+   "set": 1,
+   "n": 3,
+   "question": "On the same axes, sketch an $I$–$V$ graph for: a a resistance of 0 Ω b an infinite resistance.",
+   "answer": "a Vertical line along current axis b Horizontal line along potential difference axis",
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "5C.1",
+    "5C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5C Check-in – Set 1.docx"
+   },
+   "answer_img": [
+    "img/5C_CI1.3_ans.png"
+   ]
+  },
+  {
+   "id": "5C-CI1.4",
+   "set": 1,
+   "n": 4,
+   "question": "For each of the following current–potential difference ($I$–$V$) graphs, identify whether it is more likely to be produced by a light bulb or a resistor. Justify your choice.",
+   "answer": "a This graph is likely to be produced by a light bulb. The resistance, $R = \\frac{V}{I}$, is not constant, and becomes larger with higher currents. b This graph is likely to be produced by a resistor. The resistance, $R = \\frac{V}{I}$, is constant for each value of current and potential difference.",
+   "kind": "graph",
+   "size": "medium",
+   "criteria": [
+    "5C.1",
+    "5C.2"
+   ],
+   "img": [
+    "img/5C_CI1.4a.png",
+    "img/5C_CI1.4b.png"
+   ],
+   "src": {
+    "file": "5C Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "5C-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "Consider the circuit containing a battery and two resistances in series, shown on the right. Describe the relative sizes of the potential differences measured by the voltmeters $V_2$ and $V_3$ in terms of the battery potential difference, $V_1$. Justify your answer.",
+   "answer": "$V_2 < V_1 = V_3$. The potential difference across the battery $V_1$ is the same as the potential difference across both resistors $V_3$. This potential difference is split between the two resistors, so $V_2$ is smaller.",
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "5C.4"
+   ],
+   "img": [
+    "img/5C_CI2.png"
+   ],
+   "src": {
+    "file": "5C Check-in – Set 2.docx"
+   }
+  },
+  {
+   "id": "5C-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "Describe the relative sizes of the currents measured by the ammeters $A_1$, $A_2$ and $A_3$ in terms of which are smaller, which are larger, and if any are the same. Justify your answer.",
+   "answer": "$A_1 = A_2 = A_3$. For resistors in series, the current is always the same, as it only has one path to follow.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "5C.3"
+   ],
+   "img": [
+    "img/5C_CI2.png"
+   ],
+   "src": {
+    "file": "5C Check-in – Set 2.docx"
+   }
+  },
+  {
+   "id": "5C-CI3.1",
+   "set": 3,
+   "n": 1,
+   "question": "If $V_{\\text{in}}$ is 12 V, calculate $V_{\\text{out}}$ in each of these potential dividers (1 k = 1000 Ω) Hint: you should be able to see a short cut to using the complete formula each time.",
+   "answer": "For a potential divider; $V_{\\text{out}} = \\frac{R_2}{R_{\\text{equivalent}}}V_{\\text{in}}$. Notice that this ratio of resistances is the same for each circuit above: $\\frac{R_2}{R_{\\text{equivalent}}} = \\frac{R_2}{R_1+R_2} = \\frac{100}{100+1000} = \\frac{1000}{1000+10\\,000} = \\frac{10\\,000}{10\\,000+100\\,000} = \\frac{10}{11}$. Therefore, if the input potential difference is $V_{\\text{in}} = 12$ V, the output for all these circuits is: $V_{\\text{out}} = \\frac{R_2}{R_{\\text{equivalent}}}V_{\\text{in}} = \\frac{1}{11}(12) = 1.091$ V",
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "5C.6"
+   ],
+   "img": [
+    "img/5C_CI3.1.png"
+   ],
+   "src": {
+    "file": "5C Check-in – Set 3.docx"
+   },
+   "note": "Suggested response writes the ratio as 10/11 then uses 1/11; check the diagram for which resistor is R2 (1/11 × 12 = 1.091 V is the given answer)."
+  },
+  {
+   "id": "5C-CI3.2",
+   "set": 3,
+   "n": 2,
+   "question": "Can the output potential difference, $V_{\\text{out}}$, of a potential divider ever be larger than the input potential difference, $V_{\\text{in}}$? Explain your answer.",
+   "answer": "Consider the formula for potential dividers. The equivalent resistance of a series circuit, $R_{\\text{equivalent}}$, is always larger than the individual resistances; $R_n$. Therefore, the ratio of resistances must be less than or equal to one. So, $\\frac{V_{\\text{out}}}{V_{\\text{in}}} = \\frac{R_2}{R_{\\text{equivalent}}} \\leq 1$. This means that $V_{\\text{out}}$ can never be larger than $V_{\\text{in}}$.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "5C.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "5C Check-in – Set 3.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "5C-SQ1",
+   "n": "1",
+   "question": "What is the resistance of a light bulb in which the current is 0.5 A when it is connected to a potential difference of 240 V?",
+   "options": [
+    "A. 240 Ω",
+    "B. 120 Ω",
+    "C. 480 Ω",
+    "D. 2 mΩ"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "5C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5C Section questions.docx"
+   }
+  },
+  {
+   "id": "5C-SQ2",
+   "n": "2",
+   "question": "What is the potential difference across a 50 Ω resistance when there is a 5 A current through it?",
+   "options": [
+    "A. 10 V",
+    "B. 250 V",
+    "C. 25 V",
+    "D. 0.1 V"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "5C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5C Section questions.docx"
+   }
+  },
+  {
+   "id": "5C-SQ3",
+   "n": "3",
+   "question": "What is the current in an appliance of resistance 1000 Ω when it is connected to the 240 V mains supply?",
+   "options": [
+    "A. 0.24 A",
+    "B. $2.4\\times10^{5}$ A",
+    "C. 4.2 A",
+    "D. 24 A"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "5C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5C Section questions.docx"
+   }
+  },
+  {
+   "id": "5C-SQ4",
+   "n": "4",
+   "question": "What is the resistance of the component that has an $I$–$V$ characteristic (graph) as follows?",
+   "options": [
+    "A. 4.0 Ω",
+    "B. 0.25 Ω",
+    "C. 2.0 Ω",
+    "D. 0.50 Ω"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "5C.1",
+    "5C.2"
+   ],
+   "img": [
+    "img/5C_SQ4.png"
+   ],
+   "src": {
+    "file": "5C Section questions.docx"
+   }
+  },
+  {
+   "id": "5C-SQ5",
+   "n": "5",
+   "question": "What is the resistance of the component that has an $I$–$V$ characteristic (graph) as follows when the potential difference across the component measures 4 V?",
+   "options": [
+    "A. 4.0 Ω",
+    "B. 0.25 Ω",
+    "C. 2.0 Ω",
+    "D. 0.50 Ω"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "5C.2"
+   ],
+   "img": [
+    "img/5C_SQ5.png"
+   ],
+   "src": {
+    "file": "5C Section questions.docx"
+   }
+  },
+  {
+   "id": "5C-SQ6",
+   "n": "6",
+   "question": "Calculate the potential difference across a coil of wire with resistance 20 Ω if a total of 120 C of charge passes through it in 1 min.",
+   "answer": "$R = 20\\ \\Omega$, $Q = 120$ C, $t = 1$ min $= 60$ s; $V = IR = \\frac{Q}{t}\\times R = \\frac{120}{60}\\times20 = 40$ V",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice",
+    "donow"
+   ],
+   "criteria": [
+    "5C.2",
+    "5A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "5C Section questions.docx"
+   }
+  },
+  {
+   "id": "5C-SQ7",
+   "n": "7",
+   "question": "Draw a diagram, then work out the equivalent resistance for each of the following. a 25 Ω resistor in series with a 15 Ω resistor b 10 Ω, 5 Ω and 3 Ω resistors in series",
+   "answer": "a $R_{\\text{equivalent}} = R_1 + R_2 = 25 + 15 = 40\\ \\Omega$ b $R_{\\text{equivalent}} = R_1 + R_2 + R_3 = 10 + 5 + 3 = 18\\ \\Omega$",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "youtry"
+   ],
+   "criteria": [
+    "5C.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "5C Section questions.docx"
+   }
+  },
+  {
+   "id": "5C-SQ8",
+   "n": "8",
+   "question": "Resistors of 1 kΩ, 2 kΩ and 5 kΩ are joined in series and connected to the 24 V electricity supply of a caravan. a Draw a circuit diagram of the arrangement. Include a switch. b What is the total resistance in the circuit? c What is the current in the circuit?",
+   "answer": "a (diagram, see answer image) b $R_{\\text{equivalent}} = 1 + 2 + 5 = 8$ kΩ c $I = \\frac{V}{R} = \\frac{240}{8\\times10^{3}} = 3\\times10^{-3}$ A $= 3$ mA",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "5C.5",
+    "5A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "5C Section questions.docx"
+   },
+   "answer_img": [
+    "img/5C_SQ8_ans.png"
+   ],
+   "note": "Suggested response uses 240 V in part c though the question says 24 V (24 V gives 3 mA... 24/8000 = 3 mA; the 240 in the working is a typo)."
+  },
+  {
+   "id": "5C-SQ9",
+   "n": "9",
+   "question": "Draw a circuit diagram you could use to determine the $I$–$V$ characteristic of an unknown component X. Hint: use a variable supply of potential difference like a power pack, and enough meters of the right types for your measurements. Be sure to arrange the meters correctly in the circuit.",
+   "answer": "For $I$–$V$ characteristics, need the ammeter to measure current through X and the voltmeter to measure potential difference across X at a variety of values for $V$ and $I$. A suitable circuit is: (see answer image). Ammeter may be anywhere, as long as it is in series.",
+   "marks": null,
+   "kind": "graph",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "5C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "5C Section questions.docx"
+   },
+   "answer_img": [
+    "img/5C_SQ9_ans.png"
+   ]
+  },
+  {
+   "id": "5C-SQ10",
+   "n": "10",
+   "question": "The $I$–$V$ characteristic for component X is shown in the graph. Find the resistance of X when the potential difference across it is: a 5 V b 10 V",
+   "answer": "a $\\frac{5}{0.3} = 16.7\\ \\Omega$ b $\\frac{10}{0.4} = 25\\ \\Omega$",
+   "marks": null,
+   "kind": "graph",
+   "size": "medium",
+   "phase": [
+    "practice",
+    "youtry"
+   ],
+   "criteria": [
+    "5C.2"
+   ],
+   "img": [
+    "img/5C_SQ10.png"
+   ],
+   "src": {
+    "file": "5C Section questions.docx"
+   }
+  },
+  {
+   "id": "5C-SQ11",
+   "n": "11",
+   "question": "All the resistors in the following circuit are identical. Calculate and state the readings on each of the meters, given the potential difference of the battery is 12 V, and the reading on $A_1$ is 3 mA.",
+   "answer": "$A_2 = A_3 = A_4 = A_1 = 0.3$ A. Resistors are identical, therefore: $V_1 = V_2 = V_3$ and as $V_1 + V_2 + V_3 = 12$ V then: $V_1 = 4$ V $= V_2 = V_3$",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice",
+    "youtry"
+   ],
+   "criteria": [
+    "5C.3",
+    "5C.4"
+   ],
+   "img": [
+    "img/5C_SQ11.png"
+   ],
+   "src": {
+    "file": "5C Section questions.docx"
+   },
+   "note": "Suggested response says 0.3 A although the question gives 3 mA; all ammeters read the same as A1."
+  },
+  {
+   "id": "5C-SQ12",
+   "n": "12",
+   "question": "What would the output potential difference, $V_{\\text{out}}$, be in the following potential divider circuits?",
+   "answer": "a $V_{\\text{out}} = \\frac{200}{100+200}\\times12 = \\frac{200}{300}\\times12 = 8$ V b $V_{\\text{out}} = \\frac{2000}{2000+2000}\\times12 = 6$ V. Or by inspection as the two resistors are equal, each will receive half of the 12 V supply.",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice",
+    "exit"
+   ],
+   "criteria": [
+    "5C.6"
+   ],
+   "img": [
+    "img/5C_SQ12.png"
+   ],
+   "src": {
+    "file": "5C Section questions.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 5C–1 Modelling resistance in series",
+  "total": 17,
+  "file": "5C Worksheet 5C–1 Modelling resistance in series.docx",
+  "answers_file": "5C Worksheet 5C–1 Answers.docx",
+  "questions": [
+   {
+    "id": "WS5C-1",
+    "n": "1",
+    "question": "Complete the graph below to indicate the relationship between potential difference ($V$) and current ($A$) in an ohmic resistor.",
+    "answer": "Linear, positive graph. (1 mark) $y$-axis: potential difference; $x$-axis: current. (1 mark)",
+    "marks": 2,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "criteria": [
+     "5C.1",
+     "5C.2"
+    ],
+    "img": [
+     "img/5C_WS1.png"
+    ],
+    "src": {
+     "file": "5C Worksheet 5C–1 Modelling resistance in series.docx"
+    },
+    "answer_img": [
+     "img/5C_WS1_ans.png"
+    ],
+    "pair_with": null
+   },
+   {
+    "id": "WS5C-2",
+    "n": "2",
+    "question": "Calculate the resistance of a component that has an $I$–$V$ characteristic (graph) as shown below.",
+    "answer": "$V = IR$; $R = \\frac{V}{I} = \\frac{\\text{rise}}{\\text{run}} = \\frac{0.75-0.5}{6-4}$ (any relevant values accepted) $= 0.125\\ \\Omega$",
+    "marks": 2,
+    "kind": "graph",
+    "size": "medium",
+    "phase": [
+     "wedo"
+    ],
+    "criteria": [
+     "5C.2"
+    ],
+    "img": [
+     "img/5C_WS2.png"
+    ],
+    "src": {
+     "file": "5C Worksheet 5C–1 Modelling resistance in series.docx"
+    },
+    "pair_with": null,
+    "note": "Answer takes rise/run of the plotted graph; check axes on the image before using."
+   },
+   {
+    "id": "WS5C-3",
+    "n": "3",
+    "question": "Calculate the resistance of a light bulb in which the current is 2.5 A when it is connected to a potential difference of 220 V.",
+    "answer": "$R = \\frac{V}{I} = \\frac{220}{2.5} = 88\\ \\Omega$",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "criteria": [
+     "5C.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "5C Worksheet 5C–1 Modelling resistance in series.docx"
+    },
+    "pair_with": "WE5C-1"
+   },
+   {
+    "id": "WS5C-4",
+    "n": "4",
+    "question": "Consider the following circuit and answer the following questions. a Determine the reading on the voltmeter without a calculation. Explain your answer. b Determine the reading on each of the ammeters.",
+    "answer": "a Reading on voltmeter = 9 V (1 mark). All the potential difference is dissipated by the resistor. (1 mark) b $I = \\frac{V}{R} = \\frac{9}{5.5\\times1000} = 0.0016$ A (1 mark). Current is the same at all points in a series circuit so both ammeters show the same value. (1 mark)",
+    "marks": 4,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "5C.2",
+     "5C.3"
+    ],
+    "img": [
+     "img/5C_WS4.png"
+    ],
+    "src": {
+     "file": "5C Worksheet 5C–1 Modelling resistance in series.docx"
+    },
+    "pair_with": "WE5C-3"
+   },
+   {
+    "id": "WS5C-5",
+    "n": "5",
+    "question": "Consider the circuit diagram and answer the following questions. a Calculate the equivalent resistance. b Calculate the reading shown on each on the voltmeters. c Calculate the voltage of the power supply.",
+    "answer": "a $R_{\\text{equivalent}} = 2 + 2.5 + 1.5 = 6\\ \\Omega$ b $V_1 = IR_1 = 0.2\\times2 = 0.4$ V; $V_2 = IR_2 = 0.2\\times2.5 = 0.5$ V; $V_3 = IR_3 = 0.2\\times1.5 = 0.3$ V c $V_{\\text{supply}} = V_1 + V_2 + V_3 = 0.4 + 0.5 + 0.3 = 1.2$ V",
+    "marks": 5,
+    "kind": "calc",
+    "size": "long",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "5C.4",
+     "5C.5"
+    ],
+    "img": [
+     "img/5C_WS5.png"
+    ],
+    "src": {
+     "file": "5C Worksheet 5C–1 Modelling resistance in series.docx"
+    },
+    "pair_with": "WE5C-4"
+   },
+   {
+    "id": "WS5C-6",
+    "n": "6",
+    "question": "Consider the circuit below. Calculate the current flow through each of the resistors.",
+    "answer": "$I_1 = \\frac{V}{R_1} = \\frac{12}{1.5\\times1000} = 0.008$ A; $I_2 = \\frac{V}{R_2} = \\frac{12}{2.5\\times1000} = 0.0048$ A; $I_3 = \\frac{V}{R_3} = \\frac{12}{3\\times1000} = 0.004$ A",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "practice"
+    ],
+    "criteria": [
+     "5C.2",
+     "5D.3"
+    ],
+    "img": [
+     "img/5C_WS6.png"
+    ],
+    "src": {
+     "file": "5C Worksheet 5C–1 Modelling resistance in series.docx"
+    },
+    "pair_with": null,
+    "note": "Answer treats each resistor as across 12 V (parallel); check diagram."
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "5C.2"
+   ],
+   "wedo": "WE5C-1",
+   "youtry": [
+    "WS5C-3"
+   ],
+   "note": "R = V/I, single load"
+  },
+  {
+   "criteria": [
+    "5C.2"
+   ],
+   "wedo": "WE5C-2",
+   "youtry": [
+    "5C-CI1.2"
+   ],
+   "note": "Rearranging Ohm’s law (I = V/R / R = V/I)"
+  },
+  {
+   "criteria": [
+    "5C.2",
+    "5C.3"
+   ],
+   "wedo": "WE5C-3",
+   "youtry": [
+    "WS5C-4"
+   ],
+   "note": "Meter readings in a single-resistor series circuit"
+  },
+  {
+   "criteria": [
+    "5C.4",
+    "5C.5"
+   ],
+   "wedo": "WE5C-4",
+   "youtry": [
+    "WS5C-5",
+    "5C-SQ7"
+   ],
+   "note": "Series equivalent resistance then V = IR"
+  },
+  {
+   "criteria": [
+    "5C.6"
+   ],
+   "wedo": "WE5C-5",
+   "youtry": [
+    "5C-SQ12"
+   ],
+   "note": "Potential divider; SQ12 is the direct forward calculation"
+  },
+  {
+   "criteria": [
+    "5C.1"
+   ],
+   "wedo": "WS5C-2",
+   "youtry": [
+    "5C-SQ10"
+   ],
+   "origin": "adapted",
+   "note": "Resistance from an I–V graph; no worked example"
+  }
+ ],
+ "skills": [
+  {
+   "id": "5C-SK1",
+   "heading": "Resistor code",
+   "text": "Many electrical components are very small, so it is difficult to print information in words or figures on the component itself. There are a number of internationally accepted codes for such components, which include capacitors, integrated circuits (ICs or chips) and of course resistors. Those codes are an example of cooperation across the international scientific community. For fixed resistors, a colour code is used to indicate the size and reliability of the resistance. While memorising the code is beyond this course, the concepts involved are useful to students and the structure of the code reveals interesting detail about standard ceramic resistors. Each digit 0–9 is given a colour. The colours of the first two bands give the two digits of the resistor value, and the third band colour is the power of ten multiplier. The fourth band, if present, shows the tolerance of the measurement given by the first three bands. You can check the resistance read from the code using a multimeter, but if you want to select a number of resistors, this would be time consuming, whereas comparing the coloured bands is quick and easy. If a resistor has a value of, say, 18 Ω ±10%, its measured value could be anything from 16.2 to 19.8 Ω. Similarly, a resistor rated at 22 Ω ± 10% can have a range from 19.8 to 24.2 Ω. These two resistors together cover a range from 16.2 to 24.2 Ω. Standard resistors are produced in values based on a series of non-overlapping tolerances.",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 54
+   }
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P5C-1",
+   "title": "Practical 5C–1 Using resistors in series",
+   "file": "5C Practical 5C–1 Using resistors in series.docx",
+   "aim": "To measure the effect on total resistance in a circuit of adding more resistors in series."
+  }
+ ],
+ "notes": "Chunk text has some maths flattened by PDF extraction (fractions); use the formulas list and figures for maths. WE5C-4 textbook prints 4.8 × 10^6 for 4.8 µA; written here as 4.8 × 10^-6. Suggested-response inconsistencies flagged in item notes (SQ8c 240 V vs 24 V, SQ11 0.3 A vs 3 mA, CI3.1). Worksheet Q1 graph converted from EMF."
+}

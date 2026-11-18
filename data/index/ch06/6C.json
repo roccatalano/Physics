@@ -1,0 +1,991 @@
+{
+ "code": "6C",
+ "title": "Electrical safety",
+ "chapter": 6,
+ "unit": 1,
+ "aos": 3,
+ "study_design": [
+  "Model household electricity connections as a simple DC circuit comprising fuses, switches, circuit breakers, loads and earth",
+  "Compare the operation of safety devices including fuses, circuit breakers and residual current devices (RCDs)",
+  "Describe the causes, effects and first aid treatment of electric shock and identify the approximate danger thresholds for current and duration"
+ ],
+ "criteria": [
+  "6C.1",
+  "6C.2",
+  "6C.3",
+  "6C.4",
+  "6C.5",
+  "6C.6"
+ ],
+ "glossary": [
+  {
+   "id": "6C-G1",
+   "term": "Transformer",
+   "def": "a device that transfers energy via an alternating current (AC) from one circuit to another, usually with an increase or decrease (step-up or -down) in potential difference (voltage)",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 37
+   }
+  },
+  {
+   "id": "6C-G2",
+   "term": "Fibrillation",
+   "def": "a dangerous state of rapid uncoordinated quivering contractions of heart muscle fibres that fail to pump blood",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 38
+   }
+  },
+  {
+   "id": "6C-G3",
+   "term": "Active",
+   "def": "the ‘live’ wire in an AC supply; carries potential difference (often called voltage); coloured brown by internationally accepted convention",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 40
+   }
+  },
+  {
+   "id": "6C-G4",
+   "term": "Neutral",
+   "def": "the blue wire in an AC circuit that completes the circuit, providing a close to zero potential for current to flow",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 40
+   }
+  },
+  {
+   "id": "6C-G5",
+   "term": "Earth",
+   "def": "the wire or connection that provides a low resistance path for current to flow into the ground. It is the third wire in a plug or socket, usually green and yellow striped, and is attached to the external metal casing of an appliance for safety.",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 40
+   }
+  },
+  {
+   "id": "6C-G6",
+   "term": "Short-circuit",
+   "def": "an accidental connection in a circuit or an appliance in which a conductor is placed across a potential difference so that an excessive current flows, possibly causing dangerous heating or electric shock",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 41
+   }
+  },
+  {
+   "id": "6C-G7",
+   "term": "Fuse",
+   "def": "a piece of thin wire that acts as a safety device in a circuit by melting when too much current is passed through it, disconnecting the active wire from the circuit and preventing further damage",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 41
+   }
+  },
+  {
+   "id": "6C-G8",
+   "term": "Circuit breaker",
+   "def": "a type of automatic switch in which a large current creates an electromagnet, which trips the switch and cuts the supply. It can be turned back on manually after a fault is corrected, without needing to be replaced like a fuse.",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 41
+   }
+  },
+  {
+   "id": "6C-G9",
+   "term": "Electromagnetic switch",
+   "def": "a switch that uses a magnetic field created by an electric current flowing through a coil of wire to move the switch toggle. Unlike a permanent magnet, the magnetic field will cease when the current stops.",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 41
+   }
+  },
+  {
+   "id": "6C-G10",
+   "term": "Residual current device (RCD)",
+   "def": "a device in the switchboard that activates circuit breakers when an imbalance between the active–neutral current is detected, protecting against electrocution",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "6C-G11",
+   "term": "Double insulated",
+   "def": "two layers of insulation are used for added safety, typically on appliances that are not earthed. The layers are placed between the live parts and external metal parts of the appliance.",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 42
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F6C-1",
+   "name": "Ohm's law (current through the body)",
+   "latex": "I = \\frac{V}{R}",
+   "where": [
+    {
+     "sym": "I",
+     "meaning": "current through the body",
+     "unit": "A"
+    },
+    {
+     "sym": "V",
+     "meaning": "potential difference",
+     "unit": "V"
+    },
+    {
+     "sym": "R",
+     "meaning": "body (skin) resistance: about 100 000 Ω dry, 1000 Ω wet",
+     "unit": "\\Omega"
+    }
+   ],
+   "criteria": [
+    "6C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 38
+   },
+   "note": "Not a boxed formula in 6C; applied in SQ6 and SQ8."
+  }
+ ],
+ "engage": {
+  "heading": "Electrical supply and safety: bird on a wire",
+  "text": "We have all seen birds sitting on electricity wires, apparently oblivious to the large energy source their feet are attached to. How is it that birds can do this, but a human can be killed by touching a 230 V socket, especially with wet hands? The clue is in the size of the current that passes through the person or animal, and this in turn depends on both the resistance of the body and the potential difference between the two points of contact (Ohm’s law, again!) ‘Bug-zappers’ have closely-spaced uninsulated wire meshes where a bug can touch both a mesh at one voltage and another mesh at a different voltage, conduct current, and burn. As is often said, it is current that kills, not potential difference.\n\nWhen a bird is standing on a single-phase power line with both feet, there is a small potential difference between the feet. However, the bird’s body is effectively in parallel with the wire of the power line and the resistance of the wire is a lot smaller than that of the bird. So, as in all parallel circuits, the current through the high-resistance bird is a lot smaller than the current in the low-resistance power line.\n\nIf the bird is standing on one leg, there isn’t a complete circuit so no current at all flows through the bird. But if an unlucky bird touches two wires at once (e.g. with outstretched wings), large currents cause rapid heating and swift death.",
+  "src": {
+   "file": "Physics12_Ch06.pdf",
+   "page": 36
+  }
+ },
+ "chunks": [
+  {
+   "id": "6C-E1",
+   "heading": "Dangers of electricity",
+   "text": "Power supply authorities use high-voltage transmission lines and transformers to distribute electricity efficiently around each state and between states (Figure 6C–1). Transmission voltages may be as high as 500 kV over long distances. For example, from the Snowy Mountains Scheme to Victoria or between Victoria and South Australia or New South Wales, 66 kV lines supply substations, which power groups of suburbs or a whole regional town. However, by the time the electricity is delivered from the street supply to a house, it has been transformed down to the standard supply voltage of 230 V (with a tolerance of −6% and +10%). The reasons for this are explored in detail in Unit 3. For now, note that a higher voltage can cause greater current to flow through anyone who accidentally contacts the high-potential wire while also touching a low potential such as the ground without an insulating barrier in place.\n\nThe mains supply presents a potential hazard to life, since a relatively small current passing through the human body can be deadly. Anyone using electricity should be aware of the dangers associated with it, and electrical installation should be carried out only by qualified electricians. People are injured or die every year because of carelessness, negligence or sheer bad luck. With care and common sense, many of these unfortunate incidents could be avoided.",
+   "figures": [],
+   "criteria": [
+    "6C.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 37
+   }
+  },
+  {
+   "id": "6C-E2",
+   "heading": "Effects of electric shock",
+   "text": "Potential differences as low as 32 V AC or 115 V DC can cause dangerous currents through the body. There are several identifiable levels of electric shock, as shown in Table 6C–1.\n\nRelatively small currents flowing from one side of the body to the other can be dangerous, depending on the time they flow and the body parts through which they flow. Exposure to electric shock, even for a very short time, can bring about fibrillation (rapid and uncontrolled beating of the heart; see Table 6C–1). Fibrillation can starve the brain of oxygen and, in the absence of medical treatment, will cause brain damage and eventually death.\n\nThe size of the current that flows through the body depends on the potential difference of the electricity supply, the path taken by the current and most importantly the skin resistance of the victim. For the average person, resistance between dry hands and arms outstretched is about 100 000 Ω, while the resistance of wet skin is about 1000 Ω. Body tissues below the skin tend to be good conductors due to the presence of water and electrolytes, so skin resistance is the greatest barrier. Insulating shoes can prevent a flow of current to earth. The most dangerous path for current is from one limb to another, across the chest, since this is most likely to affect the heart. The lower the resistance to current flow, the more current will pass through the body and the greater the danger to life. Skin resistance is lower when the skin is wet, or broken by a cut or abrasion, so situations should be avoided in which electricity and water are in close proximity.",
+   "figures": [
+    "6C-T1",
+    "6C-T2"
+   ],
+   "criteria": [
+    "6C.1",
+    "6C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 38
+   }
+  },
+  {
+   "id": "6C-E3",
+   "heading": "First aid for electric high voltage shock",
+   "text": "The Australian Government’s healthdirect website (https://www.healthdirect.gov.au) provides detailed information on electric shocks and burns, and the following is based on that advice.\n\nIf you are first on the scene of an accident involving an electric shock, there are some basic steps you should take to help the injured person.\n1 Assess the scene and call an ambulance on triple zero (000). This is essential if someone has had an electric shock and:\n• they have lost consciousness, even for a second, or\n• they are breathing very fast or very slow, or\n• their heartbeat is very fast, very slow or irregular.\nIf you do not call an ambulance, the victim should still visit the nearest emergency department or see a doctor as soon as possible, as there may be internal injuries.\n2 Look first, don’t touch. The person may still be in contact with the source of potential difference, and if you touch them you will also receive an electric shock. Indoors, if possible, turn off the electricity supply at the nearest switch and pull out the plug if the cause of the shock is an appliance. Turn off the mains power if possible. If the supply cannot be turned off, use a wooden broom handle or some other insulating material to lever the casualty away from the source of electricity. Outdoors, keep clear of fallen electricity lines (at least 6 m away) and in the case of a car accident, do not touch the vehicle or occupants if live wires are in contact with the vehicle, until it is declared safe by the electric supply authority. Ask the person not to move.\n3 After danger is cleared, check if the person is conscious and breathing. Gently touch and talk to the person. If the person is conscious, reassure them and treat burns with cold running water for at least 20 minutes then cover them with a sterile gauze bandage or a clean cloth. Do not use a blanket, tissue or towel, because loose fibres can stick to the burns.\n4 If there is no response, start cardiopulmonary resuscitation (CPR) and continue until the ambulance arrives. Use other bystanders to assist you.\n\nIn the emergency department at the hospital, doctors will run tests to check the heart or damage to the soft tissue of the body. They may use pain relief medication. Most people with an electric shock or burn will be able to go home, unless they have heart damage that needs to be treated in hospital. The most common complication of an electrical injury is infection. Some people may have damage to the brain, which can cause seizures, depression, anxiety or personality changes.",
+   "figures": [],
+   "criteria": [
+    "6C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 38
+   }
+  },
+  {
+   "id": "6C-E4",
+   "heading": "Avoiding electric shock",
+   "text": "Common causes of electric shock are:\n• exposed electrical wires\n• water on electrical appliances\n• cutting through a live cable; for example, while using a power tool or lawnmower\n• old wiring\n• faulty appliances.\nElectric shocks are occasionally caused by lightning. Do not shelter under trees in a thunder storm. Seek shelter inside, or lie flat on the ground.\n\nYou can ensure electrical safety in the home by having safety switches (circuit breakers and RCDs) installed and making sure they are tested regularly. This is a legal requirement for rental properties in Victoria from March 2023. Always use a licensed electrician for electrical work and make sure you have any damaged power points or switches repaired. Never use a power tool, appliance or lead that you know is faulty or has a frayed cord. Make sure no electrical appliances are used in wet areas or near pools.",
+   "figures": [],
+   "criteria": [
+    "6C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 39
+   }
+  },
+  {
+   "id": "6C-E5",
+   "heading": "Domestic connections to mains power",
+   "text": "Mains electricity is AC, not DC. The terms ‘positive’ and ‘negative’ are not used for AC as they are only relevant for a DC source, such as a battery. The two wires supplying mains electricity are known instead as active and neutral, and form two of the connections made to a power point. Anything connected to the active wire is ‘live’ and is particularly dangerous as it carries the potential difference. The third connection to a power point is the earth wire, which is connected via a thick cable to an earth stake or electrode driven into the ground. In most cases, the neutral and earth wires are linked together at each consumer’s fuse box. The earth wire and the earthed neutral both contribute to the overall safety of the electrical installation. If the active wire accidentally contacts the casing, a large current flows through the low resistance path to earth, causing the circuit breaker to trip and disconnect the active. The earth is taken to be zero electrical potential, as current will flow to it from a positive terminal and from earth to a negative terminal.",
+   "figures": [
+    "6C-F2"
+   ],
+   "criteria": [
+    "6C.4",
+    "6C.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 40
+   }
+  },
+  {
+   "id": "6C-E6",
+   "heading": "Fuses and circuit breakers",
+   "text": "There are several features of a mains installation that contribute to safety.\n\nIf a fault occurs in an electrical appliance, a short-circuit may develop, causing a very large current to flow. For example, a knife blade may disrupt the fine wires inside a toaster, causing a short circuit. The heating effect of this current can be enough to cause overheating in an appliance or the wall plaster, possibly leading to a fire. To guard against this danger, a fuse or circuit breaker is wired in series with the active wire in each household circuit, as well as in some appliances. A fuse is a piece of thin wire, which may be inside a tube, that can conduct a certain amount of current without being affected. If an excessive current flows as a result of a short-circuit, for example, the fuse wire overheats and melts, disconnecting the active wire from the circuit and preventing further damage. The ‘blown’ fuse is reset after the fault is corrected by replacing the fuse with a new one if it’s in the appliance, or in the fuse box the melted wire is replaced with a new length.\n\nIn new houses, circuit breakers are used instead of fuses. A circuit breaker is an electromagnetic switch that automatically turns off when an abnormally high current flows due to a fault in the circuit. It is reset, once the fault is corrected, by moving the switch fully off and then back to the ‘on’ position. If a circuit breaker continually flips, all appliances connected to the circuit should be disconnected and then tested one at a time to find the faulty one, which should then be repaired or replaced.",
+   "figures": [],
+   "criteria": [
+    "6C.3",
+    "6C.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 41
+   }
+  },
+  {
+   "id": "6C-E7",
+   "heading": "Earthing",
+   "text": "Many electrical appliances have metal parts. It is possible for a fault to occur that brings an active wire into contact with the metal, so that the metal is ‘live’ and if touched could lead to an electric shock. Because of this danger, all exposed metal parts in an appliance are ‘earthed’. This means they are connected to the earth wire of the mains supply. In the event of the metal parts becoming live due to a fault, current will flow harmlessly into the ground (via the earth wire) instead of through the user. Because the path to earth is through a thick copper wire, it has low resistance so a large current will flow, blowing the fuse or triggering the circuit breaker and leaving the appliance safe to handle. The earth may be considered as both a source and a sink of electrons and is by definition a potential of 0 V. The neutral connection is usually wired to the earth at the switchboard, so the potential of the neutral is always close to zero. Recall that the active potential difference alternates 50 times per second +230V to −230V AC and back to +230 V.",
+   "figures": [
+    "6C-F5"
+   ],
+   "criteria": [
+    "6C.5",
+    "6C.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 41
+   }
+  },
+  {
+   "id": "6C-E8",
+   "heading": "Residual current devices",
+   "text": "A further precaution that can be taken with double-insulated equipment is to place a safety switch between the mains power and the equipment casing. The RCD, or residual current device operates by comparing the neutral and active currents. If there is an imbalance, it automatically trips within 30 milliseconds (in a similar way to but faster than a circuit breaker) and turns the power off by disconnecting from the active. If there is greater current in the active compared to the neutral, then current must be leaking from the equipment to earth (e.g. via a person!)\n\nMany houses in Victoria are now fitted with an RCD at the switchboard, and it will be illegal for rental properties to not include this safety device from March 2023. From June 2022, rental providers must tha ensure an electrical safety check of all electrical installations and fittings in the premises is conducted every two years by a licensed electrician.",
+   "figures": [],
+   "criteria": [
+    "6C.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "6C-E9",
+   "heading": "Double insulation",
+   "text": "Some appliances are not earthed but instead are double insulated. A double-insulated appliance isolates the live parts of the circuit from the user by interposing two separate layers of insulation (the functional insulation and the protective insulation – each rated for 230 V) between the live parts and any external metal. In normal operating situations, both sets of insulation would have to break down to create a hazard. Although this provides a high degree of safety, it is still possible for both sets of insulation to be bypassed; for example, by wetting a drill accidentally with a hose while someone is using it.",
+   "figures": [],
+   "criteria": [
+    "6C.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "6C-E10",
+   "heading": "Wiring colour code",
+   "text": "It is important that mains appliances are connected correctly to the electricity supply. An international colour code has been developed to assist in connecting appliances correctly. The present coding is shown in Figure 6C–6. Older appliances, in which other colour codes were used, may still exist. All mains electrical appliances manufactured in Australia are sold with a moulded plug already fitted to reduce the risk of incorrect wiring of a plug by the user.",
+   "figures": [
+    "6C-F6"
+   ],
+   "criteria": [
+    "6C.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 43
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "6C-T1",
+   "label": "Table 6C–1",
+   "caption": "The effects of mains electricity (230 V, 50 Hz, AC, 0.5 s) on the human body",
+   "img": "img/6C_table6C-1.png",
+   "important": true,
+   "why": "Danger thresholds for current (6C.2)",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 38
+   },
+   "table": [
+    [
+     "1 mA",
+     "Able to be felt"
+    ],
+    [
+     "3 mA",
+     "Easily felt"
+    ],
+    [
+     "10 mA",
+     "Painful"
+    ],
+    [
+     "16 mA",
+     "Maximum current an average person can grasp and ‘let go’"
+    ],
+    [
+     "20 mA",
+     "Respiratory muscles paralysed"
+    ],
+    [
+     "50 mA",
+     "Severe shock"
+    ],
+    [
+     "100 mA",
+     "Ventricular fibrillation (heart muscle)"
+    ],
+    [
+     "150 mA",
+     "Breathing very difficult"
+    ],
+    [
+     "200 mA",
+     "Death likely"
+    ],
+    [
+     "500 mA",
+     "Serious burning, breathing stops, death inevitable"
+    ],
+    [
+     "15–20 A",
+     "Typical current rating for circuit breakers or fuses to disconnect mains"
+    ]
+   ]
+  },
+  {
+   "id": "6C-T2",
+   "label": "Table 6C–2",
+   "caption": "The effect of electric current of 50 mA for various times on the human body (for 230 V 50 Hz mains electricity)",
+   "img": "img/6C_table6C-2.png",
+   "important": true,
+   "why": "Danger thresholds for duration (6C.2)",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 38
+   },
+   "table": [
+    [
+     "10–200 ms",
+     "Noticeable but usually no dangerous effect"
+    ],
+    [
+     "200–400 ms",
+     "Significant shock, possibly dangerous"
+    ],
+    [
+     ">400 ms",
+     "Severe shock, possible death"
+    ]
+   ]
+  },
+  {
+   "id": "6C-F2",
+   "label": "Figure 6C–2",
+   "caption": "The mains electricity (230 V, 50 Hz) enters the house via the meter and main switch and circuit breaker box. This diagram shows a typical installation for a single power outlet and the way the active, neutral and earth wires are connected to it. Note that the neutral bar is connected to the earthed stake to ensure that the neutral potential difference does not become large. The plug for any appliance with an earth connection has corresponding pins for active, neutral and earth.",
+   "img": "img/6C_fig6C-2.png",
+   "important": true,
+   "why": "Active, neutral, earth connections to a power outlet",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 40
+   }
+  },
+  {
+   "id": "6C-F5",
+   "label": "Figure 6C–5",
+   "caption": "Using a knife to free toast that is stuck can easily dislodge heater wires, which can then connect the active with the case of the toaster. Current enters the body where it comes in contact with the supply, and flows through the lowest resistance path to earth. Don't let that be through your body!",
+   "img": "img/6C_fig6C-5.png",
+   "important": true,
+   "why": "Toaster short-circuit to case and earth wire",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "6C-F6",
+   "label": "Figure 6C–6",
+   "caption": "The Australian standard colour coding for electrical wires is brown for active, blue for neutral and green-and-yellow striped for earth. This is also the international code for electrical wiring. An older version that caused issues for red–blue colour-blind electricians still exists. Note that only a qualified electrician is allowed to connect wiring on mains electrical equipment. Modern electrical plugs cannot be disassembled as shown here; the complete plug body is moulded from one piece of plastic and can’t be opened.",
+   "img": "img/6C_fig6C-6.png",
+   "important": true,
+   "why": "Three-pin plug colour code (6C.4)",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 43
+   }
+  }
+ ],
+ "worked_examples": [],
+ "checkins": [
+  {
+   "id": "6C-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "Consider the information in Table 6C–1. What is the significance of a 10–20 mA current on the human body, compared with 1–10 mA?",
+   "answer": "This current range marks the threshold where a person can let go of an electrical component before the muscles become paralysed. This is significant because it can lead to a longer time that current passes through the body, increasing the impact.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "6C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 40
+   }
+  },
+  {
+   "id": "6C-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "When administering first aid for an electric shock, why is it important to ‘look first, don’t touch’?",
+   "answer": "The cause of the electric shock may still be present and could result in further injuries for someone trying to assist. This step is about identifying the possible electrical hazards and either avoiding or removing them.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "6C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 40
+   }
+  },
+  {
+   "id": "6C-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "Which of the three wires in a domestic power socket carries the AC potential difference?",
+   "answer": "Active",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "6C.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 43
+   }
+  },
+  {
+   "id": "6C-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "What are the other two wires and what is their function?",
+   "answer": "Neutral completes the circuit; earth is a safety wire, to carry a large current to the ground if the active connects to the case of the appliance. This large current should trip the safety circuit breaker, preventing a person being electrocuted.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "6C.4",
+    "6C.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 43
+   }
+  },
+  {
+   "id": "6C-CI2.3",
+   "set": 2,
+   "n": 3,
+   "question": "What is the colour code for each of the three wires in an Australian three-pin plug?",
+   "answer": "Active = brown; neutral = blue; earth = green & yellow stripes",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "6C.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 43
+   }
+  },
+  {
+   "id": "6C-CI2.4",
+   "set": 2,
+   "n": 4,
+   "question": "If an appliance doesn’t have an earth pin on its plug, what does this tell you about the structure of the appliance?",
+   "answer": "Any appliance without an earth pin should be built with two layers of insulation between the active and the external casing: it is 'double-insulated'. This should protect the user in the case of a malfunction.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "6C.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 43
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "6C-SQ1",
+   "n": "1",
+   "question": "The smallest current that can be felt on the skin is",
+   "options": [
+    "A. 0.1 mA",
+    "B. 0.5 mA",
+    "C. 1 mA",
+    "D. 3 mA"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "donow",
+    "exit"
+   ],
+   "criteria": [
+    "6C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "6C Section questions.docx"
+   }
+  },
+  {
+   "id": "6C-SQ2",
+   "n": "2",
+   "question": "The smallest current that can kill a person if it passes through the heart is about",
+   "options": [
+    "A. 0.5 mA",
+    "B. 5 mA",
+    "C. 10 mA",
+    "D. 16 mA"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "donow",
+    "exit"
+   ],
+   "criteria": [
+    "6C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "6C Section questions.docx"
+   },
+   "note": "Answer key D (16 mA) does not match Table 6C–1 (16 mA is 'let go'; death likely at 200 mA). Check."
+  },
+  {
+   "id": "6C-SQ3",
+   "n": "3",
+   "question": "The reason for an earth wire connecting to the casing of an electrical appliance is to",
+   "options": [
+    "A. supply extra electrons from the earth to neutralise the current.",
+    "B. provide a low-resistance path for high current to flow to earth, tripping the circuit breaker or fuse.",
+    "C. provide a high-resistance path to stop the current to flowing to earth.",
+    "D. bypass the fuse or circuit breaker."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "6C.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "6C Section questions.docx"
+   }
+  },
+  {
+   "id": "6C-SQ4",
+   "n": "4",
+   "question": "When a large current flows through a fuse, the",
+   "options": [
+    "A. thin, high-resistance wire melts, breaking the circuit.",
+    "B. thin, high-resistance wire melts, creating a short circuit.",
+    "C. thick, low-resistance wire melts, breaking the circuit.",
+    "D. thick, low-resistance wire melts, creating a short circuit."
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "6C.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "6C Section questions.docx"
+   }
+  },
+  {
+   "id": "6C-SQ5",
+   "n": "5",
+   "question": "In Australia, the switch and the fuse or circuit breaker are always in the",
+   "options": [
+    "A. neutral wire.",
+    "B. live wire.",
+    "C. earth wire.",
+    "D. appliance plug."
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "6C.3",
+    "6C.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "6C Section questions.docx"
+   },
+   "note": "Answer key says D; textbook says switch and breaker are in the active (live) wire, so B is correct. Check."
+  },
+  {
+   "id": "6C-SQ6",
+   "n": "6",
+   "question": "a Why was a low voltage, typically 12 V, chosen for use in car electrical circuits?\nb What would be the current in your body if you touched the terminals of a 12 V battery and if the contact resistance of dry skin was 100 000 Ω?\nc If your skin became wet, and the contact resistance dropped to only 1000 Ω, what would be the current in your body? Is this current potentially dangerous?",
+   "answer": "a A potential difference of 12 V is too small to drive much current through a person who accidentally touches it.\nb Calculation could include: $V$ = 12 V; $R_{person} = 10^{5}$ Ω. So, from Ohm's law: $I = \\frac{V}{R} = \\frac{12}{10^{5}} \\approx \\frac{10}{10^{5}} = 10^{-4}$ A or 0.1 mA, which might be felt but is not enough to do damage.\nc Calculation could include: $V$ = 12 V; $R_{person} = 10^{3}$ Ω. So, from Ohm's law: $I = \\frac{V}{R} = \\frac{12}{10^{3}} \\approx \\frac{10}{10^{3}} = 10^{-2}$ A or 10 mA, which could be painful but is probably not enough to do damage.",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "wedo",
+    "practice"
+   ],
+   "criteria": [
+    "6C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "6C Section questions.docx"
+   }
+  },
+  {
+   "id": "6C-SQ7",
+   "n": "7",
+   "question": "If a fault develops in an appliance as shown, explain how the earth wire and the circuit breaker help to prevent injuries. Why must the circuit breaker be in the active wire?",
+   "answer": "When the active contacts the case, a large current flows through the case and the earth wire to earth. This current in the active–case–earth circuit trips the circuit breaker, protecting the wiring from overheating (especially in the walls and switchboard). It is possibly not quick enough to protect a person. An RCD safety switch with a response time of 30 ms is better at this. If the circuit breaker was in the neutral wire, it would not trip because there's no extra current in the neutral. If the circuit breaker was in the earth wire and a person was touching the appliance at the time, there may not be enough current in the earth wire to trip a circuit breaker, as part of the current would pass through the person.",
+   "marks": null,
+   "kind": "explain",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "6C.3",
+    "6C.5",
+    "6C.6"
+   ],
+   "img": [
+    "img/6C_SQ7.png"
+   ],
+   "src": {
+    "file": "6C Section questions.docx"
+   }
+  },
+  {
+   "id": "6C-SQ8",
+   "n": "8",
+   "question": "A fuse rating is the maximum current that the fuse can carry without melting. Only certain values are available: 3 A, 5 A, 10 A, 13 A. Circuit breakers are also rated in a similar way: 3 A, 10 A, 15 A, 32 A. A vacuum cleaner with a power rating of 720 W is plugged into a mains power point.\na What fuse rating should be on that circuit for the vacuum to operate without blowing the fuse? Explain.\nb What circuit breaker rating would be best for the vacuum? Explain.\nc What circuit breaker rating would you choose for a lighting circuit with ten 9 W LEDs and a 200 W ceiling fan in parallel?\nd What circuit breaker rating would you choose for an induction cooktop circuit that requires 28 A maximum current when all the hotplates are on the boost setting?",
+   "answer": "a $P$ = 720 W, $V$ = 240 V so $I = \\frac{P}{V} = \\frac{720}{240} = 3$ A. Best to use a 5 A fuse as normal operation could blow a 3 A one.\nb By same calculation, a 10 A circuit breaker is required. The 3 A is likely to trip during normal operation, which is annoying but not as time consuming as replacing a blown fuse.\nc $P_{total}$ = (10 × 9 + 200) watts = 290 W; $V$ = 240 V, so $I = \\frac{P}{V} = \\frac{290}{240} = 1.2$ A. Best circuit breaker is 3 A.\nd A circuit breaker is required.",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "6C.6",
+    "6C.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "6C Section questions.docx"
+   },
+   "note": "Answer d is incomplete in the source (32 A breaker implied)."
+  },
+  {
+   "id": "6C-SQ9",
+   "n": "9",
+   "question": "Explain why it is extremely dangerous to replace thin fuse wire with thicker wire, or with a nail. (This is one of the reasons fuses have been replaced with circuit breakers.)",
+   "answer": "Thicker wire has lower resistance and will heat up more slowly. It might not melt when a circuit is dangerously broken, so the active wire will remain live and could electrocute someone.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "6C.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "6C Section questions.docx"
+   }
+  },
+  {
+   "id": "6C-SQ10",
+   "n": "10",
+   "question": "Identify the holes of this electric socket and the pins of the electric plug.",
+   "answer": "a and d = active; b and e = neutral; c and f = earth",
+   "marks": null,
+   "kind": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "6C.4"
+   ],
+   "img": [
+    "img/6C_SQ10.png"
+   ],
+   "src": {
+    "file": "6C Section questions.docx"
+   }
+  },
+  {
+   "id": "6C-SQ11",
+   "n": "11",
+   "question": "State three things you should do before touching someone you fear may have been electrocuted. Explain why it is important to do these first.",
+   "answer": "Assess the scene for danger and warn others not to approach.\nTalk to the person and reassure them that you are getting help.\nCall an ambulance.\nTurn of the power at the switch or meter/circuit board if possible; use an insulator like a wooden or plastic broomstick (NOT metal) to lever the person off the live wire, if possible.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "6C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "6C Section questions.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 6C–1 Electrical safety",
+  "total": 15,
+  "questions": [
+   {
+    "id": "WS6C-1",
+    "n": "1",
+    "question": "Match the term to the correct definition. (3 marks)\ni. Double-insulated; ii. Electromagnetic switch; iii. Fibrillation; iv. Short-circuit; v. Transformer; vi. Fuse\na. a device that transfers energy via an AC from one circuit to another\nb. a piece of thin wire that acts as a safety device in a circuit\nc. an accidental connection in an appliance causing dangerous heating or electric shock\nd. a state of uncoordinated contractions of heart muscle fibres\ne. two layers of insulation are added to appliances that are not earthed\nf. a switch that uses a magnetic field created by an electric current flowing through a coil to move the switch toggle",
+    "answer": "(1/2 mark each) i – e; ii – f; iii – d; iv – c; v – a; vi – b",
+    "marks": 3,
+    "kind": "recall",
+    "size": "medium",
+    "phase": [
+     "donow",
+     "practice"
+    ],
+    "criteria": [
+     "6C.1",
+     "6C.5",
+     "6C.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "6C Worksheet 6C–1 Electrical safety.docx"
+    }
+   },
+   {
+    "id": "WS6C-2",
+    "n": "2",
+    "question": "Number the steps in administering first aid involving electric shock from 1 to 4. (2 marks)\nLook first, don't touch; Start CPR if there is no response; Assess the scene and call triple zero; Check if person is conscious and breathing",
+    "answer": "(1/2 mark each) Assess the scene and call triple zero – 1; Look first, don't touch – 2; Check if person is conscious and breathing – 3; Start CPR if there is no response – 4",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "criteria": [
+     "6C.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "6C Worksheet 6C–1 Electrical safety.docx"
+    }
+   },
+   {
+    "id": "WS6C-3",
+    "n": "3",
+    "question": "The figure below shows a typical installation for a single power outlet and the way the three neutral, active and earth wires are connected to it.\na Label each of the wires as neutral, active or earth. (1 mark)\nb State the function of each type of wire. (3 marks)\nActive:\nNeutral:\nEarth:",
+    "answer": "a Brown – live; blue – neutral; green/yellow – earth (1 mark)\nb Active: live wire that carries a potential difference (1 mark)\nNeutral: completes the circuit, provides zero potential for current (1 mark)\nEarth: provides a low resistance path for current to flow into the ground (1 mark)",
+    "marks": 4,
+    "kind": "graph",
+    "size": "medium",
+    "phase": [
+     "wedo",
+     "youtry"
+    ],
+    "criteria": [
+     "6C.4",
+     "6C.5"
+    ],
+    "img": [
+     "img/6C_WS3.png"
+    ],
+    "src": {
+     "file": "6C Worksheet 6C–1 Electrical safety.docx"
+    }
+   },
+   {
+    "id": "WS6C-4",
+    "n": "4",
+    "question": "Compare a fuse and circuit breaker by referring to how each prevents a short-circuit from causing electric shock. (2 marks)",
+    "answer": "A fuse is a piece of thin wire in a tube that overheats and melts as a result of a short-circuit. (1 mark)\nA circuit breaker is an electromagnetic switch that turns off when high current flows through. (1 mark)",
+    "marks": 2,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "exit",
+     "youtry"
+    ],
+    "criteria": [
+     "6C.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "6C Worksheet 6C–1 Electrical safety.docx"
+    }
+   },
+   {
+    "id": "WS6C-5",
+    "n": "5",
+    "question": "Explain how the situation below can lead to electrocution. (2 marks)",
+    "answer": "Using a knife to free toast that is stuck can easily dislodge heater wires, which can then connect the active with the case of the toaster. (1 mark)\nCurrent enters the body where it meets the supply and flows through the lowest resistance path to earth. (1 mark)",
+    "marks": 2,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "criteria": [
+     "6C.1",
+     "6C.5"
+    ],
+    "img": [
+     "img/6C_WS5.png"
+    ],
+    "src": {
+     "file": "6C Worksheet 6C–1 Electrical safety.docx"
+    }
+   },
+   {
+    "id": "WS6C-6",
+    "n": "6",
+    "question": "The fuse in an electric drill blows and the owner decides to fix the drill by replacing the wire in the fuse with some thick copper wire. Explain why this is extremely dangerous. (2 marks)",
+    "answer": "A fuse is made from thin wire so that it can melt easily when it overheats to prevent a short-circuit. (1 mark)\nReplacing the thin wire with thicker wire will prevent the fuse from functioning properly as the wire will not melt during a short-circuit. (1 marks)",
+    "marks": 2,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "6C.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "6C Worksheet 6C–1 Electrical safety.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "6C.2"
+   ],
+   "wedo": "6C-SQ6",
+   "youtry": [
+    "6C-CI1.1"
+   ],
+   "origin": "adapted",
+   "note": "No worked examples in 6C. Body current I = V/R with dry/wet skin, compared with Table 6C–1."
+  },
+  {
+   "criteria": [
+    "6C.4",
+    "6C.5"
+   ],
+   "wedo": "WS6C-3",
+   "youtry": [
+    "6C-SQ10",
+    "6C-CI2.3"
+   ],
+   "origin": "adapted",
+   "note": "Label active/neutral/earth and state functions, then identify socket holes and plug pins."
+  },
+  {
+   "criteria": [
+    "6C.3",
+    "6C.6"
+   ],
+   "wedo": "6C-SQ8",
+   "youtry": [
+    "WS6C-4",
+    "WS6C-6"
+   ],
+   "origin": "adapted",
+   "note": "Choosing fuse/breaker ratings with I = P/V; then compare fuse and breaker."
+  },
+  {
+   "criteria": [
+    "6C.1"
+   ],
+   "wedo": "WS6C-2",
+   "youtry": [
+    "6C-SQ11"
+   ],
+   "origin": "adapted",
+   "note": "First aid order, then explain why the first steps come first."
+  }
+ ],
+ "skills": [
+  {
+   "id": "6C-SK1",
+   "heading": "Electrical safety check for appliances in the home",
+   "text": "There is a lot of energy associated with mains electricity. Used carefully, this energy provides a comfortable lifestyle, but if safety is ignored it can easily end life. Here are some simple checks to carry out at home. If an appliance fails the check, it should be disposed of or repaired by a qualified person. Do not attempt to repair faulty electrical appliances yourself – only a qualified repair technician or a licensed electrician should repair appliances.\n• Discard any appliance that has given anyone a shock or which has overheated or produced fumes.\n• Check older appliances for frayed cords, cracked or broken plugs.\n• Many old plugs do not have safety barriers between the connections – have them replaced by an electrician with modern plugs or dispose of the appliance.\n• All plugs must have insulated active and neutral pins, as shown here.\n• All appliances must have a regulatory compliance mark (RCM).\n• Do not touch or attempt to repair a loose, cracked or broken power point switch – cover it immediately and arrange for a licensed electrician to replace it.\n• Avoid ‘piggybacking’ adaptors; instead use a power board with a built-in safety device.\n• Remove any build-up of materials around the electric motor of exhaust fans, such as fluff, dust and lint.\n• Clean the input filters to air conditioners and air filters regularly. This will also help them run more efficiently and prevent overheating of electrical circuits.\n• Remove the lint from the filter of tumble dryers every time it is used, as a build-up may cause a fire.\n• Clean rangehood filters regularly. Clean ovens and cook tops regularly to prevent the build-up of spilled fats and burned foods.\n• Do not spray household cleaners, detergents and insecticides on electrical accessories – they may cause cracking and create an electrical hazard.\nWater and electricity do not mix. Follow these simple tips to ensure the safe use of electrical appliances near water.\n• Never use any electrical appliance near water.\n• Never touch anything electrical with wet hands or bare feet.\n• Never leave an electrical appliance where it can fall into the bath or basin.\n• Never leave an electrical appliance unattended around children.\n• Switch off and unplug all portable electric appliances (e.g. hairdryers, hair straighteners and shavers) after use.\n• Do not use portable heaters in bathroom areas – use a strip heater installed high on the wall or a ceiling unit installed by a registered electrical contractor.\n• Take extreme care when using electrical appliances near sinks, baths or swimming pools.\n• Immediately dispose of an electrical appliance that has been immersed in water.\n• Do not use extension leads or power leads in wet areas – unless they are specifically designed for that purpose.\n• Wear rubber or plastic-soled shoes when using electrical appliances in laundries, on concrete floors or outdoors – many victims of serious and fatal electrical accidents are barefooted.\nElectricity near swimming pools can be lethal\nElectric shocks received in the vicinity of a swimming pool are more likely to be fatal than those received in other locations, because bare feet, minimum clothing and wet skin reduce your body’s insulation and resistance.\nNever use a portable electrical appliance or place an extension cord where it could be splashed or fall into the pool.\nRecreation activities near powerlines\nRecreation activities, such as sailing, flying a kite or model aeroplane or climbing trees can also be a hazard around powerlines. Do not fly kites, drones or model aeroplanes anywhere near overhead powerlines.\nElectrical system maintenance\nIn addition to taking care when using electricity, regular maintenance is also required. From March 2021 in Victoria, residential rental providers (landlords) must ensure that an electrical safety check of all electrical installations and fittings in the premises is conducted every two years by a licensed electrician. If an electrical safety check has not been conducted within the last two years at the time the renter occupies the premises, the rental provider must arrange an electrical safety check as soon as practicable. If the safety check shows electrical repairs are needed to make the property safe, the rental provider should employ a licensed electrician to do the repair work.",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 43
+   }
+  }
+ ],
+ "pracs": [],
+ "notes": "No worked examples in 6C: all We do entries are adapted from section/worksheet questions. No Cambridge practicals. Answer-key problems: SQ2 (key D 16 mA vs table), SQ5 (key D 'appliance plug'; textbook says live wire, B), SQ8d incomplete. Photos 6C-1, 6C-3, 6C-4 and the skills photos skipped as decorative."
+}

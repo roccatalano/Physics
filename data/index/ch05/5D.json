@@ -1,0 +1,974 @@
+{
+ "code": "5D",
+ "title": "Modelling resistance in parallel circuits",
+ "chapter": 5,
+ "unit": 1,
+ "aos": 3,
+ "study_design": [
+  "Model resistance in series and parallel circuits using: current versus potential difference (I–V) graphs; resistance as the potential difference to current ratio, including R = constant for ohmic devices; equivalent resistance in arrangements in series: $R_{\\text{equivalent}} = R_1 + R_2 + \\dots + R_n$ and parallel: $\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\dots + \\frac{1}{R_n}$",
+  "Calculate and analyse the equivalent resistance of circuits comprising parallel and series resistance"
+ ],
+ "criteria": [
+  "5D.1",
+  "5D.2",
+  "5D.3",
+  "5D.4",
+  "5D.5"
+ ],
+ "glossary": [
+  {
+   "id": "5D-G1",
+   "term": "Parallel circuit",
+   "def": "a circuit that contains junctions; the current drawn from the battery, cell or electricity supply splits before it reaches components and rejoins afterwards",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 59
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F5D-1",
+   "name": "Formula 5D–1 Parallel resistance",
+   "latex": "\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\dots + \\frac{1}{R_n}",
+   "where": [
+    {
+     "sym": "R_{\\text{equivalent}}",
+     "meaning": "equivalent resistance for resistors in parallel",
+     "unit": "\\Omega"
+    },
+    {
+     "sym": "R_1, R_2, \\dots, R_n",
+     "meaning": "resistance of each resistor",
+     "unit": "\\Omega"
+    }
+   ],
+   "criteria": [
+    "5D.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 60
+   }
+  },
+  {
+   "id": "F5D-2",
+   "name": "Formula 5D–2 Two resistors in parallel",
+   "latex": "R_{\\text{equivalent}} = \\frac{R_1 R_2}{R_1 + R_2}",
+   "where": [
+    {
+     "sym": "R_{\\text{equivalent}}",
+     "meaning": "equivalent resistance for two resistors in parallel",
+     "unit": "\\Omega"
+    },
+    {
+     "sym": "R_1, R_2",
+     "meaning": "resistances of the two resistors",
+     "unit": "\\Omega"
+    }
+   ],
+   "criteria": [
+    "5D.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 60
+   }
+  },
+  {
+   "id": "F5D-3",
+   "name": "Parallel circuit currents",
+   "latex": "I_{\\text{total}} = I_1 + I_2 + I_3",
+   "where": [],
+   "criteria": [
+    "5D.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 60
+   }
+  }
+ ],
+ "engage": {
+  "heading": "When will air travel be electric?",
+  "text": "1 1 In June 2022, an uncrewed aircraft with a 25 m wingspan and mass less than 75 kg was launched. Photovoltaic solar panels on top of its wings can power its electric motor and recharge onboard batteries, the Zephyr S can fly throughout the day and night. It smashed the previous flight duration record for an uncrewed flight, travelling at an average speed of 61.9 km h–1 at an average altitude of about 18 700 m. On 19 August 2022 the aircraft crashed after 64 days, 18 hours and 26 minutes of continuous flight. It had travelled around 80 000 km, beating the previous record duration for an uncrewed flight of 25 days, 23 hours and 57 minutes set by an earlier model Zephyr in 2018. Built by Airbus in the UK, both the record-breaking flights were operated by the US military in a flight zone above Arizona, United States. These aircraft are known in the military as high-altitude platform systems and are designed to carry out a similar function to geostationary satellites, staying above an area of interest and providing constant surveillance. While the Zephyr cannot carry passengers, or even a pilot, there are developments proposed for more ambitious electric flight. In Norway, where 65% of new car sales in 2021 were EVs, the ambition is to make all domestic flights electric by 2040. (By 2025, all new cars in Norway must be electric.) A demonstration in 2022 of a two-seater electric aircraft produced by Avinor attracted a lot of attention, although this is hardly a solution for mass-transit. Air travel, with its inherent weight limitations, is a difficult mode of transport to electrify. A solution may be electric motors with onboard generators and renewable biofuels, giving net zero rather than zero emissions. Other modes of transport are way ahead: ships are being built with electric drives (albeit with diesel generation at the moment) and trains are routinely electrified. High-efficiency electric motors combined with advanced batteries will make both of these more feasible. Slow progress in aviation is due to one problem: energy density. The advantage of most conventional propulsion is that liquid fuels can pack far more energy density than even the best batteries; that is, more energy per kilogram. In practice, an EV has a range defined by how much energy it can carry. For aircraft that’s a much bigger issue because distances are so much greater. Until battery technology improves by at least an order of magnitude, hopes of large-scale commercial electric flight will be held back by limits on capacity and range. However, if battery technology continues to improve at the current rate Norway may have a chance to achieve its 2040 goal. Electric aircraft will be incredibly quiet, powerful and fast. The planes would be emission free at the point of use, so airports and skies in the future could be considerably cleaner and quieter.",
+  "src": {
+   "file": "Physics12_Ch05.pdf",
+   "page": 58
+  }
+ },
+ "chunks": [
+  {
+   "id": "5D-E1",
+   "heading": "Parallel circuits: current, potential difference and resistance",
+   "text": "In a parallel circuit the path of the current branches so there is more than one way for current to go around the circuit. This is different from the series circuits you have looked at so far (in Section 5C). This means that in a parallel circuit, two or more components are connected across the same potential difference (A voltmeter is always connected in parallel, but it is built with a very high resistance so that negligible current travels through it.) Parallel circuits can be drawn in several ways (Figure 5D–1). No matter which diagram is used, the effect is the same. Each of the resistors is connected directly to a battery terminal, so each resistor receives the full potential difference supplied, Vsupply. This is one major advantage of a parallel circuit over a series circuit. Another is the ability to control each branch with a separate switch. In parallel, each component can be switched on and off without affecting the others. Note that for parallel circuits, the: • same potential difference, V, is across each component in the parallel section • current, Itotal, must divide into three component currents, I1, I2 and I3. It must therefore be true that Itotal = I1 + I2 + I3. Starting with Iequivalent = I1 + I2 + I3 and substituting for I from V Ohm’s law, I = , for each branch of the circuit gives: R V V V V supply supply supply supply = + + R R R R equivalent 1 2 3 Taking Vsupply as a common factor on the right-hand side and cancelling gives: 1 1 1 1 = + + R R R R equivalent 1 2 3 The general form of this formula, for any number of resistors in parallel, is: If there are only two resistors, the parallel equivalent resistance formula reduces to: Formula 5D–2 is generally easier to apply than Formula 5D–1. It also works for three or more resistors, by applying it first to two, then applying the formula again using that equivalent resistance with the next resistor, and so on. In general, the equivalent resistance calculated in either parallel or series (or combined) gives the value of a single resistor that could replace a number of individual resistors, to give the same effect in the circuit.",
+   "figures": [
+    "5D-F1"
+   ],
+   "criteria": [
+    "5D.1",
+    "5D.2",
+    "5D.3",
+    "5D.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 59
+   }
+  },
+  {
+   "id": "5D-E2",
+   "heading": "A graphical method for series and parallel circuits",
+   "text": "So far two formulas have been used to calculate the equivalent resistance of simple circuits. For series combinations: For parallel circuits: 1 1 1 1 = + + Requivalent = R1 + R2 + … Rn R R R R equivalent 1 2 3 When designing circuits with several components, their total resistance must be found before the circuit can be fully analysed. Components may be connected in series, in parallel or in a combination of the two. A graphical method allows you to predict the way a circuit will behave from the characteristics of the individual components. First, methods of analysing combinations of simple resistors in series and parallel connections separately are needed. In Chapter 6 these techniques will be developed for non-ohmic components.",
+   "figures": [],
+   "criteria": [
+    "5D.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 64
+   }
+  },
+  {
+   "id": "5D-E3",
+   "heading": "Resistors in series: a graphical method",
+   "text": "The components in the circuit shown in Figure 5D–2 have resistances of 2 Ω and 3 Ω respectively. A characteristic graph of I vs V can be created for each component separately, using the techniques learned in Section 5C. Then you can use the graph to analyse the circuit as follows. As it’s a series circuit, the current is the same through each resistor. Choosing a current of 2 A, for example, the p.d. across each component is read from the graph (4 V and 6 V). The total p.d. is the sum of these two values, so a point can be plotted on the graph corresponding to the V I ratio for the total resistance (10 V, 2 A). An I vs V graph for the combination of resistors is plotted point by point for each current value (dotted line). The total resistance is V the value of I determined from this graph, 5 Ω in this case. This is the sum of 2 Ω and 3 Ω, as you would expect from Requivalent = R1 + R2 + … Rn. This constructed graph can be compared to the results measured from current through and potential difference across the whole combination.",
+   "figures": [
+    "5D-F2"
+   ],
+   "criteria": [
+    "5D.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 65
+   }
+  },
+  {
+   "id": "5D-E4",
+   "heading": "Resistors in parallel: a graphical method",
+   "text": "For a parallel combination, using the same I–V characteristic graph of the individual components, the analysis is as follows. As it’s a parallel circuit (Figure 5D–3), the potential difference across each resistor is the same. Choosing a potential difference (6 V for example), the current through each resistance is read from the graph (2 A and 3 A). The total current in the circuit is then the sum of the two separate currents (5 A). A point can be plotted corresponding to the values of V and I for the equivalent resistance of the circuit (6 V, 5 A). An I vs V graph can be plotted point by point for each value of p.d. (for the combination of resistors). Again, the ratio V I from the inverse gradient of this graph is equal to the total resistance, 6 1 1 1 1 5 = 1.25 Ω in this case, as you would expect from the formula . = 1 1 R R R Rn equivalent 1 2 Notice that the I–V graph for series resistors has a smaller gradient, meaning Requivalent is larger than either component; the I–V graph for parallel resistors has a steeper gradient, meaning smaller resistance than either component.",
+   "figures": [
+    "5D-F3"
+   ],
+   "criteria": [
+    "5D.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 65
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "5D-F1",
+   "label": "Figure 5D–1",
+   "caption": "Each of these diagrams show the same connections. The current leaving the supply splits into three, according to the size of the resistance in each branch, then rejoins the main circuit and returns through the battery. Each resistance has the same potential difference, the same as Vsupply.",
+   "img": "img/5D_fig5D-1.png",
+   "important": true,
+   "why": "Two ways to draw the same three-branch parallel circuit",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 59
+   }
+  },
+  {
+   "id": "5D-F2",
+   "label": "Figure 5D–2",
+   "caption": "A graphical method for calculating the total resistance in a series circuit (top). As the current flowing through each component must be the same, the individual potential drops across each component can easily read off the graph. A graph of I–V (bottom) can be constructed for the series combination (black dotted line).",
+   "img": "img/5D_fig5D-2.png",
+   "important": true,
+   "why": "Graphical method for series resistors (2 Ω and 3 Ω): add p.d.s at fixed current",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 65
+   }
+  },
+  {
+   "id": "5D-F3",
+   "label": "Figure 5D–3",
+   "caption": "A simple graphical method for calculating the total resistance in the parallel circuit on the left. As the voltage across each element must be the same, the individual current flowing through each component can be easily read off the graph on the right.",
+   "img": "img/5D_fig5D-3.png",
+   "important": true,
+   "why": "Graphical method for parallel resistors: add currents at fixed p.d.",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 66
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE5D-1",
+   "title": "Resistance in parallel",
+   "question": "Calculate the total resistance of each combination of resistors shown. (a 3 Ω and 4 Ω in parallel; b 10 Ω, 15 Ω and 25 Ω in parallel; see image)",
+   "steps": [
+    "a For two resistors in parallel, the equivalent resistance is given by:",
+    "$R_{\\text{equivalent}} = \\frac{R_1R_2}{R_1+R_2}$",
+    "The individual resistances are $R_1 = 3\\ \\Omega$ and $R_2 = 4\\ \\Omega$. Therefore:",
+    "$R_{\\text{equivalent}} = \\frac{(3)(4)}{(3)+(4)}$",
+    "$= \\frac{12}{7}$",
+    "$= 1.71\\ \\Omega$",
+    "The equivalent resistance is 1.71 Ω.",
+    "Alternatively, use: $\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{R_1} + \\frac{1}{R_2}$",
+    "Therefore: $\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{3} + \\frac{1}{4}$",
+    "$= \\frac{4+3}{12}$",
+    "$= \\frac{7}{12}$",
+    "$R_{\\text{equivalent}} = \\frac{12}{7} = 1.71\\ \\Omega$",
+    "b For three resistors in parallel, the equivalent resistance is given by:",
+    "$\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3}$",
+    "The individual resistances are $R_1 = 10\\ \\Omega$, $R_2 = 15\\ \\Omega$, and $R_3 = 25\\ \\Omega$. Therefore:",
+    "$\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{10} + \\frac{1}{15} + \\frac{1}{25}$",
+    "$= \\frac{15+10+6}{150}$",
+    "$= \\frac{31}{150}$",
+    "$R_{\\text{equivalent}} = \\frac{150}{31} = 4.84\\ \\Omega$",
+    "Alternatively, use the formula for two resistances in parallel twice:",
+    "$R_{1,2} = \\frac{R_1R_2}{R_1+R_2} = \\frac{(10)(15)}{(10+15)} = \\frac{150}{25} = 6\\ \\Omega$",
+    "$R_{\\text{equivalent}} = \\frac{R_{1,2}R_3}{R_{1,2}+R_3} = \\frac{(6)(25)}{(6)+(25)} = \\frac{150}{31} = 4.84\\ \\Omega$",
+    "The equivalent resistance is 4.84 Ω, as expected."
+   ],
+   "answer": "a 1.71 Ω; b 4.84 Ω",
+   "img": [
+    "img/5D_WE5D-1.png"
+   ],
+   "criteria": [
+    "5D.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 61
+   },
+   "note": "Textbook prints 8.84 Ω for part b, but 150/31 = 4.84 Ω; corrected here (check before use)."
+  },
+  {
+   "id": "WE5D-2",
+   "title": "Resistance in parallel and series",
+   "question": "Calculate the total resistance of each combination of resistors shown. (two 4 Ω in series in the top branch, parallel with 2 Ω; see image)",
+   "steps": [
+    "First notice that the top branch of the circuit consists of two resistors in series. Therefore, the equivalent resistance of the top branch is given by:",
+    "$R_{\\text{top}} = R_1 + R_2 = (4) + (4) = 8\\ \\Omega$",
+    "This means that the circuit can be redrawn as the equivalent one shown below. (see image)",
+    "Now you can apply the formula for two resistances in parallel:",
+    "$R_{\\text{equivalent}} = \\frac{R_1R_2}{R_1+R_2}$",
+    "$= \\frac{(8)(2)}{(8)+(2)}$",
+    "$= \\frac{16}{10}$",
+    "$= 1.6\\ \\Omega$",
+    "Therefore, the equivalent resistance is 1.6 Ω.",
+    "Alternatively: $\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{R_1} + \\frac{1}{R_2}$",
+    "Therefore: $\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{8} + \\frac{1}{2}$",
+    "$= \\frac{1+4}{8}$",
+    "$= \\frac{5}{8}$",
+    "$R_{\\text{equivalent}} = \\frac{8}{5} = 1.6\\ \\Omega$",
+    "The equivalent resistance is 1.6 Ω, as expected."
+   ],
+   "answer": "1.6 Ω",
+   "img": [
+    "img/5D_WE5D-2.png"
+   ],
+   "criteria": [
+    "5D.4",
+    "5D.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 63
+   }
+  },
+  {
+   "id": "WE5D-3",
+   "title": "Graphical approach to series resistance",
+   "question": "A 3 Ω and 4 Ω resistor are wired in series. Use a graphical approach to determine the total potential difference across each resistor if the current is 2 A. Hence find the equivalent resistance of the series combination.",
+   "steps": [
+    "The $I$–$V$ curve of a 3 Ω and a 4 Ω resistor are shown. (see image)",
+    "Reading off the graph for a current of 2 A, the resistance of 3 Ω contributes 6 V of potential difference, and the resistance of 4 Ω contributes 8 V of potential difference.",
+    "Therefore, the total potential difference across the resistances is 6 + 8 = 14 V.",
+    "$R_{\\text{equivalent}} = \\frac{V_{\\text{total}}}{I}$",
+    "$= \\frac{14}{2}$",
+    "$= 7\\ \\Omega$",
+    "This is what you would expect from the formula."
+   ],
+   "answer": "14 V; 7 Ω",
+   "img": [
+    "img/5D_WE5D-3.png"
+   ],
+   "criteria": [
+    "5D.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 66
+   }
+  },
+  {
+   "id": "WE5D-4",
+   "title": "Graphical approach to parallel resistance",
+   "question": "A 3 Ω and a 4 Ω resistor are wired in parallel. Use a graphical approach to determine the total current through the circuit if the potential difference is 12 V. Hence find the value of $R_{\\text{equivalent}}$ for the parallel combination.",
+   "steps": [
+    "The $I$–$V$ curve of a 3 Ω and 4 Ω resistor are shown above. (see image)",
+    "Reading off the graph for a 12 V potential difference, the resistance of 3 Ω carries 4 A of current, and the resistance of 4 Ω carries 3 A of current.",
+    "So, the total current through the battery is 4 + 3 = 7 A.",
+    "To find $R_{\\text{equivalent}}$:",
+    "$R_{\\text{equivalent}} = \\frac{V}{I_{\\text{equivalent}}}$",
+    "$= \\frac{12}{7}$",
+    "$= 1.7\\ \\Omega$",
+    "You can check the answer for this simple case using the formula for parallel resistance (Formula 5D–1 or 5D–2)."
+   ],
+   "answer": "7 A; 1.7 Ω",
+   "img": [
+    "img/5D_WE5D-4.png"
+   ],
+   "criteria": [
+    "5D.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 67
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "5D-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "Which of the following diagrams represent parallel, series or simple circuits? The remaining circuit is incomplete or 'open'.",
+   "answer": "Options **c** and **d** represent parallel circuits. Option **a** is a series circuit, **e** is a simple circuit, and **b** is an open circuit that would behave like a simple circuit.",
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "5D.1"
+   ],
+   "img": [
+    "img/5D_CI1.1a.png",
+    "img/5D_CI1.1b.png",
+    "img/5D_CI1.1c.png",
+    "img/5D_CI1.1d.png",
+    "img/5D_CI1.1e.png"
+   ],
+   "src": {
+    "file": "5D Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "5D-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "Calculate the equivalent resistance in the following parallel circuits.",
+   "answer": "$R_1 = R_2 = R_3$. For resistors in parallel, the potential difference across each resistor is the same as the potential difference across the battery.",
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "5D.4"
+   ],
+   "img": [
+    "img/5D_CI1.2a.png",
+    "img/5D_CI1.2b.png"
+   ],
+   "src": {
+    "file": "5D Check-in – Set 1.docx"
+   },
+   "note": "Suggested response does not match the question (gives a statement, not equivalent resistances). Treat answer as missing; work out from the diagram."
+  },
+  {
+   "id": "5D-CI1.3",
+   "set": 1,
+   "n": 3,
+   "question": "The two resistors shown are identical. State the values of current and potential difference readings for each of the meters shown.",
+   "answer": "$A_1 > A_2$ and $A_1 > A_3$. The current from the battery, $A_1$, is split between the two branches of the parallel circuit. *If* the resistors have the same resistance, then it would also be true that $A_2 = A_3$.",
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "5D.2",
+    "5D.3"
+   ],
+   "img": [
+    "img/5D_CI1.3.png"
+   ],
+   "src": {
+    "file": "5D Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "5D-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "Explain why you read off potential differences at a fixed current in the graphical approach for resistances in series.",
+   "answer": "In a series circuit, there is only one path electrons can flow. This means that the current is the same at all points in the circuit, and the quantity that changes around the circuit is the potential difference.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "5D.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "5D Check-in – Set 2.docx"
+   }
+  },
+  {
+   "id": "5D-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "Explain why you read off currents at a fixed potential difference in the graphical approach for resistances in parallel.",
+   "answer": "In a parallel circuit, all resistors are subjected to the same potential difference produced by the power source. This means that the quantity that changes around the circuit is the current.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "5D.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "5D Check-in – Set 2.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "5D-SQ1",
+   "n": "1",
+   "question": "Which of the following diagrams does **not** show a circuit that is equivalent to the others? Assume all resistors are identical.",
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "5D.1"
+   ],
+   "img": [
+    "img/5D_SQ1.png"
+   ],
+   "src": {
+    "file": "5D Section questions.docx"
+   }
+  },
+  {
+   "id": "5D-SQ2",
+   "n": "2",
+   "question": "Which meter is always connected in parallel?",
+   "options": [
+    "A. ammeter",
+    "B. voltmeter",
+    "C. multimeter",
+    "D. galvanometer"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "donow",
+    "exit"
+   ],
+   "criteria": [
+    "5B.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "5D Section questions.docx"
+   }
+  },
+  {
+   "id": "5D-SQ3",
+   "n": "3",
+   "question": "Which type of circuit is most useful for supplying the same potential difference to several components at once?",
+   "options": [
+    "A. series",
+    "B. parallel with an extra series component",
+    "C. series with a parallel component",
+    "D. parallel"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "5D.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "5D Section questions.docx"
+   }
+  },
+  {
+   "id": "5D-SQ4",
+   "n": "4",
+   "question": "How much charge leaves a car battery, if it supplies current to four headlights connected in parallel, each of which has a current of 4 A in it?",
+   "options": [
+    "A. 4 coulombs per second",
+    "B. 8 coulombs per second",
+    "C. 12 coulombs per second",
+    "D. 16 coulombs per second"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "5D.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5D Section questions.docx"
+   }
+  },
+  {
+   "id": "5D-SQ5",
+   "n": "5",
+   "question": "In the following circuit, each lamp is identical. If the current through the battery is 0.12 A, what is the current in lamp 3?",
+   "options": [
+    "A. 0.04 A",
+    "B. 0.12 A",
+    "C. 0.40 A",
+    "D. 4.0 A"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "5D.2"
+   ],
+   "img": [
+    "img/5D_SQ5.png"
+   ],
+   "src": {
+    "file": "5D Section questions.docx"
+   }
+  },
+  {
+   "id": "5D-SQ6",
+   "n": "6",
+   "question": "Refer to the diagram in Question 5. What is the potential difference across each of the lamps if the battery supplies 6 V?",
+   "answer": "Potential difference of 0.12 V across each lamp, since they are all connected directly across the battery in parallel.",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "5D.3"
+   ],
+   "img": [
+    "img/5D_SQ5.png"
+   ],
+   "src": {
+    "file": "5D Section questions.docx"
+   },
+   "note": "Suggested response says 0.12 V; for lamps in parallel across a 6 V battery the expected answer is 6 V. Check before use."
+  },
+  {
+   "id": "5D-SQ7",
+   "n": "7",
+   "question": "Lamps of resistance 300 Ω, 400 Ω and 600 Ω are connected in parallel and connected to a 12 V battery. a Draw a circuit diagram of the arrangement. b What is the total resistance in the circuit? c What is the current in each resistance? d What is the total current leaving the battery?",
+   "answer": "a (see answer image) b $\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{300} + \\frac{1}{400} + \\frac{1}{600} = \\frac{400+300+200}{1200} = \\frac{900}{1200}$. Therefore: $R_{\\text{equivalent}} = \\frac{1200}{900} = \\frac{4}{3} = 1.33\\ \\Omega$ c $I = \\frac{V}{R}$; 300 Ω: $I = \\frac{12}{300} = 0.04$ A; 400 Ω: $I = \\frac{12}{400} = 0.03$ A; 600 Ω: $I = \\frac{12}{600} = 0.02$ A d Total current from battery $= 0.04 + 0.03 + 0.02 = 0.09$ A",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "5D.2",
+    "5D.3",
+    "5D.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "5D Section questions.docx"
+   },
+   "answer_img": [
+    "img/5D_SQ7_ans.png"
+   ],
+   "note": "Suggested response b: 1200/900 = 1.33 is missing ×100 (should be 133 Ω, consistent with 12 V / 0.09 A)."
+  },
+  {
+   "id": "5D-SQ8",
+   "n": "8",
+   "question": "How much charge leaves a car battery each second if it supplies current to four headlights in parallel, each of which draws a current of 5 A?",
+   "answer": "Total current $= I_1 + I_2 + I_3 + I_4 = 5 + 5 + 5 + 5 = 20$ A, so 20 coulombs per second",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "5D.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5D Section questions.docx"
+   }
+  },
+  {
+   "id": "5D-SQ9",
+   "n": "9",
+   "question": "In the circuit shown below there is a potential drop of 9 V across each 20 Ω resistor. a Use Ohm's law to determine the current through each resistor. b What is the current through the battery? c Copy the diagram and fill in the spaces to show the correct current measurements.",
+   "answer": "a $I = \\frac{V}{R} = 4.5$ A in each resistor b Current through battery $= 4.5 + 4.5 = 9.0$ A c (see answer image)",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice",
+    "youtry"
+   ],
+   "criteria": [
+    "5D.2",
+    "5D.3"
+   ],
+   "img": [
+    "img/5D_SQ9.png"
+   ],
+   "src": {
+    "file": "5D Section questions.docx"
+   },
+   "answer_img": [
+    "img/5D_SQ9_ans.png"
+   ],
+   "note": "Suggested response: 9/20 = 0.45 A, not 4.5 A; check before use."
+  },
+  {
+   "id": "5D-SQ10",
+   "n": "10",
+   "question": "Consider the diagram below of a parallel circuit. Find the: a potential difference across each branch b current through each branch c current through the battery d equivalent resistance of the circuit. (You should be able to do this in at least two ways!)",
+   "answer": "a 8 V b 4 A, 4 A, 2 A c 10 A d 0.8 Ω",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "5D.2",
+    "5D.3",
+    "5D.4"
+   ],
+   "img": [
+    "img/5D_SQ10.png"
+   ],
+   "src": {
+    "file": "5D Section questions.docx"
+   }
+  },
+  {
+   "id": "5D-SQ11",
+   "n": "11",
+   "question": "The light bulb in each of the following circuits is identical, with a resistance of 4 Ω. Calculate the unknown resistance(s) in each circuit so that the current through the bulb is always 1 A. Assume resistors with the same label are identical. a $R_x$ =? b Two identical resistors, $R_B$, replace $R_x$. What value is $R_B$? c Two identical resistors, $R_C$, replace one $R_B$. What value is $R_C$? d Two identical resistors, $R_D$, replace $R_B$ in circuit diagram from part b. What value is $R_D$? e Two identical resistors, $R_E$, replace one of the $R_D$ in the circuit diagram from part d. What value is $R_E$? f In the circuit diagram of part e, how much current flows through the battery?",
+   "answer": "a 2 Ω b $R_B$ = 4 Ω each c $R_B$ = 4 Ω, $R_C$ = 8 Ω each d $R_D$ = 2 Ω each e $R_E$ = 4 Ω each f 1 A",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "5D.4",
+    "5C.5"
+   ],
+   "img": [
+    "img/5D_SQ11a.png",
+    "img/5D_SQ11b.png",
+    "img/5D_SQ11c.png",
+    "img/5D_SQ11d.png",
+    "img/5D_SQ11e.png"
+   ],
+   "src": {
+    "file": "5D Section questions.docx"
+   }
+  },
+  {
+   "id": "5D-SQ12",
+   "n": "12",
+   "question": "The following graph shows the $I$–$V$ characteristics of two components, A and B. a What is the resistance of component A? What is special about it? b What is the current through a 6 V battery when the component A and component B are connected to it *in parallel*? c What is the equivalent resistance of components A and B connected *in parallel* to a 6 V battery? d A different battery is now connected. What is the equivalent resistance of components A and B connected *in series* when the current in the circuit is 0.6 A?",
+   "answer": "a $R_A = \\frac{1}{\\text{gradient of } I-V \\text{ graph}} = \\frac{6}{0.6} = 10\\ \\Omega$. It is special because of constant resistance (obeys Ohm's law). b At 6 V, $I_A = 0.6$ A and $I_B = 1.0$ A (read off graph). In parallel: $I_{\\text{battery}} = I_A + I_B = 1.6$ A c $R_{\\text{equivalent}} = \\frac{V_{\\text{battery}}}{I_{\\text{battery}}} = \\frac{6}{1.6} = 3.75\\ \\Omega$ d At 0.6 A, potential drop across $R_A$ is 6 V. $V_A = 6$ V and $V_B = 6$ V. $V_{\\text{battery}} = V_A + V_B$ (in series) $= 8$ V. Therefore: $R_{\\text{equivalent}} = \\frac{V_{\\text{battery}}}{I}$ (as $I_{\\text{battery}} = I_A = I_B$ in series circuit) $= \\frac{8}{0.6} = 13.3\\ \\Omega$",
+   "marks": null,
+   "kind": "graph",
+   "size": "long",
+   "phase": [
+    "practice",
+    "youtry"
+   ],
+   "criteria": [
+    "5D.5"
+   ],
+   "img": [
+    "img/5D_SQ12.png"
+   ],
+   "src": {
+    "file": "5D Section questions.docx"
+   },
+   "note": "Part d suggested response is internally inconsistent (6 V + 6 V = 8 V); read V_B from the graph."
+  },
+  {
+   "id": "5D-SQ13",
+   "n": "13",
+   "question": "Series and parallel circuits have different advantages (and disadvantages). Which type of circuit would be better for each of the following uses. Sketch a circuit diagram for each. a A circuit with a heating coil and a warning light, for an electric kettle. The light must show when the coil is heating. b A circuit with two lights and one switch, where each light needs to be as bright as the other and receive the full potential difference. c A battery backup safety circuit with two switches and one light, for the top and bottom of a stairwell. See if you can design this one!",
+   "answer": "a Series circuit works best. Warning light needs to accommodate a high current, but will only use a small amount of the potential difference. b Parallel circuit works best, with the switch beside the battery so it controls both globes at once. c Several possibilities, including: (see answer image) This requires a special type of switch: 'double pole, single throw' at each end of the stairwell. If either switch is changed from its starting position, it will change the state of the light: off-to-on or vice versa.",
+   "marks": null,
+   "kind": "explain",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "5D.1",
+    "5E.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "5D Section questions.docx"
+   },
+   "answer_img": [
+    "img/5D_SQ13_ans.png"
+   ]
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 5D–1 Modelling resistance in parallel",
+  "total": 14,
+  "file": "5D Worksheet 5D–1 Modelling resistance in parallel.docx",
+  "answers_file": "5D Worksheet 5D–1 Answers.docx",
+  "questions": [
+   {
+    "id": "WS5D-1",
+    "n": "1",
+    "question": "Match the term to the definition. Terms: i Parallel circuit; ii Ohm's law; iii Equivalent resistance; iv Resistance. Definitions: a the value of a single resistor that could replace a number of individual resistors to give the same effect in a circuit; b a circuit that contains junctions; c describes the linear relationship $V = IR$ for a particular type of material; d a measure of how much a material impedes the flow of current",
+    "answer": "i b; ii c; iii a; iv d (1/2 mark per correct answer)",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "donow",
+     "practice"
+    ],
+    "criteria": [
+     "5D.1",
+     "5C.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "5D Worksheet 5D–1 Modelling resistance in parallel.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS5D-2",
+    "n": "2",
+    "question": "Consider the circuit and below and add the missing labels on the lines provided.",
+    "answer": "$I_2 + I_3$ (1 mark); $I_1$, $I_2$ and $I_3$ (1 mark) (see answer image)",
+    "marks": 2,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "wedo"
+    ],
+    "criteria": [
+     "5D.2"
+    ],
+    "img": [
+     "img/5D_WS2.png"
+    ],
+    "src": {
+     "file": "5D Worksheet 5D–1 Modelling resistance in parallel.docx"
+    },
+    "answer_img": [
+     "img/5D_WS2_ans.png"
+    ],
+    "pair_with": null
+   },
+   {
+    "id": "WS5D-3",
+    "n": "3",
+    "question": "Explain, using two equations, why resistance increases in a series circuit as more resistors are added but decreases in a parallel circuit when more resistors are added.",
+    "answer": "In a series circuit, equivalent resistance is the sum of all the resistances: $R_{\\text{equivalent}} = R_1 + R_2 + R_3 + \\dots$ Therefore, resistance increases with more resistors added. (1 mark) In a parallel circuit, the equivalent resistance is calculated by: $\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3} + \\dots$ Therefore, resistance decreases as more resistors are added. (1 mark)",
+    "marks": 2,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "criteria": [
+     "5C.5",
+     "5D.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "5D Worksheet 5D–1 Modelling resistance in parallel.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS5D-4",
+    "n": "4",
+    "question": "Calculate equivalent resistance for the combinations shown below. a (diagram) b (diagram)",
+    "answer": "a Add resistors in series: $3 + 2 = 5\\ \\Omega$; $\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{2} + \\frac{1}{5} + \\frac{1}{1.5} = \\frac{41}{30}$; $R_{\\text{equivalent}} = \\frac{30}{41} = 0.73\\ \\Omega$ b Add resistors in series: $1.75 + 3 = 4.75\\ \\Omega$; $\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{2.5} + \\frac{1}{4.75} = \\frac{58}{95}$; $R_{\\text{equivalent}} = \\frac{95}{58} = 1.64\\ \\Omega$",
+    "marks": 2,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "5D.4"
+    ],
+    "img": [
+     "img/5D_WS4a.png",
+     "img/5D_WS4b.png"
+    ],
+    "src": {
+     "file": "5D Worksheet 5D–1 Modelling resistance in parallel.docx"
+    },
+    "pair_with": "WE5D-2"
+   },
+   {
+    "id": "WS5D-5",
+    "n": "5",
+    "question": "Consider the circuit diagram below and calculate: a equivalent resistance b potential difference in each branch c current in each branch d current through the battery.",
+    "answer": "a $\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{2} + \\frac{1}{1.5} + \\frac{1}{2.5} = \\frac{47}{30}$; $R_{\\text{equivalent}} = \\frac{30}{47} = 0.64\\ \\Omega$ b Potential difference in each branch = 18 V c $I_1 = \\frac{V_1}{R_1} = \\frac{18}{2} = 9$ A; $I_2 = \\frac{V_2}{R_2} = \\frac{18}{1.5} = 12$ A; $I_3 = \\frac{V_3}{R_3} = \\frac{18}{2.5} = 7.2$ A d $I_{\\text{total}} = 9 + 12 + 7.2 = 28.2$ A",
+    "marks": 4,
+    "kind": "calc",
+    "size": "long",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "5D.2",
+     "5D.3",
+     "5D.4"
+    ],
+    "img": [
+     "img/5D_WS5.png"
+    ],
+    "src": {
+     "file": "5D Worksheet 5D–1 Modelling resistance in parallel.docx"
+    },
+    "pair_with": "WE5D-1"
+   },
+   {
+    "id": "WS5D-6",
+    "n": "6",
+    "question": "Calculate the resistance in $R_2$ in the following circuit. The current running through the battery is 1 A.",
+    "answer": "$R_{\\text{equivalent}} = 5 + R_2$ (Equation 1) (1 mark); $R = \\frac{V}{I}$ (Equation 2). Substitute Equation 1 into Equation 2: $5 + R_2 = \\frac{V}{I}$; $5 + R_2 = \\frac{9}{1}$; $R_2 = 4\\ \\Omega$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "practice"
+    ],
+    "criteria": [
+     "5C.5"
+    ],
+    "img": [
+     "img/5D_WS6.png"
+    ],
+    "src": {
+     "file": "5D Worksheet 5D–1 Modelling resistance in parallel.docx"
+    },
+    "pair_with": null
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "5D.4"
+   ],
+   "wedo": "WE5D-1",
+   "youtry": [
+    "WS5D-5"
+   ],
+   "note": "Parallel equivalent resistance (two and three resistors); WS5 adds branch currents"
+  },
+  {
+   "criteria": [
+    "5D.4",
+    "5D.1"
+   ],
+   "wedo": "WE5D-2",
+   "youtry": [
+    "WS5D-4"
+   ],
+   "note": "Series branch inside a parallel combination"
+  },
+  {
+   "criteria": [
+    "5D.5"
+   ],
+   "wedo": "WE5D-3",
+   "youtry": [
+    "5D-SQ12"
+   ],
+   "note": "Graphical method, series (add V at fixed I); SQ12d"
+  },
+  {
+   "criteria": [
+    "5D.5"
+   ],
+   "wedo": "WE5D-4",
+   "youtry": [
+    "5D-SQ12"
+   ],
+   "note": "Graphical method, parallel (add I at fixed V); SQ12b–c"
+  },
+  {
+   "criteria": [
+    "5D.2",
+    "5D.3"
+   ],
+   "wedo": "WS5D-2",
+   "youtry": [
+    "5D-SQ10"
+   ],
+   "origin": "adapted",
+   "note": "Current splitting at junctions; no worked example"
+  }
+ ],
+ "skills": [
+  {
+   "id": "5D-SK1",
+   "heading": "Complex circuit skills",
+   "text": "When a circuit has both parallel and series sections, the skills you have learned for analysing each of these can be applied. The diagram (right) shows a compound circuit composed of three 8 Ω resistors. The two in parallel are equivalent to a single 4 Ω resistor. Try to calculate this using Formula 5D–1 or 5D–2; it always works that two identical resistors in parallel have an equivalent resistance of half of either one. It’s a similar concept to opening doors in an auditorium of people trying to exit: the more doors that are opened, the less the resistance to leaving. Try different numbers: Once we have an equivalent resistance we can treat the parallel components as a single resistor in series with the other 10 Ω resistor. Applying Formula 5C–1 now gives: More complex circuits can be broken down in the same way, beginning with the parallel combinations as shown: Note: simple values have been used for the resistances in these examples to make the calculations easier, but the techniques can be applied across the most complex resistive circuits. Also note that parallel resistors are sometimes shown on different angles, so it might not be as obvious that they are in parallel. In this case: RA and RB are in series with each other, so their total resistance is (RA + RB). Likewise RD is in series with RE, total (RD + RE). Each of these series combinations is in parallel with RC. The Requivalent would then be calculated from Formula 5D–1, applied to three resistors. You can see more combinations like this in Section 5E Skills.",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 68
+   },
+   "note": "Diagrams and worked numbers are on textbook pp. 68–69 (book 263–264) and not extracted."
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P5D-1",
+   "title": "Practical 5D–1 Using resistors in parallel",
+   "file": "5D Practical 5D–1 Using resistors in parallel.docx",
+   "aim": "To measure the effect on total resistance in a circuit of adding more resistors in parallel."
+  }
+ ],
+ "notes": "Several Suggested-response errors flagged in item notes: CI1.2 (answer does not match question), SQ6 (0.12 V vs 6 V), SQ7b (1.33 Ω vs 133 Ω), SQ9a (4.5 A vs 0.45 A), SQ12d. WE5D-1b textbook prints 8.84 Ω; 150/31 = 4.84 Ω."
+}

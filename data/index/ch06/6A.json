@@ -1,0 +1,1308 @@
+{
+ "code": "6A",
+ "title": "Useful electronic components",
+ "chapter": 6,
+ "unit": 1,
+ "aos": 3,
+ "study_design": [
+  "Investigate and apply theoretically and practically concepts of current, resistance, potential difference (voltage drop) and power to the operation of electronic circuits comprising resistors, light bulbs, diodes, thermistors, light dependent resistors (LDRs), light-emitting diodes (LEDs) and potentiometers (quantitative analysis restricted to use of $I = \\frac{V}{R}$ and $P = VI$)",
+  "Investigate practically the operation of simple circuits containing resistors, variable resistors, diodes and other non-ohmic devices",
+  "Describe energy transfers and transformations with reference to resistors, light bulbs, diodes, thermistors, light dependent resistors (LDRs), light-emitting diodes (LEDs) and potentiometers in common devices"
+ ],
+ "criteria": [
+  "6A.1",
+  "6A.2",
+  "6A.3",
+  "6A.4",
+  "6A.5",
+  "6A.6",
+  "6A.7",
+  "6A.8"
+ ],
+ "glossary": [
+  {
+   "id": "6A-G1",
+   "term": "Diode",
+   "def": "a semiconductor with very large resistance to current flow in one direction but very small in the other; a semiconductor device that will only allow electrical current to flow through it in one direction",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "6A-G2",
+   "term": "Light-emitting diode (LED)",
+   "def": "a diode that lights up when current flows through it but since it is a diode current will not flow in the reverse direction",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "6A-G3",
+   "term": "Potentiometer",
+   "def": "a circuit device consisting of a three-terminal sliding or rotating contact (called the ‘wiper’). Connections at one end and the wiper can be used to create a variable resistor. Often used as a volume control or light dimmer.",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "6A-G4",
+   "term": "Light dependent resistor (LDR)",
+   "def": "a semiconductor device whose resistance depends on the intensity of light shining on it",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "6A-G5",
+   "term": "Thermistor",
+   "def": "a thermal resistor, a non-ohmic semiconductor device whose resistance changes with temperature; two main types: NTC (negative thermal coefficient) increases $R$ with decreasing temperature, is the most common type. PTC (positive thermal coefficient) increases $R$ with increasing temperature, is made for special jobs.",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 17
+   }
+  },
+  {
+   "id": "6A-G6",
+   "term": "Transducer",
+   "def": "a device that receives input signal as one form of energy and converts it to a different form of energy output",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 18
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F6A-1",
+   "name": "Ohm's law (study design restriction)",
+   "latex": "I = \\frac{V}{R}",
+   "where": [
+    {
+     "sym": "I",
+     "meaning": "current",
+     "unit": "A"
+    },
+    {
+     "sym": "V",
+     "meaning": "potential difference",
+     "unit": "V"
+    },
+    {
+     "sym": "R",
+     "meaning": "resistance",
+     "unit": "\\Omega"
+    }
+   ],
+   "criteria": [
+    "6A.6",
+    "6A.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 2
+   }
+  },
+  {
+   "id": "F6A-2",
+   "name": "Electrical power",
+   "latex": "P = VI",
+   "where": [
+    {
+     "sym": "P",
+     "meaning": "power",
+     "unit": "W"
+    },
+    {
+     "sym": "V",
+     "meaning": "potential difference",
+     "unit": "V"
+    },
+    {
+     "sym": "I",
+     "meaning": "current",
+     "unit": "A"
+    }
+   ],
+   "criteria": [],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 2
+   }
+  },
+  {
+   "id": "F6A-3",
+   "name": "Potentiometer output (slider position)",
+   "latex": "V_{\\text{out}} = \\tfrac{1}{2}V;\\ V_{\\text{out}} = \\tfrac{3}{4}V;\\ V_{\\text{out}} = \\tfrac{1}{4}V",
+   "where": [
+    {
+     "sym": "V_{\\text{out}}",
+     "meaning": "output potential difference (half-way, three-quarters, a quarter of the way up)",
+     "unit": "V"
+    }
+   ],
+   "criteria": [
+    "6A.3",
+    "6A.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 12
+   },
+   "origin": "cambridge",
+   "note": "Textbook states the ratios in words; no single named formula."
+  }
+ ],
+ "engage": {
+  "heading": "Controlling electric circuits",
+  "text": "Have you ever wondered how your fridge ‘knows’ to switch on the motor to maintain the cool temperature after the door has been open, or how streetlights ‘know’ to come on as it gets dark? There is a control circuit for each of these, which is a straightforward application of what we have studied in series circuits and potential dividers in Chapter 5, and a couple of useful inventions we will explore in this chapter. As part of the electrical revolution in the twentieth century, valves (devices made of evacuated glass bulbs with various metal plates and terminals within them) were replaced from the 1960s onwards with semiconductor devices able to perform the same functions. Where valves were large, expensive to produce and run, and extremely fragile, semiconductor devices are small, much cheaper to produce and more robust. Among the first of these to be mass-produced was the transistor, so well known that the portable battery-powered radios in use from 1954 onwards were commonly called ‘transistors’, short for ‘transistor radios’. Before this, the radio, often combined with a record turntable (‘radiogram’), was a large item of furniture in only one room of the house, or a heavy box sitting on a bench, plugged into a wall outlet.\n\nSemiconductor devices using materials such as silicon and germanium can be manufactured into sensors to detect changes in light levels, temperature, pressure, forces (stresses and strains) and many other environmental factors. They draw very little current and operate at small potential differences, so are generally used to operate electronic switches. These in turn control external circuits involving higher current and potential difference. Other semiconductor devices, like diodes and transistors of various types, are used to control the size and direction of electrical signals. Integrated circuits (ICs), or chips, are the basis of most twenty-first century technology, from mobile phones to satellites to nanobots capable of performing microsurgery inside a living body. Next time you notice the streetlights turning on at dusk, often one by one, think about the technology that allows light levels to control an electric circuit, and as you open the fridge to get your afternoon snack, remember to marvel at the electrical inventions that keep it cool all day.",
+  "src": {
+   "file": "Physics12_Ch06.pdf",
+   "page": 5
+  }
+ },
+ "chunks": [
+  {
+   "id": "6A-E1",
+   "heading": "Diodes and LEDs",
+   "text": "A diode is a semiconductor made mainly of silicon, germanium or selenium and doped with impurities such as phosphorus and aluminium. The reasons for a semiconductor’s function are beyond the scope of this course, but it is enough to say that a semiconductor conducts less well than a metal, and its resistance depends on the distribution of impurities and the temperature.\n\nA diode is a non-ohmic resistance, and in fact its I–V characteristic is not even symmetrical: the size of the current depends on which way the potential difference is connected to the diode, or, to think of it another way, the direction of the potential difference, or polarity, affects the size of the current. The resistance of a diode is very large in one direction, but very small in the other.",
+   "figures": [
+    "6A-F2",
+    "6A-F3"
+   ],
+   "criteria": [
+    "6A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "6A-E2",
+   "heading": "Diodes and LEDs: the I–V characteristic of a diode",
+   "text": "The I–V characteristic for a diode is obtained in the same way as the circuit used in Section 5C to record the characteristic of a resistor, but after the initial set of readings the potential difference must also be reversed (you may need to reverse the ammeter and voltmeter leads if using analogue meters) to measure the current in the opposite direction.\n\nInstead of a straight-line ohmic graph, the diode shows almost zero resistance in one direction, and a very large resistance in the other (note that the horizontal axis is not to scale). Under normal conditions, current can only flow through a diode in one direction. This can be useful to protect components that would be damaged by reverse current, and to change AC (alternating current) into DC (direct current); for example, in the charger for a laptop. Use of a diode alone in a rectifier circuit (changing AC to DC) results in the conversion of only 50% of the electrical energy, as the electrical energy carried by all the ‘backwards’ current that is blocked does not transfer to the DC current.\n\nSafety note: like any component, diodes can only dissipate a certain amount of energy before they break down (or ‘blow’). Always check the details before you connect one. If a diode is subject to more current or potential difference than it can handle, it will heat up, melt or smoke. Often a small value resistor is put in series with the diode for protection. Some of the potential difference will be across the resistor, not all across the diode, and the current will be lower.",
+   "figures": [
+    "6A-F4",
+    "6A-F5"
+   ],
+   "criteria": [
+    "6A.1",
+    "6A.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "6A-E3",
+   "heading": "Light-emitting diode (LED)",
+   "text": "A more easily noticed component is a light-emitting diode (LED), often seen as the ‘power on’ or ‘standby’ light on electrical appliances, and combined in lamps as an efficient replacement for filament and fluorescent household lighting. As the name suggests and the symbol shows, the LED lights up when current flows through it (it is said to be ‘forward biased’) but not when the potential difference is reversed because, being a diode, no current will flow ‘backwards’ through it. In the same way as the diode, the resistance of an LED is very small in one direction, but very large in the other.\n\nThe I–V characteristic of an LED can be obtained in the same way as usual, by varying the potential difference across it and recording the current through it, then reversing the polarity of the power supply and repeating the process. A typical I–V graph for an LED is shown in Figure 6A–8.\n\nFor the same amount of light, arrays of LEDs in a mains-connected LED lamp use significantly less energy than filament bulbs or fluorescents. They are more efficient and are becoming cheaper to produce than older technology. LEDs and lighting are now part of the twenty-first century electrical revolution.",
+   "figures": [
+    "6A-F6",
+    "6A-F7",
+    "6A-F8"
+   ],
+   "criteria": [
+    "6A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "6A-E4",
+   "heading": "Potentiometer (or variable resistor)",
+   "text": "Figure 6A–9 shows different versions of a useful piece of equipment, a potentiometer (‘pot’), that can be used in a couple of different ways, and, perhaps confusingly, often gets a different name according to how it is set up in a circuit. You might hear it called a potential divider, rheostat, variable resistor or dimmer switch. It is basically a long wire of high resistance, often insulated and coiled for convenience, with electrical contacts or terminals at each end (terminal A and C in Figure 6A–9) and a sliding contact which can be moved to different positions along the wire. Current flows between terminals A and B. See Figures 6A–12 and 6A–13 for circuit diagrams for the potentiometer in use.\n\nThe circuit symbol for a potentiometer is shown in Figure 6A–11. You choose which two or three of the terminals to connect depending on the job you want the pot to do in the circuit.\n\nRecall that in Section 5C you learned how two resistors in series can be used to divide up the potential difference according to the ratio of their resistances, creating a potential divider. The same idea is used in a potentiometer. The two resistors are replaced by a long piece of ohmic resistance wire with a sliding contact that can be moved to any position, from one end of the wire to the other.",
+   "figures": [
+    "6A-F11",
+    "6A-F12"
+   ],
+   "criteria": [
+    "6A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "6A-E5",
+   "heading": "Potentiometer as a potential divider",
+   "text": "Because they are made from resistance wire that obeys Ohm’s law, the proportion of the lengths of wire on each side of the sliding contact is the same as the proportion of potential difference across each end of the wire. As seen in Figure 6A–12, the sliding contact for $V_{\\text{out}}$ moves along the wire. If it’s half-way along, then $V_{\\text{out}} = \\frac{1}{2}V$. If the slider is three-quarters of the way up, then $V_{\\text{out}} = \\frac{3}{4}V$; if it’s a quarter of the way up, then $V_{\\text{out}} = \\frac{1}{4}V$. Mathematically, we would say that the resistance is directly proportional to the length. If you know the total resistance of the whole wire, the resistance can be obtained with simple ratios from an accurate length measurement.\n\nFor circuits with this arrangement, there is always current in the whole length of the potentiometer, and the slider can be positioned to provide varying potential difference to the output side of the circuit when a connection is made between points C and B. Note that all three terminals are in use. The rest of the circuit will effectively be in parallel with the section B to C of the potentiometer, so extra current flows from the power supply when a load is connected to $V_{\\text{out}}$. The potential difference across the pot doesn’t change, nor does the current through the lower part of the potential divider (below the slider). Any value of potential difference, $V_{\\text{out}}$, can be chosen for the load, simply by moving the slider.",
+   "figures": [
+    "6A-F12"
+   ],
+   "criteria": [
+    "6A.3",
+    "6A.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "6A-E6",
+   "heading": "Potentiometer as a variable resistor (rheostat)",
+   "text": "A second method of setting up the circuit involves deliberately controlling the current, rather than the potential difference, by using the same piece of equipment as a variable resistor (sometimes called a rheostat). Figure 6A–13 shows that only two terminals are connected, one end (A) and the slider (B).\n\nThe longer the wire included in the circuit, the greater the resistance and the lower the current in the circuit, so moving the sliding contact directly controls the current. The variable resistor is effectively in series with the rest of the circuit. Current only flows through the part of it that is selected (A to B in this case), and both the current and the potential difference are affected when the slider is moved.",
+   "figures": [
+    "6A-F13",
+    "6A-F14"
+   ],
+   "criteria": [
+    "6A.3",
+    "6A.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 13
+   }
+  },
+  {
+   "id": "6A-E7",
+   "heading": "Light dependent resistor (LDR)",
+   "text": "The light dependent resistor (LDR) is a semiconductor device whose resistance depends on the intensity of light of suitable wavelength shining on it. The incident light might vary with the distance from a light source, or due to night falling, or because the door of a cupboard is opened.\n\nFor a particular light intensity, the LDR behaves as a resistor of constant resistance, obeying Ohm’s law over a small range of potential difference. To obtain the I–V characteristic, it is necessary to measure and state the light level at which the potential difference and current measurements were taken. A more useful graph is resistance versus light level. It is measured in units of lux (lx). As the brightness of light increases, the resistance decreases in an exponential way. These relationships are shown in the graphs in Figure 6A–16.\n\nLDRs can be used in a range of applications; for example, in light meters or to control an automatic flash. Streetlights or night lights that turn on as it gets dark can use an LDR in a potential divider circuit. If a variable resistor is used, the level of light that turns on the streetlights can be altered. A very common use of an LDR is to trigger a buzzer or an alarm when a person entering a doorway breaks a beam of light.",
+   "figures": [
+    "6A-F16",
+    "6A-F17"
+   ],
+   "criteria": [
+    "6A.4",
+    "6A.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "6A-E8",
+   "heading": "Thermistor",
+   "text": "The thermistor (short for ‘thermal resistor’) is another semiconductor device.\n\nThe resistance of a thermistor changes with temperature, so an I–V graph needs to specify what the temperature was when the current and potential difference were measured. It can also show different lines on the graph for different temperatures. For a particular temperature, most thermistors obey Ohm’s law over a small range of potential differences. The more useful graph in Figure 6A–19 shows two types of thermistors:\n• negative thermal coefficient thermistor (NTC): as the temperature rises, resistance falls in an exponential-like manner. Most thermistors are this type, so you may assume a thermistor is NTC type unless stated otherwise\n• positive temperature coefficient thermistor (PTC): as the temperature rises, resistance suddenly rises steeply in an exponential-like manner. These are mostly custom-designed for specific applications.\n\nThermistors can be used for temperature control in heaters and air conditioners, refrigerators and ovens, and in digital thermometers, among other applications.",
+   "figures": [
+    "6A-F18",
+    "6A-F19",
+    "6A-F20"
+   ],
+   "criteria": [
+    "6A.5",
+    "6A.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 17
+   }
+  },
+  {
+   "id": "6A-E9",
+   "heading": "Transducers",
+   "text": "Devices that change one form of energy into another are called transducers. They can be used as input to a circuit; for example, an LDR that detects the level of light (light → electrical energy) or a microphone that detects a sound and then triggers a change in the circuit (sound → electrical energy). There are also output transducers, like the buzzer that sounds (energy given out) when a current flows in the circuit (electrical → sound energy).",
+   "figures": [],
+   "criteria": [
+    "6A.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 18
+   }
+  },
+  {
+   "id": "6A-E10",
+   "heading": "Varying the switching level in a potential divider circuit with a transducer",
+   "text": "You have learned how a potential divider can be used with a transducer to perform a set task, but often you need to vary the level of light or temperature at which a circuit will switch on or off. To do this, a variable resistor in one half of the potential divider is used. This can be set by trial and error (wait until the temperature is right and adjust the rheostat until the circuit switches on or off) or using a pre-set scale (1–10 on an amplifier or 150–300°C on an oven).",
+   "figures": [],
+   "criteria": [
+    "6A.7",
+    "6A.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 18
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "6A-F2",
+   "label": "Figure 6A–2",
+   "caption": "Diodes and their symbols. Left: the banded end of a diode shows the side that should be connected facing the negative terminal of the supply potential difference, if current is to flow. Right: The circuit symbol for a diode reflects its function: the triangle is like an arrow showing the direction current can flow, and the line across the ‘nose’ of the triangle is like a wall that current cannot pass through when it approaches from that direction. This end of the diode has the band shown on left.",
+   "img": "img/6A_fig6A-2.png",
+   "important": true,
+   "why": "Diode photo and forward/reverse-biased symbol",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "6A-F3",
+   "label": "Figure 6A–3",
+   "caption": "Left: The diode in this circuit is ‘forward-biased’ so current will flow. Right: Swapping either the poles of the battery, as shown here, or of the diode gives a reverse-biased diode. A very tiny current will flow (until a very large potential difference is applied). Remember to reverse the connections on the ammeter and voltmeter if necessary.",
+   "img": "img/6A_fig6A-3.png",
+   "important": true,
+   "why": "Forward vs reverse biased diode circuits",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "6A-F4",
+   "label": "Figure 6A–4",
+   "caption": "Left: This circuit should look familiar from Section 5D. Right: I–V characteristic for a diode. Note that the scales in the positive and negative potential difference are not equal. The forward bias potential, $V_F$, varies depending on the semiconductor composition but is 0.6–1.0 V for silicon. When reverse biased, 50 V or more, $V_{BR}$, can be applied before the semiconductor breaks down and becomes a conductor.",
+   "img": "img/6A_fig6A-4.png",
+   "important": true,
+   "why": "Diode I–V characteristic graph (key graph for 6A.1)",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "6A-F5",
+   "label": "Figure 6A–5",
+   "caption": "When an alternating potential difference is supplied to a diode, only the forward-biased section appears at the output.",
+   "img": "img/6A_fig6A-5.png",
+   "important": true,
+   "why": "Rectification of AC by a diode",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "6A-F6",
+   "label": "Figure 6A–6c",
+   "caption": "c Circuit symbol for an LED.",
+   "img": "img/6A_fig6A-6c.png",
+   "important": true,
+   "why": "LED symbol (photos a, b skipped as decorative)",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "6A-F7",
+   "label": "Figure 6A–7",
+   "caption": "A forward-biased LED (left) conducts electricity but a reverse-biased LED (right) has a very high resistance that blocks all current. It is reverse-biased because the battery polarity has been swapped – be sure to look carefully at the battery polarity in circuit diagrams with diodes. Notice that the symbol stays the same, regardless of whether the LED is actually glowing or not.",
+   "img": "img/6A_fig6A-7.png",
+   "important": true,
+   "why": "Forward/reverse biased LED circuits (needed for Check-in Set 1 Q3)",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "6A-F8",
+   "label": "Figure 6A–8",
+   "caption": "An LED has similar characteristics to a diode, although the different doping and structure for different colours mean that values of resistance also vary.",
+   "img": "img/6A_fig6A-8.png",
+   "important": true,
+   "why": "LED I–V curves by colour (6A.2)",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "6A-F11",
+   "label": "Figure 6A–11",
+   "caption": "Circuit symbol for a potentiometer or variable resistor",
+   "img": "img/6A_fig6A-11.png",
+   "important": true,
+   "why": "Potentiometer and variable resistor symbols",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "6A-F12",
+   "label": "Figure 6A–12",
+   "caption": "Left: A circuit diagram of a potentiometer connected to a battery, with a voltmeter connected to measure the potential difference. This type of connection to a potentiometer can be used as a dimmer for lights or as a volume control. Right: Drawing of a globe connected in place of the voltmeter, $V_{\\text{out}}$.",
+   "img": "img/6A_fig6A-12.png",
+   "important": true,
+   "why": "Potentiometer as potential divider, circuit and set-up",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "6A-F13",
+   "label": "Figure 6A–13",
+   "caption": "A circuit diagram (left) and a drawing of the set-up for using a potentiometer (rheostat) with only two terminals connected – one end (A) and the slider (B) – to vary the current (right)",
+   "img": "img/6A_fig6A-13.png",
+   "important": true,
+   "why": "Rheostat (two-terminal) set-up",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 13
+   }
+  },
+  {
+   "id": "6A-F14",
+   "label": "Figure 6A–14",
+   "caption": "Compare the circuits shown here of a potential divider (left) and variable resistor (right) each set up to power a globe. Notice the different number of connections to the rheostat in each case, and the different way the potential difference across the rheostat would change if the slider is moved.",
+   "img": "img/6A_fig6A-14.png",
+   "important": true,
+   "why": "Side-by-side potential divider vs variable resistor",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 14
+   }
+  },
+  {
+   "id": "6A-F16",
+   "label": "Figure 6A–16",
+   "caption": "Left: Graph of resistance versus light intensity level (in lux, lx) for a light dependent resistor. Note the logarithmic scales on both axes. With light of low intensity of about 10 lx, $R = 10^6\\ \\Omega$ or 10 MΩ. With 1000 lx, the resistance is as low as 10 Ω. Right: I–V characteristic of an LDR. For a given light level, the LDR is ohmic within a given range of potential difference.",
+   "img": "img/6A_fig6A-16.png",
+   "important": true,
+   "why": "LDR resistance vs light level and I–V graph (6A.4)",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "6A-F17",
+   "label": "Figure 6A–17",
+   "caption": "A very common LDR use is to trigger a buzzer or alarm when a person entering a doorway breaks a beam of light. When the LDR is in shadow, its resistance increases, so the potential difference across it increases, which can trigger a switch which turns on a buzzer.",
+   "img": "img/6A_fig6A-17.png",
+   "important": true,
+   "why": "Real-world LDR potential divider application",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 16
+   }
+  },
+  {
+   "id": "6A-F18",
+   "label": "Figure 6A–18",
+   "caption": "Left: A bead-type thermistor; its resistance changes with temperature. Right: Thermistor symbol",
+   "img": "img/6A_fig6A-18.png",
+   "important": true,
+   "why": "Thermistor symbol (photo excluded)",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 17
+   }
+  },
+  {
+   "id": "6A-F19",
+   "label": "Figure 6A–19",
+   "caption": "Left: A typical relationship between temperature and resistance for two types of thermistor, NTC and PTC. Note the logarithmic scale for resistance. Right: An I–V graph for a given thermistor needs to state the temperature at which the current was measured for each potential difference.",
+   "img": "img/6A_fig6A-19.png",
+   "important": true,
+   "why": "NTC/PTC resistance vs temperature and I–V graph (6A.5)",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 17
+   }
+  },
+  {
+   "id": "6A-F20",
+   "label": "Figure 6A–20",
+   "caption": "A digital thermometer (left) can be made using a thermistor. What would be the limitation to this thermometer if it worked according to the circuit shown (right)?",
+   "img": "img/6A_fig6A-20.png",
+   "important": true,
+   "why": "Thermistor thermometer circuit (photo excluded); same circuit as Review Q14",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 18
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE6A-1",
+   "title": "Potentiometer",
+   "question": "When the slider of the potentiometer shown is set at the middle of the potentiometer, calculate the potential difference at $V_{\\text{out}}$.",
+   "steps": [
+    "With the slider halfway down the potentiometer, the potential difference $V_{\\text{out}}$ is half that across the pot, i.e.:",
+    "$V_{2\\text{k}\\Omega} = \\frac{1}{2} \\times 12$",
+    "$= 6\\ \\text{V}$"
+   ],
+   "answer": "6 V",
+   "img": [
+    "img/6A_WE6A-1.png"
+   ],
+   "criteria": [
+    "6A.3",
+    "6A.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "WE6A-2",
+   "title": "Rheostat or variable resistor",
+   "question": "In the circuit shown, the fixed resistor has a value of 100 Ω, and the variable resistor can be adjusted between 0 and 200 Ω. Calculate the maximum and minimum values of the current possible through the ammeter and the potential difference, $V$, measured by the voltmeter in each case.",
+   "steps": [
+    "Current will be maximum when variable is minimum, i.e. zero.",
+    "So using Ohm’s law:",
+    "$I_{\\max} = \\frac{V}{R_{\\min}}$",
+    "$= \\frac{12}{100}$",
+    "$= 0.12\\ \\text{A or } 120\\ \\text{mA}$",
+    "In this case, $V_{\\text{pot}}$ = zero as $R_{\\text{pot}} = 0$ (Ohm’s law)",
+    "Current is minimum when variable is maximum, so total resistance in the circuit:",
+    "$R_{\\max} = 100 + 200$",
+    "$= 300\\ \\Omega$",
+    "Again, using Ohm’s law:",
+    "$I_{\\min} = \\frac{V}{R_{\\max}}$",
+    "$= \\frac{12}{3000}$",
+    "$= 0.004\\ \\text{A or } 4\\ \\text{mA}$",
+    "In this case, $V_{\\text{pot}} = IR_{\\text{pot}}$, so:",
+    "$V_{\\text{pot}} = 0.004 \\times 2000$",
+    "$= 8\\ \\text{V}$"
+   ],
+   "answer": "$I_{\\max}$ = 0.12 A (120 mA), $V$ = 0; $I_{\\min}$ = 0.004 A (4 mA), $V$ = 8 V",
+   "img": [
+    "img/6A_WE6A-2.png"
+   ],
+   "criteria": [
+    "6A.3",
+    "6A.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 13
+   },
+   "note": "Textbook typos kept verbatim: '12/3000' should be 12/300 (=0.04 A, 40 mA), and '0.004 × 2000' should be ×200. The printed result 0.004 A does not follow from 12/300; correctly I_min = 0.04 A and V_pot = 8 V. Fix before using on slides."
+  },
+  {
+   "id": "WE6A-3",
+   "title": "LDR circuit",
+   "question": "a Describe the way the output potential difference, $V_{\\text{out}}$, changes in the circuit shown operates as it gets dark.\nb Describe an application for such a circuit.",
+   "steps": [
+    "a The LDR is acting as part of a voltage divider in this circuit (since it is wired in series with a resistor). The output voltage, $V_{\\text{out}}$, in this case is then related to the ratio of resistances of the LDR and variable resistor. As it gets darker, the resistance of the LDR increases, so $V_{\\text{out}}$ would increase, activating the switch that then turns on the spotlight.",
+    "b This kind of circuit has a number of applications. One use could be in a nightlight. If the output voltage is connected to an electronic switch that can turn on a globe, then as night falls the resistance of the LDR increases, so a greater share of the battery potential difference will appear across the LDR, which will trigger the electronic switch. The nightlight globe is powered from an external circuit, controlled by this switch."
+   ],
+   "answer": "$V_{\\text{out}}$ increases as it gets dark; e.g. a nightlight",
+   "img": [
+    "img/6A_WE6A-3.png"
+   ],
+   "criteria": [
+    "6A.4",
+    "6A.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 16
+   }
+  },
+  {
+   "id": "WE6A-4",
+   "title": "Thermistor circuit",
+   "question": "a Describe the way this NTC thermistor circuit operates as temperature increases.\nb Find an application for the circuit.",
+   "steps": [
+    "a In this circuit the thermistor is installed as part of a potential divider. This means as temperature increases, the thermistor resistance will decrease, which in turn will increase (or decrease) the output voltage at V. The required temperature can be achieved by changing the value of the variable resistor in the top part of the potential divider. Larger resistance in the top section means a lower temperature turns off the switch and vice versa.",
+    "b This circuit could control the settings for an oven. As the required high temperature is reached, the low output voltage triggers a switch to turn off the heating circuit."
+   ],
+   "answer": "Thermistor resistance falls as temperature rises, so the output voltage across it falls; e.g. oven control",
+   "img": [
+    "img/6A_WE6A-4.png"
+   ],
+   "criteria": [
+    "6A.5",
+    "6A.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 18
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "6A-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "A diode can be used in a circuit to control the direction of applied voltage. What property of diodes is used in this application?",
+   "answer": "When an AC voltage is applied to a diode circuit, current only flows in the forward direction. Reverse polarity potential difference across a diode causes no current.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "6A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "6A-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "Explain why diodes and LEDs are often connected in a circuit in series with a small resistor.",
+   "answer": "The diode conducts current when the forward potential difference across it is about 0.7 V or higher. There is a maximum safe current (and hence potential difference) for the diode, so a small resistor is added for protection, to limit the current. The size of the resistor is chosen according to the maximum potential difference for the diode.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "6A.1",
+    "6A.2",
+    "6A.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "6A-CI1.3",
+   "set": 1,
+   "n": 3,
+   "question": "If the protective resistor is always in the circuit, why is the voltmeter in Figure 6A–7 across only the LED and not the resistor?",
+   "answer": "To obtain an I–V characteristic, the current through the LED is plotted against the potential difference applied across the LED. Including the resistor would change these results, and would effectively give the characteristic of the power supply (since the ammeter has almost no resistance, you would be measuring the output potential difference of the power supply and the current in the circuit.)",
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "6A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "6A-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "How would the brightness of the globe vary as the slider is moved up towards A?",
+   "answer": "The resistance straddled by the voltmeter increases, so the reading in volts also increases.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "6A.3",
+    "6A.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 14
+   },
+   "img": [
+    "img/6A_CI2.png"
+   ]
+  },
+  {
+   "id": "6A-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "How would the brightness of the globe vary as the slider is moved down towards C?",
+   "answer": "The resistance straddled by the voltmeter decreases, so the reading in volts also decreases.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "6A.3",
+    "6A.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 14
+   },
+   "img": [
+    "img/6A_CI2.png"
+   ]
+  },
+  {
+   "id": "6A-CI3.1",
+   "set": 3,
+   "n": 1,
+   "question": "What property of LDRs make them useful in circuits?",
+   "answer": "The useful property of LDRs is that their resistance depends on the level of light, hence at different intensities light different amounts of current can be made to flow through a circuit.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "6A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 17
+   }
+  },
+  {
+   "id": "6A-CI3.2",
+   "set": 3,
+   "n": 2,
+   "question": "List some possible real-world applications of LDRs.",
+   "answer": "Student answers will vary, but could include in streetlights, cupboard light circuits, security systems and day night detectors.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "6A.4",
+    "6A.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 17
+   }
+  },
+  {
+   "id": "6A-CI4.1",
+   "set": 4,
+   "n": 1,
+   "question": "What property of thermistors make them useful in circuits, specifically those used to control temperature?",
+   "answer": "The property of thermistors that make them useful is that they have a variable resistance which depends on the temperature of the environment they are in. This makes them very useful in circuits that control temperature, since their resistance will change with the temperature of the environment they are in making them ideal for activating air conditioners or freezer pumps.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "6A.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 18
+   }
+  },
+  {
+   "id": "6A-CI4.2",
+   "set": 4,
+   "n": 2,
+   "question": "List some possible real-world applications of thermistors.",
+   "answer": "Student answers will vary but could include: sensor to regulate oven temperatures, freezer temperatures, aircon or heating temperatures etc.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "6A.5",
+    "6A.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 18
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "6A-SQ1",
+   "n": "1",
+   "question": "Consider the I–V characteristics of the graphs, labelled 1–4, below. Which statement is correct?",
+   "options": [
+    "A. 1 is a diode, 2 is an ohmic resistor with a larger resistance, 3 is a light globe, 4 is an ohmic resistor with smaller resistance.",
+    "B. 1 is a diode, 2 is an ohmic resistor with a smaller resistance, 3 is a light globe, 4 is a an ohmic resistor with a larger resistance.",
+    "C. 1 is a light globe, 2 is an ohmic resistor with a smaller resistance, 3 is a diode, 4 is an ohmic resistor with large resistance.",
+    "D. 1 is a diode, 2 is a light globe, 3 is an ohmic resistor with a smaller resistance, 4 is an ohmic resistor with large resistance."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "practice",
+    "exit"
+   ],
+   "criteria": [
+    "6A.1",
+    "6A.8"
+   ],
+   "img": [
+    "img/6A_SQ1.png"
+   ],
+   "src": {
+    "file": "6A Section questions.docx"
+   }
+  },
+  {
+   "id": "6A-SQ2",
+   "n": "2",
+   "question": "Which of these components is represented by this symbol?",
+   "options": [
+    "A. LED",
+    "B. resistor",
+    "C. thermistor",
+    "D. LDR"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "donow",
+    "exit"
+   ],
+   "criteria": [
+    "6A.4"
+   ],
+   "img": [
+    "img/6A_SQ2.png"
+   ],
+   "src": {
+    "file": "6A Section questions.docx"
+   }
+  },
+  {
+   "id": "6A-SQ3",
+   "n": "3",
+   "question": "Which of these components is most likely to be used in a potential divider control circuit that turns on a security light at dusk?",
+   "options": [
+    "A. LED",
+    "B. battery",
+    "C. thermistor",
+    "D. LDR"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "donow",
+    "exit"
+   ],
+   "criteria": [
+    "6A.4",
+    "6A.7"
+   ],
+   "img": [],
+   "src": {
+    "file": "6A Section questions.docx"
+   }
+  },
+  {
+   "id": "6A-SQ4",
+   "n": "4",
+   "question": "Which of these components is most likely to be used in a potential divider control circuit that turns on an air conditioner when the temperature reaches 27°C?",
+   "options": [
+    "A. LED",
+    "B. battery",
+    "C. thermistor",
+    "D. LDR"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "donow",
+    "exit"
+   ],
+   "criteria": [
+    "6A.5",
+    "6A.7"
+   ],
+   "img": [],
+   "src": {
+    "file": "6A Section questions.docx"
+   }
+  },
+  {
+   "id": "6A-SQ5",
+   "n": "5",
+   "question": "Which of these components is most likely to be used in a potential divider circuit that counts tins of tomatoes passing on a conveyor belt?",
+   "options": [
+    "A. LED",
+    "B. resistor",
+    "C. thermistor",
+    "D. LDR"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "practice",
+    "exit"
+   ],
+   "criteria": [
+    "6A.4",
+    "6A.7"
+   ],
+   "img": [],
+   "src": {
+    "file": "6A Section questions.docx"
+   }
+  },
+  {
+   "id": "6A-SQ6",
+   "n": "6",
+   "question": "Give two similarities and one difference between a diode and an LED.",
+   "answer": "Diodes and LEDs are both made of a pair of semiconductors (a pn junction) and both transmit current in one direction only. The LED emits light when a current flows through it, but a diode doesn't.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "practice",
+    "exit"
+   ],
+   "criteria": [
+    "6A.1",
+    "6A.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "6A Section questions.docx"
+   },
+   "note": "docx wording adds 'to indicate changes (increase or decrease)' by mistake; textbook wording used."
+  },
+  {
+   "id": "6A-SQ7",
+   "n": "7",
+   "question": "Complete the following scenario by filling in the gaps to indicate changes (increase or decrease).\nA thermistor is used in a building to assist in detecting fires and triggering the alarm. As the fire starts, the temperature ___a___, so the resistance of the thermistor ___b___ This allows a ___c___ in potential difference to control a loudspeaker (fire alarm circuit).",
+   "answer": "a: increases; b: decreases; c: decrease",
+   "marks": null,
+   "kind": "recall",
+   "size": "quick",
+   "phase": [
+    "practice",
+    "exit"
+   ],
+   "criteria": [
+    "6A.5",
+    "6A.7"
+   ],
+   "img": [],
+   "src": {
+    "file": "6A Section questions.docx"
+   }
+  },
+  {
+   "id": "6A-SQ8",
+   "n": "8",
+   "question": "Which of the following circuits will turn on the alarm when the temperature increases, and which will turn on the alarm when temperature decreases? Explain your reasoning for how each circuit behaves when the temperature changes. (Hint: the alarm will sound when there’s sufficient change in potential difference across it to change a switch.)\nHow could you adjust the circuits above to enable variation in the temperature at which the alarm sounds?",
+   "answer": "LH circuit: As temperature increases, resistance of the thermistor decreases, so potential difference across the top part of the potential divider circuit (the thermistor) also decrease and pd across the resistor in the bottom half increases. This means that output potential difference increases, which should turn on the alarm.\nFH circuit: As temperature increases, resistance of the thermistor decreases, so potential difference across the bottom part of the potential divider circuit (the thermistor) also decreases (and pd across the resistor in the top half increases). This means that output potential difference (across the bottom section) decreases, which will not turn on the alarm.\nIn LH circuit: Replace the resistor with a variable resistor or rheostat. You can then dial the resistance needed to trigger the alarm at a particular temperature.",
+   "marks": null,
+   "kind": "explain",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "6A.5",
+    "6A.7",
+    "6A.8"
+   ],
+   "img": [
+    "img/6A_SQ8.png"
+   ],
+   "src": {
+    "file": "6A Section questions.docx"
+   }
+  },
+  {
+   "id": "6A-SQ9",
+   "n": "9",
+   "question": "When the sun sets, a light comes on outside the front door of a house.\na Design a circuit to make this occur, using an LDR, a potential divider and an electronic switch for a spotlight across $V_{\\text{out}}$.\nb Why is this more useful than a security light on a timer?",
+   "answer": "a • There are several possibilities, one of which is shown below. The theory is:\n• To turn on the spotlight requires increasing potential difference at the electronic switch. Assume that this output will be across the bottom half of the potential divider.\n• Resistance of LDR is high in the dark, so pd across it rises as light level falls\n• So put the LDR in the bottom half of the potential divider circuit.\n• Using a variable resistor in the top half of the potential divider circuit allows adjustment of the specific light level at which the spotlight turns on.\n[diagram: img/6A_SQ9_ans.png]\nb Using an LDR ensures that the light will come on when it gets dark, which could be at different times in the evening depending on the season, and even during days which are dark and stormy.",
+   "marks": null,
+   "kind": "explain",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "6A.4",
+    "6A.7"
+   ],
+   "img": [],
+   "src": {
+    "file": "6A Section questions.docx"
+   },
+   "answer_img": [
+    "img/6A_SQ9_ans.png"
+   ]
+  },
+  {
+   "id": "6A-SQ10",
+   "n": "10",
+   "question": "Design a circuit to turn on the switch for a pool pump when the sun shines. Hint: connect the switch for the pump across $V_{\\text{out}}$.",
+   "answer": "There are several possibilities, one of which is shown below. The theory is:\n• The electronic switch requires increased pd to turn on the pump. Assume that this output will be across the bottom half of the potential divider.\n• The switch is to be operated when the sun shines ie the light level changes, so choose an LDR.\n• Resistance of LDR is low in the sunshine, so pd across it drops as light level rises\n• So put the LDR in the top half of the potential divider circuit.\n• Using a variable resistor in the bottom half of the potential divider circuit allows adjustment of the specific light level at which the pump turns on.\n[diagram: img/6A_SQ10_ans.png]",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "6A.4",
+    "6A.7"
+   ],
+   "img": [],
+   "src": {
+    "file": "6A Section questions.docx"
+   },
+   "answer_img": [
+    "img/6A_SQ10_ans.png"
+   ]
+  },
+  {
+   "id": "6A-SQ11",
+   "n": "11",
+   "question": "Design a circuit to turn on the ‘ready’ LED light on a coffee machine when the correct temperature is reached in the ceramic heater block.",
+   "answer": "There are several possibilities, one of which is shown below. The theory is:\n• To turn on the LED light requires and increase of potential difference. Assume that this output will be across the bottom half of the potential divider.\n• The LED is to be turned when the coffee machine is hot ie the temperature changes, so choose a thermistor.\n• Resistance of thermistor goes low when the temperature rises, so pd across it drops as temperature rises\n• So put the thermistor in the top half of the potential divider circuit.\n• Using a variable resistor in the bottom half of the potential divider circuit allows adjustment of the specific light level at which the pump turns on.\n[diagram: img/6A_SQ11_ans.png]",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "6A.5",
+    "6A.7"
+   ],
+   "img": [],
+   "src": {
+    "file": "6A Section questions.docx"
+   },
+   "answer_img": [
+    "img/6A_SQ11_ans.png"
+   ]
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 6A–1 Useful electronic components",
+  "total": 15,
+  "questions": [
+   {
+    "id": "WS6A-1",
+    "n": "1",
+    "question": "Match the component to the correct definition. (3 marks)\ni. Diode; ii. Light-emitting diode (LED); iii. Light dependent resistor (LDR); iv. Potentiometer; v. Thermistor; vi. Transducer\na. a device consisting of a three-terminal sliding contact that can be used to create a variable resistor\nb. a device whose resistance depends on the intensity of light shining on it\nc. a non-ohmic device whose resistance changes with temperature\nd. a device that receives input signal as one form of energy and converts it to a different form of energy output\ne. a semiconductor with a large resistance to current flow in one direction and very small in another\nf. a diode that lights up when current flows through in one direction but not in the reverse direction",
+    "answer": "(1/2 mark per correct answer) i. Diode – e; ii. LED – f; iii. LDR – b; iv. Potentiometer – a; v. Thermistor – c; vi. Transducer – d",
+    "marks": 3,
+    "kind": "recall",
+    "size": "medium",
+    "phase": [
+     "donow",
+     "practice"
+    ],
+    "criteria": [
+     "6A.1",
+     "6A.2",
+     "6A.3",
+     "6A.4",
+     "6A.5"
+    ],
+    "img": [],
+    "src": {
+     "file": "6A Worksheet 6A–1 Useful electronic components.docx"
+    }
+   },
+   {
+    "id": "WS6A-2",
+    "n": "2",
+    "question": "Each circuit shown below contains a diode. For each circuit, indicate whether a current will flow. (2 marks)",
+    "answer": "(1 mark per correct answer) Left circuit: No; right circuit: Yes",
+    "marks": 2,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "criteria": [
+     "6A.1",
+     "6A.8"
+    ],
+    "img": [
+     "img/6A_WS2-i.png",
+     "img/6A_WS2-ii.png"
+    ],
+    "src": {
+     "file": "6A Worksheet 6A–1 Useful electronic components.docx"
+    }
+   },
+   {
+    "id": "WS6A-3",
+    "n": "3",
+    "question": "Identify the circled electronic component in each of the circuits below. (3 marks)",
+    "answer": "a Light-emitting diode (LED) (1 mark)\nb Potentiometer or variable resistor (1 mark)\nc Light dependent resistor (LDR) (1 mark)",
+    "marks": 3,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "donow",
+     "practice"
+    ],
+    "criteria": [
+     "6A.2",
+     "6A.3",
+     "6A.4"
+    ],
+    "img": [
+     "img/6A_WS3a.png",
+     "img/6A_WS3b.png",
+     "img/6A_WS3c.png"
+    ],
+    "src": {
+     "file": "6A Worksheet 6A–1 Useful electronic components.docx"
+    }
+   },
+   {
+    "id": "WS6A-4",
+    "n": "4",
+    "question": "A fixed resistor with a value of 75 Ω and a variable resistor are placed in a circuit. The variable resistor can be adjusted between 0 and 150 Ω. The circuit also contains an ammeter and a voltmeter placed in parallel over the variable resistor.\na Construct a circuit diagram from the above description. (1 mark)\nb Calculate the maximum value of the current that would flow through the circuit. (1 mark)\nc Calculate the potential difference, $V$, measured by the voltmeter when the variable resistor is set at its maximum value. (2 marks)",
+    "answer": "a [diagram: img/6A_WS4a_ans.png]\nb Current is maximum when resistance in variable resistor is 0 Ω.\n$I = \\frac{V}{R} = \\frac{9}{75} = 0.12\\ \\text{A}$ (1 mark)\nc $R_{equivalent} = 75 + 150 = 225\\ \\Omega$ (1 mark)\n$V = IR = 0.12 \\times 225 = 27\\ \\text{V}$ (1 mark)",
+    "marks": 4,
+    "kind": "calc",
+    "size": "long",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "6A.3",
+     "6A.8"
+    ],
+    "img": [],
+    "src": {
+     "file": "6A Worksheet 6A–1 Useful electronic components.docx"
+    },
+    "answer_img": [
+     "img/6A_WS4a_ans.png"
+    ],
+    "note": "Question does not state the supply voltage; answer assumes 9 V (from the answer diagram). Part c answer is physically wrong (27 V > 9 V supply; should be I = 9/225 = 0.04 A, V = 0.04 × 150 = 6 V). Check before use."
+   },
+   {
+    "id": "WS6A-5",
+    "n": "5",
+    "question": "Use the graph below to describe the relationship between resistance and light level in a light dependent resistor. (1 mark)",
+    "answer": "There is a logarithmic relationship between light level and resistance.",
+    "marks": 1,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "exit",
+     "practice"
+    ],
+    "criteria": [
+     "6A.4"
+    ],
+    "img": [
+     "img/6A_WS5.png"
+    ],
+    "src": {
+     "file": "6A Worksheet 6A–1 Useful electronic components.docx"
+    }
+   },
+   {
+    "id": "WS6A-6",
+    "n": "6",
+    "question": "Identify the electronic component shown in the circuit diagram below. Provide one application for this circuit. (2 marks)",
+    "answer": "Thermistor (1 mark)\nOven, BBQ, kettle, hairdryer, refrigerator (any reasonable answer) (1 mark)",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "criteria": [
+     "6A.5",
+     "6A.7"
+    ],
+    "img": [
+     "img/6A_WS6.png"
+    ],
+    "src": {
+     "file": "6A Worksheet 6A–1 Useful electronic components.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "6A.3",
+    "6A.6"
+   ],
+   "wedo": "WE6A-1",
+   "youtry": [
+    "6A-CI2.1",
+    "6A-CI2.2"
+   ],
+   "note": "Potentiometer as potential divider; no worksheet calc of Vout ratio, so check-in Set 2 (slider direction) used as You try. Chapter test Q2/Q3 also fit but are test items."
+  },
+  {
+   "criteria": [
+    "6A.3",
+    "6A.8"
+   ],
+   "wedo": "WE6A-2",
+   "youtry": [
+    "WS6A-4"
+   ],
+   "note": "Same skill: fixed + variable resistor in series, max/min current and V across variable. Both sources have errors (see notes): fix numbers first."
+  },
+  {
+   "criteria": [
+    "6A.1",
+    "6A.8"
+   ],
+   "wedo": "WS6A-2",
+   "youtry": [
+    "6A-SQ1"
+   ],
+   "origin": "adapted",
+   "note": "No worked example on diode bias; use WS Q2 (does current flow?) as We do, SQ1 (I–V graph identification) as You try."
+  },
+  {
+   "criteria": [
+    "6A.4",
+    "6A.7"
+   ],
+   "wedo": "WE6A-3",
+   "youtry": [
+    "6A-SQ10"
+   ],
+   "note": "LDR potential divider behaviour, then design for the opposite light condition."
+  },
+  {
+   "criteria": [
+    "6A.5",
+    "6A.7"
+   ],
+   "wedo": "WE6A-4",
+   "youtry": [
+    "6A-SQ7",
+    "WS6A-6"
+   ],
+   "note": "NTC thermistor potential divider behaviour and application."
+  }
+ ],
+ "skills": [
+  {
+   "id": "6A-SK1",
+   "heading": "Technique for analysing potential divider circuits containing input transducers",
+   "text": "The best way to approach any potential divider circuit containing transducers is to recognise that these circuits are designed to change their output (usually potential difference) when the input conditions change. The input conditions are related to the transducer: temperature for thermistors, light intensity for LDRs.\nThe following steps are useful.\n1 Recognise a potential divider circuit. This will have a transducer in series with a resistor (or possibly a variable resistor) across a source of potential difference. Usually the diagrams are vertical, but they could be drawn in any direction. For example: [img/6A_SK1.png]\nDon’t be misled by the shape – look for the circuit connections to determine what will happen.\n2 Which component varies with the environment? Is it sensitive to temperature? Light intensity? Something else? Other transducers can detect things such as strain, stress, force, torque and sound intensity. In the circuit above, it is the LDR.\n3 What change is taking place? Will this change increase or decrease the resistance of the transducer? Hint: recall the shape of the graphs for thermistors and LDRs. If the light is getting brighter, then the resistance of the LDR will decrease.\n4 If the resistance of the transducer changes, what effect does this have on the output, $V_{\\text{out}}$? It will be a different effect if the transducer is in the ‘top’ of the potential divider or the ‘bottom’ position. In the case above, when $R_{\\text{LDR}}$ decreases, less of the supply potential difference will be across the LDR (and $V_{\\text{resistor}}$ increases in the other section of the potential divider). A decreased $V_{\\text{out}}$ would be likely to turn off an electronic switch – but read each question carefully to understand the set-up before you write your answer.\nIf you keep these steps in mind when analysing a problem, you will be able to write a clearer, more logical answer.",
+   "img": [
+    "img/6A_SK1.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 19
+   }
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P6A-1",
+   "title": "Practical 6A–1 Non-ohmic resistor (a light bulb)",
+   "file": "6A Practical 6A–1 Non-ohmic resistor (a light bulb).docx",
+   "aim": "To show the nature of current dependency on electric potential energy difference (voltage) in a non-ohmic load (a light bulb)."
+  },
+  {
+   "id": "P6A-2",
+   "title": "Practical 6A–2 A light dependent resistor (LDR)",
+   "file": "6A Practical 6A–2 A light dependent resistor (LDR).docx",
+   "aim": "To show the change in output voltages of parts of an electrical circuit when light shines on a light dependent resistor LDR."
+  },
+  {
+   "id": "P6A-3",
+   "title": "Practical 6A–3 Voltage across a thermistor",
+   "file": "6A Practical 6A–3 Voltage across a thermistor.docx",
+   "aim": "To show the change in output voltages of a circuit with a variable resistor in series with a thermistor."
+  }
+ ],
+ "notes": "WE6A-2 has textbook typos (12/3000, ×2000; should be 12/300 = 0.04 A and ×200 = 8 V). WS6A-4 assumes a 9 V supply not given in the question, and its part c answer (27 V) is wrong. Check-in Set 2 answers talk about voltmeter reading although the question asks about globe brightness. No worked example for diode/LED behaviour (6A.1, 6A.2): adapted We do from worksheet. Section question answers 8 to 11 include answer diagrams (answer_img). Photos (6A-1, 6A-9, 6A-10, 6A-15 photo) skipped as decorative."
+}

@@ -1,0 +1,1486 @@
+{
+ "code": "2A",
+ "title": "Thermal energy",
+ "chapter": 2,
+ "unit": 1,
+ "aos": 1,
+ "study_design": [
+  "Convert between Celsius and kelvin scales",
+  "Describe how an increase in temperature corresponds to an increase in thermal energy (kinetic and potential energy of the atoms) of a system:",
+  "distinguish between conduction, convection and radiation with reference to heat transfers within and between systems",
+  "explain why cooling results from evaporation using a simple kinetic energy model",
+  "Investigate and analyse theoretically and practically the energy required to:",
+  "raise the temperature of a substance: $Q = mc\\Delta T$",
+  "change the state of a substance: $Q = mL$"
+ ],
+ "criteria": [
+  "2A.1",
+  "2A.2",
+  "2A.3",
+  "2A.4",
+  "2A.5",
+  "2A.6",
+  "2A.7",
+  "2A.8",
+  "2A.9",
+  "2A.10"
+ ],
+ "glossary": [
+  {
+   "id": "2A-G1",
+   "term": "Thermal energy",
+   "def": "the sum of all the random potential and kinetic energies of the atoms and molecules that make up an object or a system",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "2A-G2",
+   "term": "Translational kinetic energy",
+   "def": "the energy associated with an object of mass, $m$, travelling with speed, $v$",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "2A-G3",
+   "term": "Heat",
+   "def": "the flow of thermal energy between two bodies of different temperature",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "2A-G4",
+   "term": "Celsius (°C)",
+   "def": "a unit of temperature on the Celsius temperature scale, where the boiling point of water is 100°C and the freezing point is 0°C",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "2A-G5",
+   "term": "Kelvin (K)",
+   "def": "a unit of temperature on the Kelvin temperature scale, where the boiling point of water is 373.15 K and the freezing point is 273.15 K. 0 K corresponds to absolute zero.",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "2A-G6",
+   "term": "Conduction",
+   "def": "the process of thermal energy transfer though interactions between nearby atoms, molecules and electrons",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "2A-G7",
+   "term": "Convection",
+   "def": "the process of thermal energy transfer through the movement of a fluid or gas",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "2A-G8",
+   "term": "Evaporative cooling",
+   "def": "the process of cooling that occurs in liquids when high-energy molecules evaporate and carry away energy from the system",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "2A-G9",
+   "term": "Specific heat capacity",
+   "def": "the energy required to raise the temperature of 1 kg of a material by 1 K; units are J kg$^{-1}$ K$^{-1}$. Its value depends on the material being heated. It is given the symbol $c$.",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 13
+   }
+  },
+  {
+   "id": "2A-G10",
+   "term": "Melting",
+   "def": "the change of state from solid to liquid",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 16
+   }
+  },
+  {
+   "id": "2A-G11",
+   "term": "Fusion",
+   "def": "the change of state from liquid to solid",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 16
+   }
+  },
+  {
+   "id": "2A-G12",
+   "term": "Vaporisation",
+   "def": "the change of state from liquid to gas",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 16
+   }
+  },
+  {
+   "id": "2A-G13",
+   "term": "Condensation",
+   "def": "the change of state from gas to liquid",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 16
+   }
+  },
+  {
+   "id": "2A-G14",
+   "term": "Change of state",
+   "def": "when a substance changes from one state (solid, liquid or gas) to another by absorbing or releasing energy",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 16
+   }
+  },
+  {
+   "id": "2A-G15",
+   "term": "Specific latent heat",
+   "def": "the energy needed to be absorbed or released per kilogram of a substance to cause a change of state, in units J kg$^{-1}$. It depends on both the substance and the change of state. It is given the symbol $L$.",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 16
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F2A-1",
+   "name": "Thermal energy change in an object",
+   "latex": "Q = mc\\Delta T",
+   "where": [
+    {
+     "sym": "Q",
+     "meaning": "Amount of thermal energy required to increase the temperature of a material by $\\Delta T$",
+     "unit": "J"
+    },
+    {
+     "sym": "m",
+     "meaning": "Mass of the material being heated",
+     "unit": "kg"
+    },
+    {
+     "sym": "c",
+     "meaning": "Specific heat capacity of the material being heated",
+     "unit": "J kg$^{-1}$ K$^{-1}$"
+    },
+    {
+     "sym": "\\Delta T",
+     "meaning": "Change in temperature before and after heating",
+     "unit": "K"
+    }
+   ],
+   "criteria": [
+    "2A.5",
+    "2A.8",
+    "2A.9"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 14
+   }
+  },
+  {
+   "id": "F2A-2",
+   "name": "Specific latent heat of change of state",
+   "latex": "Q = mL",
+   "where": [
+    {
+     "sym": "Q",
+     "meaning": "Amount of thermal energy required (or released) in a change of state of a substance",
+     "unit": "J"
+    },
+    {
+     "sym": "m",
+     "meaning": "Mass of the substance changing state",
+     "unit": "kg"
+    },
+    {
+     "sym": "L",
+     "meaning": "Specific latent heat of the substance",
+     "unit": "J kg$^{-1}$"
+    }
+   ],
+   "criteria": [
+    "2A.6",
+    "2A.8",
+    "2A.10"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 16
+   }
+  }
+ ],
+ "engage": {
+  "heading": "Hot and cold ‘burns’",
+  "text": "When too much thermal energy passes into our skin, we get a burn as the cells are damaged. When too much thermal energy passes out of our skin, the cells are also damaged; this damage is sometimes called a ‘cold burn’ or an ‘ice burn’ or also commonly referred to as frostbite. Ice burns can occur from being outside in low temperatures for extended periods of time. Some other circumstances where cold burns commonly occur include being exposed to expanding gas being released from a highly compressed or liquid source (particularly from aerosol cans) for extended periods of time. Liquid nitrogen or helium spills are a cause as well as coming into contact with metal cooled by such substances. Cold burns are just as serious as hot burns and often require medical treatment in a hospital, but hot and cold ‘burns’ are managed very differently.",
+  "src": {
+   "file": "Physics12_Ch02.pdf",
+   "page": 5
+  }
+ },
+ "chunks": [
+  {
+   "id": "2A-E1",
+   "heading": "What is temperature? How is it related to thermal energy?",
+   "text": "When we ask whether an object is hot, we reach for a thermometer. Temperature is what a thermometer measures. It is not the same as the total amount of thermal energy in an object. The thermal energy of an object is the sum of all the random potential and kinetic energies of its atoms and molecules. The temperature is linked to the thermal energy. When thermal energy increases, the temperature increases, and when if falls the temperature falls, but the exact relationship is complicated.\n\nThe tiny sparks that fly off a ‘sparkler’ on a birthday cake have a temperature of over 1000°C, but one or two of them landing on your skin is not going to burn you. They do not have enough thermal energy because the number of molecules involved is very small.\n\nThermometers, which measure temperature, have an important function because they can tell us which way thermal energy is going to transfer. If you grab an object that has a temperature that is higher than your hand, thermal energy will move into your hand – the object will feel hot. If enough energy moves, you may get burned. If the temperature is lower than your hand, thermal energy will flow out of your hand and the object will feel cold. This can also damage you if it is very cold. These effects are because the molecules in a hotter object have more random translational kinetic energy and potential energy than the molecules in a colder object, and as a result thermal energy moves from the hotter object to the colder one. When thermal energy is moving like this between two objects of different temperatures, we call the flow of energy heat.\n\nThe temperature of an object is the quantity measured with a thermometer; it is related to the thermal energy of an object. When the thermal energy increases, the temperature also increases; when the thermal energy decreases, so does the temperature.",
+   "figures": [],
+   "criteria": [
+    "2A.1",
+    "2A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "2A-E2",
+   "heading": "Temperature scales",
+   "text": "The two most common temperature scales are the Celsius and Kelvin scales, although Fahrenheit is also used in some countries. The scales have reference points as shown in Table 2A–1 below.\n\nThe size of a single degree in the Celsius scale and the size of the kelvin unit in the Kelvin scale are the same; the size of a degree in the Fahrenheit scale is smaller. The Fahrenheit scale is obsolete in Australia. To convert from degrees Celsius to kelvins you simply add 273.15 to the Celsius number. The significance of the Kelvin scale is that there are no negative temperatures. Zero kelvin is absolute zero and corresponds to the state of an object where the molecules have effectively zero kinetic energy. It is not possible to cool an object any further. Absolute zero (0 K) is the temperature of an object that has lost all its thermal energy. (The situation is complicated if quantum effects are taken into account, as quantum theory predicts the existence of zero-point energy, that is, quantum particles can never completely stop moving.)\n\nNOTE: The Kelvin scale does not have degrees, its unit is the kelvin (with lowercase k) and its symbol is uppercase K. Temperatures in kelvins do not have degree signs, just a number followed by a space and K.",
+   "figures": [
+    "2A-T1"
+   ],
+   "criteria": [
+    "2A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "2A-E3",
+   "heading": "Transferring thermal energy by conduction",
+   "text": "Conduction is the most significant method of thermal energy transfer in soilds. This is because the molecules of solids are closely packed together, so the vibrations caused by heating readily cause nearby particles to also vibrate by interactions. This transfers the thermal energy through the solid. Electrons can also be involved, especially in metals. In an object where one part is hotter than another part, the thermal energy moves or ‘flows’ as heat, as shown in Figure 2A–3.\n\nWhen two objects at different temperatures are in contact, thermal energy flows as heat from the hotter object to the colder one. This is again because the kinetic and potential energies of the particles (atoms, molecules, electrons) of the hotter object are greater, on average, than those of the colder object, and interactions between the more energetic particles and the less energetic ones result in transfer of thermal energy.\n\nThe rate at which conduction of thermal energy occurs depends on the material involved. Some materials conduct better than others. Metals are generally good conductors of heat (as well as electricity). This is largely due to the ability of their free electrons to move freely throughout the metal. Non-metals do not have free electrons and are generally poor conductors but good insulators. Gases are very poor conductors (and excellent insulators) because their particles are far apart and interactions are relatively rare.\n\nTable 2A–2 shows a comparison of the approximate thermal conductivities of some common materials, in arbitrary units, relative to the thermal conductivity of air, which is set at 1. This means that copper (thermal conductivity of 17 000 units) has 8500 times the thermal conductivity of fibreglass (2.0 units). It should be clear that high conductivity is very desirable for the bases of saucepans (such as copper) but low conductivity (such as fibreglass) is desirable for the handles of saucepans. (Cookware for induction stoves also requires a layer of magnetic material, but this is related to a different mechanism, where the stove induces an electric current in the pan to heat it internally).\n\nThe dimensions of materials also affect their ability to conduct or insulate. A thicker layer is better for insulation than a thinner one. Also, the greater the area of contact with the surface of a material, the better the conduction properties and the less effective the insulation. Finally, the temperature difference across the material (the temperature gradient) affects the rate of thermal energy flow. The greater the temperature gradient, the greater the energy flow will be.",
+   "figures": [
+    "2A-F3",
+    "2A-T2"
+   ],
+   "criteria": [
+    "2A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "2A-E4",
+   "heading": "Transferring thermal energy by convection",
+   "text": "Convection is the main form of thermal energy transfer in liquids and gases. It occurs when there is significant flow of the liquid or gas itself, thus moving the thermal energy by the bodily movement of the material itself. It can be natural, driven by warmer fluid rising and cooler fluid falling due to density differences, or forced by fans.\n\nConvection is responsible for driving sea and land breezes. In the case of a sea breeze during the day, the air just above the ocean is kept cool by the water, making it a lower temperature than the air just above the land. As the air above the land heats up from the Sun its density falls and so it rises, pulling in cooler air from across the ocean. On the other hand, the ocean water cools the air above it, which causes it to sink, which in turn pulls in air from above the land. The cycle then repeats, producing a sea breeze. The movement of the air like this is an example of a convection current and it allows for the cooler ocean and warmer land to transfer heat via the breeze, shown in Figure 2A–8. A land breeze occurs at night and is just the reverse convection current caused by the land now being cooler without the Sun present. This current allows heat to transfer between the cooler land and warmer ocean water, also shown in Figure 2A–8.",
+   "figures": [
+    "2A-F6",
+    "2A-F7",
+    "2A-F8"
+   ],
+   "criteria": [
+    "2A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "2A-E5",
+   "heading": "Transferring thermal energy by electromagnetic radiation",
+   "text": "Thermal energy from the Sun reaches Earth after travelling though the near perfect vacuum of space as electromagnetic radiation. The Sun’s electromagnetic spectrum is 93% infrared and visible radiation and 7% ultraviolet. Some of this radiation is reflected, but most of it is absorbed and transformed to thermal energy.\n\nAll objects with temperatures above 0 K emit electromagnetic radiation. This is thermal radiation, a result of its thermal energy. Earth re-radiates this received electromagnetic radiation, but at longer wavelengths, deep into the infrared region of the electromagnetic spectrum. The hotter an object is, the shorter the wavelength of this radiation. Once an object reaches a temperature of 700 K, the emitted thermal radiation becomes visible and the object become ‘red hot’. However, even below this temperature, significant amounts of radiated energy can be felt. The nature of the radiating surfaces affects how well objects emit radiation; perfect radiators are called ‘blackbody’ radiators, defined in the next section. These are also perfect absorbers.\n\nFor the warming effect of infrared radiation to occur, it has to be absorbed and then be transformed into thermal energy. The nature of the surface affects this. Shiny surfaces and white surfaces (including snow and ice) reflect much of the radiation. Black surfaces and matt surfaces are more likely to absorb most of the energy of the radiation. You will notice this when you wear matt black clothes on sunny days.",
+   "figures": [],
+   "criteria": [
+    "2A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "2A-E6",
+   "heading": "Evaporative cooling",
+   "text": "You may have noticed, if you drink takeaway coffee (or other hot drinks), that it has become normal to fit a lid to the takeaway container to keep the drink from getting cold. Without a lid, hot drinks lose considerable thermal energy through the process of evaporative cooling. This process also occurs when we sweat, especially when there is a wind blowing. This process can be described by a simple kinetic energy model. Within the liquid, molecules are free to move around and interact with each other, which results in a wide range of kinetic energies for the different molecules. Because of these interactions within the liquid, some molecules have a higher kinetic energy than the average of the system. If this occurs near the liquid surface, some of these molecules will have the energy to escape the bonds of the liquid and move into air. Now in a gas state, the molecules move away from the system and are said to have evaporated from the surface of the drink. The molecules that have evaporated carry with them the extra energy they obtained from collisions within the system. This means that evaporating molecules reduce both the thermal energy and the average kinetic energy of the molecules of the liquid, lowering the temperature of the drink and resulting in a cooling effect.\n\nA low-tech cooling invention, the Coolgardie safe, is a mesh box covered with damp hessian sacking. Evaporative cooling keeps the interior cool, especially if there is a breeze blowing on the sacking, which increases the rate of evaporation. It is thought that the idea may have come from the practice of some Aboriginal and Torres Strait Islander peoples carrying water in kangaroo skin bags.\n\nIn dry and warmer parts of Australia, evaporative air conditioning is popular and cheaper to run than compressor-based cooling. The principle is similar to the Coolgardie safe, with a fan run by electricity.",
+   "figures": [
+    "2A-F11"
+   ],
+   "criteria": [
+    "2A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "2A-E7",
+   "heading": "Energy required to change the temperature of an object",
+   "text": "Every time you ‘boil the kettle’, you have to add enough thermal energy to the water to raise its temperature by about 80°C, assuming that room temperature is 20°C. To calculate the amount of energy involved, you need to know the mass of water involved, $m$, and the specific heat capacity of water, $c$. The specific heat capacity of a material has units of J kg$^{-1}$ K$^{-1}$ and it measures the amount of energy required to raise the temperature of 1 kg of a material by 1 K. Its value depends on the material. In this example, the specific heat capacity of water is the amount of energy required to raise the temperature of 1 kg of water by 1 K.\n\nThe symbol $Q$ is used for the amount of thermal energy that must be added to system in the form of heat to raise the temperature of a material by the desired amount. It is calculated using the formula in the next box.\n\nWater has a relatively high specific heat capacity, as can be seen from Table 2A–3. This means that relatively more energy is required to heat water and water releases more energy when it cools down. Therefore, water takes a relatively long time to heat up and a relatively long time to cool down. This means that environments near lakes and oceans are protected from extremes of temperature; on very hot days a large body of water absorbs thermal energy, minimising the temperature rise. On cold days the reverse occurs; the water releasing thermal energy minimises temperature drop. This is assisted by the sea breeze and land breeze convection currents discussed earlier in this chapter.\n\nInternal combustion engines require effective cooling; water is ideal for this function because of its high specific heat capacity. Houses fitted with water-filled walls, as shown in Figure 2A–12, have high thermal energy capacity; this smooths out extremes of temperature on very hot and very cold days. Such houses can absorb thermal energy during the day and release it at night, keeping the house cooler in summer and warmer in winter.",
+   "figures": [
+    "2A-T3"
+   ],
+   "criteria": [
+    "2A.5",
+    "2A.9"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 13
+   }
+  },
+  {
+   "id": "2A-E8",
+   "heading": "Energy required to change state",
+   "text": "When ice changes into water (melting), water into ice (fusion), hot water into steam (vaporisation) or steam into water (condensation), we say that a change of state has taken place. Changes of state happen when energy is added or taken away from a substance, changing the interaction of the molecules with each other, either breaking bonds or allowing them to form. If a substance is to change from the solid state to the liquid state, energy is needed to break bonds; when the reverse happens, energy is released by bonds forming. If a substance is to change from the liquid state to the gas state, energy is also needed; when the reverse happens, energy is released. These additions and releases of energy do not change the temperature of the substance; they are solely involved in the change of state. The energy needed (or released) during the change of state is related to the mass, $m$, of the substance and the specific latent heat of the state change for the substance.\n\nThe specific latent heat, $L$, has units of J kg$^{-1}$ and is the amount of energy that is absorbed or released per kilogram of a substance that undergoes a change of state. It depends on both the substance and the state change that is occurring. For example, the specific latent heat of changing the state of water into ice (fusion) is 334 kJ kg$^{-1}$, but the specific latent heat of changing the state of water into steam (vaporisation) is 2256 kJ kg$^{-1}$. Changing water into ice releases energy while changing water into steam requires energy. If we reverse a change of state, then the specific latent heat is the same, but the energy release or absorption also reverses. From the example this means that changing ice into water still has a value of 334 kJ kg$^{-1}$, but now energy is required to cause the change of state instead of being released.",
+   "figures": [],
+   "criteria": [
+    "2A.6",
+    "2A.10"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 16
+   }
+  },
+  {
+   "id": "2A-E9",
+   "heading": "Water change of state diagram (Figure 2A–13)",
+   "text": "The idealised graph in Figure 2A–13 illustrates what happens when a sample of ice at –20°C is heated steadily, continuing after it all becomes steam. The diagram is not to scale.\n\nFrom point A to point B, the water remains in its solid state (ice) and the temperature and thermal energy are related by $Q = mc_{ice}\\Delta T$. Note that $c_{ice}$ is equal to 2093 J kg$^{-1}$ K$^{-1}$, which is different from $c_{water}$. From point B to point C, the mixture of ice and water remains at 0°C and all the thermal energy added is being used breaking the bonds between the ice molecules. In this case the state of change that has occured is melting and the energy needed for it to occur is given by Formula 2A–2 as: $Q = mL_{melting}$ where $Q$ is the amount of thermal energy needed to melt the ice, $m$ is the mass of the ice changing state and $L_{melting}$ is the specific latent heat of melting for water. Then from point C (when all the ice has melted) to point D, the thermal energy is related to the temperature by $Q = mc_{water}\\Delta T$. At point D the water starts to boil (vaporise), and the temperature remains constant at 100°C while thermal energy is being used to break the bonds between the water molecules. This is given by Formula 2A–2 as: $Q = mL_{vaporisation}$ where $Q$ is the amount of thermal energy needed to turn water into steam, $m$ is the amount of mass changing state and $L_{vaporisation}$ is the specific latent heat of vaporisation of water. One conclusion from this is that food cooked in boiling water will not cook any faster if the water is boiling rapidly, rather than just boiling. The temperature will be the same in both cases: 100°C. As discussed earlier, when the process is reversed, for example when steam condenses to liquid water, thermal energy is released to the environment. As a result, allowing steam to condense to water on your hand can result in a nasty burn.\n\nThe equation for the thermal energy released by condensation using Formula 2A–2 is: $Q = mL_{condensation}$\nThe values for $L_{vaporisation}$ and $L_{condensation}$ are, not surprisingly, the same. The same reasoning applies to the freezing of liquids into solids; thermal energy is released as a liquid freezes. When you fill a ice cube tray with water and place it is the freezer, the thermal energy released is absorbed by the freezer compartment. The equation for the thermal energy released is: $Q = mL_{fusion}$ and the values for $L_{melting}$ and $L_{fusion}$ as discussed earlier are exactly the same. Some values for $L_{fusion}$ and $L_{vaporisaion}$ are shown in Table 2A–4.\n\nTable 2A–4 Specific latent heats of fusion and vaporisation (kJ kg$^{-1}$): Carbon dioxide 184, 574; Ethanol 108, 846; Lead 23, 871; Sulfur 39, 1510; Water 334, 2256.\n\nAs you know, you can cool a drink by adding ice blocks. Thermal energy is absorbed by the ice until all the ice has melted. This cools the drink and reduces the temperature of the drink. Then the drink is further cooled as the cold water from the melted ice absorbs more energy until equilibrium is reached.",
+   "figures": [
+    "2A-F13"
+   ],
+   "criteria": [
+    "2A.6",
+    "2A.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 16
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "2A-T1",
+   "label": "Table 2A–1",
+   "caption": "Comparing different temperature scales",
+   "img": "img/2A_fig2A-1tab.png",
+   "important": true,
+   "why": "Freezing and boiling points of water in °C, K and °F: anchors the conversion",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "2A-F3",
+   "label": "Figure 2A–3",
+   "caption": "Flow of thermal energy as heat from higher temperature to lower temperature",
+   "img": "img/2A_fig2A-3.png",
+   "important": true,
+   "why": "Conduction along a rod from flame to hand",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "2A-T2",
+   "label": "Table 2A–2",
+   "caption": "Relative thermal conductivities of different materials, in arbitrary units where air is set at 1.0",
+   "img": null,
+   "important": false,
+   "why": "Conductor vs insulator data (not cropped; values in chunk 2A-E3 source)",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "2A-F6",
+   "label": "Figure 2A–6",
+   "caption": "Natural convection in a domestic setting. Air is warmed by the heater and becomes less dense so it rises to the ceiling, where it cools by conduction and radiation, becoming more dense, therefore sinking to the floor. This drives a circulating convection current.",
+   "img": "img/2A_fig2A-6.png",
+   "important": true,
+   "why": "Convection current in a room",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "2A-F7",
+   "label": "Figure 2A–7",
+   "caption": "Forced convection from a ceiling fan. Warm air that rises to the ceiling is forced down by rotation of the fan blades.",
+   "img": "img/2A_fig2A-7.png",
+   "important": true,
+   "why": "Natural vs forced convection",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "2A-F8",
+   "label": "Figure 2A–8",
+   "caption": "Sea breeze and land breeze formed by natural convection, driven by the differential warming and cooling of land and sea; the land heats up faster than the ocean in the hot sun, but also cools down faster once the sun has set",
+   "img": "img/2A_fig2A-8.png",
+   "important": true,
+   "why": "Sea/land breeze convection cells; needed for SQ6 and WS7",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "2A-F11",
+   "label": "Figure 2A–11",
+   "caption": "Evaporative air conditioning drawing hot air from outside and delivering cool air inside. Circulating water drips onto and percolates through vertical pores in the yellow porous material and evaporates from it, helped by the air being forced through horizontal pores.",
+   "img": "img/2A_fig2A-11.png",
+   "important": true,
+   "why": "Everyday application of evaporative cooling",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 13
+   }
+  },
+  {
+   "id": "2A-T3",
+   "label": "Table 2A–3",
+   "caption": "Specific heat capacity of different materials",
+   "img": "img/2A_tab2A-3.png",
+   "important": true,
+   "why": "c values for calculations; water is high",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 14
+   }
+  },
+  {
+   "id": "2A-F13",
+   "label": "Figure 2A–13",
+   "caption": "Water change of state diagram",
+   "img": "img/2A_fig2A-13.png",
+   "important": true,
+   "why": "Heating curve: plateaus are changes of state (Q=mL), slopes are Q=mcΔT",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 16
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE2A-1",
+   "title": "Thermal energy change in water",
+   "question": "How much energy needs to be added to 2 kg of water to raise its temperature from 20°C to 100°C? Take the specific heat capacity of water, $c$, to be 4190 J kg$^{-1}$ K$^{-1}$.",
+   "steps": [
+    "Using $Q = mc\\Delta T$, where:",
+    "$m = 2$ kg",
+    "$c = 4190$ J kg$^{-1}$ K$^{-1}$",
+    "$\\Delta T = 80$ K",
+    "gives:",
+    "$Q = 2 \\times 4190 \\times 80$",
+    "$= 670\\,400$ J",
+    "$= 670$ kJ"
+   ],
+   "answer": "670 kJ",
+   "img": [],
+   "criteria": [
+    "2A.8",
+    "2A.9"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 14
+   }
+  },
+  {
+   "id": "WE2A-2",
+   "title": "Energy in phase change of water",
+   "question": "How much energy needs to be added to 2.0 kg of ice at 0.0°C to convert all the ice into water? Compare this to the amount of energy that needs to be added to 2.0 kg of water at 100°C to convert all the water into steam.",
+   "steps": [
+    "Use $L_{fusion}$ for water as 334 kJ kg$^{-1}$ and $L_{vaporisation}$ for water as 2256 kJ kg$^{-1}$.",
+    "To find the energy needed to convert the ice into water, use Formula 2A–2: $Q = mL$.",
+    "Where:",
+    "$m = 2$ kg",
+    "$L = 334$ kJ kg$^{-1}$",
+    "gives:",
+    "$Q = 2 \\times 334 \\times 10^{3}$",
+    "$= 668 \\times 10^{3}$",
+    "$= 668$ kJ",
+    "To find the energy needed to convert the water into steam, use Formula 2A–2: $Q = mL$.",
+    "Where:",
+    "$m = 2$ kg",
+    "$L = 2256$ kJ kg$^{-1}$",
+    "gives:",
+    "$Q = 2 \\times 2256 \\times 10^{3}$",
+    "$= 4512 \\times 10^{3}$",
+    "$= 4512$ kJ",
+    "Comparing the two answers, you see that it takes 3844 kJ more energy to convert 2.0 kg of water at 100°C into steam than it does to convert 2.0 kg of ice at 0.0°C into water. It takes almost seven times the energy to cause the change of state from water to steam than from ice to water."
+   ],
+   "answer": "668 kJ (melting); 4512 kJ (vaporising); 3844 kJ more, almost seven times",
+   "img": [],
+   "criteria": [
+    "2A.6",
+    "2A.8",
+    "2A.10"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 18
+   }
+  },
+  {
+   "id": "WE2A-3",
+   "title": "Application to cooling a drink",
+   "question": "A container of 1.00 kg of water at 20°C is cooled by the addition of 100 g of ice at 0°C. Assume that the container is insulated. Find the final temperature of the drink when all the ice has melted and the entire container is at the same temperature.",
+   "steps": [
+    "The ice gains energy when melting, $Q_1$, and after it melts into water it gains more energy, $Q_2$, as it warms up to the final temperature, $T$. The drink loses energy, $Q_3$, as it cools to the final temperature, $T$. The law of conservation of energy means that $Q_1 + Q_2 = Q_3$.",
+    "Use Formula 2A–2: $Q = mL$ to find the value of $Q_1$.",
+    "Where:",
+    "$m_{ice} = 0.100$ kg",
+    "$L = 334$ kJ kg$^{-1}$",
+    "gives:",
+    "$Q_1 = mL$",
+    "$= 0.100 \\times 334\\,000$",
+    "$= 33\\,400$ J",
+    "Note: you need to convert temperatures in degrees Celsius to kelvins (20°C = 293 K, 0°C = 273 K).",
+    "Use Formula 2A–1: $Q = mc\\Delta T$ to find the values of $Q_2$ and $Q_3$.",
+    "Where:",
+    "$m_{water} = 0.100$ kg",
+    "$c_{water} = 4190$ J kg$^{-1}$ K$^{-1}$",
+    "$\\Delta T = T - 273$ K",
+    "gives:",
+    "$Q_2 = 0.100 \\times 4190 \\times (T - 273)$",
+    "$= 419.0 \\times (T - 273)$ J",
+    "Using:",
+    "$m_{water} = 0.100$ kg",
+    "$c_{water} = 4190$ J kg$^{-1}$ K$^{-1}$",
+    "$\\Delta T = 293 - T$ K",
+    "gives:",
+    "$Q_3 = 1.000 \\times 4190 \\times (293 - T)$",
+    "$= 4190 \\times (293 - T)$ J",
+    "Putting this all together using the law of conservation of energy, $Q_1 + Q_2 = Q_3$ gives:",
+    "$33\\,400 + 419.0(T - 273) = 4190 \\times (293 - T)$",
+    "Solving for $T$ gives:",
+    "$T = \\dfrac{-33\\,400 + 419 \\times 273 + 4190 \\times 293}{419 + 4190} = 283.9$ K",
+    "Hence, the final temperature of the water is 10.9°C."
+   ],
+   "answer": "10.9°C (283.9 K)",
+   "img": [],
+   "criteria": [
+    "2A.8",
+    "2A.9",
+    "2A.10"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 19
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "2A-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "Convert the boiling point of water from Celsius into kelvin.",
+   "answer": "To 100°C add 273.15 to give 373.15 K",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "2A.3"
+   ],
+   "src": {
+    "file": "2A Check-in – Set 1.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  },
+  {
+   "id": "2A-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "Which is a lower temperature: –200°C or 63 K?",
+   "answer": "63 K, –200°C is only 73.15 K",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "2A.3"
+   ],
+   "src": {
+    "file": "2A Check-in – Set 1.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  },
+  {
+   "id": "2A-CI1.3",
+   "set": 1,
+   "n": 3,
+   "question": "What does the reading on a thermometer measure?",
+   "answer": "A value proportional to the average translational kinetic energy of the molecules",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "2A.1",
+    "2A.2"
+   ],
+   "src": {
+    "file": "2A Check-in – Set 1.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  },
+  {
+   "id": "2A-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "What is the dominant type of thermal energy transfer in solids?",
+   "answer": "Conduction",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "2A.4"
+   ],
+   "src": {
+    "file": "2A Check-in – Set 2.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  },
+  {
+   "id": "2A-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "What is the is the dominant type of thermal energy transfer in liquids and gases?",
+   "answer": "Convection",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "2A.4"
+   ],
+   "src": {
+    "file": "2A Check-in – Set 2.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  },
+  {
+   "id": "2A-CI2.3",
+   "set": 2,
+   "n": 3,
+   "question": "Is there a minimum temperature for an object to transfer energy by radiation?",
+   "answer": "All objects with a temperature above 0 K radiate energy.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "2A.4"
+   ],
+   "src": {
+    "file": "2A Check-in – Set 2.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  },
+  {
+   "id": "2A-CI2.4",
+   "set": 2,
+   "n": 4,
+   "question": "What is the cooling mechanism of a Coolgardie safe?",
+   "answer": "Evaporative cooling",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "2A.4"
+   ],
+   "src": {
+    "file": "2A Check-in – Set 2.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  },
+  {
+   "id": "2A-CI3.1",
+   "set": 3,
+   "n": 1,
+   "question": "Which is greater: water’s latent heat of melting or its latent heat of condensation?",
+   "answer": "Water’s latent heat of melting is 334 kJ kg$^{-1}$; its latent heat of condensation is 2256 kJ kg$^{-1}$",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "2A.6"
+   ],
+   "src": {
+    "file": "2A Check-in – Set 3.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  },
+  {
+   "id": "2A-CI3.2",
+   "set": 3,
+   "n": 2,
+   "question": "How much energy is needed to melt 10 kg of ice?",
+   "answer": "3340 kJ",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "2A.10"
+   ],
+   "src": {
+    "file": "2A Check-in – Set 3.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  },
+  {
+   "id": "2A-CI3.3",
+   "set": 3,
+   "n": 3,
+   "question": "How much energy is needed to raise the temperature of 1 kg of water by 10 K?",
+   "answer": "41.9 kJ",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "2A.9"
+   ],
+   "src": {
+    "file": "2A Check-in – Set 3.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "2A-SQ1",
+   "n": "1",
+   "question": "Which of the following temperature pairs are the same, to within one degree kelvin?",
+   "options": [
+    "A. 0 K and 273°C",
+    "B. –113°C and 160 K",
+    "C. 20°C and 253 K",
+    "D. 370 K and 90°C"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "2A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "2A Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2A-SQ2",
+   "n": "2",
+   "question": "The temperature of a block of material is",
+   "options": [
+    "A. linked to the total thermal energy in the block.",
+    "B. proportional to the kinetic energy of the most energetic molecules in the block.",
+    "C. a measure of the amount of energy that can be extracted from the block.",
+    "D. a measure of the average potential energy of the molecules in the block."
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "2A.1",
+    "2A.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "2A Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2A-SQ3",
+   "n": "3",
+   "question": "When some methylated spirit at room temperature is wiped on your hand, it feels cool because",
+   "options": [
+    "A. the methylated spirit is a good thermal conductor.",
+    "B. of convection currents in the air around your hand.",
+    "C. the most energetic molecules of methylated spirit evaporate.",
+    "D. the methylated spirit was kept at a lower temperature."
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "2A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "2A Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2A-SQ4",
+   "n": "4",
+   "question": "Energy transfers using radiation",
+   "options": [
+    "A. occur with all objects above 0 K.",
+    "B. only occur with glowing objects.",
+    "C. cannot pass through a vacuum.",
+    "D. do not depend on the surfaces involved."
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "2A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "2A Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2A-SQ5",
+   "n": "5",
+   "question": "A block of wood at 20°C and a block of aluminium also at 20°C feel to be at different temperatures when you put your hand on them. The aluminium block feels colder. This is because",
+   "options": [
+    "A. aluminium is a better radiator than wood.",
+    "B. aluminium is a better thermal conductor than wood.",
+    "C. wood is a better thermal conductor than aluminium.",
+    "D. your hand is not an accurate thermometer."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "2A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "2A Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2A-SQ6",
+   "n": "6",
+   "question": "Locations beside the sea on the edge of a dry land mass can experience a sea breeze during a sunny day and a land breeze in the night. Use the high specific heat of water and the phenomenon of convection to explain the existence and direction of these two breezes.",
+   "options": [],
+   "answer": "The land mass with a relatively low specific heat warms up more than the sea water mass. The warm air above the land rises (due to a lower density) and forms a natural convection cell, as shown here. This is a sea breeze.\nAt night, the land mass cools more quickly while the sea water mass remains relatively warmer, and a convection cell in the opposite direction forms. This is a land breeze. [answer includes convection-cell diagrams in the Suggested responses PDF]",
+   "marks": null,
+   "kind": "explain",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "2A.4",
+    "2A.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "2A Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2A-SQ7a",
+   "n": "7a",
+   "question": "An electric kettle contains 1.5 kg of water at 20°C and has a power rating of 2000 W.\na Assume it is insulated perfectly. How long will it take to raise the entire 1.5 kg of water to boiling point?",
+   "options": [],
+   "answer": "Energy required $= mc\\Delta T = 1.5 \\times 4190 \\times 80 = 502\\,800$ J\nKettle provides 2000 J per second, so: time = 251 s = 4.2 min",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "2A.8",
+    "2A.9"
+   ],
+   "img": [],
+   "src": {
+    "file": "2A Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2A-SQ7b",
+   "n": "7b",
+   "question": "An electric kettle contains 1.5 kg of water at 20°C and has a power rating of 2000 W.\nb Assuming all the water in the kettle is at 100°C, how much longer will it take it to convert all the water to steam?",
+   "options": [],
+   "answer": "Energy required $= mL = 1.5 \\times 2\\,256\\,000 = 3\\,384\\,000$ J\nKettle provides 2000 J per second, so: time = 1692 s = 28.2 min",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "2A.8",
+    "2A.10"
+   ],
+   "img": [],
+   "src": {
+    "file": "2A Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2A-SQ8",
+   "n": "8",
+   "question": "Calculate the energy required to convert 1 kg of ice at –20°C to water at +20°C. Use the specific heat of ice, which is different from that of water, and is equal to 2108 J kg$^{-1}$.",
+   "options": [],
+   "answer": "There are three steps required: the warming of ice from –20°C to ice at 0°C, the conversion of the ice to water at 0°C, and the warming of the water to +20°C.\nStep 1 uses $Q = mc\\Delta T = 2108 \\times 20 = 42\\,160$ J\nStep 2 uses $Q = mL = 334\\,000$ J\nStep 3 uses $Q = mc\\Delta T = 4190 \\times 20 = 83\\,800$ J\nTotal is 459 960 J.",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "2A.8",
+    "2A.9",
+    "2A.10"
+   ],
+   "img": [],
+   "src": {
+    "file": "2A Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2A-SQ9",
+   "n": "9",
+   "question": "When soups contain a large proportion of solids (e.g. vegetables, noodles, meat), compared to water, they tend to cool more quickly. Suggest physical reasons for this.",
+   "options": [],
+   "answer": "Soup with lots of solid would mean a lower proportion of water and a lower specific heat, hence they would warm and cool more quickly.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "2A.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "2A Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2A-SQ10",
+   "n": "10",
+   "question": "Suggest why people sometimes prefer mittens (left) to gloves (right) in cold weather.",
+   "options": [],
+   "answer": "The surface area through which thermal energy would be conducted away on a cold day from the hands is less with mittens than with gloves; hence there will be less thermal energy loss.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "2A.4"
+   ],
+   "img": [
+    "img/2A_SQ10a.png",
+    "img/2A_SQ10b.png"
+   ],
+   "src": {
+    "file": "2A Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2A-SQ11",
+   "n": "11",
+   "question": "A 1.5 kg block of a metal alloy is heated, raising its thermal energy by 4500 J. Its temperature rises by 5.0°C. Calculate the specific heat capacity of the alloy.",
+   "options": [],
+   "answer": "Use $Q = mc\\Delta T$ with $c$ as subject.\nAnswer is 600 J kg$^{-1}$ K$^{-1}$.",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "youtry",
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "2A.9"
+   ],
+   "img": [
+    "img/2A_SQ11.png"
+   ],
+   "src": {
+    "file": "2A Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 2A–1 Thermal energy",
+  "total": 42,
+  "questions": [
+   {
+    "id": "WS2A-1",
+    "n": "1",
+    "question": "Match the term with its description. (7 marks)\nTerms: i. Celsius scale; ii. Change of state; iii. Condensation; iv. Conduction; v. Convection; vi. Evaporative cooling; vii. Fusion; viii. Heat; ix. Kelvin scale; x. Melting; xi. Specific heat capacity; xii. Specific latent heat; xiii. Thermal energy; xiv. Vaporisation\nDescriptions: a. phase change from solid to liquid; b. most common thermal energy transfer in fluids; c. energy required to change the temperature of 1 kg of a substance by 1 K; d. change from liquid to solid; e. dominant thermal energy transfer in solids; f. change from liquid to gaseous phase; g. cooling of liquids involving escape of most energetic molecules; h. the sum of all the random potential and kinetic energy of its molecules; i. temperature scale where water boils at 100 degrees; j. phase change involving change of molecular bonds; k. thermal energy transfer into or out of an object; l. energy required to change the phase of 1 kg of a material; m. temperature scale where zero is the minimum temperature; n. change from gaseous to liquid phase",
+    "answer": "i–i; ii–j; iii–n; iv–e; v–b; vi–g; vii–d; viii–k; ix–m; x–a; xi–c; xii–l; xiii–h; xiv–f",
+    "marks": 7,
+    "kind": "recall",
+    "size": "long",
+    "phase": [
+     "keyidea",
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "2A.1",
+     "2A.4",
+     "2A.5",
+     "2A.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "2A Worksheet 2A–1 Thermal energy.docx",
+     "answer_file": "2A Worksheet 2A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2A-2a",
+    "n": "2a",
+    "question": "Convert 375 K to degrees Celsius (1 mark)",
+    "answer": "102°C (subtract 273)",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "wedo"
+    ],
+    "pair_with": "WS2A-2b",
+    "criteria": [
+     "2A.3"
+    ],
+    "img": [],
+    "src": {
+     "file": "2A Worksheet 2A–1 Thermal energy.docx",
+     "answer_file": "2A Worksheet 2A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2A-2b",
+    "n": "2b",
+    "question": "Convert –43°C to kelvins. (1 mark)",
+    "answer": "230 K (add 273)",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "pair_with": "WS2A-2a",
+    "criteria": [
+     "2A.3"
+    ],
+    "img": [],
+    "src": {
+     "file": "2A Worksheet 2A–1 Thermal energy.docx",
+     "answer_file": "2A Worksheet 2A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2A-3",
+    "n": "3",
+    "question": "Using the principles of physics in this chapter, identify the three main reasons that a person walking over hot coals does not burn their feet. (3 marks)",
+    "answer": "The thermal conductivity of the coals is low. The specific heat capacity of the coals is low. The contact time of feet and coals is relatively low.",
+    "marks": 3,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "2A.4",
+     "2A.5"
+    ],
+    "img": [],
+    "src": {
+     "file": "2A Worksheet 2A–1 Thermal energy.docx",
+     "answer_file": "2A Worksheet 2A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2A-4",
+    "n": "4",
+    "question": "Distinguish between thermal energy and temperature. (2 marks)",
+    "answer": "The thermal energy of an object is the total of all the kinetic and potential energies of the molecules of the object, while the temperature is related to the average energy of the molecules. An object can have a high temperature but a low thermal energy.",
+    "marks": 2,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "exit",
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "2A.1",
+     "2A.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "2A Worksheet 2A–1 Thermal energy.docx",
+     "answer_file": "2A Worksheet 2A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2A-5",
+    "n": "5",
+    "question": "Distinguish between the terms heat and thermal energy. (2 marks)",
+    "answer": "The thermal energy of an object is the total of all the kinetic and potential energies of the molecules of the object. The term 'heat' means the amount of thermal energy gained or lost by objects.",
+    "marks": 2,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "exit",
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "2A.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "2A Worksheet 2A–1 Thermal energy.docx",
+     "answer_file": "2A Worksheet 2A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2A-6",
+    "n": "6",
+    "question": "A metal cup of hot coffee sits cooling on a metal bench in a room that is at normal temperature. The cup does not have a lid. Identify the main mechanisms by which the thermal energy of the cup and coffee decreases. (4 marks)",
+    "answer": "The metal cup of hot coffee will lose thermal energy by heat transfer from hotter to cooler matter. The heat will transfer by:\n- conduction of heat through the walls and base of the metal cup to the air and the metal bench\n- convection of heat through the liquid coffee from hotter to cooler regions and then by conduction to the metal cup\n- by evaporative cooling from the liquid surface of the coffee\n- by infrared radiation from all parts of the coffee and cup.\nNote: there will also be convection of heat in the air surrounding the cup of coffee. but this would be energy that has already left the cup of coffee.",
+    "marks": 4,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "wedo",
+     "practice"
+    ],
+    "pair_with": "CH2-RQ15",
+    "criteria": [
+     "2A.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "2A Worksheet 2A–1 Thermal energy.docx",
+     "answer_file": "2A Worksheet 2A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2A-7",
+    "n": "7",
+    "question": "Explain with diagrams the physical causes of land breezes and sea breezes at seaside locations during sunny summer weather. (8 marks)",
+    "answer": "Diagrams and explanation should be in line with Figure 2A–8 on page 54 of textbook. [answer image]",
+    "marks": 8,
+    "kind": "explain",
+    "size": "long",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "2A.4",
+     "2A.5"
+    ],
+    "img": [
+     "img/2A_WS7ans.png"
+    ],
+    "src": {
+     "file": "2A Worksheet 2A–1 Thermal energy.docx",
+     "answer_file": "2A Worksheet 2A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2A-8a",
+    "n": "8a",
+    "question": "Identify the main components of the solar radiation that reaches the surface of the Earth, giving their relative intensities as a percentage of total radiation. (2 marks)",
+    "answer": "At Earth's surface approximately 4% UV, 54% IR and 42% visible light is received as a percentage of total radiation. Note: there is more UV in the upper atmosphere.",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "2A.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "2A Worksheet 2A–1 Thermal energy.docx",
+     "answer_file": "2A Worksheet 2A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2A-8b",
+    "n": "8b",
+    "question": "Identify the ways in which the human body's senses can detect solar radiation. (2 marks)",
+    "answer": "Our eyes can detect visible wavelengths; our skin detects infrared radiation as heat. Note: ultraviolet light is not detected by the sense but does show up as tanning and skin damage from UV exposure.",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "2A.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "2A Worksheet 2A–1 Thermal energy.docx",
+     "answer_file": "2A Worksheet 2A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2A-9a",
+    "n": "9a",
+    "question": "Calculate the thermal energy needed to raise the temperature of 5.0 kg of aluminium from 20°C to 200°C. Take $c_{Al}$ to be 900 J kg$^{-1}$ K$^{-1}$. (2 marks)",
+    "answer": "Using $Q = mc\\Delta T$: $Q = 5.0 \\times 900 \\times 180 = 810$ kJ",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "pair_with": "WE2A-1",
+    "criteria": [
+     "2A.9"
+    ],
+    "img": [],
+    "src": {
+     "file": "2A Worksheet 2A–1 Thermal energy.docx",
+     "answer_file": "2A Worksheet 2A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2A-9b",
+    "n": "9b",
+    "question": "Calculate the thermal energy released when 2.0 kg of steam condenses at to water at 100°C. Take the specific latent heat of condensation of steam to be 2260 kJ kg$^{-1}$. (2 marks)",
+    "answer": "Using $Q = mL$: $Q = 2.0 \\times 2260 = 4520$ kJ",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "pair_with": "WE2A-2",
+    "criteria": [
+     "2A.10"
+    ],
+    "img": [],
+    "src": {
+     "file": "2A Worksheet 2A–1 Thermal energy.docx",
+     "answer_file": "2A Worksheet 2A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2A-9c",
+    "n": "9c",
+    "question": "Calculate the thermal energy change when 500 g of water at 20°C changes to ice at 0°C. Take the latent heat of fusion of water to be 334 kJ kg$^{-1}$ and the specific heat of water as 4190 J kg$^{-1}$ K$^{-1}$. (4 marks)",
+    "answer": "First calculate the heat leaving the water to drop its temperature from 20°C to 0°C.\nUsing $Q = mc\\Delta T$: $Q = 0.50 \\times 4190 \\times 20 = 41.9$ kJ\nThen use $Q = mL$ to calculate the heat leaving to change the water to ice: $Q = 0.50 \\times 334 = 167$ kJ\nAdd these two values to give 167 + 42 = 209 kJ",
+    "marks": 4,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "pair_with": "WE2A-3",
+    "criteria": [
+     "2A.8",
+     "2A.9",
+     "2A.10"
+    ],
+    "img": [],
+    "src": {
+     "file": "2A Worksheet 2A–1 Thermal energy.docx",
+     "answer_file": "2A Worksheet 2A–1 Answers.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "2A.3"
+   ],
+   "wedo": "WS2A-2a",
+   "youtry": [
+    "WS2A-2b"
+   ],
+   "origin": "adapted",
+   "note": "No worked example for Celsius/kelvin conversion; worksheet Q2a as We do (steps written from the answer), Q2b is the reverse conversion."
+  },
+  {
+   "criteria": [
+    "2A.4"
+   ],
+   "wedo": "WS2A-6",
+   "youtry": [
+    "CH2-RQ15"
+   ],
+   "origin": "adapted",
+   "note": "No worked example for identifying transfer mechanisms; WS Q6 (metal cup of coffee) as We do, review Q15 (coffee on table) is the same skill."
+  },
+  {
+   "criteria": [
+    "2A.9"
+   ],
+   "wedo": "WE2A-1",
+   "youtry": [
+    "WS2A-9a",
+    "2A-SQ11"
+   ],
+   "note": "Q = mcΔT forward (9a); SQ11 rearranges for c."
+  },
+  {
+   "criteria": [
+    "2A.10"
+   ],
+   "wedo": "WE2A-2",
+   "youtry": [
+    "WS2A-9b"
+   ],
+   "note": "Q = mL single-step; 9b is condensation (energy released)."
+  },
+  {
+   "criteria": [
+    "2A.8"
+   ],
+   "wedo": "WE2A-3",
+   "youtry": [
+    "WS2A-9c",
+    "2A-SQ7a"
+   ],
+   "note": "Combining Q = mcΔT and Q = mL; 9c is temperature change then state change. SQ7 adds power/time. WE2A-3 is harder (equilibrium/mixtures) than the You trys."
+  }
+ ],
+ "skills": [
+  {
+   "id": "2A-SK1",
+   "heading": "2A Skills",
+   "text": "1 Most calculations in this section use kelvin rather than degrees Celsius. Make sure that you can convert between these scales accurately.\n2 Make sure you can distinguish between thermal energy and temperature – the first is the total of all the random kinetic and potential energies of the molecules and the second is the quantity measured by a thermometer. Temperature rises and falls as the thermal energy rises and falls but the connection between them is complicated.\n3 You should be able to distinguish clearly between conduction, convection, radiation and evaporation as ways in which thermal energy transfers can take place.\n4 Ensure that you can use the relationship $Q = mc\\Delta T$ to calculate the energy transfers involved in raising or lowering the temperature of a substance.\n5 Ensure you can use the relationship $Q = mL$ to calculate the energy involved in changing the state of a substance for example, from solid to liquid (or vice versa) or liquid to gas (or vice versa).",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 20
+   }
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P2A-1",
+   "title": "Practical 2A–1 Convection in water",
+   "file": "2A Practical 2A–1 Convection in water.docx",
+   "aim": "To make the convective flow in water visible and to investigate the conditions under which convection occurs in a liquid."
+  },
+  {
+   "id": "P2A-2",
+   "title": "Practical 2A–2 Specific heat capacity of water",
+   "file": "2A Practical 2A–2 Specific heat capacity of water.docx",
+   "aim": "The aim of this practical activity is to calculate the specific heat capacity of water but also sharpening your thinking about how to modify conditions to reduce the error in your result."
+  }
+ ],
+ "notes": "No worked examples for temperature conversion (2A.3) or qualitative transfers (2A.4); wedo_plan uses worksheet Qs (adapted). SQ6 answer and WS7 answer rely on diagrams (WS7 answer image saved; SQ6 answer diagrams are in the Suggested responses PDF, not cropped). SQ8 states c_ice as 2108 J kg^-1 (units as printed; textbook text uses 2093 J kg^-1 K^-1). WS9b/9c answers mix kJ and J as printed (9c: 0.50 × 334 = 167 kJ). WE2A-3 printed working says m_water = 0.100 kg for Q3 but uses 1.000 kg (verbatim). Table 2A-2 (conductivities) not cropped. PowerPoint Figure 2A–13 file exists in the section folder (same as fig 2A-13)."
+}

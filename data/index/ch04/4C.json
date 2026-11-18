@@ -1,0 +1,617 @@
+{
+ "code": "4C",
+ "title": "Nuclear energy for Australia",
+ "chapter": 4,
+ "unit": 1,
+ "aos": 2,
+ "study_design": [
+  "Investigate the viability of nuclear energy as an energy source for Australia"
+ ],
+ "criteria": [
+  "4C.1",
+  "4C.2"
+ ],
+ "glossary": [],
+ "formulas": [
+  {
+   "id": "F4C-1",
+   "name": "Efficiency",
+   "latex": "\\text{efficiency} = \\frac{\\text{useful energy out}}{\\text{energy in}}",
+   "where": [],
+   "criteria": [
+    "4C.1"
+   ],
+   "src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   },
+   "origin": "adapted",
+   "note": "Not printed in 4C; implied by Check-in 3a answer (1000/2800 = 36%)."
+  }
+ ],
+ "engage": {
+  "heading": "Natural nuclear reactors",
+  "text": "In the 1970s, physicists measuring samples of uranium ore in Gabon, West Africa, found evidence of a natural chain reaction that occurred about 1800 million years ago!\nUranium ore that is dug up today normally contains the isotopes uranium-235 and uranium-238 in the ratio of 1:140; this percentage is fixed by the relative half-lives of the two isotopes. The Gabon sample, however, contained unusually low proportions of uranium-235, especially where the ore was rich in uranium. Further investigation revealed that there were traces of other rare elements in the ore body, in proportions typical of those found in artificial nuclear reactors. Physicists think that 1800 million years ago, when the proportion of uranium-235 was possibly as high as 3%, there was enough fissile uranium in the rock for a natural chain reaction to begin. It is believed that water trapped in the surrounding sandstone may have acted as a moderator. The reactors probably switched on and off at regular intervals. The nuclear fission began, moderated by water, and continued until all available water boiled away as a result of nuclear heat. The reactions could not begin again until new water entered the reactor. This water would be replenished periodically. As a result, the Gabon natural nuclear reactors were extremely stable. There was not a single meltdown; the reactors operated in a stable fashion for up to one million years. Eventually, so much of the fissionable uranium-235 had been used that the Gabon natural nuclear reactors shut themselves down. Evidence of 17 such natural nuclear reactors were eventually found in Gabon. Unfortunately, subsequent intensive uranium mining has destroyed 16 of these natural nuclear reactors.\nThere is a tendency in public opinion to think that nuclear energy and ionising radiation on Earth are entirely human-made, but this research highlights these processes at work in nature.",
+  "src": {
+   "file": "Physics12_Ch04.pdf",
+   "page": 34
+  }
+ },
+ "chunks": [
+  {
+   "id": "4C-E1",
+   "heading": "Historical and contemporary aspects of Australian attitudes to nuclear energy",
+   "text": "The prospect of using nuclear energy as an energy source in Australia has been a divisive topic of public debate since the 1950s. There have been many aspects to the debate – some involving an understanding of the physics of nuclear energy and its implications for humanity and the environment, and others relying on less-informed views.\nThe issues include the secret British atomic bomb testing on Australian soil and the forceful removal of Aboriginal and Torres Strait Islander peoples from their land; the French nuclear bomb tests in the Pacific; uranium mining in Kakadu National Park; Greenpeace occupying the Lucas Heights Nuclear reactor when protesting about the plans to build a new reactor on the site in Sydney; the purchasing of nuclear submarines by the Australian Government, and the minimal CO$_2$ impact of nuclear power stations on the environment in our pursuit of reaching climate change targets.",
+   "figures": [],
+   "criteria": [
+    "4C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 35
+   }
+  },
+  {
+   "id": "4C-E2",
+   "heading": "Maralinga",
+   "text": "In the 1950s, the Australian Government secretly authorised British atom bomb tests in Australia. Between 1955 and 1963, seven series of atomic tests were undertaken on the Aboriginal land of the Anangu people. Many of the Maralinga Tjarutja, the traditional Aboriginal owners of the land, were forcibly removed from their traditional lands. This forced relocation destroyed the traditional lifestyle of many Aboriginal families. Survivors recall seeing the fleeing Aboriginal people being picked up in military trucks or forced on long walks through the desert without water, on routes that avoided exposure to the contaminated lands.\nIt is believed about 1200 Aboriginal people were exposed to radiation during the testing. The radioactive fallout – called 'puyu' (black mist) by Aboriginal people – caused sore eyes, skin rashes, diarrhoea, vomiting, fever and the early death of entire families. The explosions caused blindness. Long-term illnesses such as cancer and lung disease were found in the 1980s, a time when some Elders grew restless and walked back into their Country.\nIn addition to the major tests, the British carried out 550 minor trials between 1953 and 1963. These experiments were subcritical tests involving the testing of nuclear weapon components, but were not nuclear explosions. They involved experiments with plutonium, uranium, polonium and beryllium to study dispersal patterns of radioactive materials with the prevailing winds.\nThe United Kingdom Atomic Weapons Research Establishment conducted a minor clean-up of the site in 1964, followed by a major clean-up in 1967. An area of 2 km$^2$ around the firing range site was ploughed, and all the contaminated equipment and material was buried in 22 pits. These were capped with a sarcophagus (tomb) of 650 tonnes of concrete to prevent any radioactive material or radiation escaping. The British Government stated that 20 kg of the 22 kg of plutonium exploded at the site had been collected and was completely contained in the capped pits. The Australian Government then released the British Government from all further liabilities concerning the Maralinga site.\nIn 1984, approximately 3000 km$^2$ of land around Maralinga was scheduled to be returned to the Maralinga Tjarutja, the traditional Aboriginal owners of the land. As a precaution, scientists from the Australian Radiation Laboratory (ARL) were asked to check the radiation levels at the site. They were astonished to find that the level of radioactivity was 10 times higher than predicted and much more widely dispersed than had been claimed by the British Government. The scientists measured radioactivity levels over 400 kBq m$^2$ at distances 2.5 km from the testing site. The ARL scientists estimated that there were more than 3 million particles contaminated with plutonium, ranging in size from a few tens of micrometres in diameter to objects bigger than a cricket ball. The ARL scientists concluded that, contrary to the British assurances, most of the 22 kg of plutonium used in the tests was in fact dispersed in the lands of the Maralinga Tjarutja, in an area that extended more than 150 km from the British testing sites. Although plutonium is a short-range alpha particle emitter, it is easily inhaled with the dust during windy periods in the desert area and is therefore extremely dangerous. In addition, plutonium has a half-life of 24 100 years, meaning it will be almost a quarter of a million years before its activity is safe enough to make the contaminated lands habitable again.\nIn 1985, The Royal Commission into British Nuclear Tests in Australia found that attempts to ensure the safety of Aboriginal and Torres Strait Islander peoples were riddled by 'ignorance, incompetence and cynicism'. The boundaries of the test fields were inadequately patrolled and the British dismissed concerns for Aboriginal and Torres Strait Islander peoples' safety with the heartless comment that 'a dying race couldn't influence the defence of Western civilisation'.\nExtensive research into this shameful chapter in Australia's history is still being undertaken today and a recent report into high-level plutonium waste on the site indicates that some areas on the site are still not safe for human habitation.",
+   "figures": [],
+   "criteria": [
+    "4C.1",
+    "4C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 35
+   },
+   "note": "Culturally sensitive content (First Nations peoples). Figure 4C–2 photos not cropped."
+  },
+  {
+   "id": "4C-E3",
+   "heading": "OPAL",
+   "text": "Australia's Open Pool Australian Lightwater (OPAL) reactor is a state-of-the-art 20 MW multi-purpose reactor that uses 20% enriched uranium to create neutron beams for fundamental materials research as well as producing numerous radioisotopes for medical diagnosis and treatment, industry, agriculture and scientific research. It is situated in Lucas Heights, 31 km south-west of Sydney and is part of the Australian Nuclear Science and Technology Organisation.\nThe heart of the reactor is a compact core of 16 uranium-235 fuel assemblies arranged in a 4 × 4 array, with five control rods controlling the reactor power and facilitating shutdown. OPAL uses low-enriched uranium (20%) fuel.\nOPAL's reactor core is cooled by water and is surrounded by a zirconium alloy 'reflector' vessel that contains heavy water (D$_2$O). The reflector vessel is positioned at the bottom of a 13-metre deep pool of normal (light) water (H$_2$O). The open pool design makes it easy to see and manipulate items inside the reactor pool.\nThe depth of the water acts as an effective radiation shield. The heavy water maintains the nuclear reaction in the core by 'reflecting' neutrons back towards the core.\nEvery Australian is likely to benefit from nuclear medicine and on average will have at least two nuclear medicine procedures in their lifetime. About 75–80% of all of the radioisotopes used in these nuclear medicine procedures in Australia come from the OPAL nuclear research reactor.\nMore than 50 countries use nuclear energy in about 220 research reactors. In addition to research, these reactors produce medical and industrial isotopes.",
+   "figures": [],
+   "criteria": [
+    "4C.1",
+    "4C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 36
+   }
+  },
+  {
+   "id": "4C-E4",
+   "heading": "Nuclear submarines",
+   "text": "In 2021, the Australian Government ordered at least eight new nuclear submarines at an estimated cost of $120 billion. A key feature of the intended submarines is that they are fuelled 'for life' and are capable of being submerged for periods extending up to 6 months. These will carry 500 MW nuclear reactors on board but will carry conventional weapons – not nuclear weapons like their 'cousin' submarines in the United States and United Kingdom, that carry 24 nuclear missiles with a total destructive capacity more than 1000 times the destructive explosive power of the bombs dropped on Hiroshima and Nagasaki.",
+   "figures": [],
+   "criteria": [
+    "4C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 38
+   }
+  },
+  {
+   "id": "4C-E5",
+   "heading": "Nuclear energy for Australia",
+   "text": "Australia has never used nuclear energy for generating electrical power, although Australia has a third of the world's uranium deposits and is the world's third largest producer of uranium for nuclear power stations. It has usually been argued that Australia's significant coal and gas reserves have not necessitated the use of nuclear power.\nThis contrasts sharply with France, which has 56 functioning nuclear reactors generating more than 70% of the country's electricity. France is the world's largest net exporter of electricity due to its very low cost of generation using nuclear power, and gains over €3 billion per year from this. A 2015 energy policy had aimed to reduce the country's share of nuclear generation to 50% by 2025. This target has now been postponed. The country's energy minister said that the target was unrealistic, that it would increase the country's CO$_2$ emissions, endanger security of supply and put jobs at risk.\nWhen greenhouse gas emissions from Australia's current coal, oil and gas exports (3.6% of global total) are added to domestic emissions (1.4% of global total), Australia's contribution to the global climate pollution footprint is about 5%. That's equivalent to the total greenhouse gas emissions of Russia, the world's fifth largest CO$_2$ emitter.\nSome of the reasons for Australia's high levels of emissions include the fact that in 2022 approximately 71% of electricity was generated from fossil fuels (51% of the electricity was generated from coal, 18% from gas and 2% from oil). A warm climate also results in high use of energy-hungry air-conditioning units.\nIn 2021 Australians used 189 billion kilowatt hours (kWh) of electric energy per year. Per capita, this was an average of 7416 kW h. Wind turbines, solar energy and hydro-electricity contributed 29% of our electricity needs.\nAustralia's uranium recent prevent at least 395 million tonnes of CO$_2$ per year being pumped into Earth's atmosphere, relative to the use of black coal. Australia's total low-cost uranium reserves could prevent nearly 40 000 million tonnes of CO$_2$ emissions if these reserves were used instead of fossil fuel for electricity generation.\nA single nuclear power plant of 1000 MW capacity can offset the emission of some 7–8 million tonnes of CO$_2$ each year if this is used instead of black coal generation. A nuclear power plant will also reduce the emission of sulfur dioxide, nitrous oxide and particulates, thereby contributing significantly to improved air quality.",
+   "figures": [],
+   "criteria": [
+    "4C.1",
+    "4C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 38
+   }
+  },
+  {
+   "id": "4C-E6",
+   "heading": "Nuclear energy versus renewables",
+   "text": "So what are the arguments for and against the use of nuclear electricity in Australia? Is the push for renewable energy feasible, viable and stronger than that of nuclear energy? Read the thoughts below and decide.\nJames Lovelock, a scientist and climate change environmentalist, had this to say in 2004.\nNuclear power is the only green solution – Sir James Lovelock, The Independent, 24 May 2004: '… I am a Green and I entreat my friends in the movement to drop their wrongheaded objection to nuclear energy. Even if they were right about its dangers, and they are not, its worldwide use as our main source of energy would pose an insignificant threat compared with the dangers of intolerable and lethal heat waves and sea levels rising to drown every costal city in the world. … Civilisation is in imminent danger and has to use nuclear – the one safe, available, energy source – now or suffer the pain soon to be inflicted by our outraged planet.'\nThe Mineral Councils of Australia had this to say in 2019.\nUntapped potential and the case for nuclear energy: 'Climate change is real and as global energy demand increases, so does the need to decarbonise our power supplies. Nuclear energy provides around 10 per cent of the world's electricity demand with zero emissions. The power provided by nuclear energy is low cost and can meet the needs of industrial and household consumers 24/7. And billions of citizens in 31 countries already benefit from low cost zero emissions nuclear power. Yet Australia, with the world's largest deposits of uranium, continues to prohibit the use of nuclear power. The House of Representatives Standing Committee on Environment and Energy's Inquiry into the prerequisites for nuclear energy in Australia offers a chance to consider the absurdity of this position. The Minerals Council of Australia strongly supports nuclear power in Australia and continues to promote the case for nuclear energy to support an informed and mature debate on this important issue.'\nIn contrast, the Climate Council of Australia (a peak independent body communicating aspects of climate change) recently made the following points about using nuclear power for electricity generation in Australia.\nNuclear power stations are expensive and take too long to build – Climate Council: Nuclear power stations are not appropriate for Australia – and probably never will be: 'CSIRO says by far the lowest cost way of producing electricity is with solar and wind even when factoring in storage. In contrast, the costs of building and operating nuclear power stations in Australia remain prohibitively high. Further, analysis conducted by the nuclear industry itself shows nuclear power stations take an average of 9.4 years to build – compared to 1–3 years for a major wind or solar project. Australia needs to replace its ageing coal-fired power stations as quickly as possible, and should be slashing its emissions by 75% this decade. As shown in the Australian Energy Market Operator's Integrated System Plan, by far the cheapest and quickest way to do this is to ramp up renewable energy paired with storage like pumped hydro, and batteries.\nNuclear power poses significant community, environmental, health and economic risks. Radiation from major nuclear disasters, such as Chernobyl in 1986 and Fukushima in 2011, have impacted hundreds of thousands of people and contaminated vast areas that take decades to clean up. Even when a nuclear power station operates as intended it creates a long-term and prohibitively expensive legacy of site remediation, fuel processing and radioactive waste storage. They are also water hungry – requiring massive quantities of water for ongoing operations.\nNuclear power is not renewable. Uranium is a finite resource just like coal, oil and gas. While the operation of a nuclear reactor does not create greenhouse gas emissions, all other parts of producing nuclear power are polluting from mining, to construction, decommissioning and waste management.\nAustralia is one of the sunniest and windiest countries on Earth, with enough renewable energy to power resources to power our country 500 times over. Building large-scale wind and solar projects is the cheapest way of producing electricity here, even when paired with storage. It is also low risk, renewable and non-polluting. The bottom line is – nuclear power is the slowest, most expensive, most dangerous and least flexible form of new power generation for Australia. It makes no sense. So let's stop wasting time, and get on with building more renewables.'",
+   "figures": [],
+   "criteria": [
+    "4C.1",
+    "4C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 39
+   }
+  }
+ ],
+ "figures": [],
+ "worked_examples": [],
+ "checkins": [
+  {
+   "id": "4C-CI1.1a",
+   "set": 1,
+   "n": "1a",
+   "question": "What did the British Government test at Maralinga in South Australia in the 1950s and 1960s?",
+   "answer": "The British Government tested seven nuclear bombs and dispersal of radioactive materials at Maralinga.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "4C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 41
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4C-CI1.1b",
+   "set": 1,
+   "n": "1b",
+   "question": "What was the impact on the Maralinga Tjarutja, the traditional Aboriginal owners of the land?",
+   "answer": "They were either forcibly removed from their land or they were exposed to radiation during the testing. The radioactive fallout caused sore eyes, skin rashes, diarrhoea, vomiting, fever and the early death of entire families. The explosions caused blindness.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "4C.1",
+    "4C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 41
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4C-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "What is Australia's OPAL reactor used for?",
+   "answer": "Australia's OPAL reactor creates neutron beams for fundamental materials research, as well as producing numerous radioisotopes for medical diagnosis and treatment, industry, agriculture and scientific research.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "4C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 41
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4C-CI1.3a",
+   "set": 1,
+   "n": "3a",
+   "question": "What is the efficiency of a nuclear reactor boiler that produces 1000 MW electrical energy from a 2800 MW thermal energy.",
+   "answer": "36%\n$\\frac{1000}{2800} = 0.36 = 36\\%$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "4C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 41
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4C-CI1.3b",
+   "set": 1,
+   "n": "3b",
+   "question": "Where does the extra thermal energy of 1800 MW go?",
+   "answer": "The extra thermal energy is dissipated into the atmosphere via cooling towers and/or into cooling bonds.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "4C.1",
+    "4A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 41
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "4C-SQ1",
+   "n": "1",
+   "question": "Putting radioactive plutonium-239, an alpha particle emitter, in concrete capped pits means that the plutonium is",
+   "options": [
+    "A. no longer radioactive.",
+    "B. now safely stored forever.",
+    "C. still radioactive but the alpha particles cannot penetrate the concrete cap.",
+    "D. still radioactive and some of the alpha particles will penetrate the concrete cap but not enough to cause concern."
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 41
+   }
+  },
+  {
+   "id": "4C-SQ2",
+   "n": "2",
+   "question": "On average, every Australian will use nuclear medical radioisotopes produced by the OPAL nuclear reactor",
+   "options": [
+    "A. hardly ever in their lifetime.",
+    "B. less than once in their lifetime.",
+    "C. at least twice in their lifetime.",
+    "D. at least seven times in their lifetime."
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "4C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "4C-SQ3",
+   "n": "3",
+   "question": "Australia has",
+   "options": [
+    "A. a fifth of the world's uranium deposits.",
+    "B. a quarter of the world's uranium deposits.",
+    "C. a third of the world's uranium deposits.",
+    "D. two-thirds of the world's uranium deposits."
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "4C-SQ4",
+   "n": "4",
+   "question": "The Mineral Councils of Australia suggests that Australia's electrical energy needs could best be supplied by",
+   "options": [
+    "A. clean coal.",
+    "B. nuclear fusion power stations.",
+    "C. nuclear fission power stations.",
+    "D. renewable sources like solar and wind."
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "4C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "4C-SQ5",
+   "n": "5",
+   "question": "The Climate Council of Australia suggests that Australia's electrical energy needs could best be supplied by",
+   "options": [
+    "A. clean coal.",
+    "B. nuclear fusion power stations.",
+    "C. nuclear fission power stations.",
+    "D. renewable sources like solar and wind."
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "4C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "4C-SQ6a",
+   "n": "6a",
+   "question": "How much of the 22 kg of plutonium used by the British for nuclear testing at Maralinga was claimed to be buried in capped pits when the British cleaned up the site in 1967?",
+   "answer": "20 kg of plutonium used by the British for nuclear testing at Maralinga was claimed to be buried in capped pits when they cleaned up the site in 1967.",
+   "marks": null,
+   "kind": "recall",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "4C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "4C-SQ6b",
+   "n": "6b",
+   "question": "What did the ARL determine when the Maralinga site was inspected in 1984?",
+   "answer": "That radiation levels were 10 times higher than expected with more than 3 million particles contaminated with plutonium. This investigation revealed that the British had failed to properly contain and clean up the radioactive fallout.",
+   "marks": null,
+   "kind": "recall",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "4C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "4C-SQ6c",
+   "n": "6c",
+   "question": "What is the main implication of the ARL findings for the traditional Aboriginal owners of Maralinga?",
+   "answer": "It made a substantial part of their lands unusable.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "4C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "4C-SQ7",
+   "n": "7",
+   "question": "Plutonium is a short-range alpha particle emitter. Why is it hazardous to have more than 3 million particles contaminated with plutonium (ranging in size from a few tens of micrometres in diameter to objects bigger than a cricket ball) in the land at Maralinga?",
+   "answer": "The smaller particles get picked up in the Maralinga dust when the wind blows and the inhabitants inhale the highly radioactive plutonium.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "youtry",
+    "exit"
+   ],
+   "criteria": [
+    "4C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "4C-SQ8",
+   "n": "8",
+   "question": "Why do Australians need the OPAL nuclear reactor for medical purposes?",
+   "answer": "75–80% of all the nuclear medicine radioisotopes used in Australia are produced by the OPAL nuclear reactor.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4C.1",
+    "4C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "4C-SQ9",
+   "n": "9",
+   "question": "Give the main reason why some people say that nuclear energy is considered better than coal for generating electricity in Australia.",
+   "answer": "Nuclear energy does not produce any significant amounts of CO$_2$.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "youtry",
+    "exit"
+   ],
+   "criteria": [
+    "4C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "4C-SQ10",
+   "n": "10",
+   "question": "What does the Climate Council of Australia suggest is better than either coal or nuclear energy for creating electricity in Australia?",
+   "answer": "The Climate Council of Australia says that renewables sources of energy like solar and wind are better than either coal or nuclear for creating electricity in Australia.",
+   "marks": null,
+   "kind": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 42
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 4C–1 Nuclear energy for Australia",
+  "total": 12,
+  "file": "4C Worksheet 4C–1 Nuclear energy for Australia.docx",
+  "answers_file": "4C Worksheet 4C–1 Answers.docx",
+  "questions": [
+   {
+    "id": "WS4C-1",
+    "n": "1",
+    "question": "Australia has one 20 MW nuclear reactor, known as OPAL, which operates in Lucas Heights, Sydney. What type of nuclear reactor (fission or fusion) is OPAL and what is it mainly used for?",
+    "answer": "OPAL is a nuclear fission reactor.\nOPAL creates neutron beams for fundamental materials research as well as producing numerous radioisotopes in medical diagnosis and treatment, industry, agriculture and scientific research.",
+    "marks": 3,
+    "kind": "recall",
+    "size": "medium",
+    "phase": [
+     "practice",
+     "donow"
+    ],
+    "criteria": [
+     "4C.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "4C Worksheet 4C–1 Nuclear energy for Australia.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS4C-2",
+    "n": "2",
+    "question": "List three advantages and three disadvantages of generating electricity from nuclear power using nuclear fission reactors?",
+    "answer": "Three advantages of generating electricity from nuclear power using nuclear fission reactors could include: reduction in greenhouse gases; ability to provide a steady and reliable base load compared to renewables like solar and wind; allows a sensible transition from fossil fuels such as coal and gas to renewables generation of electricity.\nThree disadvantages of generating electricity from nuclear power using nuclear fission reactors could include: expensive and longer lead times to build nuclear power stations compared to renewables; hazardous long-term radioactive by-products; danger of nuclear accidents or being targeted in conflicts; possibility of spent fuel rods being processed into nuclear weapons.",
+    "marks": 6,
+    "kind": "explain",
+    "size": "long",
+    "phase": [
+     "wedo"
+    ],
+    "criteria": [
+     "4C.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "4C Worksheet 4C–1 Nuclear energy for Australia.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS4C-3",
+    "n": "3",
+    "question": "Explain why you believe Australia should/should not generate electricity using nuclear fission power stations. Choose only one side of the argument (for or against generating electricity using nuclear fission power stations).",
+    "answer": "Arguments for Australia generating electricity using nuclear fission power stations might include: Australia has a third of the world's uranium deposits and is the world's third largest producer of uranium for nuclear power stations. We would be wise to use this natural resource, which does not produce greenhouse gases. Using nuclear energy would assist in mitigating the effect of climate change. We would no longer have to rely on our vast coal and natural gas reserves for generating electricity, which produce copious amounts of greenhouse gases and increase temperatures across the world.\nArguments against Australia generating electricity using nuclear fission power stations might include: Australia is one of the sunniest and windiest countries on earth, with more than enough renewable energy to power our country many times over. Building large-scale wind and solar energy projects is the cheapest way of producing electricity here, even when paired with storage techniques to ensure base-load power can be maintained. It is low-risk, renewable, non-polluting and assists us in meeting climate change targets.",
+    "marks": 3,
+    "kind": "explain",
+    "size": "long",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "4C.1",
+     "4C.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "4C Worksheet 4C–1 Nuclear energy for Australia.docx"
+    },
+    "pair_with": null
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "4C.2"
+   ],
+   "wedo": "WS4C-2",
+   "youtry": [
+    "4C-SQ9",
+    "4C-SQ7"
+   ],
+   "origin": "adapted",
+   "note": "No worked example in 4C. Model advantages/disadvantages from the WS2 answer; students do short evaluative questions."
+  },
+  {
+   "criteria": [
+    "4C.1"
+   ],
+   "wedo": "4C-SK1",
+   "youtry": [
+    "WS4C-3"
+   ],
+   "origin": "adapted",
+   "note": "Model the five critical-thinking steps (4C Skills) on one source (e.g. the Minerals Council extract), then students write a one-sided argument (WS3)."
+  }
+ ],
+ "skills": [
+  {
+   "id": "4C-SK1",
+   "heading": "4C Skills: Critical thinking in physics",
+   "text": "In critical thinking it is important to:\na make sure you understand the crucial concepts and the links between the various ideas\nb determine the relevance and the importance of the arguments and ideas presented\nc appraise arguments and identify any inconsistencies and errors in reasoning\nd note if there are vested interests in organisations presenting certain points of view\ne reflect on how your own assumptions, beliefs and values impact on your evaluation.\nIn this section you are considering the viability of nuclear energy as an energy source for Australia.\nWhat are the crucial concepts? For example: energy use, production processes and environmental consequences using coal, hydro, solar wind and nuclear as energy sources for generating electricity.\nHow are they linked?\nWhat are the arguments presented for and against nuclear energy as an energy source for Australia?\nCan you identify inconsistencies and errors in reasoning in the arguments presented?\nWhat are the benefits to be gained by, for example, the Minerals Council of Australia or the Climate Council of Australia?\nWhat are your own biases and how do they influence your evaluation?",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 41
+   }
+  }
+ ],
+ "pracs": [],
+ "notes": "No worked examples, glossary terms, practicals or slide-worthy diagrams in 4C (photos only, 4C–1 to 4C–4, not cropped). Only one check-in set. Efficiency formula is adapted. WS4C-3 answer models both sides; students choose one. Source typos kept verbatim: 'uranium recent prevent', 'cooling bonds', 'costal'. SQ4 uses the textbook wording (docx omits 'best')."
+}

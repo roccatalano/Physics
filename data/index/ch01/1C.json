@@ -1,0 +1,1820 @@
+{
+ "code": "1C",
+ "title": "Reflection, refraction and dispersion",
+ "chapter": 1,
+ "unit": 1,
+ "aos": 1,
+ "study_design": [
+  "Investigate and analyse theoretically and practically the behaviour of waves including:",
+  "refraction using Snell’s Law: $n_1\\sin(\\theta_1) = n_2\\sin(\\theta_2)$ and $n_1v_1 = n_2v_2$",
+  "total internal reflection and critical angle including applications: $n_1\\sin(\\theta_c) = n_2\\sin(90^\\circ)$",
+  "Investigate and explain theoretically and practically colour dispersion in prisms and lenses with reference to refraction of the components of white light as they pass from one medium to another",
+  "Explain the formation of optical phenomena: rainbows; mirages",
+  "Investigate light transmission through optical fibres for communication"
+ ],
+ "criteria": [
+  "1C.1",
+  "1C.2",
+  "1C.3",
+  "1C.4",
+  "1C.5",
+  "1C.6",
+  "1C.7",
+  "1C.8",
+  "1C.9",
+  "1C.10",
+  "1C.11",
+  "1C.12"
+ ],
+ "glossary": [
+  {
+   "id": "1C-G1",
+   "term": "Reflection",
+   "def": "a change in the direction of the wave crest as it meets the surface between two media that results in the wave travelling back into the medium it came from",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "1C-G2",
+   "term": "Normal",
+   "def": "an imaginary line that extends from the surface of an object and is perpendicular to the tangent of the surface at that point",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "1C-G3",
+   "term": "Refraction",
+   "def": "the change in direction of a wave moving from one medium (or vacuum) to another medium (or vacuum) caused by the wave changing speed",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 22
+   }
+  },
+  {
+   "id": "1C-G4",
+   "term": "Refractive index",
+   "def": "a measure of how much slower light travels through a medium compared to a vacuum; given the symbol n",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 22
+   }
+  },
+  {
+   "id": "1C-G5",
+   "term": "Snell’s law",
+   "def": "a law that describes mathematically the link between the angle of refraction, the angle of incidence and the refractive indices of each medium",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "1C-G6",
+   "term": "Partial internal reflection",
+   "def": "reflection of light at an interface where some of the light has also refracted across the surface",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "1C-G7",
+   "term": "Critical angle",
+   "def": "depends on the refractive index of the medium but is the angle that an incident ray of light will fully reflect at the surface of the medium",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 28
+   }
+  },
+  {
+   "id": "1C-G8",
+   "term": "Total internal reflection",
+   "def": "the phenomenon where all the light at a surface is reflected with no refraction. It occurs when light moves from a medium of higher refractive index to a medium of lower refractive index at an angle of incidence greater than or equal to the critical angle.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 28
+   }
+  },
+  {
+   "id": "1C-G9",
+   "term": "Colour dispersion",
+   "def": "the phenomenon in which white light is split into different light components as it moves from air (or a vacuum) into a medium such as glass",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "1C-G10",
+   "term": "Chromatic distortion",
+   "def": "image distortion caused by light of different colours focusing at different points of an image",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "1C-G11",
+   "term": "Optical fibre",
+   "def": "a flexible transparent fibre made from glass and plastic that can carry digital signals by using the phenomenon of total internal reflection within",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "1C-G12",
+   "term": "Monochromatic",
+   "def": "composed of a single frequency of light or other radiation",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 34
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F1C-1",
+   "name": "The wave equation at the surface of a medium",
+   "latex": "f = \\frac{v_1}{\\lambda_1} = \\frac{v_2}{\\lambda_2}",
+   "where": [
+    {
+     "sym": "f",
+     "meaning": "Frequency of the wave",
+     "unit": "Hz"
+    },
+    {
+     "sym": "v_1",
+     "meaning": "Speed of the wave in the first medium",
+     "unit": "m s^{-1}"
+    },
+    {
+     "sym": "\\lambda_1",
+     "meaning": "Wavelength of the wave in the first medium",
+     "unit": "m"
+    },
+    {
+     "sym": "v_2",
+     "meaning": "Speed of the wave in the second medium",
+     "unit": "m s^{-1}"
+    },
+    {
+     "sym": "\\lambda_2",
+     "meaning": "Wavelength of the wave in the second medium",
+     "unit": "m"
+    }
+   ],
+   "criteria": [
+    "1C.1",
+    "1A.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 22
+   }
+  },
+  {
+   "id": "F1C-2",
+   "name": "The refractive index",
+   "latex": "n = \\frac{c}{v}",
+   "where": [
+    {
+     "sym": "n",
+     "meaning": "Refractive index of the medium",
+     "unit": ""
+    },
+    {
+     "sym": "v",
+     "meaning": "Speed of light in the medium",
+     "unit": "m s^{-1}"
+    },
+    {
+     "sym": "c",
+     "meaning": "Speed of light in a vacuum ($3 \\times 10^{8}\\ \\text{m s}^{-1}$)",
+     "unit": "m s^{-1}"
+    }
+   ],
+   "criteria": [
+    "1C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 22
+   }
+  },
+  {
+   "id": "F1C-3",
+   "name": "Using Snell’s law",
+   "latex": "n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2 \\quad \\text{and} \\quad n_1v_1 = n_2v_2",
+   "where": [
+    {
+     "sym": "n_1",
+     "meaning": "Refractive index of the first medium",
+     "unit": ""
+    },
+    {
+     "sym": "\\theta_1",
+     "meaning": "Angle of incidence",
+     "unit": "°"
+    },
+    {
+     "sym": "v_1",
+     "meaning": "Speed of light in the first medium",
+     "unit": "m s^{-1}"
+    },
+    {
+     "sym": "n_2",
+     "meaning": "Refractive index of the second medium",
+     "unit": ""
+    },
+    {
+     "sym": "\\theta_2",
+     "meaning": "Angle of refraction or emergence",
+     "unit": "°"
+    },
+    {
+     "sym": "v_2",
+     "meaning": "Speed of light in the second medium",
+     "unit": "m s^{-1}"
+    }
+   ],
+   "criteria": [
+    "1C.3",
+    "1C.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "F1C-4",
+   "name": "Total internal reflection",
+   "latex": "n_1 \\sin\\theta_c = n_2 \\sin 90^\\circ = n_2",
+   "where": [
+    {
+     "sym": "n_1",
+     "meaning": "Refractive index of the first medium",
+     "unit": ""
+    },
+    {
+     "sym": "n_2",
+     "meaning": "Refractive index of the second medium",
+     "unit": ""
+    },
+    {
+     "sym": "\\theta_c",
+     "meaning": "Critical angle of incidence",
+     "unit": "°"
+    }
+   ],
+   "criteria": [
+    "1C.8",
+    "1C.12"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 28
+   }
+  }
+ ],
+ "engage": {
+  "heading": "Applications of light",
+  "text": "There can be little doubt that the role of light in photosynthesis and vision is crucial for most living things. There are also many applications of light in many other areas, as discussed earlier in this chapter.\n\nAll light applications require an understanding of the behaviour of light. In this section, you will focus on understanding reflection, refraction and dispersion of visible light and applications of these concepts to the phenomena of rainbows, mirages and optical fibres.",
+  "src": {
+   "file": "Physics12_Ch01.pdf",
+   "page": 19
+  }
+ },
+ "chunks": [
+  {
+   "id": "1C-E1",
+   "heading": "Visualising light paths",
+   "text": "Although light is made up of vibrating electric and magnetic fields, these vibrations are far too fast and the wavelengths are too small for us to represent them accurately. Take green light, for example, with a wavelength of 550 nm ($5.5 \\times 10^{-7}$ m). It has an extremely high frequency of $5.45 \\times 10^{14}$ Hz. Even if you could ‘see’ such vibrations and wavelengths, a diagram of a parallel beam of light would give an arrangement like that shown in Figure 1C–3.\n\nSometimes diagrams include the wave crests to help describe what is happening in terms of the wave properties of light. However, a simple arrow or ray is often used to represent the path of a light beam.",
+   "figures": [
+    "1C-F3"
+   ],
+   "criteria": [
+    "1C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "1C-E2",
+   "heading": "Reflection of light",
+   "text": "In common with other kinds of waves, such as water waves and sound waves, light reflects when it meets a surface between two media. Sometimes the reflection is total, and sometimes partial. If the surface is smooth, the reflected beam is at the same angle that it strikes the surface. This is shown in Figure 1C–4.\n\nThe angle is usually measured between the direction of travel of the wave and the normal, an imaginary line perpendicular to the surface. In Figure 1C–4 the angle is θ.",
+   "figures": [
+    "1C-F4"
+   ],
+   "criteria": [
+    "1C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "1C-E3",
+   "heading": "Speed of light in transparent materials",
+   "text": "When light is travelling through a medium other than a vacuum, its speed is less than $3.00 \\times 10^{8}\\ \\text{m s}^{-1}$. The actual speed depends on the medium. In water, for example, it travels at $2.25 \\times 10^{8}\\ \\text{m s}^{-1}$.\n\nA beam of light moving from air into a glass block at right angles is shown in Figure 1C–5 (using rays) and in Figure 1C–6 (using wave crests, shown as horizontal lines).\n\nThe ray diagram gives only the direction of the light, whereas the wave representation shows that the wavelength of the light has changed on entering the glass.\n\nNotice that, as you learned in Section 1A, when the light moves from one medium to the next, the wavelength may change but the frequency does not. The reason frequency depends only on the source is that the rate at which wave crests arrive and leave the surface between the two media must be the same, leading to the formula in the next box. [Formula 1C–1]",
+   "figures": [
+    "1C-F5",
+    "1C-F6",
+    "1C-T1"
+   ],
+   "criteria": [
+    "1C.1",
+    "1C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 21
+   }
+  },
+  {
+   "id": "1C-E4",
+   "heading": "Refraction of light",
+   "text": "Most light rays do not arrive at surfaces at right angles, but at some other angle, and the light beam changes direction, as shown in Figure 1C–7. This is called refraction. As with reflected rays, the reference line for the direction of the light is the normal line.\n\nThe wave properties of light explain why the ray changes direction when it passes from one transparent medium to another with different properties, as illustrated in Figure 1C–8. When the wave crests reach the slower medium, they slow down and bunch up because the wavelength of the waves become shorter. This changes the direction of the waves. The ray entering the medium with the slower speed bends towards the normal. Rays going the other way, from a slower medium to a faster medium, bend away from the normal line.\n\nThe amount of refraction that occurs as light passes from one medium into another is related to how fast light moves in one medium compared with the other. In order to compare how much one medium will refract light compared to another, it is important to define the refractive index, n, of a medium as: [Formula 1C–2]",
+   "figures": [
+    "1C-F7",
+    "1C-F8"
+   ],
+   "criteria": [
+    "1C.1",
+    "1C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 22
+   }
+  },
+  {
+   "id": "1C-E5",
+   "heading": "Refraction of light (the refractive index)",
+   "text": "The refractive index has no units and measures how fast light moves in a medium compared to air (or a vacuum). A higher value means light moves slower, and in air (or a vacuum) the refractive index is $n_{air} = 1$, which is also the smallest the refractive index of a medium can be. Light travels slower in all transparent media other than air (or a vacuum) so the refractive index will always be greater than 1. (You can check how the refractive index formula works for different media by replacing $v$ with each speed listed in Table 1C–1.)\n\nGenerally the more dense a medium is, the slower light travels through it and the higher the refractive index will be. For example, plate glass has a refractive index of 1.5 which means that light travels 1.5 times slower in plate glass than in air. The refractive index is useful because it allows different materials to be easily compared and also because it is related to how much light refracts as it moves from one medium to another, as discussed next.",
+   "figures": [
+    "1C-T1"
+   ],
+   "criteria": [
+    "1C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "1C-E6",
+   "heading": "Aboriginal and Torres Strait Islander peoples’ understanding of light",
+   "text": "Aboriginal and Torres Strait Islander peoples' understanding of the nature of light appears to have started 60 000 years ago. Their knowledge of how light behaves enabled them to spear fish in water (refraction) and construct effective housing (reflection and absorption).",
+   "figures": [],
+   "criteria": [
+    "1C.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "1C-E7",
+   "heading": "Snell’s law",
+   "text": "The amount of refraction is measured by comparing the angle the ray makes with the normal before ($\\theta_1$) and after ($\\theta_2$) it crosses the media boundary as shown in Figure 1C–10.\n\nSometimes $\\theta_1$ is called the angle of incidence and $\\theta_2$ the angle of refraction. The mathematical link between the angles $\\theta_1$ and $\\theta_2$, the refractive indices $n_1$ and $n_2$ and the speeds of light $v_1$ and $v_2$ is named Snell’s law after Willebrord Snell, one of its early discoverers. It is most easily remembered and used in its symmetric forms, shown in the formula box below.\n\nIt doesn’t matter which medium you call medium 1 or medium 2, and it doesn’t matter if the ray of light is reversed – the angles will be the same. [Formula 1C–3]",
+   "figures": [
+    "1C-F10"
+   ],
+   "criteria": [
+    "1C.3",
+    "1C.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "1C-E8",
+   "heading": "Optical illusion due to refraction 1: the ‘bent’ pencil",
+   "text": "Objects under water viewed from the air often appear distorted or in the wrong place. A classic illusion is the ‘bent pencil’, as shown in Figure 1C–11.\n\nThis can be explained by a ray diagram, as shown in Figure 1C–12.\n\nThe pencil is actually at point X, but rays of light from there bend away from the normal as shown. Hence, they appear to come from point Y, nearer the surface. What the eye sees is an image of the pencil. This happens for all the underwater parts of the pencil. The same principle applies to spear fishing, as shown in the ray diagram in Figure 1C–13. Because the fish appears to be closer to the surface, the fisher has to aim low, as shown. Of course, gravity has to be allowed for as well!",
+   "figures": [
+    "1C-F11",
+    "1C-F12",
+    "1C-F13"
+   ],
+   "criteria": [
+    "1C.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 25
+   }
+  },
+  {
+   "id": "1C-E9",
+   "heading": "Optical illusion due to refraction 2: ‘floating’ a coin",
+   "text": "Place a coin at the bottom of a mug with opaque sides. Move your head to the side so that you just cannot see the coin, as in Figure 1C–14. Now ask someone else to slowly fill the mug with water. The coin will appear to slowly float into view. But what in fact you are seeing, once again, is an image of the coin. See Figure 1C–15.",
+   "figures": [
+    "1C-F14",
+    "1C-F15"
+   ],
+   "criteria": [
+    "1C.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "1C-E10",
+   "heading": "Partial internal reflection",
+   "text": "As mentioned previously, when light comes into contact with the surface between two media, it is reflected. The reflection will happen at any angle of incidence even when the light is perpendicular to the surface (although it is hard to see in this case because only about 4% is reflected). This means that every time a light ray crosses the surface between different media, only part of the light ray reaches the second medium, and the other part of the light ray is reflected internally back into the first medium, even if most of it travels across the surface. In the case when some of an incident light ray crosses the surface, the reflected ray is said to have undergone partial internal reflection, because the light has been split between a ray that crosses the surface and a reflected ray, which are both only a part of the incident ray. An example of partial internal reflection is shown in Figure 1C–16.",
+   "figures": [
+    "1C-F16"
+   ],
+   "criteria": [
+    "1C.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "1C-E11",
+   "heading": "Total internal reflection",
+   "text": "When light rays move from a medium with high refractive index into one with a lower refractive index, the ray refracts away from the normal, as shown in Figure 1C–17, and there is partial internal reflection at the oil–glass interface.\n\nThe angle of the refracted ray in the lower n medium will always be greater than the angle of the incident ray in the higher n medium. In fact, there is a maximum angle that the incident ray can have if the refracted ray is to emerge from the glass. This angle is the critical angle, and as it is approached, the refracted ray approaches an angle of 90° with the normal and weakens. When the critical angle is reached, the refracted ray disappears and perfect reflection takes place at the interface. As the incident ray’s angle to the normal increases further, the interface continues to behave like a perfect mirror. This is total internal reflection. Note that this can only occur when the light is incident on a boundary with a medium of smaller refractive index.\n\nThe key equation for the critical angle is: [Formula 1C–4]\n\nYou may have noticed this ‘mirror’ behaviour of water while swimming under water, or looking up at the underside of the water surface in a fish tank, as shown in Figure 1C–20.",
+   "figures": [
+    "1C-F17",
+    "1C-F18",
+    "1C-F19"
+   ],
+   "criteria": [
+    "1C.7",
+    "1C.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "1C-E12",
+   "heading": "Colour dispersion",
+   "text": "Newton conducted a famous experiment where he passed a beam of sunlight through a triangular prism to produce a spectrum, as shown in Figure 1C–21. The colour separation occurs at both surfaces of the prism.\n\nNewton identified seven distinct ‘types’ of light (he believed light consisted of tiny particles) as red, orange, yellow, green, blue, indigo and violet. We now know that the spectrum is continuous and the colours blend smoothly into each other. We call this separation of white light colour dispersion. In further experiments, he attempted to break up (disperse) the individual colours into yet more colours of light, but this did not happen. However, he knew that the different colours refracted differently. The explanation for this phenomenon is that different wavelengths of light travel at different speeds and so have slightly different refractive indices within a medium such as glass. This difference in speeds causes each colour to refract a different amount and exit at a different position along the prism’s surface. A second refraction occurs when each colour leaves the surface of the glass and this together with the first refraction causes the effect of colour dispersion that can be seen in a glass prism. Today we use the different refractive indices of the different colours to predict the paths of light through prisms.\n\nTable 1C–2 Typical wavelengths and refractive indices for glass for different colours of light: Red 640 nm, 1.509; Yellow 589 nm, 1.511; Green 509 nm, 1.515; Blue 486 nm, 1.517; Violet 434 nm, 1.521.",
+   "figures": [
+    "1C-F21",
+    "1C-T2"
+   ],
+   "criteria": [
+    "1C.9",
+    "1C.10"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "1C-E13",
+   "heading": "Colour dispersion in lenses",
+   "text": "Dispersion can lead to problems with coloured images formed by lenses. This is sometimes called chromatic distortion. For sharp accurate images all the colours need to come to a focus at the same distance from the lens. Such a ‘perfect’ lens is shown schematically in Figure 1C–22.\n\nIn the lens shown in Figure 1C–22, you can see that the blue and red light rays focus at the same place, at the same distance from the lens. For most lenses, however, the refractive indices of the various colours are different, which means they don’t focus at the same place or distance, as shown in Figure 1C–23. Figure 1C–24 shows the result on a colour image.\n\nHigh-quality cameras use a lens combination to reduce this effect. A combination of two lenses with different refractive indices can minimise chromatic distortion, as shown in Figure 1C–25.",
+   "figures": [
+    "1C-F22",
+    "1C-F23",
+    "1C-F24",
+    "1C-F25"
+   ],
+   "criteria": [
+    "1C.10"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "1C-E14",
+   "heading": "Mirages",
+   "text": "Is the water on the road in Figure 1C–26 real or a mirage?\n\nThis is an example of a mirage where the upside-down image of the bottom of the truck, under where the road surface should be, leads us to think that there must be water there. It is caused by refraction of light in the layers of air above the hot road. Layers near the road are hotter than the layers further away and this affects the refractive index; the hotter layers have a lower refractive index. So, rays travelling downwards (as shown in Figure 1C–27) bend away from the normal, eventually internally reflecting and travelling upwards. The observer’s eye traces the ray back to an image of the vehicle underneath the actual vehicle, as shown.\n\nOver cool surfaces, such as the ocean, where the layers of air are warmer further away from the water, different types of mirages form. This is shown in Figure 1C–28.\n\nHere, light rays from a boat over the horizon that have been internally reflected are refracted back down to an observer. The observer traces the rays back to the image of a boat apparently floating in the sky. An outline of the light ray paths is shown in Figure 1C–29.",
+   "figures": [
+    "1C-F26",
+    "1C-F27",
+    "1C-F28",
+    "1C-F29"
+   ],
+   "criteria": [
+    "1C.11"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 31
+   }
+  },
+  {
+   "id": "1C-E15",
+   "heading": "Optical fibres",
+   "text": "Total internal reflection is a key principle of optical fibre technology.\n\nLight rays enter the optical fibre at the left and are kept in the core by successive total internal reflections. These are limited to a narrow range of angles. Rays outside this range would be rapidly attenuated. Because the total internal reflections are almost perfect and almost loss free, the intensity of the light signal is maintained over many kilometres. There are some losses due to absorption in the glass fibre, but they are small. The Australian NBN optical fibre network has ‘repeaters’ every 40–50 km to maintain the intensity of the signals.",
+   "figures": [
+    "1C-F30"
+   ],
+   "criteria": [
+    "1C.12"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "1C-E16",
+   "heading": "Rainbows",
+   "text": "Rainbows are formed from dispersion and partial internal reflection of the Sun’s rays inside water droplets. The brightest rainbow is formed when there is just one partial reflection inside the rain droplets reflecting the Sun’s rays back to the observer, as shown in Figure 1C–31. You can see where the dispersion is occurring in the droplet.\n\nRainbows are most easily seen with your back to the Sun. The eye traces back the blue light to water droplets at the bottom of the rainbow’s arc and the red to the top; the other colours are in between. However, a weaker return ray of sunlight also occurs when there are two internal reflections inside the water droplets, as shown in Figure 1C–32. This forms a ‘secondary’ rainbow, higher and fainter than the main rainbow, with the colours reversed. This secondary rainbow is fainter than the primary rainbow because of two partial internal reflections.",
+   "figures": [
+    "1C-F31",
+    "1C-F32"
+   ],
+   "criteria": [
+    "1C.11"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 34
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "1C-F3",
+   "label": "Figure 1C–3",
+   "caption": "Waves and wave crests",
+   "img": "img/1C_fig1C-3.png",
+   "important": true,
+   "why": "Wave crests drawn across a parallel beam: links the wave picture to the ray model.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "1C-F4",
+   "label": "Figure 1C–4",
+   "caption": "Wave crests reflecting off a flat surface at an angle θ",
+   "img": "img/1C_fig1C-4.png",
+   "important": true,
+   "why": "Law of reflection with normal, incident and reflected rays and wave crests (1C.1).",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "1C-F5",
+   "label": "Figure 1C–5",
+   "caption": "Ray diagram",
+   "img": "img/1C_fig1C-5.png",
+   "important": true,
+   "why": "Rays entering glass at right angles: no change of direction.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 21
+   }
+  },
+  {
+   "id": "1C-F6",
+   "label": "Figure 1C–6",
+   "caption": "Wave crest diagram",
+   "img": "img/1C_fig1C-6.png",
+   "important": true,
+   "why": "Wave crests closer together in glass: wavelength shortens, frequency unchanged.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 21
+   }
+  },
+  {
+   "id": "1C-T1",
+   "label": "Table 1C–1",
+   "caption": "Speed of light in various media",
+   "img": "img/1C_table1C-1.png",
+   "important": true,
+   "why": "Speeds in air, water, glass, plastic, diamond: data for n = c/v practice.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 21
+   }
+  },
+  {
+   "id": "1C-F7",
+   "label": "Figure 1C–7",
+   "caption": "Refracted light ray",
+   "img": "img/1C_fig1C-7.png",
+   "important": true,
+   "why": "Ray bending towards the normal entering slower glass.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 22
+   }
+  },
+  {
+   "id": "1C-F8",
+   "label": "Figure 1C–8",
+   "caption": "Wave crests diagram of refraction of light through glass",
+   "img": "img/1C_fig1C-8.png",
+   "important": true,
+   "why": "Why refraction happens: crests slow and bunch up at the boundary (1C.1).",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 22
+   }
+  },
+  {
+   "id": "1C-F10",
+   "label": "Figure 1C–10",
+   "caption": "Snell’s law can be used to find the angle of incidence and the angle of refraction.",
+   "img": "img/1C_fig1C-10.png",
+   "important": true,
+   "why": "Labels θ1, θ2, n1 = 1.0, n2 = 1.5 for Snell's law.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "1C-F11",
+   "label": "Figure 1C–11",
+   "caption": "Apparent bending of a pencil under water",
+   "img": "img/1C_fig1C-11.png",
+   "important": true,
+   "why": "Photo of the bent-pencil illusion; hook for image formation.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 25
+   }
+  },
+  {
+   "id": "1C-F12",
+   "label": "Figure 1C–12",
+   "caption": "Rays of light from an underwater pencil bend on entering the air.",
+   "img": "img/1C_fig1C-12.png",
+   "important": true,
+   "why": "Ray diagram: real position X, image Y (1C.6).",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 25
+   }
+  },
+  {
+   "id": "1C-F13",
+   "label": "Figure 1C–13",
+   "caption": "Spear fishers must adjust their aim for refraction in order to catch fish.",
+   "img": "img/1C_fig1C-13.png",
+   "important": true,
+   "why": "Spear-fishing ray diagram; links to Aboriginal knowledge of refraction (also as PowerPoint Figure 1C–13).",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "1C-F14",
+   "label": "Figure 1C–14",
+   "caption": "Viewing the coin in an empty mug",
+   "img": "img/1C_fig1C-14.png",
+   "important": true,
+   "why": "Coin demo setup, before water.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "1C-F15",
+   "label": "Figure 1C–15",
+   "caption": "The coin appears to be floating in a mug full of water due to refraction.",
+   "img": "img/1C_fig1C-15.png",
+   "important": true,
+   "why": "Coin demo: apparent position after water added.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "1C-F16",
+   "label": "Figure 1C–16",
+   "caption": "Example of partial internal reflection",
+   "img": "img/1C_fig1C-16.png",
+   "important": true,
+   "why": "Refracted and partially reflected rays at both glass faces.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "1C-F17",
+   "label": "Figure 1C–17",
+   "caption": "Light ray bending away from the normal",
+   "img": "img/1C_fig1C-17.png",
+   "important": true,
+   "why": "Glass to oil: bends away from normal, partial reflection.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "1C-F18",
+   "label": "Figure 1C–18",
+   "caption": "The critical angle is where total internal reflection occurs",
+   "img": "img/1C_fig1C-18.png",
+   "important": true,
+   "why": "Critical angle and totally reflected ray (also as PowerPoint Figure 1C–18).",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 28
+   }
+  },
+  {
+   "id": "1C-F19",
+   "label": "Figure 1C–19",
+   "caption": "A demonstration of total internal reflection using a laser beam and fish tank",
+   "img": "img/1C_fig1C-19.png",
+   "important": true,
+   "why": "Photo of TIR with a laser in a tank: good demo image.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 28
+   }
+  },
+  {
+   "id": "1C-F21",
+   "label": "Figure 1C–21",
+   "caption": "Triangular glass prism dispersing a narrow beam of white light coming from the left, into a spectrum on the right",
+   "img": "img/1C_fig1C-21.png",
+   "important": true,
+   "why": "Photo of prism dispersion.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "1C-T2",
+   "label": "Table 1C–2",
+   "caption": "Typical wavelengths and refractive indices for glass for different colours of light",
+   "img": "img/1C_table1C-2.png",
+   "important": true,
+   "why": "n increases from red (1.509) to violet (1.521): basis of dispersion.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "1C-F22",
+   "label": "Figure 1C–22",
+   "caption": "Perfect lens without chromatic distortion; showing just red and blue light rays",
+   "img": "img/1C_fig1C-22.png",
+   "important": true,
+   "why": "Ideal lens: all colours focus together.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "1C-F23",
+   "label": "Figure 1C–23",
+   "caption": "Different refraction of different colours",
+   "img": "img/1C_fig1C-23.png",
+   "important": true,
+   "why": "Real lens: colours focus at different points.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 31
+   }
+  },
+  {
+   "id": "1C-F24",
+   "label": "Figure 1C–24",
+   "caption": "Severe chromatic distortion",
+   "img": "img/1C_fig1C-24.png",
+   "important": true,
+   "why": "Photo showing colour fringes from chromatic distortion.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 31
+   }
+  },
+  {
+   "id": "1C-F25",
+   "label": "Figure 1C–25",
+   "caption": "Chromatic distortion can be reduced by combining different lenses.",
+   "img": "img/1C_fig1C-25.png",
+   "important": true,
+   "why": "Lens combination correcting chromatic distortion.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 31
+   }
+  },
+  {
+   "id": "1C-F26",
+   "label": "Figure 1C–26",
+   "caption": "Mirage of water on hot bitumen road Notice how the bottom of the truck and its headlights seem to be reflected in what looks like water.",
+   "img": "img/1C_fig1C-26.png",
+   "important": true,
+   "why": "Photo hook for the road mirage.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 31
+   }
+  },
+  {
+   "id": "1C-F27",
+   "label": "Figure 1C–27",
+   "caption": "Formation of ‘underneath’ mirage",
+   "img": "img/1C_fig1C-27.png",
+   "important": true,
+   "why": "Ray path through hot air layers giving the inverted image (1C.11).",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 32
+   }
+  },
+  {
+   "id": "1C-F28",
+   "label": "Figure 1C–28",
+   "caption": "Mirage of boat floating in the sky",
+   "img": "img/1C_fig1C-28.png",
+   "important": true,
+   "why": "Photo of the 'floating boat' mirage.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 32
+   }
+  },
+  {
+   "id": "1C-F29",
+   "label": "Figure 1C–29",
+   "caption": "Formation of ‘floating’ mirage",
+   "img": "img/1C_fig1C-29.png",
+   "important": true,
+   "why": "Ray path over cool water giving the floating image (1C.11).",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "1C-F30",
+   "label": "Figure 1C–30",
+   "caption": "Total internal reflection in an optical fibre",
+   "img": "img/1C_fig1C-30.png",
+   "important": true,
+   "why": "Core, cladding and successive TIR (1C.12).",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "1C-F31",
+   "label": "Figure 1C–31",
+   "caption": "Rainbow formation inside water droplets",
+   "img": "img/1C_fig1C-31.png",
+   "important": true,
+   "why": "Refraction, internal reflection, refraction in a droplet (also as PowerPoint Figure 1C–31).",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 34
+   }
+  },
+  {
+   "id": "1C-F32",
+   "label": "Figure 1C–32",
+   "caption": "Secondary rainbow formation inside water droplets: ray diagram (top) and resulting image (bottom)",
+   "img": "img/1C_fig1C-32.png",
+   "important": true,
+   "why": "Two internal reflections; photo of primary and secondary bows.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 35
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE1C-1",
+   "title": "Wavelength of light in a medium",
+   "question": "In a type of glass the speed of light is $v = 2.00 \\times 10^{8}\\ \\text{m s}^{-1}$, and in air the speed is $c = 3.00 \\times 10^{8}\\ \\text{m s}^{-1}$. A ray of light has a frequency of $6.00 \\times 10^{14}$ Hz. Calculate in nm: a the wavelength of the light in air b the wavelength of the light in the glass",
+   "steps": [
+    "a Using $c = f\\lambda$ with $\\lambda$ as the subject gives:",
+    "$\\lambda = \\frac{c}{f}$",
+    "$= \\frac{3.00 \\times 10^{8}}{6.00 \\times 10^{14}}$",
+    "$= 5.00 \\times 10^{-7}\\ \\text{m}$",
+    "$= 500\\ \\text{nm}$",
+    "b Using $v = f\\lambda$ with $\\lambda$ as the subject gives:",
+    "$\\lambda = \\frac{v}{f}$",
+    "$= \\frac{2.00 \\times 10^{8}}{6.00 \\times 10^{14}}$",
+    "$= 3.33 \\times 10^{-7}\\ \\text{m}$",
+    "$= 333\\ \\text{nm}$"
+   ],
+   "answer": "a 500 nm b 333 nm",
+   "img": [
+    "img/1C_WE1C-1.png"
+   ],
+   "criteria": [
+    "1C.3",
+    "1A.5",
+    "1A.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 21
+   }
+  },
+  {
+   "id": "WE1C-2",
+   "title": "Application of Snell’s law",
+   "question": "A thin ray of light shines on a glass block (refractive index = 1.6), as shown below. The glass block is immersed in oil with a refractive index of 1.2. Describe the direction of the light ray as it travels from the oil into the glass.",
+   "steps": [
+    "Using Snell’s law, $n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$, with $\\sin\\theta_2$ as the subject, where:",
+    "$\\theta_1 = 50^\\circ$",
+    "$n_1 = 1.2$",
+    "$n_2 = 1.6$",
+    "Gives:",
+    "$\\sin\\theta_2 = 1.2 \\times \\frac{\\sin(50^\\circ)}{1.6}$",
+    "$= 0.575$",
+    "$\\theta_2 = 35^\\circ$",
+    "Therefore, the ray bends towards the normal, making an angle of 35° with it."
+   ],
+   "answer": "The ray bends towards the normal, making an angle of 35° with it.",
+   "img": [
+    "img/1C_WE1C-2_diagram.png",
+    "img/1C_WE1C-2.png"
+   ],
+   "criteria": [
+    "1C.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "WE1C-3",
+   "title": "Partial internal reflection and refraction",
+   "question": "The diagram below shows a glass block in air with a light ray entering it (labelled ‘incident ray’). Angles a, b, c, d, e and f are labelled. a Angles a and b are equal. Explain why. b Angles d and e are equal. Explain why. c Angles c and d are equal, because of geometric properties. Use this fact to explain why angles a and f are equal.",
+   "steps": [
+    "a Angle b is a partial reflection of angle a.",
+    "b Angle e is a partial reflection of angle d.",
+    "c Applying Snell’s law to the incident ray gives the ratio:",
+    "$\\frac{\\sin a}{\\sin c} = \\frac{n_{glass}}{n_{air}}$",
+    "Applying Snell’s law to the refracted ray as it leaves the glass also gives the ratio:",
+    "$\\frac{\\sin f}{\\sin d} = \\frac{n_{glass}}{n_{air}}$",
+    "Comparing the two equations gives:",
+    "$\\frac{\\sin a}{\\sin c} = \\frac{\\sin f}{\\sin d}$",
+    "Since it is given that angle c = d because of geometric properties, from the equation above angles a and f are equal."
+   ],
+   "answer": "a = b and d = e (partial reflections); a = f from Snell's law since c = d.",
+   "img": [
+    "img/1C_WE1C-3_diagram.png",
+    "img/1C_WE1C-3.png"
+   ],
+   "criteria": [
+    "1C.1",
+    "1C.5",
+    "1C.7"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "WE1C-4",
+   "title": "Critical angle calculation",
+   "question": "What is the critical angle when light moves from a medium with n = 1.6 into a medium with n = 1.2?",
+   "steps": [
+    "Use Snell’s law and set the emerging angle to 90°.",
+    "Making $\\sin\\theta_c$ the subject gives:",
+    "$\\sin\\theta_c = 1.2 \\times \\frac{\\sin(90^\\circ)}{1.6}$",
+    "$= \\frac{1.2}{1.6}$",
+    "$= 0.75$",
+    "$\\theta_c = 48.5^\\circ$"
+   ],
+   "answer": "$\\theta_c = 48.5^\\circ$",
+   "img": [
+    "img/1C_WE1C-4.png"
+   ],
+   "criteria": [
+    "1C.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 29
+   }
+  },
+  {
+   "id": "WE1C-5",
+   "title": "Application of total internal reflection",
+   "question": "Optical fibres can be made from two layers of materials with different refractive indices. In the diagram below, monochromatic laser light enters the fibre. The critical angle needs to have a value of 82° to maintain total internal reflection in the core. The core material has a refractive index of 1.66. For the fibre to operate as designed, what should the refractive index of the cladding be?",
+   "steps": [
+    "For the fibre to operate as designed, the refractive index of the cladding must be less than the refractive index of the core. Using the formula for total internal reflection with $n_{cladding}$ as the subject gives:",
+    "$n_{cladding} = n_{core} \\sin\\theta_c$",
+    "$= 1.66 \\times \\sin(82^\\circ)$",
+    "$= 1.64$",
+    "So, for the fibre to operate as designed, the cladding must have a refractive index of 1.64."
+   ],
+   "answer": "1.64",
+   "img": [
+    "img/1C_WE1C-5_diagram.png",
+    "img/1C_WE1C-5.png"
+   ],
+   "criteria": [
+    "1C.8",
+    "1C.12"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 34
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "1C-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "Define the refractive index, $n$, of a transparent material.",
+   "answer": "$n$ = speed of light in a vacuum/speed of light in the material",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1C.2"
+   ],
+   "src": {
+    "file": "1C Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "1C-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "What is the minimum value of the refractive index of a material?",
+   "answer": "The refractive index of a vacuum, equal to exactly 1.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1C.2"
+   ],
+   "src": {
+    "file": "1C Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "1C-CI1.3",
+   "set": 1,
+   "n": 3,
+   "question": "Calculate the refractive index of a material in which the speed of light is $1.5 \\times 10^{8}\\ \\text{m s}^{-1}$.",
+   "answer": "$n = \\frac{c}{v_{material}} = \\frac{3.00 \\times 10^{8}}{2.00 \\times 10^{8}} = 2.00\\ \\text{m s}^{-1}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "1C.2"
+   ],
+   "src": {
+    "file": "1C Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "1C-CI1.4",
+   "set": 1,
+   "n": 4,
+   "question": "When a ray of light enters a medium of greater refractive index, which way will the ray refract?",
+   "answer": "Towards the normal",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1C.5"
+   ],
+   "src": {
+    "file": "1C Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "1C-CI1.5",
+   "set": 1,
+   "n": 5,
+   "question": "When a ray of light moves from a medium of lower speed into a medium of greater speed, which way will it refract relative to the normal line?",
+   "answer": "Away from the normal",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1C.1",
+    "1C.5"
+   ],
+   "src": {
+    "file": "1C Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "1C-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "When does internal reflection occur?",
+   "answer": "Whenever light travels into another medium of different refractive index",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1C.7"
+   ],
+   "src": {
+    "file": "1C Check-in – Set 2.docx"
+   }
+  },
+  {
+   "id": "1C-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "When does internal reflection become total?",
+   "answer": "When light strikes a medium of reduced refractive index an angle greater than the critical angle",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1C.7",
+    "1C.8"
+   ],
+   "src": {
+    "file": "1C Check-in – Set 2.docx"
+   }
+  },
+  {
+   "id": "1C-CI2.3",
+   "set": 2,
+   "n": 3,
+   "question": "Define the critical angle.",
+   "answer": "The critical angle is the angle that an incident ray of light will refract at $90^\\circ$ to the normal and not leave the surface of the medium; it can be calculated by $n_1\\sin\\theta_c = n_2\\sin 90 = n_2$",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1C.8"
+   ],
+   "src": {
+    "file": "1C Check-in – Set 2.docx"
+   }
+  },
+  {
+   "id": "1C-CI3.1",
+   "set": 3,
+   "n": 1,
+   "question": "When does chromatic dispersion occur?",
+   "answer": "When white light passes through optical systems that disperse the wavelengths of light causing colour separation in images",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "1C.10"
+   ],
+   "src": {
+    "file": "1C Check-in – Set 3.docx"
+   }
+  },
+  {
+   "id": "1C-CI3.2",
+   "set": 3,
+   "n": 2,
+   "question": "What is the cause of many mirages?",
+   "answer": "When light passes through layers of air at different temperatures and refractive indices bending the paths of light to observers",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "1C.11"
+   ],
+   "src": {
+    "file": "1C Check-in – Set 3.docx"
+   }
+  },
+  {
+   "id": "1C-CI4.1",
+   "set": 4,
+   "n": 1,
+   "question": "What is the name of the optical principle that ensures light signals remain inside the core of an optical fibre?",
+   "answer": "Total internal reflection",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1C.12"
+   ],
+   "src": {
+    "file": "1C Check-in – Set 4.docx"
+   }
+  },
+  {
+   "id": "1C-CI4.2",
+   "set": 4,
+   "n": 2,
+   "question": "How many internal reflections from single raindrops occur in the formation of primary rainbows?",
+   "answer": "One",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1C.11"
+   ],
+   "src": {
+    "file": "1C Check-in – Set 4.docx"
+   }
+  },
+  {
+   "id": "1C-CI4.3",
+   "set": 4,
+   "n": 3,
+   "question": "How many internal reflections from single raindrops occur in the formation of secondary rainbows?",
+   "answer": "Two",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1C.11"
+   ],
+   "src": {
+    "file": "1C Check-in – Set 4.docx"
+   }
+  },
+  {
+   "id": "1C-CI4.4",
+   "set": 4,
+   "n": 4,
+   "question": "How many refractions from single raindrops occur in the formation of primary or secondary rainbows?",
+   "answer": "Two in both cases; once entering and once exiting",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1C.11"
+   ],
+   "src": {
+    "file": "1C Check-in – Set 4.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "1C-SQ1",
+   "n": "1",
+   "question": "Which of the following statements best describes colour dispersion?",
+   "options": [
+    "A. when laser light disperses into different colours",
+    "B. when the frequency of light increases during refraction",
+    "C. when light slows down after passing through a triangular prism",
+    "D. when different wavelength light rays travel at different speeds in a medium"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "1C.10"
+   ],
+   "img": [],
+   "src": {
+    "file": "1C Section questions.docx"
+   }
+  },
+  {
+   "id": "1C-SQ2",
+   "n": "2",
+   "question": "When light waves reflect at a surface (such as a plane mirror), then the wave crests",
+   "options": [
+    "A. change direction and wavelength but not speed.",
+    "B. change direction but not speed.",
+    "C. change frequency and wavelength.",
+    "D. change direction and speed."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "1C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "1C Section questions.docx"
+   }
+  },
+  {
+   "id": "1C-SQ3",
+   "n": "3",
+   "question": "A light beam is travelling through an unknown liquid with a refractive index of 1.75. Which of the following is closest to the speed of light in the liquid?",
+   "options": [
+    "A. $1.7 \\times 10^{8}\\ \\text{m s}^{-1}$",
+    "B. $2.3 \\times 10^{8}\\ \\text{m s}^{-1}$",
+    "C. $3.0 \\times 10^{8}\\ \\text{m s}^{-1}$",
+    "D. $5.3 \\times 10^{8}\\ \\text{m s}^{-1}$"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "youtry"
+   ],
+   "criteria": [
+    "1C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "1C Section questions.docx"
+   }
+  },
+  {
+   "id": "1C-SQ4",
+   "n": "4",
+   "question": "A narrow ray of light passes from air into a glass block. The angle $\\theta_1$ is equal to 43°. The angle $\\theta_2$ will be closest to",
+   "options": [
+    "A. 27°.",
+    "B. 34°.",
+    "C. 43°.",
+    "D. 65°"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "1C.5"
+   ],
+   "img": [
+    "img/1C_SQ4.png"
+   ],
+   "src": {
+    "file": "1C Section questions.docx"
+   }
+  },
+  {
+   "id": "1C-SQ5",
+   "n": "5",
+   "question": "For a ray of light moving from one medium to another to bend away from the normal",
+   "options": [
+    "A. the speed must stay the same and the refractive index must increase.",
+    "B. the speed must decrease and the refractive index must decrease.",
+    "C. the speed must increase and the refractive index must decrease.",
+    "D. the speed must stay the same and the refractive index must decrease."
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "1C.1",
+    "1C.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "1C Section questions.docx"
+   }
+  },
+  {
+   "id": "1C-SQ6",
+   "n": "6",
+   "question": "The critical angle occurs when",
+   "options": [
+    "A. light travels from a high n medium into a low n medium.",
+    "B. light travels from a low n medium into a high n medium.",
+    "C. light travels from a high speed medium into a lower speed medium.",
+    "D. light is blocked from transmission, so it all reflects at the surface."
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "1C.8"
+   ],
+   "img": [],
+   "src": {
+    "file": "1C Section questions.docx"
+   }
+  },
+  {
+   "id": "1C-SQ7",
+   "n": "7",
+   "question": "Which of the following combinations gives a critical angle for the core and cladding closest to 83°?",
+   "options": [
+    "A. $n_{core} = 1.31$; $n_{cladding} = 1.32$",
+    "B. $n_{core} = 1.71$; $n_{cladding} = 1.73$",
+    "C. $n_{cladding} = 1.71$; $n_{core} = 1.73$",
+    "D. $n_{cladding} = 1.31$; $n_{core} = 1.32$"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "1C.8",
+    "1C.12"
+   ],
+   "img": [
+    "img/1C_SQ7.png"
+   ],
+   "src": {
+    "file": "1C Section questions.docx"
+   }
+  },
+  {
+   "id": "1C-SQ8",
+   "n": "8",
+   "question": "Using a diagram, explain how a wave description of light explains the refraction of light from a slower medium into a faster one.",
+   "options": [],
+   "answer": "The diagram shows a beam of light travelling from glass (slower medium) into air (a faster medium). When the wavefronts reach the faster medium, they speed up and this causes the wavelength to also increase, because frequency doesn't change between mediums and the wave equation is $v = f\\lambda$. To compensate for the change in speed and wavelength the wave also changes direction so that the wavefronts still match at the boundary.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "1C.1"
+   ],
+   "img": [
+    "img/1C_SQ8_answer.png"
+   ],
+   "src": {
+    "file": "1C Section questions.docx"
+   }
+  },
+  {
+   "id": "1C-SQ9",
+   "n": "9",
+   "question": "White light is dispersed into the colours of the spectrum after passing through a triangular prism. a Which colour, red or violet, is deviated the most in this process? b Outline the reasons why this occurs.",
+   "options": [],
+   "answer": "a Violet light is deviated more than red light in this process. b Two refractions occur in this process; the first occurs when light enters the prism and the second when it leaves the prism. In the first refraction since the light moves from air to glass the violet light bends more towards the surface normal. This is because violet light has a higher refractive index than red light and travels slower in glass. This higher index causes violet light to refract more away from the normal. The second refraction occurs when the split light goes through the other side of the prism. In this case the different light sources because they are already split will exit at different points of the prism and refract. Hence, the light that is deflected more will be more offset from the initial entry point of the white light. This is what causes the dispersion effect.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "1C.10"
+   ],
+   "img": [],
+   "src": {
+    "file": "1C Section questions.docx"
+   }
+  },
+  {
+   "id": "1C-SQ10",
+   "n": "10",
+   "question": "The diagram shows a small monochromatic light source at the bottom of a water tank. It directs a ray of light towards the air-water surface as shown. For this source take the refractive index of water as 1.33 and the refractive index of air as 1.00. Sketch and annotate the path or paths that the light ray takes after it meets the air-water interface. Show the details of relevant calculations.",
+   "options": [],
+   "answer": "There will be an internal reflection at the point that the ray meets the interface and a refracted ray into the air at 67.5° to the normal.",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "1C.5",
+    "1C.7",
+    "1C.8"
+   ],
+   "img": [
+    "img/1C_SQ10.png"
+   ],
+   "src": {
+    "file": "1C Section questions.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 1C Reflection, refraction and dispersion",
+  "total": 15,
+  "questions": [
+   {
+    "id": "WS1C-1",
+    "n": "1",
+    "question": "Light travels at $3.0 \\times 10^{8}\\ \\text{m s}^{-1}$ in a vacuum and at $2.25 \\times 10^{8}\\ \\text{m s}^{-1}$ in water. Outline why light travels slower in the water when electromagnetic waves don't need a medium to travel through.",
+    "answer": "As light travels through a denser medium, such as water, light scatters the molecules or particles, causing it to slow down. The denser the medium the slower light will travel. (Whereas for sound the denser the medium the quicker it travels!) Materials with a higher refractive index slow down the propagation of light more than material with a low refractive index.",
+    "marks": 2,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "1C.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "1C Worksheet 1C–1 Reflection, refraction and dispersion.docx"
+    }
+   },
+   {
+    "id": "WS1C-2",
+    "n": "2",
+    "question": "Referring to the diagram below, explain why the path of the waves have changed direction as it moves from one medium to another.",
+    "answer": "The wave front hits the boundary between the mediums at an angle causing different parts of the wave front to be refracted (or bent) at different times. Because the mediums are of different density, the wavelength of the wave changes while the frequency stays the same. Therefore, the velocity of the wave will change as it enters the second medium.",
+    "marks": 2,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "wedo",
+     "practice"
+    ],
+    "pair_with": "1C-SQ8",
+    "criteria": [
+     "1C.1"
+    ],
+    "img": [
+     "img/1C_WS2.png"
+    ],
+    "src": {
+     "file": "1C Worksheet 1C–1 Reflection, refraction and dispersion.docx"
+    }
+   },
+   {
+    "id": "WS1C-3a",
+    "n": "3a",
+    "question": "Light traveling through an optical fibre ($n$ = 1.34) reaches the end of the fibre and exits into air. If the angle of incidence at the end of the fibre is 30°, what is the angle of refraction outside the fibre?",
+    "answer": "$n_1\\sin\\theta_1 = n_2\\sin\\theta_2$; $\\theta_2 = \\sin^{-1}\\left(\\frac{n_1}{n_2}\\sin\\theta_1\\right) = \\sin^{-1}\\left(\\frac{1.34}{1.0}\\sin 30\\right) = 42^\\circ$",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "pair_with": "WE1C-2",
+    "criteria": [
+     "1C.5"
+    ],
+    "img": [],
+    "src": {
+     "file": "1C Worksheet 1C–1 Reflection, refraction and dispersion.docx"
+    }
+   },
+   {
+    "id": "WS1C-3b",
+    "n": "3b",
+    "question": "Draw a diagram to show the path of the light in air from part a.",
+    "answer": "[diagram: see image]",
+    "marks": 1,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "1C.1",
+     "1C.5"
+    ],
+    "img": [
+     "img/1C_WS3b_answer.png"
+    ],
+    "src": {
+     "file": "1C Worksheet 1C–1 Reflection, refraction and dispersion.docx"
+    }
+   },
+   {
+    "id": "WS1C-3c",
+    "n": "3c",
+    "question": "What would be the answer if the angle of incidence was changed to 50°?",
+    "answer": "The calculator gives an error message. This means that the $\\theta_2$ angle is greater than 90°, therefore the light would be reflected off the boundary between the optical fibre and air – total internal reflection will occur.",
+    "marks": 1,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "pair_with": "WE1C-4",
+    "criteria": [
+     "1C.8",
+     "1C.12"
+    ],
+    "img": [],
+    "src": {
+     "file": "1C Worksheet 1C–1 Reflection, refraction and dispersion.docx"
+    }
+   },
+   {
+    "id": "WS1C-4",
+    "n": "4",
+    "question": "Outline what is happening in each image below and identify the wave property shown. (a) mountains and water (b) straw in a glass of water (c) clouds with colours (d) white light and a triangular prism",
+    "answer": "a Reflection – the mountains are being reflected in the water body b The straw is being distorted as we see them through the water glass – refraction c A rainbow effect is seen amongst the clouds. Refraction and dispersion. d the white light is traveling through a triangular prism and is seen as colours as it leaves the prism. Refraction and dispersion.",
+    "marks": 4,
+    "kind": "explain",
+    "size": "long",
+    "phase": [
+     "wedo",
+     "practice"
+    ],
+    "pair_with": "1C-SQ9",
+    "criteria": [
+     "1C.1",
+     "1C.6",
+     "1C.10",
+     "1C.11"
+    ],
+    "img": [
+     "img/1C_WS4a.png",
+     "img/1C_WS4b.png",
+     "img/1C_WS4c.png",
+     "img/1C_WS4d.png"
+    ],
+    "src": {
+     "file": "1C Worksheet 1C–1 Reflection, refraction and dispersion.docx"
+    }
+   },
+   {
+    "id": "WS1C-5",
+    "n": "5",
+    "question": "A ray of light is going through air into a medium with a refractive index of 1.12. If the angle of incidence is 48°, what is the angle of refraction?",
+    "answer": "$n_1\\sin\\theta_1 = n_2\\sin\\theta_2$; $\\theta_2 = \\sin^{-1}\\left(\\frac{n_1}{n_2}\\sin\\theta_1\\right) = \\sin^{-1}\\left(\\frac{1.00}{1.12}\\sin 48\\right) = 41.6^\\circ$",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "pair_with": "WE1C-2",
+    "criteria": [
+     "1C.5"
+    ],
+    "img": [],
+    "src": {
+     "file": "1C Worksheet 1C–1 Reflection, refraction and dispersion.docx"
+    }
+   },
+   {
+    "id": "WS1C-6",
+    "n": "6",
+    "question": "Determine the critical angle when light moves from glass with a refractive index of 1.5 to water, which has a refractive index of 1.33.",
+    "answer": "$n_1\\sin\\theta_1 = n_2\\sin\\theta_2$, where $\\theta_2 = 90^\\circ$; $\\theta_c = \\sin^{-1}\\left(\\frac{n_2}{n_1}\\sin 90\\right) = \\sin^{-1}\\left(\\frac{1.33}{1.5}(1)\\right) = 62^\\circ$",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "pair_with": "WE1C-4",
+    "criteria": [
+     "1C.8"
+    ],
+    "img": [],
+    "src": {
+     "file": "1C Worksheet 1C–1 Reflection, refraction and dispersion.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "1C.3",
+    "1A.5"
+   ],
+   "wedo": "WE1C-1",
+   "youtry": [
+    "1C-CI1.3",
+    "1C-SQ3"
+   ],
+   "note": "Speed and wavelength in a medium. No worksheet question on λ in a medium; check-in/section questions on n = c/v used as You try. Review Q23 is the closest match (wavelength change between media)."
+  },
+  {
+   "criteria": [
+    "1C.5"
+   ],
+   "wedo": "WE1C-2",
+   "youtry": [
+    "WS1C-5",
+    "WS1C-3a"
+   ],
+   "note": "Snell's law: find θ2 from θ1, n1, n2."
+  },
+  {
+   "criteria": [
+    "1C.1",
+    "1C.7"
+   ],
+   "wedo": "WE1C-3",
+   "youtry": [
+    "1C-SQ10"
+   ],
+   "note": "Partial reflection plus refraction at an interface; SQ10 combines reflection and a Snell calculation."
+  },
+  {
+   "criteria": [
+    "1C.8"
+   ],
+   "wedo": "WE1C-4",
+   "youtry": [
+    "WS1C-6",
+    "WS1C-3c"
+   ],
+   "note": "Critical angle from n1 and n2; 3c shows TIR when θ1 > θc."
+  },
+  {
+   "criteria": [
+    "1C.12"
+   ],
+   "wedo": "WE1C-5",
+   "youtry": [
+    "1C-SQ7"
+   ],
+   "note": "Optical fibre core/cladding and critical angle."
+  },
+  {
+   "criteria": [
+    "1C.1"
+   ],
+   "wedo": "WS1C-2",
+   "origin": "adapted",
+   "youtry": [
+    "1C-SQ8"
+   ],
+   "note": "Wave-crest explanation of refraction."
+  },
+  {
+   "criteria": [
+    "1C.10",
+    "1C.11"
+   ],
+   "wedo": "WS1C-4",
+   "origin": "adapted",
+   "youtry": [
+    "1C-SQ9"
+   ],
+   "note": "Dispersion: identify and explain; no worked example in the textbook."
+  }
+ ],
+ "skills": [
+  {
+   "id": "1C-SK1",
+   "heading": "1C Skills",
+   "text": "1 It is essential to be able to apply Snell’s law to the refracted paths of light rays in this section. Make sure you can identify the ‘normal’ direction in all situations and are able to make the relevant quantity the subject of Snell’s law.\n2 You should also be able to identify situations where the critical angle is involved and total internal reflection occurs, especially in the case of optical fibres.\n3 Ensure that you can identify the order of colours in situations involving colour dispersion and know that the violet end of the spectrum is refracted more than the red end.\n4 In explaining optical phenomena such as mirages and rainbows, you should be able to sketch light ray paths that cause the phenomena involved.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 36
+   }
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P1C-1",
+   "title": "Finding the refractive index of an unknown material",
+   "file": "1C Practical 1C–1 Finding the refractive index of an unknown material.docx",
+   "aim": "The aim of this practical activity is to calculate the refractive index of an unknown material by comparing the incident and reflected rays."
+  }
+ ],
+ "notes": "FLAG: Check-in Set 1 Q3 answer in Suggested responses uses 2.00 × 10^8 (answer 2.00 'm s–1'), but the question gives 1.5 × 10^8 m s–1 (correct n = 2.0, no units). Copied verbatim; fix before use. FLAG: section Q9b answer says violet refracts 'more away from the normal' on entry (should be towards). FLAG: worksheet Q1 answer says light 'scatters the molecules' (loose physics). Practical aim says 'reflected rays' (Cambridge wording; means refracted). No prac in the folder for TIR (1C.7) or dispersion (1C.9): only Practical 1C–1 (Snell's law). Figures 1C–1, 1C–2, 1C–9 and 1C–20 (decorative photos) not cropped. PowerPoint figures exist for 1C–13, 1C–18, 1C–31."
+}

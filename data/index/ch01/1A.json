@@ -1,0 +1,807 @@
+{
+ "code": "1A",
+ "title": "The properties of waves",
+ "chapter": 1,
+ "unit": 1,
+ "aos": 1,
+ "study_design": [
+  "Identify the amplitude, wavelength, period and frequency of waves",
+  "Calculate the wavelength, frequency, period and speed of travel of waves using $\\lambda = \\frac{v}{f} = vT$",
+  "Explain the wavelength of a wave as a result of the velocity (determined by the medium through which it travels) and the frequency (determined by the source)"
+ ],
+ "criteria": [
+  "1A.1",
+  "1A.2",
+  "1A.3",
+  "1A.4",
+  "1A.5",
+  "1A.6"
+ ],
+ "glossary": [
+  {
+   "id": "1A-G1",
+   "term": "Medium",
+   "def": "a substance or material that can carry the vibrations of a wave",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "1A-G2",
+   "term": "Transverse wave",
+   "def": "a wave in which vibrations are perpendicular to the direction of travel",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "1A-G3",
+   "term": "Longitudinal wave",
+   "def": "a wave in which vibrations are parallel to the direction of travel",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "1A-G4",
+   "term": "Compression",
+   "def": "in longitudinal waves, a region where particles are most closely spaced",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "1A-G5",
+   "term": "Rarefaction",
+   "def": "in waves, a region where particles are most spread out",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "1A-G6",
+   "term": "Amplitude, A",
+   "def": "a measure of the size of vibrations in a wave as the maximum distance a point in the wave vibrates away from the neutral position; generally measured in metres (m)",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "1A-G7",
+   "term": "Frequency, f",
+   "def": "the number of wavelengths of a wave that pass a fixed point in a second; measured in hertz (Hz)",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "1A-G8",
+   "term": "Wavelength, λ",
+   "def": "the distance between repeated parts of a wave shape; measured in metres (m)",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "1A-G9",
+   "term": "Period, T",
+   "def": "the time it takes for a wave to move one wavelength in the direction of travel; measured in seconds (s)",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 7
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F1A-1",
+   "name": "The wave equation",
+   "latex": "\\lambda = \\frac{v}{f} = vT",
+   "where": [
+    {
+     "sym": "\\lambda",
+     "meaning": "Wavelength of the wave",
+     "unit": "m"
+    },
+    {
+     "sym": "v",
+     "meaning": "Speed of the wave",
+     "unit": "m s^{-1}"
+    },
+    {
+     "sym": "f",
+     "meaning": "Frequency of the wave",
+     "unit": "Hz"
+    },
+    {
+     "sym": "T",
+     "meaning": "Period of the wave",
+     "unit": "s"
+    }
+   ],
+   "criteria": [
+    "1A.4",
+    "1A.5",
+    "1A.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 7
+   }
+  }
+ ],
+ "engage": {
+  "heading": "What are waves?",
+  "text": "Waves are all around us and affect many aspects of our lives. Sound waves are used to communicate and to enrich our culture. Ultrasound is used by bats to navigate, by doctors to image our internal organs, by dentists to our clean teeth, and there are a host of other cleaning technologies. Water waves range from tiny ripples to gigantic ocean waves and tsunamis, both entertaining us and threatening our lives. Movements in Earth’s crust cause seismic waves that travel as fast as 5 $\\text{km s}^{-1}$ in solid rock. Matter waves are central to quantum mechanics. Light waves, the focus of most of this chapter, travel through a vacuum at 300 000 $\\text{km s}^{-1}$. When astronomers observe distant stars, they are looking at objects that sent out their light billions of years ago and do not exist anymore.",
+  "src": {
+   "file": "Physics12_Ch01.pdf",
+   "page": 5
+  }
+ },
+ "chunks": [
+  {
+   "id": "1A-E1",
+   "heading": "The nature of waves",
+   "text": "The source of all waves is a vibration of some kind. Mechanical waves vibrate particles of a medium. The vibrations then spread though the medium. Non-mechanical waves, such as light waves, do not require a medium. Their vibrations are electrical and magnetic, and they can travel through both transparent materials and a vacuum, such as the space between the Sun and Earth. You can recognise waves by their vibrations and the fact that they transfer energy without transferring matter. A good example of a simple mechanical wave can be seen when a slinky spring is shaken at a steady rate, as shown in Figure 1A–1.",
+   "figures": [
+    "1A-F1"
+   ],
+   "criteria": [
+    "1A.1",
+    "1A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "1A-E2",
+   "heading": "The nature of waves (transverse and longitudinal)",
+   "text": "If you look carefully at the movement of the spring, you will notice that although the wave moves to the left, the individual coils of the spring do not move left (or right); they just vibrate up and down. Waves like this are called transverse waves. Another everyday example of transverse waves are water waves, such as ocean swells or ripples in a pond where the water particles move more or less up and down as the wave moves along. There are other kinds of waves where the particles vibrate parallel to the direction of travel of the wave; these are called longitudinal waves. These can also be shown by shaking a slinky parallel to its length. Sound waves are also examples of this kind of wave. You can set up a longitudinal wave in a slinky spring as shown in Figure 1A–2. The vibrations create regions of compression, where the particles of the slinky are more closely spaced, and rarefactions, where the particles are more spread out.\n\nIn the example of the slinky spring waves, the energy input from the shaking hand at one end appears as energy at the other end of the spring. However, the particles of the slinky spring simply vibrate in the one place to and fro and do not travel from one end of the spring to the other end, but the vibrations do.",
+   "figures": [
+    "1A-F2"
+   ],
+   "criteria": [
+    "1A.1",
+    "1A.2",
+    "1A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "1A-E3",
+   "heading": "Describing waves",
+   "text": "The key terms describing waves are amplitude, frequency, wavelength, period and speed. Figure 1A–3 shows these terms applied to a transverse wave in a slinky spring.\n\n• Amplitude, $A$, is a measure of the size of the wave vibrations; it is the maximum displacement from the neutral (mid-point) position. It is generally measured in metres.\n• Wavelength, $\\lambda$, is the distance between repeated parts of the wave shape. It is also measured in metres.\n• Speed, $v$, is the speed of the wave as it moves. It is different from the transverse speed of the particles of the medium. It is measured in metres per second ($\\text{m s}^{-1}$). The speed of a wave is determined by the properties of the medium through which it travels.\n• Period, $T$, is the time for the wave shape to move one wavelength in the direction of travel. It is measured in seconds.\n• Frequency, $f$, is equal to the number of wave shapes that pass a point every second. It is equal to $\\frac{1}{T}$ and is measured in hertz (Hz). The frequency of a wave is only determined by the source that generates it and does not depend on the nature of medium.",
+   "figures": [
+    "1A-F3"
+   ],
+   "criteria": [
+    "1A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "1A-E4",
+   "heading": "Describing waves (the wave equation)",
+   "text": "The wavelength, $\\lambda$, of a wave depends only on the nature of the medium through which the wave moves and is related to the speed, $v$, and frequency, $f$, of the wave. If a wave is travelling at a speed of $v$ $\\text{m s}^{-1}$, then every second the wave will travel a distance of $v$ m from a fixed point. At the same time, if the frequency of the wave is $f$ Hz, then every second, $f$ wave shapes go past the same fixed point. Hence, in each second the wave travels a distance $v$ m from a fixed point and $f$ wave shapes go past the same point, so in symbols the length of each wave shape is: [Formula 1A–1]\n\nThis equation shows the relationship between wavelength, frequency, speed and period and applies to all types of waves. The frequency of a wave depends only on the source of the wave and not on the medium, whereas the speed of the wave depends on the nature of the medium. Using this relationship, since frequency is constant between media, the wavelength must also depend on the nature of the medium to make up for changes in the speed of the wave in different media. For example, if a wave increases speed going from one medium to another, then from Formula 1A–1 the wavelength must also increase in the medium by the same amount since $f$ does not change between media. This shows that while $f$ does not depend on the medium, wavelength and the speed of the wave do depend on the medium. Usually Formula 1A–1 will be written in the form $v = f\\lambda$ and is referred to as the wave equation.",
+   "figures": [],
+   "criteria": [
+    "1A.4",
+    "1A.5",
+    "1A.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 7
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "1A-F1",
+   "label": "Figure 1A–1",
+   "caption": "Transverse wave in a slinky spring",
+   "img": "img/1A_fig1A-1.png",
+   "important": true,
+   "why": "Coils vibrate up and down while energy moves along: transverse wave and energy transfer without matter.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "1A-F2",
+   "label": "Figure 1A–2",
+   "caption": "Longitudinal wave in a slinky spring",
+   "img": "img/1A_fig1A-2.png",
+   "important": true,
+   "why": "Compressions and rarefactions in a slinky shaken along its length.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "1A-F3",
+   "label": "Figure 1A–3",
+   "caption": "Idealised sinusoidal transverse wave",
+   "img": "img/1A_fig1A-3.png",
+   "important": true,
+   "why": "Labels crest, trough, amplitude A, wavelength λ, neutral position: key diagram for 1A.4.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 7
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE1A-1",
+   "title": "Period and frequency of a wave",
+   "question": "Find the period and frequency of a water wave of wavelength 8.0 m and speed 5.0 $\\text{m s}^{-1}$.",
+   "steps": [
+    "Using $\\lambda = \\frac{v}{f}$ to find the frequency and making $f$ the subject gives:",
+    "$f = \\frac{v}{\\lambda}$",
+    "$= \\frac{5.0}{8.0}$",
+    "$= 0.625\\ \\text{Hz}$",
+    "Using the definition of $f$ to find the period gives:",
+    "$T = \\frac{1}{f}$",
+    "$= \\frac{1}{0.625}$",
+    "$= 1.6\\ \\text{s}$"
+   ],
+   "answer": "$f = 0.625$ Hz, $T = 1.6$ s",
+   "img": [
+    "img/1A_WE1A-1.png"
+   ],
+   "criteria": [
+    "1A.4",
+    "1A.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 8
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "1A-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "What is the difference between a transverse and a longitudinal wave?",
+   "answer": "In a transverse wave the vibrations are perpendicular to the direction of the wave's motion; in a longitudinal wave they are parallel.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "1A.3"
+   ],
+   "src": {
+    "file": "1A Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "1A-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "What is the difference between a mechanical and a non-mechanical wave?",
+   "answer": "A mechanical wave requires a medium of matter for its transmission; a non-mechanical wave does not require a medium for its transmission.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "1A.1"
+   ],
+   "src": {
+    "file": "1A Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "1A-CI1.3",
+   "set": 1,
+   "n": 3,
+   "question": "How does a mechanical wave motion transfer energy from one place to another?",
+   "answer": "Wave motion transfers energy by transferring vibrations rather than any material of the medium.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "1A.2"
+   ],
+   "src": {
+    "file": "1A Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "1A-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "Define the amplitude of a transverse wave in a slinky spring.",
+   "answer": "The amplitude is the maximum displacement from the neutral position",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1A.4"
+   ],
+   "src": {
+    "file": "1A Check-in – Set 2.docx"
+   }
+  },
+  {
+   "id": "1A-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "State the wave equation with the subject as the period, $T$.",
+   "answer": "$T = \\frac{\\lambda}{v}$",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1A.6"
+   ],
+   "src": {
+    "file": "1A Check-in – Set 2.docx"
+   }
+  },
+  {
+   "id": "1A-CI2.3",
+   "set": 2,
+   "n": 3,
+   "question": "What determines the speed of a wave?",
+   "answer": "The nature of the medium",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "1A.5"
+   ],
+   "src": {
+    "file": "1A Check-in – Set 2.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "1A-SQ1",
+   "n": "1",
+   "question": "Which of the following characteristics is particularly associated with wave motion?",
+   "options": [
+    "A. vibrations which are longitudinal to the direction of motion",
+    "B. the transfer of matter from one place to another",
+    "C. vibrations which transfer energy from one place to another",
+    "D. vibrations which are transverse to the direction of motion"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "1A.1",
+    "1A.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "1A Section questions.docx"
+   }
+  },
+  {
+   "id": "1A-SQ2",
+   "n": "2",
+   "question": "Which of the following statements best describes the frequency of a moving transverse wave?",
+   "options": [
+    "A. The frequency of the wave is related to the time it takes a wave to travel any fixed distance.",
+    "B. The frequency of the wave is related to the time it takes a wave crest to travel one wavelength.",
+    "C. The frequency of the wave is inversely related to the time it takes a wave crest to travel one wavelength.",
+    "D. The frequency of the wave is equal to the time it takes a wave crest to travel one wavelength."
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "1A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "1A Section questions.docx"
+   }
+  },
+  {
+   "id": "1A-SQ3",
+   "n": "3",
+   "question": "Use the following information to answer Questions 3 and 4. The sketch below shows a side-on view of a wave in a rope. It is a transverse wave, and is moving from left to right.\n\nWhich one or more of the arrows labelled A to F best describes the size of the amplitude of the wave shown?",
+   "options": [],
+   "answer": "Only D. Follows from the definition.",
+   "marks": null,
+   "kind": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "youtry"
+   ],
+   "criteria": [
+    "1A.4"
+   ],
+   "img": [
+    "img/1A_SQ3.png"
+   ],
+   "src": {
+    "file": "1A Section questions.docx"
+   }
+  },
+  {
+   "id": "1A-SQ4",
+   "n": "4",
+   "question": "(Same sketch as Question 3.) Which one or more of the arrows labelled A to F best describes the size of the wavelength of the wave shown?",
+   "options": [],
+   "answer": "C and E. Since wavelength is the distance from one point on the wave shape to the same point on an adjacent wave shape.",
+   "marks": null,
+   "kind": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "youtry"
+   ],
+   "criteria": [
+    "1A.4"
+   ],
+   "img": [
+    "img/1A_SQ3.png"
+   ],
+   "src": {
+    "file": "1A Section questions.docx"
+   }
+  },
+  {
+   "id": "1A-SQ5",
+   "n": "5",
+   "question": "Calculate the speed of a wave of frequency $3.0 \\times 10^{9}$ Hz and wavelength 2.5 cm.",
+   "options": [],
+   "answer": "$7.5 \\times 10^{7}\\ \\text{m s}^{-1}$. Use $v = f\\lambda = 3.0 \\times 10^{9} \\times 0.025$",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "practice",
+    "exit"
+   ],
+   "criteria": [
+    "1A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "1A Section questions.docx"
+   }
+  },
+  {
+   "id": "1A-SQ6",
+   "n": "6",
+   "question": "Calculate the frequency of a wave of speed 56 $\\text{mm s}^{-1}$ and wavelength $1.4 \\times 10^{-5}$ m.",
+   "options": [],
+   "answer": "4000 Hz. Use $f = \\frac{v}{\\lambda} = \\frac{0.056}{1.4 \\times 10^{-5}}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "1A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "1A Section questions.docx"
+   }
+  },
+  {
+   "id": "1A-SQ7",
+   "n": "7",
+   "question": "Calculate the wavelength of a wave of speed 16 $\\text{km s}^{-1}$ and period 0.40 s.",
+   "options": [],
+   "answer": "6400 m. Use $\\lambda = vT = 16\\ 000 \\times 0.40$",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "1A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "1A Section questions.docx"
+   }
+  },
+  {
+   "id": "1A-SQ8",
+   "n": "8",
+   "question": "Calculate the speed of a wave of wavelength $4.4 \\times 10^{-8}$ m and period $1.1 \\times 10^{-5}$ s.",
+   "options": [],
+   "answer": "$0.004\\ \\text{m s}^{-1}$. Use $v = \\frac{\\lambda}{T} = \\frac{4.4 \\times 10^{-8}}{1.1 \\times 10^{-5}}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "1A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "1A Section questions.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 1A The properties of waves",
+  "total": 15,
+  "questions": [
+   {
+    "id": "WS1A-1",
+    "n": "1",
+    "question": "Match the term with its description.\nTerms: i. Longitudinal wave; ii. Transverse wave; iii. Period; iv. Amplitude; v. Frequency; vi. Vibration; vii. Medium; viii. Wavelength\nDescriptions: a. The substance in which mechanical waves vibrate; b. A rapid back and forth motion; c. The distance from one wave crest to the next wave crest; d. The time it takes for one complete wavelength to pass a given point; e. Where the particles on the medium travel perpendicular to the direction of the wave; f. The maximum displacement of particles in a wave; g. The number of wavelengths to pass a point in one second; h. Where the particles on the medium travel parallel to the direction of the wave",
+    "answer": "i. h; ii. e; iii. d; iv. f; v. g; vi. b; vii. a; viii. c",
+    "marks": 2,
+    "kind": "recall",
+    "size": "medium",
+    "phase": [
+     "donow",
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "1A.3",
+     "1A.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "1A Worksheet 1A–1 The properties of waves.docx"
+    }
+   },
+   {
+    "id": "WS1A-2a",
+    "n": "2a",
+    "question": "Use the wave equation to answer the following questions. Sound travels at a speed of 1480 $\\text{m s}^{-1}$ in water. If sound waves have a wavelength of 1.2 m in water: i Determine its frequency. ii What is the period of the sound wave in Question 1a?",
+    "answer": "i $f = \\frac{v}{\\lambda} = \\frac{1480}{1.2} = 1233\\ \\text{Hz}$; ii $T = \\frac{1}{f} = \\frac{1}{1233} = 8.1 \\times 10^{-4}\\ \\text{s}$",
+    "marks": 2,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE1A-1",
+    "criteria": [
+     "1A.4",
+     "1A.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "1A Worksheet 1A–1 The properties of waves.docx"
+    }
+   },
+   {
+    "id": "WS1A-2b",
+    "n": "2b",
+    "question": "If sound traveling through air has a period of 0.025s, what is its wavelength? (Assume sound has a speed of 340 $\\text{m s}^{-1}$ in air.)",
+    "answer": "$\\lambda = vT = (340)(0.025) = 8.5\\ \\text{m}$",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "wedo"
+    ],
+    "pair_with": "1A-SQ7",
+    "criteria": [
+     "1A.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "1A Worksheet 1A–1 The properties of waves.docx"
+    }
+   },
+   {
+    "id": "WS1A-2c",
+    "n": "2c",
+    "question": "A radio station has a frequency of 102.5 MHz. What is the wavelength of the signal? (Radio waves travel at $3.0 \\times 10^{8}\\ \\text{m s}^{-1}$.)",
+    "answer": "$\\lambda = \\frac{c}{f} = \\frac{3.0 \\times 10^{8}}{102.5 \\times 10^{6}} = 2.93\\ \\text{m}$",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "1A.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "1A Worksheet 1A–1 The properties of waves.docx"
+    }
+   },
+   {
+    "id": "WS1A-2d",
+    "n": "2d",
+    "question": "The speed of electromagnetic waves in a vacuum is $3.0 \\times 10^{8}\\ \\text{m s}^{-1}$. What is the frequency and period of microwave radiation with a wavelength of 2.5 cm?",
+    "answer": "$f = \\frac{c}{\\lambda} = \\frac{3.0 \\times 10^{8}}{0.025} = 1.2 \\times 10^{10}\\ \\text{Hz}$; $T = \\frac{1}{f} = \\frac{1}{1.2 \\times 10^{10}} = 8.33 \\times 10^{-11}\\ \\text{s}$",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE1A-1",
+    "criteria": [
+     "1A.4",
+     "1A.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "1A Worksheet 1A–1 The properties of waves.docx"
+    }
+   },
+   {
+    "id": "WS1A-2e",
+    "n": "2e",
+    "question": "Waves in the ocean appear to be 10 m apart, and $\\frac{1}{4}$ of a wave pass a buoy each second. i What is the frequency of these ocean waves? ii What is the period of these ocean waves? iii How fast are these waves travelling?",
+    "answer": "i $\\frac{1}{4}$ wave passes per second. So, $f = \\frac{1}{4} = 0.25$. ii $T = \\frac{1}{f} = \\frac{1}{0.25} = 4\\ \\text{s}$ iii $v = \\lambda f = (10)(0.25) = 2.5\\ \\text{m s}^{-1}$",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "1A.4",
+     "1A.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "1A Worksheet 1A–1 The properties of waves.docx"
+    }
+   },
+   {
+    "id": "WS1A-3",
+    "n": "3",
+    "question": "Sketch a labelled diagram to outline the differences and similarities between transverse and longitudinal waves.",
+    "answer": "Transverse wave [diagram] Longitudinal wave [diagram]",
+    "marks": 2,
+    "kind": "graph",
+    "size": "medium",
+    "phase": [
+     "wedo",
+     "practice"
+    ],
+    "pair_with": "WS1A-4",
+    "criteria": [
+     "1A.3"
+    ],
+    "img": [
+     "img/1A_WS3_answer_transverse.png",
+     "img/1A_WS3_answer_longitudinal.png"
+    ],
+    "src": {
+     "file": "1A Worksheet 1A–1 The properties of waves.docx"
+    }
+   },
+   {
+    "id": "WS1A-4",
+    "n": "4",
+    "question": "Classify the following waves as either transverse waves or longitudinal waves. a Ocean waves b Ultrasonic waves c Microwaves d Drum skin vibrating e Clapping f Vibrations in a guitar string",
+    "answer": "a Transverse b Longitudinal c Transverse d Transverse e Longitudinal f Transverse",
+    "marks": 3,
+    "kind": "recall",
+    "size": "medium",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "pair_with": "WS1A-3",
+    "criteria": [
+     "1A.1",
+     "1A.3"
+    ],
+    "img": [],
+    "src": {
+     "file": "1A Worksheet 1A–1 The properties of waves.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "1A.4",
+    "1A.6"
+   ],
+   "wedo": "WE1A-1",
+   "youtry": [
+    "WS1A-2a",
+    "WS1A-2d"
+   ],
+   "note": "All three find f from v and λ, then T = 1/f."
+  },
+  {
+   "criteria": [
+    "1A.6"
+   ],
+   "wedo": "WS1A-2b",
+   "origin": "adapted",
+   "youtry": [
+    "1A-SQ7"
+   ],
+   "note": "λ = vT; no textbook worked example for this form. SQ7 needs a km s⁻¹ conversion."
+  },
+  {
+   "criteria": [
+    "1A.4"
+   ],
+   "wedo": "WS1A-3",
+   "origin": "adapted",
+   "youtry": [
+    "1A-SQ3",
+    "1A-SQ4"
+   ],
+   "note": "Labelling wave diagrams (amplitude, wavelength); WS1A-3 answer diagrams used as the model."
+  },
+  {
+   "criteria": [
+    "1A.1",
+    "1A.3"
+   ],
+   "wedo": "1A-CI1.1",
+   "origin": "adapted",
+   "youtry": [
+    "WS1A-4"
+   ],
+   "note": "Transverse vs longitudinal definition, then classify examples."
+  }
+ ],
+ "skills": [
+  {
+   "id": "1A-SK1",
+   "heading": "Multichoice questions on definitions",
+   "text": "Refer to the definition first. Check the options for an answer that can be reworded to fit the definition. If stuck, eliminate unlikely options.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "1A-SK2",
+   "heading": "Calculation questions",
+   "text": "Identify the relevant formula. If necessary, transform the equation so that the subject of the equation is the desired quantity. Always check that your answer is a reasonable quantity. For example, if your answer to a speed question is greater than the speed of light in a vacuum ($v = 3 \\times 10^{8}\\ \\text{m s}^{-1}$), then it must be incorrect.",
+   "src": {
+    "file": "Physics12_Ch01.pdf",
+    "page": 8
+   }
+  }
+ ],
+ "pracs": [],
+ "notes": "No practical for 1A. Only one textbook worked example (WE1A-1); other We do entries are adapted from worksheet/check-in items. Worksheet Q2a(ii) refers to 'Question 1a' (Cambridge typo for 2a). WS1A-2e answer for f has no unit in the answer file. Check-in Set 2 Q2 wording differs slightly between textbook and docx; docx used."
+}

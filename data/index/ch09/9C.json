@@ -1,0 +1,1391 @@
+{
+ "code": "9C",
+ "title": "Springs",
+ "chapter": 9,
+ "unit": 2,
+ "aos": 1,
+ "study_design": [
+  "Investigate and analyse theoretically and practically Hooke’s Law for an ideal spring: $F = -kx$, where x is extension",
+  "Analyse and model mechanical energy transfers and transformations using energy conservation: elastic potential energy in ideal springs: $E_{\\text{s}} = \\frac{1}{2}kx^{2}$"
+ ],
+ "criteria": [
+  "9C.1",
+  "9C.2",
+  "9C.3",
+  "9C.4",
+  "9C.5",
+  "9C.6"
+ ],
+ "glossary": [
+  {
+   "id": "9C-G1",
+   "term": "Elastic material",
+   "def": "a material that can store elastic potential energy and is able to return to its original shape once the energy is released",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 29
+   }
+  },
+  {
+   "id": "9C-G2",
+   "term": "Elastic limit",
+   "def": "the maximum deformation that can occur without causing permanent deformation",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 29
+   }
+  },
+  {
+   "id": "9C-G3",
+   "term": "Hooke’s law",
+   "def": "in an ideal spring, the force applied to the spring is directly proportional to its extension or compression",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "9C-G4",
+   "term": "Ideal spring",
+   "def": "a hypothetical spring that is considered frictionless and mass-less and that obeys Hooke’s law",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "9C-G5",
+   "term": "Elastic potential energy",
+   "def": "the energy stored in the material when it is deformed within its elastic limits",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "9C-G6",
+   "term": "Equilibrium position",
+   "def": "the position in a system where the net force on the oscillating object is zero",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 38
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F9C-1",
+   "name": "Hooke’s law",
+   "latex": "F = -kx",
+   "where": [
+    {
+     "sym": "F",
+     "meaning": "Force",
+     "unit": "N"
+    },
+    {
+     "sym": "k",
+     "meaning": "Spring constant",
+     "unit": "N m$^{-1}$"
+    },
+    {
+     "sym": "x",
+     "meaning": "Compression or extension of the spring",
+     "unit": "m"
+    }
+   ],
+   "criteria": [
+    "9C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 31
+   }
+  },
+  {
+   "id": "F9C-2",
+   "name": "Elastic potential energy",
+   "latex": "E_{\\text{s}} = \\frac{1}{2}kx^{2}",
+   "where": [
+    {
+     "sym": "E_{\\text{s}}",
+     "meaning": "Elastic potential energy or elastic potential energy",
+     "unit": "J"
+    },
+    {
+     "sym": "k",
+     "meaning": "Spring constant",
+     "unit": "N m$^{-1}$"
+    },
+    {
+     "sym": "\\Delta x",
+     "meaning": "Compression or extension",
+     "unit": "m"
+    }
+   ],
+   "criteria": [
+    "9C.3",
+    "9C.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 34
+   }
+  },
+  {
+   "id": "F9C-2b",
+   "name": "Change in elastic potential energy (in text)",
+   "latex": "\\Delta E_{\\text{s}} = \\frac{1}{2}kx_{\\text{f}}^{2} - \\frac{1}{2}kx_{\\text{i}}^{2}",
+   "where": [],
+   "criteria": [
+    "9C.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 36
+   }
+  },
+  {
+   "id": "F9C-3",
+   "name": "Kinetic energy in a horizontal spring system",
+   "latex": "E_{\\text{T}} = \\frac{1}{2}mv^{2} + \\frac{1}{2}kx^{2}",
+   "where": [
+    {
+     "sym": "E_{\\text{T}}",
+     "meaning": "Total energy",
+     "unit": "J"
+    },
+    {
+     "sym": "m",
+     "meaning": "Mass",
+     "unit": "kg"
+    },
+    {
+     "sym": "v",
+     "meaning": "Velocity",
+     "unit": "m s$^{-1}$"
+    },
+    {
+     "sym": "k",
+     "meaning": "Spring constant",
+     "unit": "N m$^{-1}$"
+    },
+    {
+     "sym": "x",
+     "meaning": "Change in length of the spring",
+     "unit": "m"
+    }
+   ],
+   "criteria": [
+    "9C.5",
+    "9C.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 38
+   }
+  },
+  {
+   "id": "F9C-4",
+   "name": "Kinetic energy in a vertical spring system",
+   "latex": "kx = mg",
+   "where": [
+    {
+     "sym": "k",
+     "meaning": "Spring constant",
+     "unit": "N m$^{-1}$"
+    },
+    {
+     "sym": "x",
+     "meaning": "Change in length of the spring",
+     "unit": "m"
+    },
+    {
+     "sym": "m",
+     "meaning": "Mass",
+     "unit": "kg"
+    },
+    {
+     "sym": "g",
+     "meaning": "Gravitational field strength (9.8 N kg$^{-1}$ on the surface of Earth)",
+     "unit": "N kg$^{-1}$"
+    }
+   ],
+   "criteria": [
+    "9C.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 40
+   }
+  },
+  {
+   "id": "F9C-5",
+   "name": "Transformation of kinetic energy in a vertical spring system",
+   "latex": "mgx = \\frac{1}{2}kx^{2} + \\frac{1}{2}mv^{2}",
+   "where": [
+    {
+     "sym": "m",
+     "meaning": "Mass",
+     "unit": "kg"
+    },
+    {
+     "sym": "g",
+     "meaning": "Gravitational field strength (9.8 N kg$^{-1}$ on the surface of Earth)",
+     "unit": "N kg$^{-1}$"
+    },
+    {
+     "sym": "x",
+     "meaning": "Change in length of the spring",
+     "unit": "m"
+    },
+    {
+     "sym": "k",
+     "meaning": "Spring constant",
+     "unit": "N m$^{-1}$"
+    },
+    {
+     "sym": "v",
+     "meaning": "Velocity",
+     "unit": "m s$^{-1}$"
+    }
+   ],
+   "criteria": [
+    "9C.5",
+    "9C.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 42
+   }
+  }
+ ],
+ "engage": {
+  "heading": "The amazing elasticity of tendons",
+  "text": "The energy used in an animal’s motion arises mostly from the muscular force generated to support the animal’s weight and the work associated with moving the animal’s centre of mass and body segments. When moving at high speeds, animals use bouncy gaits to conserve muscle work. At these higher speeds, the energy saving is mainly achieved by the storage and recovery of elastic potential energy in tendons and ligaments. Tendons are connective tissue mainly composed of collagen fibres that attach muscle to bone.\nTendons are remarkably efficient. Testing in human runners has found that the mechanical energy that our tendons return to us is very similar to other mammals and running birds, 5–13%. The mechanical energy is the energy from the muscular forces that generate and maintain movement. The exception to this is wallabies and kangaroos, which are more than twice as mechanically efficient as humans.\nWallabies and kangaroos have unusually long tendons that have the ability to store larger amounts of elastic potential energy. This allows kangaroos to hop at high speeds while using very little energy.",
+  "figures": [],
+  "src": {
+   "file": "Physics12_Ch09.pdf",
+   "page": 28
+  }
+ },
+ "chunks": [
+  {
+   "id": "9C-E1",
+   "heading": "Elasticity",
+   "text": "When an object compresses, extends or twists and then returns to its original shape, the material has stored energy by changing shape. Any material that can change shape and then return to its original shape is called an elastic material. All elastic materials have an elastic limit, this is the maximum stress that a material can be placed under without causing permanent deformation. Many solid materials are elastic, such as rubber, neoprene and steel. Materials that change shape permanently when deformed only slightly are referred to as plastic materials. Mud clay and plasticine are all examples of plastic materials.",
+   "figures": [],
+   "criteria": [],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 29
+   }
+  },
+  {
+   "id": "9C-E2",
+   "heading": "Hooke’s law",
+   "text": "Springs are used extensively in a range of machines and devices. Toys, pens, electronics, mattresses, medical devices, automatic watches, mining and drilling equipment and vehicles are just a few examples of where springs are used.\nWe have been able to utilise springs so effectively because we have known about their properties for over 300 years. In 1676 British physicist Robert Hooke first proposed Hooke’s law, that in an ideal spring, the force applied to the spring is directly proportional to its extension or compression. Imagine a specific spring resting horizontally – when no force is applied to the spring there will be no extension in the spring. When 50 N of force is applied to this specific spring, it extends by 0.2 m; when 100 N of force is applied to the spring it extends by 0.4 m. A force–extension graph of the spring is shown in the figure above.\nThe constant linear relationship between the force applied and the extension highlights Hooke’s law, that force is directly proportional to extension. The gradient of this graph is known as the spring constant, k, and as you are dividing newtons by metres the unit for the spring constant is N m$^{-1}$. The gradient, and therefore the spring constant for the spring, in the graph above can be calculated as follows:\n$\\text{gradient} = k = \\frac{\\text{rise}}{\\text{run}} = \\frac{200 - 0}{0.8 - 0} = 250\\ \\text{N m}^{-1}$\nThe spring constant gives an indication of the stiffness of the spring; the higher the spring constant, the more force is required to extend or compress the spring and therefore the stiffer it is. For example, a spring that has a spring constant of 500 N m$^{-1}$ would take twice as much force to extend it an equal amount as the spring with a spring constant of 250 N m$^{-1}$. This is shown in the graphs below.\nHooke’s law can be represented mathematically as follows:\n$F = -kx$\nThere is a negative sign to indicate that the spring’s restoring force acts in the opposite direction to the compression or extension. For simplicity, this book will omit the negative sign from this point onwards. This means that the formula will indicate the magnitude of the force on the spring and hence the magnitude of the force by the spring. While the above equation only refers to springs, the relationship holds true for all solid elastic materials.",
+   "figures": [
+    "9C-F4",
+    "9C-F5"
+   ],
+   "criteria": [
+    "9C.1",
+    "9C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 29
+   }
+  },
+  {
+   "id": "9C-E3",
+   "heading": "Elastic potential energy",
+   "text": "When an elastic material is compressed, extended or twisted, it stores energy. This stored energy is known as elastic potential energy or elastic potential energy. When the elastic potential energy is released, the object will return to its original shape. Imagine a spring that has a spring constant, k. A force–compression graph of the spring is shown on the right.\nYou should note that the values shown on the y-axis are a measure of force and values on the x-axis are a measure of distance (compression or extension). This means that this graph is just a special force–distance graph, and the area under a force–distance graph is work. This means that the area under a force–compression/extension graph is the work done to compress or extend the objects as well as the amount of elastic potential energy stored in the object. For the force–compression graph above, the elastic potential energy would be given by the area under the triangle; therefore:\n$\\text{elastic potential energy} = E_{\\text{s}} = \\frac{1}{2}(F)(x)$\nHooke’s law states that F = kx. Therefore, the force, F, in the above equation can be substituted for kx as shown:\n$E_{\\text{s}} = \\frac{1}{2}(k)(x)(x)$\n$E_{\\text{s}} = \\frac{1}{2}kx^{2}$",
+   "figures": [
+    "9C-F6"
+   ],
+   "criteria": [
+    "9C.1",
+    "9C.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "9C-E4",
+   "heading": "Elastic potential energy increases with extension",
+   "text": "When trying to extend a spring, it gets harder to change the shape of the spring the more you extend it. To extend a spring by 1 cm when it is resting does not take as much energy as extending the same spring by 1 cm when it is already stretched. This is because the more you stretch a spring, the greater the restoring force becomes and therefore more energy must be applied to overcome this force. This is also true when trying to compress a spring. This is shown graphically in Figure 9C–7, with a spring that has a spring constant of 200 N m$^{-1}$.\nAs the spring extends, it takes more and more energy to extend it by the same amount. The energy required to extend the spring by 1 cm is represented by the shaded region in the graph. It is clear that the longer the spring becomes, the more energy is required to extend the spring by 1 cm.\nTherefore, when finding the change in elastic potential energy, you can either find the area under the graph or take away the elastic potential energy of the initial length, $x_{\\text{i}}$, from the elastic potential energy of the final length, $x_{\\text{f}}$:\n$\\Delta E_{\\text{s}} = \\frac{1}{2}kx_{\\text{f}}^{2} - \\frac{1}{2}kx_{\\text{i}}^{2}$",
+   "figures": [
+    "9C-F7"
+   ],
+   "criteria": [
+    "9C.4",
+    "9C.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 35
+   }
+  },
+  {
+   "id": "9C-E5",
+   "heading": "Energy transformations in a horizontal spring system",
+   "text": "Imagine an ideal spring that works the same in compression and extension. The spring is lying horizontally on a frictionless surface, with one end fixed against a wall and the other end attached to a free object. If the object is pulled back and let go, it will oscillate about an equilibrium position. When the object is at the equilibrium position, it will have no net force on it. The object will have no net force on it because the spring is at its natural length, it is not compressed or extended, and the force due to gravity of the object is balanced by the normal force applied by the surface on the object.\nAs the spring oscillates, the kinetic energy and elastic potential energy will fluctuate between maximum values and zero. Since the total energy, $E_{\\text{T}}$, will remain the same throughout the oscillation the sum of the kinetic energy, $E_{\\text{k}}$, and elastic potential energy, $E_{\\text{s}}$, at any given point will be equal to the total energy. This can been represented by the following formula:\n$E_{\\text{T}} = E_{\\text{k}} + E_{\\text{s}}$\n$E_{\\text{T}} = \\frac{1}{2}mv^{2} + \\frac{1}{2}kx^{2}$\nPosition 1: At position 1 the spring is fully extended, it is a point of maximum spring potential energy and zero kinetic energy. As the object moves towards the equilibrium position (2) the kinetic energy increases and the spring potential energy decreases.\nPosition 2: At the equilibrium positions (2 and 4) the spring will have maximum kinetic energy and zero spring potential energy. Once the object passes the equilibrium position the spring begins to compress, slowing the object down. The kinetic energy will decrease while the spring potential energy increases.\nPosition 3: At position 3 the spring potential energy will be a maximum and the kinetic energy will be zero. The object will then gain kinetic energy and lose spring potential energy as it moves back to the equilibrium (4).\nPosition 4: At the equilibrium position again the spring will have maximum kinetic energy and zero spring potential energy. Once past the equilibrium the kinetic energy of the object will decrease and the spring potential energy will increase.\nPosition 1: This decrease in kinetic energy will continue until the spring comes momentarily to rest at position 1, ready to repeat the cycle.",
+   "figures": [
+    "9C-F8",
+    "9C-F9"
+   ],
+   "criteria": [
+    "9C.5",
+    "9C.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 38
+   }
+  },
+  {
+   "id": "9C-E6",
+   "heading": "Energy transformations in a vertical spring system",
+   "text": "For a vertical spring system, imagine an ideal spring with one end fixed to a ceiling and the other end attached to an object that is free to move. If the object is dropped and allowed to move freely under the influence of gravity, it will oscillate about an equilibrium position. When the object attached to a vertical spring is at the equilibrium position, it will have no forces on it. This is because the upwards spring force will balance the downwards force due to gravity.\nThe upwards spring force balancing the downwards force due to gravity is shown mathematically below:\n$kx = mg$\nThe equilibrium position is the position of maximum kinetic energy. As the spring oscillates about the equilibrium position, the gravitational potential energy, elastic potential energy and kinetic energy will fluctuate between maximum values and zero.\nBefore analysing the motion of a vertical spring system you must define the point of zero gravitational potential energy. It will be the lowest point of the spring’s oscillation (position 3 in the diagram).\nWhen the object is initially dropped (position 1), the spring is in its natural position, under no compression or extension. This means that the spring potential energy and kinetic energy are both equal to zero, while the gravitational potential energy is at a maximum. As the object is pulled down by the force of gravity its spring potential energy and kinetic energy increase, while the gravitational potential energy decreases. At the equilibrium positions (2 and 4), the kinetic energy is a maximum. Between positions 2 and 3, the object passes the equilibrium position, the kinetic energy starts to decrease, the gravitational potential energy continues to decrease, and the spring potential energy continues to increase. At position 3 the kinetic energy and gravitational potential energy are both equal to zero, while the spring potential energy is at a maximum. Between positions 3 and 4, the object then moves upwards, increasing both the kinetic energy and gravitational potential energy, while decreasing the spring potential energy. At position 4, the object passes the equilibrium position, the kinetic energy starts to decrease, the gravitational potential energy continues to increase, and the spring potential energy continues to decrease, until the object returns to position 1 and the cycle repeats.",
+   "figures": [
+    "9C-F10",
+    "9C-F11"
+   ],
+   "criteria": [
+    "9C.5",
+    "9C.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 40
+   }
+  },
+  {
+   "id": "9C-E7",
+   "heading": "Mathematical relationships in a vertical spring system",
+   "text": "The gravitational potential energy lost by the object will be transformed into the elastic potential energy and kinetic energy of the system. This relationship can be represented by the formula:\n$E_{\\text{g}} = E_{\\text{s}} + E_{\\text{k}}$\n$mg\\Delta h = \\frac{1}{2}kx^{2} + \\frac{1}{2}mv^{2}$\nSince the change in height is equal to the change in length of the spring, Δh can be replaced with an x as shown below:\n$mgx = \\frac{1}{2}kx^{2} + \\frac{1}{2}mv^{2}$",
+   "figures": [],
+   "criteria": [
+    "9C.5",
+    "9C.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 42
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "9C-F4",
+   "label": "Figure 9C–4",
+   "caption": "Force versus extension graph for an ideal spring with a spring constant of k = 250 N m$^{-1}$.",
+   "img": "img/9C_fig9C-4.png",
+   "important": true,
+   "why": "Hooke's law: straight line, gradient = k",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "9C-F5",
+   "label": "Figure 9C–5",
+   "caption": "Comparison of force versus extension graph for ideal spings with spring constants of k = 250 N m$^{-1}$ (red) and k = 500 N m$^{-1}$ (blue).",
+   "img": "img/9C_fig9C-5.png",
+   "important": true,
+   "why": "Steeper gradient = stiffer spring",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 31
+   }
+  },
+  {
+   "id": "9C-F6",
+   "label": "Figure 9C–6",
+   "caption": "The area under a force versus compression graph for an elastic material is the elastic potential energy.",
+   "img": "img/9C_fig9C-6.png",
+   "important": true,
+   "why": "Area under F–x graph = Es (triangle ½Fx)",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "9C-F7",
+   "label": "Figure 9C–7",
+   "caption": "The force versus extension graph for an ideal spring with spring constant k = 200 N m$^{-1}$. The energy needed to extend the spring increases the more lengthened the spring becomes.",
+   "img": "img/9C_fig9C-7.png",
+   "important": true,
+   "why": "Shaded 1 cm strips grow: Es ∝ x²",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 36
+   }
+  },
+  {
+   "id": "9C-F8",
+   "label": "Figure 9C–8",
+   "caption": "An object attached to a horizontal spring has no net force at its equilibrium position.",
+   "img": "img/9C_fig9C-8.png",
+   "important": true,
+   "why": "Horizontal spring equilibrium position",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 38
+   }
+  },
+  {
+   "id": "9C-F9",
+   "label": "Figure 9C–9",
+   "caption": "The following shows one full oscillation of a horizontal spring. The dotted line represents the equilibrium position. It is important to remember that when the object is not on the equilibrium position the net force on the object will be towards the equilibrium position.",
+   "img": "img/9C_fig9C-9.png",
+   "important": true,
+   "why": "Energy at each stage of a horizontal oscillation (tall figure; may need splitting on a slide)",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 39
+   }
+  },
+  {
+   "id": "9C-F10",
+   "label": "Figure 9C–10",
+   "caption": "An object attached to a vertical spring has no net force at its equilibrium position. The spring force $F_{\\text{spring}}$ balances the weight force $F_{\\text{weight}}$.",
+   "img": "img/9C_fig9C-10.png",
+   "important": true,
+   "why": "Vertical spring: kx = mg at equilibrium",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 40
+   }
+  },
+  {
+   "id": "9C-F11",
+   "label": "Figure 9C–11",
+   "caption": "One full oscillation of a vertical spring. The dotted line represents the equilibrium position. It is important to remember that, just like in a horizontal spring, when the objects are not at the equilibrium position then the net force on the objects will be towards the equilibrium position.",
+   "img": "img/9C_fig9C-11.png",
+   "important": true,
+   "why": "Energy at each stage of a vertical oscillation (text small; use the diagram row)",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 41
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE9C-1",
+   "title": "Hooke’s law and suspension",
+   "question": "A car is driving over a speed bump in the road. The speed bump applies a force of 750 N to the car’s shock-absorbing spring. The shock-absorbing spring has a spring constant of $1.34\\times10^{4}$ N m$^{-1}$. Calculate the amount of compression in the spring as the car drives over the speed bump.",
+   "steps": [
+    "$F = -kx$",
+    "$x = \\frac{F}{k}$",
+    "$= \\frac{750}{1.34\\times10^{4}}$",
+    "$= 0.0560\\ \\text{m}$"
+   ],
+   "answer": "0.0560 m",
+   "img": [],
+   "criteria": [
+    "9C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 31
+   }
+  },
+  {
+   "id": "WE9C-2",
+   "title": "Reading a force–compression graph",
+   "question": "A group of engineers is testing two springs, spring A and spring B, for use on mining equipment. The results of their tests are displayed on the force–compression graphs shown on the right.\na Calculate the spring constant of spring A and spring B and state which spring is stiffer.\nb The engineers need to select a spring that is compressed by 70−80 cm when a force of 500 kN is applied to it. Which of the springs tested would be appropriate for use? Use a calculation to justify your answer.",
+   "steps": [
+    "a When looking at any graph, you must pay attention to the units. If they are not SI units, then you must convert them and then calculate the spring constant. In this example you, must convert kN into N.",
+    "$k_{\\text{A}} = \\frac{(70\\times10^{3}) - 0}{0.1 - 0} = 7.00\\times10^{5}\\ \\text{N m}^{-1}$",
+    "$k_{\\text{B}} = \\frac{(45\\times10^{3}) - 0}{0.1 - 0} = 4.5\\times10^{5}\\ \\text{N m}^{-1}$",
+    "Spring A is stiffer as it has a greater spring constant.",
+    "b First, rearrange Hooke’s law to make compression the subject. Then determine the compression of both springs when loaded with 500 kN.",
+    "$x_{\\text{A}} = \\frac{F}{k} = \\frac{500\\times10^{3}}{7\\times10^{5}} = 0.714\\ \\text{m}$",
+    "$x_{\\text{B}} = \\frac{F}{k} = \\frac{500\\times10^{3}}{4.5\\times10^{5}} = 1.11\\ \\text{m}$",
+    "Therefore, only spring A is appropriate for use."
+   ],
+   "answer": "a $k_A = 7.00\\times10^{5}$ N m$^{-1}$, $k_B = 4.5\\times10^{5}$ N m$^{-1}$, A stiffer; b spring A",
+   "img": [
+    "img/9C_WE9C-2.png"
+   ],
+   "criteria": [
+    "9C.1",
+    "9C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 32
+   }
+  },
+  {
+   "id": "WE9C-3",
+   "title": "Elastic energy of a spring",
+   "question": "A spring, initially at rest, has a force of 3.44 kN applied to it. The spring has a spring constant of 2500 N m$^{-1}$.\na Calculate the change in length of the spring.\nb Calculate the amount of elastic potential energy stored in the spring once the force has been applied.",
+   "steps": [
+    "a Convert all units to SI units.",
+    "$F = 3.44\\times10^{3}\\ \\text{N}$",
+    "Then rearrange the appropriate formula to make the change in length the subject. Substitute the appropriate values to solve the equation:",
+    "$x = \\frac{F}{k} = \\frac{3.44\\times10^{3}}{2500} = 1.38\\ \\text{m}$",
+    "The change in length is 1.38 m.",
+    "b Select the appropriate formula and substitute the appropriate values in to solve the equation:",
+    "$E_{\\text{s}} = \\frac{1}{2}kx^{2} = \\frac{1}{2}(2500)(1.38)^{2} = 2.37\\times10^{3}\\ \\text{J}$"
+   ],
+   "answer": "a 1.38 m; b $2.37\\times10^{3}$ J",
+   "img": [],
+   "criteria": [
+    "9C.2",
+    "9C.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 34
+   }
+  },
+  {
+   "id": "WE9C-4",
+   "title": "Elastic potential from a graph",
+   "question": "A spring to be used in a medical device is tested and produces the following force–extension data.\nCalculate the elastic potential energy stored in the spring when it is extended by 2 cm.",
+   "steps": [
+    "The elastic potential energy can be found from the area under the graph.",
+    "First, convert all of the units to SI units:",
+    "$F = 5\\times10^{3}\\ \\text{N},\\ x = 0.02\\ \\text{m}$",
+    "Then find the area under the graph:",
+    "$E_{\\text{s}} = (0.5)(5\\times10^{3})(0.02) = 50\\ \\text{J}$",
+    "This can also be done by finding the spring constant from the gradient of the graph and then solving the elastic potential energy formula, $E_{\\text{s}} = \\frac{1}{2}kx^{2}$."
+   ],
+   "answer": "50 J",
+   "img": [
+    "img/9C_WE9C-4.png"
+   ],
+   "criteria": [
+    "9C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 35
+   }
+  },
+  {
+   "id": "WE9C-5",
+   "title": "Energy released by a compressed spring",
+   "question": "A spring of length 40 cm with a spring constant of 43.5 N m$^{-1}$ is initially compressed to 30 cm and is then released back to a length of 35 cm. Calculate the amount of energy released when the spring is released back to a length of 35 cm.",
+   "steps": [
+    "$\\Delta E_{\\text{s}} = \\frac{1}{2}kx_{\\text{f}}^{2} - \\frac{1}{2}kx_{\\text{i}}^{2}$",
+    "$= \\frac{1}{2}(43.5)(0.05)^{2} - \\frac{1}{2}(43.5)(0.1)^{2}$",
+    "$= -0.163\\ \\text{J}$",
+    "Note that there is a negative sign in front of the energy because the energy is being given out. If the spring was compressed by someone’s hand, then slowly released by the same hand, the spring has done work on the hand."
+   ],
+   "answer": "−0.163 J",
+   "img": [],
+   "criteria": [
+    "9C.3",
+    "9C.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 36
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "9C-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "If 100 N of force is used to compress an ideal spring by 1 cm, what is the spring constant of that spring?",
+   "answer": "$F = -kx$\n$k = -\\frac{F}{\\Delta x} = \\frac{100}{-0.1} = 1.00\\times10^{3}\\ \\text{N m}^{-1}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "9C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "9C Check-in – Set 1.docx"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  },
+  {
+   "id": "9C-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "A car manufacturing company is looking for the stiffest spring that they can use for their new sports car. The springs that they can choose from are shown in the graph below.\nWhich spring should the car manufacturing company choose for the sports car and what is the spring constant of this spring?",
+   "answer": "They will choose spring A, it has the steepest gradient and therefore the highest spring constant.\n$k = \\frac{(30-0)\\times10^{3}}{0.04-0} = 7.50\\times10^{5}\\ \\text{N m}^{-1}$",
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "9C.1"
+   ],
+   "img": [
+    "img/9C_CI1.2.png"
+   ],
+   "src": {
+    "file": "9C Check-in – Set 1.docx"
+   },
+   "phase": [
+    "youtry",
+    "exit"
+   ]
+  },
+  {
+   "id": "9C-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "A student stretched an ideal spring by length L. The student then continues to stretch the spring so that it is extended by length of 2L. When extended to length 2L, explain which of the following statements is true.\nA The spring has twice as much energy when it is extended to length 2L compared to L.\nB The spring has three times as much energy when it is extended to length 2L compared to L.\nC The spring has four times as much energy when it is extended to length 2L compared to L.\nD The spring has five times as much energy when it is extended to length 2L compared to L.",
+   "answer": "C",
+   "kind": "mc",
+   "size": "quick",
+   "criteria": [
+    "9C.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "9C Check-in – Set 2.docx"
+   },
+   "kind2": "explain",
+   "phase": [
+    "exit",
+    "donow"
+   ]
+  },
+  {
+   "id": "9C-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "The force–compression graph of a spring that is used in pens is shown on the right.\nUse the graph to calculate the amount of elastic potential energy stored in the spring when it is compressed by 5 cm.",
+   "answer": "$E_{\\text{s}} = \\text{area under the graph} = \\frac{1}{2}(45)(0.05) = 1.125\\ \\text{J}$",
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "9C.1"
+   ],
+   "img": [
+    "img/9C_CI2.2.png"
+   ],
+   "src": {
+    "file": "9C Check-in – Set 2.docx"
+   },
+   "phase": [
+    "youtry",
+    "exit"
+   ]
+  },
+  {
+   "id": "9C-CI2.3",
+   "set": 2,
+   "n": 3,
+   "question": "A group of students is conducting an experiment with an ideal spring that has a spring constant, k, of 21.8 N m$^{-1}$. The spring has an unstretched length of 30 cm. The students attach a mass of 300 g to the bottom of the spring and allow it to oscillate freely when it is released. When the spring is released, the spring has a maximum extension of x cm. The situation is shown to the right.\na Find the extension of the spring at its lowest point of oscillation. You can ignore the mass of the spring itself and frictional losses.\nb When is the speed of the mass on the spring a maximum? Explain your answer.\nc Calculate the extension of the spring when the velocity is a maximum.\nd Calculate the maximum velocity of the spring throughout its oscillation.",
+   "answer": "a $mg\\Delta h = \\frac{1}{2}k\\Delta x^{2}$, since $\\Delta h = x$\n$mg = \\frac{1}{2}kx$\n$x = \\frac{2mg}{k} = \\frac{(2)(0.3)(9.8)}{21.8} = 0.270\\ \\text{m}$\nb The velocity is a maximum when the gravity force on the mass is balanced by the spring force. This is because the acceleration on the mass up until this point is in the same direction but decreasing. The mass will continue to accelerate until it reaches this point, where the forces are balanced, and after this point the net force and therefore the acceleration will be in the opposite direction to the direction of the velocity.\nc $kx = mg$\n$x = \\frac{mg}{k} = \\frac{(0.3)(9.8)}{21.8} = 0.135\\ \\text{m}$\nd The energy at the release point will equal the energy at the equilibrium position (fastest point).\n$\\Delta E_{\\text{g}} = E_{\\text{s}} + E_{\\text{k}}$\n$mgx = \\frac{1}{2}kx^{2} + \\frac{1}{2}mv^{2}$\n$v = \\sqrt{\\frac{2}{m}\\left(mgx - \\frac{1}{2}kx^{2}\\right)} = \\sqrt{\\frac{2}{0.3}\\left((0.3)(9.8)(0.135) - \\frac{1}{2}(21.8)(0.135)^{2}\\right)} = 1.15\\ \\text{m s}^{-1}$",
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "9C.5",
+    "9C.6"
+   ],
+   "img": [
+    "img/9C_CI2.3.png"
+   ],
+   "src": {
+    "file": "9C Check-in – Set 2.docx"
+   },
+   "phase": [
+    "practice",
+    "youtry"
+   ]
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "9C-SQ1",
+   "n": "1",
+   "question": "A car company is trying to get the stiffest spring for their latest sports car. They have a choice of four springs. The force–compression data of each spring is displayed on the graph below.\nWhich spring should the car company select?",
+   "options": [
+    "A A",
+    "B B",
+    "C C",
+    "D D"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "9C.1"
+   ],
+   "img": [
+    "img/9C_SQ1.png"
+   ],
+   "src": {
+    "file": "9C Section questions.docx"
+   }
+  },
+  {
+   "id": "9C-SQ2",
+   "n": "2",
+   "question": "Which of the graphs below best represents the elastic potential energy–compression graph of an ideal spring?",
+   "options": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "9C.4"
+   ],
+   "img": [
+    "img/9C_SQ2-AB.png",
+    "img/9C_SQ2-CD.png"
+   ],
+   "src": {
+    "file": "9C Section questions.docx"
+   }
+  },
+  {
+   "id": "9C-SQ3",
+   "n": "3",
+   "question": "Use the following information to answer Questions 3 and 4.\nA group of Swiss master watchmakers are testing the spring constant of a spring to be used in their watch. They measure the force against the compression of the spring and the results are shown on the graph below.\nWhat is the spring constant of the spring?",
+   "options": [
+    "A 2000 N m$^{-1}$",
+    "B 200 N m$^{-1}$",
+    "C 20 N m$^{-1}$",
+    "D 2 N m$^{-1}$"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "9C.1"
+   ],
+   "img": [
+    "img/9C_SQ3.png"
+   ],
+   "src": {
+    "file": "9C Section questions.docx"
+   }
+  },
+  {
+   "id": "9C-SQ4",
+   "n": "4",
+   "question": "When the spring is compressed 0.3 mm, how much elastic potential energy is stored in the spring?",
+   "options": [
+    "A $9\\times10^{-8}$ J",
+    "B $9\\times10^{-7}$ J",
+    "C $9\\times10^{-6}$ J",
+    "D $9\\times10^{-5}$ J"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "9C.1",
+    "9C.3"
+   ],
+   "img": [
+    "img/9C_SQ3.png"
+   ],
+   "src": {
+    "file": "9C Section questions.docx"
+   }
+  },
+  {
+   "id": "9C-SQ5",
+   "n": "5",
+   "question": "A spring that has a spring constant of 300 N m$^{-1}$ is already extended 10 cm. A student then stretches the spring an additional 2 cm. The amount of work that the student did to stretch the spring from 10 cm to 12 cm is equal to",
+   "options": [
+    "A 600 J",
+    "B 0.66 J",
+    "C 0.06 J",
+    "D 0.03 J"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "9C.3",
+    "9C.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "9C Section questions.docx"
+   }
+  },
+  {
+   "id": "9C-SQ6",
+   "n": "6",
+   "question": "A spring with a natural (unextended length) of 10 cm is hung vertically and a mass of 4 kg is attached to the spring, which causes it to oscillate. At the lowest point of its oscillation, the spring has a total length of 16 cm. A diagram of this situation is shown below.\na What is the length of the spring when the velocity is a maximum? Explain why this length corresponds to the maximum velocity.\nb Calculate the spring constant of the spring.\nc As the spring extends from 10 cm to 16 cm in length, describe the changes that occur in the gravitational potential energy of the mass and the elastic potential energy.\nd What is the maximum velocity of the mass throughout the oscillation?",
+   "answer": "a The total length of the spring would be 13 cm. At this point the spring force and weight force are equal; this is called the equilibrium position. The spring will accelerate towards the equilibrium position. Therefore, the moment the mass moved to the equilibrium position it must be at its maximum velocity as in the next moment the mass will move past the equilibrium position. This means the direction of acceleration will change, causing the spring to decelerate.\nb When the spring is half of its maximum extension, the weight force and the spring force on the mass are equal, therefore:\n$mg = kx$\n$k = \\frac{mg}{x} = \\frac{(4)(9.8)}{(0.03)} = 1.31\\times10^{3}\\ \\text{N m}^{-1}$\nc When the spring has a length of 10 cm, it has maximum gravitational potential energy. The mass then falls, converting its gravitational potential energy to spring potential energy. When the spring is 16 cm in length, all of the gravitational potential energy of the mass has been converted into spring potential energy.\nd Take $E_{\\text{g}} = 0$ at the equilibrium position, where the velocity will be a maximum.\n$E_{\\text{total}}$ (release point) = $E_{\\text{total}}$ (equilibrium)\n$E_{\\text{g}} = E_{\\text{s}} + E_{\\text{k}}$\n$mgx = \\frac{1}{2}kx^{2} + \\frac{1}{2}mv^{2}$\n$v = \\sqrt{\\frac{2}{m}\\left(mgx - \\frac{1}{2}kx^{2}\\right)} = \\sqrt{\\frac{2}{4}\\left((4)(9.8)(0.03) - \\frac{1}{2}(1.31\\times10^{3})(0.03)^{2}\\right)} = 0.542\\ \\text{m s}^{-1}$",
+   "marks": null,
+   "kind": "explain",
+   "size": "long",
+   "phase": [
+    "practice",
+    "youtry"
+   ],
+   "criteria": [
+    "9C.5",
+    "9C.6"
+   ],
+   "img": [
+    "img/9C_SQ6.png"
+   ],
+   "src": {
+    "file": "9C Section questions.docx"
+   }
+  },
+  {
+   "id": "9C-SQ7",
+   "n": "7",
+   "question": "A spring of length 0.150 m is extended by 0.05 m when a mass of 0.03 kg is hung on it.\na What force does the mass exert on the spring?\nb How much work is done in extending the spring?\nc A student pulls the mass down a further 0.04 m. How much work does the student do?",
+   "answer": "a $F = ma = (0.03)(9.8) = 0.294\\ \\text{N}$\nb $k = \\frac{F}{x} = \\frac{0.294}{0.05} = 5.88\\ \\text{N m}^{-1}$\n$E_{\\text{s}} = \\frac{1}{2}kx^{2} = \\frac{1}{2}(5.88)(0.05)^{2} = 0.00735\\ \\text{J}$\nc $E_{\\text{s}} = \\frac{1}{2}kx_{\\text{f}}^{2} - \\frac{1}{2}kx_{\\text{i}}^{2} = \\frac{1}{2}(5.88)(0.09)^{2} - \\frac{1}{2}(5.88)(0.05)^{2} = 0.0165\\ \\text{J}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "9C.2",
+    "9C.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "9C Section questions.docx"
+   }
+  },
+  {
+   "id": "9C-SQ8",
+   "n": "8",
+   "question": "A pinball machine uses a handle, spring and soft plunger in a cylinder to launch a ball into the machine. In the figure below, the top diagram shows the system in the rest position. In the lower diagram, a hand pulls back on the handle compressing the spring. The ball rolls back against the plunger due to the cylinder sloping very slightly downwards towards the handle end (ignore any gravitational effects).\nA force–length of the spring graph is shown below.\na What is the resting length of the spring?\nb What is the spring constant for this spring?\nc Calculate the work done to compress the spring from 0.14 m to 0.02 m.\nd If the ball has a mass of 0.35 kg and the spring is compressed by 0.12 m, calculate the speed of the ball when the spring is released.",
+   "answer": "a 0.140 m; the resting length is when the force on the spring is zero.\nb Because this graph is a force–distance graph, the absolute value of the gradient will give the spring constant.\n$k = \\text{gradient} = \\left|\\frac{36-0}{0.02-0.14}\\right| = 300\\ \\text{N m}^{-1}$\nc Because this graph is a force–distance graph, this can also be done by finding the area under the graph.\n$E_{\\text{s}} = \\frac{1}{2}kx^{2} = \\frac{1}{2}(300)(0.12)^{2} = 2.16\\ \\text{J}$\nd $E_{\\text{s}} = E_{\\text{k}}$\n$\\frac{1}{2}mv^{2} = \\frac{1}{2}kx^{2}$\n$v = \\sqrt{\\frac{kx^{2}}{m}} = \\sqrt{\\frac{(300)(0.12)^{2}}{(0.35)}} = 3.51\\ \\text{m s}^{-1}$",
+   "marks": null,
+   "kind": "graph",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "9C.1",
+    "9C.3",
+    "9C.5"
+   ],
+   "img": [
+    "img/9C_SQ8-diagram.png",
+    "img/9C_SQ8-graph.png"
+   ],
+   "src": {
+    "file": "9C Section questions.docx"
+   }
+  },
+  {
+   "id": "9C-SQ9",
+   "n": "9",
+   "question": "A mass of 2.0 kg is suspended from a spring, with spring constant k = 50 N m$^{-1}$, as shown in the diagram below. It is released from the unstretched position of the spring and falls a distance of 0.80 m. Take the zero of gravitational potential energy at its lowest point and the gravitational field strength as 10 N kg$^{-1}$.\na Calculate the change in gravitational potential energy as the mass moves from the top position to the lowest position.\nb Calculate the spring potential energy at its lowest point.\nc Calculate the speed of the mass at its midpoint (maximum speed).\n© VCAA, 2015",
+   "answer": "a $\\Delta E_{\\text{g}} = mg\\Delta h = (2)(10)(0.8) = 16\\ \\text{J}$\nb $E_{\\text{s}} = \\frac{1}{2}kx^{2} = \\frac{1}{2}(50)(0.8)^{2} = 16\\ \\text{J}$\nc $E_{\\text{total}} = E_{\\text{g}} + E_{\\text{s}} + E_{\\text{k}} = E_{\\text{g}} + E_{\\text{s}} + \\frac{1}{2}mv^{2}$\n$v = \\sqrt{\\frac{2(E_{\\text{total}} - E_{\\text{g}} - E_{\\text{s}})}{m}} = \\sqrt{\\frac{2(16-8-4)}{(2)}} = 2\\ \\text{m s}^{-1}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "9C.3",
+    "9C.5",
+    "9C.6"
+   ],
+   "img": [
+    "img/9C_SQ9.png"
+   ],
+   "src": {
+    "file": "9C Section questions.docx"
+   }
+  },
+  {
+   "id": "9C-SQ10",
+   "n": "10",
+   "question": "A toaster manufacturer is testing springs for their latest toaster. In their design, a single spring is used in the toaster to pop a 38-gram piece of toast back up, once it has finished cooking. The engineers make and test two new springs. They test them by adding masses to springs and measuring how much the spring compress due to the masses. The measurements are taken with a ruler that has markings every millimetre. A diagram of this situation is shown below.\nThe results of their tests are shown in the table below (note that you can take gravity to be 10 N kg$^{-1}$ in this experiment).\n| Spring 1 Compression (mm) | Mass (g) | Force (N) | Spring 2 Compression (mm) | Mass (g) | Force (N) |\n| 1.4 | 10 | | 6.7 | 10 | |\n| 2.9 | 20 | | 13.3 | 20 | |\n| 4.3 | 30 | | 20.1 | 30 | |\n| 5.7 | 40 | | 26.6 | 40 | |\na Copy the table and complete the force columns of the engineer’s results.\nb Use the information provided in the table to graph the results on the set of axes provided below. Your graph should include an accurate scale, a line of best fit and error bars for the x-axis only.\nc List the independent and dependent variables.\nd Use the line of best fit from your graph to determine the spring constant of spring 1 and spring 2.\ne The engineers must consider how high the 38-gram piece of toast will be launched out of the toaster. In order to do this, the engineers use the following equation to predict the height that the toast will achieve:\n$h = \\frac{k\\Delta x^{2}}{2mg}$\nShow how the engineers derived this equation.\nf In the toaster, the spring will be compressed by 5 cm. Will spring 1 or spring 2 be most appropriate to use in the toaster? Use at least two calculations to justify your response.\ng An engineer points out after the testing that there was a systematic error in their experiment. The engineer says that when the spring is placed vertically, it will be slightly compressed due to its own weight force. Comment on how this systematic error would affect the predicted value for the spring constant.",
+   "answer": "a Spring 1 & 2: Mass (g) 10, 20, 30, 40 → Force (N) 0.1, 0.2, 0.3, 0.4\nb (graph: see img/9C_SQ10b_answer.jpg)\nc Independent: the mass applied to compress the springs; dependent: the compression of the spring\nd Spring 1 ≈ 70 N m$^{-1}$\nSpring 2 ≈ 15 N m$^{-1}$\n$\\text{Gradient} = k = \\frac{y_2 - y_1}{x_2 - x_1}$\ne $\\frac{1}{2}k\\Delta x^{2} = mgh$ rearranges to $h = \\frac{kx^{2}}{2mg}$\nf Students should use the formula $h = \\frac{kx^{2}}{2mg}$ to determine the height that the toast reaches when the spring is released, the spring constant, k, should be the constant calculated in part d. For example:\n$h_1 = \\frac{(70)(0.05)^{2}}{2(0.038)(10)} = 0.23\\ \\text{m}$\n$h_2 = \\frac{(15)(0.05)^{2}}{2(0.038)(10)} = 0.049\\ \\text{m}$\nThe most appropriate spring is spring 2, as it will launch the toast about 5 cm in the air. If spring 1 was used, the toast would be launched more than 20 cm into the air.\ng The true values of the compression for the given force applied to the spring would be consistently higher than expected, as the additional force from the springs own mass was not accounted for. This means since $k = \\frac{F}{x}$, the force is lower and the compression is higher, which means the predicted spring would be lower than the true spring constant.",
+   "marks": null,
+   "kind": "graph",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "9C.1",
+    "9C.2",
+    "9C.5"
+   ],
+   "img": [
+    "img/9C_SQ10.png",
+    "img/9C_SQ10-grid.png"
+   ],
+   "src": {
+    "file": "9C Section questions.docx"
+   },
+   "answer_img": [
+    "img/9C_SQ10b_answer.jpg"
+   ]
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 9C–1 Springs",
+  "total": 30,
+  "questions": [
+   {
+    "id": "WS9C-1",
+    "n": "1",
+    "question": "When clicking a spring-loaded pen, a force of 6.5 N is applied to compress the spring 11 mm. Calculate the spring constant of the spring.",
+    "answer": "$F = kx$\n$k = \\frac{F}{x} = \\frac{6.5}{11\\times10^{-3}}$ (1 mark)\n$= 591\\ \\text{N m}^{-1}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "criteria": [
+     "9C.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "9C Worksheet 9C–1 Springs.docx"
+    },
+    "pair_with": "WE9C-1"
+   },
+   {
+    "id": "WS9C-2a",
+    "n": "2a",
+    "question": "A group of engineers are testing two springs, Spring A and Spring B, for use in a pinball machine. The engineers decide that they want to go with the stiffer of the two springs to save on material cost because a smaller spring can be used in the machines. The results of their tests are displayed on the force–compression graph below.\na Which spring, A or B, will the engineers select? Give a reason for your answer.",
+    "answer": "Spring A (1 mark)\nSpring A has a steeper gradient and is therefore stiffer. (1 mark)",
+    "marks": 2,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "criteria": [
+     "9C.1"
+    ],
+    "img": [
+     "img/9C_WS2.jpg"
+    ],
+    "src": {
+     "file": "9C Worksheet 9C–1 Springs.docx"
+    },
+    "pair_with": "WE9C-2"
+   },
+   {
+    "id": "WS9C-2b",
+    "n": "2b",
+    "question": "Calculate the spring constant of Spring A.",
+    "answer": "$k_{A} = \\frac{50 - 0}{100\\times10^{-3} - 0}$ (1 mark)\n$= 5.00\\times10^{2}\\ \\text{N m}^{-1}$ (1 mark)",
+    "marks": 2,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "9C.1"
+    ],
+    "img": [
+     "img/9C_WS2.jpg"
+    ],
+    "src": {
+     "file": "9C Worksheet 9C–1 Springs.docx"
+    },
+    "pair_with": "WE9C-2"
+   },
+   {
+    "id": "WS9C-2c",
+    "n": "2c",
+    "question": "Calculate the amount of elastic potential energy stored in Spring B when it is compressed by 100 mm.",
+    "answer": "$E_{s} = area\\ under\\ graph = (0.5)(35)(100\\times10^{-3})$ (1 mark)\n$= 1.75\\ \\text{J}$ (1 mark)",
+    "marks": 2,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "9C.1"
+    ],
+    "img": [
+     "img/9C_WS2.jpg"
+    ],
+    "src": {
+     "file": "9C Worksheet 9C–1 Springs.docx"
+    },
+    "pair_with": "WE9C-4"
+   },
+   {
+    "id": "WS9C-2d",
+    "n": "2d",
+    "question": "By how much would Spring A need to be compressed to contain the same amount of elastic potential energy as Spring B when it is compressed by 100 mm?",
+    "answer": "$E_{s} = \\frac{1}{2}kx^{2}$\n$x = \\sqrt{\\frac{2E_{s}}{k_{A}}} = \\sqrt{\\frac{(2)(1.75)}{500}}$ (1 mark)\n$= 0.0837\\ \\text{m or } 83.7\\ \\text{mm}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "9C.3"
+    ],
+    "img": [
+     "img/9C_WS2.jpg"
+    ],
+    "src": {
+     "file": "9C Worksheet 9C–1 Springs.docx"
+    },
+    "pair_with": "WE9C-3"
+   },
+   {
+    "id": "WS9C-3",
+    "n": "3",
+    "question": "A 55 cm spring, with a spring constant of 4500 N m$^{-1}$, is initially compressed down to 45 cm and is then released back to a length of 53 cm. Calculate the amount of energy released when the spring was released back to a length of 53 cm.",
+    "answer": "$\\Delta E_{s} = \\frac{1}{2}kx_{f}^{2} - \\frac{1}{2}kx_{i}^{2} = \\frac{1}{2}(4500)(0.02)^{2} - \\frac{1}{2}(4500)(0.1)^{2} = -21.6\\ \\text{J}$\nNote that there is a negative sign in front of the energy because the energy is being given out.",
+    "marks": 2,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "9C.3",
+     "9C.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "9C Worksheet 9C–1 Springs.docx"
+    },
+    "pair_with": "WE9C-5"
+   },
+   {
+    "id": "WS9C-4a",
+    "n": "4a",
+    "question": "A spring, with a spring constant of 250 N m$^{-1}$, is fixed to a wall at one end and at the other end is it attached to a 1.5 kg mass. The mass is free to move on the frictionless surface that it is resting on. A person extends the spring by 20 cm and then allows it to oscillate freely. The spring works the same in compression and in extension. A diagram of this situation is shown below.\na Calculate the total energy in the system.",
+    "answer": "The total energy will be the energy when the spring is fully extended, therefore:\n$E_{s} = \\frac{1}{2}kx^{2} = \\frac{1}{2}(250)(0.2^{2}) = 5\\ \\text{J}$",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "criteria": [
+     "9C.3"
+    ],
+    "img": [
+     "img/9C_WS4.jpg"
+    ],
+    "src": {
+     "file": "9C Worksheet 9C–1 Springs.docx"
+    }
+   },
+   {
+    "id": "WS9C-4b",
+    "n": "4b",
+    "question": "Describe the energy transformations that occur when the spring is released from a position of 20 cm of extension and moves to a position of full compression.",
+    "answer": "Once the spring is released from its fully extended position, the elastic potential energy will transform into kinetic energy until it reaches the equilibrium position. (1 mark)\nOnce the mass passes the equilibrium position, the kinetic energy begins to convert into elastic potential energy until the spring is fully compressed. (1 mark)",
+    "marks": 2,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "wedo",
+     "practice"
+    ],
+    "criteria": [
+     "9C.5",
+     "9C.6"
+    ],
+    "img": [
+     "img/9C_WS4.jpg"
+    ],
+    "src": {
+     "file": "9C Worksheet 9C–1 Springs.docx"
+    }
+   },
+   {
+    "id": "WS9C-4c",
+    "n": "4c",
+    "question": "When will the maximum velocity of the mass occur? Justify your answer.",
+    "answer": "The velocity will be at a maximum at the equilibrium point, when the spring is at its natural length. (1 mark)\nThis means that there is no net force on the mass, so the acceleration of the mass is zero. (1 mark)\nTherefore, before this point, the mass would have been accelerating in the direction of travel and after this point the mass will begin to decelerate. (1 mark)",
+    "marks": 3,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "practice"
+    ],
+    "criteria": [
+     "9C.6"
+    ],
+    "img": [
+     "img/9C_WS4.jpg"
+    ],
+    "src": {
+     "file": "9C Worksheet 9C–1 Springs.docx"
+    }
+   },
+   {
+    "id": "WS9C-4d",
+    "n": "4d",
+    "question": "Calculate the maximum velocity of the mass.",
+    "answer": "$E_{T} = \\frac{1}{2}mv^{2} + \\frac{1}{2}kx^{2}$\nThe velocity is at a maximum when there is no extension in the spring, therefore: (1 mark)\n$v = \\sqrt{\\frac{2E_{T}}{m}} = \\sqrt{\\frac{(2)(5)}{1.5}}$ (1 mark)\n$= 2.58\\ \\text{m s}^{-1}$ (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "wedo"
+    ],
+    "criteria": [
+     "9C.5"
+    ],
+    "img": [
+     "img/9C_WS4.jpg"
+    ],
+    "src": {
+     "file": "9C Worksheet 9C–1 Springs.docx"
+    }
+   },
+   {
+    "id": "WS9C-5a",
+    "n": "5a",
+    "question": "A spring, with a spring constant of 150 N m$^{-1}$, is hung vertically from a ceiling. A 5 kg mass is attached to the base of the spring and the spring is allowed to oscillate freely. For this question, ignore the effects of air resistance and friction and assume that the spring’s mass is negligible.\na When is the velocity of the mass at a maximum? Justify your answer.",
+    "answer": "The velocity will be at a maximum at the equilibrium point, when the spring force is balanced by the force due to gravity. (1 mark)\nAt this point, the forces on the mass are balanced and the acceleration is zero. (1 mark)\nTherefore, before this point, the mass would have been accelerating in the direction of travel and after this point the mass will begin to decelerate. (1 mark)",
+    "marks": 3,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "9C.6"
+    ],
+    "img": [
+     "img/9C_WS5.jpg"
+    ],
+    "src": {
+     "file": "9C Worksheet 9C–1 Springs.docx"
+    },
+    "pair_with": "9C-SK1"
+   },
+   {
+    "id": "WS9C-5b",
+    "n": "5b",
+    "question": "What is the extension of the spring when the velocity of the mass is a maximum?",
+    "answer": "$kx = mg$\n$x = \\frac{mg}{k} = \\frac{(5)(9.8)}{150}$ (1 mark)\n$= 0.327\\ \\text{m}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "criteria": [
+     "9C.2",
+     "9C.6"
+    ],
+    "img": [
+     "img/9C_WS5.jpg"
+    ],
+    "src": {
+     "file": "9C Worksheet 9C–1 Springs.docx"
+    }
+   },
+   {
+    "id": "WS9C-5c",
+    "n": "5c",
+    "question": "When the mass has fallen 3 cm from its highest point, what is the velocity of the spring?",
+    "answer": "$mgx = \\frac{1}{2}kx^{2} + \\frac{1}{2}mv^{2}$\n$v = \\sqrt{\\frac{2mgx - kx^{2}}{m}} = \\sqrt{\\frac{(2)(5)(0.03) - (150)(0.03^{2})}{5}}$ (1 mark)\n$= 0.749\\ \\text{m s}^{-1}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "9C.5",
+     "9C.6"
+    ],
+    "img": [
+     "img/9C_WS5.jpg"
+    ],
+    "src": {
+     "file": "9C Worksheet 9C–1 Springs.docx"
+    }
+   },
+   {
+    "id": "WS9C-5d",
+    "n": "5d",
+    "question": "The mass is then replaced with an unknown mass and allowed to oscillate freely. When the extension is 42 cm, the velocity of the mass is 2.36 m s$^{-1}$. Determine the unknown mass.",
+    "answer": "$mgx = \\frac{1}{2}kx^{2} + \\frac{1}{2}mv^{2}$\n$m = \\frac{kx^{2}}{2gx - v^{2}} = \\frac{(150)(0.42^{2})}{(2)(9.8)(0.42) - 2.36^{2}}$ (1 mark)\n$= 9.94\\ \\text{kg}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "practice"
+    ],
+    "criteria": [
+     "9C.5",
+     "9C.6"
+    ],
+    "img": [
+     "img/9C_WS5.jpg"
+    ],
+    "src": {
+     "file": "9C Worksheet 9C–1 Springs.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "9C.2"
+   ],
+   "wedo": "WE9C-1",
+   "youtry": [
+    "WS9C-1"
+   ],
+   "note": "Hooke's law rearranged; WS1 solves for k instead of x"
+  },
+  {
+   "criteria": [
+    "9C.1"
+   ],
+   "wedo": "WE9C-2",
+   "youtry": [
+    "WS9C-2a",
+    "WS9C-2b"
+   ],
+   "note": "Gradient of force–compression graph = k, choose stiffer spring"
+  },
+  {
+   "criteria": [
+    "9C.2",
+    "9C.3"
+   ],
+   "wedo": "WE9C-3",
+   "youtry": [
+    "WS9C-2d"
+   ],
+   "note": "Es = ½kx² (WS2d rearranges for x; slightly harder)"
+  },
+  {
+   "criteria": [
+    "9C.1"
+   ],
+   "wedo": "WE9C-4",
+   "youtry": [
+    "WS9C-2c",
+    "9C-CI2.2"
+   ],
+   "note": "Es from area under force–compression graph"
+  },
+  {
+   "criteria": [
+    "9C.3",
+    "9C.4"
+   ],
+   "wedo": "WE9C-5",
+   "youtry": [
+    "WS9C-3"
+   ],
+   "note": "ΔEs = ½kxf² − ½kxi², near-identical numbers structure"
+  },
+  {
+   "criteria": [
+    "9C.5",
+    "9C.6"
+   ],
+   "wedo": "WS9C-4d",
+   "youtry": [
+    "WS9C-5c"
+   ],
+   "origin": "adapted",
+   "note": "No textbook worked example for horizontal/vertical spring energy calculations; WS4d (horizontal, ET = ½mv² at equilibrium) as We do, steps from answer; WS5c (vertical, mgx = ½kx² + ½mv²) as You try"
+  },
+  {
+   "criteria": [
+    "9C.6"
+   ],
+   "wedo": "WS9C-4b",
+   "youtry": [
+    "WS9C-5a"
+   ],
+   "origin": "adapted",
+   "note": "Describe transformations / justify max velocity; skills box 9C-SK1 models the 3-mark 'explain' answer"
+  }
+ ],
+ "skills": [
+  {
+   "id": "9C-SK1",
+   "heading": "How to ‘explain’ your answer",
+   "text": "Exams will commonly ask you to ‘explain’ your answer. To explain means to present accurate and concise evidence that supports your answer. Consider the following question.\nQuestion\nA mass, that is attached to an ideal spring, is dropped and allowed to oscillate freely in the vertical direction. When is the velocity of the mass at a maximum? Explain your answer. (3 marks)\nSolution\n• The velocity will be at a maximum at the equilibrium point, when the spring force is balanced by the force due to gravity. (1 mark)\n• When the forces on the mass are balanced, the acceleration is zero. (1 mark)\n• Therefore, before this point the mass would have been accelerating in the direction of travel and after this point the mass will begin to decelerate. (1 mark)\nThe answer is set out in three dot points; each dot point makes a distinct point and would be awarded one mark. When answering ‘explain’ questions, you should look at the number of marks and use that as a guide of how many points to make. Make sure that you are answering the question presented and not just writing a pre-prepared answer that is not specific to the question. Answers should be clear and concise. Remember that you will not be marked down for using dot points, in fact they can help you structure your answer.",
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 42
+   },
+   "criteria": [
+    "9C.6"
+   ]
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P9C-1",
+   "title": "Practical 9C–1 Spring constants and elastic potential energy",
+   "file": "9C Practical 9C–1 Spring constants and elastic potential energy.docx",
+   "aim": "To find the spring constant and stored elastic potential energy for a 5 cm extension of three different springs."
+  }
+ ],
+ "notes": "No textbook worked example for spring energy transformations (9C.5, 9C.6): We do uses worksheet questions (origin adapted) plus the 'explain' skills box. Check-in Set 2 Q1 answer is just 'C' (no explanation in Suggested responses although the question asks to explain). CI1.1 Cambridge answer uses 0.1 m for 1 cm (gives 1.00e3; 1 cm = 0.01 m would give 1.00e4): flag to Rocco. Section Q7a answer writes F = ma for weight. Review-style toaster Q10 is long investigation-style. Figures 9C–9 and 9C–11 are tall full-page flow diagrams. Worksheet docx letters 4b-d and 5b-d oddly (pandoc); indexed as a-d."
+}

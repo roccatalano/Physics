@@ -1,0 +1,1084 @@
+{
+ "code": "4B",
+ "title": "Comparing fusion and fission",
+ "chapter": 4,
+ "unit": 1,
+ "aos": 2,
+ "study_design": [
+  "Compare the processes of nuclear fusion and nuclear fission",
+  "Explain, using a binding energy curve, why both fusion and fission are reactions that release energy"
+ ],
+ "criteria": [
+  "4B.1",
+  "4B.2"
+ ],
+ "glossary": [
+  {
+   "id": "4B-G1",
+   "term": "Low-level waste",
+   "def": "nuclear waste usually stored on site for short periods of time and then released into the environment",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "4B-G2",
+   "term": "Medium-level waste",
+   "def": "nuclear waste requiring a longer storage time and requires shielding but not cooling",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "4B-G3",
+   "term": "High-level waste",
+   "def": "nuclear waste that needs to be stored for a very long time in shielded containers and continually cooled to stop overheating",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "4B-G4",
+   "term": "Plasma",
+   "def": "a form of matter in which all the atoms are completely ionised – sometimes called the fourth state of matter",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "4B-G5",
+   "term": "Thermonuclear bomb",
+   "def": "a two-stage nuclear weapon with an initial fission stage, which then triggers a much larger fusion explosion",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "4B-G6",
+   "term": "Binding energy",
+   "def": "the amount of energy required to split a nucleus into its individual nucleons",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "4B-G7",
+   "term": "Mass defect",
+   "def": "change in mass of a nucleus created by fusion, or change in mass of the nuclei created in fission",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "4B-G8",
+   "term": "Binding energy curve",
+   "def": null,
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 29
+   },
+   "note": "In the 4B glossary list but no margin definition is printed; see Figure 4B–9."
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F4B-1",
+   "name": "Energy–mass equivalence",
+   "latex": "E = \\Delta m c^2",
+   "where": [
+    {
+     "sym": "E",
+     "meaning": "Energy",
+     "unit": "J"
+    },
+    {
+     "sym": "\\Delta m",
+     "meaning": "Mass difference (mass defect)",
+     "unit": "kg"
+    },
+    {
+     "sym": "c",
+     "meaning": "Speed of light",
+     "unit": "m s^{-1}"
+    }
+   ],
+   "criteria": [
+    "4B.1",
+    "4B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 31
+   }
+  },
+  {
+   "id": "F4B-2",
+   "name": "Power",
+   "latex": "P = \\frac{E}{t}",
+   "where": [
+    {
+     "sym": "P",
+     "meaning": "Power",
+     "unit": "W or J s^{-1}"
+    },
+    {
+     "sym": "E",
+     "meaning": "Energy",
+     "unit": "J"
+    },
+    {
+     "sym": "t",
+     "meaning": "Time",
+     "unit": "s"
+    }
+   ],
+   "criteria": [
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 32
+   },
+   "note": "The skills text prints 'E = P/t' (typo); the worked solution uses P = E/t."
+  },
+  {
+   "id": "F4B-3",
+   "name": "Total binding energy",
+   "latex": "\\text{TBE} = (\\text{number of nucleons}) \\times \\text{ABE}",
+   "where": [
+    {
+     "sym": "\\text{ABE}",
+     "meaning": "Average binding energy per nucleon",
+     "unit": "MeV"
+    }
+   ],
+   "criteria": [
+    "4B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 30
+   },
+   "origin": "adapted",
+   "note": "Written from the WE4B-1 step 'Multiply the number of nucleons in each nucleus by the ABE to determine the TBE'."
+  },
+  {
+   "id": "F4B-4",
+   "name": "Deuterium–tritium fusion",
+   "latex": "{}^{2}_{1}\\text{H} + {}^{3}_{1}\\text{H} \\rightarrow {}^{4}_{2}\\text{He} + {}^{1}_{0}\\text{n}",
+   "where": [],
+   "criteria": [
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 28
+   }
+  },
+  {
+   "id": "F4B-5",
+   "name": "Fusion in the Sun",
+   "latex": "{}^{1}_{1}\\text{H} + {}^{1}_{1}\\text{H} \\rightarrow {}^{2}_{1}\\text{H} + {}^{0}_{1}\\text{e};\\quad {}^{2}_{1}\\text{H} + {}^{1}_{1}\\text{H} \\rightarrow {}^{3}_{2}\\text{He} + \\gamma;\\quad {}^{3}_{2}\\text{He} + {}^{3}_{2}\\text{He} \\rightarrow {}^{4}_{2}\\text{He} + {}^{1}_{1}\\text{H} + {}^{1}_{1}\\text{H}",
+   "where": [],
+   "criteria": [
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 26
+   },
+   "img": "img/4B_sun-fusion-equations.png"
+  }
+ ],
+ "engage": {
+  "heading": "The Manhattan Project",
+  "text": "Most of the world's working knowledge about the physics of the nuclear fission of uranium-235 (U-235) and plutonium-239 (Pu-239) came from the Manhattan Project – a top-secret intensive research and development project undertaken in the United States during World War II. The project produced the nuclear weapons that ultimately ended the war.\nAfter the surprise Japanese bombing of Pearl Harbour in United States territory on 7 December 1941, US President Roosevelt authorised an intense program to build an atomic bomb, employing more than 130 000 people, most of whom did not know what the ultimate aim of their work was. The Manhattan Project ended up costing several billion dollars (equivalent to about US$30 billion today). It involved brilliant physicists from both US and non-US universities. It resulted in atomic bombs being dropped on Hiroshima and Nagasaki in Japan, killing an estimated 200 000 Japanese people. This was followed by the almost immediate surrender of Japan.\nMost of the important research in theoretical nuclear physics had actually been done in the 1930s in Europe. When the war started, many physicists in the allied countries were concerned that Germany (under Adolf Hitler) might develop atomic weapons. Albert Einstein, the most famous living physicist of the time, wrote a letter to President Roosevelt in 1939 advising him of this possible danger. Although Einstein was an acknowledged pacifist, he wrote the letter in the hope that atomic weapons technology would be better under the control of the allies than under Hitler.\nThe basic physics principles of nuclear weapons were fairly straightforward: produce a critical mass of at least 95% enriched uranium-235 and it would automatically fission in a massive explosion, releasing huge amounts of energy.\nHowever, producing 95% pure uranium-235 is not easy. Natural uranium occurs in two main isotopes, with the uranium-235 isotope representing only 0.7% of the uranium ore and the remaining 99.3% the less fissile uranium-238.\nIsotopes have identical chemical properties, so the uranium isotopes cannot be chemically separated from each other. However, isotopes do have different physical properties: a slight difference in their mass. What was needed was a physical means of extraction based on the slight mass difference between the two isotopes, so that the uranium-235 percentage could be enriched to 80%. The project physicists were aiming to produce approximately 64 kg of enriched uranium-235, which was the amount to create a useable critical mass.\nIf uranium-235 enrichment did not work, then the project physicists believed a fission bomb could be made using plutonium-239, an element that did not exist in nature, but which they believed could be tailor-made by bombarding uranium-238 atoms with neutrons. They calculated that the critical mass of plutonium-239 required would only be approximately 7 kg.\nThree teams of physicists worked to separate out the amount of fissile material needed for a bomb. One team tried a technique on uranium known as electromagnetic separation. A second team also tried to separate uranium by a gas diffusion method. Fermi headed the third team. This team produced plutonium-239 by bombarding uranium-238 in a nuclear reactor. After almost four years of painstaking research, two of the methods were successful – gas diffusion to create enriched uranium-235 and the irradiation of uranium-238 to produce plutonium-239. These methods were used to produce nuclear fuel for three bombs.\nOn 16 July 1945, the atomic age began when the world's first atomic bomb was tested in the New Mexico desert. The plutonium-239 bomb exploded with an energy equivalent to 20 kt of TNT (Figure 4B–1). Only three bombs were built. The physicists were reasonably confident that the uranium-235 bomb would work, but they could not test it as they had just enough enriched uranium to build one. They built two plutonium-239 bombs. These two nuclear weapons, known as 'Little Boy' (using uranium) and 'Fat Man' (using plutonium), were dropped on Hiroshima and Nagasaki respectively (Figure 4B–3).",
+  "src": {
+   "file": "Physics12_Ch04.pdf",
+   "page": 21
+  }
+ },
+ "chunks": [
+  {
+   "id": "4B-E1",
+   "heading": "How much mass is converted to energy in fission and fusion?",
+   "text": "As we have already seen, both fusion and fission are nuclear reactions that produce energy via the mass–energy relationship, $E = \\Delta mc^2$. However, the processes are very different.\nFusion is the process where two light nuclei combine to create a more stable nucleus, thereby releasing vast amounts of energy. Fission is the splitting of a heavy, unstable nucleus into two lighter, more stable nuclei, again releasing vast amounts of energy.\nIn fusion reactions, the amount of matter that is converted to energy is about 0.7%, while in fission reactions, the amount of matter that is converted to energy is about 0.1%. These numbers apply whether the process takes place in nuclear bombs, in nuclear reactors, in our Sun or in the stars (Figure 4B–4).",
+   "figures": [],
+   "criteria": [
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "4B-E2",
+   "heading": "Electricity generation using nuclear energy",
+   "text": "After World War II, governments and atomic scientists wanted to demonstrate the peaceful uses of atomic energy. In 1953, US President Eisenhower proposed his Atoms for Peace program, which reoriented significant research effort towards nuclear power plants for electricity generation and set the course for civil nuclear energy development in the United States. Similar projects were initiated in Russia and the United Kingdom.",
+   "figures": [],
+   "criteria": [
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "4B-E3",
+   "heading": "Safety hazards of nuclear energy",
+   "text": "Nuclear fuel can provide large amounts of energy, but this comes at a price. Every nuclear reactor produces nuclear waste – a form of pollution that neither the human species nor our fragile biosphere has ever had to cope with before. Some radioactive by-products from nuclear power stations may be hazardous for up to a million years (e.g. plutonium-239). Critics argue that there are still no generally acceptable long-term storage solutions for these radioactive wastes.\nThere are three types of nuclear waste, classified according to their radioactivity: low-level, medium-level and high-level waste. The vast majority of the waste (90% of the total volume) is composed of only low-level radioactive items, such as tools and work clothing. It contains only 1% of the total radioactivity. By contrast, high-level waste – mostly comprising used nuclear fuel rod material – accounts for just 3% of the total volume of waste but contains 95% of the total radioactivity. Although such waste does not take up a lot of space, it is highly radioactive. High-level waste will take about 1200 years to return to the same level of radioactivity as that of the original uranium ore and many millions of years before it is safe to return to the environment. High-level waste must be stored in shielded containers to prevent radiation escaping into the environment and must be continually cooled to stop overheating.\nAnother area of concern with nuclear power plants is the possibility of nuclear accidents. Many critics of nuclear energy point to the accidents that occurred at Chernobyl (1986) and Fukushima (2011, see Figure 4B–5) as examples of the inadequacies of safety procedures in nuclear power stations.\nSupporters of nuclear power suggest that it is an effective way of creating electrical energy that avoids the emission of large amounts of CO$_2$ and other atmospheric pollutants associated with the greenhouse effect. They also argue that it is a readily available source that is not dependent on wind or sunlight and can provide reliable base-load power.\nNuclear fission reactors are also used to produce radioisotopes that have many applications in industry, medicine, agriculture and scientific research (see also OPAL, Section 4C).",
+   "figures": [],
+   "criteria": [
+    "4B.1",
+    "4C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "4B-E4",
+   "heading": "How chemical elements are formed",
+   "text": "Physicists believe that hydrogen, helium and lithium were all created as a result of the Big Bang explosion. They also believe that all of the other elements on Earth were made during the life and death of stars.\nMost of the energy of a star comes from light elements combining into heavier elements in nuclear fusion. The Sun is currently burning, or fusing, hydrogen to helium. This is the process that occurs during most of any star's lifetime. After the hydrogen in the star's core is exhausted, the star can fuse helium to form progressively heavier elements such as carbon and oxygen and so on until iron and nickel are formed. Up to this point, the fusion process releases energy.\nThe formation of elements heavier than iron and nickel requires an extra input of energy. Supernova explosions result when the cores of massive stars have exhausted their fuel supplies and burned everything into iron and nickel. Many of the nuclei with masses greater than that of nickel are observed to be formed during these explosions.\nMore recently it has been discovered that colliding neutron stars are responsible for producing enormous amounts of heavy elements, including gold, silver and xenon.\nTogether with supernovas, colliding neutron stars produce all the elements of the periodic table and generate all the elements necessary to make rocky planets ready to host living organisms. We are all made of these stars.",
+   "figures": [],
+   "criteria": [
+    "4B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "4B-E5",
+   "heading": "Our Sun – a local nuclear fusion reactor",
+   "text": "Nuclear fusion is the process that powers the Sun. In the series of nuclear reactions shown below, various isotopes of hydrogen are finally fused into helium-4 with the release of a tremendous amount of energy.\n$${}^{1}_{1}\\text{H} + {}^{1}_{1}\\text{H} \\rightarrow {}^{2}_{1}\\text{H} + {}^{0}_{1}\\text{e}$$\n$${}^{2}_{1}\\text{H} + {}^{1}_{1}\\text{H} \\rightarrow {}^{3}_{2}\\text{He} + \\gamma$$\n$${}^{3}_{2}\\text{He} + {}^{3}_{2}\\text{He} \\rightarrow {}^{4}_{2}\\text{He} + {}^{1}_{1}\\text{H} + {}^{1}_{1}\\text{H}$$\nInside the core of the Sun, these fusion reactions take place at very high temperatures and enormous pressures. The Sun's core is made of a very hot (15 million kelvin), dense plasma at a very high pressure. It is the combination of the very high temperature and extremely high pressure that allows the two hydrogen nuclei (protons) to overcome the extremely strong electrostatic repulsion as they undergo the various processes of nuclear fusion to eventually become helium-4.",
+   "figures": [
+    "4B-Fsun"
+   ],
+   "criteria": [
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "4B-E6",
+   "heading": "Nuclear fusion weapons: the hydrogen bomb",
+   "text": "The extreme conditions necessary for the fusion of hydrogen (very high temperatures and pressures) in a hydrogen bomb are created by the explosion of a small fission bomb, which initiates the fusion fuel, creating a super-hot plasma. This means a fusion (or hydrogen) bomb is actually a two-stage nuclear weapon – an initial fission stage, which then triggers a much larger fusion explosion (Figure 4B–7). Lithium-6 deuteride is used as the fusion fuel; it is transformed to tritium early in the fusion process. Such nuclear weapons are known as thermonuclear bombs, because the initial fission explosion creates the extreme temperature and pressure combination necessary to ensure that the electrostatic repulsion between the positive hydrogen nuclei is overcome and an uncontrolled fusion explosion commences that only stops when the fusion fuel runs out.\nTheoretically, thermonuclear bombs can be built to any size. The process could be continued with energy from the secondary fusion stage igniting a third fusion stage and so on.\nIn contrast to thermonuclear bombs, pure fission nuclear weapons are limited in their yield because only so much fission fuel can be amassed in one place before the danger of it accidentally becoming supercritical becomes too great.",
+   "figures": [
+    "4B-F7"
+   ],
+   "criteria": [
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "4B-E7",
+   "heading": "Fusion reactors",
+   "text": "The practicalities associated with controlled nuclear fusion – to create miniature 'suns' on Earth and unlock controlled nuclear fusion with its promises of almost unlimited, clean, carbon-free energy with no long half-life radioactive by-products – are proving extremely difficult.\nDesigning the 'uncontrollable' hydrogen–helium fusion bomb was relatively straightforward compared to designing a controllable nuclear fusion reaction in the laboratory that can be scaled up to producing 1000 MW nuclear fusion reactors.\nThe physics of controlled nuclear fusion is deceptively simple. Although different isotopes of light elements can be paired to achieve fusion, the deuterium–tritium (DT) reaction below has been identified as the most efficient for Earth-based nuclear fusion devices:\n$${}^{2}_{1}\\text{H} + {}^{3}_{1}\\text{H} \\rightarrow {}^{4}_{2}\\text{He} + {}^{1}_{0}\\text{n}$$\nDeuterium (${}^{2}_{1}\\text{H}$) can be distilled from all forms of water. It is a widely available, harmless and virtually inexhaustible resource. In every cubic metre of seawater, for example, there are 33 of deuterium. Deuterium is routinely produced for many scientific and industrial applications.\nTritium (${}^{3}_{1}\\text{H}$) is a radioactive isotope of hydrogen with a half-life, $t_{\\frac{1}{2}}$, of 12.3 years that occurs only in trace quantities in nature. It can be produced during the fusion reaction through contact with lithium. Tritium is 'bred' when neutrons escaping the plasma interact with lithium contained in the blanket wall inside the nuclear fusion device.\nLithium is an easily extractable land-based resource that should provide sufficient stock to operate fusion power plants for more than 1000 years. Lithium can be extracted from ocean water, where reserves are practically unlimited.\nA nuclear fusion reaction is about 12 million times more energetic than a chemical reaction such as the burning of coal, oil or gas. While a 1000 MW coal-fired power plant requires 2.7 million tonnes of coal per year, a fusion plant of the kind envisioned for the second half of this century will only require 250 kg of fuel per year: half of it deuterium, half of it tritium.\nThe technological problems of fusing deuterium–tritium on Earth are challenging. As we do not have the extremely high pressures available in the Sun, the temperatures have to be much higher than the Sun's $15 \\times 10^{6}$ K. The deuterium–tritium fusion requires very high temperature. The temperatures inside the Earth-based fusion reactor must reach at least $150 \\times 10^{6}$ K – or ten times the temperature at the core of the Sun – in order for the gas in the vacuum chamber to reach the plasma state and for the fusion reaction to occur. As the plasma is too hot to come into contact with any material it must be contained in an extremely strong toroidal (donut-shaped) magnetic field. A tokamak is a device that does this.\nFigure 4B–8 shows the design for the ITER currently under construction in France. ITER is designed to produce a ten-fold return on energy – 500 MW of fusion power from 50 MW of input heating power. The intention is to have a working nuclear fusion reactor by 2035.\nIt has been estimated that the world has spent over $12 trillion on a nuclear arms race to ensure 'peace', while only an estimated $200 billion has been spent on controlled nuclear fusion research with its potential to generate almost unlimited, clean, carbon-free energy with no harmful long half-life radioactive by-products.",
+   "figures": [],
+   "criteria": [
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 28
+   },
+   "note": "'there are 33 of deuterium': unit missing in the textbook (verbatim)."
+  },
+  {
+   "id": "4B-E8",
+   "heading": "Binding energy curves",
+   "text": "You can understand the physics of fusion and fission by carefully analysing the binding energy curve (Figure 4B–9). The binding energy itself is explained in the graph.\nThe nucleus of an atom is made up of neutrons and protons and there are large electrostatic forces of repulsion between the positive charges of the protons. It takes an energy, called the binding energy, to hold nucleons together as a nucleus.\nIron has a mass number of 56 and is the most stable of all the elements. We say that iron has a high binding energy per nucleon.",
+   "figures": [
+    "4B-F9"
+   ],
+   "criteria": [
+    "4B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 29
+   }
+  },
+  {
+   "id": "4B-E9",
+   "heading": "Binding energy and mass defect in fusion",
+   "text": "In fusion, the mass of the nucleus that is created is slightly less than the total mass of the original nuclei. The change in mass or mass defect is due to the binding energy that is released during fusion. On the binding energy curve (Figure 4B–9), you can see that increasing the number of nucleons in a nucleus up to iron-56 causes the average binding energy per nucleon to increase, releasing energy and forming a more stable nucleus.",
+   "figures": [
+    "4B-F9"
+   ],
+   "criteria": [
+    "4B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "4B-E10",
+   "heading": "Binding energy and mass defect in fission",
+   "text": "In fission, an unstable nucleus splits into smaller more stable nuclei with a smaller total mass. From the binding energy curve, you can see this difference in mass, the mass defect, between the parent nucleus and the daughter nuclei is due to the binding energy per nucleon increasing as the number of nucleons in each nucleus increases to iron-56. This increase in binding energy per nucleon is released as energy during fission forming more stable nuclei.",
+   "figures": [
+    "4B-F9"
+   ],
+   "criteria": [
+    "4B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 31
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "4B-Fsun",
+   "label": "Sun fusion equations (p.173)",
+   "caption": "Series of nuclear reactions in which isotopes of hydrogen are fused into helium-4 (equations in the text, no figure number).",
+   "img": "img/4B_sun-fusion-equations.png",
+   "important": false,
+   "why": "Proton–proton chain equations for a slide",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "4B-F7",
+   "label": "Figure 4B–7",
+   "caption": "Basic design of a hydrogen fusion bomb and the sequence of operation",
+   "img": "img/4B_fig4B-7.png",
+   "important": true,
+   "why": "Two-stage (fission then fusion) thermonuclear bomb sequence",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "4B-F9",
+   "label": "Figure 4B–9",
+   "caption": "The binding energy curve shows that light elements (low number of nucleons) undergoing fusion (joining together) release energy and heavier elements (high number of nucleons) undergoing fission (splitting into two) release energy. The difference in mass, the mass defect and the binding energy are defined and calculated in the rest of this section.",
+   "img": "img/4B_fig4B-9.png",
+   "important": true,
+   "why": "THE key graph for 4B.2 (also a Cambridge PowerPoint figure)",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 29
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE4B-1",
+   "title": "Energy of nuclear fusion",
+   "question": "Fusion\nThe deuterium–tritium nuclear fusion reaction used in the ITER creates helium-4 in the following reaction:\n$${}^{2}_{1}\\text{H} + {}^{3}_{1}\\text{H} \\rightarrow {}^{4}_{2}\\text{He} + {}^{1}_{0}\\text{n} + \\text{energy}$$\nNote that the energy on the right-hand side of the equation is the kinetic energy of the helium-4 and the neutron – the neutron has no binding energy. The average binding energy (ABE) per nucleon for deuterium, tritium and helium-4 is given in the table below. Copy and complete the table.\n| | Deuterium | Tritium | Helium-4 |\n| ABE (MeV) | 1.12 | 2.83 | 7.07 |\n| TBE (MeV) | | | |\na Calculate the total binding energy (TBE) for each nucleus.\nb Calculate the energy released in the deuterium–tritium nuclear fusion reaction that creates helium-4.",
+   "steps": [
+    "a Multiply the number of nucleons in each nucleus by the ABE to determine the TBE.",
+    "For example, deuterium has two nucleons, so TBE = 2 × 1.12 = 2.24 MeV. Tritium has three nucleons and helium-4 has four. Calculating the values gives:",
+    "| | Deuterium | Tritium | Helium-4 |\n| ABE (MeV) | 1.12 | 2.83 | 7.07 |\n| TBE (MeV) | 2.24 | 8.49 | 28.28 |",
+    "b The energy released in the deuterium–tritium nuclear fusion reaction is the difference in binding energy between the final product of helium-4 and the reactants deuterium and tritium. Using the TBE values from part a gives:",
+    "$E = 28.28 - (2.24 + 8.49)$",
+    "$= 17.55$ MeV",
+    "So, 17.55 MeV of energy is released in each fusion reaction, which is the kinetic energy of the helium-4 and the neutron."
+   ],
+   "answer": "a TBE: deuterium 2.24 MeV, tritium 8.49 MeV, helium-4 28.28 MeV; b 17.55 MeV",
+   "img": [
+    "img/4B_WE4B-1.png"
+   ],
+   "criteria": [
+    "4B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "WE4B-2",
+   "title": "Energy of nuclear fission",
+   "question": "Fission\nCalculate the energy released in the following fission reaction, in MeV:\n$${}^{235}_{92}\\text{U} + {}^{1}_{0}\\text{n} \\rightarrow {}^{93}_{37}\\text{Rb} + {}^{141}_{55}\\text{Cs} + 2\\,{}^{1}_{0}\\text{n}$$\n| Nuclide/particle | ${}^{1}_{0}\\text{n}$ | ${}^{93}_{37}\\text{Rb}$ | ${}^{141}_{55}\\text{Cs}$ | ${}^{235}_{92}\\text{U}$ |\n| Mass ($\\times 10^{-27}$ kg) | 1.675 | 154.248 | 233.927 | 390.173 |",
+   "steps": [
+    "The energy released in the reaction is due to an increase in binding energy, which you get from the mass defect and the relationship $E = \\Delta mc^2$. Calculate the mass, $m$, for each side of the reaction using the data table.",
+    "Total mass before the reaction: ${}^{235}_{92}\\text{U} + {}^{1}_{0}\\text{n}$",
+    "$m_{\\text{before}} = (390.173 + 1.675)(10^{-27}) = 391.848 \\times 10^{-27}$ kg",
+    "Total mass after the reaction: ${}^{93}_{37}\\text{Rb} + {}^{141}_{55}\\text{Cs} + 2\\,{}^{1}_{0}\\text{n}$",
+    "$m_{\\text{after}} = (154.248 + 233.927 + (2 \\times 1.675))(10^{-27}) = 391.525 \\times 10^{-27}$ kg",
+    "The mass defect (difference between the before and after mass) is given by:",
+    "$m_{\\text{defect}} = m_{\\text{after}} - m_{\\text{before}} = (391.848 - 391.525)(\\times 10^{-27}) = 0.323 \\times 10^{-27} = 3.23 \\times 10^{-28}$ kg",
+    "Energy released is energy equivalent to the mass defect by $E = \\Delta mc^2$. Therefore:",
+    "$E = m_{\\text{defect}} \\times c^2 = (3.23 \\times 10^{-28})(3.00 \\times 10^{8})^2 = 2.91 \\times 10^{-11}$ J",
+    "Converting J to eV with the relationship 1.00 J = $6.242 \\times 10^{18}$ eV gives:",
+    "$E = (2.91 \\times 10^{-11})(6.242 \\times 10^{18}) = 1.81 \\times 10^{8} = 181$ MeV",
+    "Therefore, 181 MeV of energy is released in each fission reaction, but on a mass basis the fusion reaction releases more per kg of reactants."
+   ],
+   "answer": "181 MeV",
+   "img": [
+    "img/4B_WE4B-2.png"
+   ],
+   "criteria": [
+    "4B.1",
+    "4B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 31
+   },
+   "note": "Textbook writes m_defect = m_after − m_before but substitutes before − after (verbatim)."
+  },
+  {
+   "id": "WE4B-3",
+   "title": "4B Skills: Calculating the power output of stellar nuclear fusion",
+   "question": "A typical exam question involving mass difference and fusion may, for example, require you to calculate the power output of a star. The question will give relevant data including the rate at which the mass-energy conversion is happening (mass difference per second). You will need to know the difference between energy $E$ (measured in joules, J) and power $P$ (measured in watts, W or J s$^{-1}$) which are related by the formula $E = \\frac{P}{t}$.\nThe Sun converts 600 million tonnes of hydrogen per second into helium with a mass difference of 4.20 million tonnes per second due to nuclear fusion.\nCalculate the power output of the Sun. Use $c = 3.00 \\times 10^{8}\\ \\text{m s}^{-1}$.",
+   "steps": [
+    "mass difference = $(4.20 \\times 10^{6})(1000) = 4.20 \\times 10^{9}$ kg",
+    "Using $E = \\Delta mc^2$ gives:",
+    "$E = (4.20 \\times 10^{9})(3.00 \\times 10^{8})^2 = 3.78 \\times 10^{26}$ J",
+    "This is the energy output every second from the Sun as the mass difference is given as 4.20 million tonnes per second.",
+    "To find the power of the Sun, you need to use the formula power = $\\frac{\\text{energy}}{\\text{time}}$:",
+    "$P = \\frac{E}{t} = \\frac{3.78 \\times 10^{26}}{1.00} = 3.78 \\times 10^{26}$ W"
+   ],
+   "answer": "$3.78 \\times 10^{26}$ W",
+   "img": [
+    "img/4B_SK1.png"
+   ],
+   "criteria": [
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 32
+   },
+   "note": "4B Skills box. 'E = P/t' in the stem is a textbook typo for P = E/t (verbatim)."
+  }
+ ],
+ "checkins": [
+  {
+   "id": "4B-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "What is the mass difference percentage energy conversion for nuclear fission and nuclear fusion?",
+   "answer": "Nuclear fission has 0.1% mass difference percentage energy conversion.\nNuclear fusion has 0.7% mass difference percentage energy conversion.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 25
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4B-CI1.2a",
+   "set": 1,
+   "n": "2a",
+   "question": "What were the code names used for the nuclear bombs dropped on Hiroshima and Nagasaki?",
+   "answer": "Hiroshima: Little Boy; Nagasaki: Fat Man",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 25
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4B-CI1.2b",
+   "set": 1,
+   "n": "2b",
+   "question": "Why were two different two fissile isotopes used for constructing the nuclear bombs dropped on Hiroshima and Nagasaki?",
+   "answer": "There was only enough uranium-235 to make one bomb. This was used for the bomb dropped on Hiroshima. There was enough plutonium-239 for two bombs. One bomb was used to test that the implosion concept would work (the 'Trinity' test) and the other was used for the bomb dropped on Nagasaki.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 25
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4B-CI1.3",
+   "set": 1,
+   "n": 3,
+   "question": "What is the major long-term environmental issue with producing electricity using nuclear fission reactors?",
+   "answer": "The safe storage of high-level nuclear waste like plutonium.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "4B.1",
+    "4C.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 25
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4B-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "What is the nuclear process that powers the Sun called?",
+   "answer": "Fusion",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 32
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4B-CI2.2a",
+   "set": 2,
+   "n": "2a",
+   "question": "What is a thermonuclear bomb?",
+   "answer": "A two-stage nuclear weapon with an initial fission stage that triggers a much larger fusion explosion.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 32
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4B-CI2.2b",
+   "set": 2,
+   "n": "2b",
+   "question": "What is the main fuel for a thermonuclear bomb?",
+   "answer": "Tritium (isotope of hydrogen) obtained from lithium-6 (deuteride)",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 32
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4B-CI2.3",
+   "set": 2,
+   "n": 3,
+   "question": "What is a tokamak and why is it used for experimental nuclear fusion reactors?",
+   "answer": "The extremely high temperatures of the plasma (150 million K) cannot be contained in any materials, so the magnetic toroid is used to keep the plasma contained in vacuum.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 32
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "4B-SQ1",
+   "n": "1",
+   "question": "What is the mass of the products of a nuclear fusion reaction compared to the mass of the original nuclei before fusion?",
+   "options": [
+    "A. less",
+    "B. same",
+    "C. more",
+    "D. sometimes less and sometimes more"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "4B-SQ2",
+   "n": "2",
+   "question": "What is the mass of the products of a nuclear fission reaction compared to the mass of the original nuclei before fission?",
+   "options": [
+    "A. less",
+    "B. same",
+    "C. more",
+    "D. sometimes less and sometimes more"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "4B-SQ3",
+   "n": "3",
+   "question": "What is a positive aspect of nuclear fission?",
+   "options": [
+    "A. the ability to create nuclear weapons",
+    "B. the ability to release tremendous amounts of energy",
+    "C. the ability to produce clean nuclear energy with no long-term radioactive waste",
+    "D. there are no currently known positive aspects of nuclear fission"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "4B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "4B-SQ4",
+   "n": "4",
+   "question": "The release of energy in nuclear fission is consistent with the fact that uranium",
+   "options": [
+    "A. has less mass per nucleon than the fragments created.",
+    "B. has more mass per nucleon than the fragments created.",
+    "C. has the same mass per nucleon as the fragments created.",
+    "D. None of the above."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "4B-SQ5",
+   "n": "5",
+   "question": "The binding energy curve plots the",
+   "options": [
+    "A. average binding energy per proton vs number of protons in the nucleus.",
+    "B. average binding energy per nucleon vs number of nucleons in the nucleus.",
+    "C. average binding energy per neutron vs number of neutrons in the nucleus.",
+    "D. average binding energy per electron vs number of electrons in the nucleus."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "4B-SQ6",
+   "n": "6",
+   "question": "Why are nuclear fission weapons far more powerful than TNT, for the same mass of explosive material?",
+   "answer": "A greater proportion of mass is converted to energy in a nuclear reaction compared to a chemical reaction.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4B.1",
+    "4A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "4B-SQ7",
+   "n": "7",
+   "question": "Why are nuclear fusion weapons far more powerful than nuclear fission weapons, for the same mass of explosive material?",
+   "answer": "Nuclear fusion has a higher mass-to-energy conversion rate (0.7% to 0.1%). Also, the size of fission weapons is limited by the total number of subcritical masses that can be assembled in one place before going supercritical.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "4B-SQ8a",
+   "n": "8a",
+   "question": "One of the long-term effects from a nuclear explosion is radioactive fallout. If all $3.0 \\times 10^{26}$ radioactive fission nuclei were spread evenly among the human population (8 billion), how many radioactive nuclei would each human breathe in?",
+   "answer": "$\\frac{3.0 \\times 10^{26}}{8 \\times 10^{9}} = 3.8 \\times 10^{16}$ radioactive fission nuclei per person",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "4B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "4B-SQ8b",
+   "n": "8b",
+   "question": "Why is this not a realistic calculation?",
+   "answer": "The greatest concentration of radioactive fission nuclei will be closest to the point of the nuclear explosion.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "4B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "4B-SQ9",
+   "n": "9",
+   "question": "What are the problems involved in making controlled sustainable fusion on Earth?",
+   "answer": "Fusion engineers cannot produce high enough temperatures and pressures to fuse deuterium/tritium together or produce enough energy to sustain the reaction.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "4B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "4B-SQ10",
+   "n": "10",
+   "question": "How is the binding energy of a nucleus related to the mass difference of its nucleons?",
+   "answer": "The total mass of a nucleus is less than the total mass of the nucleons that make up the nucleus. This difference is known as the mass defect. It is equivalent to the binding energy of the nucleus, using $E = \\Delta mc^2$.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "4B-SQ11",
+   "n": "11",
+   "question": "Nuclear fusion in the Sun is given by the equation:\n$${}^{3}_{2}\\text{He} + {}^{3}_{2}\\text{He} \\rightarrow {}^{4}_{2}\\text{He} + {}^{1}_{1}\\text{H} + {}^{1}_{1}\\text{H}$$\nThe binding energy for helium-3 is 7.7178 MeV and for helium-4 is 28.2957. Calculate the equivalent energy in MeV, and joules, released by this fusion reaction.",
+   "answer": "Binding energy of helium-4 nucleus = 28.2957 MeV\nBinding energy of two helium-3 nuclei = 2 × 7.7178 = 15.4356 MeV\nDifference = 12.8601 MeV\nConversion factor 1.0000 eV = $1.6022 \\times 10^{-19}$ J\n12.8601 MeV = $(12.8601 \\times 10^{6})(1.6022 \\times 10^{-19}) = 2.0604 \\times 10^{-12}$ J\nEnergy released by the ${}^{3}_{2}\\text{He} + {}^{3}_{2}\\text{He} \\rightarrow {}^{4}_{2}\\text{He} + {}^{1}_{1}\\text{H} + {}^{1}_{1}\\text{H}$ reaction is 12.8601 MeV, $2.0604 \\times 10^{-12}$ J.",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry"
+   ],
+   "criteria": [
+    "4B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 33
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 4B–1 Comparing fusion and fission",
+  "total": 20,
+  "file": "4B Worksheet 4B–1 Comparing fusion and fission.docx",
+  "answers_file": "4B Worksheet 4B–1 Answers.docx",
+  "questions": [
+   {
+    "id": "WS4B-1",
+    "n": "1",
+    "question": "Which form of mainstream nuclear energy is currently used for generating electricity? Why?",
+    "answer": "Nuclear fission.\nGenerating electricity by using a nuclear fusion reactor is not commercially feasible yet.",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "donow"
+    ],
+    "criteria": [
+     "4B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "4B Worksheet 4B–1 Comparing fusion and fission.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS4B-2",
+    "n": "2",
+    "question": "Explain what the terms 'low-level waste', 'medium-level waste' and 'high-level waste' mean in relation to nuclear energy used for generating electricity?",
+    "answer": "Low-level nuclear waste is usually stored on site for a short time and then released into the environment.\nMedium-level nuclear waste requires a longer storage time and requires shielding but not cooling.\nHigh-level nuclear waste needs to be stored in for a very long time in shielded containers and continually cooled to stop overheating.",
+    "marks": 6,
+    "kind": "explain",
+    "size": "long",
+    "phase": [
+     "wedo"
+    ],
+    "criteria": [
+     "4B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "4B Worksheet 4B–1 Comparing fusion and fission.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS4B-3",
+    "n": "3",
+    "question": "Calculate the total energy output per second in watts (W) of a star that converts 900 million tonnes of hydrogen per second into helium, with a mass difference of 6.30 million tonnes per second due to nuclear fusion. Use $E = \\Delta mc^2$ and $c = 3.0 \\times 10^{8}\\ \\text{m s}^{-1}$.",
+    "answer": "The total energy output per second in watts (W) of a star that converts 900 million tonnes of hydrogen per second into helium, with a mass difference of 6.30 million tonnes per second due to nuclear fusion is $5.67 \\times 10^{26}$ W.\nmass difference = $(6.30 \\times 10^{6})(1000) = 6.30 \\times 10^{9}$ kg\nUsing $E = \\Delta mc^2$:\n$E = (6.30 \\times 10^{9})(3.00 \\times 10^{8})^2 = 5.67 \\times 10^{26}$ J\nAs this is the energy produced every second, the power is $5.67 \\times 10^{26}$ J s$^{-1}$ or $5.67 \\times 10^{26}$ W.",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "4B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "4B Worksheet 4B–1 Comparing fusion and fission.docx"
+    },
+    "pair_with": "WE4B-3"
+   },
+   {
+    "id": "WS4B-4",
+    "n": "4",
+    "question": "List three advantages of generating electricity from nuclear power using nuclear fusion reactors. Why are these reactors not yet commercially viable?",
+    "answer": "Advantages include almost unlimited nuclear fuel available (deuterium, tritium and lithium), carbon-free energy (no CO$_2$ produced), no long half-life radioactive by-products.\nThese reactors are not commercially viable yet as there is more energy required to run them than is generated by their output.",
+    "marks": 5,
+    "kind": "explain",
+    "size": "long",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "4B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "4B Worksheet 4B–1 Comparing fusion and fission.docx"
+    },
+    "pair_with": "WS4B-2"
+   },
+   {
+    "id": "WS4B-5",
+    "n": "5",
+    "question": "Show that the binding energy of a deuterium nucleus (${}^{2}_{1}\\text{H}$) is 2.23 MeV.\nUse the following data (shown in the table below) for the mass of the particle/nuclide. Use the conversion factor 1.000000 kg = $5.609586 \\times 10^{27}$ MeV.\n| Particle/nuclide | Mass (kg) |\n| Neutron | $1.674929 \\times 10^{-27}$ |\n| Proton | $1.672623 \\times 10^{-27}$ |\n| Deuterium | $3.343583 \\times 10^{-27}$ |",
+    "answer": "The binding energy of a nucleus is determined by subtracting the mass of the nucleus from the sum of the masses of the constituent particles/nuclides.\nIn this case the deuterium nucleus (${}^{2}_{1}\\text{H}$) nucleus is made up of one proton and one neutron.\nmass of neutron = $1.674929 \\times 10^{-27}$ kg\nmass of proton = $1.672623 \\times 10^{-27}$ kg\ntotal mass = $3.347552 \\times 10^{-27}$ kg\nmass of deuterium nucleus = $3.343583 \\times 10^{-27}$ kg\nmass difference = $.003968 \\times 10^{-27}$ kg\nUse the conversion factor 1.000000 kg = $5.609586 \\times 10^{29}$ MeV:\nbinding energy = $(.003968 \\times 10^{-27})(5.609586 \\times 10^{29}) = 2.22588$ MeV = 2.23 MeV",
+    "marks": 4,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "4B.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "4B Worksheet 4B–1 Comparing fusion and fission.docx"
+    },
+    "pair_with": "WE4B-2",
+    "note": "Question gives 1 kg = 5.609586 × 10^27 MeV; the answer uses × 10^29 (10^29 is correct). Fix the question before use."
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "4B.2"
+   ],
+   "wedo": "WE4B-1",
+   "youtry": [
+    "4B-SQ11"
+   ],
+   "note": "Energy released = difference in total binding energies; SQ11 uses the same method (He-3 to He-4)."
+  },
+  {
+   "criteria": [
+    "4B.1",
+    "4B.2"
+   ],
+   "wedo": "WE4B-2",
+   "youtry": [
+    "WS4B-5"
+   ],
+   "note": "Mass defect from tabulated masses, then convert to energy in MeV; WS5 is the same steps for deuterium (fix the 10^27 typo first)."
+  },
+  {
+   "criteria": [
+    "4B.1"
+   ],
+   "wedo": "WE4B-3",
+   "youtry": [
+    "WS4B-3"
+   ],
+   "note": "Power of a star from mass difference per second; WS3 is identical with different numbers."
+  },
+  {
+   "criteria": [
+    "4B.1"
+   ],
+   "wedo": "WS4B-2",
+   "youtry": [
+    "WS4B-4"
+   ],
+   "origin": "adapted",
+   "note": "Qualitative comparison (no worked example): model the waste levels from the WS2 answer, students list fusion advantages (WS4)."
+  }
+ ],
+ "skills": [
+  {
+   "id": "4B-SK1",
+   "heading": "4B Skills: Calculating the power output of stellar nuclear fusion",
+   "text": "See worked example WE4B-3 (verbatim).",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 32
+   }
+  }
+ ],
+ "pracs": [],
+ "powerpoint_figures": [
+  "4B PowerPoint Figure 4B–9.pptx"
+ ],
+ "notes": "No practical for 4B. Photos (4B–1 to 4B–6, 4B–8) not cropped. 'Binding energy curve' glossary term has no printed definition. WS4B-5 question has a 10^27 conversion-factor typo (answer uses 10^29). SQ11 omits 'MeV' after 28.2957 (verbatim). WE4B-3 is the 4B Skills box."
+}

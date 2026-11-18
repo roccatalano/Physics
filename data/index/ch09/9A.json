@@ -1,0 +1,763 @@
+{
+ "code": "9A",
+ "title": "Work",
+ "chapter": 9,
+ "unit": 2,
+ "aos": 1,
+ "study_design": [
+  "Apply the concept of work done by a force using: work done = force × displacement: $W = Fs\\cos\\theta$, where force is constant",
+  "work done = area under force vs distance graph"
+ ],
+ "criteria": [
+  "9A.1",
+  "9A.2",
+  "9A.3"
+ ],
+ "glossary": [
+  {
+   "id": "9A-G1",
+   "term": "Work",
+   "def": "the amount of energy transferred from one object or system to another",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 7
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F9A-1",
+   "name": "Work",
+   "latex": "W = Fs\\cos\\theta",
+   "where": [
+    {
+     "sym": "W",
+     "meaning": "Work done by the force",
+     "unit": "J"
+    },
+    {
+     "sym": "F",
+     "meaning": "Magnitude of the force",
+     "unit": "N"
+    },
+    {
+     "sym": "s",
+     "meaning": "Displacement of the object",
+     "unit": "m"
+    },
+    {
+     "sym": "\\theta",
+     "meaning": "Angle between the force and the direction of displacement",
+     "unit": "°"
+    }
+   ],
+   "criteria": [
+    "9A.1",
+    "9A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 7
+   }
+  }
+ ],
+ "engage": {
+  "heading": "A solution to climate change",
+  "text": "Burning fossil fuels releases an abundance of anthropogentic (of human origin) greenhouse gases into the atmosphere, many of which capture thermal energy and raise the average temperature of Earth. This leads to the destruction of habitats, more extreme weather events, increased difficulty growing crops, rising sea levels and numerous secondary effects.\nThe solution to our energy crisis is complex, more complex than to simply say we have to stop burning fossil fuels. The energy derived from fossil fuels can drive a country’s economy; the richer the country, the more fossil fuels that country tends to emit.\nEmissions from rich countries only account for 37% of the total carbon dioxide emissions, and burning fossil fuels is an invariable by-product of a country trying to escape poverty. Making things more energy efficient is essential to economic progress, but it may have unintended consequences. For example, the fuel efficiency of aircraft almost doubled between 1960 and 2008; this was one of the many factors that decreased the cost of aeroplane tickets and increased the number of people flying per year.\nInnovations such as carbon capture, safer nuclear power plant designs, new batteries and sustainable concrete production that will all help address the problem.",
+  "figures": [
+   "9A-F1",
+   "9A-F2",
+   "9A-F3",
+   "9A-F4"
+  ],
+  "src": {
+   "file": "Physics12_Ch09.pdf",
+   "page": 5
+  }
+ },
+ "chunks": [
+  {
+   "id": "9A-E1",
+   "heading": "How is work calculated?",
+   "text": "Work is the amount of energy transferred by a force from one object or system to another. Work is a scalar quantity. The amount of work done on an object can be calculated by multiplying the displacement by the force that is applied parallel to the direction of displacement. Imagine a box being pulled along a frictionless floor as shown below\nThis can be expressed mathematically as follows.\n$W = Fs\\cos\\theta$\nAlthough work is a scalar quantity, it can still be positive or negative because the energy can be given to an object or taken away from an object. Take a bowling ball, for example: while your hand is in contact with the bowling ball, energy is being given to the ball. Once the ball has been released by your hand, a small rolling friction force acts on the ball in the opposite direction to its motion. Therefore, the work done can be considered negative.",
+   "figures": [
+    "9A-F0"
+   ],
+   "criteria": [
+    "9A.1",
+    "9A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "9A-E2",
+   "heading": "When a force performs no work",
+   "text": "It is possible to apply a constant force on an object and not transfer any energy to the object. For example, if you hold an object in a fixed position, you are applying a constant force on the object. You can feel the effort of holding the object, but no energy is being transferred to it. This is because there is no displacement of the object and, as a result of $W = Fs\\cos\\theta$, since the displacement is zero the work is also zero.",
+   "figures": [],
+   "criteria": [
+    "9A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "9A-E3",
+   "heading": "Force–distance graphs",
+   "text": "The work done can also be determined by analysing a force–distance graph. A force–distance graph displays force component on the y-axis and distance on the x-axis, as shown in the following diagram.\nThe work done can be determined by calculating the area under the graph. To calculate the work done in the above diagram above, y force would have to be multiplied by x distance; as the force is being multiplied by the distance, the product will always be the work done in joules.",
+   "figures": [
+    "9A-F5"
+   ],
+   "criteria": [
+    "9A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 9
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "9A-F0",
+   "label": "Unlabelled diagram (box pulled at angle)",
+   "caption": "Imagine a box being pulled along a frictionless floor as shown below",
+   "img": "img/9A_force-components-box.png",
+   "important": true,
+   "why": "Shows the component F cos θ parallel to displacement",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "9A-F1",
+   "label": "Figure 9A–1",
+   "caption": "Annual global carbon dioxide emissions, 1750–2020",
+   "img": "img/9A_fig9A-1.png",
+   "important": false,
+   "why": "Engage hook graph",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "9A-F2",
+   "label": "Figure 9A–2",
+   "caption": "Carbon dioxide emissions per capita vs GDP per capita for selected countries",
+   "img": "img/9A_fig9A-2.png",
+   "important": false,
+   "why": "Engage hook graph",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "9A-F3",
+   "label": "Figure 9A–3",
+   "caption": "The average fuel burned per passenger per kilometre for new commercial jet aircraft, 1968 to 2014. The figure for 1968 is set as the 100 index and values for each year are proportional to that. Most significantly, the average fuel burned for a new aircraft fell by 45% from 1968 to 2014.",
+   "img": "img/9A_fig9A-3.png",
+   "important": false,
+   "why": "Engage hook graph",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "9A-F4",
+   "label": "Figure 9A–4",
+   "caption": "The global annual number of air transport passengers carried, 1970 to 2019",
+   "img": "img/9A_fig9A-4.png",
+   "important": false,
+   "why": "Engage hook graph",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "9A-F5",
+   "label": "Figure 9A–5",
+   "caption": "Example of a force-distance graph with a constant force y applied over a distance x.",
+   "img": "img/9A_fig9A-5.png",
+   "important": true,
+   "why": "Area under force–distance graph = work",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "9A-F6",
+   "label": "Skills 9A diagrams",
+   "caption": "A child pulls a toy cart with a string ... break up the force into its horizontal and vertical components",
+   "img": "img/9A_SK1-components.png",
+   "important": true,
+   "why": "Resolving a force into components",
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 10
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE9A-1",
+   "title": "Work pushing a box",
+   "question": "A man pushes a box of mass 46 kg horizontally along the ground with a force of 500 N. The box encounters a frictional force of 50 N. Calculate the amount of work done on the box to push it 32 m.\na Calculate the work done on the box by the pushing force.\nb Calculate the work done against the box by the friction force.\nc Calculate the energy given to the box.",
+   "steps": [
+    "a $W_{\\text{push}} = F_{\\text{push}}s\\cos\\theta = (500)(32)\\cos 0^\\circ = 16\\,000\\ \\text{J}$",
+    "b $W_{\\text{friction}} = F_{\\text{friction}}s\\cos\\theta = (50)(32)\\cos 180^\\circ = -1600\\ \\text{J}$",
+    "c $W_{\\text{total}} = W_{\\text{push}} + W_{\\text{friction}} = (16\\,000) + (-1600) = 14\\,400\\ \\text{J}$"
+   ],
+   "answer": "a 16 000 J; b −1600 J; c 14 400 J",
+   "img": [],
+   "criteria": [
+    "9A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "WE9A-2",
+   "title": "Work towing",
+   "question": "A cable-towed kneeboarder is being pulled with a force of 250 N and the towing cable makes an angle of 22° to the horizontal. A diagram of this situation is shown below.\nIf the kneeboarder travels 163 m in a straight line in the direction of the force, calculate the amount of work done by the cable on the kneeboarder.",
+   "steps": [
+    "Note that the net force is acting at an angle of 22° to the direction of travel.",
+    "$W = Fs\\cos\\theta = (250)(163)\\cos 22^\\circ = 3.78\\times10^{4}\\ \\text{J}$"
+   ],
+   "answer": "$3.78\\times10^{4}$ J",
+   "img": [
+    "img/9A_WE9A-2.png"
+   ],
+   "criteria": [
+    "9A.1",
+    "9A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "WE9A-3",
+   "title": "Work from force–distance graph",
+   "question": "A broken-down car is pushed with a force of 0.95 kN in the direction of displacement for 20 m. The person who is pushing the car then tires and their force in the direction of displacement reduces at a constant rate to zero over the next 10 m. A force–distance graph of this situation is shown on the right. Calculate the work done by the person pushing the car.",
+   "steps": [
+    "The work done is the area under the graph, this graph would need to be broken up into a rectangle and a triangle as shown. (Note: kN must be converted into N.)",
+    "total area = total work",
+    "$= (0.95\\times10^{3}\\times20) + \\left(\\frac{1}{2}\\times0.95\\times10^{3}\\times10\\right)$",
+    "$= 2.38\\times10^{4}\\ \\text{J}$"
+   ],
+   "answer": "$2.38\\times10^{4}$ J",
+   "img": [
+    "img/9A_WE9A-3.png"
+   ],
+   "criteria": [
+    "9A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 9
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "9A-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "A factory worker pushes a box along a smooth frictionless surface with a constant force of 55 N. If the worker is pushing parallel to the direction of motion and pushes the box 36.5 m, how much work have they done?",
+   "answer": "$W = Fs\\cos\\theta = (55)(36.5)\\cos 0^\\circ = 2.01\\times10^{3}\\ \\text{J}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "9A.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "9A Check-in – Set 1.docx"
+   },
+   "phase": [
+    "donow",
+    "exit",
+    "youtry"
+   ]
+  },
+  {
+   "id": "9A-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "A block of mass 150 kg is pulled across a smooth floor with a force of 110 N at an angle of 30° to the horizontal. There is no frictional force. Calculate the work done on the block if it is moved a distance of 20 m. A diagram of this situation is shown below.",
+   "answer": "$W = Fs\\cos\\theta = (110)(20)\\cos 30^\\circ = 1906\\ \\text{J}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "9A.1",
+    "9A.2"
+   ],
+   "img": [
+    "img/9A_CI1.2.png"
+   ],
+   "src": {
+    "file": "9A Check-in – Set 1.docx"
+   },
+   "phase": [
+    "donow",
+    "exit",
+    "youtry"
+   ]
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "9A-SQ1",
+   "n": "1",
+   "question": "A student pushes a box with a constant force of 80 N, in the direction of motion, for 6 m. The student then pushes the box a further 4 m and in this 4 m the student reduces the force on the box at a constant rate until the force becomes zero. A force–distance graph of this situation is shown below.\nThe work done on the box by the student is",
+   "options": [
+    "A 38 400 J",
+    "B 640 J",
+    "C 560 J",
+    "D 275 J"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "9A.3"
+   ],
+   "img": [
+    "img/9A_SQ1.png"
+   ],
+   "src": {
+    "file": "9A Section questions.docx"
+   }
+  },
+  {
+   "id": "9A-SQ2",
+   "n": "2",
+   "question": "A train of mass 1650 kg travels 2.45 km in a straight line. The engine produces a constant force of 3000 N. The work done by the engine on the train is",
+   "options": [
+    "A $7.35\\times10^{3}$ J",
+    "B $4.04\\times10^{6}$ J",
+    "C $4.95\\times10^{6}$ J",
+    "D $7.35\\times10^{6}$ J"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow",
+    "practice"
+   ],
+   "criteria": [
+    "9A.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "9A Section questions.docx"
+   }
+  },
+  {
+   "id": "9A-SQ3",
+   "n": "3",
+   "question": "A student holds a physics textbook above their head for 2 minutes. Which of the following statements is correct?",
+   "options": [
+    "A No work is done because there is no displacement.",
+    "B Over the 2 minutes the energy in the student’s arms is given to the physics book.",
+    "C Work is done to the books to hold the book up, which is why the student gets tired.",
+    "D Work is done on the student’s stationary joints and muscles."
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow",
+    "practice"
+   ],
+   "criteria": [
+    "9A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "9A Section questions.docx"
+   }
+  },
+  {
+   "id": "9A-SQ4",
+   "n": "4",
+   "question": "A man is mowing his lawn with a lawn mower of mass 35 kg. The man applies a force of 150 N down the handle, which makes an angle of 40° to the horizontal, as shown in the diagram below.\nIf the man pushes the lawn mower a distance of 5 m, the amount of work that he has done is",
+   "options": [
+    "A 750 J",
+    "B 575 J",
+    "C 482 J",
+    "D 250 J"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "9A.1",
+    "9A.2"
+   ],
+   "img": [
+    "img/9A_SQ4.png"
+   ],
+   "src": {
+    "file": "9A Section questions.docx"
+   }
+  },
+  {
+   "id": "9A-SQ5",
+   "n": "5",
+   "question": "A student swings an object is swung in circles on the end of a string. When the mass is swinging, the velocity and the force are always at right angles as shown in the diagram below.\nWhich of the following statements it true?",
+   "options": [
+    "A Work is done to change the direction of the object.",
+    "B Work is done to keep the object in circular motion.",
+    "C Work is done on the student’s muscles, which is why they get tired.",
+    "D No work is done on the object"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "9A.1"
+   ],
+   "img": [
+    "img/9A_SQ5.png"
+   ],
+   "src": {
+    "file": "9A Section questions.docx"
+   }
+  },
+  {
+   "id": "9A-SQ6",
+   "n": "6",
+   "question": "A weightlifter lifts a 60 kg mass from the ground up over their head. When the weight is over the weightlifter’s head it is 2.15 m above the ground. Calculate the work that the weightlifter has done on the bar.",
+   "answer": "$F = mg = (60)(9.8) = 588\\ \\text{N}$\n$W = Fs\\cos\\theta = (588)(2.15)\\cos 0^\\circ = 1.26\\times10^{3}\\ \\text{J}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "practice",
+    "youtry"
+   ],
+   "criteria": [
+    "9A.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "9A Section questions.docx"
+   }
+  },
+  {
+   "id": "9A-SQ7",
+   "n": "7",
+   "question": "A child pulls a cart a distance of 55.4 m, with a force of 23.6 N at an angle of 27°.\na Calculate the force that is parallel to the direction of travel.\nb Calculate the work done by the child.",
+   "answer": "a $F\\cos\\theta = (23.6)\\cos 27^\\circ = 21.0\\ \\text{N}$\nb $W = Fs\\cos\\theta = (23.6)(55.4)\\cos 27^\\circ = 1.17\\times10^{3}\\ \\text{J}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice",
+    "youtry"
+   ],
+   "criteria": [
+    "9A.1",
+    "9A.2"
+   ],
+   "img": [
+    "img/9A_SQ7.png"
+   ],
+   "src": {
+    "file": "9A Section questions.docx"
+   }
+  },
+  {
+   "id": "9A-SQ8",
+   "n": "8",
+   "question": "A shopper is pushing a shopping trolley back to their car. The shopper pushes the trolley with a force of 100 N for the first 20 m; they then increase their force at a constant rate over the next 40 m to 200 N. The shopper then continues to push the trolley with a force of 200 N for 20 m before reducing their force to zero at a constant rate over the next 20 m.\na Sketch the force-distance graph of this situation. Your graph should include a labelled x- and y-axes with units and an accurate scale.\nb Calculate the work done by the shopper on the trolley.",
+   "answer": "a (graph: see img/9A_SQ8a_answer.jpg)\nb $\\text{Work} = \\text{area under the graph}$\n$= (100)(20) + \\frac{(100+200)}{2}(40) + (200)(20) + \\frac{1}{2}(20)(200)$\n$= 1.40\\times10^{4}\\ \\text{J}$",
+   "marks": null,
+   "kind": "graph",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "9A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "9A Section questions.docx"
+   },
+   "answer_img": [
+    "img/9A_SQ8a_answer.jpg"
+   ]
+  },
+  {
+   "id": "9A-SQ9",
+   "n": "9",
+   "question": "A tugboat is attached to a large ship via a rope that pulls in the same direction as the direction that the boat is moving. The graph displaying how the tugboat pulls on the ship as a function of the distance travelled is displayed below.\na Which is greater: the work done in the first 30 m or the work done in the last 20 m? Justify your answer with calculations.\nb If instead of pulling parallel to the direction of travel, the rope was pulling at an angle to the horizontal, what effect would this have on the force required if the same amount of work was done?",
+   "answer": "a $W_{\\text{first 30 m}} = (100\\times10^{3})(26) + \\frac{(100+130)\\times10^{3}}{2}(4) = 3.06\\times10^{6}\\ \\text{J}$\n$W_{\\text{last 20 m}} = \\frac{(130+200)\\times10^{3}}{2}(10) + \\frac{1}{2}(200\\times10^{3})(10) = 2.65\\times10^{6}\\ \\text{J}$\nThe work done in the first 30 m is greater.\nb The work is given by $W = Fs\\cos\\theta$, where the $\\cos\\theta$ calculates the force is parallel to the direction of displacement if the rope were pulling at an angle, $\\cos\\theta < 1$, giving a smaller value than the actual pulling force. This means that the pulling force would need to be increased to keep the amount of work constant.",
+   "marks": null,
+   "kind": "graph",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "9A.1",
+    "9A.3"
+   ],
+   "img": [
+    "img/9A_SQ9.png"
+   ],
+   "src": {
+    "file": "9A Section questions.docx"
+   }
+  },
+  {
+   "id": "9A-SQ10",
+   "n": "10",
+   "question": "A race car that has a mass of $1.29\\times10^{3}$ kg accelerates at a constant rate of 9000 m s$^{-2}$. Ignore the effects of air resistance in this question.\na What is the magnitude of the force driving the car forward?\nb If the car travels for 450 m while accelerating, calculate the work done on the car.",
+   "answer": "a $F = ma = (1.29\\times10^{3})(9000) = 1.16\\times10^{7}\\ \\text{N}$\nb $W = Fs\\cos\\theta = (1.16\\times10^{7})(450)\\cos 0^\\circ = 5.22\\times10^{9}\\ \\text{J}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "9A.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "9A Section questions.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 9A–1 Work",
+  "total": 12,
+  "questions": [
+   {
+    "id": "WS9A-1a",
+    "n": "1a",
+    "question": "A man pushes a 56 kg box horizontally along the ground with a constant horizontal force of 350 N. The box encounters a frictional force of 75 N. The box is pushed a distance of 55.6 m.\na Calculate the work done on the box by the pushing force.",
+    "answer": "$W_{\\text{push}} = F_{\\text{push}}s\\cos\\theta = (350)(55.6)\\cos 0^\\circ$ (1 mark)\n$= 1.95\\times10^{4}\\ \\text{J}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "9A.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "9A Worksheet 9A–1 Work.docx"
+    },
+    "pair_with": "WE9A-1"
+   },
+   {
+    "id": "WS9A-1b",
+    "n": "1b",
+    "question": "Calculate the work done against the box by the friction force.",
+    "answer": "$W_{\\text{friction}} = F_{\\text{friction}}s\\cos\\theta = (75)(55.6)\\cos 180^\\circ$ (1 mark)\n$= -4170\\ \\text{J}$ (1 mark)\nNote that the negative sign indicates",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "9A.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "9A Worksheet 9A–1 Work.docx"
+    },
+    "pair_with": "WE9A-1"
+   },
+   {
+    "id": "WS9A-1c",
+    "n": "1c",
+    "question": "Calculate the energy given to the box.",
+    "answer": "$W_{\\text{total}} = W_{\\text{push}} + W_{\\text{friction}} = (19\\,460) + (-4170)$ (1 mark)\n$= 1.53\\times10^{4}\\ \\text{J}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "9A.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "9A Worksheet 9A–1 Work.docx"
+    },
+    "pair_with": "WE9A-1"
+   },
+   {
+    "id": "WS9A-2",
+    "n": "2",
+    "question": "A tractor is pulling a carriage via a cable. The cable makes and an angle of 24° to the horizontal and has a tension of 5000 N. A diagram of this situation is shown below.\nIf the tractor pulls the wagon 5.88 km in a straight line, calculate the amount of work done by the cable on the wagon.",
+    "answer": "Note that the net force is acting at an angle of 24° to the direction of travel.\n$W = Fs\\cos\\theta = (5000)(5.88\\times10^{3})\\cos 24^\\circ$ (1 mark)\n$= 2.69\\times10^{7}\\ \\text{J}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "9A.1",
+     "9A.2"
+    ],
+    "img": [
+     "img/9A_WS2.jpg"
+    ],
+    "src": {
+     "file": "9A Worksheet 9A–1 Work.docx"
+    },
+    "pair_with": "WE9A-2"
+   },
+   {
+    "id": "WS9A-3a",
+    "n": "3a",
+    "question": "A person is pushing a shopping trolley down a 20 m long shopping aisle. A force–distance graph of this situation is shown below.\na Calculate the work that the person does on the trolley in the first 10 m of the journey.",
+    "answer": "$work = area\\ under\\ graph$\n$= (300)(6) + \\left(\\frac{1}{2}\\right)(3)(300) + \\left(\\frac{1}{2}\\right)(1)(100)$ (1 mark)\n$= 2300\\ \\text{J}$ (1 mark)",
+    "marks": 2,
+    "kind": "graph",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "9A.3"
+    ],
+    "img": [
+     "img/9A_WS3.png"
+    ],
+    "src": {
+     "file": "9A Worksheet 9A–1 Work.docx"
+    },
+    "pair_with": "WE9A-3"
+   },
+   {
+    "id": "WS9A-3b",
+    "n": "3b",
+    "question": "Calculate the total work that the person does on the trolley in the 20 m journey.",
+    "answer": "$2300 + (100)(10)$ (1 mark)\n$= 3300\\ \\text{J}$ (1 mark)",
+    "marks": 2,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "criteria": [
+     "9A.3"
+    ],
+    "img": [
+     "img/9A_WS3.png"
+    ],
+    "src": {
+     "file": "9A Worksheet 9A–1 Work.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "9A.2"
+   ],
+   "wedo": "WE9A-1",
+   "youtry": [
+    "WS9A-1a",
+    "WS9A-1b"
+   ],
+   "note": "Same structure: push force, friction force (cos 180°), net energy; WS9A-1c continues it"
+  },
+  {
+   "criteria": [
+    "9A.1",
+    "9A.2"
+   ],
+   "wedo": "WE9A-2",
+   "youtry": [
+    "WS9A-2"
+   ],
+   "note": "Force at an angle to displacement, same one-line W = Fs cos θ"
+  },
+  {
+   "criteria": [
+    "9A.3"
+   ],
+   "wedo": "WE9A-3",
+   "youtry": [
+    "WS9A-3a"
+   ],
+   "note": "Area under force–distance graph split into rectangle and triangles"
+  }
+ ],
+ "skills": [
+  {
+   "id": "9A-SK1",
+   "heading": "Finding forces that are parallel to the direction of motion",
+   "text": "To successfully find the amount of useful work done, you must be able to find the component of a force that acts parallel to the direction of motion. Finding the correct component requires a good understanding of trigonometry. Consider the following question.\nQuestion\nA child pulls a toy cart with a string. The tension in the string is 150 N and the string forms an angle of 30° to the horizontal. A diagram of this situation is shown below.\nCalculate the work done if the child pulls the toy for 122 m.\nSolution\nThe first step is to break up the force into its horizontal and vertical components, as shown below.\nThen, identify the component that you need. As the cart is moving horizontally, the component that you need is the horizontal component.\n$W = Fs\\cos\\theta = (150)(122)\\cos 30^\\circ = 1.58\\times10^{4}\\ \\text{J}$\nThis skill can be applied to many areas of study. For example, it can assist in finding the horizontal and vertical components of velocity in projectile motion, finding the force that is perpendicular to the pivot point when creating a torque, and understanding acceleration down a slope and many other situations.",
+   "img": [
+    "img/9A_SK1-cart.png",
+    "img/9A_SK1-components.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch09.pdf",
+    "page": 10
+   }
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P9A-1",
+   "title": "Practical 9A–1 Work",
+   "file": "9A Practical 9A–1 Work.docx",
+   "aim": "To investigate the effect that changing the force applied to a cart has on the kinetic energy transferred to another cart."
+  }
+ ],
+ "notes": "Only one check-in set for 9A. Worksheet 9A–1 answer 1b ends mid-sentence ('Note that the negative sign indicates') in the Cambridge file. Worksheet docx letters Q3 parts as a and d (pandoc numbering); indexed as 3a, 3b. Section Q8a answer is a graph image. Textbook SQ3 says 'her head', docx says 'their head' (docx used)."
+}

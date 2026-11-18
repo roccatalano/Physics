@@ -1,0 +1,1042 @@
+{
+ "code": "7C",
+ "title": "Analysing straight-line motion with uniform acceleration",
+ "chapter": 7,
+ "unit": 2,
+ "aos": 1,
+ "study_design": [
+  "Analyse graphically, numerically and algebraically, straight-line motion under constant acceleration $v = u + at$, $v^2 = u^2 + 2as$, $s = \\frac{1}{2}(u + v)t$, $s = ut + \\frac{1}{2}at^2$, $s = vt - \\frac{1}{2}at^2$"
+ ],
+ "criteria": [
+  "7C.1"
+ ],
+ "glossary": [
+  {
+   "id": "7C-G1",
+   "term": "Free-falling",
+   "def": "when a body is falling and the only force acting on the body is gravity",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 47
+   }
+  },
+  {
+   "id": "7C-G2",
+   "term": "Parabolic path",
+   "def": "an approximately U-shaped plane curve that is mirror-symmetrical. This is the path taken by a projectile that is only under the influence of gravity and air resistance is considered negligible.",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 51
+   }
+  },
+  {
+   "id": "7C-G3",
+   "term": "Net force",
+   "def": "the sum of all of the forces acting on an object",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 51
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F7C-1",
+   "name": "Equations of constant acceleration",
+   "latex": "v = u + at,\\quad v^2 = u^2 + 2as,\\quad s = \\frac{1}{2}(u + v)t,\\quad s = ut + \\frac{1}{2}at^2,\\quad s = vt - \\frac{1}{2}at^2",
+   "where": [
+    {
+     "sym": "v",
+     "meaning": "Final velocity",
+     "unit": "\\text{m s}^{-1}"
+    },
+    {
+     "sym": "u",
+     "meaning": "Initial velocity",
+     "unit": "\\text{m s}^{-1}"
+    },
+    {
+     "sym": "a",
+     "meaning": "Acceleration",
+     "unit": "\\text{m s}^{-2}"
+    },
+    {
+     "sym": "t",
+     "meaning": "Time",
+     "unit": "s"
+    },
+    {
+     "sym": "s",
+     "meaning": "Displacement",
+     "unit": "m"
+    }
+   ],
+   "img": "img/7C_formula7C-1.png",
+   "criteria": [
+    "7C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 43
+   }
+  }
+ ],
+ "engage": {
+  "heading": "The fastest man on Earth",
+  "text": "On a still day in the Holloman Air Force Base in New Mexico, United States, Colonel John Paul Stapp climbed inside his Sonic Wind rocket sled, ready to be launched down the empty track. John Stapp was a pioneer of the effect of acceleration on the human body and he would often test on himself, as he was doing this day. The rocket sled accelerated from rest to a speed of 1015 $\\text{km h}^{-1}$ in 5 s and was then brought to rest again in 1.5 s. The top speed achieved by Stapp in Sonic Wind broke the existing land speed record, making him the fastest man on Earth over land.\nSuch rapid acceleration and deceleration subjected Stapp’s body to g-forces up to 46.2 g. This is still the highest known acceleration that has been voluntarily encountered by a human. A medical exam of Stapp after his world record revealed broken blood vessels in his eyes as well as numerous lacerations and bruises across his body. Stapp became a pioneer in seatbelt technology and helped to develop the car seatbelt commonly used today.",
+  "src": {
+   "file": "Physics12_Ch07.pdf",
+   "page": 42
+  }
+ },
+ "chunks": [
+  {
+   "id": "7C-E1",
+   "heading": "Deriving the formulas for constant acceleration",
+   "text": "When analysing straight-line motion, graphs are extremely useful. From graphs, you can derive the formulas for constant straight-line acceleration shown below:\nThese formulas can then be applied to problems involving constant acceleration to quickly find a solution.\nAn object moving with constant acceleration is represented by a diagonal line on a velocity–time graph that has a constant, non-zero, gradient. For example, a cyclist accelerates at a constant rate of 2 $\\text{m s}^{-2}$ for 5 seconds. The velocity–time graph of the cyclist’s motion is shown in Figure 7C–2.\nLet’s say you wanted to find the average velocity of the cyclist. The distance travelled is the area under the graph, so $d = \\frac{1}{2}(5)(10) = 25$ m. Now, to find the average velocity, the distance is divided by the time, so $v = \\frac{25}{5} = 5$ $\\text{m s}^{-1}$.\nFigure 7C–3 shows that even though the cyclist has an ever-changing velocity over time, they will cover the same distance in 5 seconds as a cyclist moving at a constant velocity of 5 $\\text{m s}^{-1}$. Note that this average velocity is only applicable when the cyclist travels for 5 s. The average velocity would be less if the cyclist were to travel for less than 5 s and greater if travelling more than 5 s with the same acceleration.",
+   "figures": [
+    "7C-F2",
+    "7C-F3"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 43
+   }
+  },
+  {
+   "id": "7C-E2",
+   "heading": "Deriving the formulas for constant acceleration (derivation)",
+   "text": "As you learned earlier in this chapter, the gradient of a velocity–time graph is the acceleration:\n$\\text{gradient} = a = \\frac{\\text{rise}}{\\text{run}} = \\frac{\\Delta v}{\\Delta t} = \\frac{v - u}{\\Delta t}$\nThis can be rearranged to give:\n$v = u + at$ This is one equation.\nNow consider the motion of another cyclist that is initially riding at 6 $\\text{m s}^{-1}$ and accelerates at a constant rate of 1 $\\text{m s}^{-2}$ for 5 s, as shown in Figure 7C–4. As you learned earlier in this chapter, the area under a velocity–time graph is the displacement. To find the displacement of the cyclist after their 5 s journey, the graph would have to be divided into a rectangle and a triangle.\nFrom Figure 7C–4, the displacement is given by:\n$s = \\frac{1}{2}t(v - u) + ut$\nAll the other equations for uniform acceleration can be derived from this formula. The equation can be expanded and simplified to:\n$s = \\frac{1}{2}tv - \\frac{1}{2}tu + ut$\n$s = \\frac{1}{2}(u + v)t$ This is a second equation.\nYou have learned that the acceleration is given by:\n$a = \\frac{v - u}{t}$\nYou can rearrange this to:\n$at = v - u$\nThis means that $at$ can be substituted for $v - u$ giving:\n$s = \\frac{1}{2}t(v - u) + ut$\n$s = \\frac{1}{2}t(at) + ut$\n$s = ut + \\frac{1}{2}at^2$ This is a third equation.\nThe acceleration formula can then be rearranged to:\n$t = \\frac{v - u}{a}$\nThen substituted into the equation as follows:\n$s = \\frac{1}{2}(u + v)t$\n$s = \\frac{u + v}{2}\\left(\\frac{v - u}{a}\\right)$\n$s = \\frac{v^2 - u^2}{2a}$\n$v^2 = u^2 + 2as$ This is a fourth equation.\nThe acceleration formula can be rearranged to:\n$u = v - at$\nIt can then be substituted into the following equation:\n$s = \\frac{1}{2}(u + v)t$\n$s = \\frac{1}{2}(v - at + v)t$\n$s = vt - \\frac{1}{2}at^2$ This is a fifth equation.\nAll of the equations of constant acceleration are shown in Formula 7C–1. Note: It is not a requirement to know how to derive these formulas.",
+   "figures": [
+    "7C-F4"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 44
+   }
+  },
+  {
+   "id": "7C-E3",
+   "heading": "Horizontal motion",
+   "text": "Newton’s first law, which will be discussed in more detail in Chapter 8, states that a body in motion or at rest will remain in its state of motion unless acted upon by an unbalanced force. This means that when a body moves horizontally through space, its velocity will not change unless acted upon by an unbalanced force. Often objects will have a constant unbalanced force applied to them, like a car that is accelerating uniformly or a sprinter who is sprinting out of the blocks. In these situations of uniform motion, the equations of motion can be applied. When solving horizontal motion questions about objects with constant straight-line acceleration:\n• draw a diagram of the situation and put all the information that you have on the diagram in SI units\n• choose an appropriate equation based on the data that you have and the data that you need. Remember that when vectors act in opposite directions, set one direction as positive; the opposite direction will then have a negative sign (except for t)\n• round your final answer to three significant figures. Include units in your answer and, if your answer is a vector, a direction as well.",
+   "figures": [],
+   "criteria": [
+    "7C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 46
+   }
+  },
+  {
+   "id": "7C-E4",
+   "heading": "Vertical motion",
+   "text": "When a body is launched vertically, and if air resistance is ignored, there is generally only one force acting on the body – the downwards force of gravity. Close to the surface of Earth, the force due to gravity will cause all free-falling objects to accelerate at 9.8 $\\text{m s}^{-2}$ down, to the surface of Earth.\nFor example, imagine if a 1 kg mass and a 2 kg mass that are initially at rest are dropped and allowed to free-fall. If air resistance is ignored, they will both reach a velocity of 9.8 $\\text{m s}^{-1}$ down after 1 second, and then reach a velocity of 19.6 $\\text{m s}^{-1}$ down after 2 seconds. If the 1 kg and 2 kg masses are thrown up with a velocity of 19.6 $\\text{m s}^{-1}$, the two masses will accelerate downwards towards the surface of Earth. After 1 second, the velocity of both masses would be reduced to 9.8 $\\text{m s}^{-1}$ up, and after 2 seconds the velocity of both masses would be reduced to zero.\nAlthough there is no direct record of it, it is said that in the 1500s, Italian scientist Galileo Galilei dropped two objects off the Leaning Tower of Pisa. Even though one of the objects was much lighter than the other, they both fell at the same rate, indicating that the acceleration on both masses is the same. In 1971, during the Apollo 15 Moon landing, astronaut David Scott dropped a feather and a hammer at the same time. Since there was minimal air resistance on the Moon, both the feather and the hammer hit the ground at the same time.\nThese examples demonstrate that the acceleration close to the surface of Earth is unaffected by an object’s mass or velocity. Both masses had the same change in velocity and even the masses that were travelling upwards had a change in their velocity equal to 9.8 $\\text{m s}^{-1}$ downwards every second.\nThe steps to solving a vertical motion problem are the same as the steps to solving a horizontal motion problem. However, in vertical motion problems there are a number of key things to remember that will assist in solving them (ignoring air resistance).\n• The constant acceleration acting on all free-falling bodies is 9.8 $\\text{m s}^{-2}$ down.\n• Gravity is usually given a negative sign in an equation of motion and velocities directed upwards are given a positive sign.\n• An object that is thrown upwards will slow down until it comes to a stop; gravity will then begin to bring the object back down to Earth.\n• The stationary point of an object that is projected up in the air is its maximum height and half of the total flight time if the object lands at the same level that it was launched.",
+   "figures": [],
+   "criteria": [
+    "7C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 47
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "7C-F1",
+   "label": "Figure 7C–1",
+   "caption": "Colonel John Paul Stapp set a new land speed record of 1015 $\\text{km h}^{-1}$ in a rocket-driven sled",
+   "img": null,
+   "important": false,
+   "why": "Engage photo; not cropped",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 42
+   }
+  },
+  {
+   "id": "7C-F2",
+   "label": "Figure 7C–2",
+   "caption": "Velocity–time graph for a cyclist accelerating at 2 $\\text{m s}^{-2}$ for 5 seconds",
+   "img": "img/7C_fig7C-2.png",
+   "important": true,
+   "why": "Constant acceleration = straight line on v–t",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 43
+   }
+  },
+  {
+   "id": "7C-F3",
+   "label": "Figure 7C–3",
+   "caption": "A geometric view of the area under the velocity–time graph for the accelerating cyclist. The black dashed line is the average velocity, and this diagram shows that the area under the plotted line in the velocity–time graph is the same as the area under the average velocity plotted on the same axes.",
+   "img": "img/7C_fig7C-3.png",
+   "important": true,
+   "why": "Why s = ½(u+v)t: average velocity area",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 43
+   }
+  },
+  {
+   "id": "7C-F4",
+   "label": "Figure 7C–4",
+   "caption": "Displacement of a cyclist initially riding at 6 $\\text{m s}^{-1}$ and accelerating at 1 $\\text{m s}^{-2}$ for 5 seconds",
+   "img": "img/7C_fig7C-4.png",
+   "important": true,
+   "why": "Rectangle + triangle area: derivation of the equations",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 44
+   }
+  },
+  {
+   "id": "7C-F5",
+   "label": "Figure 7C–5",
+   "caption": "Cheetahs are the fastest land animals on the planet; their acceleration is equal to most Lamborghini and Ferrari cars.",
+   "img": null,
+   "important": false,
+   "why": "Photo; not cropped",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 46
+   }
+  },
+  {
+   "id": "7C-F6",
+   "label": "Figure 7C–6",
+   "caption": "A Peregrine falcon mid-dive. During such dives the peregrine falcon can reach speeds of 390 $\\text{km h}^{-1}$, which is about 30% faster than the top speed of the civilian helicopter.",
+   "img": null,
+   "important": false,
+   "why": "Photo; not cropped",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 47
+   }
+  },
+  {
+   "id": "7C-F7",
+   "label": "Figure 7C–7",
+   "caption": "David Scott dropped a feather and a geology hammer during the Apollo 15 mission in 1971",
+   "img": null,
+   "important": false,
+   "why": "Photo; not cropped (a video link would be better)",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 48
+   }
+  },
+  {
+   "id": "7C-F8",
+   "label": "Figure 7C–8",
+   "caption": "When a body is in flight, the only force acting on it is the force due to gravity, which is downwards and constant.",
+   "img": "img/7C_fig7C-8.png",
+   "important": true,
+   "why": "Misconception: force on a projectile is always down",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 51
+   }
+  },
+  {
+   "id": "7C-F9",
+   "label": "Parabolic path (7C Skills, unnumbered)",
+   "caption": "If you throw a ball as far as you can, it will trace a parabolic path as shown below, if the effect of air resistance is ignored.",
+   "img": "img/7C_SK1.png",
+   "important": true,
+   "why": "Ball positions along a parabola (pair with 7C–8)",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 51
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE7C-1",
+   "title": "Using equations of constant acceleration",
+   "question": "A ball travels forward with a velocity 4.65 $\\text{m s}^{-1}$. As it rolls over the ground, it slows to a stop in 1.75 s. A force acts on the ball, causing a constant deceleration (negative acceleration). Calculate the distance the ball travels before coming to a stop.",
+   "steps": [
+    "First draw a diagram of the situation with all of the appropriate data.",
+    "[diagram: $t = 1.75$ s, $a = ?$, $u = 4.65$ $\\text{m s}^{-1}$, $s = ?$]",
+    "Select the appropriate formula and solve the problem.",
+    "$s = \\frac{1}{2}(u + v)t = \\frac{1}{2}(4.65 + 0)(1.75) = 4.07$ m"
+   ],
+   "answer": "4.07 m",
+   "img": [
+    "img/7C_WE7C-1.png"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 46
+   }
+  },
+  {
+   "id": "WE7C-2",
+   "title": "Vertical motion from a drop",
+   "question": "A cliff diver of mass 76 kg jumps off a cliff that is 15.1 m tall. If the cliff diver has no velocity when he leaves the cliff, calculate the velocity of the diver the moment before he hits the water. Ignore the effects of air resistance.",
+   "steps": [
+    "The first step is to determine which direction is positive. In this example, it is easier to take down as positive. The second step is to identify all of the information in the question:",
+    "$m = 76$ kg",
+    "$s = 15.1$ m",
+    "$u = 0$ $\\text{m s}^{-1}$",
+    "$a = 9.8$ $\\text{m s}^{-2}$",
+    "$v = ?$",
+    "The mass of the diver is included but is irrelevant to this question as the acceleration of gravity is the same on all objects. Once you have all the relevant information, find an appropriate formula and solve the equation.",
+    "$v^2 = u^2 + 2as$",
+    "$v = \\sqrt{u^2 + 2as}$",
+    "$= \\sqrt{(0)^2 + 2(9.8)(15.1)}$",
+    "$= 17.2$ $\\text{m s}^{-1}$",
+    "Note that since gravity was acting down and the displacement was in the down direction, both numbers have been given a positive sign."
+   ],
+   "answer": "17.2 $\\text{m s}^{-1}$ (down)",
+   "img": [
+    "img/7C_WE7C-2.png"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 49
+   }
+  },
+  {
+   "id": "WE7C-3",
+   "title": "Vertical motion from a throw",
+   "question": "A student throws a ball of mass 200 g into the air vertically upwards, with an initial velocity of 20 $\\text{m s}^{-1}$. When the ball leaves the student’s hand, it is already 1.22 m above the ground.\na Calculate the maximum height above the ground reached by the ball.\nb Calculate the total flight time of the ball, assuming that the student catches the ball at a height of 1.22 m above the ground.",
+   "steps": [
+    "a The first step is to draw a diagram with all of the information given.",
+    "There is another piece of important information to remember; when the maximum vertical height is reached, the velocity of the ball will be zero. This means if you consider the movement of the ball from when it is released to its maximum height, the final velocity of the ball will be zero.",
+    "With this piece of information, you can now apply an appropriate formula:",
+    "$v^2 = u^2 + 2as$",
+    "$s = \\frac{v^2 - u^2}{2a}$",
+    "$= \\frac{(0)^2 - (20)^2}{(2)(-9.8)} = 20.4$ m",
+    "This is the distance that the ball travelled before it reached its turning point; to get the maximum height the initial height of the ball must be added.",
+    "maximum height = 20.4 + 1.22 = 21.6 m",
+    "b This problem can be solved with the knowledge that the time to reach the maximum height is half of the total flight time, as the ball lands at the same height that it was launched. Therefore, you must choose an appropriate formula with time:",
+    "$v = u + at$",
+    "$t = \\frac{v - u}{a}$",
+    "$= \\frac{(0) - (20)}{(-9.8)} = 2.04$ s",
+    "total time $= 2.04 \\times 2 = 4.08$ s",
+    "There is often more than one way of reaching a solution. When a projectile is in free-fall, there is symmetry in the projectiles upwards and downwards movement. When the ball is travelling upwards, its upwards velocity is reducing by 9.8 $\\text{m s}^{-1}$ every second; in this case the ball will travel 20.4 m up before the ball no longer has any upwards velocity. After this momentary stationary point, the ball will then fall a distance of 20.4 m, which means that just before the ball is caught, it will be travelling down at 20 $\\text{m s}^{-1}$. This can then be used as the final velocity as follows.",
+    "$t = \\frac{v - u}{a}$",
+    "$= \\frac{(-20) - (20)}{(-9.8)} = 4.08$ s"
+   ],
+   "answer": "a 21.6 m; b 4.08 s",
+   "img": [
+    "img/7C_WE7C-3_diagram.png",
+    "img/7C_WE7C-3.png"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 50
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "7C-CI1.1a",
+   "set": 1,
+   "n": "1a",
+   "question": "A ball that has an initial velocity of 5 $\\text{m s}^{-1}$ is acted upon by a constant frictional force that causes it to decelerate at a constant rate of 1.42 $\\text{m s}^{-2}$.\na Calculate how much time passes before the ball comes to a stop.",
+   "answer": "$v = u + at$; $t = \\frac{v - u}{a} = \\frac{0 - 5}{-1.42} = 3.52$ s",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 47
+   }
+  },
+  {
+   "id": "7C-CI1.1b",
+   "set": 1,
+   "n": "1b",
+   "question": "b Calculate the distance that the ball travels before coming to a stop.",
+   "answer": "$v^2 = u^2 + 2as$; $s = \\frac{v^2 - u^2}{2a} = \\frac{0 - 25}{(2)(-1.42)} = 8.8$ m",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 47
+   }
+  },
+  {
+   "id": "7C-CI1.2a",
+   "set": 1,
+   "n": "2a",
+   "question": "A car accelerated from 18 $\\text{km h}^{-1}$ to 108 $\\text{km h}^{-1}$ in 10.2 s.\na Calculate the acceleration of the car in $\\text{m s}^{-2}$.",
+   "answer": "$u = \\frac{18}{3.6} = 5$ $\\text{m s}^{-1}$; $v = \\frac{108}{3.6} = 30$ $\\text{m s}^{-1}$; $a = \\frac{30 - 5}{10.2} = 2.45$ $\\text{m s}^{-2}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 47
+   }
+  },
+  {
+   "id": "7C-CI1.2b",
+   "set": 1,
+   "n": "2b",
+   "question": "b When the velocity of the car was 108 $\\text{km h}^{-1}$ the driver uses the brakes for 3 s and the brakes caused the car to decelerate at a constant rate of 6.22 $\\text{m s}^{-2}$. Calculate the velocity of the car after the brakes were applied.",
+   "answer": "$v = u + at = 30 + (-6.22)(3) = 11.3$ $\\text{m s}^{-1}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 47
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "7C-SQ1",
+   "n": "1",
+   "question": "A ball is thrown vertically up into the air. As the ball is travelling up, which of the diagrams below represents the magnitude and direction of all the forces acting on the ball?",
+   "options": [
+    "A A",
+    "B B",
+    "C C",
+    "D D"
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [
+    "img/7C_SQ1.png"
+   ],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ2",
+   "n": "2",
+   "question": "A cricket player hits a ball up vertically from ground level. The ball travels unaffected by air resistance and lands back down in the same spot from which it was hit. Which of the following statements relating to the motion of the ball once it has left the cricket bat is incorrect?",
+   "options": [
+    "A The velocity with which the ball leaves the bat will be equal in magnitude but opposite in direction to the velocity with which the ball hits the ground.",
+    "B When the ball is moving up, it must have a force acting on it that is also up.",
+    "C The acceleration that the ball experiences does not depend on its mass.",
+    "D The time taken to reach the turning point will be half of the total flight time."
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ3",
+   "n": "3",
+   "question": "In a game of volleyball, a player hits the ball vertically upwards. Which of the following is the best description of the ball’s motion when it reaches its maximum height?",
+   "options": [
+    "A The ball’s velocity and acceleration have been reduced to zero.",
+    "B The ball’s velocity is zero, but the acceleration is down.",
+    "C The ball’s velocity is in the upward direction, but the acceleration is down.",
+    "D Both the velocity and the acceleration are downwards."
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow",
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ4",
+   "n": "4",
+   "question": "A car driving through bad weather slows from 99 $\\text{km h}^{-1}$ to 18 $\\text{km h}^{-1}$ in 14 s. The magnitude of the acceleration of the car is",
+   "options": [
+    "A 20.8 $\\text{m s}^{-2}$",
+    "B 10.2 $\\text{m s}^{-2}$",
+    "C 5.79 $\\text{m s}^{-2}$",
+    "D 1.61 $\\text{m s}^{-2}$"
+   ],
+   "answer": "D",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ5",
+   "n": "5",
+   "question": "A coin, initially at rest, is dropped into a well. The coin travels 3.96 m before it hits the surface of the water in the well. What is the velocity of the coin just before it strikes the surface of the water?",
+   "options": [
+    "A 77.6 $\\text{m s}^{-1}$",
+    "B 19.4 $\\text{m s}^{-1}$",
+    "C 8.8 $\\text{m s}^{-1}$",
+    "D 3.96 $\\text{m s}^{-1}$"
+   ],
+   "answer": "C",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ6a",
+   "n": "6a",
+   "question": "A passenger onboard a hot air balloon drops her camera. It takes the camera 7.88 s to fall from rest down to the ground. Assume air resistance is negligible.\na Show that the camera was dropped from a height of 304 m.",
+   "answer": "$s = ut + \\frac{1}{2}at^2 = (0)(7.88) + \\frac{1}{2}(-9.8)(7.88)^2 = -304$ m. Note that the answer is positive because the displacement is down.",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ6b",
+   "n": "6b",
+   "question": "b Calculate how much time it took for the camera to cover the first half (the first 152 m) of its journey to Earth.",
+   "answer": "$s = ut + \\frac{1}{2}at^2$; $(-152) = (0)t + \\frac{1}{2}(9.8)t^2$; $t = \\sqrt{\\frac{-152}{-4.9}} = 5.57$ s",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ6c",
+   "n": "6c",
+   "question": "c Calculate the velocity of the camera just before it strikes the ground.",
+   "answer": "$v = u + at = (0) + (-9.8)(7.88) = -77.2$ $\\text{m s}^{-1}$. Note that the answer is positive because the velocity is down.",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "practice",
+    "exit"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ7a",
+   "n": "7a",
+   "question": "The minimum braking distance of a car is determined by the driver’s reaction time and the deceleration provided by the brakes. A car is travelling at a speed of 81 $\\text{km h}^{-1}$ when the driver sees a kangaroo jump on the road. The driver travels 9.44 m during the reaction time and a further 31 m while the car is braking with a constant acceleration.\na What is the speed of the car in metres per second?",
+   "answer": "$v = \\frac{81}{3.6} = 22.5$ $\\text{m s}^{-1}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "practice",
+    "exit"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ7b",
+   "n": "7b",
+   "question": "b Calculate the driver’s reaction time.",
+   "answer": "$t = \\frac{d}{v} = \\frac{9.44}{22.5} = 0.420$ s",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ7c",
+   "n": "7c",
+   "question": "c What is the magnitude of the acceleration of the car during braking?",
+   "answer": "$v^2 = u^2 + 2as$; $a = \\frac{v^2 - u^2}{2s} = \\frac{(0)^2 - (22.5)^2}{2(31)} = -8.17$ $\\text{m s}^{-2}$. Therefore, the magnitude of the acceleration is 8.17 $\\text{m s}^{-2}$.",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ7d",
+   "n": "7d",
+   "question": "d Calculate the total time that it took to stop the car.",
+   "answer": "$v = u + at$; $t = \\frac{v - u}{a} = \\frac{(0) - (22.5)}{(-8.17)} = 2.75$ s; $t_{\\text{total}} = 2.75 + 0.420 = 3.17$ s",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ8a",
+   "n": "8a",
+   "question": "On a construction site of a new skyscraper, Sophia takes an open elevator up to the top floor. The elevator moves at a constant speed of 5 $\\text{m s}^{-1}$. As Sophia passes the third floor, she drops a wrench outside the elevator and onto the third floor. Sami is standing on the third floor and sees Sophia drop the wrench. Sophia states that in her point of view the wrench is falling down as soon as she drops it so Sami must also see the wrench falling down as soon as Sophia drops it.\na Comment on the accuracy of Sophia’s statement.",
+   "answer": "Sophia’s statement is not correct. Relative to Sami, the wrench has an initial speed of 5 $\\text{m s}^{-1}$ up when Sophia drops it. This means that Sami will initially see the wrench continue to move up.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [
+    "img/7C_SQ8.png"
+   ],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ8b",
+   "n": "8b",
+   "question": "b At the exact moment that Sophia drops the wrench, Sami throws a bolt in the air with a speed of 5 $\\text{m s}^{-1}$. Which would land on the floor of the third floor first? Explain your answer.",
+   "answer": "Both will hit the ground at the exact same time. This is because both of them have the same initial upwards velocity of 5 $\\text{m s}^{-1}$ and gravity is accelerating them both down at the same rate.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [
+    "img/7C_SQ8.png"
+   ],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ9a",
+   "n": "9a",
+   "question": "A truck is travelling at a constant velocity of 126 $\\text{km h}^{-1}$ when it passes a stationary police car. As soon as the two vehicles are level, the police car accelerates at 5 $\\text{m s}^{-2}$ to catch up to the speeding truck.\na How much time does it take before the velocity of the police car is equal to the velocity of the truck?",
+   "answer": "$v_{\\text{truck}} = \\frac{126}{3.6} = 35$ $\\text{m s}^{-2}$; $v = u + at$; $t = \\frac{v - u}{a} = \\frac{(35) - (0)}{(5)} = 7$ s",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ9b",
+   "n": "9b",
+   "question": "b If the police car continues to accelerate at the same rate and the velocity of the truck stays constant, how much time does it take before the police car is level with the truck?",
+   "answer": "Because both the car and the truck start level, when both vehicles travel the same distance they will again be level, therefore: $u_{\\text{car}}t + \\frac{1}{2}a_{\\text{car}}t^2 = u_{\\text{truck}}t + \\frac{1}{2}a_{\\text{truck}}t^2$; $(0)t + \\frac{1}{2}(5)t^2 = (35)t + \\frac{1}{2}(0)t^2$; $t = \\frac{35}{2.5} = 14$ s",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ10a",
+   "n": "10a",
+   "question": "Two students, Adam and Meg, are standing at on a bridge that is 12.4 m above the water below. Adam has a 1 kg stone and Meg has a 0.5 kg stone. Adam throws his stone up with a velocity of 13.0 $\\text{m s}^{-1}$ and Meg throws her stone down with a velocity of 13.0 $\\text{m s}^{-1}$. Assume that air resistance is negligible.\na What is the maximum height above the water achieved by the stone that Adam throws?",
+   "answer": "$v^2 = u^2 + 2as$; $s = \\frac{v^2 - u^2}{2a} = \\frac{(0)^2 - (13)^2}{(2)(-9.8)} = 8.62$ m; $s_{\\text{total}} = 8.62 + 12.4 = 21.0$ m",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ10b",
+   "n": "10b",
+   "question": "b Adam says that both stones will hit the water with the same velocity, but Meg says that the stone that she throws straight down will hit the water below with the greatest velocity. Who is correct? Justify your answer.",
+   "answer": "Adam is correct. For this question take down to be positive. $(v_{\\text{Meg}})^2 = (u_{\\text{Meg}})^2 + 2as$; $v_{\\text{Meg}} = \\sqrt{(u_{\\text{Meg}})^2 + 2as} = \\sqrt{(13)^2 + 2(9.8)(12.4)} = 20.3$ $\\text{m s}^{-1}$. For Adam, take 21 m to be the maximum height from $a$. Therefore, the initial velocity would be zero. $(v_{\\text{Adam}})^2 = (u_{\\text{Adam}})^2 + 2as$; $v_{\\text{Adam}} = \\sqrt{(0)^2 + 2(9.8)(21)} = 20.3$ $\\text{m s}^{-1}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ10c",
+   "n": "10c",
+   "question": "c Whose stone hits the water first? Prove your answer by calculating the exact time for each person’s stone to hit the ground.",
+   "answer": "Meg’s stone hits the water first. Take down as negative. $v_{\\text{Meg}} = u_{\\text{Meg}} + at_{\\text{Meg}}$; $t_{\\text{Meg}} = \\frac{v_{\\text{Meg}} - u_{\\text{Meg}}}{a} = \\frac{(-20.3) - (-13)}{(-9.8)} = 0.74$ s; $v_{\\text{Adam}} = u_{\\text{Adam}} + at_{\\text{Adam}}$; $t_{\\text{Adam}} = \\frac{v_{\\text{Adam}} - u_{\\text{Adam}}}{a} = \\frac{(-20.3) - (13)}{(-9.8)} = 3.40$ s",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  },
+  {
+   "id": "7C-SQ10d",
+   "n": "10d",
+   "question": "d Adam’s stone is twice the mass of Meg’s stone. If air resistance is ignored and Meg threw her ball directly up, like Adam, what effect would the mass of the stone have on the stone’s motion? Explain your answer.",
+   "answer": "The mass of the stone has no effect on its motion if air resistance is ignored. This is because the acceleration due to gravity is the same on all objects irrespective of their mass.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "practice",
+    "exit"
+   ],
+   "criteria": [
+    "7C.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7C Section questions.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 7C–1 Analysing straight-line motion with uniform acceleration",
+  "total": 14,
+  "file": "7C Worksheet 7C–1 Analysing straight-line motion with uniform acceleration.docx",
+  "answers_file": "7C Worksheet 7C–1 Answers.docx",
+  "questions": [
+   {
+    "id": "WS7C-1",
+    "n": "1",
+    "question": "A driver of a car is moving north when they see a red light and hits the brakes, going from 63 $\\text{km h}^{-1}$ to 18 $\\text{km h}^{-1}$ in 3.25 seconds. Calculate the average acceleration of the car as it is braking, give a direction for your answer. (3 marks)",
+    "answer": "$u = \\frac{63}{3.6} = 17.5$ $\\text{m s}^{-1}$, $v = \\frac{18}{3.6} = 5$ $\\text{m s}^{-1}$ (1 mark); $a = \\frac{v - u}{t} = \\frac{5 - 17.5}{3.25} = -3.85$ $\\text{m s}^{-2}$ (1 mark). The negative sign indicates the direction, south. (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "7C.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "7C Worksheet 7C–1 Analysing straight-line motion with uniform acceleration.docx"
+    },
+    "pair_with": "WE7C-1"
+   },
+   {
+    "id": "WS7C-2",
+    "n": "2",
+    "question": "A ball travels forward with a velocity 6.44 $\\text{m s}^{-1}$. As it rolls over the ground, it slows to a stop in 2.45 seconds. A force acts on the ball causing a constant deceleration. Calculate the distance the ball travelled before coming to a stop. (2 marks)",
+    "answer": "$s = \\frac{1}{2}(v + u)t = (0.5)(0 + 6.44)(2.45)$ (1 mark) $= 7.89$ m (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "7C.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "7C Worksheet 7C–1 Analysing straight-line motion with uniform acceleration.docx"
+    },
+    "pair_with": "WE7C-1"
+   },
+   {
+    "id": "WS7C-3",
+    "n": "3",
+    "question": "An 83 kg diver jumps off a 10.0 m tall diving board. The diver has an initial velocity of 5 $\\text{m s}^{-1}$ up as they leave the diving board. Calculate the velocity of the diver the moment before they hit the water below. (2 marks)",
+    "answer": "Let down be positive: $v = \\sqrt{u^2 + 2as} = \\sqrt{-5^2 + (2)(9.8)(10)}$ (1 mark) $= 14.9$ $\\text{m s}^{-1}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "7C.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "7C Worksheet 7C–1 Analysing straight-line motion with uniform acceleration.docx"
+    },
+    "pair_with": "WE7C-2"
+   },
+   {
+    "id": "WS7C-4a",
+    "n": "4a",
+    "question": "A student throws a 150 g ball into the air vertically upwards, with an initial velocity of 25.7 $\\text{m s}^{-1}$. When the ball leaves the student’s hand it is already 1.45 m above the ground.\na Calculate the maximum height above the ground reached by the ball. (3 marks)",
+    "answer": "Let up be positive: $v^2 = u^2 + 2as$, $s = \\frac{v^2 - u^2}{2a} = \\frac{0^2 - 25.7^2}{(2)(-9.8)}$ (1 mark) $= 33.7$ m (1 mark); 33.7 + 1.45 = 35.15 m (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "7C.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "7C Worksheet 7C–1 Analysing straight-line motion with uniform acceleration.docx"
+    },
+    "pair_with": "WE7C-3"
+   },
+   {
+    "id": "WS7C-4b",
+    "n": "4b",
+    "question": "b Show that the final velocity of the ball, the moment before it hits the ground, is 26.2 $\\text{m s}^{-1}$. (2 marks)",
+    "answer": "$v^2 = u^2 + 2as$; $= \\sqrt{25.7^2 + (2)(-1.45)(-9.8)}$ (1 mark) $= 26.2$ $\\text{m s}^{-1}$ (1 mark). Note that the direction is downwards, and not given by this calculation.",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "criteria": [
+     "7C.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "7C Worksheet 7C–1 Analysing straight-line motion with uniform acceleration.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS7C-4c",
+    "n": "4c",
+    "question": "c Calculate the total flight time of the ball, assuming that it hits the ground. (2 marks)",
+    "answer": "$s = \\frac{1}{2}(v + u)t$; $t = \\frac{2s}{u + v} = \\frac{(2)(-1.45)}{25.7 + (-26.2)}$ (1 mark) $= 5.8$ s or 5.3 s if unrounded figures are used (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "7C.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "7C Worksheet 7C–1 Analysing straight-line motion with uniform acceleration.docx"
+    },
+    "pair_with": "WE7C-3"
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "7C.1"
+   ],
+   "wedo": "WE7C-1",
+   "youtry": [
+    "WS7C-2",
+    "WS7C-1"
+   ],
+   "note": "WS7C-2 is the same rolling-ball context (s = ½(u+v)t); WS7C-1 adds km/h conversion and a = (v−u)/t."
+  },
+  {
+   "criteria": [
+    "7C.1"
+   ],
+   "wedo": "WE7C-2",
+   "youtry": [
+    "WS7C-3",
+    "7C-SQ5"
+   ],
+   "note": "Drop/dive: v² = u² + 2as with a sign convention."
+  },
+  {
+   "criteria": [
+    "7C.1"
+   ],
+   "wedo": "WE7C-3",
+   "youtry": [
+    "WS7C-4a",
+    "WS7C-4c"
+   ],
+   "note": "Vertical throw from a height: max height then flight time (WS7C-4 is a near-copy of WE7C-3)."
+  }
+ ],
+ "skills": [
+  {
+   "id": "7C-SK1",
+   "heading": "Understanding gravity",
+   "text": "If you throw a ball as far as you can, it will trace a parabolic path as shown below, if the effect of air resistance is ignored.\nIf you ignore air resistance, what are the forces acting on the ball throughout its flight?\nSome students may say that since the ball is going up, the force on the ball must be up. This is not true. The ball may be going up, but the only force acting on the ball is the force due to gravity, which is downwards and constant.\nBodies will accelerate in the direction of the net force, so the constant downward force of gravity will create a constant acceleration on the ball of 9.8 $\\text{m s}^{-2}$ down. This means that whenever you are solving a question that involves a body in free-fall, you will always know that the magnitude and direction of the acceleration acting on the body is 9.8 $\\text{m s}^{-2}$ down.\nIt is important to note that the acceleration and the velocity are not the same. For example, when you throw the ball it is initially moving up; it then has a momentary point of zero velocity before its velocity is then in the downwards direction. Causing these changes to the ball's velocity is the acceleration due to gravity, 9.8 $\\text{m s}^{-2}$ down.",
+   "img": [
+    "img/7C_SK1.png",
+    "img/7C_fig7C-8.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 51
+   }
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P7C-1",
+   "title": "Practical 7C–1 Water rockets",
+   "file": "7C Practical 7C–1 Water rockets.docx",
+   "aim": "Find the volume of water in a water rocket that will give the greatest flight duration or height."
+  }
+ ],
+ "notes": "7C has a single criterion (7C.1), so every question maps to it. No section on deriving formulas is assessed ('It is not a requirement to know how to derive these formulas'). Source answer errors kept verbatim: 7C-SQ6a/6c say 'the answer is positive because ... down' (should be negative); 7C-SQ9a gives 35 m s^-2 (should be m s^-1); WS7C-3 writes sqrt(-5^2 + ...); WS7C-4c gives 5.8 s or 5.3 s. 7C-SQ1 options are a diagram (img/7C_SQ1.png)."
+}

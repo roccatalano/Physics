@@ -1,0 +1,1359 @@
+{
+ "code": "5A",
+ "title": "Charge (Q) and current (I)",
+ "chapter": 5,
+ "unit": 1,
+ "aos": 3,
+ "study_design": [
+  "Apply concepts of charge (Q), electric current (I), potential difference (V), energy (E) and power (P), in electric circuits",
+  "Analyse and evaluate different analogies used to describe electric current and potential difference",
+  "Investigate and analyse theoretically and practically electric circuits using the relationships: $I = \\frac{Q}{t}$, $V = \\frac{E}{Q}$, $P = \\frac{E}{t} = VI$",
+  "Justify the use of selected meters (ammeter, voltmeter, multimeter) in circuits"
+ ],
+ "criteria": [
+  "5A.1",
+  "5A.2",
+  "5A.3",
+  "5A.4",
+  "5A.5",
+  "5A.6"
+ ],
+ "glossary": [
+  {
+   "id": "5A-G1",
+   "term": "Charge",
+   "def": "a property of matter that causes electric effects. Like charges repel, opposite charges attract.",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "5A-G2",
+   "term": "Electron",
+   "def": "the lightest stable subatomic particle known. It carries a negative charge of 1.60 × 10−19 coulomb, which is considered the basic unit of electric charge.",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "5A-G3",
+   "term": "Electrical conductor",
+   "def": "a material that allows electric charge to flow readily",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "5A-G4",
+   "term": "Electric circuit",
+   "def": "the pathway of electrical conductors that allows a continuous loop (or ‘complete circuit’) for electrons to flow through. A circuit with an open switch, or in some other way incomplete, is known as an ‘open’ circuit.",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "5A-G5",
+   "term": "Battery",
+   "def": "a source or supply of electrical energy usually formed from a number of electric cells connected in series",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "5A-G6",
+   "term": "Load",
+   "def": "the component(s) in a circuit where electrical energy is transformed into other forms of energy, e.g. thermal, light, kinetic energy",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "5A-G7",
+   "term": "Ion",
+   "def": "an atom or molecule that carries net positive or negative charge",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "5A-G8",
+   "term": "Current",
+   "def": "the net flow of electric charge, measured in amperes (A), where 1 A = 1 C s–1.",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "5A-G9",
+   "term": "Insulator",
+   "def": "a material that does not conduct electricity; has few or no free charges",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "5A-G10",
+   "term": "Semiconductor",
+   "def": "a material that conducts electricity only partially, or only under certain conditions",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "5A-G11",
+   "term": "Ammeter",
+   "def": "an instrument used to measure the electric current in a circuit in amperes (A)",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "5A-G12",
+   "term": "Series",
+   "def": "when circuit components are connected one after another in a continuous loop so that the same current passes through each component",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "5A-G13",
+   "term": "Ampere, amp (A)",
+   "def": "the SI unit for electric current, a fundamental quantity",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "5A-G14",
+   "term": "Coulomb (C)",
+   "def": "the SI unit for charge. 1 C is equivalent to the combined charge of 6.25 × 108 protons (or electrons) or the amount of charge that passes a point when a current of 1A flows for a time of 1 s.",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 17
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F5A-1",
+   "name": "Formula 5A–1 Current",
+   "latex": "I = \\frac{Q}{t} \\quad\\text{or}\\quad Q = It",
+   "where": [
+    {
+     "sym": "I",
+     "meaning": "Electrical current",
+     "unit": "A"
+    },
+    {
+     "sym": "Q",
+     "meaning": "Charge passing a point over time",
+     "unit": "C"
+    },
+    {
+     "sym": "t",
+     "meaning": "Time",
+     "unit": "s"
+    }
+   ],
+   "criteria": [
+    "5A.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 18
+   }
+  },
+  {
+   "id": "F5A-2",
+   "name": "Elementary charge and electrons per coulomb",
+   "latex": "e = 1.6\\times10^{-19}\\ \\text{C};\\quad n = \\frac{1}{1.6\\times10^{-19}} = 6.25\\times10^{18}\\ \\text{electrons per coulomb}",
+   "where": [
+    {
+     "sym": "e",
+     "meaning": "elementary charge",
+     "unit": "C"
+    },
+    {
+     "sym": "n",
+     "meaning": "number of elementary charges in 1 C",
+     "unit": ""
+    }
+   ],
+   "criteria": [
+    "5A.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 18
+   }
+  }
+ ],
+ "engage": {
+  "heading": "How do we know what is inside an atom, or even that atoms exist?",
+  "text": "Like all concepts in science, the idea of an atom and what is inside it can be tested by experiment, and when the results of an experiment suggest that the concepts are less than perfect (as often happens) then it’s time to revisit those understandings and reinvent the theory. You, this book, the air you breathe and everything around you are made of atoms. Atoms are often called ‘the building blocks of matter’. The solids, liquids and gases that surround us are made up of an enormous number of these tiny particles. For a long time, it was believed that atoms could not be split apart into smaller particles. The word ‘atom’ comes from a Greek word meaning ‘indivisible’. Scientists now know that this view of atoms is not correct. Ongoing experiments have shown that atoms have an internal structure and that there are tiny particles inside them. Although it is impossible to see inside an atom, it is possible to work out the main features (Figure 5A–2). Knowing about the structure of an atom helps us to understand electricity. Figure 5A–1 shows the highest-resolution image of atoms that has so far been captured (2021), breaking a record set in 2018. David Muller at Cornell University in Ithaca, New York, and his colleagues captured this image using a praseodymium orthoscandate crystal. Their technique uses an electron microscope and a special crystal. This image is double the resolution of their previous best, and three times as clear those obtained using different techniques. Although we cannot ‘see’ atoms or what is inside them, we can test models experimentally and use the results to develop new technology as well as new theories.",
+  "src": {
+   "file": "Physics12_Ch05.pdf",
+   "page": 6
+  }
+ },
+ "chunks": [
+  {
+   "id": "5A-E1",
+   "heading": "A useful model of the atom",
+   "text": "As you saw in Chapter 3, an atom can be modelled as a central nucleus composed of protons (positively charged) and neutrons (no charge). In studying nuclear physics you learnt that protons and neutrons in the nucleus of an atom are very tightly bound together, so any changes to the nucleus involve very large amounts of energy. Orbiting the nucleus are electrons (negatively charged), as shown in Figure 5A–2. Each electron is so tiny that its position at any point in time is difficult to measure. The outer electrons are involved in chemical bonds (studied in chemistry). They can sometimes be removed from atoms by friction (experienced on dry days as an electrostatic spark), or by light of sufficient energy (photoelectric effect). In metals, the outer electrons behave as a ‘sea’ or ‘cloud’ of electrons not bound to any particular nucleus but free to move through the metal, which is called an electrical conductor. In this chapter you will analyse the behaviour of currents of electrons in electric circuits.",
+   "figures": [
+    "5A-F2"
+   ],
+   "criteria": [
+    "5A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "5A-E2",
+   "heading": "Charge and current",
+   "text": "A simple electric circuit consists of a source or supply of electrical energy (e.g. a battery) and a load that converts electrical energy to another form of energy. They are connected by conductors, usually metal wires, that complete the circuit to make a continuous loop. The battery is connected at the battery terminals. In Figure 5A–3, the source is a battery, and the load is a heating coil, but it could be any component that converts electrical energy to a different form. This load, the electrical heating element, converts most of the electrical energy to thermal energy. In our model of the metal wires, the outer electrons of the metal atom can move around, like molecules in a liquid (Figure 5A–4 top). They are called free electrons. The positive ions are fixed in the metal lattice. Without the battery, the electrons are constantly moving randomly between ions in the lattice (Figure 5A–4 bottom). When a battery is connected to each end of the wire, the free electrons drift towards the positive side of the battery, creating a flow or current of electrons (recall that opposite charges attract). Refer to Figure 5A–5. As soon as the end of the wire touches the second terminal, there is a complete circuit and current will flow through the wire to the opposite terminal, and through the battery as well. If the circuit is not a complete loop, no current will flow and it may be called an open circuit. This drift of electrons is quite slow, about 0.1 mm s–1, because electrons collide with each other and with the positive ions in the metal lattice. However, the drift begins in all parts of the wire as soon as the connection is made; it is said that ‘the circuit is completed and a current flows’. The circuit is a complete closed path as the electrons also travel through the battery, then continue on around the circuit again. The filament immediately begins to heat up as soon as the wires are connected to the battery.",
+   "figures": [
+    "5A-F3",
+    "5A-F4",
+    "5A-F5"
+   ],
+   "criteria": [
+    "5A.1",
+    "5A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "5A-E3",
+   "heading": "Conventional current",
+   "text": "Electrons were not discovered until 1897, around 70 years after electric current which by convention was regarded as flowing from positive to negative. This means that when we refer to ‘current’, we mean the conventional current, which is in the opposite direction to the electron flow. In physics, the direction of ‘current’ is usually taken as the direction a positive charge would move and is opposite to the direction that electrons (negative charge) actually move in a metal wire (electron current). The effect the current has (i.e. the energy the current transfers to the load) is the same whether it’s positive (+) or negative (–) charges that move, but it is easiest to remember that ‘current flows from the positive terminal of a battery to the negative terminal’. From now on, when we refer to ‘current’, we mean conventional current, as if the moving charges are positive. Any material in which charges are free to flow is a conductor. Metals contain free electrons, so are good conductors. In certain circumstances, some gases and liquids also act as conductors. In these cases, there are usually positively and negatively charged ions, both free to move. When a battery is connected, the positive charges move to the negative terminal and the negative charges drift the opposite way, to the positive terminal. There are also many materials that have few or no free electrons and do not conduct electricity. These are known as insulators. Some materials conduct partially or under particular conditions and these are known as semiconductors.",
+   "figures": [
+    "5A-F6",
+    "5A-F7"
+   ],
+   "criteria": [
+    "5A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "5A-E4",
+   "heading": "An analogy of electric current",
+   "text": "It is often useful to describe (or ‘model’) something you don’t know about, using its similarities to something familiar. There are conceptual models, which represent a system people don't understand by relating them to concepts the do understand. There are mathematical models which describe a system using mathematical equations; and there are physical models, such as small- or large-scale representations of an object. Of course, there will be similarities and differences in the model compared to the real thing. However, as long as you understand its limits, the model, or ‘analogy’, can be useful to help you understand and even make predictions that can then be tested in the laboratory or even in real life.",
+   "figures": [],
+   "criteria": [
+    "5A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "5A-E5",
+   "heading": "Bicycle chain analogy",
+   "text": "You can think of a simple electric circuit like the chain on a bicycle. Imagine the free electrons are the links in the chain. As soon as the pedals are turned (the battery is connected), every link in the chain begins to move. The wheel axle will start turning instantly, even though it takes some time for an individual link to travel to the axle cog. If any part of a circuit is disconnected, the current stops. This is like when a link in the chain on a bicycle breaks, there is no transfer of energy from the pedals to the axle cog. When you deliberately start and stop a current, you usually use a switch of some sort to disconnect or ‘open’ the circuit. Of course, the bicycle chain model has a lot of differences from the real situation, as well as these useful similarities. Electrons are a lot smaller than the chain links and electrons are free to move in three dimensions, not locked into a chain. Also, the electrical energy carried by each electron is not the same as the kinetic energy of the chain links. Think of it more as a form of potential energy, like a person carrying a muesli bar to use for energy later. Many analogies can be used to model electric circuits. They are useful, but of course none of them are truly like the real circuit.",
+   "figures": [
+    "5A-F10",
+    "5A-F11",
+    "5A-F12"
+   ],
+   "criteria": [
+    "5A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "5A-E6",
+   "heading": "Using diagrams to represent circuits",
+   "text": "Electric circuits can be simple or complex, but they all consist of the same basic components and follow the same principles in their operation. To understand a circuit and analyse how it works, you need to identify its component parts and see how they work together to make the circuit operate. To simplify this, an agreed set of symbols is used in circuit diagrams. These symbols are used instead of pictures, which could show similar components but not be easily recognised. Symbols are also more compact and quicker to draw.",
+   "figures": [
+    "5A-F13",
+    "5A-T1"
+   ],
+   "criteria": [
+    "5A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 13
+   }
+  },
+  {
+   "id": "5A-E7",
+   "heading": "Measuring current",
+   "text": "The energy supplied by a battery causes a movement of charge (i.e. an electric current) around a conducting circuit. The greater the energy supplied by the battery, the greater the current in the circuit, as more electrons flow. To measure current, an ammeter (from ‘amp-meter’) is placed in the circuit, so that the current to be measured runs through it. This position is called in series. You can think of it as a series of links in a chain, where one component follows another all the way around the circuit with no branches or side-tracks. The unit for current is the ampere or amp, (A), for short. One amp is quite a large value of current, so milliamps (mA or 10–3 A) are more often used in laboratory practical work. To remember ‘in series’, think about a television series where one episode follows another.",
+   "figures": [
+    "5A-F14"
+   ],
+   "criteria": [
+    "5A.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "5A-E8",
+   "heading": "Calculating charge from current",
+   "text": "In order to measure charge, a suitable unit is needed. One possibility is to use, as the basic unit, the amount of charge carried by an electron or a proton. However, this charge is so tiny that it would be inconvenient for measuring the charges encountered in the laboratory or in everyday life. In fact, electrons are so tiny (9.1 × 10–31 kg) and have such a small (negative) charge that the unit of charge, the coulomb (C) can be thought of as a large parcel of electrons. The coulomb is defined from the amount of current that flows. The unit of current is the ampere (A): 1 A (1 ampere) = 1 C s–1 (1 coulomb per second) Or, looking at it the other way around, 1 coulomb = the amount of charge passing a point when 1 amp flows for 1 second. Scientists have agreed to use the coulomb, C, as the unit of charge. This is quite a large value of charge, so a microcoulomb (μC, 10–6 C) is often used. Remember, there are 1 million μC in 1 C. How many electrons are needed to make up one coulomb of charge? To answer this, you need to know the size of the charge on an individual electron. This quantity of charge is known as the elementary or electronic charge, as it has long been regarded as the smallest charge that can be found in nature. Some experiments have indicated that smaller charges may exist, but the term ‘elementary charge’ is still used to refer to the charge on an electron. While the electron carries negative charge, protons carry positive charge of the same magnitude. The elementary charge, e, equals 1.6 × 10–19 C. If there are n elementary charges in 1 C, then: n × 1.6 × 10–19 = 1 C Therefore: 1 n= 1 6 10 19 . = 6.25 × 1018 The actual number of electrons in 1 coulomb is 6.25 × 1018. This is a very large number! If the current in a circuit is known, the total charge leaving the battery in a given time interval can be calculated. The electric current at any point in the circuit is usually given the symbol I. An equation can be written as follows:",
+   "figures": [],
+   "criteria": [
+    "5A.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 16
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "5A-F1",
+   "label": "Figure 5A–1",
+   "caption": "This image of atoms in a crystal is the highest-resolution image of atoms captured at that time. It was taken by David Muller at Cornell University and his colleagues in 2021.",
+   "img": null,
+   "important": false,
+   "why": "Photo of atoms (engage); decorative",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "5A-F2",
+   "label": "Figure 5A–2",
+   "caption": "A useful model (not to scale)of the atom showing a nucleus with protons (red), neutrons (blue) and orbiting electrons (green)",
+   "img": "img/5A_fig5A-2.png",
+   "important": true,
+   "why": "Model of the atom: nucleus (protons, neutrons) and orbiting electrons",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "5A-F3",
+   "label": "Figure 5A–3",
+   "caption": "A simple circuit consisting of a battery and a heating coil of high- resistance metal wire. An electric kettle or coffee machine has a circuit similar to this but uses AC electric current from the mains and a switch. An old- fashioned filament globe is also made of high-resistance wire.",
+   "img": "img/5A_fig5A-3.png",
+   "important": true,
+   "why": "Simple circuit: battery and heating coil load",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "5A-F4",
+   "label": "Figure 5A–4",
+   "caption": "Free electrons in a wire (top) move randomly like water molecules in a liquid colliding with each other and with other water molecules not shown here (bottom). The brown spheres represent atoms of the wire, with positive changes due to having lost one or more electrons.",
+   "img": "img/5A_fig5A-4.png",
+   "important": true,
+   "why": "Free electrons moving randomly between fixed positive ions (sea of electrons)",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "5A-F5",
+   "label": "Figure 5A–5",
+   "caption": "Electrons drift towards the positive side of the battery, creating a current. This diagram shows a ‘short circuit’. The wire will soon get very hot, as a large current flows and electrical energy is converted to thermal energy in the wire. The battery also rapidly runs flat. Try to avoid creating short circuits!",
+   "img": "img/5A_fig5A-5.png",
+   "important": true,
+   "why": "Electrons drift towards positive terminal; short circuit",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "5A-F6",
+   "label": "Figure 5A–6",
+   "caption": "Electron current and conventional current, I, flow around a simple circuit containing a battery and a resistive element, in this case an incandescent light globe that converts electrical energy to light (and quite a lot to thermal energy).",
+   "img": "img/5A_fig5A-6.png",
+   "important": true,
+   "why": "Conventional current vs electron current around a circuit",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "5A-F7",
+   "label": "Figure 5A–7",
+   "caption": "When a battery is connected to a liquid (left) or a gas (right) in which ions are free to move, the positive charges move to the negative terminal and the negative charges go the opposite way, to the positive terminal. The ‘current’ is, by definition, taken to be in the direction the positive charges move.",
+   "img": "img/5A_fig5A-7.png",
+   "important": true,
+   "why": "Current in liquids and gases: ions moving both ways",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "5A-F8",
+   "label": "Figure 5A–8",
+   "caption": "Wood-burning stoves are unpopular with neighbours in the city, due to the smoke and ultrafine particles they produce. Some of these particles are so small (less than 2.5 μm) they can penetrate human lungs and enter the bloodstream, causing health problems. An electrostatic precipitator (ESP) has been developed which can sit on top of the chimney. It uses a high-voltage electrode to charge the particles in the flue gas and trap them inside an oppositely charged filter. ESPs have been used in industry for many years but are now being adapted for household use.",
+   "img": null,
+   "important": false,
+   "why": "Wood stove / ESP photos; decorative",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "5A-F9",
+   "label": "Figure 5A–9",
+   "caption": "A bicycle wheel gains kinetic energy from the rider via pedals and the chain",
+   "img": null,
+   "important": false,
+   "why": "Cyclist photo; decorative",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "5A-F10",
+   "label": "Figure 5A–10",
+   "caption": "A bicycle chain analogy for an electric circuit",
+   "img": "img/5A_fig5A-10.png",
+   "important": true,
+   "why": "Bicycle chain analogy labelled (pedals = battery, links = electrons, rear cog = load)",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "5A-F11",
+   "label": "Figure 5A–11",
+   "caption": "An open circuit (left) is as though the bicycle chain broke and came apart (right), so the links (electrons) can no longer move around the circuit.",
+   "img": "img/5A_fig5A-11.png",
+   "important": true,
+   "why": "Open circuit compared to a broken bicycle chain",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "5A-F12",
+   "label": "Figure 5A–12",
+   "caption": "Another analogy: just as the pump in a fountain can cause a flow of water into the air, a cell or battery can cause a movement of charge through a conductor. The two situations are not exactly alike, since an electrical circuit must be complete so the electrons can return to the battery, while water does not need to return to the pump but could flow freely out of the fountain, as long as there is sufficient water in the pool so the pump doesn’t run dry.",
+   "img": "img/5A_fig5A-12.png",
+   "important": false,
+   "why": "Fountain analogy photo with limitations in caption",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "5A-F13",
+   "label": "Figure 5A–13",
+   "caption": "Circuit diagrams follow a universal language, to represent circuit components according to their function and connections in the circuit rather than what they look like. Components may be updated or substituted, as long as they perform the same function.",
+   "img": "img/5A_fig5A-13.png",
+   "important": false,
+   "why": "Complex circuit diagram showing the universal symbol language",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 13
+   }
+  },
+  {
+   "id": "5A-T1",
+   "label": "Table 5A–1",
+   "caption": "Circuit symbols for use in circuit diagrams",
+   "img": "img/5A_table5A-1.png",
+   "important": true,
+   "why": "Full table of circuit symbols (both pages stitched)",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 13
+   }
+  },
+  {
+   "id": "5A-F14",
+   "label": "Figure 5A–14",
+   "caption": "An ammeter measures current in the circuit when placed in series, so all the current flowing must pass through it. The circuit is shown in picture format (left) and as a circuit diagram (right). The circuit diagram will be understood by any scientist regardless of what type of battery, cell or ammeter they have access to.",
+   "img": "img/5A_fig5A-14.png",
+   "important": true,
+   "why": "Ammeter in series: picture and circuit diagram",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 15
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE5A-1",
+   "title": "Circuits",
+   "question": "Construct a circuit diagram for each of the pictured circuits. a Torch b Electric kettle c Home-made toy car",
+   "steps": [
+    "a (circuit diagram: two cells, open switch, filament globe in series; see image)",
+    "b (circuit diagram: AC power supply, switch, resistor (heating element) in series; see image)",
+    "c (circuit diagram: cell, switch, motor in series; see image)"
+   ],
+   "answer": "Circuit diagrams as shown in the solution image",
+   "img": [
+    "img/5A_WE5A-1.png"
+   ],
+   "criteria": [
+    "5A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 14
+   },
+   "note": "Solution is diagrams only; step text describes the textbook diagrams (own wording)."
+  },
+  {
+   "id": "WE5A-2",
+   "title": "Electrical charge from current",
+   "question": "a Calculate the charge in coulombs that passes the positive terminal of the battery in 1 second when there is a current of 0.2 A in the circuit. b How many electrons is this equivalent to?",
+   "steps": [
+    "a Using the formula $Q = It$ with $I = 0.2$ A and $t = 1$ s, you can calculate the charge passing the positive terminal as:",
+    "$Q = It$",
+    "$= 0.2 \\times 1$",
+    "$= 0.2\\ \\text{C}$",
+    "So, 0.2 C of charge passes the positive terminal each second.",
+    "b The number of electrons in 1 C is $6.25 \\times 10^{18}$. If 0.2 C of charge passes by the positive terminal, this is equivalent to:",
+    "$0.2 \\times 6.25 \\times 10^{18} = 1.25 \\times 10^{18}$ electrons"
+   ],
+   "answer": "a 0.2 C; b $1.25\\times10^{18}$ electrons",
+   "img": [
+    "img/5A_WE5A-2.png"
+   ],
+   "criteria": [
+    "5A.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 18
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "5A-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "Name the two heaviest particles of an atomic nucleus and state the charge of each.",
+   "answer": "Proton is positive; neutron is neutral (carries no electrical charge)",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "5A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "5A-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "Name the small, negatively charged component of an atom.",
+   "answer": "Electron",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "5A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "5A-CI1.3",
+   "set": 1,
+   "n": 3,
+   "question": "Complete the following sentence. Positive charge repels ______ charge and attracts ______ charge. It is said that 'like charges ______ and opposite (or unlike) charges ______'",
+   "answer": "Positive charge repels **positive** charge and attracts **negative** charge. It is said that 'like charges **repel** and opposite (or unlike) charges **attract**'.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "5A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "5A-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "What is it that moves when a current flows in a metal wire and how fast do they move?",
+   "answer": "Electrons; each electron travels at approximately $0.1\\ \\text{mm s}^{-1}$",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "5A.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Check-in – Set 2.docx"
+   }
+  },
+  {
+   "id": "5A-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "List three conductors (materials that can conduct electric current) and three insulators (materials that do not conduct electric current). What is the most likely difference between the conductors and insulators at an atomic level?",
+   "answer": "Conductors: Any three metals, e.g. copper, nickel, iron. Insulators: plastic, rubber, wood. Difference: conductors have outer electrons very loosely bound to the atom and able to move freely, whereas insulators do not",
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "5A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Check-in – Set 2.docx"
+   }
+  },
+  {
+   "id": "5A-CI3.1",
+   "set": 3,
+   "n": 1,
+   "question": "Draw the circuit symbols for the following components. a incandescent filament globe b electric motor",
+   "answer": "(symbols shown in answer images)",
+   "kind": "graph",
+   "size": "quick",
+   "criteria": [
+    "5A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Check-in – Set 3.docx"
+   },
+   "answer_img": [
+    "img/5A_CI3.1a_ans.png",
+    "img/5A_CI3.1b_ans.png"
+   ]
+  },
+  {
+   "id": "5A-CI3.2",
+   "set": 3,
+   "n": 2,
+   "question": "Neatly draw a circuit diagram for a circuit in which a toy motor has an LED indicator light that switches on when the motor does. Include a battery and a switch.",
+   "answer": "(circuit diagram shown in answer image)",
+   "kind": "graph",
+   "size": "medium",
+   "criteria": [
+    "5A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Check-in – Set 3.docx"
+   },
+   "answer_img": [
+    "img/5A_CI3.2_ans.png"
+   ]
+  },
+  {
+   "id": "5A-CI4.1",
+   "set": 4,
+   "n": 1,
+   "question": "Why is an ammeter always placed *in series* in a circuit? Hint: what does it measure?",
+   "answer": "An ammeter must be connected in series so that *all* the current in that branch of the circuit passes through the meter, so it all gets counted.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "5A.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Check-in – Set 4.docx"
+   }
+  },
+  {
+   "id": "5A-CI4.2",
+   "set": 4,
+   "n": 2,
+   "question": "Why do ammeters often have more than one red terminal?",
+   "answer": "Different connections are for different scales, catering for different currents. Always do a rough calculation of what you expect; begin with the scale that can measure the largest current if in doubt.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "5A.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Check-in – Set 4.docx"
+   }
+  },
+  {
+   "id": "5A-CI4.3",
+   "set": 4,
+   "n": 3,
+   "question": "Place the ammeter in this circuit so it measures the current. Redraw the circuit diagram to show your solution. Compare your diagram with those of other students. What do you notice? What can you predict about the magnitude of the current in the ammeter, regardless of where placed in the circuit?",
+   "answer": "Any diagram with the ammeter in series will work. It doesn't matter where in the loop you put the ammeter, as long as it has two connections linked so that the current has to flow through it and can't take a different path. Other students may have their ammeters in a different location.",
+   "kind": "graph",
+   "size": "medium",
+   "criteria": [
+    "5A.5",
+    "5A.4"
+   ],
+   "img": [
+    "img/5A_CI4.3.png"
+   ],
+   "src": {
+    "file": "5A Check-in – Set 4.docx"
+   },
+   "answer_img": [
+    "img/5A_CI4.3_ans.png"
+   ]
+  },
+  {
+   "id": "5A-CI5.1",
+   "set": 5,
+   "n": 1,
+   "question": "What is a flow of electric charge called? What unit is it measured in?",
+   "answer": "Current; amperes or amps (A)",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "5A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Check-in – Set 5.docx"
+   }
+  },
+  {
+   "id": "5A-CI5.2",
+   "set": 5,
+   "n": 2,
+   "question": "How many coulombs flow through a given point in 1 second if the current is 3 A?",
+   "answer": "$3\\ \\text{A} = 3\\ \\text{C s}^{-1}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "5A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Check-in – Set 5.docx"
+   }
+  },
+  {
+   "id": "5A-CI5.3",
+   "set": 5,
+   "n": 3,
+   "question": "Calculate the current that flows through a circuit if 24 C of charge pass the positive terminal of the battery in 10 s. How many electrons per second is this?",
+   "answer": "Use $I = \\frac{Q}{t}$ with $Q = 24$ C and $t = 10$ s. $I = \\frac{24}{10} = 2.4$ A. This is equivalent to 2.4 C of charge passing the positive terminal per second. Because the number of electrons in 1 C is $6.25 \\times 10^{18}$, if 2.4 C of charge passes by the positive terminal per second, this is equivalent to $2.4 \\times 6.25 \\times 10^{18} = 1.5 \\times 10^{19}$ electrons passing the positive terminal per second.",
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "5A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Check-in – Set 5.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "5A-SQ1",
+   "n": "1",
+   "question": "Which of the following charges could not exist in nature?",
+   "options": [
+    "A. $3.2\\times10^{-19}$ C",
+    "B. $8.0\\times10^{-19}$ C",
+    "C. $6.0\\times10^{-18}$ C",
+    "D. $1.6\\times10^{-19}$ C"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "practice",
+    "exit"
+   ],
+   "criteria": [
+    "5A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Section questions.docx"
+   }
+  },
+  {
+   "id": "5A-SQ2",
+   "n": "2",
+   "question": "Which one of the following materials is an electrical conductor?",
+   "options": [
+    "A. polythene",
+    "B. rubber",
+    "C. nylon",
+    "D. copper"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "donow",
+    "exit"
+   ],
+   "criteria": [
+    "5A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Section questions.docx"
+   }
+  },
+  {
+   "id": "5A-SQ3",
+   "n": "3",
+   "question": "Which of the following materials is an electrical insulator?",
+   "options": [
+    "A. iron",
+    "B. saltwater",
+    "C. plastic",
+    "D. aluminium"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "donow",
+    "exit"
+   ],
+   "criteria": [
+    "5A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Section questions.docx"
+   }
+  },
+  {
+   "id": "5A-SQ4",
+   "n": "4",
+   "question": "Which of the following best explains what makes up current in a metal wire?",
+   "options": [
+    "A. a flow of positive charges",
+    "B. a flow of negative charges",
+    "C. a flow of metal ions",
+    "D. a flow of energy without any moving matter"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "5A.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Section questions.docx"
+   }
+  },
+  {
+   "id": "5A-SQ5",
+   "n": "5",
+   "question": "The following diagram shows a model of an electric current flowing in a wire. Is the direction of the conventional current flow left or right? Explain your choice.",
+   "answer": "Conventional current would be moving to the right because it flows in the opposite direction to electron flow.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "5A.2"
+   ],
+   "img": [
+    "img/5A_SQ5.png"
+   ],
+   "src": {
+    "file": "5A Section questions.docx"
+   }
+  },
+  {
+   "id": "5A-SQ6",
+   "n": "6",
+   "question": "Copy and complete the following table of components of an atom, giving the correct masses and charges from the list below. positive, negative, neutral, $9.11\\times10^{-31}$ kg, proton, $1.67\\times10^{-27}$ kg. (Table rows: Electron; [blank]; Neutron $1.69\\times10^{-27}$ kg)",
+   "answer": "Electron: $9.11\\times10^{-31}$ kg, Negative; Proton: $1.67\\times10^{-27}$ kg, Positive; Neutron: $1.69\\times10^{-27}$ kg, Neutral",
+   "marks": null,
+   "kind": "recall",
+   "size": "medium",
+   "phase": [
+    "practice",
+    "donow"
+   ],
+   "criteria": [
+    "5A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Section questions.docx"
+   }
+  },
+  {
+   "id": "5A-SQ7",
+   "n": "7",
+   "question": "Match the function to the component in a circuit. Circuit component: 1 Wire; 2 Battery; 3 Load. Function: A To supply electrical energy; B To convert electrical energy to a different form of energy; C To make an electrical connection between components",
+   "answer": "1 C; 2 A; 3 B",
+   "marks": null,
+   "kind": "recall",
+   "size": "quick",
+   "phase": [
+    "practice",
+    "donow"
+   ],
+   "criteria": [
+    "5A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Section questions.docx"
+   }
+  },
+  {
+   "id": "5A-SQ8",
+   "n": "8",
+   "question": "Devise an analogy for electric current that compares electrons to canoeists or kayakers drifting down a river that is flowing gently. a Explain three similarities between this situation and a real electric circuit. b Explain three differences between this situation and a real electric circuit.",
+   "answer": "a Any three of: The canoeists are all travelling in roughly the same direction and they drift around a bit, just like electrons in a complete circuit. The canoeists on the river are higher at the beginning (upstream) hence higher stored energy, and lower at the end (downstream) hence less stored energy. If there are rapids or other obstacles, the canoeists need to negotiate, the canoeists will spend energy passing through them. b Any three of: Electrons don't have paddles; canoeists can just drift with the current but for electrons the positive ion lattice is stationary, and they drift through it. When canoeists get to the end of their trip, they climb out of the canoe onto the bank, whereas electrons find themselves back at the battery being given more electrical energy and continuing around the circuit again. When canoeists drop down a level through rapids or a small waterfall, they often end up going faster – unlike electrons whose average speed (as measured by the current) doesn't change as they pass around the circuit.",
+   "marks": null,
+   "kind": "explain",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "5A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Section questions.docx"
+   }
+  },
+  {
+   "id": "5A-SQ9",
+   "n": "9",
+   "question": "Explain the problem with the following circuit, which is meant to show a hand-held torch.",
+   "answer": "When the switch is closed, the current will not go through the light globe. The switch creates a short circuit.",
+   "marks": null,
+   "kind": "graph",
+   "size": "quick",
+   "phase": [
+    "practice",
+    "exit"
+   ],
+   "criteria": [
+    "5A.4"
+   ],
+   "img": [
+    "img/5A_SQ9.png"
+   ],
+   "src": {
+    "file": "5A Section questions.docx"
+   }
+  },
+  {
+   "id": "5A-SQ10",
+   "n": "10",
+   "question": "Calculate the number of electrons in the following charges. a 1 C b 5 C c 100 C",
+   "answer": "a $6.25\\times10^{18}$ b $5\\times6.25\\times10^{18} = 3.125\\times10^{19}$ or $3.13\\times10^{19}$ c $100\\times6.25\\times10^{18} = 625\\times10^{18} = 6.25\\times10^{20}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice",
+    "youtry"
+   ],
+   "criteria": [
+    "5A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Section questions.docx"
+   },
+   "note": "Suggested responses print b as \"3.13 × 10^18\" (typo); corrected exponent shown."
+  },
+  {
+   "id": "5A-SQ11",
+   "n": "11",
+   "question": "A charge of 100 C flows past a point in a circuit in 25 s. Calculate the current through the circuit.",
+   "answer": "$Q = 100$ C in $t = 25$ s; $I = \\frac{Q}{t} = \\frac{100}{25} = 4$ A",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "5A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Section questions.docx"
+   }
+  },
+  {
+   "id": "5A-SQ12",
+   "n": "12",
+   "question": "An electric heater draws a current of 5 A. Calculate the total charge that flows through the heater in 1 min.",
+   "answer": "$I = 5$ A in $t = 1$ min $= 60$ s; $Q = It = 5\\times60 = 300$ C",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "5A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Section questions.docx"
+   }
+  },
+  {
+   "id": "5A-SQ13",
+   "n": "13",
+   "question": "An ammeter shows a current of 1 A through an appliance. a Calculate the amount of charge that flows through the appliance in 5 min. b How many electrons pass through the appliance in that time?",
+   "answer": "a $t = 5$ min $= 300$ s; $Q = It = 300$ C b Number of electrons $= 300\\times6.25\\times10^{18} = 1.875\\times10^{21} = 1.88\\times10^{21}$ electrons",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice",
+    "youtry"
+   ],
+   "criteria": [
+    "5A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "5A Section questions.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 5A–1 Charge (Q) and current (I)",
+  "total": 15,
+  "file": "5A Worksheet 5A–1 Charge (Q) and current (I).docx",
+  "answers_file": "5A Worksheet 5A–1 Answers.docx",
+  "questions": [
+   {
+    "id": "WS5A-1",
+    "n": "1",
+    "question": "Indicate the direction of conventional and electronic current flow on the following diagram using arrows.",
+    "answer": "Conventional current is from positive to negative terminal. (1 mark) Electronic current is from negative to positive terminal. (1 mark)",
+    "marks": 2,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "wedo"
+    ],
+    "criteria": [
+     "5A.2"
+    ],
+    "img": [
+     "img/5A_WS1.png"
+    ],
+    "src": {
+     "file": "5A Worksheet 5A–1 Charge (Q) and current (I).docx"
+    },
+    "answer_img": [
+     "img/5A_WS1_ans.png"
+    ],
+    "pair_with": null
+   },
+   {
+    "id": "WS5A-2",
+    "n": "2",
+    "question": "Compare a cell to a battery by writing a definition of each.",
+    "answer": "Cell: single source of electrical energy, converts chemical energy to electrical energy (1 mark) Battery: several electric cells connected in series (1 mark)",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "donow"
+    ],
+    "criteria": [
+     "5A.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "5A Worksheet 5A–1 Charge (Q) and current (I).docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS5A-3",
+    "n": "3",
+    "question": "Write the name of the circuit component that matches the symbol in the left-hand column. (6 symbols)",
+    "answer": "Cell; Resistor; LED; Ammeter; Variable resistor; Voltmeter (1/2 mark per answer)",
+    "marks": 3,
+    "kind": "recall",
+    "size": "medium",
+    "phase": [
+     "practice",
+     "donow"
+    ],
+    "criteria": [
+     "5A.4"
+    ],
+    "img": [
+     "img/5A_WS3_1.png",
+     "img/5A_WS3_2.png",
+     "img/5A_WS3_3.png",
+     "img/5A_WS3_4.png",
+     "img/5A_WS3_5.png",
+     "img/5A_WS3_6.png"
+    ],
+    "src": {
+     "file": "5A Worksheet 5A–1 Charge (Q) and current (I).docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS5A-4",
+    "n": "4",
+    "question": "Construct a circuit diagram containing the following circuit components: battery, open switch, filament globe, variable resistor",
+    "answer": "(circuit diagram in answer image; 1/2 mark per correct symbol)",
+    "marks": 2,
+    "kind": "graph",
+    "size": "medium",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "5A.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "5A Worksheet 5A–1 Charge (Q) and current (I).docx"
+    },
+    "answer_img": [
+     "img/5A_WS4_ans.png"
+    ],
+    "pair_with": "WE5A-1"
+   },
+   {
+    "id": "WS5A-5",
+    "n": "5",
+    "question": "Place an ammeter correctly into the circuit below.",
+    "answer": "(ammeter in series, see answer image) (1 mark)",
+    "marks": 1,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "wedo"
+    ],
+    "criteria": [
+     "5A.5"
+    ],
+    "img": [
+     "img/5A_WS5.png"
+    ],
+    "src": {
+     "file": "5A Worksheet 5A–1 Charge (Q) and current (I).docx"
+    },
+    "answer_img": [
+     "img/5A_WS5_ans.png"
+    ],
+    "pair_with": null
+   },
+   {
+    "id": "WS5A-6",
+    "n": "6",
+    "question": "Complete the table below by filling in the correct SI unit for each value in the right-hand column. Charge; Current; Time",
+    "answer": "Charge: coulomb (C); Current: ampere (A); Time: seconds (s) (1 mark for getting all correct)",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "donow",
+     "exit"
+    ],
+    "criteria": [
+     "5A.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "5A Worksheet 5A–1 Charge (Q) and current (I).docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS5A-7",
+    "n": "7",
+    "question": "A current of 0.6 A flows through a circuit in 3 seconds. Calculate the charge through the circuit.",
+    "answer": "$Q = It = 0.6\\times3 = 1.8$ C",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "criteria": [
+     "5A.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "5A Worksheet 5A–1 Charge (Q) and current (I).docx"
+    },
+    "pair_with": "WE5A-2"
+   },
+   {
+    "id": "WS5A-8",
+    "n": "8",
+    "question": "A charge of 0.6 C passes through the positive terminal of a battery in 0.7 s. Calculate the current through the circuit.",
+    "answer": "$I = \\frac{Q}{t} = \\frac{0.6}{0.7} = 0.86$ A",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "criteria": [
+     "5A.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "5A Worksheet 5A–1 Charge (Q) and current (I).docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS5A-9",
+    "n": "9",
+    "question": "A current of 5 A runs through an electrical kettle. a Calculate the amount of charge that runs through the kettle in 2 min. b Calculate the number of electrons this charge is equivalent to.",
+    "answer": "a $Q = It = 5\\times(2\\times60) = 600$ C b $600\\times6.25\\times10^{18} = 3.75\\times10^{21}$ electrons",
+    "marks": 2,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "5A.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "5A Worksheet 5A–1 Charge (Q) and current (I).docx"
+    },
+    "pair_with": "WE5A-2"
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "5A.4"
+   ],
+   "wedo": "WE5A-1",
+   "youtry": [
+    "WS5A-4"
+   ],
+   "note": "Picture to circuit diagram, then build a diagram from a word list"
+  },
+  {
+   "criteria": [
+    "5A.6"
+   ],
+   "wedo": "WE5A-2",
+   "youtry": [
+    "WS5A-7",
+    "WS5A-9"
+   ],
+   "note": "Q = It and electrons per coulomb; WS9 adds minutes to seconds and electron count"
+  },
+  {
+   "criteria": [
+    "5A.5"
+   ],
+   "wedo": "WS5A-5",
+   "youtry": [
+    "5A-CI4.3"
+   ],
+   "origin": "adapted",
+   "note": "No textbook worked example for ammeter placement; use worksheet Q5 as We do, check-in 4.3 as You try"
+  },
+  {
+   "criteria": [
+    "5A.2"
+   ],
+   "wedo": "WS5A-1",
+   "youtry": [
+    "5A-SQ5"
+   ],
+   "origin": "adapted",
+   "note": "Conventional vs electron current direction; no worked example"
+  }
+ ],
+ "skills": [
+  {
+   "id": "5A-SK1",
+   "heading": "Building circuits from circuit diagrams",
+   "text": "Your teacher will help you develop practical skills to build circuits from their diagrams. It is important to use a logical order. Lay out the components in order on the bench, starting from the battery or power source, and follow the circuit diagram in order. Then connect them in order one by one, using insulated metal wires with crocodile clips or banana plugs. Begin at the positive terminal of the battery or power source and work around the complete loop, connecting into one side of the component and then from the other side to the next component until you reach the negative terminal. Check the diagram regularly to avoid mistakes, especially before you turn on the power. Watch closely for the expected effects as you switch on, and if something unexpected occurs, switch off quickly and re-check the circuit. If nothing happens when you expect something to occur, check that you have made good contact – metal to metal – at all the connections and that no wires have loose connections to their clips.",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 19
+   }
+  }
+ ],
+ "pracs": [],
+ "notes": "No practical file in the 5A folder (textbook has Activity 5A–1 Using an ammeter to measure current, p16). WE5A-1 is diagram-only (use the image). Suggested response 10b has an exponent typo (3.13 × 10^18 should be 10^19). Answers to diagram questions are images (answer_img)."
+}

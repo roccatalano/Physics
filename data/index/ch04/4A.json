@@ -1,0 +1,1392 @@
+{
+ "code": "4A",
+ "title": "Nuclear energy and energy–mass equivalence",
+ "chapter": 4,
+ "unit": 1,
+ "aos": 2,
+ "study_design": [
+  "Explain, qualitatively, nuclear energy as energy resulting from the conversion of mass",
+  "Explain fission chain reactions including: the effect of mass and shape on criticality; neutron absorption and moderation"
+ ],
+ "criteria": [
+  "4A.1",
+  "4A.2",
+  "4A.3",
+  "4A.4"
+ ],
+ "glossary": [
+  {
+   "id": "4A-G1",
+   "term": "Nuclear energy",
+   "def": "the energy released during nuclear fission or fusion",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "4A-G2",
+   "term": "Nuclear fission",
+   "def": "the process of splitting a large nucleus to form two smaller, more stable nuclei",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "4A-G3",
+   "term": "Nuclear fusion",
+   "def": "the process of joining together two small nuclei to form a larger, more stable nucleus",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "4A-G4",
+   "term": "Tokamak",
+   "def": "a device that uses a very strong magnetic field to confine plasma in the shape of a torus (a donut-shaped ring)",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "4A-G5",
+   "term": "Chain reaction",
+   "def": "when neutrons, emitted from the fission of one atomic nucleus, initiate further fission in the surrounding atomic nuclei, and so on",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "4A-G6",
+   "term": "Fissile",
+   "def": "elements that are capable of undergoing fission",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "4A-G7",
+   "term": "Non-fissile",
+   "def": "elements that are not capable of undergoing fission",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "4A-G8",
+   "term": "Controlled chain reaction",
+   "def": "for every two or three neutrons released by the fissile nucleus, only one neutron is allowed to strike another fissile nucleus",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "4A-G9",
+   "term": "Moderator",
+   "def": "any material that slows neutrons down",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "4A-G10",
+   "term": "Uncontrolled chain reaction",
+   "def": "every two or three neutrons released by the fissile nucleus are allowed to strike other fissile nuclei. This grows exponentially to produce a massive explosion.",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "4A-G11",
+   "term": "Subcritical",
+   "def": "when the rate of neutron loss is greater than the rate of neutron release by fission",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 13
+   }
+  },
+  {
+   "id": "4A-G12",
+   "term": "Critical mass",
+   "def": "the smallest mass of a fissionable substance that will sustain a controlled chain reaction, when the rate of neutron loss equals the rate of neutron release by fission",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 13
+   }
+  },
+  {
+   "id": "4A-G13",
+   "term": "Supercritical",
+   "def": "when the rate of neutron loss is less than the rate of neutron release by fission",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 13
+   }
+  },
+  {
+   "id": "4A-G14",
+   "term": "Control rods",
+   "def": "rods made of materials that readily absorb neutrons",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "4A-G15",
+   "term": "Enrichment",
+   "def": "increasing the percentage of the fissile isotope of an element in a nuclear fuel",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 17
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F4A-1",
+   "name": "Energy–mass equivalence",
+   "latex": "E = \\Delta m c^2",
+   "where": [
+    {
+     "sym": "E",
+     "meaning": "Energy",
+     "unit": "J"
+    },
+    {
+     "sym": "\\Delta m",
+     "meaning": "Mass (mass difference)",
+     "unit": "kg"
+    },
+    {
+     "sym": "c",
+     "meaning": "Speed of light in a vacuum ($3.0 \\times 10^{8}\\ \\text{m s}^{-1}$)",
+     "unit": "m s^{-1}"
+    }
+   ],
+   "criteria": [
+    "4A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "F4A-2",
+   "name": "Fission of uranium-235 (one route)",
+   "latex": "{}^{235}_{92}\\text{U} + {}^{1}_{0}\\text{n} \\rightarrow {}^{236}_{92}\\text{U} \\rightarrow {}^{141}_{56}\\text{Ba} + {}^{92}_{36}\\text{Kr} + 3\\,{}^{1}_{0}\\text{n} + \\text{energy}",
+   "where": [],
+   "criteria": [
+    "4A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 11
+   },
+   "img": "img/4A_fission-equation.png"
+  }
+ ],
+ "engage": {
+  "heading": "How was E = mc2 received?",
+  "text": "On 27 September 1905, while employed at a patent office in Bern, Switzerland, Albert Einstein (pictured) published the last of four papers he had submitted during that year to the journal Annalen der Physik. The first paper explained the photoelectric effect that eventually won him the Nobel Prize. The second paper gave an explanation of Brownian motion, based on the hypothesis of atoms. The third paper introduced the theory of special relativity.\nIn the fourth paper, Einstein explained the relationship between energy and mass, which we now know as $E = mc^2$. Scientific opinion at the time was that it would be virtually impossible to harness the energy locked up in ordinary matter. Atoms were so small and their nuclei so resistant to being damaged. For example, in the most violent chemical reactions, the nucleus is untouched; it seemed unlikely the energy within could ever be unlocked. More importantly, at the time of Einstein's paper, the neutron – which turned out to be the key to fission reactions – was unknown.\nAlso in 1932, John Cockcroft and Ernest Walton had discovered how to split the lithium atom by bombardment with high-energy protons. The Australian physicist Mark Oliphant had joined the same laboratory and in 1933 started experiments involving energetic collisions of heavy hydrogen (deuterium) nuclei, which led to his discovery of nuclear fusion.\nHowever, it seemed that the very high-energy input needed to split or transmute atoms by these methods prevented any chance of useable energy being released. Rutherford commented at the time:\n'These transformations of the atom are of extraordinary interest to scientists but we cannot control atomic energy to an extent which would be of any value commercially, and I believe we are not likely ever to be able to do so ... Our interest in the matter is purely scientific, and the experiments which are being carried out will help us to a better understanding of the structure of matter.' Ernest Rutherford, 1933\nRutherford was right about the importance of pure research but was wrong about its practical value. In 1934, the Italian born physicist Enrico Fermi and his team bombarded uranium-235 with neutrons, but they were puzzled by the results. Lise Meitner and Otto Frisch reasoned that Fermi's experiment had actually resulted in successfully splitting the uranium nucleus into two, with each part being approximately the same size. Meitner named the process 'fission'.\nThe full practical impacts of Einstein's $E = mc^2$, involving harnessing the energy locked up in ordinary matter, were realised by the end of the 1930s, using fission chain reactions involving neutrons. On 16 July 1945, the first atomic fission bomb (codenamed 'Trinity') using fissile plutonium-239 was exploded on a test site in the Alamogordo Desert of New Mexico, USA. Three weeks later on 6 and 9 August 1945, two atomic bombs ('Little Boy' and 'Fat Man') were dropped on Japan to end World War II. In 1952 the world's first hydrogen fusion bomb was exploded on Elugelab Island, in the Pacific Ocean, resulting in the total vaporisation of the island.\nIn 1956, the first commercial nuclear fission reactor, Calder Hall, was built in Britain for civilian power generation. It was directly connected to a national electrical grid. In 1958, the Scylla fusion reactor created a plasma in a magnetic bottle that reached a temperature of 15 million kelvin and demonstrated the first controlled thermonuclear fusion in a laboratory.",
+  "src": {
+   "file": "Physics12_Ch04.pdf",
+   "page": 4
+  }
+ },
+ "chunks": [
+  {
+   "id": "4A-E1",
+   "heading": "What are fission and fusion?",
+   "text": "We are living on the cusp of a nuclear energy revolution. Albert Einstein's $E = mc^2$ can be used to help us to understand not only how nuclear bombs and nuclear fission power reactors work but also how nuclear fusion powers the Sun and the ~$10^{24}$ stars in the known universe. $E = mc^2$ is also true for chemical reactions, but what is important about nuclear energy is that the strong force and binding energy are some million times larger than chemical bonds.\nNuclear fission is the splitting of a heavy, unstable nucleus into two lighter nuclei. Nuclear fusion is the process where two light nuclei combine together. Both processes release large amounts of energy. The mass of the fragments produced by the fission of a nucleus is less than the sum of the mass of the original nucleus and the initial colliding neutron. This mass difference, $\\Delta m$, results in large amounts of energy being produced: $E = \\Delta mc^2$. In a similar manner, the mass of the final nucleus produced by the fusion of two nuclei is also less than the mass of the original nuclei, and again large amounts of energy are produced: $E = \\Delta mc^2$.\nHumans currently have the ability to make uranium undergo fission explosively in a bomb in about one-billionth of a second, or more slowly in a power reactor over a period of years. Physicists understand how the Sun converts 600 million tonnes of hydrogen per second into helium through nuclear fusion. This local nuclear fusion reactor creates a mass difference of 4.2 million tonnes per second and generates an output of $3.8 \\times 10^{26}$ W.\nThe largest hydrogen bomb tested, the Tsar Bomba, converted hydrogen to helium in a nuclear fusion reaction with a total mass difference of 2.3 kg to produce an explosion equivalent to 50 megatonne of TNT – or as much as 3500 Hiroshima bombs (Figure 4A–2 left).\nThe ultimate goal of nuclear fusion physicists and engineers is to create miniature suns on Earth and unlock controlled nuclear fusion with its promises of almost unlimited, clean and carbon-free energy and no associated long half-life radioactive by-products.\nFigure 4A–2 (right) shows an artist's impression of the world's largest tokamak, the International Thermonuclear Experimental Reactor (ITER). The ITER is a magnetic fusion device being built in France that has been designed to prove the feasibility of nuclear fusion as a large-scale and carbon-free source of energy based on the same fusion processes that power our Sun and the stars. A model of the ITER is shown in Figure 4B–8, and that section has a description of fusion reactors. The artist's impression in Figure 4A–2 shows a ring of glowing deuterium-tritium plasma, surrounded by a vacuum, and being confined in place by the enormously powerful magnetic field of the tokamak. By a combination of squeezing the plasma with very strong magnetic fields, subjecting it to electromagnetic radiation (a bit like a microwave oven), and using accelerators to inject particles, the plasma reaches a temperature of about 150 million degrees Celsius at which fusion takes place. Heat then radiates from the plasma to the tokamak walls, through which water circulates, heats up and produces steam. The steam is fed into turbines which produce electricity in the same way as conventional thermal power stations.\nUp to 2022, no fusion reactor has released more energy than it consumes to produce the required magnetic field and to heat the plasma.",
+   "figures": [],
+   "criteria": [
+    "4A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "4A-E2",
+   "heading": "Mass into energy",
+   "text": "The energy stored in mass according to Einstein's equation $E = \\Delta mc^2$ is enormous because the speed of light, $c$, in a vacuum is $3.0 \\times 10^{8}\\ \\text{m s}^{-1}$, making the value of $c^2 = 9 \\times 10^{16}$. If you could turn every one of the atoms in a paper clip (mass of 1.0 g) into pure energy, leaving no mass whatsoever, the paper clip would yield 21 kilotonnes of TNT. That's approximately the size of the bomb that destroyed Nagasaki in 1945 (Figure 4A–3).\nFor tens of thousands of years, humans have been burning fuels such as wood and coal. This involves rearranging the outer electrons of atoms of carbon and oxygen into more stable combinations. The outer electrons of an atom are bound to the nucleus by the electromagnetic force, and it takes only a few electronvolts to pull an electron out. This is the realm of chemical reactions.\nWhen energy is extracted by using uranium-235 as a fuel in a nuclear reactor, it involves rearranging the nucleons in the uranium nucleus into more stable combinations. The nucleons are held in nuclei by the strong force, and it takes many millions of electronvolts to pull a nucleon out. This is the realm of nuclear reactions. This is reflected in the fact that many millions of times more energy is obtained from a kilogram of uranium than from a kilogram of coal.\nIn both atomic and nuclear 'burning', the release of energy is accompanied by a decrease in mass, according to the equation $E = mc^2$. The central difference between burning uranium and burning coal is that, 'burning' uranium consumes a much larger fraction of the available mass (by a factor of many millions).\nThe mass loss is tiny but can nevertheless be measured: if all of 1.0 kg of uranium-235 were to undergo fission, the mass difference is only 1.0 g (0.1%). The calculated mass difference corresponding to the combustion of 1.0 kg of carbon is an almost imperceptible 0.33 μg.\nTable 4A–1 shows the total energy released by a kilogram of different fuels and the percentage of mass that has been converted to energy.",
+   "figures": [
+    "4A-T1"
+   ],
+   "criteria": [
+    "4A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "4A-E3",
+   "heading": "The role of neutrons",
+   "text": "In 1934, the Italian born physicist Enrico Fermi and his team were trying to produce radioactive isotopes of various elements by using the newly discovered neutron to bombard nuclei. The great advantage of using neutrons is that they are neutral and are not repelled by other particles, whereas electrons are repelled by electrons in the outer shell of atoms, and protons are repelled by other protons in the nucleus.\nFermi reasoned that if they could bombard uranium with neutrons, they should be able to create via beta decay 'transuranic' elements – new elements beyond uranium. However, when they investigated the bombarded uranium samples, they found a cocktail of different radioactive elements, many of which they could not easily identify. It was only later that year that Lise Meitner and Otto Frisch reasoned that Fermi's original experiment had actually resulted in successfully splitting the uranium nucleus into two, with each part being approximately the same size. Because this process was akin to how living cells split themselves in half by 'binary fission', Lise Meitner named the process 'fission'. We now know that uranium-235 nuclei can undergo fission into any of over 40 different pairs of fragments. When a large nucleus like uranium-235 captures an additional neutron, the uranium-235 nucleus is able to absorb the neutron to become (very briefly) uranium-236. The uranium-236 can then undergo fission to form two new nuclei called fission products. The two new nuclei each have approximately half the atomic mass number of the original nucleus. This 'splitting' of the nucleus induced by neutrons is called fission (Figure 4A–6).\nThe following heavy nuclei are also found to have a probability of undergoing fission: uranium-235, plutonium-239 and thorium-232. Any materials that are capable of sustaining a nuclear fission chain reaction after neutron capture are said to be fissile, while those that aren't are said to be non-fissile.\nUranium-235 and plutonium-239 are the fissile nuclides most commonly used in nuclear reactors and for making nuclear weapons. When a uranium-235 or plutonium-239 nucleus absorbs either a slow- or a fast-moving neutron, it becomes unstable and spontaneously undergoes fission. However, it was soon discovered that fission is more likely to be induced by a slow-moving neutron.\nWhen uraninium-235 undergoes fission, the average mass number of the fragments is about 118, but very few fragments are found near that average. Experiments show that it is more likely that they break into unequal fragments with mass numbers about 95 and 137 . This graphs shows, for example that nearly 10% of the fragments have a mass number of 95 and nearly 10% have a mass number of 137 (Figure 4A–7).\nThe experiments also showed that as well as the larger fission fragments, approximately 2.5 neutrons on average and 200 MeV of energy were released every time a uranium-235 nucleus was split. This led physicists to believe that the excess neutrons could initiate a self-sustaining chain reaction.",
+   "figures": [
+    "4A-F6",
+    "4A-F7"
+   ],
+   "criteria": [
+    "4A.1",
+    "4A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "4A-E4",
+   "heading": "Chain reactions",
+   "text": "When neutrons that are emitted from the fission of a fissile nucleus like uranium-235 initiate further fissions in the immediate surrounding uranium-235 nuclei, it is possible to generate a completely self-sustaining chain reaction. If controlled, this chain reaction can lead to stable nuclear reactors to generate electrical power, or if triggered to be uncontrolled lead to massively explosive nuclear weapons.\nThe reaction shown below is only one of the large number of possible fission routes available for a uranium-235 nucleus. The uranium-235 nucleus is able to absorb the neutron to become (very briefly) uranium-236. The uranium-236 then undergoes fission to form two new nuclei called fission products:\n$${}^{235}_{92}\\text{U} + {}^{1}_{0}\\text{n} \\rightarrow {}^{236}_{92}\\text{U} \\rightarrow {}^{141}_{56}\\text{Ba} + {}^{92}_{36}\\text{Kr} + 3\\,{}^{1}_{0}\\text{n} + \\text{energy}$$\nThe fission process exemplified by this equation is very important and forms the basis for our understanding of nuclear reactors and fission-based nuclear weapons. On the right-hand side of the nuclear equation, apart from the fission products barium-141 and krypton-92, there are three neutrons and energy. For each uranium atom splitting like this, the typical energy released from the mass difference ($E = \\Delta mc^2$) of the products compared to the original nucleus is approximately 200 MeV. It is important to note that only a very small proportion of the original mass of the nuclei becomes available as useable energy – typically 0.1%.\nThe one incident neutron (on the left-hand side of the nuclear equation) has not only split the uranium-235 nucleus and created large quantities of energy from the mass difference of the products compared to the initial nucleus, it has also generated a further three neutrons to allow the whole process to become self-sustaining. As noted above, this is the basis of what is called a chain reaction.",
+   "figures": [],
+   "criteria": [
+    "4A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "4A-E5",
+   "heading": "Controlling chain reactions",
+   "text": "However, as a result of the fission reaction, these extra neutrons are travelling very fast and are not suitable to create a controlled chain reaction. If they can be slowed down enough to initiate further reactions, then a chain reaction can be sustained. This is the role of moderators. Moderators absorb some of the kinetic energy of fast neutrons, resulting in 'slow' neutrons, also described as 'thermal' neutrons. These slow neutrons have a very much higher probability than a fast neutron does of being absorbed and causing fission. Typical moderators used are water, graphite and beryllium. Moderators are essential if the chain reaction needs to be sustained (e.g. in a nuclear reactor).\nThe fission reaction in the explosion of a nuclear weapon, once initiated, is allowed to continue. For example, if two of the extra neutrons created by the fission of uranium-235 induce two further fission reactions, which in turn each generate a further two or three neutrons and fission reactions (and so on), a situation of exponential growth is created. This is known as an uncontrolled chain reaction, which is the basis of nuclear weapons (Figure 4A–9).\nAside from the massive potential damage of the initial explosion of a nuclear weapon, there is also the legacy of all the radioactive fragments created by the explosion that are dispersed throughout the environment. Some of the dangerous radioisotopes from atmospheric nuclear tests conducted in the 1950s to the 1970s are still present in the world's atmosphere, land, lakes and oceans.\nHowever, if the chain reaction is strictly controlled so that on average only one extra neutron is allowed to initiate one further fission reaction each time, then a controlled chain reaction is created. This is the basis for nuclear reactors used in generating electricity, research and radioactive isotope generation. The first nuclear reactor was constructed by Enrico Fermi in 1942.",
+   "figures": [
+    "4A-F8",
+    "4A-F9"
+   ],
+   "criteria": [
+    "4A.2",
+    "4A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "4A-E6",
+   "heading": "Fermi's pile",
+   "text": "On 2 December 1942, the world's first self-sustaining nuclear chain reaction took place in a squash court underneath the University of Chicago's football stadium. This first atomic 'pile' (which we now call a nuclear reactor) was carefully built by Enrico Fermi using lumps of natural uranium oxide and very pure graphite (as the moderator) arranged into a special critical geometry (Figure 4A–10). The pile was controlled by cadmium rods (control rods), which could be lowered quickly into the pile, absorbing neutrons and stopping the fission process. Fermi's pile had an initial power output of only 0.6 watts (W) but demonstrated the feasibility of creating controlled nuclear energy for the first time. It also introduced the possibility of creating an atom bomb.",
+   "figures": [],
+   "criteria": [
+    "4A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 13
+   }
+  },
+  {
+   "id": "4A-E7",
+   "heading": "Critical mass",
+   "text": "Over a vast number of different uranium-235 fission reactions, the average number of neutrons emitted is approximately 2.5 neutrons per reaction. By varying the parameters of the size, shape and purity of the uranium-235 fuel – and by controlling the neutrons available for further reactions through geometry, neutron speed and neutron absorption – it is possible to organise the following three conditions: a subcritical mass, a critical mass and a supercritical mass.\nFor example, if the geometric shape is a sphere, then a large sphere of almost pure U-235 can create a large nuclear bomb, but a small sphere of pure U-235 won't necessarily create a small nuclear bomb. The reason relates to the ratio of the volume, $V$, to the surface area, $A$. If you double the radius, $r$, you can have eight times the volume ($V \\propto r^3$) of U-235 but only have four times the surface area ($A \\propto r^2$) for neutrons to escape from (see Figure 4A–11). This means a larger sphere has a greater chance of using the neutrons produced by fission to initiate further fusions. A critical mass is achieved when the rate of neutron creation in the sphere is matched by the rate of neutron loss.\nIf some neutrons can be reflected back into the critical mass by using neutron reflectors (such as beryllium), then the mass goes supercritical more readily (see the Case study below).\nA fatal critical mass accident – Louis Slotin (1910–46): As part of the Manhattan Project that created the atomic bombs that ended World War II, Louis Slotin performed experiments with uranium and plutonium cores to determine their critical mass values. After World War II, Slotin continued his research. On 21 May 1946, Slotin's screwdriver slipped, allowing the top beryllium reflector to fall down and accidentally began a fission reaction, which released a burst of lethal neutron radiation. At the time, the scientists in the room observed the blue glow of air ionisation and felt a heat wave. Slotin was rushed to the hospital and died nine days later on 30 May.",
+   "figures": [
+    "4A-F11"
+   ],
+   "criteria": [
+    "4A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 13
+   }
+  },
+  {
+   "id": "4A-E8",
+   "heading": "Control rods",
+   "text": "When designing nuclear reactors for power generation or for scientific research (e.g. Australia's Open Pool Australian Lightwater (OPAL) reactor), criticality is controlled by the geometrical arrangement of the fuel rods, by the type of moderators used to slow down neutrons and by the type of control rod used to absorb excess neutrons. Control rods include chemical elements such as boron, cadmium, silver, hafnium or indium that all readily absorb large numbers of neutrons.",
+   "figures": [],
+   "criteria": [
+    "4A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "4A-E9",
+   "heading": "Nuclear fission reactors for electricity generation",
+   "text": "Figure 4A–13 shows how these components are arranged in a typical 1000 MW thermal nuclear reactor used to generate electricity. The purpose of the reactor core is to use the heat generated by the nuclear fission of the U-235 to create superheated steam, which turns the turbines to generate the electricity. In contrast, the equivalent heat could be generated by burning 9000 tonnes of coal per day in a 1000 MW coal-fired power station, which pumps 27 000 tonnes of CO$_2$ per day into the atmosphere.\nReactor core: where the fission takes place to produce thermal energy. It contains the uranium fuel rods, control rods, moderator and coolant. A containment structure of concrete and steel surrounds the reactor to prevent radiation and material escaping, in case of rupture of the reactor vessel.\nUranium fuel rods: consist of a number of thin tubes full of pellets of enriched uranium-235. Fission occurs inside the fuel rods, releasing the nuclear energy as heat and radiation.\nModerator: used to slow down the neutrons released during fission. Slow-moving, so-called 'thermal', neutrons are more likely than fast neutrons to cause a uranium-235 nucleus to undergo fission. Water is often used as a moderator.\nControl rods: Cadmium–boron control rods absorb neutrons. This allows the chain reaction to be controlled. When the reactor is just starting, the rods are raised to allow the number of nuclei undergoing fission each second to increase until the nuclear reactor is running in a controlled critical state. In the case of an emergency, the control rods and extra safety control rods drop fully into the core, absorbing most of the neutrons, and shut down the chain reaction. See Figure 4A–14.\nCooling circuits: this design has three separate circuits. The first two extract the thermal energy to drive the turbines and generators. The third removes the waste thermal energy, to the atmosphere in this case with water vapour and clouds of condensed water.\nThe domed cylindrical structures on the left in Figure 4A–15 are reactor containment buildings, while the giant 'pepperpot' towers on the right are cooling towers. Warm water from the cooling circuits, bringing heat from the turbine, is sprayed at the bottom of the tower and cools by evaporation of some of the water. The water vapour rises and condenses into the clouds shown emerging at the top. The only outputs of the cooling towers are water and heat. In this way, the excess thermal energy is transferred to the atmosphere. (Note that coal-fired and other thermal power stations relying on steam turbines to turn generators also need to have cooling towers like these, or cooling ponds.)",
+   "figures": [
+    "4A-F13",
+    "4A-F14"
+   ],
+   "criteria": [
+    "4A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "4A-E10",
+   "heading": "Uranium enrichment",
+   "text": "Uranium mining of high-grade ore bodies typically requires 1 tonne of ore to produce 3 kg of uranium oxide. The processed uranium oxide extracted consists mainly of two isotopes: uranium-235 (0.7%) and uranium-238 (99.3%). It is the uranium-235 isotope which undergoes fission most readily, releasing thermal energy. Processed uranium often undergoes enrichment before it is used as a nuclear fuel; the ratio of the isotopes is changed to include a greater concentration of uranium-235. As isotopes of any element have the same chemical properties, we cannot use chemical methods to separate them. Any separation must involve physical differences. In the case of uranium-235 and uranium-238, there is a very small difference in mass and this can be used to separate the isotopes. Three commonly used enrichment methods involve electromagnetic separation, ultracentrifuges and gaseous-diffusion techniques.\nNuclear weapons and thermal power stations require different enrichment factors. Typically, weapons-grade material has to be enriched to more than 90% pure uranium-235, while most conventional nuclear reactors use uranium fuel enriched to 3.5–4.5% uranium-235. Reactor-grade uranium fuel is therefore not suitable for constructing nuclear weapons.\nUranium-235 found in the ground is usually subcritical.\nFor thermal nuclear reactors (those that use slow or thermal neutrons), the situation is slightly more complex. It is vital that the reactor is critical (but not supercritical) and that the control of criticality remains well within human reaction times. A nuclear reactor is designed to maintain criticality and avoid meltdowns due to supercritical episodes.\nHowever, when designing nuclear weapons, it is important to have the component pieces of the fissile nuclear materials in a subcritical condition and only to bring them into a supercritical mass when the weapon explodes.\nThis was the case with the original U-235 bomb Little Boy that was dropped on Hiroshima to end World War II in 1945. This was designed as a 'gun type' nuclear weapon. A chemical explosive fired the hollow uranium 'bullet', a subcritical mass of 39 kg of enriched uranium-235, into the cylinder 'target' mass – a subcritical mass of 25 kg of enriched uranium-235. The two masses together suddenly formed a supercritical mass that exploded in less than a millisecond. Less than a kilogram of the uranium-235 underwent nuclear fission and of this mass, only 0.7 g was transformed into several forms of energy, mostly thermal energy as a result of the kinetic energy of the fission products, and radiation. The blast yield was equivalent to 15 kt of TNT.",
+   "figures": [
+    "4A-F16"
+   ],
+   "criteria": [
+    "4A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 17
+   }
+  },
+  {
+   "id": "4A-E11",
+   "heading": "Plutonium bombs",
+   "text": "The design of the 'Fat Man' plutonium-239 bomb dropped on Nagasaki used a different method to achieve a supercritical state. The bomb contained many small subcritical pieces of plutonium-239 and used a spherical chemical implosion technique to force these subcritical masses together to make a single supercritical mass (Figure 4A–17).\nThe result was the fission of about 1 kilogram of the 6.19 kg of plutonium-239 in the core. Of this mass, only 0.97 g was transformed into several forms of energy, mostly thermal energy as a result of the kinetic energy of the fission products, and radiation. The detonation released the energy equivalent to the detonation of 21 kt of TNT or 88 TJ.",
+   "figures": [
+    "4A-F17"
+   ],
+   "criteria": [
+    "4A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 18
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "4A-T1",
+   "label": "Table 4A–1",
+   "caption": "Energy released by 1 kg of matter. * Equivalent mass of coal needed to release the same energy as released by 1 kg of the fuel using the mass-to-energy conversion percentages given. For example, 210 million kilograms of coal are needed to release the same amount of energy as 1 kg of hydrogen fusing to helium in the Sun at 0.71% mass-to-energy conversion.",
+   "img": "img/4A_table4A-1.png",
+   "important": true,
+   "why": "Compares % mass converted and energy per kg for coal, fission, fusion, annihilation; needed for Check-in Set 1 Q3",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "4A-F6",
+   "label": "Figure 4A–6",
+   "caption": "The fission of uranium-235, a step in a chain reaction. An incoming neutron strikes the uranium-235 nucleus, which briefly becomes a uranium-236 nucleus that splits apart, and two new nuclei ('fragments') are formed, releasing energy and two or three neutrons. The fragments vary in mass number, as shown in Figure 4A–7.",
+   "img": "img/4A_fig4A-6.png",
+   "important": true,
+   "why": "Clean step-by-step picture of neutron-induced fission of U-235",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "4A-F7",
+   "label": "Figure 4A–7",
+   "caption": "The percentage yield of uranium-235 fragments versus mass number. Note the logarithmic scale on the y-axis.",
+   "img": "img/4A_fig4A-7.png",
+   "important": false,
+   "why": "Shows fission fragments are unequal (A ≈ 95 and 137)",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "4A-F8",
+   "label": "Figure 4A–8",
+   "caption": "A typical fission chain reaction initiated by a neutron coming in from the left and hitting a fissionable nucleus. This releases two or three more neutrons to hit other fissionable nuclei, and so it continues.",
+   "img": "img/4A_fig4A-8.png",
+   "important": true,
+   "why": "Simple chain reaction diagram (also a Cambridge PowerPoint figure)",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "4A-F9",
+   "label": "Figure 4A–9",
+   "caption": "An uncontrolled chain reaction. A uranium-235 atom – when hit by an incident neutron – very briefly becomes a uranium-236 nucleus, which then splits and initially releases three neutrons (this can be called one generation), which can then split other uranium nuclei, releasing two or three neutrons and so on. Eighty generations in a few microseconds produces a vast explosion, releasing the energy equivalent of tens of thousands of tonnes of TNT.",
+   "img": "img/4A_fig4A-9.png",
+   "important": true,
+   "why": "Exponential growth of an uncontrolled chain reaction, with fragment isotopes labelled",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "4A-F11",
+   "label": "Figure 4A–11",
+   "caption": "Different size spheres can create different states of criticality. Other geometric shapes and different percentages of fissile U-235 will have different critical configurations; for example, the thin cylindrical tubes used in nuclear reactors.",
+   "img": "img/4A_fig4A-11.png",
+   "important": true,
+   "why": "Subcritical, critical and supercritical spheres side by side (key 4A.3 visual)",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 14
+   }
+  },
+  {
+   "id": "4A-F13",
+   "label": "Figure 4A–13",
+   "caption": "Diagram of the layout of a typical 1000 MW thermal nuclear power station used to generate electricity. This is a pressurised water reactor design. The primary coolant is water kept under very high pressure to keep it liquid is the primary coolant. This water is also the moderator.",
+   "img": "img/4A_fig4A-13.png",
+   "important": true,
+   "why": "Labelled power station with component descriptions (fuel rods, moderator, control rods, cooling)",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 15
+   }
+  },
+  {
+   "id": "4A-F14",
+   "label": "Figure 4A–14",
+   "caption": "How control rods regulate the power level in a nuclear fission reactor core. This is a pressurised water reactor. Control rods absorb neutrons coming out of the fuel rods so they don't cause chain reactions in neighbouring rods, and the fuel becomes subcritical.",
+   "img": "img/4A_fig4A-14.png",
+   "important": true,
+   "why": "Full power / low power / shut down: control rod positions (also a Cambridge PowerPoint figure)",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 16
+   }
+  },
+  {
+   "id": "4A-F16",
+   "label": "Figure 4A–16",
+   "caption": "Schematic diagram of the 'Little Boy' uranium bomb dropped on Hiroshima. The bomb contained 64 kg of enriched uranium-235 with an overall enrichment factor of 80%.",
+   "img": "img/4A_fig4A-16.png",
+   "important": true,
+   "why": "Gun-type design: two subcritical masses forced together",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 17
+   }
+  },
+  {
+   "id": "4A-F17",
+   "label": "Figure 4A–17",
+   "caption": "A spherical fission bomb involves a large number of charges that are detonated simultaneously to compress numerous separate pieces of plutonium (each less than a critical mass) into a small ball that exceeds the critical mass. A shell of the metal beryllium reflects outgoing neutrons back into the core of the bomb. This type of bomb was dropped on Nagasaki.",
+   "img": "img/4A_fig4A-17.png",
+   "important": true,
+   "why": "Implosion design reaching supercriticality",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 18
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE4A-1",
+   "title": "Mass conversion",
+   "question": "Mass into energy: U-235 versus C-12\nWhen 1.0 kg of uranium-235 undergoes fission, the mass difference is 1.0 g.\nWhen 1.0 kg of carbon-12 combusts, the mass difference is 0.33 μg.\nUse $E = mc^2$ to compare the amount energy released by the fission of U-235 and the combustion of C-12 and determine how many kilograms of coal would release the same amount of energy as 1.0 kg of U-235.",
+   "steps": [
+    "Use $E = mc^2$",
+    "Where: $E$ = Energy (J), $m$ = Mass (kg), $c$ = Speed of light in a vacuum ($3.0 \\times 10^{8}\\ \\text{m s}^{-1}$)",
+    "For U-235, $m$ = 1.0 g:",
+    "$E = mc^2 = (1.0 \\times 10^{-3})(3.0 \\times 10^{8})^2 = 9.0 \\times 10^{13}\\ \\text{J}$",
+    "For C-12, $m$ = 0.33 μg:",
+    "$E = mc^2 = (3.3 \\times 10^{-10})(3.0 \\times 10^{8})^2 = 3.0 \\times 10^{7}\\ \\text{J}$",
+    "Energy released: $\\dfrac{\\text{U-235}}{\\text{C-12}} = \\dfrac{9.0 \\times 10^{13}}{3 \\times 10^{7}} = 3.0 \\times 10^{6}$",
+    "Therefore, the combustion of $3.0 \\times 10^{6}$ kg of coal releases the same amount of energy as the fissioning of 1.0 kg of uranium-235."
+   ],
+   "answer": "$3.0 \\times 10^{6}$ kg of coal",
+   "img": [
+    "img/4A_WE4A-1.png"
+   ],
+   "criteria": [
+    "4A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "WE4A-2",
+   "title": "Energy of a nuclear bomb",
+   "question": "The bomb dropped on Hiroshima transformed 0.7 g of mass into several forms of energy, mostly thermal energy as a result of the kinetic energy of the fission products and radiation. 1 kt (kilotonne) of TNT releases 4.18 TJ (terajoules) of energy. Use $c = 3 \\times 10^{8}\\ \\text{m s}^{-1}$ for the speed of light.\na Calculate the amount of energy released by this bomb in TJ.\nb Calculate the equivalent TNT amount, in kt, produced by the explosion of the 'Little Boy' bomb.",
+   "steps": [
+    "a $E = \\Delta mc^2$",
+    "$= (7 \\times 10^{-4})(9 \\times 10^{16})$",
+    "$= 63 \\times 10^{12}$",
+    "$= 63$ TJ",
+    "b $\\dfrac{63}{4.18} = 15.1$ kt"
+   ],
+   "answer": "a 63 TJ; b 15.1 kt",
+   "img": [
+    "img/4A_WE4A-2.png"
+   ],
+   "criteria": [
+    "4A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 18
+   }
+  },
+  {
+   "id": "WE4A-3",
+   "title": "4A Skills: Nuclear fission reaction equations",
+   "question": "The following fission reaction is one of many possible uranium-235 fission reactions:\n$${}^{235}_{92}\\text{U} + {}^{1}_{0}\\text{n} \\rightarrow {}^{140}_{?}\\text{Xe} + {}^{94}_{38}\\text{Sr} + ?\\,{}^{1}_{0}\\text{n} + \\text{energy}$$\na What are the names of the isotopes of the two fission fragments produced by this fission reaction?\nb Determine the number of protons in the element Xe and the number of neutrons emitted by the fissioning of uranium-235\nc Write the complete equation.",
+   "steps": [
+    "a If you are not familiar with the symbols used for the elements of the isotopes, then use a periodic table (see Chapter 3, page 86 or page 551 of Appendix 2) to look them up. Note that the number after the element (indicating which isotope it is) is the number of nucleons.",
+    "xenon-140",
+    "strontium-94",
+    "b Use simple arithmetic to equate the protons and nucleons.",
+    "Equate the proton numbers (bottom line) on LHS and RHS:",
+    "$92 + 0 = ? + 38 + 0$",
+    "$? = 92 - 38 = 54$",
+    "Equate the nucleon numbers (top line) on LHS and RHS:",
+    "$235 + 1 = 140 + 94 + ?(1)$",
+    "$? = 236 - 234 = 2$",
+    "c Substitute the proton number and the number of neutrons created into the nuclear fission equation:",
+    "${}^{235}_{92}\\text{U} + {}^{1}_{0}\\text{n} \\rightarrow {}^{140}_{54}\\text{Xe} + {}^{94}_{38}\\text{Sr} + 2\\,{}^{1}_{0}\\text{n} + \\text{energy}$"
+   ],
+   "answer": "a xenon-140, strontium-94; b 54 protons, 2 neutrons; c ${}^{235}_{92}\\text{U} + {}^{1}_{0}\\text{n} \\rightarrow {}^{140}_{54}\\text{Xe} + {}^{94}_{38}\\text{Sr} + 2\\,{}^{1}_{0}\\text{n} + \\text{energy}$",
+   "img": [
+    "img/4A_SK1.png"
+   ],
+   "criteria": [
+    "4A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 19
+   },
+   "note": "This is the 4A Skills box (not numbered as a worked example in the textbook); indexed here because it is a full worked solution."
+  }
+ ],
+ "checkins": [
+  {
+   "id": "4A-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "What is nuclear fission? Give an example of how nuclear fission is used.",
+   "answer": "Nuclear fission is the process of splitting a large nucleus to form two smaller, more stable nuclei. Examples are nuclear fission reactors or nuclear fission bombs.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "4A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 9
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4A-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "What is nuclear fusion? Give an example of where nuclear fusion occurs.",
+   "answer": "Nuclear fusion is the process of joining together two small nuclei to form a larger, more stable nucleus. Examples include nuclear fusion which occurs in the Sun and stars, or nuclear fusion used in a nuclear weapon.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "4A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 9
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4A-CI1.3a",
+   "set": 1,
+   "n": "3a",
+   "question": "Use Table 4A–1 to answer the following questions.\na How much mass from an original 1.0 kg mass of uranium-235 has been converted into other forms of energy via nuclear fission in a bomb?",
+   "answer": "1 g. Nuclear fission converts 0.1% of mass into other forms of energy:\n0.1% $\\times$ 1000 g = 1 g",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "4A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 9
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   },
+   "img": [
+    "img/4A_table4A-1.png"
+   ]
+  },
+  {
+   "id": "4A-CI1.3b",
+   "set": 1,
+   "n": "3b",
+   "question": "Use Table 4A–1. b Approximately how many kilograms of coal would need to be burned to release the same amount of energy as the fissioning of a 1.0 kg mass of uranium-235 in a bomb?",
+   "answer": "$3.0 \\times 10^{6}$ kg of coal\n1 kg of coal releases $3.0 \\times 10^{7}$ J\n1 kg of U-235 releases $9.0 \\times 10^{13}$ J\nNumber of kg coal = $\\frac{9.0 \\times 10^{13}}{3.0 \\times 10^{6}}$\n= $3.0 \\times 10^{6}$ kg of coal",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "4A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 9
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   },
+   "img": [
+    "img/4A_table4A-1.png"
+   ],
+   "note": "Suggested response divides by 3.0 × 10^6 in the working line (should be 3.0 × 10^7); final answer is correct. Kept verbatim."
+  },
+  {
+   "id": "4A-CI1.3c",
+   "set": 1,
+   "n": "3c",
+   "question": "Use Table 4A–1. c What is the ratio of mass-to-energy conversion for nuclear fusion compared to nuclear fission?",
+   "answer": "7.1 $\\left(\\frac{0.71\\%}{0.1\\%}\\right)$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "4A.1",
+    "4B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 9
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   },
+   "img": [
+    "img/4A_table4A-1.png"
+   ]
+  },
+  {
+   "id": "4A-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "What is a fissile material?",
+   "answer": "A fissile is one capable of undergoing fission after neutron capture.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "4A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 13
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4A-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "What is a chain reaction?",
+   "answer": "A chain reaction occurs when neutrons emitted from the fission of one fissile nucleus initiate further fission in the surrounding fissile nuclei, and so on.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "4A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 13
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4A-CI2.3",
+   "set": 2,
+   "n": 3,
+   "question": "What is the role of a moderator in nuclear reactors? Give an example of a moderator.",
+   "answer": "The role of a moderator is to slow fast neutrons down so that they have a higher probability of initiating further fission reactions. Examples of moderators include water, graphite and beryllium.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "4A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 13
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4A-CI2.4",
+   "set": 2,
+   "n": 4,
+   "question": "What is a controlled chain reaction?",
+   "answer": "A controlled chain reaction ensures that for every 2 or 3 neutrons released by fission of a fissile nucleus; on average only one of those neutrons is allowed to strike another fissile nucleus.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "4A.2",
+    "4A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 13
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4A-CI3.1",
+   "set": 3,
+   "n": 1,
+   "question": "What is meant by a critical mass of a fissile material?",
+   "answer": "A critical mass is the smallest mass of a fissionable substance that will sustain a controlled chain reaction.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "4A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 19
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "4A-CI3.2",
+   "set": 3,
+   "n": 2,
+   "question": "How does the geometric shape affect the criticality of fissile material; for example, a sphere versus a flat thin square with the same amount of fissile material?",
+   "answer": "A sphere that is critical (has enough neutrons to sustain a controlled chain reaction in the fissile material) when shaped into a flat thin square will become subcritical as it no longer has enough neutrons to sustain a controlled chain reaction in the fissile material as too many neutrons will be lost to the surrounds.",
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "4A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 19
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   },
+   "answer_img": [
+    "img/4A_CI3-2_answer.png"
+   ]
+  },
+  {
+   "id": "4A-CI3.3",
+   "set": 3,
+   "n": 3,
+   "question": "How do you design just two sub critical uranium-235 enriched fissile masses to become a supercritical fissile mass in a nuclear weapon?",
+   "answer": "In a nuclear weapon, a conventional explosive is usually used at the appropriate time to force together the two subcritical uranium-235 fissile masses to create a supercritical fissile mass.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "4A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 19
+   },
+   "answer_src": {
+    "file": "Chapter 4 Suggested responses.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "4A-SQ1",
+   "n": "1",
+   "question": "Which one of the following best explains the process of fission?",
+   "options": [
+    "A. the joining of light nuclei to create a more stable nucleus like helium",
+    "B. the joining of light nuclei to create a more stable nucleus like uranium",
+    "C. the splitting of a heavy nucleus like uranium into two medium-sized nuclei",
+    "D. the creation of transuranic nuclei by bombarding uranium-238 with neutrons"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "4A-SQ2",
+   "n": "2",
+   "question": "A fissile nucleus is",
+   "options": [
+    "A. a nucleus that can undergo fusion.",
+    "B. a nucleus that can undergo fission.",
+    "C. a nucleus that emits radioactivity.",
+    "D. none of the above."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4A.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "4A-SQ3",
+   "n": "3",
+   "question": "What is critical mass?",
+   "options": [
+    "A. the amount of nuclear material needed for a reaction to continue on its own",
+    "B. the amount of nuclear material needed for a reaction to happen at all",
+    "C. the amount of nuclear material needed for a reaction to stop on its own",
+    "D. none of the above"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "4A-SQ4",
+   "n": "4",
+   "question": "Which one of the following best describes the process of enrichment of uranium ore?",
+   "options": [
+    "A. increasing the percentage of uranium-235 in the ore",
+    "B. increasing the percentage of uranium-238 in the ore",
+    "C. enriching the uranium-235 by changing it into plutonium-236",
+    "D. enriching the uranium-238 by changing it into plutonium-239"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "4A-SQ5a",
+   "n": "5a",
+   "question": "In the equation $E = \\Delta mc^2$, what does the term $\\Delta m$ refer to for a nuclear fission reaction?",
+   "answer": "$\\Delta m$ is the mass difference between the final mass of the products of a nuclear fission reaction and the initial mass of the fissile nucleus before the fission reaction.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "4A-SQ5b",
+   "n": "5b",
+   "question": "Calculate the energy released in joules if $\\Delta m$ = 0.5 g for a nuclear fission of a uranium-235 in a nuclear explosion.",
+   "answer": "$E = \\Delta mc^2$\n$= (5.0 \\times 10^{-4})(3.0 \\times 10^{8})^2$\n$= 4.5 \\times 10^{13}$ J",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "youtry",
+    "exit"
+   ],
+   "criteria": [
+    "4A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "4A-SQ6",
+   "n": "6",
+   "question": "The nuclear equation below shows the fission reaction of uranium-235.\n$${}^{235}_{92}\\text{U} + {}^{1}_{0}\\text{n} \\rightarrow {}^{141}_{56}\\text{Ba} + {}^{92}_{X}\\text{Kr} + Y\\,{}^{1}_{0}\\text{n} + \\text{energy}$$\nDetermine the numerical values of $X$ (protons in krypton) and $Y$ (number of neutrons emitted) by the fission reaction of uranium-235.",
+   "answer": "Equating proton numbers (bottom line) on LHS and RHS\n92 + 0 = 56 + $X$ + 0\n$X$ = 92 – 56 = 36\nEquating nucleon numbers (top line) on LHS and RHS\n235 + 1 = 141 + 92 + $Y$(1)\n$Y$ = 236 – 233 = 3",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "4A.2"
+   ],
+   "img": [
+    "img/4A_SQ6.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "4A-SQ7a",
+   "n": "7a",
+   "question": "Explain the role of control rods and moderators in a nuclear power reactor.",
+   "answer": "Control rods absorb neutrons. This are slowly removed from the core when the reactor is starting up until the neutron flux exactly at 1. This allows the chain reaction to be controlled. In the case of an emergency, extra safety control rods drop fully into the core, absorbing most of the neutrons, and completely shut down the chain reaction.\nA moderator is used to slow down the neutrons released during fission. Slow moving, so called 'thermal', neutrons are more likely to fission a uranium-235 nucleus than fast neutrons.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "4A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "4A-SQ7b",
+   "n": "7b",
+   "question": "Give an example of the type of material that can be used as a control rod and as a moderator.",
+   "answer": "Cadmium boron rods are often used a control rods. Water is often used as a moderator.",
+   "marks": null,
+   "kind": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "4A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "4A-SQ8",
+   "n": "8",
+   "question": "Explain why a large spherical mass of weapons-grade uranium-235 may be able to sustain a chain reaction, whereas the same mass, spread into a flat sheet, cannot.",
+   "answer": "The sphere of uranium-235 may be able to sustain a chain reaction if the volume-to-surface-area ratio is high enough for it to become a critical mass. A flat sheet of weapons-grade material cannot sustain a chain reaction, as a flat sheet has a very low volume-to-surface-area ratio and will not become a critical mass. It is easier for the neutrons to escape a flat sheet without hitting uranium-235 atoms.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "4A.3"
+   ],
+   "img": [
+    "img/4A_SQ8.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "4A-SQ9a",
+   "n": "9a",
+   "question": "What were the names of the isotopes used in the nuclear bombs dropped on Hiroshima and Nagasaki?",
+   "answer": "Hiroshima bomb: uranium-235\nNagasaki bomb: plutonium-239",
+   "marks": null,
+   "kind": "recall",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "4A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 20
+   }
+  },
+  {
+   "id": "4A-SQ9b",
+   "n": "9b",
+   "question": "How was criticality obtained in each of the nuclear bombs dropped on Hiroshima and Nagasaki?",
+   "answer": "Hiroshima bomb: gun barrel design forcing two subcritical uranium-235 masses together to become supercritical.\nNagasaki bomb: implosion design forcing multiple subcritical plutonium-239 masses together to become supercritical.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "4A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 20
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 4A–1 Nuclear energy & energy–mass equivalence",
+  "total": 20,
+  "file": "4A Worksheet 4A–1 Nuclear energy & energy–mass equivalence.docx",
+  "answers_file": "4A Worksheet 4A–1 Answers.docx",
+  "questions": [
+   {
+    "id": "WS4A-1",
+    "n": "1",
+    "question": "What is nuclear fission?",
+    "answer": "Nuclear fission is the process of splitting a large fissile nucleus to form two smaller, more stable nuclei.",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "donow"
+    ],
+    "criteria": [
+     "4A.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "4A Worksheet 4A–1 Nuclear energy & energy–mass equivalence.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS4A-2",
+    "n": "2",
+    "question": "What is nuclear fusion?",
+    "answer": "Nuclear fusion is the process of joining together two small nuclei to form a larger, more stable nucleus.",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "donow"
+    ],
+    "criteria": [
+     "4A.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "4A Worksheet 4A–1 Nuclear energy & energy–mass equivalence.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS4A-3",
+    "n": "3",
+    "question": "What would be the total energy output in joules (J) if every one of the atoms in 1.0 g of matter could be converted to pure energy? Use $E = \\Delta mc^2$ and $c = 3.0 \\times 10^{8}\\ \\text{m s}^{-1}$.",
+    "answer": "The total energy output in joules (J) if every one of the atoms in 1.0 g of matter could be converted to pure energy would be $9.0 \\times 10^{13}$ J.\nUse $E = \\Delta mc^2$:\n$(1.0 \\times 10^{-3})(3.0 \\times 10^{8})^2 = 9.0 \\times 10^{13}$ J",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "4A.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "4A Worksheet 4A–1 Nuclear energy & energy–mass equivalence.docx"
+    },
+    "pair_with": "WE4A-1"
+   },
+   {
+    "id": "WS4A-4",
+    "n": "4",
+    "question": "Who first used the term 'nuclear fission' and is considered the forgotten woman of nuclear physics?",
+    "answer": "Lise Meitner first used the term 'nuclear fission' and is considered the forgotten woman of nuclear physics.",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "criteria": [
+     "4A.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "4A Worksheet 4A–1 Nuclear energy & energy–mass equivalence.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS4A-5a",
+    "n": "5a",
+    "question": "The diagram below shows a schematic representation of the fission of a uranium-235 nucleus.\na Explain, using $E = \\Delta mc^2$, how the fission of a uranium-235 nucleus produces energy.",
+    "answer": "The fission of a uranium-235 nucleus produces energy because the mass of the fission fragments produced is less than the initial mass of the incoming neutron and the uranium-235 nucleus. The mass difference, $\\Delta m$, is substituted into $E = \\Delta mc^2$.",
+    "marks": 3,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "wedo"
+    ],
+    "criteria": [
+     "4A.1"
+    ],
+    "img": [
+     "img/4A_WS5.png"
+    ],
+    "src": {
+     "file": "4A Worksheet 4A–1 Nuclear energy & energy–mass equivalence.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS4A-5b",
+    "n": "5b",
+    "question": "(Same diagram: fission of a uranium-235 nucleus.)\nb Explain why the production of extra neutrons is an important feature for sustaining nuclear fission.",
+    "answer": "The production of extra neutrons is an important feature for sustaining a nuclear fission reaction as it allows for a chain reaction to take place with surrounding fissile nuclei.",
+    "marks": 3,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "4A.2"
+    ],
+    "img": [
+     "img/4A_WS5.png"
+    ],
+    "src": {
+     "file": "4A Worksheet 4A–1 Nuclear energy & energy–mass equivalence.docx"
+    },
+    "pair_with": "WS4A-5a"
+   },
+   {
+    "id": "WS4A-5c",
+    "n": "5c",
+    "question": "(Same diagram: fission of a uranium-235 nucleus.)\nc Explain why the extra neutrons generated by the splitting of a uranium-235 nucleus need to be 'moderated' by water or graphite.",
+    "answer": "The extra neutrons generated by the splitting of a uranium-235 nucleus need to be 'moderated' or slowed down by water or graphite as they are travelling too fast to sustain a chain reaction.",
+    "marks": 2,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "wedo"
+    ],
+    "criteria": [
+     "4A.4"
+    ],
+    "img": [
+     "img/4A_WS5.png"
+    ],
+    "src": {
+     "file": "4A Worksheet 4A–1 Nuclear energy & energy–mass equivalence.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS4A-6",
+    "n": "6",
+    "question": "Explain what is meant by the term 'critical mass'.",
+    "answer": "The critical mass is the smallest, often spherical mass of a fissionable substance that will sustain a controlled chain reaction, when the rate of neutron loss equals the rate of neutron released by the fission process.",
+    "marks": 2,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "criteria": [
+     "4A.3"
+    ],
+    "img": [],
+    "src": {
+     "file": "4A Worksheet 4A–1 Nuclear energy & energy–mass equivalence.docx"
+    },
+    "pair_with": "4A-CI3.2"
+   },
+   {
+    "id": "WS4A-7",
+    "n": "7",
+    "question": "Explain the role of control rods in nuclear reactors designed to generate electric power.",
+    "answer": "The role of control rods in nuclear reactors designed to generate electric power is to absorb neutrons. This allows the chain reaction to be controlled. When the reactor is just starting, the rods are raised to allow the number of nuclei undergoing fission each second to increase until the nuclear reactor is running in a controlled critical state. In the case of an emergency, the control rods and extra safety control rods drop fully into the core, absorbing most of the neutrons and completely shutting down the chain reaction.",
+    "marks": 3,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "4A.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "4A Worksheet 4A–1 Nuclear energy & energy–mass equivalence.docx"
+    },
+    "pair_with": "WS4A-5c"
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "4A.1"
+   ],
+   "wedo": "WE4A-1",
+   "youtry": [
+    "WS4A-3"
+   ],
+   "note": "E = Δmc² with a mass in grams converted to kg; WS3 is the direct analogue (1.0 g fully converted)."
+  },
+  {
+   "criteria": [
+    "4A.1"
+   ],
+   "wedo": "WE4A-2",
+   "youtry": [
+    "4A-SQ5b"
+   ],
+   "note": "Δm (g) to energy then a unit conversion; SQ5b repeats the Δm in grams step."
+  },
+  {
+   "criteria": [
+    "4A.2"
+   ],
+   "wedo": "WE4A-3",
+   "youtry": [
+    "4A-SQ6"
+   ],
+   "note": "4A Skills box: balancing proton and nucleon numbers in a fission equation; SQ6 is the identical skill (find X and Y)."
+  },
+  {
+   "criteria": [
+    "4A.1",
+    "4A.2"
+   ],
+   "wedo": "WS4A-5a",
+   "youtry": [
+    "WS4A-5b"
+   ],
+   "origin": "adapted",
+   "note": "No worked example for the qualitative explanation; model 5a from the answer, students do 5b (same diagram)."
+  },
+  {
+   "criteria": [
+    "4A.4"
+   ],
+   "wedo": "WS4A-5c",
+   "youtry": [
+    "WS4A-7",
+    "4A-SQ7b"
+   ],
+   "origin": "adapted",
+   "note": "Moderators modelled from the 5c answer; students explain control rods (WS7) and name materials (SQ7b)."
+  },
+  {
+   "criteria": [
+    "4A.3"
+   ],
+   "wedo": "4A-CI3.2",
+   "youtry": [
+    "WS4A-6",
+    "4A-SQ8"
+   ],
+   "origin": "adapted",
+   "note": "No worksheet question on shape. Check-in Set 3 Q2 (sphere vs flat square; answer has a diagram) is modelled, then SQ8 is the same idea and WS6 defines critical mass."
+  }
+ ],
+ "skills": [
+  {
+   "id": "4A-SK1",
+   "heading": "4A Skills: Nuclear fission reaction equations",
+   "text": "See worked example WE4A-3 (verbatim question and solution).",
+   "src": {
+    "file": "Physics12_Ch04.pdf",
+    "page": 19
+   }
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P4A-1",
+   "title": "Practical 4A–1 Nuclear fission simulation",
+   "file": "4A Practical 4A–1 Nuclear fission simulation.docx",
+   "aim": "To use an online simulation of nuclear fission to understand the process and what factors affect its rate, and how it can be controlled in nuclear reactors."
+  }
+ ],
+ "powerpoint_figures": [
+  "4A PowerPoint Figure 4A–8.pptx",
+  "4A PowerPoint Figure 4A–14.pptx"
+ ],
+ "notes": "Pages are PDF pages of Physics12_Ch04.pdf (PDF page = book page − 147). Engage text kept verbatim (it says 'Also in 1932' without an earlier 1932 event). 'further fusions' in Critical mass is a textbook typo for fissions (verbatim). Photos (4A–1 to 4A–5, 4A–10, 4A–12, 4A–15) not cropped. WE4A-3 is the 4A Skills box. 4A.3 has no worked example or worksheet question on shape: We do uses Check-in 3.2 (adapted). CI1.3b suggested response has a working-line typo (÷ 3.0×10^6 instead of 3.0×10^7). SQ7a answer has grammar slips ('This are', 'used a control rods'), kept verbatim."
+}

@@ -1,0 +1,850 @@
+{
+ "code": "2B",
+ "title": "Thermal energy, electromagnetic radiation and global warming",
+ "chapter": 2,
+ "unit": 1,
+ "aos": 1,
+ "study_design": [
+  "Calculate the peak wavelength of the re-radiated electromagnetic radiation using Wien’s Law: $\\lambda_{max}T$ = constant",
+  "Compare the total energy across the electromagnetic spectrum emitted by objects at different temperatures",
+  "Apply concepts of energy transfer, energy transformation, temperature change and change of state to climate change and global warming"
+ ],
+ "criteria": [
+  "2B.1",
+  "2B.2",
+  "2B.3",
+  "2B.4"
+ ],
+ "glossary": [
+  {
+   "id": "2B-G1",
+   "term": "Blackbody",
+   "def": "a theoretical object that perfectly absorbs all radiation falling on it",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "2B-G2",
+   "term": "Wien’s law",
+   "def": "an equation that relates the peak wavelength emitted and the temperature of an ideal blackbody",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "2B-G3",
+   "term": "Climate",
+   "def": "the long-term weather patterns or average weather in an area, typically over a period of 30 years",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "2B-G4",
+   "term": "IPCC",
+   "def": "Intergovernmental Panel on Climate Change",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 28
+   }
+  },
+  {
+   "id": "2B-G5",
+   "term": "Atmospheric window",
+   "def": "the range of wavelengths of the electromagnetic spectrum that experience little to no absorption by atmospheric gases",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 28
+   }
+  },
+  {
+   "id": "2B-G6",
+   "term": "Methane (CH$_4$)",
+   "def": "a gas that occurs in relatively small quantities in the atmosphere that contributes a large amount to back radiation; it is the main component of natural gas and commonly produced by cattle",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 28
+   }
+  },
+  {
+   "id": "2B-G7",
+   "term": "Carbon dioxide (CO$_2$)",
+   "def": "a common gas in the atmosphere that contributes to back radiation; it is produced by many chemical processes especially combustion and is absorbed by photosynthetic plants and microorganisms",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 28
+   }
+  },
+  {
+   "id": "2B-G8",
+   "term": "Greenhouse gas",
+   "def": "a term used to classify gases that absorb and emit radiation in the infrared range",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 28
+   }
+  },
+  {
+   "id": "2B-G9",
+   "term": "Back radiation",
+   "def": "the amount of radiation emitted from the atmosphere back towards Earth’s surface",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 28
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F2B-1",
+   "name": "Wien’s law",
+   "latex": "\\lambda_{max}T = b",
+   "where": [
+    {
+     "sym": "\\lambda_{max}",
+     "meaning": "Peak wavelength emitted by the blackbody",
+     "unit": "m"
+    },
+    {
+     "sym": "T",
+     "meaning": "Temperature of the blackbody",
+     "unit": "K"
+    },
+    {
+     "sym": "b",
+     "meaning": "A constant, $2.898 \\times 10^{-3}$ m K (0.002898 m K)",
+     "unit": "m K"
+    }
+   ],
+   "criteria": [
+    "2B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 24
+   }
+  }
+ ],
+ "engage": {
+  "heading": "Horticultural greenhouses",
+  "text": "A traditional gardener’s greenhouse is a small garden shed made mainly of glass or clear plastic. It can keep plants warm on sunny days even if it is very cold.\nThe glass of the greenhouse allows light of visible and near infrared wavelengths to pass through. The energy of this light is converted into thermal energy, warming the interior. The re-radiation from the warmed contents of the greenhouse gives rise to re-radiated long-wavelength infrared, which cannot pass easily through the glass (or plastic) and is trapped, causing further warming. Energy losses by convection can be minimised by keeping the windows closed and conduction through the glass can also be reduced by double glazing.\nIn very cold areas when temperatures might dip below freezing at night, a heater can be left on to prevent frost damage to plants.",
+  "src": {
+   "file": "Physics12_Ch02.pdf",
+   "page": 22
+  }
+ },
+ "chunks": [
+  {
+   "id": "2B-E1",
+   "heading": "Solar radiation and the temperature of Earth",
+   "text": "The surface of Earth is almost entirely warmed by electromagnetic energy from the Sun. A total of $1.73 \\times 10^{17}$ watts (W) shines on our planet all the time; this is more than 10 000 times the power needs of its inhabitants. (Remember that power is a measure of energy per second.) To understand how this solar energy affects our planet, we need to understand what makes up the spectrum of solar radiation. A simplified diagram of this spectrum is shown in Figure 2B–1.\n\nOne feature that can be seen from the graph is that the Sun’s surface can be modelled as a nearly ideal blackbody radiator.",
+   "figures": [
+    "2B-F1"
+   ],
+   "criteria": [
+    "2B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "2B-E2",
+   "heading": "Blackbody radiators, blackbody radiation",
+   "text": "All objects above 0 K will emit electromagnetic radiation. The energy comes from the internal thermal energy of the object. However, some bodies (e.g. ones with matt black surfaces) emit radiation more efficiently than others (such as one with a shiny white or metallic surface). When an object emits all of the frequencies produced in it by its thermal energy with maximum efficiency, it is described as a blackbody, and the radiation it produces is called blackbody radiation. Note that blackbodies also absorb all frequencies of radiation that fall on it. The blackbody radiation emission curves for objects at different temperatures are shown in Figure 2B–2.\n\nThe shape of these curves varies with temperature, and two blackbodies at the same temperature will have the same shaped curve, even if they are made of different materials.The total emitted power by a blackbody is the total area under the emission intensity vs wavelength curve. As we can see in Figure 2B–2, the total power across the electromagnetic spectrum emitted by an object increases with temperature of the object. Also, since the shape of any curve doesn’t depend on the material, we can estimate the object’s temperature from its shape. The peak wavelength is related to the temperature by Wien’s law, outlined in the next box.",
+   "figures": [
+    "2B-F2"
+   ],
+   "criteria": [
+    "2B.1",
+    "2B.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "2B-E3",
+   "heading": "Wien’s law",
+   "text": "This means that you can also estimate the temperature (or total emitted energy) of distant objects (modelled as blackbodies) by observing their peak wavelength. Using this modelling for the surface of the Sun, which approximates closely to a blackbody and has a peak wavelength 524.7 nm, gives a surface temperature of the Sun as 5778 K or 5505°C. Wien’s law is routinely used to estimate the effective temperature of visible stars, and in other applications such as scanning thermometers to measure human forehead temperatures.",
+   "figures": [],
+   "criteria": [
+    "2B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "2B-E4",
+   "heading": "Blackbody emission of the Sun and Earth",
+   "text": "As well as receiving radiation from the Sun, Earth radiates energy into space, as it is an object with a temperature greater than 0 K. Modelling Earth as a blackbody with a temperature of 15°C gives the radiation intensity curve against wavelength as shown in Figure 2B–4, along with the corresponding data for the Sun, scaled down by a factor of $10^6$.\n\nLooking at the curves in Figure 2B–4, you can see that it is clear the total radiated power (given by the area under the curve) increases sharply as the temperature increases and the wavelength shortens. From the graph, Earth clearly emits much less radiation energy than the Sun and the wavelengths of Earth’s emissions are all much longer, located in the infrared region of the electromagnetic spectrum. This is an example of how blackbody models can be useful, as it allows for comparisons of temperature, energy emitted and peak wavelength to be easily made between different bodies.",
+   "figures": [
+    "2B-F4"
+   ],
+   "criteria": [
+    "2B.2",
+    "2B.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 25
+   }
+  },
+  {
+   "id": "2B-E5",
+   "heading": "Understanding global warming and climate change",
+   "text": "Our lives on Earth depend on an equilibrium between the energy received from the Sun and the energy that Earth reflects and radiates back into space. If this equilibrium is disturbed, the planet either warms or cools. At present the planet is undergoing global warming, as shown in Figure 2B–5; the data used in the graph is from NASA (National Aeronautics and Space Administration).\n\nSuch global warming, even of only one or two degrees, causes significant changes in the climate – the local, regional and global average weather patterns over Earth’s surface. These changes can include land, sea and air temperature increases, higher sea levels, loss of ice from glaciers and Arctic and, Antarctic ice caps, and more frequent extreme weather events like cyclones, heatwaves, bushfires, droughts and floods. Patterns of rainfall can also shift, making land less suitable (or more suitable) for agriculture and animal habitats. Sea level rises would make some lower lying parts of the planet uninhabitable; for example islands like the Maldives and delta communities such as the Nile and in Bangladesh.",
+   "figures": [
+    "2B-F5"
+   ],
+   "criteria": [
+    "2B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "2B-E6",
+   "heading": "Earth’s energy budget",
+   "text": "‘Budget’ is used here in the sense of a reckoning of inputs (incoming energy) and outputs (outgoing energy). Almost all the energy in Earth’s climate system comes from solar radiation (a tiny amount comes from Earth’s interior). Figure 2B–6, published by NASA in 2009 and based on 10 years of data, outlines what happens to the incoming solar radiation and the radiation emitted and reflected by Earth.\n\nOn average, Earth receives energy at a rate of 340 W m$^{-2}$ from the Sun. Of this, about 100 W m$^{-2}$ is reflected straight back into space by clouds, dust, aerosols and Earth’s surface (particularly ice, snow and desert areas). The rest (about 240 W m$^{-2}$) is absorbed directly by the atmosphere and the surface, where it is converted to thermal energy. As well as receiving this radiation energy directly, the atmosphere also receives energy by convection, evaporation and infrared radiation from Earth’s surface.\n\nEarth radiates an almost equal amount of infrared radiation back into space, but a small residual amount – about 0.8 W m$^{-2}$ according to a recent IPCC report – contributes to global warming. Most of this is stored as increased thermal energy in the oceans. This residual has been growing, according to research done by NASA. Because the Earth–atmosphere system is out of balance like this, Earth’s temperature will increase so as to restore the balance, since an increased temperature will increase heat loss though all the processes available.\n\nEarth’s infrared emissions are quite complex. The surface radiates about 400 W m$^{-2}$, of which about 40 W m$^{-2}$ lie in the atmospheric window and escapes to space. However, most of it is absorbed by the atmosphere, particularly by the ‘greenhouse’ gases like water vapour (H$_2$O), methane (CH$_4$) and carbon dioxide (CO$_2$). These gases then re-radiate energy, resulting in the large back radiation shown. As the percentage of greenhouse gases in the atmosphere increases, this back radiation will also increase. This will further increase the residual energy and consequently increase global warming.",
+   "figures": [
+    "2B-F6"
+   ],
+   "criteria": [
+    "2B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 27
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "2B-F1",
+   "label": "Figure 2B–1",
+   "caption": "Solar radiation spectrum, showing how much power is radiated at different wavelengths. The red and yellow regions together are the the power reaching the top of the atmosphere, while the red regions represent the power at ground level. The black curve is the power emitted at different wavelengths calculated for a theoretical ideal black body at a temperature of 5778 K, this is the same kind of curve as in Figure 2B–2.",
+   "img": "img/2B_fig2B-1.png",
+   "important": true,
+   "why": "Sun as near-ideal blackbody; UV/visible/IR bands",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "2B-F2",
+   "label": "Figure 2B–2",
+   "caption": "Blackbody radiation curves of radiation emission intensity by wavelength for different temperatures in kelvin",
+   "img": "img/2B_fig2B-2.png",
+   "important": true,
+   "why": "Core graph: peak shifts left and area grows as T rises",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "2B-F4",
+   "label": "Figure 2B–4",
+   "caption": "Blackbody emission of the Sun and Earth, with the Sun's radiation intensity scaled down to a millionth of its actual value relative to Earth.",
+   "img": "img/2B_fig2B-4.png",
+   "important": true,
+   "why": "Compare Sun and Earth peaks and areas",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 25
+   }
+  },
+  {
+   "id": "2B-F5",
+   "label": "Figure 2B–5",
+   "caption": "Mean global temperature anomaly from 1880 to 2020. The anomaly (deviation from what is considered normal) is measured as the difference in mean global temperature for each year compared to the calculated 1951–1980 mean global temperature, which is selected as the baseline, labelled 0.0 on the graph. Up to1940 global temperatures were fractionally below the baseline, and from about 1970 they have been rising and in 2016 and 2020 were 1°C higher than the baseline.",
+   "img": "img/2B_fig2B-5.png",
+   "important": true,
+   "why": "Evidence of global warming",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "2B-F6",
+   "label": "Figure 2B–6",
+   "caption": "Earth’s energy budget, calculated by NASA in 2009, based on the means of 10 years of data. The units are watts per square metre of the Earth's surface, i.e. power per square metre, or energy per second per square metre.",
+   "img": "img/2B_fig2B-6.png",
+   "important": true,
+   "why": "Energy budget: reflection, absorption, back radiation, atmospheric window",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 27
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE2B-1",
+   "title": "Peak wavelength of a human",
+   "question": "The human body can be modelled as a blackbody with a temperature of 310 K. What region of the electromagnetic spectrum would the peak wavelength of its emitted radiation be located in?",
+   "steps": [
+    "Using Wien’s law:",
+    "$\\lambda_{max} = \\dfrac{b}{T}$",
+    "$= \\dfrac{0.002\\,898}{310}$",
+    "$= 9.35 \\times 10^{-6}$ m",
+    "This is in the infrared region of the electromagnetic spectrum."
+   ],
+   "answer": "$9.35 \\times 10^{-6}$ m, infrared",
+   "img": [],
+   "criteria": [
+    "2B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "WE2B-2",
+   "title": "Peak wavelength emitted by Earth",
+   "question": "What is the peak wavelength emitted by Earth modelled as a 15°C blackbody?",
+   "steps": [
+    "Converting Celsius (15°C) to kelvin gives you 288 K. Now, using Wien’s law:",
+    "$\\lambda_{max} = \\dfrac{b}{T}$",
+    "$= \\dfrac{0.002\\,898}{288}$",
+    "$= 1.01 \\times 10^{-5}$ m"
+   ],
+   "answer": "$1.01 \\times 10^{-5}$ m",
+   "img": [],
+   "criteria": [
+    "2B.2",
+    "2A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 26
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "2B-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "What is the relationship between the peak wavelength of a blackbody radiator and its temperature in kelvin?",
+   "answer": "$\\lambda_{max} = \\frac{b}{T}$, where $b = 0.002898$",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "2B.2"
+   ],
+   "src": {
+    "file": "2B Check-in – Set 1.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  },
+  {
+   "id": "2B-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "What two changes happen to the spectrum of a blackbody as its temperature increases?",
+   "answer": "The peak wavelength decreases and the total radiated energy (the area under the spectrum graph) increases markedly.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "2B.1",
+    "2B.3"
+   ],
+   "src": {
+    "file": "2B Check-in – Set 1.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  },
+  {
+   "id": "2B-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "How many W m$^{-2}$ of Earth's surface infrared radiation finds its way into space without being absorbed by the atmosphere?",
+   "answer": "About 40 W m$^{-2}$",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "2B.4"
+   ],
+   "src": {
+    "file": "2B Check-in – Set 2.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  },
+  {
+   "id": "2B-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "According to the IPCC, what is the approximate residual amount of energy currently contributing to global warming?",
+   "answer": "About 0.8 W m$^{-2}$",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "2B.4"
+   ],
+   "src": {
+    "file": "2B Check-in – Set 2.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  },
+  {
+   "id": "2B-CI2.3",
+   "set": 2,
+   "n": 3,
+   "question": "What role do the gases CO$_2$, CH$_4$ and H$_2$O play in Earth's infrared radiation?",
+   "answer": "These gases are strong absorbers of Earth’s infrared radiation and re-radiate much of it back to Earth’s surface.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "2B.4"
+   ],
+   "src": {
+    "file": "2B Check-in – Set 2.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   },
+   "phase": [
+    "donow",
+    "exit"
+   ]
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "2B-SQ1",
+   "n": "1",
+   "question": "A key characteristic of a blackbody is that",
+   "options": [
+    "A. it has a dark-coloured surface.",
+    "B. it absorbs all radiation frequencies falling on it.",
+    "C. it has a temperature above 0 K.",
+    "D. its peak radiation increases with its temperature."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "2B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "2B Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2B-SQ2",
+   "n": "2",
+   "question": "Wien’s law states that",
+   "options": [
+    "A. the peak wavelength of a blackbody is inversely proportional to its Celsius temperature.",
+    "B. the peak wavelength of a blackbody is directly proportional to its kelvin temperature.",
+    "C. the peak wavelength of a blackbody is directly proportional to its Celsius temperature.",
+    "D. the peak wavelength of a blackbody is inversely proportional to its kelvin temperature."
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "2B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "2B Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2B-SQ3",
+   "n": "3",
+   "question": "Use the following blackbody radiation curves to answer Questions 3 and 4.\nWhich temperature curve has the highest peak frequency value?",
+   "options": [
+    "A. $T$ = 5500 K",
+    "B. $T$ = 5000 K",
+    "C. $T$ = 4000 K",
+    "D. $T$ = 3500 K"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "2B.2",
+    "2B.3"
+   ],
+   "img": [
+    "img/2B_SQ3.png"
+   ],
+   "src": {
+    "file": "2B Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2B-SQ4",
+   "n": "4",
+   "question": "Use the following blackbody radiation curves to answer Questions 3 and 4.\nWhich of the five graphs has the greatest total energy emission?",
+   "options": [
+    "A. $T$ = 5500 K",
+    "B. $T$ = 5000 K",
+    "C. $T$ = 4000 K",
+    "D. $T$ = 3500 K"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "wedo",
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "2B.3"
+   ],
+   "img": [
+    "img/2B_SQ3.png"
+   ],
+   "src": {
+    "file": "2B Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2B-SQ5a",
+   "n": "5a",
+   "question": "Earth can be modelled as a blackbody with a temperature of 20°C.\na Use Wien's law to estimate the peak wavelength emitted from Earth.",
+   "options": [],
+   "answer": "20°C = 293 K; now use $\\lambda_{max} = \\frac{0.0029}{T}$ = 9.9 µm",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "youtry",
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "2B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "2B Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2B-SQ5b",
+   "n": "5b",
+   "question": "Earth can be modelled as a blackbody with a temperature of 20°C.\nb Identify the region of the electromagnetic spectrum of this peak wavelength.",
+   "options": [],
+   "answer": "Deep in the infrared",
+   "marks": null,
+   "kind": "recall",
+   "size": "quick",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "2B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "2B Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  },
+  {
+   "id": "2B-SQ6",
+   "n": "6",
+   "question": "Outline the role that ‘greenhouse’ gases (such as H$_2$O, CH$_4$ and CO$_2$) play in Earth’s infrared emissions.",
+   "options": [],
+   "answer": "Earth’s surface radiates out about 400 W m$^{-2}$, of which about 10% finds a ‘window’ through the atmosphere and escapes to space. 90% of these infrared radiations are absorbed by the atmosphere (particularly by greenhouse gases like H$_2$O, CH$_4$ and CO$_2$) and then re-radiated back towards the surface.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "2B.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "2B Section questions.docx",
+    "answer_file": "Chapter 2 Suggested responses.pdf"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 2B–1 Thermal energy and electromagnetic radiation",
+  "total": 17,
+  "questions": [
+   {
+    "id": "WS2B-1",
+    "n": "1",
+    "question": "Match the term with its description. (5 marks)\nTerms: i. Atmospheric window; ii. Back radiation; iii. Blackbody; iv. Climate; v. Greenhouse gases; vi. IPCC; vii. Methane; viii. Water vapour; ix. Wien's law; x. Peak wavelength\nDescriptions: a. the long-term average weather pattern in an area; b. gases that strongly absorb and emit infrared radiation in the atmosphere; c. re-radiation from atmospheric infrared radiation; d. the relation between peak wavelength and temperature of an ideal blackbody; e. an object that emits and absorbs all wavelengths perfectly; f. H$_2$0 in its gaseous phase; an important greenhouse gas; g. the range of infrared wavelength at which there is little atmospheric absorption; h. in a radiation spectrum (a graph of power intensity vs wavelength), the wavelength with the highest value for power intensity; i. a gas with formula CH$_4$ that strongly absorbs infrared radiation; j. Intergovernmental Panel on Climate Change",
+    "answer": "i–g (Note: these wavelengths readily escape through the atmosphere to space); ii–c; iii–e; iv–a; v–b (Note: these gases absorb IR and re-radiate IR back to Earth); vi–j; vii–i; viii–f; ix–d (Note: Wien's Law is $\\lambda_{max}T = 2.989 \\times 10^{-3}$ m K); x–h (Note: this is $\\lambda_{max}$ in the blackbody spectrum)",
+    "marks": 5,
+    "kind": "recall",
+    "size": "long",
+    "phase": [
+     "keyidea",
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "2B.1",
+     "2B.2",
+     "2B.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "2B Worksheet 2B–1 Thermal energy and electromagnetic radiation.docx",
+     "answer_file": "2B Worksheet 2B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2B-2a",
+    "n": "2a",
+    "question": "Describe the key features of a blackbody. (2 marks)",
+    "answer": "A blackbody object emits all the frequencies produced in it by its thermal energy and it also absorbs all frequencies of radiation that fall on it.",
+    "marks": 2,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "exit",
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "2B.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "2B Worksheet 2B–1 Thermal energy and electromagnetic radiation.docx",
+     "answer_file": "2B Worksheet 2B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2B-2b",
+    "n": "2b",
+    "question": "A distant star has a peak wavelength of 450 nm. If it is modelled as a blackbody, calculate its surface temperature in kelvins. (2 marks)",
+    "answer": "Use Wien's law with $T$ as the subject: $T = \\frac{2.898 \\times 10^{-3}}{450 \\times 10^{-9}} = 6440$ K",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "pair_with": "WE2B-1",
+    "criteria": [
+     "2B.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "2B Worksheet 2B–1 Thermal energy and electromagnetic radiation.docx",
+     "answer_file": "2B Worksheet 2B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2B-2c",
+    "n": "2c",
+    "question": "Account for the difference in radiated peak wavelengths of the Sun and Earth. (1 mark)",
+    "answer": "Wien' law predicts that the peak wavelength will be inversely proportional to the temperature; the temperature of the sun is much greater (by a factor of about 22) than the kelvin temperature of Earth.",
+    "marks": 1,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "2B.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "2B Worksheet 2B–1 Thermal energy and electromagnetic radiation.docx",
+     "answer_file": "2B Worksheet 2B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2B-2d",
+    "n": "2d",
+    "question": "What are two key changes that occur to the spectra of blackbodies as their temperatures decrease? (2 marks)",
+    "answer": "The total energy across the electromagnetic spectrum emitted by a blackbody decreases with its temperature decrease and the peak wavelength increases as temperature decreases.",
+    "marks": 2,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "exit"
+    ],
+    "pair_with": "2B-SQ4",
+    "criteria": [
+     "2B.3"
+    ],
+    "img": [],
+    "src": {
+     "file": "2B Worksheet 2B–1 Thermal energy and electromagnetic radiation.docx",
+     "answer_file": "2B Worksheet 2B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2B-3a",
+    "n": "3a",
+    "question": "Outline the likely overall effect on global climate if the amount of greenhouse gases in the atmosphere were to increase, and the main mechanism involved. Refer to the role of back radiation in your answer. Give examples of effects on weather patterns. (3 marks)",
+    "answer": "There would be overall global warming through the mechanism of more absorption of IR wavelengths by these gases and an increase in the amount of back radiation from the atmosphere to the ground. This would probably lead to significant changes in local, regional and global average weather patterns, including land, sea and air temperature increases, higher sea levels, Arctic and Antarctic glacier ice loss and more frequent extreme weather events like cyclones, heatwaves, bushfires, droughts and floods.",
+    "marks": 3,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "wedo",
+     "practice"
+    ],
+    "pair_with": "WS2B-3b",
+    "criteria": [
+     "2B.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "2B Worksheet 2B–1 Thermal energy and electromagnetic radiation.docx",
+     "answer_file": "2B Worksheet 2B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS2B-3b",
+    "n": "3b",
+    "question": "Outline the role of the atmospheric window in reducing the amount of global warming. (2 marks)",
+    "answer": "The atmospheric window allows Earth to radiate IR wavelengths to escape directly to space, thus limiting global warming. Reducing the amount of greenhouse gases in the atmosphere would allow a greater percentage of IR wavelengths to escape and therefore ameliorate global warming effects.",
+    "marks": 2,
+    "kind": "explain",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "pair_with": "WS2B-3a",
+    "criteria": [
+     "2B.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "2B Worksheet 2B–1 Thermal energy and electromagnetic radiation.docx",
+     "answer_file": "2B Worksheet 2B–1 Answers.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "2B.2"
+   ],
+   "wedo": "WE2B-1",
+   "youtry": [
+    "WS2B-2b",
+    "2B-SQ5a"
+   ],
+   "note": "WE2B-1 finds λmax from T; WS2b rearranges for T; SQ5a needs °C to K first (like WE2B-2)."
+  },
+  {
+   "criteria": [
+    "2B.2",
+    "2A.3"
+   ],
+   "wedo": "WE2B-2",
+   "youtry": [
+    "2B-SQ5a"
+   ],
+   "note": "Celsius to kelvin then Wien's law."
+  },
+  {
+   "criteria": [
+    "2B.1",
+    "2B.3"
+   ],
+   "wedo": "2B-SQ4",
+   "youtry": [
+    "WS2B-2d",
+    "2B-SQ3"
+   ],
+   "origin": "adapted",
+   "note": "No worked example for comparing total energy from curves; SQ4 (graph) as We do with Figure 2B-2, WS2d describes both changes."
+  },
+  {
+   "criteria": [
+    "2B.4"
+   ],
+   "wedo": "WS2B-3a",
+   "youtry": [
+    "WS2B-3b",
+    "2B-SQ6"
+   ],
+   "origin": "adapted",
+   "note": "No worked example for global warming; WS3a as We do using Figure 2B-6."
+  }
+ ],
+ "skills": [
+  {
+   "id": "2B-SK1",
+   "heading": "2B Skills",
+   "text": "1 Make sure that you can use Wien’s law ($\\lambda_{max}T = 0.00289$) with either $T$ or $\\lambda_{max}$ as the subject, applied to blackbodies (or objects modelled as blackbodies).\n2 Ensure that you can use blackbody spectra to compare the total electromagnetic energy emitted by various objects, from the area under their electromagnetic spectrum graphs.\n3 Be able to identify the contributions of various energy transfer mechanisms (e.g. conduction, convection, radiation, evaporation) to the temperature changes in Earth’s global energy budget.\n4 Be able to explain the various factors affecting global temperature changes.",
+   "src": {
+    "file": "Physics12_Ch02.pdf",
+    "page": 28
+   }
+  }
+ ],
+ "pracs": [],
+ "notes": "No practicals for 2B. Wien's constant varies across sources: textbook 2.898e-3 m K (checklist 2.90e-3); WS2B-1 answer note prints 2.989e-3 (typo, verbatim); SR SQ5a uses 0.0029. WE2B-2 final value 1.01e-5 m as printed (0.002898/288 = 1.006e-5). Worksheet 2B-1 term vi is 'IPCC' in the worksheet but 'IPPC' in the answers and chapter glossary list. Figure 2B-3 (forehead thermometer photo) skipped as decorative. PowerPoint Figure 2B–1 and 2B–6 files exist in the section folder."
+}

@@ -1,0 +1,1121 @@
+{
+ "code": "5E",
+ "title": "Electric power",
+ "chapter": 5,
+ "unit": 1,
+ "aos": 3,
+ "study_design": [
+  "Apply concepts of charge (Q), electric current (I), potential difference (V), energy (E) and power (P), in electric circuits",
+  "Investigate and analyse theoretically and practically electric circuits using the relationships: $I = \\frac{Q}{t}$, $V = \\frac{E}{Q}$, $P = \\frac{E}{t} = VI$",
+  "Compare power transfers in series and parallel circuits",
+  "Explain why the circuits in homes are mostly parallel circuits"
+ ],
+ "criteria": [
+  "5E.1",
+  "5E.2",
+  "5E.3",
+  "5E.4"
+ ],
+ "glossary": [
+  {
+   "id": "5E-G1",
+   "term": "Power",
+   "def": "the rate at which work is done; the rate at which energy is transformed; a scalar quantity measured in watts (W)",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 76
+   }
+  },
+  {
+   "id": "5E-G2",
+   "term": "Watt (W)",
+   "def": "a unit of power defined as 1 watt = 1 joule per second",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 76
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F5E-1",
+   "name": "Formula 5E–1 Power as a rate of energy transfer or transformation",
+   "latex": "P = \\frac{E}{t}",
+   "where": [
+    {
+     "sym": "P",
+     "meaning": "Power",
+     "unit": "W"
+    },
+    {
+     "sym": "E",
+     "meaning": "Energy transferred",
+     "unit": "J"
+    },
+    {
+     "sym": "t",
+     "meaning": "Time that the energy is transferred over",
+     "unit": "s"
+    }
+   ],
+   "criteria": [
+    "5E.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 76
+   }
+  },
+  {
+   "id": "F5E-2",
+   "name": "Formula 5E–2 Electrical power",
+   "latex": "P = \\frac{E}{t} = VI",
+   "where": [
+    {
+     "sym": "P",
+     "meaning": "Power in an electric circuit",
+     "unit": "W"
+    },
+    {
+     "sym": "V",
+     "meaning": "Potential difference",
+     "unit": "V"
+    },
+    {
+     "sym": "I",
+     "meaning": "Current",
+     "unit": "A"
+    }
+   ],
+   "criteria": [
+    "5E.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 79
+   }
+  },
+  {
+   "id": "F5E-3",
+   "name": "Formula 5E–3 Three expressions for electrical power",
+   "latex": "P = VI = I^{2}R = \\frac{V^{2}}{R}",
+   "where": [
+    {
+     "sym": "P",
+     "meaning": "Power",
+     "unit": "W"
+    },
+    {
+     "sym": "I",
+     "meaning": "Current",
+     "unit": "A"
+    },
+    {
+     "sym": "R",
+     "meaning": "Resistance",
+     "unit": "\\Omega"
+    },
+    {
+     "sym": "V",
+     "meaning": "Potential difference",
+     "unit": "V"
+    }
+   ],
+   "criteria": [
+    "5E.2",
+    "5E.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 81
+   }
+  }
+ ],
+ "engage": {
+  "heading": "Electricity: the energy supply for technology",
+  "text": "The key technology for the future is electricity. Our ability to design systems of production and control has expanded since the invention of the solid-state transistor in 1948 and its commercialisation throughout the 1950s. Your smartphone has more computing power than all the computers used to put the first astronauts, Neil Armstrong and Buzz Aldrin, on the Moon in 1969. All of these devices rely on varying amounts of electrical energy, delivered at various rates. Why can some things, like your calculator or an emergency phone on the side of a road, run on a small battery with electricity generated from solar energy while others, like a kettle, need to be plugged into the mains supply? Sometimes this is because of the total amount of energy required to run the appliance, but often it is that the kettle needs lots of energy quickly, more quickly than can be easily supplied by a small solar panel. The rate of energy supply, the electric power, is at times more important than the value of current, potential difference or total energy required. You might have noticed that using a different USB plug pack can recharge your phone faster or slower, even though the battery started at the same level. Some plugs are rated 5 V 12 W others 5 V 1 A, or even 5 V 18 W, as you can see on their labels. They could all charge your phone to 100%, but the time it takes to deliver the energy will be different. Electric vehicles (EVs), like phones, recharge at different rates. This ranges from a ‘trickle-charge’ of around 2 kW from a normal power point overnight to a massive 250 kW from a DC supercharger, which can recharge an EV from 20 to 80% in under 30 minutes. Limiting factors are not only the electricity supply but also the capacity of the car’s battery and the charging cable, and whether rapid charging will damage the battery and reduce its life. Fast charging and battery health is a balancing act, controlled by each EV’s computer-controlled charging protocol. One analogy compares charging a battery to people squeezing through a door. If 100 people all rush into a room at once, some are going to get stuck in the doorway, so not as many will manage to enter the room within a short time. Similarly, fast charging a battery can lead to a lower capacity. Also, when so many people rush in, the door might get broken. Likewise, the battery materials can potentially be damaged. Research teams are continually testing better charging protocols, using computer models to predict battery ageing and then testing with real batteries. Ramping current or potential difference to improve charging capacity and reduce battery aging can also reduce charge time. For engineers designing large-scale electricity supply grids, the rate that energy must be delivered is also important. In the future, it could cause problems if everyone drove home in their EV and plugged it in overnight to recharge, as this would create a large demand for electrical energy at a time when no solar electricity is directly available. In California, one study predicted that a 25% surge in demand overnight could be created when EV ownership reaches 50%, possibly in 2035. The need to build expensive big batteries for storage can be reduced by providing recharging infrastructure in car parks and workplaces, so vehicles can be recharged cheaply during the day. This would level out the power demand on the grid, which would save money on infrastructure as well as efficiently use daytime solar power.",
+  "src": {
+   "file": "Physics12_Ch05.pdf",
+   "page": 74
+  }
+ },
+ "chunks": [
+  {
+   "id": "5E-E1",
+   "heading": "What is power?",
+   "text": "In its everyday usage, power is intertwined with ‘energy’ and the two are often used as synonyms. For example, both are used conversationally to mean the ability to do work. We talk loosely about our domestic ‘power supply’ that provides the ‘energy’ required to run appliances. In physics though they have specific, separate but closely related meanings and must be used carefully. Energy, measured in joules, is the capacity to do work. Power, P, is the rate at which energy is transformed or work is done. Power could be measured as joules of energy per second, but instead is given the name watt, defined as 1 watt (W) = 1 joule per second J s–1. Note that whether a device with a power rating of 100 W is turned on for a millisecond, or for 10 hours, its power is still 100 W. Power does not depend on duration of time.",
+   "figures": [],
+   "criteria": [
+    "5E.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 76
+   }
+  },
+  {
+   "id": "5E-E2",
+   "heading": "Calculating power as rate of energy transfer",
+   "text": "When designing a circuit, it’s important to know not only how much energy will be used, but also how rapidly it needs to be supplied. This leads to: In words: power (W) = energy (J) transferred per second (s). This definition of power applies any time energy is transferred, not just in electric circuits.",
+   "figures": [],
+   "criteria": [
+    "5E.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 76
+   }
+  },
+  {
+   "id": "5E-E3",
+   "heading": "Calculating power in electric circuits",
+   "text": "The formula defining power, as energy produced or used per second is: E P = t This applies to all types of energy and can become more relevant to electric circuits by substituting for electrical energy, E, using E =VIt (from Section 5B): VIt P = t The t cancels out, leaving a formula for electric power. The power supplied or consumed in a circuit, which is the rate that energy is converted, depends on how many coulombs of charge go past per second (the current), as well as how much energy each coulomb carries (the potential difference).",
+   "figures": [],
+   "criteria": [
+    "5E.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 79
+   }
+  },
+  {
+   "id": "5E-E4",
+   "heading": "Alternative forms of P = IV",
+   "text": "Recall that power is the rate at which energy is transformed or transferred from one form to another. Usually, power is calculated from the formula P = IV. In some cases, the current or potential difference may not be known, but must be calculated using V = IR. As a short cut, P = IV may be written in alternative ways, as shown below. These are not new equations, they are just different forms of the same equation. P = V × I Substituting from V = IR: P = IR × I Therefore: P = I2R This is the first useful variation, for when I and R are known but V is not. All appliances, and even electric connecting wires, transform some electrical energy every second they are switched on. If an appliance transforms too much electrical energy into heat, it may melt or burn out. This happens when either the current or the resistance is very large, or both. The next variation comes from substituting for I (= V ): R P = V × I V P = V × R Therefore: 2 V P = R This variation is useful when V and R are known but I is not. To summarise:",
+   "figures": [],
+   "criteria": [
+    "5E.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 80
+   }
+  },
+  {
+   "id": "5E-E5",
+   "heading": "When to use each power formula",
+   "text": "First P = VI is often useful in general calculations, as in Worked examples 5E–3 and 5E–4. Second P = I2R is best used when considering power ‘lost’ as thermal energy in wires, as the larger the current, the greater the energy ‘loss’. Third 2 V P = is best used for finding the power used by circuits of differing resistance; for R example, series versus parallel. As parallel combinations have lower resistance than the same resistors in series, you expect from the inverse relationship between power and resistance in this formula, that the power used will be greater in parallel.",
+   "figures": [],
+   "criteria": [
+    "5E.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 81
+   }
+  },
+  {
+   "id": "5E-E6",
+   "heading": "Advantages of parallel and series circuits",
+   "text": "There are other advantages of parallel circuits. Individual components can each receive the same potential difference and can be switched on and off independently of other components in the circuit. As an example, consider the two circuits in Figure 5E–4. In Figure 5E–4 (left), the series circuit requires all three switches to be closed before any of the appliances will work – and then they will all be on at the same time. There is no way to operate them independently. Also, each appliance will only get a proportion of the 230 V potential difference, so none of them will work correctly as designed. In Figure 5E–4 (right), the parallel circuit allows each component to be operated by its own switch without affecting the others and each is connected to the full 230 V potential difference. Of course, the parallel circuit will draw more current (and hence power) than the series circuit because each branch will draw the same current as if it were the only branch. Therefore, care must be taken not to overload the power supply. Another disadvantage of the series circuit is that if one appliance is broken, neither of the others will work. In parallel circuits this is not an issue because each appliance is supplied with its own current, regardless of the others. For these reasons, household electrical circuits are wired in parallel, not series. Chapter 6 deals with household uses of electricity in more detail. As noted in Section 5D, an advantage of series connections is that one switch can control all appliances. For example, to turn on a TV, DVD player and soundbar at the same time, a single power switch is more convenient. Usually this would be placed in series with the power supply, with the circuit branching into parallel paths.",
+   "figures": [
+    "5E-F4"
+   ],
+   "criteria": [
+    "5E.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 84
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "5E-F1",
+   "label": "Figure 5E–1",
+   "caption": "Developments in space exploration have been made possible by developments in electronics and robotics. Left: Lunar module pilot Edwin ‘Buzz’ Aldrin Jr near the leg of the lunar module, the Eagle during his extravehicular activity on NASA’s Apollo 11 lunar landing mission, 20 July 1969. The photograph was taken by Commander Neil Armstrong with a 70 mm lunar surface camera. Right: Artist’s impression of the James Webb Space Telescope unfolded in its new orbit.",
+   "img": null,
+   "important": false,
+   "why": "Apollo / JWST photos (engage)",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 74
+   }
+  },
+  {
+   "id": "5E-F2",
+   "label": "Figure 5E–2",
+   "caption": "Devices that use small amounts of energy per second (‘power’), such as a calculator with a built-in solar panel (left) and an emergency roadside phone (centre), can often be supplied from solar panels. Appliances that use greater power, such as an electric kettle (right), need a connection to the mains electricity.",
+   "img": null,
+   "important": false,
+   "why": "Calculator, roadside phone, kettle photos (engage)",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 75
+   }
+  },
+  {
+   "id": "5E-F3",
+   "label": "Figure 5E–3",
+   "caption": "A wireless energy monitor linked to the electricity meter can display a home’s present electric power use, 0.71 kW in this case, equivalent to 710 joules per second.",
+   "img": null,
+   "important": false,
+   "why": "Home energy monitor photo (0.71 kW = 710 J per second); could support \"what is power\"",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 76
+   }
+  },
+  {
+   "id": "5E-F4",
+   "label": "Figure 5E–4",
+   "caption": "The two circuits have the same three appliances, each with a switch nearby, connected to a 230 V AC household power supply. Left: the appliances in series. Right: the appliances in parallel",
+   "img": "img/5E_fig5E-4.png",
+   "important": true,
+   "why": "Three appliances in series vs in parallel on 230 V AC",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 84
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE5E-1",
+   "title": "Power in a kettle",
+   "question": "An electric kettle is rated at 2 kW. It is filled with water, then turned on. a Calculate the thermal energy delivered to the water in 1 minute. b How long would the kettle need to run to supply 4 kJ of energy to the water? c A different kettle supplies 3 kJ of energy per 30 seconds. Calculate the power of this kettle.",
+   "steps": [
+    "a Use the relationship $P = \\frac{E}{t}$, where:",
+    "$P = 2$ kW $= 2\\times10^{3}$ W",
+    "$t = 1$ min $= 60$ s",
+    "gives:",
+    "$E = P\\times t$",
+    "$= 2\\times10^{3}\\times60$",
+    "$= 1.2\\times10^{5}$ J $= 120$ kJ",
+    "b For the same kettle:",
+    "$P = 2\\times10^{3}$ W",
+    "$E = 4$ kJ $= 4\\times10^{3}$ J",
+    "Use the same formula to find time:",
+    "$t = \\frac{E}{P}$",
+    "$= \\frac{4\\times10^{3}}{2\\times10^{3}}$",
+    "$= 2$ s",
+    "Time is 2 seconds.",
+    "c Use the relationship $P = \\frac{E}{t}$, where:",
+    "$E = 3$ kJ",
+    "$t = 30$ s",
+    "gives:",
+    "$P = \\frac{E}{t}$",
+    "$= \\frac{3\\times10^{3}}{30}$",
+    "$= 100$ W",
+    "Power is 100 W. This would be much slower to boil than the kettle from parts a and b."
+   ],
+   "answer": "a 120 kJ; b 2 s; c 100 W",
+   "img": [
+    "img/5E_WE5E-1.png"
+   ],
+   "criteria": [
+    "5E.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 77
+   }
+  },
+  {
+   "id": "WE5E-2",
+   "title": "Power in a stove",
+   "question": "An electric stove that is turned on uses 1.8 MJ of energy to heat up the hotplate every 10 minutes. Calculate the: a power of the electric stove in watts b time it takes for the stove to use 1.7 kJ of energy c energy used by the stove in 40 seconds, if the power of the stove is increased by 500 W.",
+   "steps": [
+    "a The power of the stove can be found using the formula for power with $E = 1.8$ MJ $= 1.8\\times10^{6}$ and $t = 10$ min $= 10\\times60$ s $= 600$ s. This gives:",
+    "$P = \\frac{E}{t}$",
+    "$= \\frac{1.8\\times10^{6}}{600}$",
+    "$= 3000$ W",
+    "Therefore, the power of the stove is 3000 W.",
+    "b Rearrange the power formula to make $t$ the subject. As $P = 3000$ W and $E = 1.7$ kJ $= 1700$ J, this gives:",
+    "$t = \\frac{E}{P}$",
+    "$= \\frac{1700}{3000}$",
+    "$= 0.57$ s",
+    "Therefore, the time it takes for the stove to use 1.7 kJ of energy is 0.57 s.",
+    "c The power of the stove is increased by 500 W so that $P = 3500$ W. To find the energy used by the stove in 40 seconds, rearrange the power formula to make $E$ the subject. This gives:",
+    "$E = Pt$",
+    "$= 3500\\times40$",
+    "$= 0.14\\times10^{6}$ J",
+    "$= 0.14$ MJ"
+   ],
+   "answer": "a 3000 W; b 0.57 s; c 0.14 MJ",
+   "img": [
+    "img/5E_WE5E-2.png"
+   ],
+   "criteria": [
+    "5E.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 78
+   }
+  },
+  {
+   "id": "WE5E-3",
+   "title": "Power in a light bulb",
+   "question": "a Calculate the power drawn by a light bulb that, when connected to a 12 V battery, carries a current of 0.5 A. b If the light bulb described in part a is switched on for 2 minutes, how much energy does it transform?",
+   "steps": [
+    "a Use the power formula in the form $P = VI$ and substitute $V = 12$ V and $I = 0.5$ A:",
+    "$P = VI$",
+    "$= 12\\times0.5$",
+    "$= 6$ W",
+    "The power drawn by the light bulb is 6 W.",
+    "b Rearrange $P = \\frac{E}{t}$ and substitute $t = 2$ min $= 120$ s and $P = 6$ W:",
+    "$E = Pt$",
+    "$= 6\\times120$",
+    "$= 720$ J",
+    "The electrical energy transformed in the bulb is 720 J."
+   ],
+   "answer": "a 6 W; b 720 J",
+   "img": [
+    "img/5E_WE5E-3.png"
+   ],
+   "criteria": [
+    "5E.2",
+    "5E.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 79
+   }
+  },
+  {
+   "id": "WE5E-4",
+   "title": "Comparing power consumption",
+   "question": "A kettle and an induction cooktop are both connected to 230 V mains power. If 10 A flows through the kettle and 32 A through the cooktop, calculate the power used by each appliance.",
+   "steps": [
+    "To calculate the power used by the electrical appliances, the best formula is $P = VI$.",
+    "For both appliances, as they are connected to mains power, $V = 230$ V.",
+    "For the kettle $I = 10$ A, which gives:",
+    "$P = VI = 230\\times10 = 2300$ W",
+    "For the cooktop $I = 32$ A, which gives:",
+    "$P = VI = 230\\times32 = 7360$ W",
+    "The power used by the kettle is 2.3 kW and the power used by the cooktop is 7.36 kW. If they were used to heat the same mass of water from 20°C, you would expect the induction cooktop to boil the water sooner."
+   ],
+   "answer": "Kettle 2.3 kW; cooktop 7.36 kW",
+   "img": [
+    "img/5E_WE5E-4.png"
+   ],
+   "criteria": [
+    "5E.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 80
+   }
+  },
+  {
+   "id": "WE5E-5",
+   "title": "Power loss due to resistance",
+   "question": "A caravan is to be connected to a 240 V AC power supply by a 10 m extension cable. Two cables are available with resistances of 1 Ω and 5 Ω respectively. If the appliances in the caravan use a current of 10 A, find the power loss that would occur in each cable.",
+   "steps": [
+    "To find the power loss in each cable due to heating in the wires, use the power formula in the form $P = I^{2}R$.",
+    "For cable 1: $R = 1\\ \\Omega$, $I = 10$ A, so:",
+    "$P = 10^{2}\\times1 = 100$ W loss in cable 1",
+    "For cable 2: $R = 5\\ \\Omega$, $I = 10$ A, so:",
+    "$P = 10^{2}\\times5 = 500$ W loss in cable 2",
+    "Hence, the 5 Ω cable transforms 400 W more power than the 1 Ω cable, due to heating in the larger resistance. You would choose the cable with lower resistance to obtain the greatest possible power for the appliances in the caravan."
+   ],
+   "answer": "100 W and 500 W",
+   "img": [
+    "img/5E_WE5E-5.png"
+   ],
+   "criteria": [
+    "5E.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 82
+   }
+  },
+  {
+   "id": "WE5E-6",
+   "title": "Resistance from power consumption",
+   "question": "Calculate and compare the resistance of a 5 W LED bulb and a 9 W LED bulb when each is plugged in to the 230 V mains supply.",
+   "steps": [
+    "To calculate the resistance of the bulbs, use the power formula in the form $P = \\frac{V^{2}}{R}$.",
+    "Rearrange to make $R$ the subject, $R = \\frac{V^{2}}{P}$, and substitute into the formula.",
+    "$V = 230$ V and $P = 5$ W:",
+    "$R = \\frac{V^{2}}{P} = \\frac{230^{2}}{5} = 10\\,580\\ \\Omega = 10.6$ kΩ",
+    "For the 9 W LED bulb: $V = 230$ V and $P = 9$ W, which gives:",
+    "$R = \\frac{230^{2}}{9} = 5878\\ \\Omega = 5.9$ kΩ",
+    "Comparing the two, you see that the 5 W LED bulb has almost twice the resistance of the 9 W LED bulb."
+   ],
+   "answer": "10.6 kΩ and 5.9 kΩ",
+   "img": [
+    "img/5E_WE5E-6.png"
+   ],
+   "criteria": [
+    "5E.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 82
+   },
+   "note": "Textbook line reads \"V = 240 V\" in one place but calculates with 230 V; 230 V used here."
+  },
+  {
+   "id": "WE5E-7",
+   "title": "Power loss in series and parallel",
+   "question": "Consider two light globes, 1000 Ω and 3000 Ω, connected in parallel to a 24 V battery. a Calculate the power used by the parallel combination. b Calculate the power used if the same two globes are now wired in series to the same battery.",
+   "steps": [
+    "a First, sketch a circuit diagram. As the globes are in parallel, first calculate the equivalent resistance of the globes:",
+    "$\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{R_1} + \\frac{1}{R_2}$",
+    "$= \\frac{1}{1000} + \\frac{1}{3000} = \\frac{1}{750}$",
+    "$R_{\\text{equivalent}} = 750\\ \\Omega$",
+    "The potential difference across each globe will be 24 V since they are parallel. Use the formula for power:",
+    "$P = \\frac{V^{2}}{R}$",
+    "$= \\frac{24^{2}}{750}$",
+    "$= 0.0768 = 0.77$ W",
+    "This is the power used by the two globes in parallel.",
+    "b First, sketch a circuit diagram. As the globes are in series, add their resistances together to get $R_{\\text{equivalent}}$. This gives 4000 Ω.",
+    "The potential difference across the equivalent system will be 24 V and so the power used, using the same formula as above, will be:",
+    "$P = \\frac{24^{2}}{4000}$",
+    "$= 0.144$ W",
+    "This is the power used by the two globes in series.",
+    "Clearly the globes use more power in parallel than in series as they draw more current due to the lower $R_{\\text{equivalent}}$. The parallel globes will be brighter (more energy transformed) but the battery will run flat sooner!"
+   ],
+   "answer": "a 0.77 W; b 0.144 W",
+   "img": [
+    "img/5E_WE5E-7.png"
+   ],
+   "criteria": [
+    "5E.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 83
+   },
+   "note": "Textbook prints 0.0768 = 0.77 W; 576/750 = 0.768 W. Check before use."
+  }
+ ],
+ "checkins": [
+  {
+   "id": "5E-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "Rearrange the power formula (Formula 5E–1) to give an expression for energy in terms of power and time.",
+   "answer": "$E = P\\times t$ or energy (in joules) = power (in watts) × time (in seconds)",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "5E.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "5E-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "Calculate the power supplied when 3000 J of electrical energy is supplied to an electric drill in 10 seconds.",
+   "answer": "Use the power formula and calculate; $P = \\frac{3000}{10} = 300$ W. The power supplied is 300 W.",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "5E.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Check-in – Set 1.docx"
+   }
+  },
+  {
+   "id": "5E-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "Calculate the power drawn by a refrigerator connected to mains power supply (230 V) if the current is 1.5 A.",
+   "answer": "Use $P = VI$ with $V = 230$ V and $I = 1.5$ A. $P = 230\\times1.5 = 345$ W",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "5E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Check-in – Set 2.docx"
+   }
+  },
+  {
+   "id": "5E-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "Calculate the energy used by a light bulb in 10 minutes when connected to a 12 V power supply that carries 0.6 A of current.",
+   "answer": "Use $E = VIt$ with $V = 12$ V, $I = 0.6$ A and $t = 10\\times60 = 600$ s. Therefore, $E = 12\\times0.6\\times600 = 4320$ J.",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "5E.1",
+    "5B.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Check-in – Set 2.docx"
+   }
+  },
+  {
+   "id": "5E-CI3.1",
+   "set": 3,
+   "n": 1,
+   "question": "A long extension lead carrying a current of 2 A has a potential difference of 0.5 V across it, from one end to the other. Calculate the power loss in the cable.",
+   "answer": null,
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "5E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Check-in – Set 3.docx"
+   },
+   "note": "Suggested responses for Set 3 answer different questions (I = 0.5 A, R = 10 Ω; P = 6 W, R = 6 Ω), so answer set to null. Expected: P = VI = 1 W; P = I²R = 2.5 W (own working, not Cambridge)."
+  },
+  {
+   "id": "5E-CI3.2",
+   "set": 3,
+   "n": 2,
+   "question": "A 1 kΩ resistor in a circuit has a current of 0.05A flowing through it. Calculate the power loss in the resistor.",
+   "answer": null,
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "5E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Check-in – Set 3.docx"
+   },
+   "note": "Suggested responses for Set 3 answer different questions (I = 0.5 A, R = 10 Ω; P = 6 W, R = 6 Ω), so answer set to null. Expected: P = VI = 1 W; P = I²R = 2.5 W (own working, not Cambridge)."
+  },
+  {
+   "id": "5E-CI4.1",
+   "set": 4,
+   "n": 1,
+   "question": "Explain why the power used in a parallel circuit is more than the power used in a series circuit of the same components, supplied by the same potential difference.",
+   "answer": "The difference in power is a result of the power used in a circuit being related to the resistance of the circuit by the equation $P = \\frac{V^{2}}{R}$. If $V$ is kept the same, then the power dissipated is inversely proportional to the resistance in the circuit only. Then because the equivalent resistance in a parallel circuit will always be less than the smallest resistance amongst components and series resistance is always larger than the largest component. The equivalent resistance is smaller in parallel vs series circuits and so the power is greater in parallel.",
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "5E.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Check-in – Set 4.docx"
+   }
+  },
+  {
+   "id": "5E-CI4.2",
+   "set": 4,
+   "n": 2,
+   "question": "Explain the advantages of parallel circuits over series circuits, especially for household use of electricity.",
+   "answer": "Despite using more power for the same voltage, parallel circuits are more advantageous in many circuits particularly for household electricity because even if one component fails, e.g. a light bulb blowing out, electricity is not lost to all the other components. On the other hand in a series circuit, one component breaking breaks the entire circuit.",
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "5E.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Check-in – Set 4.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "5E-SQ1",
+   "n": "1",
+   "question": "What is the power of a lamp that is designed to operate at 240 V, 0.5 A?",
+   "options": [
+    "A. 0.5 W",
+    "B. 120 W",
+    "C. 240 W",
+    "D. 480 W"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "5E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Section questions.docx"
+   }
+  },
+  {
+   "id": "5E-SQ2",
+   "n": "2",
+   "question": "What is the power of a lamp that is designed to operate 240 V, 0.25 A?",
+   "options": [
+    "A. 0.25 W",
+    "B. 60 W",
+    "C. 120 W",
+    "D. 960 W"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "5E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Section questions.docx"
+   }
+  },
+  {
+   "id": "5E-SQ3",
+   "n": "3",
+   "question": "What current will there be in a 100 W motor connected to a 240 V power supply?",
+   "options": [
+    "A. 0.42 A",
+    "B. 100 A",
+    "C. 240 A",
+    "D. 24 000 A"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "5E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Section questions.docx"
+   }
+  },
+  {
+   "id": "5E-SQ4",
+   "n": "4",
+   "question": "How much energy is produced per second by a bulb labelled '12 V, 0.25 A' when it is operating correctly?",
+   "options": [
+    "A. 0.25 W",
+    "B. 3.0 W",
+    "C. 12 W",
+    "D. 48 W"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "5E.1",
+    "5E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Section questions.docx"
+   }
+  },
+  {
+   "id": "5E-SQ5",
+   "n": "5",
+   "question": "A set of AA cells for a doorbell has a potential difference of 3.0 V. What is the power rating of the doorbell if the current is 4.8 mA?",
+   "options": [
+    "A. 1.4 mW",
+    "B. 14 mW",
+    "C. 144 W",
+    "D. 144 mW"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "5E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Section questions.docx"
+   }
+  },
+  {
+   "id": "5E-SQ6",
+   "n": "6",
+   "question": "Calculate the current in a 20 W motor connected to a 12 V power supply.",
+   "answer": "$P = VI$; $I = \\frac{P}{V} = 1.67$ A",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "youtry"
+   ],
+   "criteria": [
+    "5E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Section questions.docx"
+   }
+  },
+  {
+   "id": "5E-SQ7",
+   "n": "7",
+   "question": "Calculate the power drawn by a lamp that is designed to operate at 12 V, 1.5 A.",
+   "answer": "$P = VI = 18$ W",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "youtry"
+   ],
+   "criteria": [
+    "5E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Section questions.docx"
+   }
+  },
+  {
+   "id": "5E-SQ8",
+   "n": "8",
+   "question": "A microwave oven operates at 1200 W. a How much current does it draw from the 240 V mains supply? b How much energy would it consume if it was used at full power for 2 min?",
+   "answer": "a $P = VI$; $I = \\frac{P}{V} = \\frac{1200}{240} = 5$ A b $E = Pt = 1200\\times2\\times60 = 1.44\\times10^{5}$ J or 144 kJ",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "5E.1",
+    "5E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Section questions.docx"
+   }
+  },
+  {
+   "id": "5E-SQ9",
+   "n": "9",
+   "question": "Which carries the greater current, an 11 W mains LED or a 9 W mains LED?",
+   "answer": "Both operate at mains 240 V, so differences in power drawn depend on current; 11 W has higher current.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "5E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Section questions.docx"
+   }
+  },
+  {
+   "id": "5E-SQ10",
+   "n": "10",
+   "question": "An automatic washing machine is labelled '240 V, 960 W'. a Find the current when the machine is operating normally. b What is the equivalent resistance in the circuit when the machine is in use?",
+   "answer": "a 4 A b $R = \\frac{V}{I} = 60\\ \\Omega$",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice",
+    "youtry"
+   ],
+   "criteria": [
+    "5E.2",
+    "5C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Section questions.docx"
+   }
+  },
+  {
+   "id": "5E-SQ11",
+   "n": "11",
+   "question": "Find the resistance of the following mains appliances. a a 100 W garden spotlight b the element in a 1000 W convection heater c the element in a 2 kW kettle",
+   "answer": "a Mains appliances, so $V = 240$ V; $P = \\frac{V^{2}}{R}$; $R = \\frac{V^{2}}{P} = \\frac{240^{2}}{100} = 576\\ \\Omega$ b 57.6 Ω c 28.8 Ω",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "5E.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Section questions.docx"
+   }
+  },
+  {
+   "id": "5E-SQ12",
+   "n": "12",
+   "question": "A set of decorative lights consists of 20 bulbs wired in series. Each bulb is labelled '12 V, 1 W'. The set is designed to operate from the 240 V mains supply. a What is the total power consumed by the set of lights? b What is the potential difference across each bulb? c What is the current in each bulb? d What is the resistance in each bulb? e What is the equivalent resistance of the set of lights?",
+   "answer": "a 20 1 W bulbs in series requires 20 W b In series, the potential difference is shared between the components, so each bulb gets $\\frac{1}{20}$ of 240 V = 12 V c $P = 20$ W and $V = 240$ V, so $I = \\frac{P}{V}$ gives 0.083 A through the whole string. d $R = \\frac{V}{I}$ for each bulb so $R = \\frac{12}{0.083} = 144\\ \\Omega$ e $R_{\\text{equivalent}} = R_1 + R_2 + R_3 + \\dots + R_{20} = 20\\times144 = 2880\\ \\Omega$",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "5E.3",
+    "5C.4",
+    "5C.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "5E Section questions.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 5E–1 Electric power",
+  "total": 15,
+  "file": "5E Worksheet 5E–1 Electric power.docx",
+  "answers_file": "5E Worksheet 5E–1 Answers.docx",
+  "questions": [
+   {
+    "id": "WS5E-1",
+    "n": "1",
+    "question": "An electric kettle and an induction cooktop are used to boil water. Both are connected to a 230 V mains supply. The kettle draws 15 A, while the cooktop draws 40 A. a Calculate which appliance will use the least amount of power to boil the water. b Calculate the time, in minutes, it will take each appliance to boil the water if 1500 kJ is required for the water to reach boiling point.",
+    "answer": "a $P_{\\text{kettle}} = IV = 230\\times15 = 3450$ W; $P_{\\text{cooktop}} = IV = 230\\times40 = 9200$ W. Therefore, the kettle will use the least amount of power. b $t_{\\text{kettle}} = \\frac{E}{P} = \\frac{1500\\times1000}{3450} = 434$ s $= 7.2$ minutes; $t_{\\text{cooktop}} = \\frac{E}{P} = \\frac{1500\\times1000}{9200} = 163$ s $= 2.7$ minutes",
+    "marks": 4,
+    "kind": "calc",
+    "size": "long",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "5E.1",
+     "5E.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "5E Worksheet 5E–1 Electric power.docx"
+    },
+    "pair_with": "WE5E-4"
+   },
+   {
+    "id": "WS5E-2",
+    "n": "2",
+    "question": "Two light bulbs are connected in series in a circuit. Each light bulb has a resistance of 2 Ω. An ammeter shows that the current in the circuit is 2 A. a Calculate the power drawn by each light bulb. b Calculate the total amount of energy used if the circuit is switched on for three minutes.",
+    "answer": "a Current is the same in both light bulbs, power will be the same. $P = I^{2}R = 2^{2}\\times2 = 8$ W b $E_{\\text{total}} = P_{\\text{globe1}}t + P_{\\text{globe2}}t$. But, $P_{\\text{globe1}} = P_{\\text{globe2}}$. $E_{\\text{total}} = 2P_{\\text{globe1}}t = 2\\times8\\times3\\times60 = 2880$ J",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "5E.2",
+     "5E.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "5E Worksheet 5E–1 Electric power.docx"
+    },
+    "pair_with": "WE5E-5"
+   },
+   {
+    "id": "WS5E-3",
+    "n": "3",
+    "question": "Complete the table below. (Quantity, Symbol, Units: [blank], $P$, [blank]; Resistance; [blank], [blank], ampere (A); Potential difference)",
+    "answer": "Power, $P$, watt (W); Resistance, $R$, ohm (Ω); Current, $I$, ampere (A); Potential difference, $V$, volt (V) (1/4 mark per correct answer)",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "donow",
+     "practice"
+    ],
+    "criteria": [
+     "5E.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "5E Worksheet 5E–1 Electric power.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS5E-4",
+    "n": "4",
+    "question": "Calculate and compare the power required by the following two circuits. Identify which light globes will shine brightest.",
+    "answer": "$\\frac{1}{R_{\\text{equivalent}}} = \\frac{1}{4} + \\frac{1}{2} = \\frac{3}{4}$; $R_{\\text{equivalent}} = \\frac{4}{3}$; $P_{\\text{parallel}} = \\frac{V^{2}}{R} = \\frac{9^{2}}{\\frac{4}{3}} = 60.75$ W; $P_{\\text{series}} = \\frac{V^{2}}{R} = \\frac{9^{2}}{4+2} = 3$ W. The parallel circuit requires more power than the series circuit and therefore globes will shine brighter.",
+    "marks": 4,
+    "kind": "calc",
+    "size": "long",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "5E.3"
+    ],
+    "img": [
+     "img/5E_WS4a.png",
+     "img/5E_WS4b.png"
+    ],
+    "src": {
+     "file": "5E Worksheet 5E–1 Electric power.docx"
+    },
+    "pair_with": "WE5E-7",
+    "note": "Answer gives P_series = 81/6 = \"3 W\"; 81/6 = 13.5 W. Check before use."
+   },
+   {
+    "id": "WS5E-5",
+    "n": "5",
+    "question": "Use simple circuit diagrams to explain the advantage of a house being wired in parallel compared to in series.",
+    "answer": "(see answer image) In parallel, individual components can receive the same potential difference and be switched on and off independently; in series, all switches are required to be closed before the appliances will work. The potential difference is split between the appliances.",
+    "marks": 2,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "wedo",
+     "practice",
+     "exit"
+    ],
+    "criteria": [
+     "5E.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "5E Worksheet 5E–1 Electric power.docx"
+    },
+    "answer_img": [
+     "img/5E_WS5_ans.png"
+    ],
+    "pair_with": null
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "5E.1"
+   ],
+   "wedo": "WE5E-1",
+   "youtry": [
+    "5E-SQ8"
+   ],
+   "note": "P = E/t forwards and rearranged"
+  },
+  {
+   "criteria": [
+    "5E.1"
+   ],
+   "wedo": "WE5E-2",
+   "youtry": [
+    "5E-CI1.2"
+   ],
+   "note": "Power from energy and time with unit conversions"
+  },
+  {
+   "criteria": [
+    "5E.2"
+   ],
+   "wedo": "WE5E-3",
+   "youtry": [
+    "5E-SQ7",
+    "5E-CI2.2"
+   ],
+   "note": "P = VI then E = Pt"
+  },
+  {
+   "criteria": [
+    "5E.2"
+   ],
+   "wedo": "WE5E-4",
+   "youtry": [
+    "WS5E-1"
+   ],
+   "note": "P = VI for mains appliances, then t = E/P"
+  },
+  {
+   "criteria": [
+    "5E.2"
+   ],
+   "wedo": "WE5E-5",
+   "youtry": [
+    "WS5E-2"
+   ],
+   "note": "P = I²R power loss"
+  },
+  {
+   "criteria": [
+    "5E.2"
+   ],
+   "wedo": "WE5E-6",
+   "youtry": [
+    "5E-SQ11"
+   ],
+   "note": "R = V²/P"
+  },
+  {
+   "criteria": [
+    "5E.3"
+   ],
+   "wedo": "WE5E-7",
+   "youtry": [
+    "WS5E-4"
+   ],
+   "note": "Power in series vs parallel using V²/R"
+  },
+  {
+   "criteria": [
+    "5E.4"
+   ],
+   "wedo": "WS5E-5",
+   "youtry": [
+    "5E-CI4.2"
+   ],
+   "origin": "adapted",
+   "note": "Household parallel wiring; no worked example"
+  }
+ ],
+ "skills": [
+  {
+   "id": "5E-SK1",
+   "heading": "More complex circuit skills",
+   "text": "To calculate the power transformed in a complex circuit, first apply the analysis described in Section 5D Skills to find the equivalent resistance and total current, then use P = VI to calculate the power. For example: 1 The following circuit can be simplified to an equivalent 10 Ω by resistor using your knowledge of series and parallel resistance, in the steps shown. 2 The current through the battery can now be calculated: $V_{\\text{battery}} = IR_{\\text{equivalent}}$, $I = \\frac{V_{\\text{battery}}}{R_{\\text{equivalent}}} = \\frac{60}{10} = 6$ A through the battery 3 Power supplied by the battery is then calculated: $P_{\\text{battery}} = V_{\\text{battery}}I_{\\text{battery}} = 60\\times6 = 360$ W. This power will be dissipated among all the resistors in the circuit.",
+   "src": {
+    "file": "Physics12_Ch05.pdf",
+    "page": 85
+   }
+  }
+ ],
+ "pracs": [],
+ "notes": "No practical file in 5E (textbook Activity 5E–1 Power used in parallel circuits, p280). Check-in Set 3 answers in Suggested responses do not match the questions (answers null). Section questions use 240 V. WS5E-4 answer has an arithmetic slip (81/6 = 13.5 W, not 3 W)."
+}

@@ -1,0 +1,1207 @@
+{
+ "chapter": 1,
+ "title": "Electromagnetic radiation",
+ "unit": 1,
+ "aos": 1,
+ "sections": [
+  "1A",
+  "1B",
+  "1C"
+ ],
+ "criteria": [
+  {
+   "id": "1A.1",
+   "text": "Recognise wave motion and give examples",
+   "section": "1A",
+   "review_qs": [
+    "14",
+    "15",
+    "18",
+    "19",
+    "20"
+   ],
+   "exit_candidates": [
+    "CH1-RQ18",
+    "CH1-RQ14d"
+   ]
+  },
+  {
+   "id": "1A.2",
+   "text": "Understand that wave motion transfers energy without transferring matter",
+   "section": "1A",
+   "review_qs": [
+    "19"
+   ],
+   "exit_candidates": [
+    "1A-SQ1",
+    "1A-CI1.3"
+   ]
+  },
+  {
+   "id": "1A.3",
+   "text": "Distinguish between transverse and longitudinal waves",
+   "section": "1A",
+   "review_qs": [
+    "14",
+    "15",
+    "18",
+    "19"
+   ],
+   "exit_candidates": [
+    "CH1-RQ18",
+    "CH1-RQ14c"
+   ]
+  },
+  {
+   "id": "1A.4",
+   "text": "Use amplitude ($A$), speed ($v$), frequency ($f$), period ($T$) and wavelength ($\\lambda$) to describe the motion of waves",
+   "section": "1A",
+   "review_qs": [
+    "1",
+    "2",
+    "13",
+    "20",
+    "21"
+   ],
+   "exit_candidates": [
+    "CH1-RQ13a",
+    "CH1-RQ21"
+   ]
+  },
+  {
+   "id": "1A.5",
+   "text": "Explain the wavelength of a wave as a result of the velocity (determined by the medium through which it travels) and the frequency (determined by the source)",
+   "section": "1A",
+   "review_qs": [
+    "6",
+    "8"
+   ],
+   "exit_candidates": [
+    "CH1-RQ8",
+    "1A-CI2.3"
+   ]
+  },
+  {
+   "id": "1A.6",
+   "text": "Solve numerical problems using: $\\lambda = \\frac{v}{f} = vT$",
+   "section": "1A",
+   "review_qs": [
+    "21",
+    "22",
+    "23",
+    "24"
+   ],
+   "exit_candidates": [
+    "CH1-RQ22",
+    "CH1-RQ24"
+   ]
+  },
+  {
+   "id": "1B.1",
+   "text": "Describe all electromagnetic waves as transverse vibrations of electric and magnetic fields that travel at speed, $c$, in a vacuum",
+   "section": "1B",
+   "review_qs": [
+    "4",
+    "15",
+    "24"
+   ],
+   "exit_candidates": [
+    "CH1-RQ4",
+    "CH1-RQ14f"
+   ]
+  },
+  {
+   "id": "1B.2",
+   "text": "Describe electromagnetic radiation emitted from the Sun as mainly UV, visible and IR",
+   "section": "1B",
+   "review_qs": [
+    "3"
+   ],
+   "exit_candidates": [
+    "CH1-RQ3",
+    "1B-CI2.3"
+   ]
+  },
+  {
+   "id": "1B.3",
+   "text": "Recall approximate wavelength and frequency ranges of the radio, microwave, infrared, visible, ultraviolet, X-ray and gamma ray regions",
+   "section": "1B",
+   "review_qs": [
+    "24",
+    "25",
+    "26",
+    "27",
+    "28"
+   ],
+   "exit_candidates": [
+    "CH1-RQ24",
+    "1B-SQ4"
+   ]
+  },
+  {
+   "id": "1B.4",
+   "text": "Give examples of the different societal uses of regions of the electromagnetic spectrum from radio through to gamma rays",
+   "section": "1B",
+   "review_qs": [
+    "24",
+    "25",
+    "26",
+    "27",
+    "28"
+   ],
+   "exit_candidates": [
+    "CH1-RQ25",
+    "CH1-RQ27"
+   ]
+  },
+  {
+   "id": "1C.1",
+   "text": "Use a ray model with wave crests to describe reflection and refraction of light",
+   "section": "1C",
+   "review_qs": [
+    "8",
+    "10",
+    "23",
+    "29",
+    "30",
+    "32",
+    "33"
+   ],
+   "exit_candidates": [
+    "CH1-RQ10",
+    "1C-SQ2"
+   ]
+  },
+  {
+   "id": "1C.2",
+   "text": "Define refractive index of transparent substances",
+   "section": "1C",
+   "review_qs": [
+    "16",
+    "30"
+   ],
+   "exit_candidates": [
+    "CH1-RQ16",
+    "1C-SQ3"
+   ]
+  },
+  {
+   "id": "1C.3",
+   "text": "Use the equation: $n_1v_1 = n_2v_2$",
+   "section": "1C",
+   "review_qs": [
+    "6",
+    "10"
+   ],
+   "exit_candidates": [
+    "CH1-RQ8",
+    "CH1-RQ10"
+   ]
+  },
+  {
+   "id": "1C.4",
+   "text": "Carry out practical investigations involving Snell's law",
+   "section": "1C",
+   "review_qs": [
+    "29",
+    "30",
+    "31",
+    "34"
+   ],
+   "exit_candidates": [
+    "CH1-RQ29a"
+   ]
+  },
+  {
+   "id": "1C.5",
+   "text": "Apply Snell's law to analyse qualitative and quantitative refraction situations of visible light",
+   "section": "1C",
+   "review_qs": [
+    "7",
+    "8",
+    "10",
+    "12",
+    "17",
+    "29",
+    "30"
+   ],
+   "exit_candidates": [
+    "CH1-RQ7",
+    "CH1-RQ29a"
+   ]
+  },
+  {
+   "id": "1C.6",
+   "text": "Qualitatively, using a ray model, explain the formation of images",
+   "section": "1C",
+   "review_qs": [
+    "31"
+   ],
+   "exit_candidates": [
+    "CH1-RQ31"
+   ]
+  },
+  {
+   "id": "1C.7",
+   "text": "Carry out practical investigations involving total and partial internal reflection",
+   "section": "1C",
+   "review_qs": [
+    "17",
+    "35"
+   ],
+   "exit_candidates": [
+    "1C-CI2.1",
+    "1C-CI2.2"
+   ]
+  },
+  {
+   "id": "1C.8",
+   "text": "Apply Snell's law to predict the critical angle at media interfaces",
+   "section": "1C",
+   "review_qs": [
+    "9",
+    "17"
+   ],
+   "exit_candidates": [
+    "CH1-RQ9",
+    "1C-SQ6"
+   ]
+  },
+  {
+   "id": "1C.9",
+   "text": "Carry out practical investigations involving dispersion of visible light",
+   "section": "1C",
+   "review_qs": [
+    "36"
+   ],
+   "exit_candidates": [
+    "1C-SQ1"
+   ]
+  },
+  {
+   "id": "1C.10",
+   "text": "Qualitatively analyse situations involving dispersion of visible light in prisms and lenses",
+   "section": "1C",
+   "review_qs": [
+    "5",
+    "6"
+   ],
+   "exit_candidates": [
+    "CH1-RQ5",
+    "CH1-RQ6"
+   ]
+  },
+  {
+   "id": "1C.11",
+   "text": "Qualitatively explain the formation of rainbows and mirages using a ray model of light",
+   "section": "1C",
+   "review_qs": [
+    "11",
+    "12"
+   ],
+   "exit_candidates": [
+    "CH1-RQ11",
+    "CH1-RQ12"
+   ]
+  },
+  {
+   "id": "1C.12",
+   "text": "Apply Snell's law to analyse qualitatively and quantitatively the operation of optical fibres for communication",
+   "section": "1C",
+   "review_qs": [
+    "9"
+   ],
+   "exit_candidates": [
+    "CH1-RQ9",
+    "1C-CI4.1"
+   ]
+  }
+ ],
+ "review_questions": [
+  {
+   "id": "CH1-RQ1",
+   "n": "1",
+   "question": "Use the following information to answer Questions 1 and 2. A transverse wave is travelling to the right. One particle of the wave, A, is located one-quarter of a wavelength to the left of another particle, B. The wave amplitude is 2.0 m. Which one of the following statements is correct?",
+   "options": [
+    "A. A is always lower than B by 1.0 m",
+    "B. A is always higher than B by 1.0 m.",
+    "C. When A is at the crest of the wave motion, B will be in a trough.",
+    "D. When A is located halfway between a crest and a trough, B will be either at a crest or at a trough."
+   ],
+   "answer": "D",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1A.4"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ2",
+   "n": "2",
+   "question": "Use the following information to answer Questions 1 and 2. A transverse wave is travelling to the right. One particle of the wave, A, is located one-quarter of a wavelength to the left of another particle, B. The wave amplitude is 2.0 m. When A is at a crest, which of the following is correct about B?",
+   "options": [
+    "A. B is travelling at maximum speed upwards.",
+    "B. B is travelling at maximum speed downwards.",
+    "C. B is stationary.",
+    "D. B is travelling at maximum speed, but it is not possible to say whether it is travelling upwards or downwards."
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1A.4"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ3",
+   "n": "3",
+   "question": "The electromagnetic radiation from the Sun is comprises approximately",
+   "options": [
+    "A. mainly visible wavelengths.",
+    "B. equal amounts of visible and IR wavelengths.",
+    "C. equal parts of UV, visible and IR wavelengths.",
+    "D. equal parts of UV and visible wavelengths."
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1B.2"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ4",
+   "n": "4",
+   "question": "Which one of the following is true of all electromagnetic radiation in a vacuum?",
+   "options": [
+    "A. It is a transverse wave motion.",
+    "B. It travels at $3.00 \\times 10^{8}\\ \\text{m s}^{-1}$.",
+    "C. It requires a medium to propagate.",
+    "D. Both A and B."
+   ],
+   "answer": "D",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1B.1"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ5",
+   "n": "5",
+   "question": "The diagram below is an example of which of the following options?",
+   "options": [
+    "A. a faulty lens",
+    "B. coloured wave crests",
+    "C. a lens adapted for colour distortion",
+    "D. colour dispersion in a lens"
+   ],
+   "answer": "D",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "parts": [],
+   "img": [
+    "img/CH1_RQ5.png"
+   ],
+   "criteria": [
+    "1C.10"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ6",
+   "n": "6",
+   "question": "Which of the following best explains why colour dispersion occurs in a glass prism?",
+   "options": [
+    "A. the equal bending of all colours of light when they travel through the prism",
+    "B. the effect of differing speeds of the different colours causing different colours to leave the glass faster",
+    "C. the differing wavelengths of the different colours causing different amounts of light bending in glass",
+    "D. the slowing down of light in glass"
+   ],
+   "answer": "C",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1A.5",
+    "1C.3",
+    "1C.10"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ7",
+   "n": "7",
+   "question": "A monochromatic ray of light passes through a glass prism as shown. Which of the following is closest to the refractive index of the glass used in the prism?",
+   "options": [
+    "A. 1.61",
+    "B. 1.63",
+    "C. 1.65",
+    "D. 1.67"
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "parts": [],
+   "img": [
+    "img/CH1_RQ7.png"
+   ],
+   "criteria": [
+    "1C.5"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ8",
+   "n": "8",
+   "question": "When a light ray moves from a medium with $n$ = 1.2 into a medium with $n$ = 1.6, the",
+   "options": [
+    "A. speed, wavelength and frequency all increase.",
+    "B. speed decreases, the frequency is unchanged and the wavelength decreases.",
+    "C. speed is unchanged, but the wavelength and frequency decrease.",
+    "D. speed and frequency are unchanged, but the wavelength increases."
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1A.5",
+    "1C.1",
+    "1C.5"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ9",
+   "n": "9",
+   "question": "A ray of light in an optical fibre travels down the core ($n$ = 1.58) of the fibre. The cladding has a refractive index of 1.55. Which of the following is closest to the value of the critical angle for this light ray travelling from the core to the cladding?",
+   "options": [
+    "A. 1.02°",
+    "B. 79°",
+    "C. 88°",
+    "D. 90°"
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "parts": [],
+   "img": [
+    "img/CH1_RQ9.png"
+   ],
+   "criteria": [
+    "1C.8",
+    "1C.12"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ10",
+   "n": "10",
+   "question": "When light waves refract at a surface between two different media, the wave crests change",
+   "options": [
+    "A. direction and wavelength but not speed.",
+    "B. direction but not speed.",
+    "C. frequency and wavelength.",
+    "D. direction and speed."
+   ],
+   "answer": "D",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1C.1",
+    "1C.3",
+    "1C.5"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ11",
+   "n": "11",
+   "question": "The primary rainbow is best viewed",
+   "options": [
+    "A. facing the Sun so it forms a bow around the Sun.",
+    "B. with your back to the Sun so that raindrops reflect light from their outer surface towards you.",
+    "C. facing the Sun so that sunlight can disperse into the colours of the spectrum.",
+    "D. with your back to the Sun so that sunlight can be dispersed and reflected back towards you."
+   ],
+   "answer": "D",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1C.11"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ12",
+   "n": "12",
+   "question": "Mirages are formed when light rays from",
+   "options": [
+    "A. an object are refracted and reflected by layers of air to form an image.",
+    "B. layers of air are refracted to create an illusion in another place.",
+    "C. layers of air are reflected to create an illusion in another place.",
+    "D. the sky reflect off hot surfaces to create an illusion of water."
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1C.5",
+    "1C.11"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ13",
+   "n": "13",
+   "question": "A sketch of the wave crests of a longitudinal wave is shown below. The wave is travelling to the right.",
+   "options": [],
+   "answer": "a C. The wavefronts are close together b A. The wavefronts are at maximum spacing",
+   "marks": 2,
+   "kind": "graph",
+   "size": "quick",
+   "parts": [
+    {
+     "n": "a",
+     "question": "Which of the letters in the diagram best identifies the position of a compression (place where wave crests group up the most)? (1 mark)",
+     "answer": "C. The wavefronts are close together",
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "Which of the letters in the diagram best identifies the position of a rarefaction (place where wave crests spread out the most)? (1 mark)",
+     "answer": "A. The wavefronts are at maximum spacing",
+     "size": "quick"
+    }
+   ],
+   "img": [
+    "img/CH1_RQ13.png"
+   ],
+   "criteria": [
+    "1A.4"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ14",
+   "n": "14",
+   "question": "Decide if the following statements are true (T) or false (F).",
+   "options": [],
+   "answer": "a False b True c False d True e True f True g False",
+   "marks": 7,
+   "kind": "recall",
+   "size": "medium",
+   "parts": [
+    {
+     "n": "a",
+     "question": "Visible light is an example of electro-acoustic wave motion. (1 mark)",
+     "answer": "False",
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "Visible light is part of the electromagnetic spectrum. (1 mark)",
+     "answer": "True",
+     "size": "quick"
+    },
+    {
+     "n": "c",
+     "question": "Visible light is an example of a longitudinal wave. (1 mark)",
+     "answer": "False",
+     "size": "quick"
+    },
+    {
+     "n": "d",
+     "question": "Visible light is an example of a transverse wave. (1 mark)",
+     "answer": "True",
+     "size": "quick"
+    },
+    {
+     "n": "e",
+     "question": "Different colours of visible light correspond to different frequencies. (1 mark)",
+     "answer": "True",
+     "size": "quick"
+    },
+    {
+     "n": "f",
+     "question": "In a vacuum, all colours of visible light travel at the same speed. (1 mark)",
+     "answer": "True",
+     "size": "quick"
+    },
+    {
+     "n": "g",
+     "question": "In a glass prism, all colours of visible light travel at the same speed. (1 mark)",
+     "answer": "False",
+     "size": "quick"
+    }
+   ],
+   "img": [],
+   "criteria": [
+    "1A.1",
+    "1A.3"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ15",
+   "n": "15",
+   "question": "What property do the following radiations have in common, and what properties are different? (You do not need to be quantitative.) green light, IR radiation, UV radiation",
+   "options": [],
+   "answer": "They all travel at $c$ in a vacuum. They do not need a medium for transmission. They have different frequencies, wavelengths and periods. In some media (e.g. water, glass) they travel at a different speed. They are all electromagnetic radiation.",
+   "marks": 2,
+   "kind": "explain",
+   "size": "medium",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1A.1",
+    "1A.3",
+    "1B.1"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ16",
+   "n": "16",
+   "question": "Define the refractive index, $n$, of a transparent medium.",
+   "options": [],
+   "answer": "The refractive index is a measure of how much slower light travels through a medium compared to a vacuum; its numerical value is equal to the speed of light, divided by the speed of light in the material.",
+   "marks": 1,
+   "kind": "recall",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1C.2"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ17",
+   "n": "17",
+   "question": "A light at the bottom of a fish tank sends two beams upwards to the surface as shown. (Use $n_{air}$ = 1.00; $n_{water}$ = 1.33.) Calculate the path of the rays after they strike the water–air interface. Sketch your results on the diagram, labelling relevant angles. Show your working.",
+   "options": [],
+   "answer": "Critical angle for water is 48.7°. Ray at 30° is at 60° to normal and totally internally reflects. The other ray is at 45° to normal, and partially internally reflects, and refracts out of water at 70° to normal. [answer diagram]",
+   "marks": 4,
+   "kind": "calc",
+   "size": "long",
+   "parts": [],
+   "img": [
+    "img/CH1_RQ17.png",
+    "img/CH1_RQ17_answer.png"
+   ],
+   "criteria": [
+    "1C.5",
+    "1C.7",
+    "1C.8"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ18",
+   "n": "18",
+   "question": "Classify the following wave types as transverse or longitudinal waves. sound waves, light waves, ‘Mexican’ waves, ripples in a pond, waves on a guitar string",
+   "options": [],
+   "answer": "Sound (longitudinal), light (transverse), 'Mexican' (transverse), ripples (transverse), waves on a guitar string (transverse)",
+   "marks": 1,
+   "kind": "recall",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1A.1",
+    "1A.3"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ19",
+   "n": "19",
+   "question": "Explain how the sound of a guitar reaches your ears.",
+   "options": [],
+   "answer": "The vibrating parts of a guitar whilst playing generate longitudinal sound waves in the air, which travel through the air until they reach your ear drum.",
+   "marks": 2,
+   "kind": "explain",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1A.1",
+    "1A.2",
+    "1A.3"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ20",
+   "n": "20",
+   "question": "Use the following information to answer Questions 20, 21 and 22. A surfer sits on her board waiting for a set of waves to pass. Six waves pass her in a time of one minute, each of amplitude 1.5 m. What is the total vertical distance she has moved through in this time? Her total displacement is zero.",
+   "options": [],
+   "answer": "36 m; each complete wave is 6 m",
+   "marks": 1,
+   "kind": "calc",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1A.1",
+    "1A.4"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ21",
+   "n": "21",
+   "question": "(Surfer: six waves pass in one minute, amplitude 1.5 m.) Calculate the period of the waves.",
+   "options": [],
+   "answer": "10 s; 6 waves pass in 60 seconds",
+   "marks": 1,
+   "kind": "calc",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1A.4",
+    "1A.6"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ22",
+   "n": "22",
+   "question": "(Surfer: six waves pass in one minute, amplitude 1.5 m.) The waves are separated by a horizontal distance of 15 m. Calculate the speed of the waves.",
+   "options": [],
+   "answer": "1.5 $\\text{m s}^{-1}$; use $v = \\frac{\\lambda}{T}$",
+   "marks": 1,
+   "kind": "calc",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1A.6"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ23",
+   "n": "23",
+   "question": "Water waves pass from deep water, where they have a speed of 6.0 $\\text{m s}^{-1}$ and a wavelength of 12 m, into shallow water, where their speed is 3.0 $\\text{m s}^{-1}$. Calculate the frequency and wavelength in the shallow water.",
+   "options": [],
+   "answer": "The frequency is the same in both depths, $\\frac{v}{\\lambda}$ = 0.50 Hz. The wavelength $\\lambda = \\frac{v}{f} = \\frac{3.0}{0.5} = 6.0$ m",
+   "marks": 2,
+   "kind": "calc",
+   "size": "medium",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1A.6",
+    "1C.1"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ24",
+   "n": "24",
+   "question": "Use $c = 3.00 \\times 10^{8}\\ \\text{m s}^{-1}$. Calculate the wavelength of the radiation emitted by the Melbourne radio station Nova (100.3 MHz).",
+   "options": [],
+   "answer": "2.99 m. Use $c = f\\lambda$",
+   "marks": 1,
+   "kind": "calc",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1A.6",
+    "1B.1",
+    "1B.3",
+    "1B.4"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ25",
+   "n": "25",
+   "question": "List two or more societal uses of electromagnetic radiation with wavelengths in the range 700 nm to 1 mm.",
+   "options": [],
+   "answer": "This is the IR region. Uses could include thermal imaging, night vision goggles, remote controls, heat lamps, IR saunas, IR astronomy, optical fibre signals",
+   "marks": 1,
+   "kind": "recall",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1B.3",
+    "1B.4"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ26",
+   "n": "26",
+   "question": "List two or more societal uses of electromagnetic radiation with wavelengths in the range 1 m to 1 mm.",
+   "options": [],
+   "answer": "This is the microwave range. Uses could include cooking, radar, remote sensing, microwave astronomy, communications, smartphones, spectroscopy, diathermy",
+   "marks": 1,
+   "kind": "recall",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1B.3",
+    "1B.4"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ27",
+   "n": "27",
+   "question": "List two or more societal uses of electromagnetic radiation with wavelengths in the range 10 nm to 400 nm.",
+   "options": [],
+   "answer": "This is the UV range. Uses could include, vitamin D therapy, UV astronomy, medical and food sterilisation, phototherapy for skin conditions",
+   "marks": 1,
+   "kind": "recall",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1B.3",
+    "1B.4"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ28",
+   "n": "28",
+   "question": "List two or more societal uses of electromagnetic radiation with wavelengths of <10 pm.",
+   "options": [],
+   "answer": "This is the gamma ray region. Uses could include medical and food sterilisation, medical imaging, medical therapy, gamma ray astronomy, industrial fault finding and tracing, electrostatic discharging",
+   "marks": 1,
+   "kind": "recall",
+   "size": "quick",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1B.3",
+    "1B.4"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ29",
+   "n": "29",
+   "question": "Students send light rays through a sphere filled with liquid of refractive index $n$. The arrangement is shown below. The light is monochromatic. The sphere is surrounded by air ($n_{air}$ = 1.00). The dashed line shows the normal.",
+   "options": [],
+   "answer": "a 1.94. Use Snell's law. b [answer diagram]",
+   "marks": 3,
+   "kind": "calc",
+   "size": "long",
+   "parts": [
+    {
+     "n": "a",
+     "question": "Angle A = 55° and angle B = 25°. Calculate the value of $n$. (1 mark)",
+     "answer": "1.94. Use Snell's law.",
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "The liquid is replaced by a different liquid, with a larger value of $n$. Students notice that the paths of the two light rays shown in the diagram are changed. Sketch the changed paths of the light rays on the diagram. (2 marks)",
+     "answer": "[answer diagram: img/CH1_RQ29b_answer.png]",
+     "size": "medium"
+    }
+   ],
+   "img": [
+    "img/CH1_RQ29.png",
+    "img/CH1_RQ29b_answer.png"
+   ],
+   "criteria": [
+    "1C.1",
+    "1C.4",
+    "1C.5"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ30",
+   "n": "30",
+   "question": "A yellow light ray travels symmetrically through a triangular glass prism, as shown. The prism is surrounded by air ($n_{air}$ = 1.00). Angle $b$ = 30° and angle $a$ = 60°.",
+   "options": [],
+   "answer": "a c = 30°. The path is symmetric. b 1.73. Find angle d = 60° (symmetry and angle sum of triangle being 180°); apply Snell's law to entering ray. c Blue light has larger refractive index than yellow light and so is bent more towards the normal [answer diagram]",
+   "marks": 6,
+   "kind": "calc",
+   "size": "long",
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the value of the angle $c$. Show your reasoning. (2 marks)",
+     "answer": "c = 30°. The path is symmetric.",
+     "size": "medium"
+    },
+    {
+     "n": "b",
+     "question": "Calculate the value of the refractive index of the glass prism. (2 marks)",
+     "answer": "1.73. Find angle $d$ = 60° (symmetry and angle sum of triangle being 180°); apply Snell's law to entering ray.",
+     "size": "medium"
+    },
+    {
+     "n": "c",
+     "question": "The original ray of yellow light is replaced by a ray of a mixture of yellow and blue light. It strikes the prism at the same angle as before. Draw a labelled sketch to show the effect on the new light ray. (2 marks)",
+     "answer": "Blue light has larger refractive index than yellow light and so is bent more towards the normal [answer diagram: img/CH1_RQ30c_answer.png]",
+     "size": "medium"
+    }
+   ],
+   "img": [
+    "img/CH1_RQ30.png",
+    "img/CH1_RQ30c_answer.png"
+   ],
+   "criteria": [
+    "1C.1",
+    "1C.2",
+    "1C.4",
+    "1C.5"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ31",
+   "n": "31",
+   "question": "Use the diagram below to explain the way that the light rays form an image of the pencil at point Y.",
+   "options": [],
+   "answer": "Rays of light from point X of the pencil refract at the surface of the liquid and enter the eye in the direction shown. The eye traces these back to point Y, seeing an image of point X at position Y.",
+   "marks": 3,
+   "kind": "explain",
+   "size": "medium",
+   "parts": [],
+   "img": [
+    "img/CH1_RQ31.png"
+   ],
+   "criteria": [
+    "1C.4",
+    "1C.6"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ32",
+   "n": "32",
+   "question": "Use the diagram below to explain how the wave crests shown predict the direction of the light rays entering the slower medium.",
+   "options": [],
+   "answer": "The parallel wavefronts indicate the direction of the light ray is perpendicular to them, as shown. When the wavefronts move into the glass medium they slow down as shown and this alters the direction of the rays as shown.",
+   "marks": 2,
+   "kind": "explain",
+   "size": "medium",
+   "parts": [],
+   "img": [
+    "img/CH1_RQ32.png"
+   ],
+   "criteria": [
+    "1C.1"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ33",
+   "n": "33",
+   "question": "Use the diagram below to explain how the wave crests shown predict the phenomenon of reflection from a smooth surface.",
+   "options": [],
+   "answer": "The wavefronts are perpendicular to the direction of travel of the waves. The wavefronts leave the reflecting surface at the same speed as they approach it, but change in direction, resulting in reflecting at the same angle to the normal (as shown).",
+   "marks": 2,
+   "kind": "explain",
+   "size": "medium",
+   "parts": [],
+   "img": [
+    "img/CH1_RQ33.png"
+   ],
+   "criteria": [
+    "1C.1"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH1-RQ34",
+   "n": "34",
+   "question": "Outline how you might practically investigate Snell's law, using a rectangular glass block, a monochromatic light ray source and a protractor.",
+   "options": [],
+   "answer": null,
+   "marks": 5,
+   "kind": "explain",
+   "size": "long",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1C.4"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   },
+   "answer_note": "Suggested responses: 'Answers vary'"
+  },
+  {
+   "id": "CH1-RQ35",
+   "n": "35",
+   "question": "Outline how you might practically investigate partial and total internal reflection, using a semicircular glass block, a monochromatic light ray source and a protractor.",
+   "options": [],
+   "answer": null,
+   "marks": 4,
+   "kind": "explain",
+   "size": "long",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1C.7"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   },
+   "answer_note": "Suggested responses: 'Answers vary'"
+  },
+  {
+   "id": "CH1-RQ36",
+   "n": "36",
+   "question": "Outline how you might practically investigate the phenomenon of colour dispersion, using a triangular glass prism, a light ray source and a protractor.",
+   "options": [],
+   "answer": null,
+   "marks": 3,
+   "kind": "explain",
+   "size": "long",
+   "parts": [],
+   "img": [],
+   "criteria": [
+    "1C.9"
+   ],
+   "src": {
+    "file": "Ch01 Review questions.docx"
+   },
+   "answer_note": "Suggested responses: 'Answers vary'"
+  }
+ ],
+ "summary": "Chapter 1 Summary\n\n1A The properties of waves\n\n-   The source of waves is broadly divided into mechanical and non-mechanical vibrations:\n\n    -   mechanical waves vibrate particles of a medium\n\n    -   non-mechanical waves (electrical and magnetic) do not require a medium and can travel through transparent materials and a vacuum.\n\n-   Wave motion transfers energy through vibrations; particles vibrate in place and are not transferred.\n\n-   Waves that vibrate up and down are called transverse waves (ocean swells or ripples in a pond).\n\n-   Waves that vibrate parallel to the direction of travel are called longitudinal waves (shaking a slinky parallel to its length).\n-   Key terms used to describe waves are amplitude (A), frequency (f), wavelength ($\\lambda$), period (T) and speed (v). Amplitude and wavelength are shown in the below diagram of a transverse wave.\n\n-   Amplitude (A) measures the maximum displacement of a wave from the neutral position.\n\n-   Wavelength (λ) measures the distance between repeated parts of the waves shape.\n\n-   Speed (v) measures the speed of the wave shape as it moves, which is determined by the medium through which it travels.\n\n-   The period (T) measures the time it takes for a wave shape to move one wavelength in the direction of travel.\n\n-   The frequency (f) is the number of wave shapes that pass a point every second, which is determined by the source of the wave.\n\n-   The relationship between wavelength, frequency, period and speed of waves is shown in the formula:      $\\lambda = \\frac{v}{f} = vT$\n\n1B Electromagnetic waves\n\n-   Electromagnetic waves are transverse waves made up of changing electric and magnetic fields and do not require a medium to propagate.\n\n-   All electromagnetic waves obey the wave equation ($v\\  = \\ f\\lambda$, wherein v = velocity,     f = frequency, and λ = wavelength) and have the same speed in a vacuum, which is equal to c, the speed of light in a vacuum (3.00 $\\times$ 10^8^ m s^--1^).\n\n-   Electromagnetic waves exist over a range of wavelengths and frequencies called an electromagnetic spectrum.\n\n-   The electromagnetic spectrum is divided up into regions based on wavelength.\n\n    -   Longer wavelength regions such as radio waves are useful for applications in communications and navigation as they can travel long distances.\n\n    -   Microwaves are used for heating (microwave ovens) as well as radar and remote sensing, as they are unaffected by scattering unlike optical wavelengths.\n\n    -   The infrared spectrum is used in thermal imaging and optical fibres, as well as TV remotes.\n\n    -   Shorter wavelength regions like UV are used in medical or food sterilisation, and enables our skin to generate vitamin D.\n\n    -   X-ray and gamma-ray are both used in medical imaging and therapies, such as treatment of cancer, as their shorter wavelengths have much higher energy.\n\n-   Earth receives energy from the sun as electromagnetic radiation.\n\n    -   Most radiation from the sun is visible light and infrared, with a small portion being ultraviolet and less than 1% from other regions of the electromagnetic spectrum.\n\n1C Reflection, refraction and dispersion\n\n-   Light is made up of vibrating electric and magnetic fields that may be represented as wavefronts that illustrate what is happening in terms of the wave properties of light.\n\n-   Light reflects when it meets a surface between two media.\n\n    -   If the surface is smooth, it reflects at the same angle that it strikes the surface.\n\n-   Most light rays do not arrive at surfaces at right angles, causing a change in the direction of a light beam; called a refraction.\n\n    -   The amount of refraction is measured by comparing the angle the light ray makes with the normal.\n\n    -   The refractive index (n) measures how fast light moves in a medium compared to air and is given by the formula:\n\n$n = \\frac{c}{v}$\n\n-   The mathematical link between $\\theta_{1}$ (angle of incidence) and $\\theta_{2}$ (angle of refraction), the refractive indices $n_{1}$ and $n_{2}$ and the speeds of light $v_{1}$ and $v_{2}$ is described by Snell's law:\n\n$n_{1}\\sin\\theta_{1} = n_{2}\\sin\\theta_{2}\\ \\ \\ \\ and\\ \\ \\ \\ \\ n_{1}v_{1} = n_{2}v_{2}$\n\n-   When a light ray travels across a surface between different media, only part of the light ray reaches the second medium, and the other part of the light ray will be reflected internally back into the first medium; the reflected ray is said to have undergone partial internal reflection.\n\n-   Total internal reflection occurs when light moves from a medium of higher refractive index to a lower one at an angle of incidence greater than or equal to the critical angle (wherein all the light at a surface is reflected with no refraction).\n\n-   Newton conducted his famous experiment where he passed a beam of sunlight through a triangular prism to produce a spectrum of colours; this separation of white light is called colour dispersion.\n\n-   Newton discovered that the difference in speeds for different colours of light causes each colour to refract differently and exit at a different position along the surface of the prism.\n\n-   A mirage is the result of the refraction of light in the layers of air above surfaces that are either hot or cool.\n\n    -   On a hot road, layers of air near the road are hotter than layers further away which affects the refractive index.\n\n    -   Consequently, rays travelling downwards bend away from the normal, which eventually internally reflect and travel upwards; producing the image below.\n-   Over cool surfaces, like the ocean, layers of air are warmer further away from the water.\n\n-   Light rays from a boat over the horizon that have been internally reflected are refracted back down to an observer, and the observer traces the rays back to the image of a boat apparently sailing in the sky; as shown in the image below.\n-   Total internal reflection is a key principle of optical fibre technology.\n-   Digital light signals enter the optical fibre at the left and are kept in the core by successive total internal reflections.\n\n-   These reflections are almost perfect and almost loss-free, the intensity of the light signal is maintained over many kilometres.\n\n-   Rainbows are formed from dispersion and internal reflection of the Sun's rays inside water droplets.\n\n-   A weaker return ray of sunlight occurs when there are two internal reflections inside the water droplets, forming a 'secondary' rainbow that is higher and fainter than the main rainbow with the colours reversed.\n\n    -   This 'secondary' rainbow is fainter than the primary rainbow because the internal reflections are only partial reflections.",
+ "test": {
+  "file": "Chapter 1 Test.docx",
+  "questions": 16,
+  "marks": 28,
+  "note": "Chapter 1 Test 1 (multiple choice + short answer, answers in the same file). Not indexed question by question."
+ },
+ "curated_resources": {
+  "file": "Ch01 Curated internet resources.docx",
+  "note": "Not indexed."
+ },
+ "powerpoint_figures": [
+  "1B PowerPoint Figure 1B–3.pptx",
+  "1B PowerPoint Table 1B–1.pptx",
+  "1C PowerPoint Figure 1C–13.pptx",
+  "1C PowerPoint Figure 1C–18.pptx",
+  "1C PowerPoint Figure 1C–31.pptx"
+ ],
+ "notes": "Review Q34–36 (practical outlines) have no model answer ('Answers vary'). RQ3 key B (equal visible and IR) matches the 44%/48% split in the text, though the checklist wording says 'mainly UV, visible and IR'. Criteria 1C.4, 1C.7, 1C.9 (practical investigations) have only long review questions; exit candidates use check-ins/section questions instead."
+}

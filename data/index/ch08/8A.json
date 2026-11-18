@@ -1,0 +1,1419 @@
+{
+ "code": "8A",
+ "title": "Momentum",
+ "chapter": 8,
+ "unit": 2,
+ "aos": 1,
+ "study_design": [
+  "Apply concepts of momentum to linear motion: $p = mv$",
+  "Explain changes in momentum as being caused by a net force: $\\Delta p = F_{\\text{net}}\\Delta t$",
+  "Analyse impulse in an isolated system (for collisions between objects moving in a straight line): $F\\Delta t = m\\Delta v$",
+  "Investigate and analyse theoretically and practically momentum conservation in one dimension"
+ ],
+ "criteria": [
+  "8A.1",
+  "8A.2",
+  "8A.3",
+  "8A.4",
+  "8A.5",
+  "8A.6"
+ ],
+ "glossary": [
+  {
+   "id": "8A-G1",
+   "term": "Momentum, p",
+   "def": "the product of an object’s mass and velocity",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "8A-G2",
+   "term": "Mass",
+   "def": "a body’s resistance to acceleration when a force is applied",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "8A-G3",
+   "term": "Inertia",
+   "def": "a body’s tendency to resist a change in its state of motion",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "8A-G4",
+   "term": "Closed system",
+   "def": "a system that does not allow the transfer of mass or energy to the surrounding environment",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "8A-G5",
+   "term": "Law of conservation of momentum",
+   "def": "for a collision involving two or more objects in a closed system, the total momentum will remain the same",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "8A-G6",
+   "term": "Kinetic energy",
+   "def": "the energy due to movement. It is measured in joules (J) and is a scalar",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "8A-G7",
+   "term": "Elastic collision",
+   "def": "a collision in which the total kinetic energy is the same both before and after the collision",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "8A-G8",
+   "term": "Inelastic collision",
+   "def": "a collision in which the total kinetic energy is larger before the collision than after the collision. The ‘missing’ energy is often converted into other forms, such as thermal energy and sound energy",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "8A-G9",
+   "term": "Impulse",
+   "def": "the change in momentum of an object, caused by a force acting for a certain amount of time",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 12
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F8A-1",
+   "name": "Formula 8A–1 Momentum",
+   "latex": "p = mv",
+   "where": [
+    {
+     "sym": "p",
+     "meaning": "Momentum",
+     "unit": "kg m s$^{-1}$"
+    },
+    {
+     "sym": "m",
+     "meaning": "Mass",
+     "unit": "kg"
+    },
+    {
+     "sym": "v",
+     "meaning": "Velocity",
+     "unit": "m s$^{-1}$"
+    }
+   ],
+   "criteria": [
+    "8A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "F8A-2",
+   "name": "Formula 8A–2 Conservation of momentum",
+   "latex": "\\sum p_{\\text{before}} = \\sum p_{\\text{after}} \\quad m_1u_1 + m_2u_2 + \\ldots = m_1v_1 + m_2v_2 + \\ldots",
+   "where": [
+    {
+     "sym": "m_1",
+     "meaning": "Mass of the first object",
+     "unit": "kg"
+    },
+    {
+     "sym": "m_2",
+     "meaning": "Mass of the second object",
+     "unit": "kg"
+    },
+    {
+     "sym": "u_1",
+     "meaning": "Initial velocity of the first object",
+     "unit": "m s$^{-1}$"
+    },
+    {
+     "sym": "u_2",
+     "meaning": "Initial velocity of the second object",
+     "unit": "m s$^{-1}$"
+    },
+    {
+     "sym": "v_1",
+     "meaning": "Final velocity of the first object",
+     "unit": "m s$^{-1}$"
+    },
+    {
+     "sym": "v_2",
+     "meaning": "Final velocity of the second object",
+     "unit": "m s$^{-1}$"
+    }
+   ],
+   "criteria": [
+    "8A.2",
+    "8A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "F8A-3",
+   "name": "Formula 8A–3 Kinetic energy",
+   "latex": "E_\\text{k} = \\frac{1}{2}mv^2",
+   "where": [
+    {
+     "sym": "E_\\text{k}",
+     "meaning": "Kinetic energy",
+     "unit": "J"
+    },
+    {
+     "sym": "m",
+     "meaning": "Mass",
+     "unit": "kg"
+    },
+    {
+     "sym": "v",
+     "meaning": "Velocity",
+     "unit": "m s$^{-1}$"
+    }
+   ],
+   "criteria": [
+    "8A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "F8A-4",
+   "name": "Formula 8A–4 Impulse",
+   "latex": "\\Delta p = mv - mu = I = F_{\\text{av}}\\Delta t",
+   "where": [
+    {
+     "sym": "\\Delta p",
+     "meaning": "Change in momentum",
+     "unit": "kg m s$^{-1}$ or N s"
+    },
+    {
+     "sym": "I",
+     "meaning": "Impulse",
+     "unit": "kg m s$^{-1}$ or N s"
+    },
+    {
+     "sym": "m",
+     "meaning": "Mass",
+     "unit": "kg"
+    },
+    {
+     "sym": "v",
+     "meaning": "Final velocity",
+     "unit": "m s$^{-1}$"
+    },
+    {
+     "sym": "u",
+     "meaning": "Initial velocity",
+     "unit": "m s$^{-1}$"
+    },
+    {
+     "sym": "F_{\\text{av}}",
+     "meaning": "Average net force applied",
+     "unit": "N"
+    },
+    {
+     "sym": "\\Delta t",
+     "meaning": "Time that the force is applied",
+     "unit": "s"
+    }
+   ],
+   "criteria": [
+    "8A.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 12
+   }
+  }
+ ],
+ "engage": {
+  "heading": "Just how bad is a concussion?",
+  "text": "Our brain is a fragile organ that houses 100 billion interconnected nerve cells called neurons. To protect this fragile organ, the brain is encased in a hard skull, and between the brain and the hard skull is a layer of cerebrospinal fluid, which acts as a shock absorber against sudden impacts. During an impact, the brain continues to move within the skull. Usually the cerebrospinal fluid shifts to accommodate this movement and the momentum transferred from the brain into the moving cerebrospinal fluid is sufficient to slow the brain down. But sometimes the brain can be moved so violently that its momentum is not fully transferred to the cerebrospinal fluid and the brain hits the wall of the skull. This causes shockwaves through the brain that can shear the neurons apart. The dying neurons release toxins that can cause further damage. The blood vessels within the brain also have their momentum abruptly changed, which places large forces on these delicate structures and can rupture them. An impact of the brain against the skull wall that causes neurological damage is known as a mild traumatic brain injury or a concussion. [continues on p. 421: symptoms, sub-concussive impacts, helmets (Figure 8A–2), accelerometers in mouth guards]",
+  "src": {
+   "file": "Physics12_Ch08.pdf",
+   "page": 5
+  }
+ },
+ "chunks": [
+  {
+   "id": "8A-E1",
+   "heading": "Modelling motion with momentum",
+   "text": "A heavy object is harder to stop than a lighter object at the same speed. This simple fact helps you to develop an understanding of momentum. Momentum, $p$, is an object’s mass multiplied by its velocity. [Formula 8A–1] Momentum is a vector quantity and it must have both magnitude and direction. The direction of the momentum vector and velocity vector will always be the same. Momentum can only be changed when a net external force is applied.",
+   "figures": [],
+   "criteria": [
+    "8A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "8A-E2",
+   "heading": "Momentum and inertia",
+   "text": "It is important to note that momentum and inertia are two different concepts. An object that is stationary has no momentum, but it has inertia. Inertia is linked to Newton’s first law of motion and is defined as a body’s tendency to resist a change in its state of motion when acted upon by a net force. The amount of inertia an object has depends only on the amount of mass that it has – the greater the mass, the greater the inertia. The law of conservation of momentum states that for a collision involving two or more objects in a closed system, the total momentum will remain the same. That is, the total momentum of a system will remain constant as long as no external net force acts on the system. The law of conservation of momentum can be expressed mathematically as shown in the Formula 8A–2 box. [Formula 8A–2] For one-dimensional collisions it is important to use a positive or a negative sign to indicate the direction of straight-line motion.",
+   "figures": [],
+   "criteria": [
+    "8A.2",
+    "8A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "8A-E3",
+   "heading": "Two objects colliding and combining",
+   "text": "In some cases, two or more objects may collide and then combine and move as one. The resulting object will have the mass of: $m_1u_1 + m_2u_2 + \\ldots = m_3v_3$",
+   "figures": [],
+   "criteria": [
+    "8A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "8A-E4",
+   "heading": "A single object breaking apart",
+   "text": "In other cases, a single object may break apart into two or more other objects in what is known as an explosive collision. In this case, the law of conservation of momentum still applies: $m_1u_1 = m_2v_2 + m_3v_3 + \\ldots$",
+   "figures": [],
+   "criteria": [
+    "8A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "8A-E5",
+   "heading": "Kinetic energy",
+   "text": "Kinetic energy is the energy of motion. The kinetic energy of a body can be calculated by: [Formula 8A–3]",
+   "figures": [],
+   "criteria": [
+    "8A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "8A-E6",
+   "heading": "Elastic and inelastic collisions",
+   "text": "Collisions may be elastic or inelastic. If they are elastic, then it is possible to predict the final velocity of the two colliding objects. Completely elastic collisions occur between gas particles and the walls of the container. However, most collisions are not elastic and some of the energy is converted into thermal energy and sound energy. If a collision is 100% inelastic, then all of the energy is converted into thermal energy and sound energy and the two colliding objects will be stationary after the collision. To determine if a collision is elastic or inelastic, the total kinetic energy must be calculated before and after the collision. If the total kinetic energy before and after the collision is equal, then it is an elastic collision. If the total kinetic energy before the collision is greater than the total kinetic energy after the collision, then it is an inelastic collision.",
+   "figures": [
+    "8A-F3",
+    "8A-F4"
+   ],
+   "criteria": [
+    "8A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "8A-E7",
+   "heading": "Change in momentum (impulse)",
+   "text": "When all objects are considered in a collision, momentum is conserved provided that no net external force acts on the system. However, if only one object is considered, then momentum may not be conserved (as the momentum is transferred to other objects that are not considered). When the velocity of an object changes, its momentum also changes. An increase in velocity means an increase in momentum, and a decrease in velocity means a decrease in momentum. This change in momentum is sometimes referred to as impulse. [Formula 8A–4] Remember that the only way to change an object’s velocity (and therefore its momentum) is to apply a net force on the object. The change in momentum (the impulse) is a vector quantity; it requires both a magnitude and a direction. Momentum has a relationship with average net force on the object, as the change in momentum over time is the average net force on the object (this is because it takes a net external force to change momentum). This can be seen in the following way. Start with Newton’s second law for an average net force: $F_{\\text{av}} = ma_{\\text{av}}$ Note that an average acceleration is equivalent to a change in velocity over time: $F_{\\text{av}} = \\frac{m\\Delta v}{\\Delta t}$ Using the definition of momentum, recognise that the numerator is a change in momentum: $F_{\\text{av}} = \\frac{\\Delta p}{\\Delta t}$ Finally, rearrange this equation, using the definition of impulse: $\\Delta p = F_{\\text{av}}\\Delta t = I = mv - mu$",
+   "figures": [],
+   "criteria": [
+    "8A.2",
+    "8A.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 12
+   }
+  },
+  {
+   "id": "8A-E8",
+   "heading": "Graphing the change in momentum (impulse)",
+   "text": "The area under a force–time graph is the impulse. The impulse for the graph in Figure 8A–5 would be calculated as follows: $I = F_{\\text{av}}\\Delta t = (6)(8) = 48\\text{ N s}$ If the gradient is constant (and not zero), as in Figure 8A–6, then the impulse can be calculated using the area of a triangle formula. $I$ = area under force–time graph = area of triangle $= \\frac{1}{2}(8)(8) = 32\\text{ N s}$ In some cases, it may be appropriate to use several shapes to calculate the area under the graph. To calculate the area under Figure 8A–7, a square and a triangle are both used: $I$ = area under force–time graph = area of rectangle + area of triangle $= (9)(6) + \\frac{1}{2}(9)(2) = 63\\text{ N s}$",
+   "figures": [
+    "8A-F5",
+    "8A-F6",
+    "8A-F7"
+   ],
+   "criteria": [
+    "8A.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 14
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "8A-F3",
+   "label": "Figure 8A–3",
+   "caption": "Pool balls moving towards each other before the collision",
+   "img": "img/8A_fig8A-3.png",
+   "important": true,
+   "why": "Before-collision diagram for the elastic/inelastic worked example",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "8A-F4",
+   "label": "Figure 8A–4",
+   "caption": "Pool balls moving away from each other just after the collision",
+   "img": "img/8A_fig8A-4.png",
+   "important": true,
+   "why": "After-collision diagram (pairs with 8A–3)",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "8A-F5",
+   "label": "Figure 8A–5",
+   "caption": "A force–time graph showing a constant force of 6 N being applied to an object for 8 s",
+   "img": "img/8A_fig8A-5.png",
+   "important": true,
+   "why": "Impulse as area of a rectangle",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 14
+   }
+  },
+  {
+   "id": "8A-F6",
+   "label": "Figure 8A–6",
+   "caption": "A force–time graph showing decreasing force between 8 and 0 N being applied to an object for 8 s",
+   "img": "img/8A_fig8A-6.png",
+   "important": true,
+   "why": "Impulse as area of a triangle",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 14
+   }
+  },
+  {
+   "id": "8A-F7",
+   "label": "Figure 8A–7",
+   "caption": "A force–time graph showing a constant force of 9 N being applied to an object for 6, then a decreasing force between 9 and 0 N applied for 2 s",
+   "img": "img/8A_fig8A-7.png",
+   "important": true,
+   "why": "Impulse from composite shapes (PowerPoint figure also on drive)",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 14
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE8A-1",
+   "title": "Momentum of a car",
+   "question": "Calculate the momentum of a $1.45\\times10^{3}$ kg car driving north at 72.0 km h$^{-1}$.",
+   "steps": [
+    "Convert the speed from km h$^{-1}$ to m s$^{-1}$:",
+    "$u = \\frac{72}{3.6} = 20.0\\text{ m s}^{-1}$",
+    "Substitute into the momentum equation:",
+    "$p = mv = (1.45\\times10^{3})(20) = 2.9\\times10^{4}\\text{ kg m s}^{-1}$",
+    "Therefore, the momentum of the car is $2.9\\times10^{4}$ kg m s$^{-1}$ north."
+   ],
+   "answer": "$2.9\\times10^{4}$ kg m s$^{-1}$ north",
+   "img": [],
+   "criteria": [
+    "8A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "WE8A-2",
+   "title": "Momentum in a head on collision",
+   "question": "A car of mass 1400 kg is moving to the right at a velocity of 20.0 m s$^{-1}$. It collides with a car of mass 1000 kg moving at 30.0 m s$^{-1}$ to the left. After the collision, the 1400 kg mass car moves to the left with a velocity of 12.5 m s$^{-1}$. Calculate the velocity of the 1000 kg car after the collision.",
+   "steps": [
+    "Let moving to the right be the positive direction.",
+    "Before the collision: $u_1 = 20\\text{ m s}^{-1}$, $u_2 = -30\\text{ m s}^{-1}$, $m_1 = 1400$ kg, $m_2 = 1000$ kg",
+    "After the collision: $v_1 = -12.5\\text{ m s}^{-1}$",
+    "Rearrange the conservation of momentum formula to find $v_2$:",
+    "$m_1u_1 + m_2u_2 = m_1v_1 + m_2v_2$",
+    "$m_2v_2 = m_1u_1 + m_2u_2 - m_1v_1$",
+    "$v_2 = \\frac{m_1u_1 + m_2u_2 - m_1v_1}{m_2} = \\frac{(1400)(20) + (1000)(-30) - (1400)(-12.5)}{1000} = 15.5\\text{ m s}^{-1}$",
+    "Therefore, the 1000 kg car will be moving to the right at 15.5 m s$^{-1}$ after the collision."
+   ],
+   "answer": "15.5 m s$^{-1}$ to the right",
+   "img": [
+    "img/8A_WE8A-2.png"
+   ],
+   "criteria": [
+    "8A.2",
+    "8A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "WE8A-3",
+   "title": "Momentum in a rear end collision",
+   "question": "A car that has a mass of 1350 kg is moving in traffic at 13.9 m s$^{-1}$ north. The driver of the car is texting and rear ends a 1550 kg car in front of it that was moving at a velocity of 2.00 m s$^{-1}$ north when it was hit. The two cars stick and move as one. Calculate the velocity that the two cars will have after the collision.",
+   "steps": [
+    "Let moving to the right be the positive direction.",
+    "Before the collision: $u_1 = 13.9\\text{ m s}^{-1}$, $m_1 = 1350$ kg, $u_2 = 2.00\\text{ m s}^{-1}$, $m_2 = 1550$ kg",
+    "After the collision:",
+    "$m_3 = m_1 + m_2 = (1350) + (1550) = 2900$ kg",
+    "Rearrange the conservation of momentum formula to find $v_3$:",
+    "$m_1u_1 + m_2u_2 = m_3v_3$",
+    "$v_3 = \\frac{m_1u_1 + m_2u_2}{m_3} = \\frac{(1350)(13.9) + (1550)(2.00)}{(2900)} = 7.54\\text{ m s}^{-1}$",
+    "Therefore, the two cars will be moving to the right at 7.54 m s$^{-1}$ after the collision."
+   ],
+   "answer": "7.54 m s$^{-1}$ (book says 'to the right'; question is north)",
+   "img": [
+    "img/8A_WE8A-3.png"
+   ],
+   "criteria": [
+    "8A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "WE8A-4",
+   "title": "Momentum from throwing a ball",
+   "question": "A person of mass 70.0 kg is skating on a frozen lake holding a 200 g ball. The person stops and then throws the ball south with a velocity of 21.3 m s$^{-1}$. Calculate the velocity of the person once the ball is thrown. Assume that the friction between the skater and the ice is negligible.",
+   "steps": [
+    "Let south be the positive direction.",
+    "Before the collision: $m_1 = m_2 + m_3 = 0.2 + 70.0 = 70.2$ kg, $u_1 = 0\\text{ m s}^{-1}$",
+    "After the collision: $m_2 = 0.200$ kg, $v_2 = 21.3\\text{ m s}^{-1}$, $m_3 = 70.0$ kg",
+    "Rearrange the conservation of momentum formula to find $v_3$:",
+    "$m_1u_1 = m_2v_2 + m_3v_3$",
+    "$m_3v_3 = m_1u_1 - m_2v_2$",
+    "$v_3 = \\frac{m_1u_1 - m_2v_2}{m_3} = \\frac{(70.2)(0) - (0.200)(21.3)}{70.0} = -0.0609\\text{ m s}^{-1}$",
+    "Therefore, the person will be moving north at 0.0609 m s$^{-1}$ after the ball is thrown."
+   ],
+   "answer": "0.0609 m s$^{-1}$ north",
+   "img": [],
+   "criteria": [
+    "8A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "WE8A-5",
+   "title": "Inelastic collision",
+   "question": "Two billiard or pool balls, each with a mass of 0.160 kg, and moving with a constant speed of 5 m s$^{-1}$ collide head on with each other. After the collision, the balls separate, each moving with a speed of 4 m s$^{-1}$. A diagram of this situation is shown in Figure 8A–3 and 8A–4. a Show that the momentum of the balls is conserved. b Show that this collision is inelastic.",
+   "steps": [
+    "a Calculate the total momentum just before and just after the collision:",
+    "$\\sum p_{\\text{before}} = m_1u_1 + m_2u_2 = (0.160)(5) + (0.160)(-5) = 0\\text{ kg m s}^{-1}$",
+    "$\\sum p_{\\text{after}} = m_1v_1 + m_2v_2 = (0.160)(4) + (0.160)(-4) = 0\\text{ kg m s}^{-1}$",
+    "Note that the velocity of one of the balls must be negative because the balls are travelling in opposite directions.",
+    "Since $\\sum p_{\\text{before}} = \\sum p_{\\text{after}}$, momentum is conserved.",
+    "b Calculate the total kinetic energy before and after the collision:",
+    "$\\sum E_{\\text{k before}} = \\frac{1}{2}m_1(u_1)^2 + \\frac{1}{2}m_2(u_2)^2 = \\frac{1}{2}(0.160)(5)^2 + \\frac{1}{2}(0.160)(5)^2 = 4\\text{ J}$",
+    "$\\sum E_{\\text{k after}} = \\frac{1}{2}m_1(v_1)^2 + \\frac{1}{2}m_2(v_2)^2 = \\frac{1}{2}(0.160)(4)^2 + \\frac{1}{2}(0.160)(4)^2 = 2.56\\text{ J}$",
+    "Therefore, since $\\sum E_{\\text{k before}} > \\sum E_{\\text{k after}}$, the collision is inelastic."
+   ],
+   "answer": "a 0 kg m s$^{-1}$ before and after; b 4 J > 2.56 J, inelastic",
+   "img": [
+    "img/8A_fig8A-3.png",
+    "img/8A_fig8A-4.png"
+   ],
+   "criteria": [
+    "8A.2",
+    "8A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "WE8A-6",
+   "title": "Applying impulse",
+   "question": "A person is travelling south in a car at 72 km h$^{-1}$ when they see an object on the road. They slam on the brakes and come to a complete stop in 4 seconds. The mass of the driver is 70 kg and the mass of the car is 1330 kg. a Calculate the change in momentum of the car and driver. b Calculate the average force that the road applies to the car in order to stop it.",
+   "steps": [
+    "a Let south be the positive direction.",
+    "Convert the initial speed from km h$^{-1}$ to m s$^{-1}$: $u = \\frac{72}{3.6} = 20\\text{ m s}^{-1}$",
+    "Find the change in momentum, noting that the final velocity is zero:",
+    "$\\Delta p = mv - mu = (70 + 1330)(0) - (70 + 1330)(20) = -2.8\\times10^{4}\\text{ kg m s}^{-1}$",
+    "Therefore, the change in momentum (impulse) is $2.8\\times10^{4}$ kg m s$^{-1}$ north.",
+    "b Use the definition of impulse:",
+    "$I = \\Delta p = F_{\\text{av}}\\Delta t$",
+    "$F_{\\text{av}} = \\frac{\\Delta p}{\\Delta t} = \\frac{2.8\\times10^{4}}{4} = 7000\\text{ N}$",
+    "Therefore, the average force applied by the road is 7000 N north."
+   ],
+   "answer": "a $2.8\\times10^{4}$ kg m s$^{-1}$ north; b 7000 N north",
+   "img": [],
+   "criteria": [
+    "8A.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 13
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "8A-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "Two football players are running towards each other. One player of mass 73 kg is travelling east down the field at 9.88 m s$^{-1}$ and the other player, who has a mass of 103 kg, is running towards him at 6.53 m s$^{-1}$ west. If the two players tackle and move as one, calculate the velocity after the collision.",
+   "answer": "$m_1u_1 + m_2u_2 = m_3v_3$; $v_3 = \\frac{m_1u_1 + m_2u_2}{m_3} = \\frac{(73)(9.88)+(103)(-6.53)}{73+103} = 0.281\\text{ m s}^{-1}$; the positive indicates the direction, east.",
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice",
+    "donow"
+   ],
+   "criteria": [
+    "8A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "8A Check-in – Set 1.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8A-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "A tennis player hits a tennis ball of mass 59 g that is travelling at 26.3 m s$^{-1}$ north down the court with their tennis racquet of mass 300 g that is travelling at 24.9 m s$^{-1}$ south. If the tennis ball travels at 29.8 m s$^{-1}$ south immediately after the collision, calculate the velocity of the racquet immediately after the collision.",
+   "answer": "$m_1u_1 + m_2u_2 = m_1v_1 + m_2v_2$; $m_2v_2 = m_1u_1 + m_2u_2 - m_1v_1$; $v_2 = \\frac{m_1u_1 + m_2u_2 - m_1v_1}{m_2} = \\frac{(0.059)(26.3)+(0.3)(-24.9)-(0.059)(-29.8)}{0.3} = -13.9\\text{ m s}^{-1}$; where the negative indicates the direction, south.",
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "8A Check-in – Set 1.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8A-CI1.3",
+   "set": 1,
+   "n": 3,
+   "question": "A roller skater of mass 83 kg, initially at rest, throws a 2 kg medicine ball east with a velocity of 10.5 m s$^{-1}$. Calculate the velocity of the roller skater after they have thrown the medicine ball.",
+   "answer": "$m_1u_1 = m_2v_2 + m_3v_3$; $v_3 = \\frac{m_1u_1 - m_2v_2}{m_3} = \\frac{(83+2)(0)-(2)(-10.5)}{83} = 0.253\\text{ m s}^{-1}$; where the positive indicates the direction, west.",
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "8A Check-in – Set 1.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8A-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "A car of mass 1300 kg is travelling at 27 km h$^{-1}$. The car then accelerates to a velocity of 63 km h$^{-1}$ in 14 s. Calculate the magnitude of the change in momentum of the car.",
+   "answer": "$u = \\frac{27}{3.6} = 7.5\\text{ m s}^{-1}$; $v = \\frac{63}{3.6} = 17.5\\text{ m s}^{-1}$; $\\Delta p = mv - mu = (1300)(17.5) - (1300)(7.5) = 1.30\\times10^{4}\\text{ kg m s}^{-1}$",
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8A.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "8A Check-in – Set 2.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8A-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "A group of engineers are working together to design a new material for a diving board that will launch a diver to the greatest height. They test two the materials by building two prototype diving boards and measure the force applied to the material over time as a 70 kg person dives on the boards. Their results are shown below. a Calculate the impulse given to the person while in contact with the diving board. b Which material, A or B, should the engineers choose? Justify your answer.",
+   "answer": "a Area under the curve $= (2)(0.5)(2800)(0.1) = 280\\text{ kg m s}^{-1}$. Or by: Area under the curve $= (2)(0.5)(1400)(0.2) = 280\\text{ kg m s}^{-1}$. b Material B. In both cases the diver will reach the same vertical height as the impulse is the same. Material B has a greater time with which this impulse is given to the diver so, according to the formula $F = \\frac{I}{\\Delta t}$, the force on the diver will be reduced. This may reduce injury to the diver.",
+   "kind": "graph",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8A.6",
+    "8B.9"
+   ],
+   "img": [
+    "img/8A_CI2-2.png"
+   ],
+   "src": {
+    "file": "8A Check-in – Set 2.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8A-CI2.3",
+   "set": 2,
+   "n": 3,
+   "question": "Modern running shoes often have a rigid plate within the shoe that stores energy when the shoes hits the ground. This energy is then returned to the runner when the shoes lifts off the ground. The force–time graph of the shoe of an 83 kg runner as it is in contact with the ground is shown. Calculate the change in momentum of the person when the shoe is in contact with the ground.",
+   "answer": "$I = \\Delta p = (0.5)(4200)(0.3) = 630\\text{ kg m s}^{-1}$",
+   "kind": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8A.6"
+   ],
+   "img": [
+    "img/8A_CI2-3.png"
+   ],
+   "src": {
+    "file": "8A Check-in – Set 2.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8A-CI2.4",
+   "set": 2,
+   "n": 4,
+   "question": "A car of mass 1450 kg that is travelling at 108 km h$^{-1}$ west collides into a car of mass 980 kg that is travelling at 99 km h$^{-1}$ east. When the two cars collide, they fuse as one. a Calculate the velocity of wreckage after the collision. b Is this collision elastic or inelastic? Justify your answer with calculations.",
+   "answer": "a Take west as positive. $u_1 = \\frac{108}{3.6} = 30\\text{ m s}^{-1}, u_2 = \\frac{99}{3.6} = 27.5\\text{ m s}^{-1}$; $m_1u_1 + m_2u_2 = m_3v_3$; $v_3 = \\frac{m_1u_1+m_2u_2}{m_3} = \\frac{(1450)(30)+(980)(-27.5)}{1450+980} = 6.81\\text{ m s}^{-1}$ west. b $\\Sigma E_{\\text{k before}} = (0.5)(1450)(30^2)+(0.5)(980)(27.5^2) = 1.02\\times10^{6}\\text{ J}$; $\\Sigma E_{\\text{k after}} = (0.5)(1450+980)(6.81^2) = 5.63\\times10^{4}\\text{ J}$. As $E_\\text{k}$ before > $E_\\text{k}$ after, the collision is inelastic.",
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8A.3",
+    "8A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "8A Check-in – Set 2.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "8A-SQ1",
+   "n": "1",
+   "question": "Which of the following is a unit for momentum?",
+   "options": [
+    "A. N s$^{-1}$",
+    "B. N s",
+    "C. kg m s$^{-1}$",
+    "D. Both B and C"
+   ],
+   "answer": "D",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "8A Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8A-SQ2",
+   "n": "2",
+   "question": "A cyclist is travelling down a steep hill at 81 km h$^{-1}$. The bike and cyclist have a combined mass of 120 kg. The momentum of the bike and cyclist is",
+   "options": [
+    "A. 2.70 × 10$^{3}$ kg m s$^{-1}$",
+    "B. 9.72 × 10$^{3}$ kg m s$^{-1}$",
+    "C. 14.6 × 10$^{3}$ kg m s$^{-1}$",
+    "D. 35.0 × 10$^{3}$ kg m s$^{-1}$"
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "8A Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8A-SQ3",
+   "n": "3",
+   "question": "In a crash test, a car is travelling north at 101 km h$^{-1}$ and then hits a large sandbag. The car and sandbag continue moving north as one at a velocity of 34 km h$^{-1}$. Which of the following statements is correct?",
+   "options": [
+    "A. The direction of the impulse on the car is south.",
+    "B. The change in momentum of the sandbag is south.",
+    "C. The change in momentum of the car is north.",
+    "D. Since the car has a good crumple zone, the change in momentum is smaller that if the car had a poor crumple zone."
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "8A.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "8A Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8A-SQ4",
+   "n": "4",
+   "question": "A car of mass 1150 kg that is travelling at 72 km h$^{-1}$ applies the brakes. A force–time graph for the brakes applying to the car is shown. What is the magnitude of the change in momentum of the car?",
+   "options": [
+    "A. 18 N s",
+    "B. 20 N s",
+    "C. 1.80 × 10$^{4}$ N s",
+    "D. 2.00 × 10$^{4}$ N"
+   ],
+   "answer": "C",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "8A.6"
+   ],
+   "img": [
+    "img/8A_SQ4.png"
+   ],
+   "src": {
+    "file": "8A Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8A-SQ5",
+   "n": "5",
+   "question": "A car of mass 1150 kg that is travelling at 72 km h$^{-1}$ applies the brakes. A force–time graph for the brakes applying to the car is shown. What is the final velocity of the car?",
+   "options": [
+    "A. 4.35 km h$^{-1}$",
+    "B. 15.7 km h$^{-1}$",
+    "C. 30.5 km h$^{-1}$",
+    "D. 42.5 km h$^{-1}$"
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8A.5",
+    "8A.6"
+   ],
+   "img": [
+    "img/8A_SQ5.png"
+   ],
+   "src": {
+    "file": "8A Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8A-SQ6",
+   "n": "6",
+   "question": "A 16 g arrow is shot to the right at a target that is resting on the ground. When the bow is released, it applies an average force of 50 N on the arrow, which is initially at rest, for 0.05 s. a Calculate the impulse given to the arrow by the bow once it has been fired by the bow. b Calculate the final velocity of the arrow when it leaves the bow.",
+   "options": [],
+   "answer": "a $I = F_{\\text{avg}}\\Delta t = (50)(0.05) = 2.5\\text{ N s}$. Therefore, the impulse given to the arrow is $2.5\\text{ N s}$ to the right. b $I = \\Delta p = mv - mu$; $v = \\frac{I + mu}{m} = \\frac{(2.5)+(0.016)(0)}{(0.016)} = 156\\text{ m s}^{-1}$. Therefore, the velocity of the arrow is $156\\text{ m s}^{-1}$ to the right.",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8A.5"
+   ],
+   "img": [
+    "img/8A_SQ6.png"
+   ],
+   "src": {
+    "file": "8A Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   },
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the impulse given to the arrow by the bow once it has been fired by the bow."
+    },
+    {
+     "n": "b",
+     "question": "Calculate the final velocity of the arrow when it leaves the bow."
+    }
+   ]
+  },
+  {
+   "id": "8A-SQ7",
+   "n": "7",
+   "question": "A student sets up an experiment to test the effectiveness of crumple zones. The student places a crash cart with a digital force sensor at the top of a ramp. The cart is placed at the same height each time and the mass of the cart is the same each time. A heavy block is placed at the bottom of the ramp for the cart to collide into. A diagram of the student's set-up is shown below. The student takes a control run with no crumple zone and the digital force sensor graphs the force–time graph of the collision in red in the graph below. The student then makes their own prediction about the likely shape of the graph when a crumple zone is added to the cart. The student's prediction is shown in blue. Discuss the accuracy of the student's prediction. If you think the prediction is wrong, explain why and propose a correct prediction.",
+   "options": [],
+   "answer": "The prediction is incorrect. The car has the same mass and it will have the same velocity when it reaches the block because it is being released from the same height each time. This means the momentum will be the same when the cart hits the block and therefore the change in momentum will be the same. The change in momentum (impulse) is given by the area under the force–time graph and the area under the red and blue graphs are not the same. A more correct prediction would be to have the same area under the graph, but the cart with the crumple zone would have a longer collision, which reduces the average forces.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8A.6",
+    "8B.9"
+   ],
+   "img": [
+    "img/8A_SQ7-1.png",
+    "img/8A_SQ7-2.png"
+   ],
+   "src": {
+    "file": "8A Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8A-SQ8",
+   "n": "8",
+   "question": "In a crash test, two cars collide head on. One car has a mass of 1125 kg and is travelling east at 54 km h$^{-1}$. The other car has a mass of 1780 kg and is travelling west at 63 km h$^{-1}$. After the collision, the 1780 kg car moves west at 9 km h$^{-1}$. A diagram of this situation is shown below. a Calculate the velocity of the car of mass 1125 kg after the collision. b Is this an elastic collision? Justify your answer. c Calculate the impulse given to the car of mass 1125 kg. Include a direction in your answer. d Crumple zones are used in the front of cars. Their purpose is to be a zone that crumples easily, which extends the time of the collision. Use the impulse formula to explain why crumples zones are used in cars instead of a rigid front that would not bend due to force.",
+   "options": [],
+   "answer": "a Let east be the positive direction. $u_1 = \\frac{54}{3.6} = 15\\text{ m s}^{-1}$; $u_2 = \\frac{-63}{3.6} = -17.5\\text{ m s}^{-1}$; $v_2 = \\frac{-9}{3.6} = -2.5\\text{ m s}^{-1}$; $m_1u_1 + m_2u_2 = m_1v_1 + m_2v_2$; $v_1 = \\frac{m_1u_1 + m_2u_2 - m_2v_2}{m_1} = \\frac{(1125)(15)+(1780)(-17.5)-(1780)(-2.5)}{(1125)} = -8.73\\text{ m s}^{-1} = -31.4\\text{ km h}^{-1}$. Therefore, the 1125 kg car will be moving west at approximately 31 km h$^{-1}$. b $\\Sigma E_{\\text{k before}} = \\frac{1}{2}m_1(u_1)^2 + \\frac{1}{2}m_2(u_2)^2 = \\frac{1}{2}(1125)(15)^2 + \\frac{1}{2}(1780)(17.5)^2 = 3.99\\times10^{5}\\text{ J}$; $\\Sigma E_{\\text{k after}} = \\frac{1}{2}m_1(v_1)^2 + \\frac{1}{2}m_2(v_2)^2 = \\frac{1}{2}(1125)(8.73)^2 + \\frac{1}{2}(1780)(2.5)^2 = 4.84\\times10^{4}\\text{ J}$. As $\\Sigma E_{\\text{k before}} > \\Sigma E_{\\text{k after}}$, the collision is inelastic. c $I = \\Delta p = mv - mu = (1125)(-8.73) - (1125)(15) = -2.67\\times10^{4}\\text{ N s}$. Therefore, the impulse is $2.67\\times10^{4}\\text{ N s}$ to the west. d Because $I = F_{\\text{avg}}\\Delta t$, the impulse (or change in momentum) would remain constant. This means by extending the time of the crash the average force on the car and its occupants would be reduced.",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8A.3",
+    "8A.4",
+    "8A.5",
+    "8B.9"
+   ],
+   "img": [
+    "img/8A_SQ8.png"
+   ],
+   "src": {
+    "file": "8A Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   },
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the velocity of the car of mass 1125 kg after the collision."
+    },
+    {
+     "n": "b",
+     "question": "Is this an elastic collision? Justify your answer."
+    },
+    {
+     "n": "c",
+     "question": "Calculate the impulse given to the car of mass 1125 kg. Include a direction in your answer."
+    },
+    {
+     "n": "d",
+     "question": "Crumple zones are used in the front of cars. Their purpose is to be a zone that crumples easily, which extends the time of the collision. Use the impulse formula to explain why crumples zones are used in cars instead of a rigid front that would not bend due to force."
+    }
+   ]
+  },
+  {
+   "id": "8A-SQ9",
+   "n": "9",
+   "question": "A cannon and a cannonball have a combined mass of 250 kg. Both are initially at rest until the cannon is fired. Once fired, the cannonball of mass 60 kg moves north with a velocity of 78 m s$^{-1}$. Calculate the velocity of the cannon after it is fired; include a direction in your answer.",
+   "options": [],
+   "answer": "Let north be the positive direction. $m_1u_1 = m_2v_2 + m_3v_3$; $v_3 = \\frac{m_1u_1 - m_2v_2}{m_3} = \\frac{(250)(0)-(60)(78)}{(250-60)} = -24.6\\text{ m s}^{-1}$. Therefore, the velocity of the cannon is $24.6\\text{ m s}^{-1}$ to the south.",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "8A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "8A Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8A-SQ10",
+   "n": "10",
+   "question": "Jacinda designs a computer simulation program as part of her practical investigation into the physics of vehicle collisions. She simulates colliding a car of mass 1200 kg, moving at 10 m s$^{-1}$, into a stationary van of mass 2200 kg. After the collision, the van moves to the right at 6.5 m s$^{-1}$. This situation is shown below. a Calculate the speed of the car after the collision and indicate the direction it would be travelling in. Show your working. (2 marks) b Explain, using appropriate physics, why this collision represents an example of either an elastic or an inelastic collision. (3 marks) c The collision between the car and the van takes 40 ms. i Calculate the magnitude and indicate the direction of the average force on the van by the car. (3 marks) ii Calculate the magnitude and indicate the direction of the average force on the car by the van. (2 marks)",
+   "options": [],
+   "answer": "a Applying conservation of momentum ($p_i = p_f$): $m_1u_1 + m_2u_2 = m_1v_1 + m_2v_2$; $(1200)(10)+(2200)(0) = (1200)v_1 + (2200)(6.5)$; $v_1 = \\frac{-2300}{1200} = -1.9\\text{ m s}^{-1}$ left. b $\\Sigma E_{\\text{k before}} = \\frac{1}{2}m_1(u_1)^2 + \\frac{1}{2}m_2(u_2)^2 = \\frac{1}{2}(1200)(10)^2 + \\frac{1}{2}(2200)(0)^2 = 6.0\\times10^{4}\\text{ J}$; $\\Sigma E_{\\text{k after}} = \\frac{1}{2}m_1(v_1)^2 + \\frac{1}{2}m_2(v_2)^2 = \\frac{1}{2}(1200)(1.9)^2 + \\frac{1}{2}(2200)(6.5)^2 = 4.9\\times10^{4}\\text{ J}$. As $E_{\\text{k before}} > E_{\\text{k after}}$, the collision is inelastic. c i $F_{\\text{avg}} = \\frac{\\Delta p}{\\Delta t} = \\frac{m\\Delta v}{\\Delta t} = \\frac{(2200)(6.5-0)}{(40\\times10^{-3})} = 358\\text{ kN}$ to the right. ii $F_{\\text{avg}} = \\frac{\\Delta p}{\\Delta t} = \\frac{m\\Delta v}{\\Delta t} = \\frac{(1200)(-1.9-10)}{(40\\times10^{-3})} = -358\\text{ kN}$. The negative sign indicates the direction of the force, to the left. According to the predictions of Newton’s third law, the force will be equal in magnitude and opposite in direction.",
+   "marks": 10,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8A.3",
+    "8A.4",
+    "8A.5",
+    "8B.6"
+   ],
+   "img": [
+    "img/8A_SQ10.png"
+   ],
+   "src": {
+    "file": "8A Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   },
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the speed of the car after the collision and indicate the direction it would be travelling in. Show your working. (2 marks)"
+    },
+    {
+     "n": "b",
+     "question": "Explain, using appropriate physics, why this collision represents an example of either an elastic or an inelastic collision. (3 marks)"
+    },
+    {
+     "n": "c",
+     "question": "The collision between the car and the van takes 40 ms. i Calculate the magnitude and indicate the direction of the average force on the van by the car. (3 marks) ii Calculate the magnitude and indicate the direction of the average force on the car by the van. (2 marks)"
+    }
+   ]
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 8A–1 Momentum",
+  "total": 23,
+  "file": "8A Worksheet 8A–1 Momentum.docx",
+  "questions": [
+   {
+    "id": "WS8A-1",
+    "n": "1",
+    "question": "Calculate the magnitude of the momentum of a $75 \\text{kg}$ runner, running at $14.4 \\text{km }\\text{h}^{- 1}$. (2 marks)",
+    "answer": "$u = \\frac{14.4}{3.6} = 4 \\text{m }\\text{s}^{- 1}$ (1 mark) $p = mv = (75)(4) = 300 \\text{kg m }\\text{s}^{- 1}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8A-1",
+    "criteria": [
+     "8A.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "8A Worksheet 8A–1 Momentum.docx"
+    },
+    "answer_src": {
+     "file": "8A Worksheet 8A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8A-2",
+    "n": "2",
+    "question": "A bowling ball has a mass of 5 kg and is moving north with a velocity of 7.5 m s$^{-1}$. It collides with a stationary bowling pin that has a mass of 1.6 kg. After the collision, the bowling pin moves north with a velocity of 8.25 m s$^{-1}$. Calculate the velocity of the bowling ball after the collision. Include a direction on your answer. (3 marks)",
+    "answer": "Let north be positive: $m_{1}u_{1} + m_{2}u_{2} = m_{1}v_{1} + m_{2}v_{2} m_{2}v_{2} = m_{1}u_{1} + m_{2}u_{2} - m_{1}v_{1} v_{2} = \\frac{m_{1}u_{1} + m_{2}u_{2} - m_{1}v_{1}}{m_{2}} = \\frac{(1.6)(0) + (5)(7.5 ) - (1.6)(8.25 )}{5}$ (1 mark) $= 4.86 m s^{- 1}$(1 mark) The positive answer indicates the direction, north. (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8A-2",
+    "criteria": [
+     "8A.3"
+    ],
+    "img": [],
+    "src": {
+     "file": "8A Worksheet 8A–1 Momentum.docx"
+    },
+    "answer_src": {
+     "file": "8A Worksheet 8A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8A-3a",
+    "n": "3a",
+    "stem": "In a collision test, a car that has a mass of 1500 kg is moving at 15.0 m s$^{-1}$ east. Another car that has a mass of 2100 kg is moving with a velocity of 17.3 m s$^{-1}$ west when the two cars collide. The two cars fuse together and move as one after the collision.",
+    "question": "In a collision test, a car that has a mass of 1500 kg is moving at 15.0 m s$^{-1}$ east. Another car that has a mass of 2100 kg is moving with a velocity of 17.3 m s$^{-1}$ west when the two cars collide. The two cars fuse together and move as one after the collision. a Calculate the velocity that the two cars will have after the collision. Include a direction in your answer. (3 marks)",
+    "answer": "Let west be positive: $m_{1}u_{1} + m_{2}u_{2} = m_{3}v_{3} v_{3} = \\frac{m_{1}u_{1} + m_{2}u_{2}}{m_{3}} = \\frac{(1500 )( - 15 ) + (2100)(17.3 )}{(1500 + 2100)}$ (1 mark) $= 3.84 \\text{m }\\text{s}^{- 1}$(1 mark) The positive answer indicates the direction, west. (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8A-3",
+    "criteria": [
+     "8A.3"
+    ],
+    "img": [],
+    "src": {
+     "file": "8A Worksheet 8A–1 Momentum.docx"
+    },
+    "answer_src": {
+     "file": "8A Worksheet 8A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8A-3b",
+    "n": "3b",
+    "stem": "In a collision test, a car that has a mass of 1500 kg is moving at 15.0 m s$^{-1}$ east. Another car that has a mass of 2100 kg is moving with a velocity of 17.3 m s$^{-1}$ west when the two cars collide. The two cars fuse together and move as one after the collision.",
+    "question": "In a collision test, a car that has a mass of 1500 kg is moving at 15.0 m s$^{-1}$ east. Another car that has a mass of 2100 kg is moving with a velocity of 17.3 m s$^{-1}$ west when the two cars collide. The two cars fuse together and move as one after the collision. b Is this an elastic or an inelastic collision? Justify your answer. (3 marks)",
+    "answer": "$\\sum_{}^{}{E_{\\text{k b}\\text{efore}} = \\frac{1}{2}m_{1}\\left( u_{1} \\right)^{2}} + \\frac{1}{2}m_{2}\\left( u_{2} \\right)^{2} = \\frac{1}{2}(1500)(15)^{2} + \\frac{1}{2}(2100)(17.3 )^{2}$ (1 mark) $= 4.83 \\times 10^{5} \\text{J}\\sum_{}^{}{E_{\\text{k after}} =}\\frac{1}{2}m_{2}\\left( v_{3} \\right)^{2} = \\frac{1}{2}(1500 + 2100)(3.84 )^{2}$ (1 mark) $= 2.65 \\times 10^{4} \\text{J}$ As $\\sum E_{\\text{k b}\\text{efore}} > \\sum E_{\\text{k after}}$, the collision is inelastic. (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8A-5",
+    "criteria": [
+     "8A.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "8A Worksheet 8A–1 Momentum.docx"
+    },
+    "answer_src": {
+     "file": "8A Worksheet 8A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8A-4",
+    "n": "4",
+    "question": "A water bottle rocket, initially at rest, has a mass of 350 g and is launched vertically up into the air. As the bottle is launched, it ejects 300 g of water with a velocity of 3 m s$^{-1}$ down. Calculate the velocity of the water bottle rocket once all of the water has been ejected. Assume that the friction between the water bottle rocket and the air is negligible. (2 marks)",
+    "answer": "Let down be negative: $m_{1}u_{1} = m_{2}v_{2} + m_{3}v_{3}m_{3}v_{3} = m_{1}u_{1} - m_{2}v_{2} v_{3} = \\frac{m_{1}u_{1} - m_{2}v_{2}}{m_{3}} = \\frac{(0.35)(0) - (0.3)( - 3)}{0.05}$ (1 mark) $= 18.0 \\text{m }\\text{s}^{- 1} up$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8A-4",
+    "criteria": [
+     "8A.3"
+    ],
+    "img": [],
+    "src": {
+     "file": "8A Worksheet 8A–1 Momentum.docx"
+    },
+    "answer_src": {
+     "file": "8A Worksheet 8A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8A-5a",
+    "n": "5a",
+    "stem": "A 56.4 g tennis ball is thrown west towards a brick wall with a speed of 45 km h$^{-1}$. The tennis ball rebounds with a velocity of 27 km h$^{-1}$ east. The tennis ball and the wall are in contact with each other for 0.630 seconds.",
+    "question": "A 56.4 g tennis ball is thrown west towards a brick wall with a speed of 45 km h$^{-1}$. The tennis ball rebounds with a velocity of 27 km h$^{-1}$ east. The tennis ball and the wall are in contact with each other for 0.630 seconds. a Calculate the change in momentum of the tennis ball. Include a direction in your answer. (3 marks)",
+    "answer": "Let west be positive: $u = \\frac{45}{3.6} = 12.5 m s^{- 1}, v = \\frac{- 27}{3.6} = - 7.5 m s^{- 1}$ (1 mark) $\\Delta p = mv - mu = (0.0564)( - 7.5) - (0.0564)(12.5) = - 1.13 kg m{ s}^{- 1}$ (1 mark) Direction is east. (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8A-6",
+    "criteria": [
+     "8A.5"
+    ],
+    "img": [],
+    "src": {
+     "file": "8A Worksheet 8A–1 Momentum.docx"
+    },
+    "answer_src": {
+     "file": "8A Worksheet 8A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8A-5b",
+    "n": "5b",
+    "stem": "A 56.4 g tennis ball is thrown west towards a brick wall with a speed of 45 km h$^{-1}$. The tennis ball rebounds with a velocity of 27 km h$^{-1}$ east. The tennis ball and the wall are in contact with each other for 0.630 seconds.",
+    "question": "A 56.4 g tennis ball is thrown west towards a brick wall with a speed of 45 km h$^{-1}$. The tennis ball rebounds with a velocity of 27 km h$^{-1}$ east. The tennis ball and the wall are in contact with each other for 0.630 seconds. b Calculate the average force that the wall applies to the tennis ball while it is in contact with it. Include a direction in your answer. (3 marks)",
+    "answer": "$\\mathrm{\\Delta}p = I = F_{avg}t, F_{avg} = \\frac{I}{t} = \\frac{1.128}{0.63}$ (1 mark) $= 1.79 N$(1 mark) Direction is east. (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8A-6",
+    "criteria": [
+     "8A.5"
+    ],
+    "img": [],
+    "src": {
+     "file": "8A Worksheet 8A–1 Momentum.docx"
+    },
+    "answer_src": {
+     "file": "8A Worksheet 8A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8A-6a",
+    "n": "6a",
+    "stem": "A 4.5 g golf ball is placed on a golf tee and then struck with a golf club. The force applied to the golf ball by the golf club is modelled in the force–time graph below.",
+    "question": "A 4.5 g golf ball is placed on a golf tee and then struck with a golf club. The force applied to the golf ball by the golf club is modelled in the force–time graph below. a What is the impulse applied to the golf ball? (2 marks)",
+    "answer": "$I = area = (0.5)(0.003)(200)$ (1 mark) $= 0.3 N s$ (1 mark)",
+    "marks": 2,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "8A-graphs",
+    "criteria": [
+     "8A.6"
+    ],
+    "img": [
+     "img/8A_WS6.png"
+    ],
+    "src": {
+     "file": "8A Worksheet 8A–1 Momentum.docx"
+    },
+    "answer_src": {
+     "file": "8A Worksheet 8A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8A-6b",
+    "n": "6b",
+    "stem": "A 4.5 g golf ball is placed on a golf tee and then struck with a golf club. The force applied to the golf ball by the golf club is modelled in the force–time graph below.",
+    "question": "A 4.5 g golf ball is placed on a golf tee and then struck with a golf club. The force applied to the golf ball by the golf club is modelled in the force–time graph below. b What speed will the golf ball be travelling at once it leaves the golf club? (2 marks)",
+    "answer": "$\\Delta p = mv - mu, v = \\frac{I + mu}{m} = \\frac{0.3 + (0.0045)(0)}{(0.0045)}$ (1 mark) $= 66.7 m s^{- 1}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "8A-graphs",
+    "criteria": [
+     "8A.5"
+    ],
+    "img": [
+     "img/8A_WS6.png"
+    ],
+    "src": {
+     "file": "8A Worksheet 8A–1 Momentum.docx"
+    },
+    "answer_src": {
+     "file": "8A Worksheet 8A–1 Answers.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "8A.1"
+   ],
+   "wedo": "WE8A-1",
+   "youtry": [
+    "WS8A-1"
+   ],
+   "note": "p = mv with km/h conversion"
+  },
+  {
+   "criteria": [
+    "8A.2",
+    "8A.3"
+   ],
+   "wedo": "WE8A-2",
+   "youtry": [
+    "WS8A-2"
+   ],
+   "note": "two objects collide and separate; solve for one final velocity"
+  },
+  {
+   "criteria": [
+    "8A.3"
+   ],
+   "wedo": "WE8A-3",
+   "youtry": [
+    "WS8A-3a"
+   ],
+   "note": "objects combine and move as one"
+  },
+  {
+   "criteria": [
+    "8A.3"
+   ],
+   "wedo": "WE8A-4",
+   "youtry": [
+    "WS8A-4"
+   ],
+   "note": "explosive collision from rest (one object breaks apart)"
+  },
+  {
+   "criteria": [
+    "8A.4"
+   ],
+   "wedo": "WE8A-5",
+   "youtry": [
+    "WS8A-3b"
+   ],
+   "note": "compare total kinetic energy before and after"
+  },
+  {
+   "criteria": [
+    "8A.5"
+   ],
+   "wedo": "WE8A-6",
+   "youtry": [
+    "WS8A-5a",
+    "WS8A-5b"
+   ],
+   "note": "change in momentum then average force from impulse"
+  },
+  {
+   "criteria": [
+    "8A.6"
+   ],
+   "wedo": "8A-graphs",
+   "youtry": [
+    "WS8A-6a",
+    "WS8A-6b"
+   ],
+   "note": "textbook in-text examples (Figures 8A–5 to 8A–7) for area under F–t graph; no numbered worked example",
+   "origin": "cambridge (in-text example)"
+  }
+ ],
+ "skills": [
+  {
+   "id": "8A-SK1",
+   "heading": "Using direction in an equation",
+   "text": "In any question that involves a vector quantity, the direction of the vector must be considered and incorporated into your equation. Direction involving one dimensional motion can be incorporated into an equation with a positive and negative sign representing different directions. This means that whenever you encounter a problem involving vectors in one dimension, one of the first things you must do is determine which direction will be positive and which direction will be negative. Once you have made this decision, write it down on the page as this will allow you to keep track of the meaning of a negative or positive answer. Question: Two balls, A and B, slide towards each other along a frictionless surface at constant speed. Ball A has a mass of 8.42 kg and is travelling 2.50 m s$^{-1}$ east. Ball B has a mass of 6.21 kg and is travelling 3.00 m s$^{-1}$ west. Just after the collision ball B travels 2.25 m s$^{-1}$ east. Calculate the velocity of ball A after the collision. Solution: As this question involves vectors, you must decide which direction is negative, so let the direction west be negative. Then rearrange using the conservation of momentum formula to find $v_2$: $m_1u_1 + m_2u_2 = m_1v_1 + m_2v_2$; $v_2 = \\frac{m_1u_1 + m_2u_2 - m_1v_1}{m_2} = \\frac{(6.21)(-3) + (8.42)(2.5) - (6.21)(2.25)}{8.42} = -1.37\\text{ m s}^{-1}$. Therefore, ball A will move with a velocity of 1.37 m s$^{-1}$ west. Note that it does not matter which direction you select as positive and negative. Selecting west to be positive will still give the same result: $v_2 = \\frac{(6.21)(3) + (8.42)(-2.5) - (6.21)(-2.25)}{8.42} = 1.37\\text{ m s}^{-1}$. The positive answer indicates the direction, west. It is important to remember that a negative sign is not needed when calculating the total energy before and after collisions to determine if a collision is elastic. This is because energy is a scalar quantity.",
+   "img": [
+    "img/8A_skills.png"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 16
+   }
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P8A-1",
+   "title": "Practical 8A–1 Egg drop",
+   "file": "8A Practical 8A–1 Egg drop.docx",
+   "aim": "Part 1: Use the concepts of momentum and impulse to design a capsule that will protect an egg dropped from a height; test if your capsule prevents a dropped egg from breaking."
+  }
+ ],
+ "powerpoint_figures": [
+  "8A PowerPoint Figure 8A–7.pptx"
+ ],
+ "notes": "Answers to check-ins and section questions were transcribed from the Suggested responses PDF render (the docx stores the maths as WMF images). WE8A-3 says 'Let moving to the right be the positive direction' and 'to the right' though the question is north (book wording kept). Worksheet 8A–1 Q6 is lettered a, c in the source (no part b); indexed as 6a, 6b. 8A.6 has no numbered worked example: the We do uses the in-text force–time graph examples (Figures 8A–5 to 8A–7, chunk 8A-E8). The 8A egg-drop prac has Part 1 only in the aim line kept."
+}

@@ -1,0 +1,1791 @@
+{
+ "code": "8B",
+ "title": "Newton’s laws of motion",
+ "chapter": 8,
+ "unit": 2,
+ "aos": 1,
+ "study_design": [
+  "Apply the vector model of forces, including vector addition and components of forces, to readily observable forces including the force due to gravity, friction and normal forces",
+  "Model the force due to gravity, $F_\\text{g}$, as the force of gravity acting at the centre of mass of a body, $F_{\\text{on body by Earth}} = mg$, where $g$ is the gravitational field strength (9.8 N kg$^{-1}$ near the surface of Earth)",
+  "Model forces as vectors acting at the point of application (with magnitude and direction), labelling these forces using the convention ‘force on A by B’ or $F_{\\text{on A by B}} = -F_{\\text{on B by A}}$",
+  "Apply Newton’s three laws of motion to a body on which forces act: $a = \\frac{F_{\\text{net}}}{m}$, $F_{\\text{on A by B}} = -F_{\\text{on B by A}}$",
+  "Investigate the application of motion concepts through a case study, for example, through motion in sport, vehicle safety, a device or a structure"
+ ],
+ "criteria": [
+  "8B.1",
+  "8B.2",
+  "8B.3",
+  "8B.4",
+  "8B.5",
+  "8B.6",
+  "8B.7",
+  "8B.8",
+  "8B.9"
+ ],
+ "glossary": [
+  {
+   "id": "8B-G1",
+   "term": "Force diagram",
+   "def": "a diagram that shows the relative magnitude and direction of all of the forces acting on a body. The forces are shown acting from the centre of mass of the object.",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "8B-G2",
+   "term": "Normal force",
+   "def": "the force that a surface applies to a body resting on it. The force is always applied perpendicular to the surface and prevents the body falling through the surface.",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "8B-G3",
+   "term": "Gravitational field strength",
+   "def": "a theoretical region of space around a mass where the gravitational force can be experienced by other masses. The gravitational field strength is expressed in N kg$^{-1}$, which is equivalent to the acceleration due to gravity in m s$^{-2}$.",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "8B-G4",
+   "term": "System",
+   "def": "a collection of objects that interact with each other",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 29
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F8B-1",
+   "name": "Formula 8B–1 Newton’s second law",
+   "latex": "F_{\\text{net}} = ma",
+   "where": [
+    {
+     "sym": "F_{\\text{net}}",
+     "meaning": "Net force acting on the mass",
+     "unit": "N"
+    },
+    {
+     "sym": "m",
+     "meaning": "Mass of the mass",
+     "unit": "kg"
+    },
+    {
+     "sym": "a",
+     "meaning": "Acceleration of the mass",
+     "unit": "m s$^{-2}$"
+    }
+   ],
+   "criteria": [
+    "8B.3",
+    "8B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "F8B-2",
+   "name": "Formula 8B–2 Force due to gravity",
+   "latex": "F_\\text{g} = mg",
+   "where": [
+    {
+     "sym": "F_\\text{g}",
+     "meaning": "Force due to gravity",
+     "unit": "N"
+    },
+    {
+     "sym": "m",
+     "meaning": "Mass",
+     "unit": "kg"
+    },
+    {
+     "sym": "g",
+     "meaning": "Gravitational field strength, 9.8 N kg$^{-1}$ close to the surface of Earth",
+     "unit": "m s$^{-2}$ or N kg$^{-1}$"
+    }
+   ],
+   "criteria": [
+    "8B.7",
+    "8B.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "F8B-3",
+   "name": "Formula 8B–3 Normal force",
+   "latex": "N = m(a_{\\text{vertical}} + g)",
+   "where": [
+    {
+     "sym": "N",
+     "meaning": "Normal force of the object by the surface of the lift",
+     "unit": "N"
+    },
+    {
+     "sym": "m",
+     "meaning": "Mass of the object",
+     "unit": "kg"
+    },
+    {
+     "sym": "a_{\\text{vertical}}",
+     "meaning": "Acceleration in the vertical direction",
+     "unit": "m s$^{-2}$"
+    },
+    {
+     "sym": "g",
+     "meaning": "Gravitational field strength close to the surface of Earth, 9.8 N kg$^{-1}$",
+     "unit": "N kg$^{-1}$ (or m s$^{-2}$)"
+    }
+   ],
+   "criteria": [
+    "8B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 32
+   }
+  },
+  {
+   "id": "F8B-incline",
+   "name": "Inclined plane (stationary object) (unnumbered, with Figure 8B–15)",
+   "latex": "N = mg\\cos\\theta \\quad f = mg\\sin\\theta",
+   "where": [
+    {
+     "sym": "N",
+     "meaning": "Normal force on the object by the surface",
+     "unit": "N"
+    },
+    {
+     "sym": "m",
+     "meaning": "Mass of the object",
+     "unit": "kg"
+    },
+    {
+     "sym": "g",
+     "meaning": "Gravitational field strength close to the surface of Earth, 9.8 N kg$^{-1}$",
+     "unit": "N kg$^{-1}$ (or m s$^{-2}$)"
+    },
+    {
+     "sym": "f",
+     "meaning": "Friction force",
+     "unit": "N"
+    },
+    {
+     "sym": "\\theta",
+     "meaning": "Angle of the slope",
+     "unit": "°"
+    }
+   ],
+   "criteria": [
+    "8B.2",
+    "8B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 34
+   }
+  },
+  {
+   "id": "F8B-4",
+   "name": "Formula 8B–4 Acceleration on a frictionless slope",
+   "latex": "a = g\\sin\\theta",
+   "where": [
+    {
+     "sym": "a",
+     "meaning": "Acceleration down a frictionless slope",
+     "unit": "m s$^{-2}$"
+    },
+    {
+     "sym": "g",
+     "meaning": "Gravitational field strength close to the surface of Earth, 9.8 N kg$^{-1}$",
+     "unit": "N kg$^{-1}$ (or m s$^{-2}$)"
+    },
+    {
+     "sym": "\\theta",
+     "meaning": "Angle of the slope",
+     "unit": "°"
+    }
+   ],
+   "criteria": [
+    "8B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 34
+   }
+  },
+  {
+   "id": "F8B-third",
+   "name": "Newton’s third law (in text)",
+   "latex": "F_{\\text{on A by B}} = -F_{\\text{on B by A}}",
+   "where": [],
+   "criteria": [
+    "8B.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 24
+   }
+  }
+ ],
+ "engage": {
+  "heading": "How does a jet engine work?",
+  "text": "At the most basic level a jet engine is Newton’s third law of motion in action. Just like how a balloon ‘rocket’ filled with air pushes the air out to move, a jet engine also pushes air out at a high velocity. The action force of the jet engine pushing air back causes the air to push on the jet engine, moving the aircraft forwards. The key to producing an effective jet engine is to produce a high-speed jet of air that leaves the engine. A high-speed jet of air is created by first heating the incoming air. The hot air then expands and exits the jet at a high velocity. [continues: compressors, turbine, turbofan (Figure 8B–1)]",
+  "src": {
+   "file": "Physics12_Ch08.pdf",
+   "page": 21
+  }
+ },
+ "chunks": [
+  {
+   "id": "8B-E1",
+   "heading": "Newton’s first law",
+   "text": "Newton’s first law states that an object in a state of rest or travelling at a constant velocity will remain in its state of motion unless acted upon by a net force. If a car is at rest or travelling at a constant velocity, then the net force on the car is zero. Consider the vertical forces when the car is at rest. The normal force acting on the car provided by the ground balances the gravitational force acting on the car by Earth. For a car that is moving on a straight road at a constant velocity, the horizontal forces of air resistance and rolling friction are balanced by the driving force on the car by the road, and the normal force balances the force gravitational force acting on the car by Earth. It is contrary to our usual daily experience that an object will continue with a constant velocity indefinitely as long as the sum of the forces acting on the object are zero. This is because in our experience objects will come to rest as a result of friction, because friction causes a net force on objects that directly opposes their state of motion.",
+   "figures": [
+    "8B-F2"
+   ],
+   "criteria": [
+    "8B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 22
+   }
+  },
+  {
+   "id": "8B-E2",
+   "heading": "Newton’s second law",
+   "text": "Newton’s second law states that the acceleration experienced by a body is directly proportional to the net force on the body and inversely proportional to the mass of the body. This law is often expressed in terms of the following formula. [Formula 8B–1] When determining the net force on a body, it is often helpful to draw a force diagram. The force vectors can be added to find the net force vector. For example, calculate the acceleration of a 1150 kg car that has a driving force of 4000 N forwards and a drag force of 2000 N. The force diagram to the left and the vector diagram to the right in Figure 8B–3 show that the net force on the car will be 2000 N forwards (also by Newton’s second law, the force due to gravity and normal force vectors will cancel as there is no acceleration in the vertical, leaving 4000 N – 2000 N = 2000 N). The acceleration can then be determined: $a = \\frac{F_{\\text{net}}}{m} = \\frac{2000}{1150} = 1.74\\text{ m s}^{-2}$ forwards",
+   "figures": [
+    "8B-F3"
+   ],
+   "criteria": [
+    "8B.1",
+    "8B.2",
+    "8B.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 22
+   }
+  },
+  {
+   "id": "8B-E3",
+   "heading": "Same acceleration, different forces",
+   "text": "It is important to remember that while two or more bodies are moving with the same acceleration, the force on each of the bodies will not be the same unless the masses are the same. For example, if three balls of mass 1 kg, 2 kg and 3 kg are all dropped from the same height, they will all accelerate towards the surface of Earth at the same rate, 9.8 m s$^{-2}$ (if air resistance is ignored). However, to have the same acceleration, the forces on the balls must all be different. Another fundamental idea is that the only way to cause a body to accelerate is by applying a net force on the body. The body will then accelerate in the same direction as the direction of the net force. This means that the direction of the acceleration and the direction of the velocity are independent. For example, if a car is approaching a red light and the car brakes, the car’s velocity will be forwards but the acceleration and therefore the net force on the car will be backwards. Similarly, if a projectile is fired vertically upwards, as soon as the thrust force during the firing is gone, the ball will be accelerating down, since the only force acting on the projectile is the force due to gravity (if air resistance is ignored). The projectile may be moving up, but its upwards velocity is constantly decreasing until the projectile is momentarily stationary at the maximum height, after which point the ball’s velocity will be downwards and increasing.",
+   "figures": [
+    "8B-F4"
+   ],
+   "criteria": [
+    "8B.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "8B-E4",
+   "heading": "Newton’s third law",
+   "text": "Newton’s third law states that every action force has an equal and opposite reaction force. Newton’s third law describes the force interaction between two separate bodies. For example, if two bodies, A and B, come into contact with each other, then the force on A by B will be equal in magnitude and opposite in direction to the force on B by A. $F_{\\text{on A by B}} = -F_{\\text{on B by A}}$ This equation describes the fact that the force pairs are equal in magnitude but opposite in direction. Notice that the size of the object does not matter; as shown in Figure 8B–5, even though object A is very large and object B is very small, the forces on both objects have the same magnitude. Forces are always in pairs, including gravitational, magnetic and electrostatic forces.",
+   "figures": [
+    "8B-F5",
+    "8B-F6",
+    "8B-F7",
+    "8B-F8"
+   ],
+   "criteria": [
+    "8B.1",
+    "8B.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "8B-E5",
+   "heading": "Normal force",
+   "text": "Imagine a heavy box, labelled A, that is in free-fall close to Earth’s surface. When the box is in free-fall, the force of gravity acts to accelerate the box to the ground. The downward gravitational force on box A by Earth is paired with the upwards gravitational force of box A pulling on Earth. Imagine that box A is now placed on a table B. Box A no longer falls (accelerates down), which means that the net force on the box is zero. Therefore, as the box rests on the table, the force due to gravity acting on the box must be balanced by an upwards force provided by the table’s surface. This upwards force is known as the normal force and is often expressed as $N$ or $F_\\text{N}$. If you were to push down on box A, it would still not move, which means that the net force on the box is still zero. This means that the normal force has increased to balance the force due to gravity on the box as well as the additional force of you pushing down on the box. Equally, if you apply a force on the box that is opposite to the force due to gravity, the normal force will reduce in size. It is important to note that the force due to gravity on box A and the normal force are not force pairs even though they are quite often equal in magnitude and opposite in direction.",
+   "figures": [
+    "8B-F9",
+    "8B-F10"
+   ],
+   "criteria": [
+    "8B.4",
+    "8B.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "8B-E6",
+   "heading": "Force due to gravity",
+   "text": "As you read this, you are probably sitting in a chair. The gravitational attraction to Earth is pulling you down. Take a moment to think what the pair for this force is. Many people will incorrectly say that the force pair is the normal force of the chair acting on themselves. This cannot be correct as Newton’s third law describes an interaction between two bodies; when you sit down, the interaction is occurring between your body and Earth. The force of gravity is a non-contact force. That means that if you were in free-fall, gravity would still act to pull you down. Since you have your own mass, things can be gravitationally attracted to you. Therefore, the force pair is Earth being gravitationally attracted to your mass. The force due to gravity can be expressed mathematically as: [Formula 8B–2] The gravitational force acts from the centre of mass of all objects. Remember that mass refers to the body’s resistance to acceleration when a force is applied and this does not change. However, the gravitational force (sometimes referred to as the weight force) is a force and would change if you were on the Moon, for example, since it has a different gravitational field strength.",
+   "figures": [
+    "8B-F11"
+   ],
+   "criteria": [
+    "8B.6",
+    "8B.7",
+    "8B.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "8B-E7",
+   "heading": "Applying Newton’s laws",
+   "text": "Newton’s laws can be applied to solve a variety of problems. [Worked examples 8B–1 to 8B–3]",
+   "figures": [],
+   "criteria": [
+    "8B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 28
+   }
+  },
+  {
+   "id": "8B-E8",
+   "heading": "Changing normal forces",
+   "text": "Imagine that you are standing in an lift that is moving up and down. You have an accurate scale that measures the force that you exert on the surface of the lift and therefore the force that the surface exerts on you (the normal force). You wonder, how would the force change with the motion of the lift? When you stand on the scale there are only two forces acting on you, the force due to gravity, $mg$, and the normal force, $N$. We can sum the forces in the vertical as shown: $\\sum F_{\\text{vertical}} = N - mg$ The force due to gravity, $mg$, is negative as it acts down. Since a force is just the product of mass and acceleration, the equation can be expressed as: $ma_{\\text{vertical}} = N - mg$ The acceleration, $a_{\\text{vertical}}$, is the vertical acceleration of the lift. This can then be rearranged to make the normal force, $N$, the subject: [Formula 8B–3] The scale is reading the normal force, not the force due to gravity. The normal force and the force due to gravity will only be equal when the lift is either stationary or moving at a constant velocity. When the lift is accelerating up, the normal force will be greater than the force due to gravity, and when the lift is accelerating down, the normal force will be less than the force due to gravity. You may ask yourself what would the normal force be if the lift cable snapped and the lift accelerated down with an acceleration of 9.8 m s$^{-2}$. The answer might surprise you: the normal force would be zero; you would be falling down with an acceleration of 9.8 m s$^{-2}$ but not getting any normal reaction force from the floor of the lift. This is what happens when astronauts and cosmonauts orbit Earth in space stations.",
+   "figures": [
+    "8B-F13"
+   ],
+   "criteria": [
+    "8B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 32
+   }
+  },
+  {
+   "id": "8B-E9",
+   "heading": "Inclined planes",
+   "text": "On a slope, such as the one shown in Figure 8B–15, an object will have three forces acting on it: the force due to gravity, which acts vertically down; the normal force, $N$, which acts perpendicular to the surface; and the friction force, $f$, which acts parallel to the slope. When an object is stationary on an inclined plane, all of the forces will balance. This means that the normal force, which is the force by the surface on the object, will be equal in magnitude but opposite in direction to the component of the force due to gravity that acts perpendicular to the surface. It also means that the friction force, applied by the surface on the object, is equal in magnitude but opposite in direction to the component of the force due to gravity that acts parallel to the slope. This means that when an object is stationary on an inclined slope the equations on Figure 8B–15 are true. [$N = mg\\cos\\theta$, $f = mg\\sin\\theta$] If the object is on a frictionless surface, then it will be accelerated down with a force of $mg\\sin\\theta$. Since $F = ma$, the acceleration of the slope can be determined to be: $F = mg\\sin\\theta$, $ma = mg\\sin\\theta$ Therefore: [Formula 8B–4]",
+   "figures": [
+    "8B-F15"
+   ],
+   "criteria": [
+    "8B.2",
+    "8B.4",
+    "8B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "8B-E10",
+   "heading": "Application of motion: the physics of car safety",
+   "text": "In 2019, 1195 people were killed on Australian roads compared to 3798 in 1970, even though there are now many more cars on the roads. Over the past 40 years, an understanding of the physics of car crashes has led to three major innovations in car safety. These three major innovations are seatbelts, air bags and crumple zones. In any collision involving a car, there is a rapid change in momentum that occurs. This rapid change in momentum can create large forces on the occupants, which can cause injury or death. Before 1972, seatbelts were not required to be worn in Australia. If a passenger is not wearing a seatbelt during a collision, then according to Newton’s first law of motion, the passenger will continue in their state of motion. This means if someone crashes at 90 km h$^{-1}$, the car will begin to slow but the occupant will continue to move at 90 km h$^{-1}$ until they hit something like the windscreen, steering wheel or dashboard. This will apply an unbalanced force on them, causing them to slow down. The introduction of the seatbelt meant that in a car crash, an unbalanced force would be applied across the person’s shoulders and hips, the strongest parts of their body, so the person would slow down with the car. However, a person’s head would often continue to move forwards and hit the steering wheel, resulting in injury or death. It wasn’t until 1980 that the air bag helped to solve this problem. During a crash, the air bag will inflate very rapidly. When the occupant’s head hits the air bag, the force spreads out more evenly and the collision lasts longer. The impulse will be the same for the crash and as $I = F_{\\text{av}}\\Delta t$, by extending the time of the collision the average force on the occupant is reduced. Early cars were made to be strong and rigid, as it was believed that this would protect the occupants. But modern cars have crumple zones. These zones in the front, rear and sometimes even sides of the car are designed to crumple in a collision. Similar to an air bag, the crumple zones increase the time of the collision, thereby reducing the average force on the occupants. Modern cars still have a rigid compartment that holds the occupants as you wouldn’t want that part to crumple, otherwise it would crush the occupants. [continues p. 451: electric vehicles, active safety (Figures 8B–16 to 8B–18, photos)]",
+   "figures": [],
+   "criteria": [
+    "8B.9"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 35
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "8B-F2",
+   "label": "Figure 8B–2",
+   "caption": "The forces on a car at rest and a car moving at a constant velocity are balanced. This means that the car at rest will remain at rest and the car moving at a constant velocity will continue to move at a constant velocity.",
+   "img": "img/8B_fig8B-2.png",
+   "important": true,
+   "why": "Newton's first law: balanced forces at rest and at constant velocity",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 22
+   }
+  },
+  {
+   "id": "8B-F3",
+   "label": "Figure 8B–3",
+   "caption": "Force diagram of an accelerating car (left) and vector diagram of the same accelerating car (right)",
+   "img": "img/8B_fig8B-3.png",
+   "important": true,
+   "why": "Adding forces to find net force",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "8B-F4",
+   "label": "Figure 8B–4",
+   "caption": "Comparison of the forces on three balls of mass 1 kg, 2 kg and 3 kg, all accelerating due to gravity",
+   "img": "img/8B_fig8B-4.png",
+   "important": true,
+   "why": "Same acceleration needs different forces",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "8B-F5",
+   "label": "Figure 8B–5",
+   "caption": "The action and reaction pair when two bodies come into contact. Vector lines show that the forces are equal in magnitude but opposite in direction.",
+   "img": "img/8B_fig8B-5.png",
+   "important": true,
+   "why": "Third law pair, F on A by B labelling",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "8B-F6",
+   "label": "Figure 8B–6",
+   "caption": "The wing of an aircraft is designed to push air down; the air then pushes back up on the aircraft, providing the lift.",
+   "img": "img/8B_fig8B-6.png",
+   "important": false,
+   "why": "Labelled photo: third law example",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "8B-F7",
+   "label": "Figure 8B–7",
+   "caption": "When the wheels of a Formula 1 car turn, they push on the road; the road then pushes back with equal force propelling the car forwards.",
+   "img": "img/8B_fig8B-7.png",
+   "important": false,
+   "why": "Labelled photo: third law example",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 25
+   }
+  },
+  {
+   "id": "8B-F8",
+   "label": "Figure 8B–8",
+   "caption": "When a rocket is launched, it forces gas from its propulsion system downwards; the gas then pushes back on the rocket with an equal force propelling it upwards.",
+   "img": "img/8B_fig8B-8.png",
+   "important": false,
+   "why": "Labelled photo: third law example",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 25
+   }
+  },
+  {
+   "id": "8B-F9",
+   "label": "Figure 8B–9",
+   "caption": "Earth acts to pull A towards it and A acts to pull Earth up towards it.",
+   "img": "img/8B_fig8B-9.png",
+   "important": true,
+   "why": "Gravitational force pair",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "8B-F10",
+   "label": "Figure 8B–10",
+   "caption": "When box A is placed on table B, box A applies a force on table B. As a result, table B pushes back and applies a normal force on box A.",
+   "img": "img/8B_fig8B-10.png",
+   "important": true,
+   "why": "Normal force",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "8B-F11",
+   "label": "Figure 8B–11",
+   "caption": "The action–reaction pairs of a person being pulled down, in contact with Earth’s surface (left) and falling (right)",
+   "img": "img/8B_fig8B-11.png",
+   "important": true,
+   "why": "Gravity force pair is not the normal force (PowerPoint figure also on drive)",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "8B-F13",
+   "label": "Figure 8B–13",
+   "caption": "The forces acting on a person in a lift",
+   "img": "img/8B_fig8B-13.png",
+   "important": true,
+   "why": "Normal force in a lift",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 32
+   }
+  },
+  {
+   "id": "8B-F15",
+   "label": "Figure 8B–15",
+   "caption": "The forces acting on an object that is stationary on an inclined plane",
+   "img": "img/8B_fig8B-15.png",
+   "important": true,
+   "why": "Inclined plane components (note: book labels N = mg sin θ on the figure; text gives N = mg cos θ)",
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 33
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE8B-1",
+   "title": "Force on touching blocks",
+   "question": "A 45 N force to the right is used to push two blocks, A and B, on a frictionless surface. Block A has a mass of 2 kg and block B has a mass of 1 kg. When they are pushed, both blocks move as one. a Calculate the acceleration of the two blocks. b What is the force on block B by block A? c What is the force on block A by block B?",
+   "steps": [
+    "a As the two blocks move as one, you need to add the masses together.",
+    "$a = \\frac{F_{\\text{net}}}{m} = \\frac{45}{2+1} = 15\\text{ m s}^{-2}$",
+    "Therefore, the acceleration of the blocks is 15 m s$^{-2}$ to the right.",
+    "b As B is accelerating at 15 m s$^{-2}$, you need to find the force that will accelerate it at this rate.",
+    "$F_{\\text{on B by A}} = ma = (1)(15) = 15\\text{ N}$",
+    "Therefore, the force on block B is 15 N to the right.",
+    "c Every action has an equal and opposite reaction. The action force is the force that block A applies on block B so the reaction force will be the force that block B applies to block A. Therefore, the force on block A is 15 N to the left."
+   ],
+   "answer": "a 15 m s$^{-2}$ right; b 15 N right; c 15 N left",
+   "img": [
+    "img/8B_WE8B-1.png"
+   ],
+   "criteria": [
+    "8B.5",
+    "8B.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 28
+   }
+  },
+  {
+   "id": "WE8B-2",
+   "title": "Force in a pulley system",
+   "question": "A mass of 9 kg, initially at rest, lies on a frictionless table. It is attached to a mass of 3 kg, which hangs freely off the table by a string and frictionless pulley system. Assume the string's mass is negligible. a What is the acceleration of the system of the two joined masses? b Calculate the tension in the string.",
+   "steps": [
+    "a The first step is to determine the net force acting on the system. Since the mass of 3 kg is hanging freely, gravity will provide a net downwards force. As the mass of 3 kg falls, the pulley system will transfer some of the force, via the string, to the block of 9 kg, causing it to slide to the right.",
+    "Therefore: $F_{\\text{net}} = mg = (3)(9.8) = 29.4\\text{ N}$",
+    "Newton’s second law can now be applied to calculate the acceleration of the system (note that the two masses are added as the whole system is being accelerated):",
+    "$a = \\frac{F_{\\text{net}}}{m} = \\frac{29.4}{9+3} = 2.45\\text{ m s}^{-2}$",
+    "b The tension in the string is a result of the string pulling on the mass of 9 kg and accelerating it at 2.45 m s$^{-2}$. Therefore, the tension can be found by applying Newton’s second law:",
+    "$F_{\\text{net}} = ma = (9)(2.45) = 22.05\\text{ N}$"
+   ],
+   "answer": "a 2.45 m s$^{-2}$; b 22.05 N",
+   "img": [
+    "img/8B_WE8B-2.png"
+   ],
+   "criteria": [
+    "8B.5",
+    "8B.8"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 29
+   }
+  },
+  {
+   "id": "WE8B-3",
+   "title": "Tension in a train system",
+   "question": "A steam engine with a mass of 20 000 kg is towing two carriages, each with a mass of 10 000 kg. The engine is connected to both of the carriages by cable X and the two carriages are connected by cable Y. As the engine leaves the station, it produces a driving force of 35 000 N. You may assume there is no rolling or air friction in this system. A diagram of this situation is shown below. a Calculate the acceleration of the engine and carriage system. b Calculate the tension in cable X. c Calculate the tension in cable Y.",
+   "steps": [
+    "a Since the engine is towing both of the carriages, they are all part of the same system and will all accelerate at the same rate. This means that the masses can be added together to find the magnitude of the acceleration:",
+    "$a = \\frac{F_{\\text{net}}}{m} = \\frac{35\\,000}{10\\,000 + 10\\,000 + 20\\,000} = 0.875\\text{ m s}^{-2}$",
+    "b Cable X is towing two carriages. This means it is subject to the tension required to accelerate both carriages at 0.875 m s$^{-2}$:",
+    "$F = ma = (10\\,000 + 10\\,000)(0.875) = 1.75\\times10^{4}\\text{ N}$",
+    "c Cable Y is towing one carriage. This means it is subject to the tension required to accelerate one carriage at 0.875 m s$^{-2}$:",
+    "$F = ma = (10\\,000)(0.875) = 8.75\\times10^{3}\\text{ N}$"
+   ],
+   "answer": "a 0.875 m s$^{-2}$; b $1.75\\times10^{4}$ N; c $8.75\\times10^{3}$ N",
+   "img": [
+    "img/8B_WE8B-3.png"
+   ],
+   "criteria": [
+    "8B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 30
+   }
+  },
+  {
+   "id": "WE8B-4",
+   "title": "Normal force",
+   "question": "A 96 kg man stands on a set of scales which measures the force that he applies to the floor inside an elevator. What is the force that the scales read when the elevator is: a at rest b moving at a constant velocity of 1.5 m s$^{-1}$ down c moving with an upward acceleration of 0.2 m s$^{-2}$ d moving with a downward acceleration of 0.35 m s$^{-2}$.",
+   "steps": [
+    "a At rest, the vertical acceleration is zero; therefore: $N = m(a_{\\text{vertical}} + g) = (96)(0 + 9.8) = 941\\text{ N}$",
+    "b When moving with a constant velocity, the vertical acceleration is zero; therefore: $N = m(a_{\\text{vertical}} + g) = (96)(0 + 9.8) = 941\\text{ N}$",
+    "c Since the acceleration is up, it will be positive: $N = m(a_{\\text{vertical}} + g) = (96)(0.2 + 9.8) = 960\\text{ N}$",
+    "d Since the acceleration is down, it will be negative: $N = m(a_{\\text{vertical}} + g) = (96)(-0.35 + 9.8) = 907\\text{ N}$"
+   ],
+   "answer": "a 941 N; b 941 N; c 960 N; d 907 N",
+   "img": [],
+   "criteria": [
+    "8B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "WE8B-5",
+   "title": "Acceleration on a frictionless slope",
+   "question": "A 1080 kg car is parked at the top of a driveway on Mt Buller. The driveway is inclined at 19°. a Calculate the magnitude of the normal force on the car by the surface. b Calculate the magnitude of the frictional force by the surface on the car. c On a particularly cold morning the driveway becomes covered in ice and all friction between the surface and the tyres is lost. Calculate the magnitude of the car’s acceleration down the slope.",
+   "steps": [
+    "a $N = mg\\cos\\theta = (1080)(9.8)(\\cos 19°) = 1.00\\times10^{4}\\text{ N}$",
+    "b $F = mg\\sin\\theta = (1080)(9.8)(\\sin 9°) = 3.45\\times10^{3}\\text{ N}$",
+    "c $a = g\\sin\\theta = (9.8)(\\sin 19°) = 3.19\\text{ m s}^{-2}$"
+   ],
+   "answer": "a $1.00\\times10^{4}$ N; b $3.45\\times10^{3}$ N; c 3.19 m s$^{-2}$",
+   "img": [
+    "img/8B_WE8B-5.png"
+   ],
+   "criteria": [
+    "8B.2",
+    "8B.4",
+    "8B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 34
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "8B-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "If you were to drive down a freeway at a constant speed and then suddenly brake hard, your body would move forward until it is stopped by the seatbelt. Explain this observation using the relevant laws of motion.",
+   "answer": "When you brake, the car begins to decelerate, however you continue to move forward at the same speed, as the net force on you is zero. When you come into contact with the seatbelt, it applies a force on you that is opposite to your direction of motion, thereby decelerating you.",
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8B.1",
+    "8B.9"
+   ],
+   "img": [],
+   "src": {
+    "file": "8B Check-in – Set 1.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8B-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "One of the most famous golf swings was literally out of this world. In 1971, NASA astronaut Alan Shepard took two shots of golf while on the Moon during the Apollo 14 landing. It was noticed that the golf balls flew consistently higher and further than they would on Earth. Use the relevant laws of motion to describe this observation.",
+   "answer": "According to Newton’s second law of motion, the ball’s acceleration is directly proportional to the force applied to it. On the Moon there is less gravity and air resistance, which means there is less force pulling the ball down and directly opposing its motion. This reduced force means that there is less deceleration on the ball, so it will travel higher and further as it takes a longer time to slow down.",
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8B.1",
+    "8B.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "8B Check-in – Set 1.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8B-CI1.3",
+   "set": 1,
+   "n": 3,
+   "question": "When a set of traffic lights turns green, a car and bike accelerate at the same rate and therefore stay in line for the first 200 m of their journey. Jiang on the bike thinks that the driving force of the bike and the car must be the same, but Alice in the car thinks that the driving force of the bike and the car must be different. Who is correct? Justify your answer.",
+   "answer": "Alice is correct. Because the car has much more mass than the bike, more force would be required to maintain the same acceleration, given the formula $a = \\frac{F}{m}$.",
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8B.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "8B Check-in – Set 1.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8B-CI1.4",
+   "set": 1,
+   "n": 4,
+   "question": "A man pushes a box of mass 250 kg with a force of 500 N along a frictionless surface. Calculate the magnitude of the acceleration of the box.",
+   "answer": "$a = \\frac{500}{250} = 2\\text{ m s}^{-2}$",
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "youtry",
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8B.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "8B Check-in – Set 1.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   },
+   "pair_with": null
+  },
+  {
+   "id": "8B-CI1.5",
+   "set": 1,
+   "n": 5,
+   "question": "A skydiver who jumps out of a plane and is in free-fall has gravity acting to pull them down towards Earth. If gravity is the action force, what is the reaction force?",
+   "answer": "A gravitational force on Earth that is directed towards the skydiver.",
+   "kind": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8B.1",
+    "8B.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "8B Check-in – Set 1.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8B-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "Vijay pushes vertically down on a box of mass 50 kg that is resting on a table with a force of 450 N. Calculate the force applied to the box by the table.",
+   "answer": "$F_{\\text{normal}} = 450 + (50)(9.8) = 940\\text{ N}$",
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8B.2",
+    "8B.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "8B Check-in – Set 2.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8B-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "A block of mass 13.5 kg is resting on a frictionless table and is tethered to a block of mass 4 kg that is hanging over the edge of the table. A diagram of this situation is shown below. The pulley is frictionless. a Calculate the acceleration of the system. b Calculate the tension in the string that tethers the two masses together.",
+   "answer": "a $a = \\frac{(9.8)(4)}{13.5+4} = 2.24\\text{ m s}^{-2}$ b $F = ma = (13.5)(2.24) = 30.2\\text{ N}$",
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8B.5"
+   ],
+   "img": [
+    "img/8B_CI2-2.png"
+   ],
+   "src": {
+    "file": "8B Check-in – Set 2.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8B-CI2.3",
+   "set": 2,
+   "n": 3,
+   "question": "A farmer is moving a fallen tree on their property. In order to move the tree, the farmer ties a rope to the tree trunk and a tractor. The tractor has a mass of 2388 kg and the tree trunk has a mass of 4500 kg. The driving force of the tractor is 5500 N. A diagram of this situation is shown below. a Calculate the acceleration of the tractor. b Calculate the tension in the rope.",
+   "answer": "a $a = \\frac{5500}{2388+4500} = 0.798\\text{ m s}^{-2}$ b $F = ma = 4500\\times0.798 = 3591\\text{ N}$; $\\frac{3591}{\\cos 15} = 3.72\\times10^{3}\\text{ N}$",
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8B.2",
+    "8B.5"
+   ],
+   "img": [
+    "img/8B_CI2-3.png"
+   ],
+   "src": {
+    "file": "8B Check-in – Set 2.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8B-CI2.4",
+   "set": 2,
+   "n": 4,
+   "question": "Two boxes X and Y move as one when they are pushed across a frictionless floor with a force of 36.4 N north. Box X has a mass equal to M and box Y has a mass equal to 1.5*M*. The acceleration of the system is 3.86 m s$^{-2}$ north. A diagram of this situation is shown below. a Calculate the mass of Y. b Calculate the force on X applied by Y. Include a direction in your answer.",
+   "answer": "a $2.5M = \\frac{36.4}{3.86} = 9.43\\text{ kg}$; $M = 3.772\\text{ kg}$; $Y = 1.5M = 5.66\\text{ kg}$ b $F = ma = 5.66\\times3.86 = 21.8\\text{ N}$ south",
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8B.5",
+    "8B.6"
+   ],
+   "img": [
+    "img/8B_CI2-4.png"
+   ],
+   "src": {
+    "file": "8B Check-in – Set 2.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "8B-SQ1",
+   "n": "1",
+   "question": "Which of the following statements is true?",
+   "options": [
+    "A. The direction of the velocity and the direction of the net force will always be the same.",
+    "B. The object will always travel in the same direction as the direction of the acceleration.",
+    "C. If you throw a ball up, while the ball is travelling up it must have an upward force on it.",
+    "D. An object will always accelerate in the direction of the net force."
+   ],
+   "answer": "D",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8B.1",
+    "8B.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "8B Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8B-SQ2",
+   "n": "2",
+   "question": "Two objects are pushed with an equal force, F. Object A has a mass of m and object B a mass of 2*m*. Which of the following statements is true?",
+   "options": [
+    "A. Both objects will have the same acceleration.",
+    "B. Object A will have double the acceleration of object B.",
+    "C. Object B will have double the acceleration of object A.",
+    "D. Object A will have four times the acceleration of object B."
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8B.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "8B Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8B-SQ3",
+   "n": "3",
+   "question": "A car is parked on a hill that has an angle of incline of 30°. If the action force is the force down due to gravity, then the reaction force is:",
+   "options": [
+    "A. Earth being pulled up by the attraction to the car.",
+    "B. the force of the brakes on the wheels.",
+    "C. the normal force on the car.",
+    "D. the force of friction between the tyres and the road"
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8B.1",
+    "8B.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "8B Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8B-SQ4",
+   "n": "4",
+   "question": "Two blocks of mass 5 kg and 10 kg are placed in contact on a frictionless horizontal surface, as shown in the diagram below. A constant horizontal force, F, is applied to the 5 kg block. Which one of the following statements is correct?",
+   "options": [
+    "A. The net force on each block is the same.",
+    "B. The acceleration experienced by the 5 kg block is twice the acceleration experienced by the 10 kg block.",
+    "C. The magnitude of the net force on the 5 kg block is half the magnitude of the net force on the 10 kg block.",
+    "D. The magnitude of the net force on the 5 kg block is twice the magnitude of the net force on the 10 kg block. © VCAA, 2020"
+   ],
+   "answer": "C",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "8B.5"
+   ],
+   "img": [
+    "img/8B_SQ4.png"
+   ],
+   "src": {
+    "file": "8B Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8B-SQ5",
+   "n": "5",
+   "question": "Close to the surface of Earth, the acceleration due to gravity is 9.8 m s$^{-2}$. If you drop a mass of 1 kg and drop a mass of 100 kg from the same height, which of the following is not true?",
+   "options": [
+    "A. Both objects will reach the ground at the same time if friction is ignored.",
+    "B. Both objects will have the same force on them since the acceleration is the same.",
+    "C. Since the object with the mass of 100 kg is 100 times heavier, it must have a force on it 100 times greater than the force on the object with the mass of 1 kg.",
+    "D. The acceleration due to gravity is not dependent upon the mass of the object."
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "8B.3",
+    "8B.7"
+   ],
+   "img": [],
+   "src": {
+    "file": "8B Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8B-SQ6",
+   "n": "6",
+   "question": "A learner driver notices that they have to put their foot on the accelerator pedal in order to maintain a constant velocity. This confuses the driver, who is also a physics student, as they know that acceleration means a change in velocity. How would you explain the observation made by this student? Your answer needs to refer to a specific law of motion.",
+   "options": [],
+   "answer": "The accelerator pedal gives fuel to the engine, which allows the car to generate a forward thrust force. Because the car is encountering friction with the road and air resistance, it must have a forward thrust force that is equal in magnitude but opposite in direction so the forces will balance. This is because, according to Newton’s first law, an object will remain at a constant velocity unless acted upon by an unbalance force.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "8B.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "8B Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8B-SQ7",
+   "n": "7",
+   "question": "A car of mass 100 kg accelerates at 125 m s$^{-1}$. Calculate the driving force on the car; assume friction is negligible.",
+   "options": [],
+   "answer": "$F = ma = (1000)(125) = 1.25\\times10^{5}\\text{ N}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "8B.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "8B Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "8B-SQ8",
+   "n": "8",
+   "question": "Two blocks, A and B, are pushed along a smooth frictionless surface with a force of 30 N. This causes them to accelerate at a rate of 4.60 m s$^{-2}$. Block B is 3.5 times heavier that block A. a Calculate the mass of block B. b What is the magnitude of the force on block B due to block A?",
+   "options": [],
+   "answer": "a $F = ma = (m_\\text{A} + 3.5m_\\text{A})a$; $30 = 4.5m_\\text{A}(4.60)$; $m_\\text{A} = 1.45\\text{ kg}$; $m_\\text{B} = 3.5m_\\text{A} = 3.5(1.45) = 5.07\\text{ kg}$ b $F = m_\\text{B}a = (5.07)(4.60) = 23.3\\text{ N}$ or could use mass ratio: $30\\times\\frac{3.5}{4.5} = 23.3\\text{ N}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8B.5",
+    "8B.6"
+   ],
+   "img": [
+    "img/8B_SQ8.png"
+   ],
+   "src": {
+    "file": "8B Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   },
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the mass of block B."
+    },
+    {
+     "n": "b",
+     "question": "What is the magnitude of the force on block B due to block A?"
+    }
+   ]
+  },
+  {
+   "id": "8B-SQ9",
+   "n": "9",
+   "question": "A train that has a mass of 5000 kg and a driving force of 450 kN is tethered to two carriages, each with a mass of 2000 kg, via a metal cable B. The two carriages are tethered together by a metal cable A. Friction can be ignored for this question. a Calculate the magnitude of the acceleration of the system. b Calculate the tension in metal cable A. c Calculate the tension in metal cable B",
+   "options": [],
+   "answer": "a $a = \\frac{F}{m} = \\frac{450\\times10^{3}}{(5000+2\\times2000)} = 50\\text{ m s}^{-2}$ b $F = ma = (2000)(50) = 1.00\\times10^{5}\\text{ N}$ c $F = ma = (4000)(50) = 2.00\\times10^{5}\\text{ N}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8B.5"
+   ],
+   "img": [
+    "img/8B_SQ9.png"
+   ],
+   "src": {
+    "file": "8B Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   },
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the magnitude of the acceleration of the system."
+    },
+    {
+     "n": "b",
+     "question": "Calculate the tension in metal cable A."
+    },
+    {
+     "n": "c",
+     "question": "Calculate the tension in metal cable B"
+    }
+   ]
+  },
+  {
+   "id": "8B-SQ10",
+   "n": "10",
+   "question": "Students set up an experiment that consists of two masses, m$_{1}$ of 2.0 kg, and m$_{2}$ of 6.0 kg, connected by a string, as shown in the diagram below. The mass of the string can be ignored. The surface is frictionless. The pulley is frictionless. At the start of the experiment, the bottom of mass m$_{1}$ is 1.2 m above the floor and both masses are stationary. a Calculate the gravitational force on m$_{1}$. Include the correct unit in your answer. b Calculate the tension in the string as m$_{1}$ is falling. © VCAA, 2013",
+   "options": [],
+   "answer": "a $F_g = m_1g = (2)(9.8) = 19.6\\text{ N}$ b First, find the acceleration of both blocks. $a = \\frac{F}{m} = \\frac{19.6}{(2+6)} = 2.45\\text{ m s}^{-2}$. The tension in the string is equivalent to the force acting on $m_2$. $F = m_2a = (6)(2.45) = 14.7\\text{ N}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8B.5",
+    "8B.8"
+   ],
+   "img": [
+    "img/8B_SQ10.png"
+   ],
+   "src": {
+    "file": "8B Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   },
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the gravitational force on m$_{1}$. Include the correct unit in your answer."
+    },
+    {
+     "n": "b",
+     "question": "Calculate the tension in the string as m$_{1}$ is falling. © VCAA, 2013"
+    }
+   ]
+  },
+  {
+   "id": "8B-SQ11",
+   "n": "11",
+   "question": "A 56 kg woman stands on a set of scales that measures the force that she applies to the floor inside an elevator. What is the force that the scales read when the elevator is: a at rest? b moving at a constant velocity of 0.75 m s$^{-1}$ up? c moving with an upward acceleration of 0.4 m m s$^{-2}$? d moving with a downward acceleration of 0.24 m s$^{-2}$?",
+   "options": [],
+   "answer": "a At rest the vertical acceleration is zero, therefore: $N = m(a_{\\text{vertical}} + g) = (56)(0+9.8) = 549\\text{ N}$ b When moving with a constant velocity the vertical acceleration is zero, therefore: $N = m(a_{\\text{vertical}} + g) = (56)(0+9.8) = 549\\text{ N}$ c Since the acceleration is up, it will be positive: $N = m(a_{\\text{vertical}} + g) = (56)(0.4+9.8) = 571\\text{ N}$ d Since the acceleration is down, it will be negative: $N = m(a_{\\text{vertical}} + g) = (96)(-0.24+9.8) = 535\\text{ N}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8B.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "8B Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   },
+   "parts": [
+    {
+     "n": "a",
+     "question": "at rest?"
+    },
+    {
+     "n": "b",
+     "question": "moving at a constant velocity of 0.75 m s$^{-1}$ up?"
+    },
+    {
+     "n": "c",
+     "question": "moving with an upward acceleration of 0.4 m m s$^{-2}$?"
+    },
+    {
+     "n": "d",
+     "question": "moving with a downward acceleration of 0.24 m s$^{-2}$?"
+    }
+   ]
+  },
+  {
+   "id": "8B-SQ12",
+   "n": "12",
+   "question": "An 8.50 kg marble block is placed on a slope that has a constant incline of 23°. The block remains stationary on the slope. a Draw and label all of the forces acting on the block. b Calculate the magnitude of the normal force on the block by the surface. c Calculate the magnitude of the frictional force by the surface on the block. d The block is then taken off the slope and the block and slope are polished so finely that there is considered to be no friction between them. Calculate the magnitude of the block's acceleration down the slope.",
+   "options": [],
+   "answer": "a [Diagram: friction force up the slope, normal force perpendicular to the slope, force due to gravity vertically down; see image] b $N = mg\\cos\\theta = (8.5)(9.8)(\\cos 23) = 76.7\\text{ N}$ c $f = mg\\sin\\theta = (8.5)(9.8)(\\sin 23) = 32.5\\text{ N}$ d $a = g\\sin\\theta = (9.8)(\\sin 23) = 3.83\\text{ m s}^{-2}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "8B.2",
+    "8B.4",
+    "8B.5"
+   ],
+   "img": [
+    "img/8B_SQ12.png"
+   ],
+   "src": {
+    "file": "8B Section questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   },
+   "parts": [
+    {
+     "n": "a",
+     "question": "Draw and label all of the forces acting on the block."
+    },
+    {
+     "n": "b",
+     "question": "Calculate the magnitude of the normal force on the block by the surface."
+    },
+    {
+     "n": "c",
+     "question": "Calculate the magnitude of the frictional force by the surface on the block."
+    },
+    {
+     "n": "d",
+     "question": "The block is then taken off the slope and the block and slope are polished so finely that there is considered to be no friction between them. Calculate the magnitude of the block's acceleration down the slope."
+    }
+   ],
+   "answer_img": [
+    "img/8B_SQ12-ans.png"
+   ]
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 8B–1 Newton’s laws of motion",
+  "total": 28,
+  "file": "8B Worksheet 8B–1 Newton’s laws of motion.docx",
+  "questions": [
+   {
+    "id": "WS8B-1a",
+    "n": "1a",
+    "stem": "A miner is pushing three connected mining carts, A, B and C, with a force of 120 N east. The carts have a mass of 195 kg, 100 kg and 165 kg respectively and are on a horizontal stretch of track.",
+    "question": "A miner is pushing three connected mining carts, A, B and C, with a force of 120 N east. The carts have a mass of 195 kg, 100 kg and 165 kg respectively and are on a horizontal stretch of track. a Ignoring friction, calculate the acceleration of the mining carts. (2 marks)",
+    "answer": "$a = \\frac{F}{m} = \\frac{120}{195 + 100 + 165}$ (1 mark) $= 0.261 m s^{- 1}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8B-1",
+    "criteria": [
+     "8B.5"
+    ],
+    "img": [
+     "img/8B_WS1.png"
+    ],
+    "src": {
+     "file": "8B Worksheet 8B–1 Newton’s laws of motion.docx"
+    },
+    "answer_src": {
+     "file": "8B Worksheet 8B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8B-1b",
+    "n": "1b",
+    "stem": "A miner is pushing three connected mining carts, A, B and C, with a force of 120 N east. The carts have a mass of 195 kg, 100 kg and 165 kg respectively and are on a horizontal stretch of track.",
+    "question": "A miner is pushing three connected mining carts, A, B and C, with a force of 120 N east. The carts have a mass of 195 kg, 100 kg and 165 kg respectively and are on a horizontal stretch of track. b What is the force on cart B by cart A? Include a direction in your answer. (3 marks)",
+    "answer": "$F = ma = (100 + 165)(0.261)$ (1 mark) $= 69.1 N$ (1 mark) Direction is east. (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8B-1",
+    "criteria": [
+     "8B.5",
+     "8B.6"
+    ],
+    "img": [
+     "img/8B_WS1.png"
+    ],
+    "src": {
+     "file": "8B Worksheet 8B–1 Newton’s laws of motion.docx"
+    },
+    "answer_src": {
+     "file": "8B Worksheet 8B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8B-1c",
+    "n": "1c",
+    "stem": "A miner is pushing three connected mining carts, A, B and C, with a force of 120 N east. The carts have a mass of 195 kg, 100 kg and 165 kg respectively and are on a horizontal stretch of track.",
+    "question": "A miner is pushing three connected mining carts, A, B and C, with a force of 120 N east. The carts have a mass of 195 kg, 100 kg and 165 kg respectively and are on a horizontal stretch of track. c What is the force on cart A by cart B? Include a direction in your answer. (1 mark)",
+    "answer": "The force applied to cart A by B will be equal in magnitude and opposite in direction to the force that cart A applied to B. Therefore, the force will be 69.1 N west.",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8B-1",
+    "criteria": [
+     "8B.6"
+    ],
+    "img": [
+     "img/8B_WS1.png"
+    ],
+    "src": {
+     "file": "8B Worksheet 8B–1 Newton’s laws of motion.docx"
+    },
+    "answer_src": {
+     "file": "8B Worksheet 8B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8B-2a",
+    "n": "2a",
+    "stem": "A 15 kg mass, initially at rest, lies on a frictionless table. It is attached to an 8.75 kg mass that hangs freely off the table via a string and frictionless pulley system as shown below.",
+    "question": "A 15 kg mass, initially at rest, lies on a frictionless table. It is attached to an 8.75 kg mass that hangs freely off the table via a string and frictionless pulley system as shown below. a What is the acceleration of the system? (2 marks)",
+    "answer": "$a = \\frac{F}{m} = \\frac{(8.75)(9.8)}{15 + 8.75}$ (1 mark) $= 3.61 m s^{- 2}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8B-2",
+    "criteria": [
+     "8B.5",
+     "8B.8"
+    ],
+    "img": [
+     "img/8B_WS2.png"
+    ],
+    "src": {
+     "file": "8B Worksheet 8B–1 Newton’s laws of motion.docx"
+    },
+    "answer_src": {
+     "file": "8B Worksheet 8B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8B-2b",
+    "n": "2b",
+    "stem": "A 15 kg mass, initially at rest, lies on a frictionless table. It is attached to an 8.75 kg mass that hangs freely off the table via a string and frictionless pulley system as shown below.",
+    "question": "A 15 kg mass, initially at rest, lies on a frictionless table. It is attached to an 8.75 kg mass that hangs freely off the table via a string and frictionless pulley system as shown below. b Calculate the tension in the string. (2 marks)",
+    "answer": "$F = ma = (15)(3.61)$ (1 mark) $= 54.2 N$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8B-2",
+    "criteria": [
+     "8B.5"
+    ],
+    "img": [
+     "img/8B_WS2.png"
+    ],
+    "src": {
+     "file": "8B Worksheet 8B–1 Newton’s laws of motion.docx"
+    },
+    "answer_src": {
+     "file": "8B Worksheet 8B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8B-3a",
+    "n": "3a",
+    "stem": "A steam engine with a mass of 6000 kg is towing three carriages, with masses of 4000 kg, 2500 kg and 3000 kg. The engine is connected to all three carriages by coupling C. The 3000 kg carriage is connected to the other two carriages by coupling B and the 2500 kg carriage is connected to the 4000 kg carriage by coupling A. As the engine leaves the station, it produces a driving force of 4750 N. You may assume the rails are horizontal and there is no rolling or air friction in this system. A diagram of this situation is shown below.",
+    "question": "A steam engine with a mass of 6000 kg is towing three carriages, with masses of 4000 kg, 2500 kg and 3000 kg. The engine is connected to all three carriages by coupling C. The 3000 kg carriage is connected to the other two carriages by coupling B and the 2500 kg carriage is connected to the 4000 kg carriage by coupling A. As the engine leaves the station, it produces a driving force of 4750 N. You may assume the rails are horizontal and there is no rolling or air friction in this system. A diagram of this situation is shown below. a Calculate the acceleration of the engine and carriage system. (2 marks)",
+    "answer": "$a = \\frac{F}{m} = \\frac{4750}{6000 + 3000 + 2500 + 4000}$ (1 mark) $= 0.306 m s^{- 2}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8B-3",
+    "criteria": [
+     "8B.5"
+    ],
+    "img": [
+     "img/8B_WS3.png"
+    ],
+    "src": {
+     "file": "8B Worksheet 8B–1 Newton’s laws of motion.docx"
+    },
+    "answer_src": {
+     "file": "8B Worksheet 8B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8B-3b",
+    "n": "3b",
+    "stem": "A steam engine with a mass of 6000 kg is towing three carriages, with masses of 4000 kg, 2500 kg and 3000 kg. The engine is connected to all three carriages by coupling C. The 3000 kg carriage is connected to the other two carriages by coupling B and the 2500 kg carriage is connected to the 4000 kg carriage by coupling A. As the engine leaves the station, it produces a driving force of 4750 N. You may assume the rails are horizontal and there is no rolling or air friction in this system. A diagram of this situation is shown below.",
+    "question": "A steam engine with a mass of 6000 kg is towing three carriages, with masses of 4000 kg, 2500 kg and 3000 kg. The engine is connected to all three carriages by coupling C. The 3000 kg carriage is connected to the other two carriages by coupling B and the 2500 kg carriage is connected to the 4000 kg carriage by coupling A. As the engine leaves the station, it produces a driving force of 4750 N. You may assume the rails are horizontal and there is no rolling or air friction in this system. A diagram of this situation is shown below. b Calculate the tension in cable C. (2 marks)",
+    "answer": "$F = ma = (4000 + 2500 + 3000)(0.306)$ (1 mark) $= 2.91 \\times 10^{3}N$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8B-3",
+    "criteria": [
+     "8B.5"
+    ],
+    "img": [
+     "img/8B_WS3.png"
+    ],
+    "src": {
+     "file": "8B Worksheet 8B–1 Newton’s laws of motion.docx"
+    },
+    "answer_src": {
+     "file": "8B Worksheet 8B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8B-3c",
+    "n": "3c",
+    "stem": "A steam engine with a mass of 6000 kg is towing three carriages, with masses of 4000 kg, 2500 kg and 3000 kg. The engine is connected to all three carriages by coupling C. The 3000 kg carriage is connected to the other two carriages by coupling B and the 2500 kg carriage is connected to the 4000 kg carriage by coupling A. As the engine leaves the station, it produces a driving force of 4750 N. You may assume the rails are horizontal and there is no rolling or air friction in this system. A diagram of this situation is shown below.",
+    "question": "A steam engine with a mass of 6000 kg is towing three carriages, with masses of 4000 kg, 2500 kg and 3000 kg. The engine is connected to all three carriages by coupling C. The 3000 kg carriage is connected to the other two carriages by coupling B and the 2500 kg carriage is connected to the 4000 kg carriage by coupling A. As the engine leaves the station, it produces a driving force of 4750 N. You may assume the rails are horizontal and there is no rolling or air friction in this system. A diagram of this situation is shown below. c Calculate the tension in cable A. (2 marks)",
+    "answer": "$F = ma = (4000)(0.306)$ (1 mark) $= 1.23 \\times 10^{3} N$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "8B.5"
+    ],
+    "img": [
+     "img/8B_WS3.png"
+    ],
+    "src": {
+     "file": "8B Worksheet 8B–1 Newton’s laws of motion.docx"
+    },
+    "answer_src": {
+     "file": "8B Worksheet 8B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8B-4a",
+    "n": "4a",
+    "stem": "A 68 kg woman stands on a set of scales that measures the force she applies to the floor inside of an elevator. What is the force that the scales read when the elevator is:",
+    "question": "A 68 kg woman stands on a set of scales that measures the force she applies to the floor inside of an elevator. What is the force that the scales read when the elevator is: a at rest (1 mark)",
+    "answer": "At rest the vertical acceleration is zero, therefore: $N = m\\left( a_{vertical} + g \\right) = (68)(0 + 9.8) = 666 N$ (1 mark)",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "8B.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "8B Worksheet 8B–1 Newton’s laws of motion.docx"
+    },
+    "answer_src": {
+     "file": "8B Worksheet 8B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8B-4b",
+    "n": "4b",
+    "stem": "A 68 kg woman stands on a set of scales that measures the force she applies to the floor inside of an elevator. What is the force that the scales read when the elevator is:",
+    "question": "A 68 kg woman stands on a set of scales that measures the force she applies to the floor inside of an elevator. What is the force that the scales read when the elevator is: b moving at a constant velocity of 1.5 m s$^{-1}$ down (1 mark)",
+    "answer": "When moving with a constant velocity the vertical acceleration is zero, therefore: $N = m\\left( a_{vertical} + g \\right) = (68)(0 + 9.8) = 666 N$ (1 mark)",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "8B.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "8B Worksheet 8B–1 Newton’s laws of motion.docx"
+    },
+    "answer_src": {
+     "file": "8B Worksheet 8B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8B-4c",
+    "n": "4c",
+    "stem": "A 68 kg woman stands on a set of scales that measures the force she applies to the floor inside of an elevator. What is the force that the scales read when the elevator is:",
+    "question": "A 68 kg woman stands on a set of scales that measures the force she applies to the floor inside of an elevator. What is the force that the scales read when the elevator is: c moving with an upward acceleration of 0.5 m s$^{-2}$ (2 marks)",
+    "answer": "As the acceleration is up, the answer will be positive: $N = m\\left( a_{vertical} + g \\right) = (68)(0.5 + 9.8)$ (1 mark) $= 700 N$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8B-4",
+    "criteria": [
+     "8B.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "8B Worksheet 8B–1 Newton’s laws of motion.docx"
+    },
+    "answer_src": {
+     "file": "8B Worksheet 8B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8B-4d",
+    "n": "4d",
+    "stem": "A 68 kg woman stands on a set of scales that measures the force she applies to the floor inside of an elevator. What is the force that the scales read when the elevator is:",
+    "question": "A 68 kg woman stands on a set of scales that measures the force she applies to the floor inside of an elevator. What is the force that the scales read when the elevator is: d moving with a downward acceleration of 0.88 m s$^{-2}$? (2 marks)",
+    "answer": "As the acceleration is down, the answer will be negative: $N = m\\left( a_{vertical} + g \\right) = (68)( - 0.88 + 9.8)$ (1 mark) $= 606 N$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8B-4",
+    "criteria": [
+     "8B.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "8B Worksheet 8B–1 Newton’s laws of motion.docx"
+    },
+    "answer_src": {
+     "file": "8B Worksheet 8B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8B-5a",
+    "n": "5a",
+    "stem": "A 1500 kg car is parked at the top of a driveway in Mt Hotham. The driveway is inclined at 24°.",
+    "question": "A 1500 kg car is parked at the top of a driveway in Mt Hotham. The driveway is inclined at 24°. a Calculate the magnitude of the normal force on the car by the surface. (2 marks)",
+    "answer": "$N = mg cos \\theta = (1500)(9.8)(\\cos{24{^\\circ})}$ (1 mark) $= 1.34 \\times 10^{4} N$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8B-5",
+    "criteria": [
+     "8B.2",
+     "8B.4"
+    ],
+    "img": [
+     "img/8B_WS5.png"
+    ],
+    "src": {
+     "file": "8B Worksheet 8B–1 Newton’s laws of motion.docx"
+    },
+    "answer_src": {
+     "file": "8B Worksheet 8B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8B-5b",
+    "n": "5b",
+    "stem": "A 1500 kg car is parked at the top of a driveway in Mt Hotham. The driveway is inclined at 24°.",
+    "question": "A 1500 kg car is parked at the top of a driveway in Mt Hotham. The driveway is inclined at 24°. b Calculate the magnitude of the frictional force by the surface on the car. (2 marks)",
+    "answer": "$f = mg sin \\theta = (1500)(9.8)(\\sin{24{^\\circ})}$ (1 mark) $= 5.98 \\times 10^{3} N$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8B-5",
+    "criteria": [
+     "8B.2"
+    ],
+    "img": [
+     "img/8B_WS5.png"
+    ],
+    "src": {
+     "file": "8B Worksheet 8B–1 Newton’s laws of motion.docx"
+    },
+    "answer_src": {
+     "file": "8B Worksheet 8B–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS8B-5c",
+    "n": "5c",
+    "stem": "A 1500 kg car is parked at the top of a driveway in Mt Hotham. The driveway is inclined at 24°.",
+    "question": "A 1500 kg car is parked at the top of a driveway in Mt Hotham. The driveway is inclined at 24°. c On a particularly cold morning, the driveway becomes covered in ice and all friction between the surface and the tyres is lost. Calculate the magnitude of the car's acceleration down the slope. (2 marks)",
+    "answer": "$a = g sin \\theta = (9.8)(\\sin{24{^\\circ})}$ (1 mark) $= 3.99 m s^{- 2}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": "WE8B-5",
+    "criteria": [
+     "8B.5"
+    ],
+    "img": [
+     "img/8B_WS5.png"
+    ],
+    "src": {
+     "file": "8B Worksheet 8B–1 Newton’s laws of motion.docx"
+    },
+    "answer_src": {
+     "file": "8B Worksheet 8B–1 Answers.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "8B.2",
+    "8B.3"
+   ],
+   "wedo": "8B-car",
+   "youtry": [
+    "8B-CI1.4"
+   ],
+   "note": "in-text example (1150 kg car, Figure 8B–3): add forces then a = F/m; no numbered worked example",
+   "origin": "cambridge (in-text example)"
+  },
+  {
+   "criteria": [
+    "8B.5",
+    "8B.6"
+   ],
+   "wedo": "WE8B-1",
+   "youtry": [
+    "WS8B-1a",
+    "WS8B-1b",
+    "WS8B-1c"
+   ],
+   "note": "touching blocks: system acceleration, then force on one block and its third-law pair"
+  },
+  {
+   "criteria": [
+    "8B.5"
+   ],
+   "wedo": "WE8B-2",
+   "youtry": [
+    "WS8B-2a",
+    "WS8B-2b"
+   ],
+   "note": "table-and-hanging-mass pulley"
+  },
+  {
+   "criteria": [
+    "8B.5"
+   ],
+   "wedo": "WE8B-3",
+   "youtry": [
+    "WS8B-3a",
+    "WS8B-3b"
+   ],
+   "note": "train tensions"
+  },
+  {
+   "criteria": [
+    "8B.4"
+   ],
+   "wedo": "WE8B-4",
+   "youtry": [
+    "WS8B-4c",
+    "WS8B-4d"
+   ],
+   "note": "lift normal force with acceleration up and down"
+  },
+  {
+   "criteria": [
+    "8B.2",
+    "8B.4",
+    "8B.5"
+   ],
+   "wedo": "WE8B-5",
+   "youtry": [
+    "WS8B-5a",
+    "WS8B-5b",
+    "WS8B-5c"
+   ],
+   "note": "inclined plane N, f and frictionless acceleration (same structure, different numbers)"
+  }
+ ],
+ "skills": [
+  {
+   "id": "8B-SK1",
+   "heading": "Showing your working clearly",
+   "text": "When completing a question that involves mathematical calculations and is worth two or more marks, it is important to always show your working. Usually the best way to show working out is to identify the formula that is required to answer the question and then rearrange the symbols to solve for the unknown quantity (this minimises errors). Double check that you have the correct indices on the formula. Insert the relevant values in place of their symbols and then solve for the unknown. Your final answer should be rounded to three significant figures. It is important to note that if you cross out your working, the part that has been crossed out will not be considered for marking. For example: Question: If a ball of mass 40 kg is pushed with a force of 500 N calculate the magnitude of the acceleration of the ball. Solution: $a = \\frac{F}{m} = \\frac{500}{40} = 12.5\\text{ m}^{-2}$ If there are multiple steps to the calculation, then the unrounded figure should be used for the subsequent steps. Be sure to include the units of the quantity that you are calculating each step of the way to avoid confusion. If you have corrected a question and have two sets of working out, make sure that you cross out the incorrect set of working. For example: Question: A mass of 7 kg, initially at rest, lies on a frictionless table. It is attached to a mass of 4 kg that hangs freely off the table via a string and frictionless pulley system. Calculate the tension in the string. Solution: $a = \\frac{F}{m} = \\frac{(4)(9.8)}{7+4} = 3.56\\text{ m s}^{-2}$; $F = ma = (7)(3.56) = 24.9\\text{ N}$",
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch08.pdf",
+    "page": 37
+   }
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P8B-1",
+   "title": "Practical 8B–1 Newton’s second law",
+   "file": "8B Practical 8B–1 Newton’s second law.docx",
+   "aim": "To determine the effect of mass on acceleration."
+  }
+ ],
+ "powerpoint_figures": [
+  "8B PowerPoint Figure 8B–11.pptx",
+  "8B PowerPoint Figure 8B–15.pptx",
+  "8B PowerPoint Figure 8B–2.pptx"
+ ],
+ "notes": "8B.2/8B.3 has no numbered worked example: plan uses the in-text 1150 kg car example (chunk 8B-E2, Figure 8B–3). Book errors kept verbatim: WE8B-5b uses sin 9° (should be 19°); Figure 8B–15 labels N = mg sin θ (text says mg cos θ); SQ7 says 125 m s^-1 and answer uses 1000 kg though the question says 100 kg; SQ11d answer uses 96 kg (question is 56 kg); Worksheet 8B–1 Q1a answer unit says m s^-1 (should be m s^-2). 8B.7 and 8B.8 are only lightly assessed (review Q20, SQ10a, WS2a). 8B.9 (car safety) has no calculation questions in 8B; use 8A SQ7, SQ8d and review Q19d."
+}

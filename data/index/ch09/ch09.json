@@ -1,0 +1,877 @@
+{
+ "chapter": 9,
+ "title": "Energy and motion",
+ "unit": 2,
+ "aos": 1,
+ "sections": [
+  "9A",
+  "9B",
+  "9C"
+ ],
+ "criteria": [
+  {
+   "id": "9A.1",
+   "text": "Understand that the useful work is only achieved by a force that is parallel to the direction of motion",
+   "section": "9A",
+   "review_qs": [
+    "2"
+   ],
+   "exit_candidates": [
+    "CH9-RQ2",
+    "9A-SQ3"
+   ]
+  },
+  {
+   "id": "9A.2",
+   "text": "Apply the formula: $W = Fs\\cos\\theta$",
+   "section": "9A",
+   "review_qs": [
+    "1",
+    "2",
+    "14"
+   ],
+   "exit_candidates": [
+    "CH9-RQ1",
+    "CH9-RQ14a"
+   ]
+  },
+  {
+   "id": "9A.3",
+   "text": "Understand and apply the fact that work is the area under a force–distance graph",
+   "section": "9A",
+   "review_qs": [
+    "6"
+   ],
+   "exit_candidates": [
+    "CH9-RQ6",
+    "9A-SQ1"
+   ]
+  },
+  {
+   "id": "9B.1",
+   "text": "Apply the formula: $E_{\\text{g}} = mg\\Delta h$",
+   "section": "9B",
+   "review_qs": [
+    "19"
+   ],
+   "exit_candidates": [
+    "CH9-RQ19c",
+    "WS9B-1"
+   ]
+  },
+  {
+   "id": "9B.2",
+   "text": "Apply the formula: $E_{\\text{k}} = \\frac{1}{2}mv^{2}$",
+   "section": "9B",
+   "review_qs": [
+    "4",
+    "10",
+    "13",
+    "19"
+   ],
+   "exit_candidates": [
+    "CH9-RQ4",
+    "CH9-RQ19b"
+   ]
+  },
+  {
+   "id": "9B.3",
+   "text": "Understand that the kinetic energy is directly proportional to velocity squared",
+   "section": "9B",
+   "review_qs": [
+    "10"
+   ],
+   "exit_candidates": [
+    "CH9-RQ10"
+   ]
+  },
+  {
+   "id": "9B.4",
+   "text": "Apply the formula: $\\Delta E_{\\text{k}} = E_{\\text{k final}} - E_{\\text{k initial}} = \\frac{1}{2}mv^{2} - \\frac{1}{2}mu^{2}$",
+   "section": "9B",
+   "review_qs": [
+    "7",
+    "15"
+   ],
+   "exit_candidates": [
+    "9B-SQ3",
+    "CH9-RQ15a"
+   ]
+  },
+  {
+   "id": "9B.5",
+   "text": "Understand that in a closed system the total amount of energy remains the same",
+   "section": "9B",
+   "review_qs": [
+    "5",
+    "11",
+    "16",
+    "19"
+   ],
+   "exit_candidates": [
+    "CH9-RQ5",
+    "CH9-RQ19d"
+   ]
+  },
+  {
+   "id": "9B.6",
+   "text": "Apply the formula: $E_{\\text{k initial}} + E_{\\text{g initial}} = E_{\\text{k final}} + E_{\\text{g final}}$",
+   "section": "9B",
+   "review_qs": [
+    "5",
+    "9",
+    "11",
+    "16",
+    "19"
+   ],
+   "exit_candidates": [
+    "CH9-RQ16",
+    "CH9-RQ5"
+   ]
+  },
+  {
+   "id": "9B.7",
+   "text": "Apply the formula: $P = \\frac{E}{t}$",
+   "section": "9B",
+   "review_qs": [
+    "3",
+    "15"
+   ],
+   "exit_candidates": [
+    "CH9-RQ3",
+    "CH9-RQ15b"
+   ]
+  },
+  {
+   "id": "9B.8",
+   "text": "Apply the formula: $\\eta = \\frac{\\text{useful energy out}}{\\text{total energy in}}$",
+   "section": "9B",
+   "review_qs": [
+    "14"
+   ],
+   "exit_candidates": [
+    "CH9-RQ14b",
+    "9B-SQ1"
+   ]
+  },
+  {
+   "id": "9C.1",
+   "text": "Understand that the gradient of a force–compression/extension graph is the spring constant and the area under the graph is the elastic potential energy.",
+   "section": "9C",
+   "review_qs": [
+    "12"
+   ],
+   "exit_candidates": [
+    "CH9-RQ12a",
+    "9C-SQ3"
+   ]
+  },
+  {
+   "id": "9C.2",
+   "text": "Apply the formula for Hooke’s law: $F = -kx$",
+   "section": "9C",
+   "review_qs": [
+    "8",
+    "11"
+   ],
+   "exit_candidates": [
+    "CH9-RQ8",
+    "CH9-RQ11a"
+   ]
+  },
+  {
+   "id": "9C.3",
+   "text": "Apply the formula: $E_{\\text{s}} = \\frac{1}{2}kx^{2}$",
+   "section": "9C",
+   "review_qs": [
+    "11",
+    "19"
+   ],
+   "exit_candidates": [
+    "CH9-RQ11b",
+    "CH9-RQ19a"
+   ]
+  },
+  {
+   "id": "9C.4",
+   "text": "Understand that the elastic potential energy is directly proportional to the compression/extension squared",
+   "section": "9C",
+   "review_qs": [
+    "17",
+    "19"
+   ],
+   "exit_candidates": [
+    "CH9-RQ19e",
+    "9C-SQ2"
+   ]
+  },
+  {
+   "id": "9C.5",
+   "text": "Understand that elastic potential energy can be transformed into other types of energy",
+   "section": "9C",
+   "review_qs": [
+    "11",
+    "12",
+    "13",
+    "17"
+   ],
+   "exit_candidates": [
+    "CH9-RQ17b",
+    "CH9-RQ11c"
+   ]
+  },
+  {
+   "id": "9C.6",
+   "text": "Be able to describe the energy transformations that occur in vertical and horizontal oscillating springs",
+   "section": "9C",
+   "review_qs": [
+    "18"
+   ],
+   "exit_candidates": [
+    "CH9-RQ18",
+    "9C-CI2.3"
+   ]
+  }
+ ],
+ "review_questions": [
+  {
+   "id": "CH9-RQ1",
+   "n": "1",
+   "question": "A toy electric car has an electric motor that applies a constant force of 200 N. If the car travels a distance of 325 m, the work that the motor does on the car is",
+   "options": [
+    "A 1.63 J",
+    "B $3.25\\times10^{3}$ J",
+    "C $6.50\\times10^{3}$ J",
+    "D $6.50\\times10^{4}$ J"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "9A.2"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ2",
+   "n": "2",
+   "question": "A woman is pulling a heavy box with a force of 400 N at an angle of 32° from the horizontal, as shown below.\nHow much work does the woman do on the box if she drags it 45 m in a straight line?",
+   "options": [
+    "A $1.53\\times10^{4}$ J",
+    "B $1.80\\times10^{4}$ J",
+    "C $3.20\\times10^{4}$ J",
+    "D $6.40\\times10^{4}$ J"
+   ],
+   "answer": "A",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "9A.1",
+    "9A.2"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH9_RQ2.png"
+   ],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ3",
+   "n": "3",
+   "question": "The current 1-hour cycling world record is 55.1 km, held by Sir Bradley Wiggins. To break this record, he held a power output of 440 W for the full hour. The amount of energy that he used for this hour is equal to:",
+   "options": [
+    "A 440 J",
+    "B $2.64\\times10^{4}$ J",
+    "C $2.42\\times10^{5}$ J",
+    "D $1.58\\times10^{6}$ J"
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "9B.7"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ4",
+   "n": "4",
+   "question": "How much kinetic energy does a car of mass 1110 kg, moving at a speed of 90 km h$^{-1}$ have?",
+   "options": [
+    "A $1.39\\times10^{4}$ J",
+    "B $5.00\\times10^{4}$ J",
+    "C $3.47\\times10^{5}$ J",
+    "D $4.50\\times10^{6}$ J"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "9B.2"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ5",
+   "n": "5",
+   "question": "A pendulum with radius, r, is dropped from a horizontal position and moves down to a vertical position. A diagram of this situation is shown below.\nThe speed of the pendulum when it reaches the vertical position is equal to",
+   "options": [
+    "A $\\sqrt{\\frac{gr}{2}}$",
+    "B $\\sqrt{2gr}$",
+    "C $gr$",
+    "D $2gr$"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "9B.5",
+    "9B.6"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH9_RQ5.png"
+   ],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ6",
+   "n": "6",
+   "question": "Use the following information to answer Questions 6 and 7.\nSome students wake up to find that the battery of their manual car is flat and they cannot start their engine. They find out that they can roll start their car as the motion of the wheels will transfer to the pistons, and if the car is moving fast enough it can cause the car to start. To do this, the students push the car straight for 10 m and then let it roll down a short hill. A diagram of this situation is shown below.\nThe force–displacement graph for the 10 m that the students push the car is shown next.\nWhich of the following is closest to the amount of work done to push the car to the edge of the hill.",
+   "options": [
+    "A 320 J",
+    "B 3200 J",
+    "C 32000 J",
+    "D 320 000 J"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "graph",
+   "size": "quick",
+   "criteria": [
+    "9A.3"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH9_RQ6-7-diagram.png",
+    "img/CH9_RQ6-graph.png"
+   ],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ7",
+   "n": "7",
+   "question": "Once the students have finished pushing the car, it goes over the edge of the hill with a speed of 9 km h$^{-1}$. Which of the following is closest to the speed of the car when it has rolled down the hill and passes point A. You can ignore air resistance in your calculations.",
+   "options": [
+    "A 10.2 km h$^{-1}$",
+    "B 13.4 km h$^{-1}$",
+    "C 36.8 km h$^{-1}$",
+    "D 54.2 km h$^{-1}$"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "medium",
+   "criteria": [
+    "9B.4",
+    "9B.6"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH9_RQ6-7-diagram.png"
+   ],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ8",
+   "n": "8",
+   "question": "Use the following information to answer Questions 8 and 9.\nA spring inside a cylinder launches a steel ball of mass 30 g into the air. Apply a force of 40 N is needed to compress the spring 0.2 m.\nWhat is the spring constant of the spring?",
+   "options": [
+    "A 800 N m$^{-1}$",
+    "B 400 N m$^{-1}$",
+    "C 200 N m$^{-1}$",
+    "D 100 N m$^{-1}$"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "9C.2"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH9_RQ8-9.png"
+   ],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ9",
+   "n": "9",
+   "question": "If the spring is compressed by 25 cm, what is the maximum velocity achieved by the ball? Hint: You need to consider the slight change is gravitational potential energy as the spring pushes up the steel ball.",
+   "options": [
+    "A 40.8 m s$^{-1}$",
+    "B 20.4 m s$^{-1}$",
+    "C 20.3 m s$^{-1}$",
+    "D 20.2 m s$^{-1}$"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "medium",
+   "criteria": [
+    "9B.6",
+    "9C.3",
+    "9C.5"
+   ],
+   "parts": [],
+   "img": [
+    "img/CH9_RQ8-9.png"
+   ],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ10",
+   "n": "10",
+   "question": "If a runner doubles their speed, then their kinetic energy will",
+   "options": [
+    "A stay the same.",
+    "B double.",
+    "C triple.",
+    "D quadruple."
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "criteria": [
+    "9B.2",
+    "9B.3"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ11",
+   "n": "11",
+   "question": "An archer fires a bow directly up. In order to do this, they pull the bow back by 25 cm. The bow has a spring constant of 500 N m$^{-1}$ and the arrow has a mass of 18 g.",
+   "options": [],
+   "answer": null,
+   "marks": 7,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "9C.2",
+    "9C.3",
+    "9C.5",
+    "9B.5",
+    "9B.6"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the force required by the archer to hold the bow in place.",
+     "answer": "$F = k\\Delta x = (500)(0.25) = 125\\ \\text{N}$",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "Calculate the elastic potential energy stored in the bow when it is pulled back by 25 cm.",
+     "answer": "$E_{\\text{s}} = \\frac{1}{2}k\\Delta x^{2} = \\frac{1}{2}(500)(0.252) = 15.6\\ \\text{J}$",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "Calculate the maximum height achieved by the arrow from the point of its release.",
+     "answer": "$E_{\\text{s}} - E_{\\text{g to raise the arrow 25 cm}} = E_{\\text{g}} = mg\\Delta h$\n$\\Delta h = \\frac{E_{\\text{s}} - E_{\\text{g to raise the arrow 25 cm}}}{mg} = \\frac{15.6 - (0.018)(9.8)(0.25)}{(0.018)(9.8)} = 88.2\\ \\text{m (or 88.3 m if 15.625 J is used)}$",
+     "size": "medium",
+     "marks": 3
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ12",
+   "n": "12",
+   "question": "A pinball machine uses a handle, spring and soft plunger to launch a ball into the machine. This is shown in the diagram below.\nA force-compression graph of this spring is shown below.\nThe same spring mechanism is used to launch a ball up an incline as shown below.\nThe ball has a mass of 0.150 kg.",
+   "options": [],
+   "answer": null,
+   "marks": 7,
+   "kind": "graph",
+   "size": "long",
+   "criteria": [
+    "9C.1",
+    "9C.5"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the spring constant of this spring.",
+     "answer": "$k = \\text{gradient} = \\frac{40-0}{0.10-0} = 400\\ \\text{N m}^{-1}$",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "How much elastic potential energy is stored in the spring when the force on the spring is 30 N?",
+     "answer": "$F = kx$\n$x = \\frac{F}{k} = \\frac{30}{400} = 0.075\\ \\text{m}$\n$E_{\\text{s}} = \\frac{1}{2}kx^{2} = \\frac{1}{2}(400)(0.075)^{2} = 1.125\\ \\text{J}$\nCould also use area under the graph",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "If the spring is compressed by 10 cm and then released, what is the velocity of the ball when it reaches the end of the incline?",
+     "answer": "$\\Delta h = 85\\tan 20^\\circ = 30.9\\ \\text{cm}$\n$E_{\\text{s}} = E_{\\text{g}} + E_{\\text{k}}$\n$\\frac{1}{2}kx^{2} = mg\\Delta h + \\frac{1}{2}mv^{2}$\n$v = \\sqrt{\\frac{2\\left(\\frac{1}{2}k\\Delta x^{2} - mg\\Delta h\\right)}{m}}$\n$= \\sqrt{\\frac{2\\left(\\frac{1}{2}(400)(0.1)^{2} - (0.15)(9.8)(0.309)\\right)}{(0.15)}}$\n$= 4.54\\ \\text{m s}^{-1}$",
+     "size": "long",
+     "marks": 3
+    }
+   ],
+   "img": [
+    "img/CH9_RQ12-diagram.png",
+    "img/CH9_RQ12-graph.png",
+    "img/CH9_RQ12c.png"
+   ],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ13",
+   "n": "13",
+   "question": "Some arcade game designers are manufacturing a spring to launch a ball from a pinball machine. They test the spring by compressing it by varying amounts and placing a pinball of mass 80 g up to the compressed spring. Then they release the spring and measure the speed with which the pinball leaves the spring. They measure the velocity by timing how long it takes the ball to travel 10 cm and then apply the formula $v = \\frac{d}{t}$. A diagram of this set-up is shown below.\nThe designers collect the results shown in columns 1 and 2 of the table.\n| Compression (m) | Compression squared (m$^2$) | Velocity (m s$^{-1}$) | Kinetic energy (J) |\n| 0.02 | | 2.7 | |\n| 0.04 | | 5.5 | |\n| 0.06 | | 8.2 | |\n| 0.08 | | 11.0 | |",
+   "options": [],
+   "answer": null,
+   "marks": 13,
+   "kind": "graph",
+   "size": "long",
+   "criteria": [
+    "9C.4",
+    "9C.5",
+    "9B.2"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Complete the values for the compression squared and the kinetic energy. Round your answers to one decimal place.",
+     "answer": "| 0.02 | $4.0\\times10^{-4}$ | 2.7 | 0.3 |\n| 0.04 | $1.6\\times10^{-3}$ | 5.5 | 1.2 |\n| 0.06 | $3.6\\times10^{-3}$ | 8.2 | 2.7 |\n| 0.08 | $6.4\\times10^{-3}$ | 11.0 | 4.8 |",
+     "size": "medium",
+     "marks": 3
+    },
+    {
+     "n": "b",
+     "question": "Draw a graph of the kinetic energy vs the square of the compression of the spring on a copy of the grid shown below. Include a line of best fit.",
+     "answer": "(graph: see img/CH9_RQ13b_answer.jpg)",
+     "size": "medium",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "Calculate the gradient of the line of best fit of your graph.",
+     "answer": "Use two points on your line of best fit, for example:\n$\\text{Gradient} = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{4-1}{(5.4-1.3)\\times10^{-3}} = 732\\ \\text{J m}^{-2}$\nA range of 715–775 J m$^{-2}$ is accepted.",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "d",
+     "question": "Use your answer from part c to calculate the spring constant, k, of the spring.",
+     "answer": "$E_{\\text{k}} = E_{\\text{s}} = \\frac{1}{2}kx^{2}$\n$k = \\frac{2E_{\\text{k}}}{x^{2}} = 2\\times\\text{gradient} = 2\\times732 = 1464\\ \\text{N m}^{-1}$\nA range of 1430–1550 N m$^{-1}$ is accepted.",
+     "size": "medium",
+     "marks": 3
+    },
+    {
+     "n": "e",
+     "question": "One of the designers states that the way they measured velocity is inaccurate. Other than inaccuracies in timing, explain why the measurement of the velocity is inaccurate, state its effect on the predicted values of the spring constant and suggest a way to reduce this error.",
+     "answer": "The measurement of the velocity is the average velocity. The ball will likely slow down due to friction, which means the average velocity is slower than the initial velocity and the predicted value of the spring constant will be consistently lower than the true value because $E_{\\text{s}} = E_{\\text{k}}$, $\\frac{1}{2}kx^{2} = \\frac{1}{2}mv^{2},$ $k = \\frac{v^{2}m}{x^{2}}$; if velocity decreases, the spring constant decreases.",
+     "size": "medium",
+     "marks": 3
+    }
+   ],
+   "img": [
+    "img/CH9_RQ13.png",
+    "img/CH9_RQ13b-grid.png"
+   ],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   },
+   "answer_img": [
+    "img/CH9_RQ13b_answer.jpg"
+   ]
+  },
+  {
+   "id": "CH9-RQ14",
+   "n": "14",
+   "question": "Blacksmiths use a giant pneumatic hammer to bend and shape large pieces of metal. It takes 1 GJ of energy for one strike of the hammer. When the hammer falls, it does so with a constant total force of 450 MN and covers a distance of 1.5 m.",
+   "options": [],
+   "answer": null,
+   "marks": 3,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "9A.2",
+    "9B.8"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the work done by the hammer as it falls.",
+     "answer": "$W = Fs\\cos\\theta = (450\\times10^{6})(1.5)\\cos 0^\\circ = 6.75\\times10^{8}\\ \\text{J}$",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "Calculate the energy efficiency of the hammer.",
+     "answer": "$\\text{Efficiency} = \\frac{\\text{useful energy}}{\\text{total energy}}\\times100 = \\frac{6.75\\times10^{8}}{1\\times10^{9}}\\times100 = 67.5\\%$",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ15",
+   "n": "15",
+   "question": "A car of mass 960 kg accelerates from 45 km h$^{-1}$ to 81 km h$^{-1}$ in 3 seconds.",
+   "options": [],
+   "answer": null,
+   "marks": 8,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "9B.4",
+    "9B.7",
+    "9B.8"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the amount of work done on the car by the engine.",
+     "answer": "$v = \\frac{81}{3.6} = 22.5\\ \\text{m s}^{-1},\\ u = \\frac{45}{3.6} = 12.5\\ \\text{m s}^{-1}$\n$W = \\frac{1}{2}mv^{2} - \\frac{1}{2}mu^{2} = \\frac{1}{2}(960)(22.5)^{2} - \\frac{1}{2}(960)(12.5)^{2} = 1.68\\times10^{5}\\ \\text{J}$",
+     "size": "medium",
+     "marks": 3
+    },
+    {
+     "n": "b",
+     "question": "Calculate the power of the car’s engine during this time.",
+     "answer": "$P = \\frac{E}{t} = \\frac{1.68\\times10^{5}}{3} = 5.60\\times10^{4}\\ \\text{W}$",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "If this car is 30% efficient and each millilitre (mL) of petrol contains 48.5 kJ of energy, calculate how many millilitres of fuel are used to accelerate the car.",
+     "answer": "$\\text{Total energy} = \\frac{1.68\\times10^{5}}{0.3} = 5.6\\times10^{5}\\ \\text{J}$\n$\\text{Volume} = \\frac{5.6\\times10^{5}}{48.5\\times10^{3}} = 11.5\\ \\text{mL}$",
+     "size": "medium",
+     "marks": 3
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ16",
+   "n": "16",
+   "question": "A person of mass 60 kg climbs a water slide that is 30.5 m tall. At the top of the slide, the person pushes off the railing, giving themselves an initial velocity of 0.56 m s$^{-1}$. Calculate the velocity of the person as they exit the bottom of the water slide. For this question, assume that friction is negligible.",
+   "options": [],
+   "answer": "$\\frac{1}{2}\\cancel{m}v_{\\text{i}}^{2} + \\cancel{m}g\\Delta h_{\\text{i}} = \\frac{1}{2}\\cancel{m}v_{\\text{f}}^{2} + \\cancel{m}g\\Delta h_{\\text{f}}$\n$v_{\\text{f}} = \\sqrt{v_{\\text{i}}^{2} + 2g\\Delta h_{\\text{i}} - 2g\\Delta h_{\\text{f}}} = \\sqrt{(0.56)^{2} + 2(9.8)(30.5) - 2(9.8)(0)} = 24.5\\ \\text{m s}^{-1}$",
+   "marks": 2,
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "9B.5",
+    "9B.6"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ17",
+   "n": "17",
+   "question": "Students hang a mass of 1.0 kg from a spring that obeys Hooke’s law with k = 10 N m$^{-1}$. The spring has an unstretched length of 2.0 m. The mass then hangs stationary at a distance of 1.0 m below the unstretched position (X) of the spring, at Y, as shown at position 6b in the diagram below. The mass is then pulled a further 1.0 m below this position and released so that it oscillates, as shown in position 6c. Assume the gravitational field strength to be 10 N kg$^{-1}$. Note that this diagram is not to scale.\nThe zero of gravitational potential energy is taken to be bottom point, Z.\nThe elastic potential energy and gravitational potential energy are plotted on a graph, as shown in the diagram below.",
+   "options": [],
+   "answer": null,
+   "marks": 6,
+   "kind": "graph",
+   "size": "long",
+   "criteria": [
+    "9C.4",
+    "9C.5"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the total energy of the system when the mass is at its lowest point, Z.",
+     "answer": "20 J. Kinetic energy is zero, and from the graph, the spring potential energy is 20 J and gravitational potential energy is 0 J.",
+     "size": "quick",
+     "marks": 1
+    },
+    {
+     "n": "b",
+     "question": "From the data in the graph, calculate the speed of the mass at its midpoint, Y.",
+     "answer": "At point Y there is 10 J of gravitational potential energy and 5 J of spring potential energy. Therefore, 20 – 10 – 5 = 5 J of kinetic energy.\n$E_{\\text{k}} = \\frac{1}{2}mv^{2}$\n$v = \\sqrt{\\frac{2E_{\\text{k}}}{m}} = \\sqrt{\\frac{2(5)}{1}} = 3.16\\ \\text{m s}^{-1}$",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "Without making any other changes, the students now pull the mass down to point P, 0.50 m below Y. They release the mass and it oscillates about Y, as shown right.\nThe students now take the zero of gravitational potential energy to be at P and the zero of elastic potential energy to be at Q. They expect the total energy at P to be equal to the total energy at Q.\nThey prepare the following table.\n| Position | Gravitational potential energy, $E_g$ | Elastic potential energy, $E_s$ | Kinetic energy, $E_k$ |\n| Q | $E_g = mgh = 1.0\\times10\\times1.0 = 10$ J | $E_s = 0$ | $E_k = 0$ |\n| P | $E_g = 0$ | $E_s = \\frac{1}{2}k(\\Delta x)^{2} = \\frac{1}{2}\\times10\\times1.0^{2} = 5.0$ J | $E_k = 0$ |\nHowever, their calculation of the total energy ($E_g + E_s + E_k$) at Q (10 J) is different from their calculation of the total energy at P (5.0 J).\nExplain the mistake that the students have made.",
+     "answer": "The student has assumed that $E_{\\text{s}}$ was zero at point Q; it should be calculated from the unstretched length, as $E_{\\text{s}}$ is proportional to $x^{2}$. This means the change in $E_{\\text{s}}$ is not linear.",
+     "size": "medium",
+     "marks": 3
+    }
+   ],
+   "img": [
+    "img/CH9_RQ17-diagram.png",
+    "img/CH9_RQ17-graph.png",
+    "img/CH9_RQ17c.png"
+   ],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ18",
+   "n": "18",
+   "question": "A spring fixed at one end and with a mass attached at the other end is placed horizontally on a polished surface that can be considered frictionless. The mass is then pulled, extending the spring, then released and allowed to oscillate freely. Describe the changes to elastic potential energy and kinetic energy that occur as the spring goes from a fully extended to a fully compressed position. The spring works the same in extension and compression.",
+   "options": [],
+   "answer": "When the spring is extended, the spring potential energy is at a maximum but the kinetic energy is zero. Once released, the spring potential energy will decrease as the kinetic energy increases. When the spring is at its rest length it will have no spring potential energy and the kinetic energy will be at a maximum. After this point, the spring will begin to compress and the kinetic energy will decrease, while the spring potential energy increases. Once fully compressed, the spring potential energy will be a maximum and the kinetic energy will be zero.",
+   "marks": 5,
+   "kind": "explain",
+   "size": "long",
+   "criteria": [
+    "9C.5",
+    "9C.6"
+   ],
+   "parts": [],
+   "img": [],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  },
+  {
+   "id": "CH9-RQ19",
+   "n": "19",
+   "question": "Rob and Sophia have set up an energy transfer experiment. In this experiment, a steel ball, that has a mass of 45 g, is hung from the ceiling via a piece of string and then placed next to a loaded spring. The spring is compressed by 5 cm and is held in place by a force of 0.725 N. When the spring is released, it transfers all of its energy to the steel ball, which swings up in an arc. A diagram of this experimental set-up is shown below.",
+   "options": [],
+   "answer": null,
+   "marks": 10,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "9C.3",
+    "9C.4",
+    "9C.5",
+    "9B.1",
+    "9B.2",
+    "9B.5",
+    "9B.6"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Show that the elastic potential energy of the spring is $1.81\\times10^{-2}$ J when it is compressed by 5 cm.",
+     "answer": "$F = kx$\n$k = \\frac{F}{\\Delta x} = \\frac{0.725}{0.05} = 14.5\\ \\text{N m}^{-1}$\n$E_{\\text{s}} = \\frac{1}{2}kx^{2} = \\frac{1}{2}(14.5)(0.05)^{2} = 0.0181\\ \\text{J}$",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "b",
+     "question": "Calculate the velocity of the steel ball once the spring is fully extended. Assume that all of the energy of the spring is transferred to the ball.",
+     "answer": "$E_{\\text{k}} = \\frac{1}{2}mv^{2}$\n$v = \\sqrt{\\frac{2E_{\\text{k}}}{m}} = \\sqrt{\\frac{2(0.0181)}{(0.045)}} = 0.897\\ \\text{m s}^{-1}$",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "c",
+     "question": "Determine the maximum height achieved by the ball.",
+     "answer": "$E_{\\text{g}} = mg\\Delta h$\n$\\Delta h = \\frac{E_{\\text{g}}}{mg} = \\frac{(0.0181)}{(0.045)(9.8)} = 0.0410\\ \\text{m or } 4.10\\ \\text{cm}$",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "d",
+     "question": "What is the velocity of the ball at its maximum height? Explain your answer.",
+     "answer": "Zero. As the ball increases in height its kinetic energy is being transformed into gravitational potential energy. The maximum height indicated when all of the kinetic energy has been transformed into gravitational potential energy, and therefore the velocity, must be zero at the maximum height.",
+     "size": "quick",
+     "marks": 2
+    },
+    {
+     "n": "e",
+     "question": "The students want to double the amount of initial spring potential energy. Rob suggests doubling the compression so that the elastic is compressed by 10 cm. Sophia disagrees and says that the spring need only be compressed to 7 cm. Who is correct? Justify your answer.",
+     "answer": "Sophia is correct. Spring potential energy is directly proportional to the compression squared (the relationship is not linear). This can be proven mathematically as:\n$0.0362 = \\frac{1}{2}\\times14.5\\times x^{2}$\n$x = 0.0706\\ \\text{m or } 7.06\\ \\text{cm}$",
+     "size": "quick",
+     "marks": 2
+    }
+   ],
+   "img": [
+    "img/CH9_RQ19.png"
+   ],
+   "src": {
+    "file": "Ch09 Review questions.docx"
+   }
+  }
+ ],
+ "summary": "Chapter 9 Summary\n\n9A Work\n\nHow is work calculated?\n\nWork is the amount of energy transferred from one object or system to\nanother.\n\nForce must be applied parallel to the direction of displacement. If it's\nnot, find the component of the force that is parallel to the direction\nof motion, using trigonometry.\n\n$$W = Fs\\ cos\\ \\theta$$\n\nThis may be termed the 'useful work'.\n\nWork may be positive (given to an object) or negative (taken away from\nthe object)\n\nNo work is done when an object is held in a fixed position, as there is\nno displacement.\n\nForce--distance graphs\n\nFor a constant force y applied over a distance x:\n\nThe area under a force-displacement graph is work done, because work =\nforce × displacement.\n\nIn the graph shown the area is xy.\n\n9B Energy, power and energy efficiency\n\nEnergy is the measurable property of a body or system with the ability\nto do work. Energy can be transformed from one form to another, the same\ntype of energy can be transferred from one object to another, and energy\ncannot be created or destroyed.\n\nGravitational potential energy\n\nGravitational potential energy is the amount of energy an object has\nstored due to its position in a gravitational field; measured in joules\n(J).\n\nKinetic energy\n\nRemember to use the SI unit for speed or velocity, m s$^{-1}$\n\nThis means (for an object of constant mass) kinetic energy is directly\nproportional to the square of the velocity.\n\nEnergy transformation from one form to another\n\nMotion and energy in systems\n\nSystem: a collection of objects that can interact with each other\n\nClosed system: a system that does not allow the transfer of mass or\nenergy to the surrounding environment. In a closed system the total\namount of energy remains the same. When analysing energy and motion we\nusually assume the system is closed.\n\nOpen system: a system that does allow the transfer of mass or energy to\nthe surrounding environment. The only type usually considered are\ninelastic collisions, where thermal and sound energy is lost to the\nsurrounds.\n\nPower\n\nheight=\"0.4583333333333333in\"}\n\nPower required to overcome friction and maintain a constant velocity.\n\nP = $Fv_{\\text{av}}$\n\nEnergy efficiency\n\nEnergy efficiency: the ratio of the energy output to the energy input of\na system\n\n9C Springs\n\nElasticity\n\nElastic material: a material that can store elastic potential energy and\nis able to return to its original shape once the energy is released\n\nElastic limit: the maximum deformation that can occur without causing\npermanent deformation\n\nHooke's law\n\n$F = - kx$, Spring constant (k) = gradient of a\nforce-compression/extension graph, shown here for ideal springs with\nspring constants of k = 250 N m$^{-1}$ (red) and k = 500 N m$^{-1}$\n(blue).\n\n[...] restoring force acts in the opposite direction to the compression or\nextension. It can be omitted for simplicity, to mean that the formula\nindicates the magnitude of the force on the spring and not its\ndirection.\n\nIdeal spring: a hypothetical spring that is considered frictionless and\nmass-less and that obeys Hooke's law.\n\nElastic potential energy\n\nThe energy needed to extend the spring increases the more lengthened the\nspring becomes.\n\nThe elastic potential energy for a spring is directly proportional to\nthe compression/extension squared.\n\nEnergy transformations in a horizontal spring\n\nEquilibrium position: the position in a system where the net force on\nthe oscillating object is zero.\n\nWhen objects are not at the equilibrium position then net force on them\nwill be towards the equilibrium position.\n\nAt any point in an oscillating spring system:\n\nKinetic energy in a horizontal spring system\n\nspring\n\nEnergy transformations in a vertical spring\n\nAn object attached to a vertical spring has no net force at its\nequilibrium position.\n\nThe spring force $F_{\\text{spring}}$ balances the weight force $F_{\\text{weight}}$.\n\nKinetic energy in a vertical spring system:\n\nkx = mg\n\nEnergy transformations\n\nOne full oscillation of a vertical spring",
+ "test": {
+  "file": "Chapter 9 Test.docx",
+  "questions": 15,
+  "marks": 44,
+  "note": "10 multiple-choice + 5 short-answer (Q11 to Q15); answers inside the same file. Not indexed question by question"
+ },
+ "notes": "Suggested responses equations were MathType WMF images; converted to LaTeX by reading rendered images (check RQ11b: Cambridge writes (0.252), meaning 0.25²). RQ5 options A and B were WMF; transcribed. RQ12c answer uses 85 cm incline length from the diagram. Summary: formula images inside the Summary docx (and the start of one sentence on the negative sign in Hooke’s law, marked [...]) were images and are not in the summary text. RQ9, RQ7 have no worked answer, only the letter. 9B.3 and 9C.4 each have only one linked review question; 9C-CI2.3 (part b) used as exit fallback for 9C.6 (long)."
+}

@@ -1,0 +1,1019 @@
+{
+ "chapter": 8,
+ "title": "Forces and motion",
+ "unit": 2,
+ "aos": 1,
+ "sections": [
+  "8A",
+  "8B",
+  "8C"
+ ],
+ "criteria": [
+  {
+   "id": "8A.1",
+   "text": "Use the formula $p = mv$ to calculate the momentum of bodies",
+   "section": "8A",
+   "review_qs": [
+    "2",
+    "12"
+   ],
+   "exit_candidates": [
+    "CH8-RQ2",
+    "8A-SQ2"
+   ]
+  },
+  {
+   "id": "8A.2",
+   "text": "Understand that as long as no external forces are acting on an object, its momentum is conserved",
+   "section": "8A",
+   "review_qs": [
+    "4",
+    "7",
+    "12",
+    "15",
+    "19"
+   ],
+   "exit_candidates": [
+    "CH8-RQ5",
+    "CH8-RQ15b"
+   ]
+  },
+  {
+   "id": "8A.3",
+   "text": "Apply conservation of momentum to solve problems relating to two objects colliding in a straight line",
+   "section": "8A",
+   "review_qs": [
+    "4",
+    "7",
+    "12",
+    "19"
+   ],
+   "exit_candidates": [
+    "CH8-RQ7",
+    "CH8-RQ12a"
+   ]
+  },
+  {
+   "id": "8A.4",
+   "text": "Be able to determine mathematically if a collision is elastic or inelastic",
+   "section": "8A",
+   "review_qs": [
+    "4",
+    "12",
+    "19"
+   ],
+   "exit_candidates": [
+    "CH8-RQ12b",
+    "CH8-RQ4"
+   ]
+  },
+  {
+   "id": "8A.5",
+   "text": "Use the formulas $I = \\Delta p = m\\Delta v = mv - mu = F_{\\text{av}}\\Delta t$ to model impulse and change in momentum",
+   "section": "8A",
+   "review_qs": [
+    "6",
+    "12",
+    "14",
+    "17",
+    "19"
+   ],
+   "exit_candidates": [
+    "CH8-RQ6",
+    "CH8-RQ12c"
+   ]
+  },
+  {
+   "id": "8A.6",
+   "text": "Understand that the area under a force–time graph is the impulse and apply this knowledge to solve a variety of problems",
+   "section": "8A",
+   "review_qs": [
+    "17"
+   ],
+   "exit_candidates": [
+    "CH8-RQ17b",
+    "8A-CI2.3"
+   ]
+  },
+  {
+   "id": "8B.1",
+   "text": "Recall Newton’s three laws of motion",
+   "section": "8B",
+   "review_qs": [
+    "1",
+    "3",
+    "8",
+    "9",
+    "10",
+    "15",
+    "16",
+    "18"
+   ],
+   "exit_candidates": [
+    "CH8-RQ3",
+    "CH8-RQ15a"
+   ]
+  },
+  {
+   "id": "8B.2",
+   "text": "Be able to add forces to find the net force on an object",
+   "section": "8B",
+   "review_qs": [
+    "16",
+    "18"
+   ],
+   "exit_candidates": [
+    "CH8-RQ18b",
+    "8B-CI2.1"
+   ]
+  },
+  {
+   "id": "8B.3",
+   "text": "Use the formula $F_{\\text{net}} = ma$ to model Newton’s second law of motion",
+   "section": "8B",
+   "review_qs": [
+    "1",
+    "3",
+    "8",
+    "9",
+    "10",
+    "15",
+    "16",
+    "18"
+   ],
+   "exit_candidates": [
+    "CH8-RQ1",
+    "8B-CI1.4"
+   ]
+  },
+  {
+   "id": "8B.4",
+   "text": "Understand the normal force",
+   "section": "8B",
+   "review_qs": [
+    "13"
+   ],
+   "exit_candidates": [
+    "CH8-RQ13",
+    "8B-CI2.1"
+   ]
+  },
+  {
+   "id": "8B.5",
+   "text": "Apply Newton’s laws to a number of different situations; including using the formula $a = \\frac{F_{\\text{net}}}{m}$ to calculate the acceleration of a system and $F = ma$ to calculate the force on different parts of the system",
+   "section": "8B",
+   "review_qs": [
+    "8",
+    "9",
+    "10",
+    "16",
+    "18"
+   ],
+   "exit_candidates": [
+    "CH8-RQ8",
+    "CH8-RQ16a"
+   ]
+  },
+  {
+   "id": "8B.6",
+   "text": "Be able to label forces using the convention ‘force on A by B’ or $F_{\\text{on A by B}} = -F_{\\text{on B by A}}$",
+   "section": "8B",
+   "review_qs": [
+    "18"
+   ],
+   "exit_candidates": [
+    "CH8-RQ18d",
+    "8B-CI1.5"
+   ]
+  },
+  {
+   "id": "8B.7",
+   "text": "Understand the difference between mass and the force due to gravity",
+   "section": "8B",
+   "review_qs": [
+    "20"
+   ],
+   "exit_candidates": [
+    "8B-SQ5",
+    "8B-SQ10a"
+   ]
+  },
+  {
+   "id": "8B.8",
+   "text": "Model the force due to gravity, $F_\\text{g}$, as the force of gravity acting at the centre of mass of a body",
+   "section": "8B",
+   "review_qs": [
+    "20"
+   ],
+   "exit_candidates": [
+    "8B-SQ10a"
+   ]
+  },
+  {
+   "id": "8B.9",
+   "text": "Apply motion concepts to discuss vehicle safety",
+   "section": "8B",
+   "review_qs": [
+    "19"
+   ],
+   "exit_candidates": [
+    "CH8-RQ19d",
+    "8A-SQ8d"
+   ]
+  },
+  {
+   "id": "8C.1",
+   "text": "Use the formula $\\tau = r_{\\perp}F$ to calculate the torques",
+   "section": "8C",
+   "review_qs": [
+    "11",
+    "20",
+    "21"
+   ],
+   "exit_candidates": [
+    "CH8-RQ11",
+    "8C-SQ1"
+   ]
+  },
+  {
+   "id": "8C.2",
+   "text": "Be able to apply the idea that when a system is in rotational equilibrium, the sum of the clockwise torques is equal to the sum of the anticlockwise torques",
+   "section": "8C",
+   "review_qs": [
+    "11",
+    "20",
+    "21"
+   ],
+   "exit_candidates": [
+    "CH8-RQ11",
+    "8C-CI1.2"
+   ]
+  },
+  {
+   "id": "8C.3",
+   "text": "Be able to apply the idea that when a system is in translational equilibrium, the sum of the forces is equal to zero: $\\sum F = 0$",
+   "section": "8C",
+   "review_qs": [
+    "20"
+   ],
+   "exit_candidates": [
+    "8C-SQ5",
+    "8C-SQ6"
+   ]
+  }
+ ],
+ "review_questions": [
+  {
+   "id": "CH8-RQ1",
+   "n": "1",
+   "question": "A model cart of mass 2.0 kg is propelled from rest by a rocket motor that applies a constant horizontal force of 4.0 N, as shown below. Assume that friction is negligible. Which one of the following best gives the magnitude of the acceleration of the model cart? © VCAA, 2017",
+   "options": [
+    "A. 0.50 m s$^{-2}$",
+    "B. 1.0 m s$^{-2}$",
+    "C. 2.0 m s$^{-2}$",
+    "D. 4.0 m s$^{-2}$"
+   ],
+   "answer": "C",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "8B.1",
+    "8B.3"
+   ],
+   "img": [
+    "img/CH8_RQ1.png"
+   ],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ2",
+   "n": "2",
+   "question": "What is the momentum of a runner of mass 65 kg who is running at a speed of 5 m s$^{-1}$?",
+   "options": [
+    "A. 70 kg m s$^{-1}$",
+    "B. 325 kg m s$^{-1}$",
+    "C. 1170 kg m s$^{-1}$",
+    "D. 1560 kg m s$^{-1}$"
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "8A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ3",
+   "n": "3",
+   "question": "A truck that has a mass of 3000 kg accelerates at the same rate as a car that has a mass of 1000 kg. Which of the following statements is true?",
+   "options": [
+    "A. As the acceleration is the same, the force on the two objects must also be the same.",
+    "B. The truck will have three times more driving force on it than the car.",
+    "C. The car will have three times more driving force on it than the truck.",
+    "D. The car will have double the truck's driving force."
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "criteria": [
+    "8B.1",
+    "8B.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ4",
+   "n": "4",
+   "question": "A group of students is playing with some inflatable exercise balls. In one instance, two students throw the exercise balls directly at each other at 4 m s$^{-1}$. The exercise balls collide and travel in opposite directions at 3.5 m s$^{-1}$. Which of the following statements about the collision is true?",
+   "options": [
+    "A. Momentum and kinetic energy were conserved.",
+    "B. Neither momentum nor kinetic energy were conserved.",
+    "C. Momentum was conserved but kinetic energy was not conserved.",
+    "D. Momentum was not conserved but kinetic energy was conserved."
+   ],
+   "answer": "C",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "criteria": [
+    "8A.2",
+    "8A.3",
+    "8A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ5",
+   "n": "5",
+   "question": "A model rocket is fired exactly horizontally and hits a tree. The rocket lodges in the tree and is stationary after the collision. Which of the following statements is correct regarding the momentum of the rocket?",
+   "options": [
+    "A. The momentum has been dissipated as heat and sound during the collision.",
+    "B. The momentum was destroyed as the tree applied a force on the rocket.",
+    "C. The momentum was transferred to the tree and then to Earth.",
+    "D. The momentum of the rocket is the same before and after the collision."
+   ],
+   "answer": "C",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "explain",
+   "size": "quick",
+   "criteria": [
+    "8A.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ6",
+   "n": "6",
+   "question": "What is the change in momentum if a car of mass 995 kg brakes when coming up to a set of lights and its velocity changes from 81 km h$^{-1}$ east to 18 km h$^{-1}$ east?",
+   "options": [
+    "A. 1.74 × 10$^{4}$ kg m s$^{-1}$ east",
+    "B. 1.74 × 10$^{4}$ kg m s$^{-1}$ west",
+    "C. 6.27 × 10$^{4}$ kg m s$^{-1}$ east",
+    "D. 6.27 × 10$^{4}$ kg m s$^{-1}$ west"
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "8A.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ7",
+   "n": "7",
+   "question": "A cart with a mass of m$_{1}$ is travelling at 3.75 m s$^{-1}$ south when it hits a stationary cart that has a mass of m$_{2}$. m$_{2}$ has double the mass of m$_{1}$. Once they collide, they join and move as one and travel as one. The magnitude of the final velocity of the two carts is:",
+   "options": [
+    "A. 0.500 m s$^{-1}$",
+    "B. 0.750 m s$^{-1}$",
+    "C. 1.25 m s$^{-1}$",
+    "D. 2.54 m s$^{-1}$"
+   ],
+   "answer": "C",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "8A.2",
+    "8A.3"
+   ],
+   "img": [
+    "img/CH8_RQ7.png"
+   ],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ8",
+   "n": "8",
+   "question": "A tractor engine has a mass of 3000 kg and a driving force of 7.8 kN. The tractor is tethered to two carts, each with a mass of 1000 kg, via cable A, which acts at 36° to the horizontal. The two carts are tethered to each other via cable B. Calculate the acceleration of the tractor and cart system.",
+   "options": [
+    "A. 1.56 m s$^{-2}$",
+    "B. 2.60 m s$^{-2}$",
+    "C. 1.56 × 10$^{-3}$ m s$^{-2}$",
+    "D. 2.60 × 10$^{-3}$ m s$^{-2}$"
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "8B.1",
+    "8B.3",
+    "8B.5"
+   ],
+   "img": [
+    "img/CH8_RQ8.png"
+   ],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ9",
+   "n": "9",
+   "question": "A tractor engine has a mass of 3000 kg and a driving force of 7.8 kN. The tractor is tethered to two carts, each with a mass of 1000 kg, via cable A, which acts at 36° to the horizontal. The two carts are tethered to each other via cable B. Calculate the tension is cable A.",
+   "options": [
+    "A. 2.52 × 10$^{3}$ N",
+    "B. 3.12 × 10$^{3}$ N",
+    "C. 3.86 × 10$^{3}$ N",
+    "D. 9.64 × 10$^{3}$ N"
+   ],
+   "answer": "C",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "8B.1",
+    "8B.3",
+    "8B.5"
+   ],
+   "img": [
+    "img/CH8_RQ9.png"
+   ],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ10",
+   "n": "10",
+   "question": "A tractor engine has a mass of 3000 kg and a driving force of 7.8 kN. The tractor is tethered to two carts, each with a mass of 1000 kg, via cable A, which acts at 36° to the horizontal. The two carts are tethered to each other via cable B. Calculate the tension in cable B.",
+   "options": [
+    "A. 1.56 × 10$^{3}$ N",
+    "B. 2.60 × 10$^{3}$ N",
+    "C. 3.12 × 10$^{3}$ N",
+    "D. 7.80 × 10$^{3}$ N"
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "8B.1",
+    "8B.3",
+    "8B.5"
+   ],
+   "img": [
+    "img/CH8_RQ10.png"
+   ],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ11",
+   "n": "11",
+   "question": "A boy and his cat sit on a see-saw. The cat has a mass of 4 kg and sits 2 m from the centre of rotation. If the boy has a mass of 50 kg, where should he sit so that the see-saw will balance?",
+   "options": [
+    "A. 0.160 m",
+    "B. 0.450 m",
+    "C. 1.45 m",
+    "D. 400 m"
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "criteria": [
+    "8C.1",
+    "8C.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ12",
+   "n": "12",
+   "question": "Block A, of mass 4.0 kg, is moving to the right at a speed of 8.0 m s$^{-1}$, as shown in the diagram below. It collides with a stationary block B, of mass 8.0 kg, and rebounds to the left. Its speed after the collision is 2.0 m s$^{-1}$. a Calculate the speed of block B after the collision. (2 marks) b Explain whether the collision is elastic or inelastic. Include some calculations in your answer. (2 marks) c What are the magnitude, unit and direction of the impulse by block B on block A? (3 marks) © VCAA, 2015",
+   "options": [],
+   "answer": "a $m_Au_A + m_Bu_B = m_Av_A + m_Bv_B$; $(4.0)(8.0) + (8.0)(0) = (4.0)(-2.0) + (8.0)v_B$; $v_B = 5.0\\text{ m s}^{-1}$ b $E_{\\text{k initial}} = (0.5)(4.0)(8.0)^2 = 128\\text{ J}$; $E_{\\text{k final}} = (0.5)(4.0)(-2.0)^2 + 0.5\\times(8.0)(5.0)^2 = 108\\text{ J}$. Because $E_{\\text{k initial}} > E_{\\text{k final}}$, the collision is inelastic. c $I = \\Delta p = m_A(v_A - u_A) = (4.0)(-2 - 8.0) = -40\\text{ kg m s}^{-1}$; the negative result indicates that the direction was left.",
+   "marks": 7,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "8A.1",
+    "8A.2",
+    "8A.3",
+    "8A.4",
+    "8A.5"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the speed of block B after the collision. (2 marks)",
+     "answer": "$m_Au_A + m_Bu_B = m_Av_A + m_Bv_B$; $(4.0)(8.0) + (8.0)(0) = (4.0)(-2.0) + (8.0)v_B$; $v_B = 5.0\\text{ m s}^{-1}$",
+     "marks": 2,
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "Explain whether the collision is elastic or inelastic. Include some calculations in your answer. (2 marks)",
+     "answer": "$E_{\\text{k initial}} = (0.5)(4.0)(8.0)^2 = 128\\text{ J}$; $E_{\\text{k final}} = (0.5)(4.0)(-2.0)^2 + 0.5\\times(8.0)(5.0)^2 = 108\\text{ J}$. Because $E_{\\text{k initial}} > E_{\\text{k final}}$, the collision is inelastic.",
+     "marks": 2,
+     "size": "quick"
+    },
+    {
+     "n": "c",
+     "question": "What are the magnitude, unit and direction of the impulse by block B on block A? (3 marks) © VCAA, 2015",
+     "answer": "$I = \\Delta p = m_A(v_A - u_A) = (4.0)(-2 - 8.0) = -40\\text{ kg m s}^{-1}$; the negative result indicates that the direction was left.",
+     "marks": 3,
+     "size": "medium"
+    }
+   ],
+   "img": [
+    "img/CH8_RQ12.png"
+   ],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ13",
+   "n": "13",
+   "question": "If the action force of an elephant standing on solid ground is the force due to gravity, which is 39 000 N down, identify and explain the reaction force. Your answer should refer to a specific law of motion. (2 marks)",
+   "options": [],
+   "answer": "The force due to gravity is due to the gravitational attraction between Earth and the elephant. According to Newton’s third law, the reaction force will be Earth being gravitationally attracted to the centre of mass of the elephant with a force of 39 000 N.",
+   "marks": 2,
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "8B.4",
+    "8B.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ14",
+   "n": "14",
+   "question": "A small bullet is shot towards a wooden block. The bullet has a mass of 0.02 kg and travels at a velocity of 700 m s$^{-1}$. The momentum–time graph below shows the momentum of the bullet over time. a Between which times did the collision occur? (1 mark) b What is the velocity of the bullet after the collision? (2 marks) c What does the gradient of the line represent? Justify your answer. (2 marks) d What is the magnitude of the average force on the bullet during the collision? (2 marks)",
+   "options": [],
+   "answer": "a Between 0.2 s and 0.3 s b After the collision, the momentum is 5 kg m s$^{-1}$. $p = mv$; $(5) = (0.02)v$; $v = 250\\text{ m s}^{-1}$ c The force, because the units of the gradient are: Gradient $= \\frac{\\text{rise}}{\\text{run}} = \\frac{\\text{kg m s}^{-1}}{\\text{s}} = \\text{kg m s}^{-2} = \\text{N}$. NOTE: kg m s$^{-1}$ = N s d From part c, the average force is the gradient of the line. $F_{\\text{avg}} = \\frac{\\text{rise}}{\\text{run}} = \\frac{\\Delta p}{\\Delta t} = \\frac{5-14}{0.3-0.2} = -90\\text{ N}$. Therefore, the average force is 90 N to the left.",
+   "marks": 7,
+   "kind": "graph",
+   "size": "long",
+   "criteria": [
+    "8A.5"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Between which times did the collision occur? (1 mark)",
+     "answer": "Between 0.2 s and 0.3 s",
+     "marks": 1,
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "What is the velocity of the bullet after the collision? (2 marks)",
+     "answer": "After the collision, the momentum is 5 kg m s$^{-1}$. $p = mv$; $(5) = (0.02)v$; $v = 250\\text{ m s}^{-1}$",
+     "marks": 2,
+     "size": "quick"
+    },
+    {
+     "n": "c",
+     "question": "What does the gradient of the line represent? Justify your answer. (2 marks)",
+     "answer": "The force, because the units of the gradient are: Gradient $= \\frac{\\text{rise}}{\\text{run}} = \\frac{\\text{kg m s}^{-1}}{\\text{s}} = \\text{kg m s}^{-2} = \\text{N}$. NOTE: kg m s$^{-1}$ = N s",
+     "marks": 2,
+     "size": "quick"
+    },
+    {
+     "n": "d",
+     "question": "What is the magnitude of the average force on the bullet during the collision? (2 marks)",
+     "answer": "From part c, the average force is the gradient of the line. $F_{\\text{avg}} = \\frac{\\text{rise}}{\\text{run}} = \\frac{\\Delta p}{\\Delta t} = \\frac{5-14}{0.3-0.2} = -90\\text{ N}$. Therefore, the average force is 90 N to the left.",
+     "marks": 2,
+     "size": "quick"
+    }
+   ],
+   "img": [
+    "img/CH8_RQ14.png"
+   ],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ15",
+   "n": "15",
+   "question": "A skateboarder is travelling at 4.5 m s$^{-1}$ on a concrete path. While travelling down the path, the skateboarder slows and eventually comes to a stop. a Use one of Newton's laws of motion to explain why the skateboarder comes to a stop. (3 marks) b Momentum is always conserved, but as the skateboarder's velocity reduced to zero their momentum also reduced to zero. Explain where the skateboarder's momentum has gone. (1 mark)",
+   "options": [],
+   "answer": "a When the skateboarder moves over the concrete floor, there is friction between the wheels and the floor, as well as some air resistance. These two forces oppose the motion of the skateboarder. According to Newton’s first law, if an unbalanced force is on the skateboarder, then it will change its state of motion. In this case, the skateboarder will slow down and eventually come to rest. b The skateboarder’s momentum has been transferred to Earth and the surrounding air particles.",
+   "marks": 4,
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "8A.2",
+    "8B.1",
+    "8B.3"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Use one of Newton's laws of motion to explain why the skateboarder comes to a stop. (3 marks)",
+     "answer": "When the skateboarder moves over the concrete floor, there is friction between the wheels and the floor, as well as some air resistance. These two forces oppose the motion of the skateboarder. According to Newton’s first law, if an unbalanced force is on the skateboarder, then it will change its state of motion. In this case, the skateboarder will slow down and eventually come to rest.",
+     "marks": 3,
+     "size": "medium"
+    },
+    {
+     "n": "b",
+     "question": "Momentum is always conserved, but as the skateboarder's velocity reduced to zero their momentum also reduced to zero. Explain where the skateboarder's momentum has gone. (1 mark)",
+     "answer": "The skateboarder’s momentum has been transferred to Earth and the surrounding air particles.",
+     "marks": 1,
+     "size": "quick"
+    }
+   ],
+   "img": [],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ16",
+   "n": "16",
+   "question": "A block of mass 15 kg sits on a smooth frictionless table. The block is tethered to a mass of 7.3 kg via a pulley, the mass of 7.3 kg is hanging off the table. There is a block of unknown mass, m, that lies on the table. a Calculate the initial acceleration of the system. (2 marks) b Calculate the initial tension in the pulley. (2 marks) c Once the mass of 15 kg hits mass m on the table, the acceleration of the system becomes 2.53 m s$^{-2}$ to the right. Calculate the mass of m. (2 marks) d What is the force on the mass of 15 kg given by m? Include a direction in your answer. (2 marks)",
+   "options": [],
+   "answer": "a $a = \\frac{F}{m} = \\frac{(7.3)(9.8)}{7.3+15} = 3.21\\text{ m s}^{-2}$ b $F = ma = (15)(3.21) = 48.2\\text{ N}$ c $m = \\frac{F}{a}$; $15 + 7.3 + m = \\frac{(7.3)(9.8)}{2.53}$; $m = 5.98\\text{ kg}$ d The 15 kg block accelerated block $m$ to 2.53 m s$^{-2}$. This requires a force of: $F = ma = (5.98)(2.53) = 15.1\\text{ N}$ to the right. According to Newton’s third law. $m$ will push on the 15 kg block with an equal and opposite force, 15.1 N to the left.",
+   "marks": 8,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "8B.1",
+    "8B.2",
+    "8B.3",
+    "8B.5",
+    "8B.6"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the initial acceleration of the system. (2 marks)",
+     "answer": "$a = \\frac{F}{m} = \\frac{(7.3)(9.8)}{7.3+15} = 3.21\\text{ m s}^{-2}$",
+     "marks": 2,
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "Calculate the initial tension in the pulley. (2 marks)",
+     "answer": "$F = ma = (15)(3.21) = 48.2\\text{ N}$",
+     "marks": 2,
+     "size": "quick"
+    },
+    {
+     "n": "c",
+     "question": "Once the mass of 15 kg hits mass m on the table, the acceleration of the system becomes 2.53 m s$^{-2}$ to the right. Calculate the mass of m. (2 marks)",
+     "answer": "$m = \\frac{F}{a}$; $15 + 7.3 + m = \\frac{(7.3)(9.8)}{2.53}$; $m = 5.98\\text{ kg}$",
+     "marks": 2,
+     "size": "quick"
+    },
+    {
+     "n": "d",
+     "question": "What is the force on the mass of 15 kg given by m? Include a direction in your answer. (2 marks)",
+     "answer": "The 15 kg block accelerated block $m$ to 2.53 m s$^{-2}$. This requires a force of: $F = ma = (5.98)(2.53) = 15.1\\text{ N}$ to the right. According to Newton’s third law. $m$ will push on the 15 kg block with an equal and opposite force, 15.1 N to the left.",
+     "marks": 2,
+     "size": "quick"
+    }
+   ],
+   "img": [
+    "img/CH8_RQ16.png"
+   ],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ17",
+   "n": "17",
+   "question": "A boat of mass 350 kg moves from rest in a straight line due to a thrust force that increases with time as shown in the graph below. a What is the acceleration of the boat at 4 seconds? (2 marks) b What is the change in momentum of the boat in 5 seconds? (2 marks) c What is the final velocity of the boat? (2 marks)",
+   "options": [],
+   "answer": "a $a = \\frac{F}{m} = \\frac{0.8\\times10^{3}}{350} = 2.29\\text{ m s}^{-2}$ b $\\Delta p = \\text{impulse} = \\text{area} = (0.5)(5)(1\\times10^{3}) = 2500\\text{ N s or kg m s}^{-1}$ c $\\Delta p = mv - mu$; $2500 = (350)v - (350)(0)$; $v = 7.14\\text{ m s}^{-1}$",
+   "marks": 6,
+   "kind": "graph",
+   "size": "long",
+   "criteria": [
+    "8A.5",
+    "8A.6"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "What is the acceleration of the boat at 4 seconds? (2 marks)",
+     "answer": "$a = \\frac{F}{m} = \\frac{0.8\\times10^{3}}{350} = 2.29\\text{ m s}^{-2}$",
+     "marks": 2,
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "What is the change in momentum of the boat in 5 seconds? (2 marks)",
+     "answer": "$\\Delta p = \\text{impulse} = \\text{area} = (0.5)(5)(1\\times10^{3}) = 2500\\text{ N s or kg m s}^{-1}$",
+     "marks": 2,
+     "size": "quick"
+    },
+    {
+     "n": "c",
+     "question": "What is the final velocity of the boat? (2 marks)",
+     "answer": "$\\Delta p = mv - mu$; $2500 = (350)v - (350)(0)$; $v = 7.14\\text{ m s}^{-1}$",
+     "marks": 2,
+     "size": "quick"
+    }
+   ],
+   "img": [
+    "img/CH8_RQ17.png"
+   ],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ18",
+   "n": "18",
+   "question": "A toy car with a mass of 5.65 kg and a driving force of 37.5 N west hits two blocks that are combined and have a mass of 3 kg and 4.44 kg. Once the car hits the two blocks, it moves with them as one and the driving force remains constant. Friction can be ignored in this question. a A student attempts to perform a momentum calculation to predict the velocity of the three objects after the collision but finds that their predicted velocity is constantly lower than the actual velocity. Explain this observation. (2 marks) b When all three objects are moving as one, what is the acceleration of the system? (2 marks) c When all three objects are moving as one, what is the force on the 3 kg block given by the toy car? Include a direction in your answer. (1 mark) d When all three objects are moving as one, what is the force on the toy car given by the 3 kg block? Include a direction in your answer. (1 mark)",
+   "options": [],
+   "answer": "a Because there is an external force on the toy car, the momentum will not be conserved as it is being constantly added. This explains why the student’s predictions are consistently lower than the true values. b $a = \\frac{F}{m} = \\frac{37.5}{5.65+3+4.44} = 2.86\\text{ m s}^{-2}$ c $F = ma = (3 + 4.44)(2.86) = 21.3\\text{ N}$ west d According to Newton’s third law, the force on the toy car will be equal and opposite to the force on the 3 kg block; 21.3 N east.",
+   "marks": 6,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "8A.2",
+    "8B.1",
+    "8B.2",
+    "8B.3",
+    "8B.5",
+    "8B.6"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "A student attempts to perform a momentum calculation to predict the velocity of the three objects after the collision but finds that their predicted velocity is constantly lower than the actual velocity. Explain this observation. (2 marks)",
+     "answer": "Because there is an external force on the toy car, the momentum will not be conserved as it is being constantly added. This explains why the student’s predictions are consistently lower than the true values.",
+     "marks": 2,
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "When all three objects are moving as one, what is the acceleration of the system? (2 marks)",
+     "answer": "$a = \\frac{F}{m} = \\frac{37.5}{5.65+3+4.44} = 2.86\\text{ m s}^{-2}$",
+     "marks": 2,
+     "size": "quick"
+    },
+    {
+     "n": "c",
+     "question": "When all three objects are moving as one, what is the force on the 3 kg block given by the toy car? Include a direction in your answer. (1 mark)",
+     "answer": "$F = ma = (3 + 4.44)(2.86) = 21.3\\text{ N}$ west",
+     "marks": 1,
+     "size": "quick"
+    },
+    {
+     "n": "d",
+     "question": "When all three objects are moving as one, what is the force on the toy car given by the 3 kg block? Include a direction in your answer. (1 mark)",
+     "answer": "According to Newton’s third law, the force on the toy car will be equal and opposite to the force on the 3 kg block; 21.3 N east.",
+     "marks": 1,
+     "size": "quick"
+    }
+   ],
+   "img": [
+    "img/CH8_RQ18.png"
+   ],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ19",
+   "n": "19",
+   "question": "Two bumper cars collide head on. Bumper car 27 has a total mass of 310 kg and is travelling at 4.92 m s$^{-1}$ east. Car 27 collides with car 13 that has a total mass of 275 kg and is travelling at a velocity of 3.98 m s$^{-1}$ west. After the collision car 27 has a velocity of 0.10 m s$^{-1}$ east. a Calculate the velocity of car 13 after the collision. Include a direction in your answer. (2 marks) b What is the change in momentum of car 13? Include a direction for your answer. (3 marks) c What is the average force on car 13 during the collision given that the collision lasted for 1.25 seconds? (3 marks) d The occupant of the bumper car complains and says that the force during the collision was too high. Explain one way in which the force on the occupant could be reduced without changing the speed or mass of the car. (2 marks) e Is this an elastic collision? You must use at least two calculations to justify your answer. (3 marks)",
+   "options": [],
+   "answer": "a $m_1u_1 + m_2u_2 = m_1v_1 + m_2v_2$; $(310)(4.92) + (275)(-3.98) = (310)(0.1) + (275)v$; $v = 1.45\\text{ m s}^{-1}$ east b $\\Delta p = mv - mu = (275)(1.45) - (275)(-3.98) = 1.49\\times10^{3}\\text{ kg m s}^{-1}$ east c $\\Delta p = I = F_{\\text{avg}}\\Delta t$; $(1.49\\times10^{3}) = F_{\\text{avg}}(1.25)$; $F_{\\text{avg}} = 1.19\\times10^{3}\\text{ N}$ east d The bumper itself could be made to be softer. By making the bumper softer, the time of the collision would increase, and because $F_{\\text{avg}} = \\frac{I}{\\Delta t}$, the impulse for a given collision is constant. By increasing the time of the collision the average force would be reduced. e $\\Sigma E_{\\text{k before}} = \\frac{1}{2}(310)(4.92)^2 + \\frac{1}{2}(275)(3.98)^2 = 5930\\text{ J}$; $\\Sigma E_{\\text{k after}} = \\frac{1}{2}(310)(0.1)^2 + \\frac{1}{2}(275)(1.45)^2 = 291\\text{ J}$. Because $E_{\\text{k before}} > E_{\\text{k after}}$, the collision is not elastic.",
+   "marks": 13,
+   "kind": "calc",
+   "size": "long",
+   "criteria": [
+    "8A.2",
+    "8A.3",
+    "8A.4",
+    "8A.5",
+    "8B.9"
+   ],
+   "parts": [
+    {
+     "n": "a",
+     "question": "Calculate the velocity of car 13 after the collision. Include a direction in your answer. (2 marks)",
+     "answer": "$m_1u_1 + m_2u_2 = m_1v_1 + m_2v_2$; $(310)(4.92) + (275)(-3.98) = (310)(0.1) + (275)v$; $v = 1.45\\text{ m s}^{-1}$ east",
+     "marks": 2,
+     "size": "quick"
+    },
+    {
+     "n": "b",
+     "question": "What is the change in momentum of car 13? Include a direction for your answer. (3 marks)",
+     "answer": "$\\Delta p = mv - mu = (275)(1.45) - (275)(-3.98) = 1.49\\times10^{3}\\text{ kg m s}^{-1}$ east",
+     "marks": 3,
+     "size": "medium"
+    },
+    {
+     "n": "c",
+     "question": "What is the average force on car 13 during the collision given that the collision lasted for 1.25 seconds? (3 marks)",
+     "answer": "$\\Delta p = I = F_{\\text{avg}}\\Delta t$; $(1.49\\times10^{3}) = F_{\\text{avg}}(1.25)$; $F_{\\text{avg}} = 1.19\\times10^{3}\\text{ N}$ east",
+     "marks": 3,
+     "size": "medium"
+    },
+    {
+     "n": "d",
+     "question": "The occupant of the bumper car complains and says that the force during the collision was too high. Explain one way in which the force on the occupant could be reduced without changing the speed or mass of the car. (2 marks)",
+     "answer": "The bumper itself could be made to be softer. By making the bumper softer, the time of the collision would increase, and because $F_{\\text{avg}} = \\frac{I}{\\Delta t}$, the impulse for a given collision is constant. By increasing the time of the collision the average force would be reduced.",
+     "marks": 2,
+     "size": "quick"
+    },
+    {
+     "n": "e",
+     "question": "Is this an elastic collision? You must use at least two calculations to justify your answer. (3 marks)",
+     "answer": "$\\Sigma E_{\\text{k before}} = \\frac{1}{2}(310)(4.92)^2 + \\frac{1}{2}(275)(3.98)^2 = 5930\\text{ J}$; $\\Sigma E_{\\text{k after}} = \\frac{1}{2}(310)(0.1)^2 + \\frac{1}{2}(275)(1.45)^2 = 291\\text{ J}$. Because $E_{\\text{k before}} > E_{\\text{k after}}$, the collision is not elastic.",
+     "marks": 3,
+     "size": "medium"
+    }
+   ],
+   "img": [
+    "img/CH8_RQ19.png"
+   ],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ20",
+   "n": "20",
+   "question": "A truck of mass 5000 kg is crossing a uniform horizontal bridge of mass 1000 kg and length 100 m. The bridge is supported at its two end-points. What are the reactions at these supports when the truck is one-third of the way across the bridge? (3 marks)",
+   "options": [],
+   "answer": "Let the beam to the left be the pivot point: $\\Sigma CWM = \\Sigma ACWM$; $(33.3333)(5000)(9.8) + (50)(1000)(9.8) = (100)R_{\\text{right beam}}$; $R_{\\text{right beam}} = 2.12\\times10^{4}\\text{ N}$. All of the forces must be in equilibrium, therefore: $R_{\\text{Left beam}} = (5000)(9.8) + (1000)(9.8) - (2.12\\times10^{4}) = 3.76\\times10^{4}$",
+   "marks": 3,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "8B.7",
+    "8B.8",
+    "8C.1",
+    "8C.2",
+    "8C.3"
+   ],
+   "img": [
+    "img/CH8_RQ20.png"
+   ],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "CH8-RQ21",
+   "n": "21",
+   "question": "A uniform beam of mass 4.50 kg that has a length of 1.20 m is attached to a wall by a hinge and is supported from the ceiling by a cable that makes an angle of 42° to the horizontal. A sign of mass 50.0 kg hangs from the end of the beam. A diagram of this is shown below. Calculate the tension in the cable. (2 marks)",
+   "options": [],
+   "answer": "Let the hinge that attaches the beam to the wall be the pivot point: $\\Sigma CWM = \\Sigma ACWM$; $(1.20)(50)(9.8) + (0.60)(4.50)(9.8) = (1.2)T\\sin 42°$; $T = 765\\text{ N}$",
+   "marks": 2,
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "8C.1",
+    "8C.2"
+   ],
+   "img": [
+    "img/CH8_RQ21.png"
+   ],
+   "src": {
+    "file": "Ch08 Review questions.docx"
+   },
+   "answer_src": {
+    "file": "Chapter 8 Suggested responses.docx"
+   }
+  }
+ ],
+ "summary": "Chapter 8 Summary\n8A Momentum\nModelling motion with momentum\nMomentum, p the product of an object's mass and velocity:\np = mv\n- Momentum is a vector quantity and it must have both magnitude and direction.\n- The direction of the momentum vector and velocity vector will always be the same.\n- Momentum can only be changed when a net external force is applied.\nMomentum and inertia are different. Inertia is a body's tendency to resist a change in its state of motion. Inertia depends only on mass.\nConservation of momentum\nWhen no external force is applied, momentum is conserved.\n[figure]\nCollisions in one dimension\nConservation of momentum is used to solve problems relating to two objects colliding in a straight line\n[figure]\nNote: Make sure the direction of the velocity has been considered using positive and negative velocity where appropriate.\nTwo objects colliding and combining\n[figure]\nA single object breaking apart\n[figure]\nKinetic energy\nThe energy due to movement. It is measured in joules (J) and is a scalar:\nE$_{k}$ = ½ mv$^{2}$\nElastic and inelastic collisions\nElastic collision: the total kinetic energy is the same before and after the collision.\nInelastic collision: the total kinetic energy is larger before than after the collision. The 'missing' energy converted into other forms, such as thermal energy and sound energy.\nDetermining if a collision is elastic or inelastic:\n[figure]\nNote: All velocities should be positive irrespective of direction because E$_{k}$ is a scalar.\nChange in momentum (impulse)\nImpulse: the change in momentum of an object, caused by a force acting for a certain amount of time. It is a vector.\n[figure]\nThe only way to change an object's velocity (and therefore its momentum) is to apply a net force on it.\n[figure] Graphing the change in momentum (impulse)\nUse a force–time graph, e.g. a constant force of 9 N being applied to an object for 6 s, then a decreasing force between 9 and 0 N applied for 2 s\nThe area under a force-time graph is the impulse. Break the are into geometric shapes and use formulas for areas of 2D shapes.\n8B Newton's laws of motion\nNewton's 1$^{st}$ law: An object in a state of rest or travelling at a constant velocity will remain in its state of motion unless acted upon by a net force.\nNewton's 2$^{nd}$ law: The acceleration experienced by a body is directly proportional to the net force on the body and inversely proportional to the mass of the body.\n[figure]\n[figure] To determine the net force on a body, it is often helpful to draw a force diagram, as shown here for an accelerating car (left) and vector diagram of the same accelerating car (right).\nThe force vectors can be added (taking account of positive and negative values) to find the net force vector.\nNewton's 3$^{rd}$ law: Every action force has an equal and opposite reaction force (Note: These forces always act on different bodies).\nThis can be expressed mathematically as: F$_{on A by B}$ = − F$_{on B by A}$\n[figure] For example:\nAction force: A box has a force due to the gravitational attraction to the Earth. Reaction force: The Earth has an equal and opposite force on it due to the gravitational attraction towards the box. Earth acts to pull A towards it and A acts to pull Earth up towards it.\nNormal force\n[figure] The force that a surface applies to a body resting on it. The force is always applied perpendicular to the surface and prevents the body falling through the surface.\n[figure]\nWhen box A is placed on table B, box A applies a force on table B. As a result, table B pushes back and applies a normal force on box A.\nForce due to gravity\nF$_{g}$ = mg\nwhere g is gravitational field strength in N kg$^{-1}$, equivalent to acceleration due to gravity in ms $^{-2}$. The force due to gravity acts at the centre of mass of a body. Mass m refers to the body's resistance to acceleration when a force is applied, and this does not change. Gravitational force F$_{g}$ changes when gravitational field strength g changes.\nChanging normal force\nThe normal force of a surface on a mass resting on it changes when the surface (such as the floor of a lift) accelerates vertically up or down.\n[figure] N = m(a$_{vertical}$ + g)\nInclined planes\n[figure]\nApplication of motion – Car safety\nSafety devices in cars:\n- seat belts\n- air bags\n- crumple zones\nHow they work:\nSeat belts: Causes a net force on the passenger which will decelerate the passenger with the car and prevent them from moving forward in the car. The net force is applied across the persons shoulders and hips, the strongest parts of the body to reduce injury.\nAir bags and crumple zones: These two both work by extending the time of the collision. In a collision the average force on the occupant is given by $F_{avg} = \\frac{I}{t}$, since the impulse is fixed by extending the time of the collision the average force on the occupants is reduced, reducing the rate of injury.\n8C Equilibrium\nEquilibrium and torque\n- Equilibrium: the state where the sum of the translational and rotational forces on an object are equal to zero.\n- Torque: a measure of how much of a force acting on an object is causing it to rotate; a vector quantity, clockwise or anticlockwise around a pivot point.\n- Translational force: a force that can cause an object to change its position.\n- Rotational force: force that can cause an object to rotate about an axis of rotation.\n[figure] A ruler that has one end over the table does not fall off because it is in translational and rotational equilibrium.\nCalculating torque\nτ = r$_{⊥}$ F\n[figure] a The perpendicular distance from the line of action of the force is through the object.\n[figure] b The perpendicular distance to the line of action of the force is outside of the object that the torque is being applied to.\n[figure] c r is taken as the distance from the pivot point to where the force is being applied. The component of the force that is perpendicular to r is then found.\nNote:\n- A force through the pivot point will generate no torque.\n- The force due to gravity acts at the centre of mass of the object.\nRotational equilibrium\nWhen a system is in rotational equilibrium (not rotating), the sum of the torques is equal to zero:\nΣτ = 0\nΣ anticlockwise torque = Σ clockwise torque\nTranslational equilibrium\nOccurs when the velocity of an object is constant, meaning the net force acting on the object is equal to zero.\nΣF = 0\nΣF$_{left}$ = ΣF$_{right}$\nΣF$_{up}$ = ΣF$_{down}$\nSolving problems on translational and rotational equilibrium\nConsider how the forces on the system can remain balanced.\n1. Draw a diagram of all the forces acting on the relevant object.\n2. Solve the rotational equilibrium first. To do this, choose a pivot point that will eliminate one of the forces, since any force that passes through the pivot point causes no rotation. Note, you can choose any point to be the pivot point, but some make the calculation easier than others.\n3. Solve any unknowns by equating the clockwise and anticlockwise torques.\n4. Break all of the forces into their up, down, left and right components.\n5. Solve any unknown forces by equating the up and down forces as well as the left and right forces.",
+ "summary_src": {
+  "file": "Ch08 Summary.docx",
+  "note": "Summary formula boxes are images in the docx and appear as [figure]; the formulas are in the section files."
+ },
+ "test": {
+  "file": "Chapter 8 Test.docx",
+  "questions": 18,
+  "marks": 50,
+  "note": "not indexed question by question (TEACHER ONLY; answers included in the same file)"
+ },
+ "curated_resources": "Ch08 Curated internet resources.docx",
+ "notes": "Review Q12 and Q10 (8B section) are VCAA-sourced (2015, 2013). Review Q1 is VCAA 2017. Review answers transcribed from the Suggested responses PDF render (maths stored as WMF in the docx). Review Q20 answer omits the unit on R_left (book). Exit candidates for 8B.7/8B.8 fall back to section questions because the only linked review question (Q20) is long."
+}

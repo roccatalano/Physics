@@ -1,0 +1,1469 @@
+{
+ "code": "3A",
+ "title": "Nuclear stability: forces in the nucleus",
+ "chapter": 3,
+ "unit": 1,
+ "aos": 2,
+ "study_design": [
+  "Explain nuclear stability with reference to the forces in the nucleus including electrostatic forces, the strong nuclear force and the weak nuclear force",
+  "Explain, using a binding energy curve, why both fusion and fission are reactions that release energy"
+ ],
+ "criteria": [
+  "3A.1",
+  "3A.2",
+  "3A.3",
+  "3A.4",
+  "3A.5",
+  "3A.6"
+ ],
+ "glossary": [
+  {
+   "id": "3A-G1",
+   "term": "Nucleon",
+   "def": "a proton or a neutron in a nucleus",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 6,
+    "book_page": 85
+   }
+  },
+  {
+   "id": "3A-G2",
+   "term": "Nucleus",
+   "def": "the solid centre of an atom where most of the mass of an atom is concentrated",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 6,
+    "book_page": 85
+   }
+  },
+  {
+   "id": "3A-G3",
+   "term": "Proton",
+   "def": "a positively charged particle in the nucleus of an atom",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 6,
+    "book_page": 85
+   }
+  },
+  {
+   "id": "3A-G4",
+   "term": "Element",
+   "def": "a pure substance consisting only of atoms that all have the same numbers of protons in their nuclei",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 6,
+    "book_page": 85
+   }
+  },
+  {
+   "id": "3A-G5",
+   "term": "Neutron",
+   "def": "an uncharged particle in the nucleus of an atom",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 6,
+    "book_page": 85
+   }
+  },
+  {
+   "id": "3A-G6",
+   "term": "Periodic table",
+   "def": "a table of the elements arranged in order of atomic number",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 6,
+    "book_page": 85
+   }
+  },
+  {
+   "id": "3A-G7",
+   "term": "Atomic number",
+   "def": "the number of protons in the nucleus; given by the symbol Z",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 6,
+    "book_page": 85
+   }
+  },
+  {
+   "id": "3A-G8",
+   "term": "Mass number",
+   "def": "the sum of the number of protons and neutrons in the nucleus; given the symbol A",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 7,
+    "book_page": 86
+   }
+  },
+  {
+   "id": "3A-G9",
+   "term": "Isotope",
+   "def": "a form of the same element with the same numbers of protons but different numbers of neutrons in their nuclei",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 7,
+    "book_page": 86
+   }
+  },
+  {
+   "id": "3A-G10",
+   "term": "Radioactive isotope",
+   "def": "any isotope of an element whose nuclei are unstable and dissipate energy by spontaneously emitting radiation",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 8,
+    "book_page": 87
+   }
+  },
+  {
+   "id": "3A-G11",
+   "term": "Belt of stability",
+   "def": "nuclei that have a neutron/proton ratio between 1:1 and 1.5:1",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 9,
+    "book_page": 88
+   }
+  },
+  {
+   "id": "3A-G12",
+   "term": "Radioactive",
+   "def": "any substance that spontaneously emits ionising radiation",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 10,
+    "book_page": 89
+   }
+  },
+  {
+   "id": "3A-G13",
+   "term": "Nuclear decay",
+   "def": "when the nucleus of an atom is unstable and spontaneously emits energy in the form of nuclear radiation",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 10,
+    "book_page": 89
+   }
+  },
+  {
+   "id": "3A-G14",
+   "term": "Neutrino",
+   "def": "a neutral subatomic particle with a mass close to zero that rarely reacts with normal matter",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 11,
+    "book_page": 90
+   }
+  },
+  {
+   "id": "3A-G15",
+   "term": "Electrostatic force",
+   "def": "a force that exists between charged particles, e.g. two positively charged protons",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 12,
+    "book_page": 91
+   }
+  },
+  {
+   "id": "3A-G16",
+   "term": "Strong nuclear force",
+   "def": "the force that holds the nucleons together in a nucleus of an atom. It acts only over very short distances (10−15 m).",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 13,
+    "book_page": 92
+   }
+  },
+  {
+   "id": "3A-G17",
+   "term": "Transuranic",
+   "def": "an element with more than 92 protons",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 14,
+    "book_page": 93
+   }
+  },
+  {
+   "id": "3A-G18",
+   "term": "Weak nuclear force",
+   "def": "the force responsible for radioactive beta decay",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 14,
+    "book_page": 93
+   }
+  },
+  {
+   "id": "3A-G19",
+   "term": "Positron",
+   "def": "a positively charged subatomic particle having the same mass and magnitude of charge as the electron",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 14,
+    "book_page": 93
+   }
+  },
+  {
+   "id": "3A-G20",
+   "term": "Binding energy",
+   "def": "the amount of energy required to split a nucleus into its individual nucleons",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 15,
+    "book_page": 94
+   }
+  },
+  {
+   "id": "3A-G21",
+   "term": "Binding energy curve",
+   "def": "a graph of the average binding energy per nucleon versus mass number",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 15,
+    "book_page": 94
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F3A-1",
+   "name": "Converting electronvolts to joules (3A Skills)",
+   "latex": "1.0\\ \\text{eV} = 1.6 \\times 10^{-19}\\ \\text{J}, \\quad 1.0\\ \\text{MeV} = 1.0 \\times 10^{6}\\ \\text{eV}",
+   "where": [
+    {
+     "sym": "\\text{eV}",
+     "meaning": "electronvolt: the energy that an electron would gain if it was accelerated by a voltage of 1 volt",
+     "unit": "eV"
+    }
+   ],
+   "criteria": [
+    "3A.6",
+    "3B.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 17,
+    "book_page": 96
+   }
+  },
+  {
+   "id": "F3A-2",
+   "name": "Average binding energy per nucleon (from text; no formula box)",
+   "latex": "\\text{average binding energy per nucleon} = \\frac{\\text{total binding energy of a nucleus}}{\\text{number of nucleons in the nucleus}}",
+   "where": [],
+   "criteria": [
+    "3A.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 15,
+    "book_page": 94
+   },
+   "origin": "adapted"
+  }
+ ],
+ "engage": {
+  "heading": "Why is understanding nuclear stability important?",
+  "text": "Most of the natural elements in the world are stable; that is, they do not spontaneously change into other elements. For example, an expensive gold ring you buy from a jewellery shop does not change into an almost worthless lead or iron ring overnight! (Figure 3A–1).\n\nHowever, sometimes elements can transform into other elements. For example, a rare form of manufactured gold (gold-194) transforms into platinum (platinum-194). After 38 hours have elapsed, a ring made of gold-194 would be half gold-194 and half platinum-194!\n\nUnderstanding nuclear stability gives important insights into how stable and unstable nuclei behave in the real world.",
+  "figures": [
+   "3A-F1"
+  ],
+  "src": {
+   "file": "Physics12_Ch03.pdf",
+   "page": 5,
+   "book_page": 84
+  }
+ },
+ "chunks": [
+  {
+   "id": "3A-E1",
+   "heading": "Protons and neutrons",
+   "text": "To understand radiation physics we need to understand a little more about the structure of matter. A useful model of the atom is the simple ‘billiard ball’ type shown in Figure 3A–2. The central nucleus consists of protons and neutrons (collectively called nucleons), while the electrons orbit the nucleus.\n\nThe simplest atom, hydrogen, normally consists of only one proton and one orbiting electron (Figure 3A–3 left). The next simplest element, helium, normally consists of two protons, two neutrons and two orbiting electrons (Figure 3A–3 right).\n\nThe number of protons in the nucleus determines the chemical properties of the atom and so uniquely defines each element. For example, all atoms with one central proton are hydrogen atoms, all atoms with two protons are helium atoms and all atoms with six protons are carbon atoms. This continues up to element 92, the heaviest naturally occurring element, where all atoms with 92 protons are uranium atoms.\n\nA number of elements with more protons in the nucleus have been artificially produced in recent years. They are all unstable and are usually only made in special circumstances – in high-energy particle accelerators in physics laboratories, in nuclear power stations and in nuclear explosions. A full list of the known elements is presented in Figure 3A–4: the periodic table. Note the number above the element is the atomic number, which represents the number of protons in the nucleus – this is what determines which element an atom or nucleus belongs to.",
+   "figures": [
+    "3A-F2",
+    "3A-F3",
+    "3A-F4"
+   ],
+   "criteria": [
+    "3A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 6,
+    "book_page": 85,
+    "pages": [
+     6
+    ]
+   }
+  },
+  {
+   "id": "3A-E2",
+   "heading": "The periodic table and isotopes",
+   "text": "The periodic table (Figure 3A–4) shows a large number of important features concerning the nature of various elements.\n• The number of protons in an atom is called the atomic number, and is represented by the symbol Z. Z = 1 for hydrogen, Z = 2 for helium, Z = 3 for lithium, Z = 6 for carbon, Z = 92 for uranium, Z = 93 for neptunium, Z = 94 for plutonium, etc. The atomic number of an element appears in the periodic table together with the symbol for that element (H for hydrogen, He for helium and so on).\n• The mass of an atom is determined by the number of protons and neutrons in its nucleus. The very small mass of the electrons is ignored for this calculation. The sum of the number of protons and neutrons in the nucleus (collectively called the number of nucleons) is called the mass number and is represented by the symbol A. A = 1 (one proton) for the hydrogen atom shown in Figure 3A–3 (left), A= 4 (two protons plus two neutrons) for the helium atom shown in Figure 3A–3 (right).\n\nIn general, for any particular element X, the atomic number (Z) and the mass number (A) are written in the following internationally accepted format $^{A}_{Z}\\text{X}$.\n\nUsing this format, we can write hydrogen as $^{1}_{1}\\text{H}$, helium as $^{4}_{2}\\text{He}$ and uranium as $^{238}_{92}\\text{U}$.\n\nAlthough all the atoms of a particular element contain the same number of protons in the nucleus, they may have different numbers of neutrons. These different forms of an element are known as isotopes.\n\nNOTE: In a neutrally charged atom, the number of electrons equals the number of protons. In an electrically charged ion, the number of electrons is lower or higher than the number of protons. The electrons in the outermost shell of an atom or ion determine its chemical properties, so the different isotopes of an element have the same chemical properties but different physical ones. Being concerned with the nucleus and nuclear reactions, this chapter does not discuss electrons except in passing.\n\nHydrogen has three naturally occurring isotopes: $^{1}_{1}\\text{H}$, $^{2}_{1}\\text{H}$, $^{3}_{1}\\text{H}$ (Figure 3A–5). With hydrogen the isotopes have been given different names so that $^{1}_{1}\\text{H}$ is called hydrogen-1 (protium), $^{2}_{1}\\text{H}$ is deuterium and can also be written as $^{2}_{1}\\text{D}$, while $^{3}_{1}\\text{H}$ is tritium and can also be written $^{3}_{1}\\text{T}$. Tritium is a rare and unstable radioactive isotope of hydrogen.\n\nHelium has two naturally occurring isotopes and these are referred to as helium-3 and helium-4 (Figure 3A–6). This is a more common method of labelling isotopes. Two important isotopes of uranium that are used both in nuclear power stations and nuclear bombs, uranium-235 and uranium-238, are also labelled this way.",
+   "figures": [
+    "3A-F3",
+    "3A-F4",
+    "3A-F5",
+    "3A-F6"
+   ],
+   "criteria": [
+    "3A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 7,
+    "book_page": 86,
+    "pages": [
+     7,
+     8
+    ]
+   }
+  },
+  {
+   "id": "3A-E3",
+   "heading": "Proton to neutron ratio and nuclear stability",
+   "text": "The stability of any nucleus depends on the number of protons and neutrons in the nucleus. For small nuclei to be stable, the number of protons must roughly equal the number of neutrons. However, as the number of protons increases, more neutrons are needed to maintain stability.\n\nThe graph shown in Figure 3A–7 is a plot of the number of neutrons versus the number of protons in various stable isotopes up to the element mercury – $^{200}_{80}\\text{Hg}$.\n\nThe stable nuclei are in the blue band, which is known as the belt of stability (also known as the valley of stability).\n\nThe reason that more neutrons are needed in the nucleus to maintain nuclear stability as the number of protons increases is the competing electrostatic forces and the strong nuclear forces inside the nucleus. This is explained in more detail below.",
+   "figures": [
+    "3A-F7"
+   ],
+   "criteria": [
+    "3A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 9,
+    "book_page": 88,
+    "pages": [
+     9
+    ]
+   }
+  },
+  {
+   "id": "3A-E4",
+   "heading": "Radioactive isotopes",
+   "text": "Isotopes of elements outside of the belt of stability are all radioactive and all undergo nuclear decay.\n\nAlthough there are 254 stable isotopes, more than 3000 radioactive isotopes are known, of which only about 84 are seen in nature. The rest are produced artificially as the direct products of nuclear reactions or the indirect radioactive descendants of these products.\n\nRadioactive isotopes have many useful applications. For example, cobalt-60 has 27 protons and 33 neutrons and a proton to neutron ratio of 1:22. It decays by emitting an electron (beta particle) from the nucleus and high-energy electromagnetic radiation (gamma rays). It is an extremely useful radioactive isotope that is used in radiation treatment of cancerous tumours (discussed in Section 3E). It does not exist in nature but can be produced as an artificial radioactive isotope in nuclear reactors.",
+   "figures": [],
+   "criteria": [
+    "3A.1"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 10,
+    "book_page": 89,
+    "pages": [
+     10
+    ]
+   }
+  },
+  {
+   "id": "3A-E5",
+   "heading": "Four fundamental forces",
+   "text": "There are only four fundamental forces at work in the Universe: the gravitational force, the weak nuclear force, the electromagnetic force and the strong nuclear force.\n\nBoth gravitational and electromagnetic forces were discovered long before the discovery of the strong and weak nuclear forces. The gravitational force was accurately described by Isaac Newton in 1687 and acts between all objects having mass.\n\nThe electric force (also called the electrostatic force) acting between charged bodies was published by Coulomb in 1785, while Oersted in 1820 discovered that an electric current creates an associated magnetic field. With the publication of A Dynamical Theory of the Electromagnetic Field in 1865, James Clerk Maxwell (Figure 3A–9 left) gave physicists a tremendously powerful theory of electromagnetism that is often seen succinctly summarised on physics student’s and teacher’s T-shirts (Figure 3A–9 right).\n\nThe strong and weak forces were discovered by physicists in the 20th century when they started to probe into the nucleus of the atom.\n\nThe strong force was initially proposed by Hideki Yukawa in 1935. He reasoned that the residual effects of the strong force would bind the protons and neutrons of the atomic nucleus together in spite of the intense repulsion of the positively charged protons for each other.\n\nThe weak force (or weak interaction) was initially proposed by Enrico Fermi in 1933 to try and explain radioactive beta decay. In the process Fermi ‘discovered’ a new particle, the neutrino initially proposed by Wolfgang Pauli in 1930.\n\nThe four fundamental forces work over vastly different ranges (from one-thousandth of the diameter of a proton to infinity) and have vastly different strengths, as shown in Table 3A–1.\n\nTo understand the physics of the nucleus and radioactivity physicists, ignore the gravitational attraction between nucleons (as this force is so extremely small) and concentrate instead on the roles the other three fundamental forces play.",
+   "figures": [
+    "3A-F9",
+    "3A-F10"
+   ],
+   "criteria": [
+    "3A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 10,
+    "book_page": 89,
+    "pages": [
+     10,
+     11
+    ]
+   }
+  },
+  {
+   "id": "3A-E6",
+   "heading": "Neutrinos galore",
+   "text": "When the nucleus of a radioactive atom disintegrates, physicists observed that the nucleus was losing more energy than the detectors were picking up. To account for that extra energy, the physicist Wolfgang Pauli conceived an extra, invisible particle emitted by the nucleus (which Fermi later named the neutrino, though at the time it was still theoretical). ‘I have done something very bad today by proposing a particle that cannot be detected,’ Pauli wrote in his journal. “It is something no theorist should ever do.”\n\nThe Universe turns out to be awash with neutrinos. They’re among the lightest of the known subatomic particles and they come from all directions: the Big Bang that began the Universe, exploding stars and, most of all for us on Earth, the Sun. They come straight through Earth at nearly the speed of light, all the time, day and night, in enormous numbers. About 100 trillion neutrinos pass through our bodies every second.\n\nThe problem for physicists is that neutrinos are impossible to see and difficult to detect. Hoping to detect neutrinos in larger numbers, scientists in Japan led an experiment 1100 metres underground in a zinc mine. Super-Kamiokande, or Super-K as it is known, began operating in 1996. The detector consists of 50 000 tonnes of water in a domed tank whose walls are covered with 13 000 light sensors (Figure 3A–10).\n\nThe physicists working at Super-K discovered that neutrinos can change into different types. This contradicts the long-held notion that they have no mass. For neutrinos to oscillate they must have different, and thus non-zero, masses. The discovery contradicted the reigning theory of particle physics, the Standard Model, which has no explanation at present for how neutrinos could have obtained their mass.",
+   "figures": [
+    "3A-F11"
+   ],
+   "criteria": [
+    "3A.2",
+    "3A.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 11,
+    "book_page": 90,
+    "pages": [
+     11,
+     12
+    ]
+   }
+  },
+  {
+   "id": "3A-E7",
+   "heading": "Electrostatic forces in the nucleus",
+   "text": "Electrostatic attraction exists between unlike charges, and electrostatic repulsion exists between like charges. The closer together the charges are, the stronger the electrostatic force.\n\nNOTE: Electrostatic forces exist between charged objects. Like charges repel each other (e.g. positive– positive or negative–negative) and unlike charges attract each other (e.g. positive–negative). The French physicist Charles-Augustin de Coulomb in 1785 published that the magnitude of the electrostatic force depends directly on the amount of charge present on each charge and inversely as the square of the distance between the charges. This relationship is known as Coulomb’s law, expressed by the formula below, which is not needed in Unit 1 of this course.\n\nPositive charges inside a nucleus are extremely close together. For example, a helium nucleus that contains two protons and two neutrons is ~$10^{-15}$ m in size (Figure 3A–11). Therefore, it is a surprise that the very large electrostatic force of repulsion doesn’t split the nucleus apart.\n\nThe fact that two protons in such close proximity have such extremely strong electrostatic repulsion forces acting on them made physicists realise that the force of electrostatic repulsion must be overcome by an even stronger force. The force that stops the nucleus from splitting apart due to electrostatic repulsion is known as the strong nuclear force.",
+   "figures": [
+    "3A-F12"
+   ],
+   "criteria": [
+    "3A.2",
+    "3A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 12,
+    "book_page": 91,
+    "pages": [
+     12,
+     13
+    ]
+   }
+  },
+  {
+   "id": "3A-E8",
+   "heading": "Strong nuclear force",
+   "text": "While the strong nuclear force is, as its name suggests, a very strong force, it is only able to act over incredibly small distances (Figure 3A–12). The strong nuclear force acts on all of the nucleons (protons and neutrons). Inside a stable nucleus, the nucleons are sufficiently close that the pull of the strong nuclear force is much greater than the push of the protons electrostatically repelling each other, and therefore the nucleus remains intact.\n\nThe electrostatic force has more influence as atoms get bigger because protons on opposite sides will now be further apart and begin to repel each other although they are still bound to their immediate neighbours (protons and neutrons) by the strong force (S) (Figure 3A–13).\n\nFor natural elements with more than 82 protons (the element lead, Pb, has 82 protons), the nuclei are no longer stable and these elements are radioactive.\n\nThe so-called transuranic elements, those with more than 92 protons, are so unstable they don’t exist naturally. As with many such statements in science, improved measuring techniques find exceptions to rules, and trace amounts (1 part in $10^{11}$) of the transuranic element plutonium have been found to occur naturally in uranium ore.\n\nNote that the strong nuclear forces that hold the nucleus together are much stronger than the electrostatic forces that hold the electrons to the nucleus. This means that changes to the nucleus can release much more energy than changes to the electrons; therefore, nuclear reactions are much more powerful than chemical reactions. Chemical changes in a 2-kg lump of coal, about the size of a baseball, (Figure 3A–14 left) can produce about the same energy as 480 g of TNT (the explosive used in dynamite), which would make a ball about two-thirds that size. However, nuclear changes in a baseball-sized lump of uranium-235 (with a mass of about 28 kg) can release a similar amount of energy to the chemical changes of 20 000 tonnes of TNT exploding (Figure 3A–14 right).",
+   "figures": [
+    "3A-F13",
+    "3A-F15"
+   ],
+   "criteria": [
+    "3A.2",
+    "3A.3",
+    "3A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 13,
+    "book_page": 92,
+    "pages": [
+     13,
+     14
+    ]
+   }
+  },
+  {
+   "id": "3A-E9",
+   "heading": "Weak nuclear force",
+   "text": "The weak nuclear force is the fundamental force used to explain radioactive beta decay. Specifically, it explains the transformation of neutrons into protons and vice versa.\n\nInside a nucleus a neutron can spontaneously decay into a proton, emitting a beta minus ($β^{-}$) particle (or an electron) from the nucleus. This is normal beta radiation. Also, inside a nucleus a proton can spontaneously decay into a neutron, emitting a beta plus ($β^{+}$) particle (or a positron) from the nucleus. These processes are explained in more detail in Section 3B.",
+   "figures": [],
+   "criteria": [
+    "3A.2",
+    "3A.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 14,
+    "book_page": 93,
+    "pages": [
+     14
+    ]
+   }
+  },
+  {
+   "id": "3A-E10",
+   "heading": "Binding energy",
+   "text": "The amount of energy needed to overcome the strong nuclear force and pull a nucleus apart is known as the binding energy. This is the amount of energy required to split a nucleus into its individual nucleons; that is, to reverse the original binding process. For example, it would take 2.23 MeV of energy to split the $^{2}_{1}\\text{H}$ nucleus (the deuterium isotope of hydrogen) into a separate proton and neutron.\n\nConversely, when a neutron and proton combine to form a hydrogen-2 nucleus, 2.23 MeV of energy is liberated. The total mass of the bound particles is less than the sum of the masses of the separate particles by an amount equivalent to the binding energy (using Einstein’s $E = mc^{2}$ equation).\n\nChapter 4 explains, using a binding energy curve, why both fusion and fission are reactions that release energy (except as noted below in the case of the fusion of iron nuclei and those of higher mass number). The concept is introduced here in this chapter to explain how much energy is required to overcome the strong force inside a nucleus and pull the nucleus apart.\n\nEach isotope of each element has its own specific binding energy. Nuclei with high binding energies are very stable because it takes a lot of energy to split them. Nuclei with lower binding energies are easier to split.\n\nTo compare the binding energies of various nuclei, and therefore their stability, it is useful to look at the average binding energy per nucleon. The average binding energy per nucleon is the total binding energy of a nucleus divided by the number of nucleons in the nucleus.\n\nIt can be seen from the binding energy curve for stable or long-lived nuclei (Figure 3A–16) that iron (Fe-56) has the highest binding energy per nucleon (8.8 MeV). This means it is the most stable of all nuclei.\n\nThe build-up of heavier elements in the nuclear fusion processes in stars is limited to elements below iron on the periodic table, since the fusion of iron would subtract energy rather than provide it. This means that elements heavier than iron are produced in cosmic events that release far more energy than fusion in a star, such as a supernova explosion (Figure 3A–15).",
+   "figures": [
+    "3A-F16",
+    "3A-F17"
+   ],
+   "criteria": [
+    "3A.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 15,
+    "book_page": 94,
+    "pages": [
+     15
+    ]
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "3A-F1",
+   "label": "Figure 3A–1",
+   "caption": "Imagine a gold ring changing into an iron or lead ring overnight!",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 5,
+    "book_page": 84
+   }
+  },
+  {
+   "id": "3A-F2",
+   "label": "Figure 3A–2",
+   "caption": "A useful model of the atom showing a nucleus with protons (red), neutrons (blue), and orbiting electrons (green)",
+   "img": "img/3A_fig3A-2.png",
+   "important": true,
+   "why": "Billiard-ball model of the atom: nucleus of protons and neutrons with orbiting electrons",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 6,
+    "book_page": 85
+   }
+  },
+  {
+   "id": "3A-F3",
+   "label": "Figure 3A–3",
+   "caption": "A two-dimensional diagram representing a hydrogen and helium atom. These two elements make up 99.9% of the known Universe (in a ratio of 10:1 H:He). Note that this two-dimensional style of diagram, rather than the model in Figure 3A–2, should be used to show the number of protons, neutrons and electrons in an atom or nucleus.",
+   "img": "img/3A_fig3A-3.png",
+   "important": true,
+   "why": "2D diagrams of hydrogen and helium atoms; the style to use for counting p, n, e",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 6,
+    "book_page": 85
+   }
+  },
+  {
+   "id": "3A-F4",
+   "label": "Figure 3A–4",
+   "caption": "On the periodic table, the number of protons in an element increases across a row, while the columns relate to the number of electrons in the outermost orbital shell, which determine chemical reactions. The table is a useful tool for understanding the nature of our atomic universe. To see the table in more detail, see page 551 of Appendix 2 or go to the Interactive Textbook and zoom in on the table.",
+   "img": "img/3A_fig3A-4.png",
+   "important": true,
+   "why": "Periodic table (atomic numbers) for isotope notation questions",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 7,
+    "book_page": 86
+   }
+  },
+  {
+   "id": "3A-F5",
+   "label": "Figure 3A–5",
+   "caption": "The three naturally occurring isotopes of hydrogen: protium, deuterium and tritium ($^{1}_{1}\\text{H}$, $^{2}_{1}\\text{H}$, $^{3}_{1}\\text{H}$)",
+   "img": "img/3A_fig3A-5.png",
+   "important": true,
+   "why": "The three hydrogen isotopes in $^{A}_{Z}$X notation",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 8,
+    "book_page": 87
+   }
+  },
+  {
+   "id": "3A-F6",
+   "label": "Figure 3A–6",
+   "caption": "The two naturally occurring isotopes of helium: helium-3 and helium-4 ($^{3}_{2}\\text{He}$, $^{4}_{2}\\text{He}$). Natural helium consists almost entirely of $^{4}\\text{He}$ and only contains just over 0.0001% of $^{3}\\text{He}$.",
+   "img": "img/3A_fig3A-6.png",
+   "important": true,
+   "why": "Helium-3 and helium-4 isotopes",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 8,
+    "book_page": 87
+   }
+  },
+  {
+   "id": "3A-F7",
+   "label": "Figure 3A–7",
+   "caption": "The belt of stability showing all of the stable isotopes of elements up to mercury – $^{200}_{80}\\text{Hg}$. The ratios are for numbers of neutrons to protons.",
+   "img": "img/3A_fig3A-7.png",
+   "important": true,
+   "why": "Belt of stability graph: N vs Z, ratios 1:1 to 1.5:1",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 9,
+    "book_page": 88
+   }
+  },
+  {
+   "id": "3A-F8",
+   "label": "Figure 3A–8",
+   "caption": "International symbol for radioactive sources",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 10,
+    "book_page": 89
+   }
+  },
+  {
+   "id": "3A-F9",
+   "label": "Figure 3A–9",
+   "caption": "Left: James Clerk Maxwell (1831–1879) was one of the greatest scientists who have ever lived. To him we owe the most significant discovery of our age – the theory of electromagnetism. He is rightly acclaimed as the father of modern physics. Right: Maxwell’s equations (not needed for this course) as part of a saying popular with physicists",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 10,
+    "book_page": 89
+   }
+  },
+  {
+   "id": "3A-F10",
+   "label": "Table 3A–1",
+   "caption": "The relative sizes of the gravitational, weak, electromagnetic and strong forces and their ranges based on relative strength to the strong nuclear force (being 1)",
+   "img": "img/3A_tab3A-1.png",
+   "important": true,
+   "why": "Relative strength and range of the four fundamental forces",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 11,
+    "book_page": 90
+   }
+  },
+  {
+   "id": "3A-F11",
+   "label": "Figure 3A–10",
+   "caption": "The cavernous Super-Kamiokande detector in Japan is lined with 13 000 sensors to pinpoint signs of neutrinos.",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 12,
+    "book_page": 91
+   }
+  },
+  {
+   "id": "3A-F12",
+   "label": "Figure 3A–11",
+   "caption": "The electrostatic force of repulsion between the two protons in the helium nucleus should blow it apart – but this does not happen.",
+   "img": "img/3A_fig3A-11.png",
+   "important": true,
+   "why": "Two protons in a helium nucleus ~$10^{-15}$ m apart: huge repulsion",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 13,
+    "book_page": 92
+   }
+  },
+  {
+   "id": "3A-F13",
+   "label": "Figure 3A–12",
+   "caption": "The strength and direction of the strong nuclear force and the electrostatic force plotted against the separation distance of the protons and neutrons.",
+   "img": "img/3A_fig3A-12.png",
+   "important": true,
+   "why": "Strong nuclear force vs electrostatic force against separation",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 13,
+    "book_page": 92
+   }
+  },
+  {
+   "id": "3A-F14",
+   "label": "Figure 3A–13",
+   "caption": "As nuclei get larger, protons on opposite sides will now be further apart and begin to repel each other.",
+   "img": "img/3A_fig3A-13.png",
+   "important": true,
+   "why": "Large nucleus: protons on opposite sides repel; strong force only between neighbours",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 13,
+    "book_page": 92
+   }
+  },
+  {
+   "id": "3A-F15",
+   "label": "Figure 3A–14",
+   "caption": "Left: Chemical changes occur in a lump of burning coal, releasing small amounts of energy. Right: Nuclear energy is millions of times more powerful than chemical energy for the same mass of fuel.",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 14,
+    "book_page": 93
+   }
+  },
+  {
+   "id": "3A-F16",
+   "label": "Figure 3A–15",
+   "caption": "The binding energy curve means that all elements heavier than iron are produced in a supernova like the Crab Nebula supernova remnant shown here.",
+   "img": null,
+   "important": false,
+   "why": "Photo / decorative: not cropped",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 16,
+    "book_page": 95
+   }
+  },
+  {
+   "id": "3A-F17",
+   "label": "Figure 3A–16",
+   "caption": "The binding energy per nucleon versus mass number is a measure of stability as atoms get bigger, since the higher the binding energy, the more energy it takes to split the atom apart. The graph shows that the element iron ($^{56}\\text{Fe}$) has the most stable nucleus.",
+   "img": "img/3A_fig3A-16.png",
+   "important": true,
+   "why": "Binding energy per nucleon curve; Fe-56 at the peak",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 16,
+    "book_page": 95
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE3A-1",
+   "title": "Binding energy in oxygen",
+   "question": "Oxygen-16 (O-16) has a total binding energy of 127 MeV.\nCalculate the average binding energy per nucleon of O-16.",
+   "steps": [
+    "Oxygen has 16 nucleons. The total binding energy for oxygen is 127 MeV.",
+    "Therefore, the binding energy per nucleon of O-16 is $\\frac{127}{16}$ = 7.94 MeV."
+   ],
+   "answer": "7.94 MeV",
+   "img": [
+    "img/3A_WE3A-1.png"
+   ],
+   "criteria": [
+    "3A.6"
+   ],
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 15,
+    "book_page": 94
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "3A-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "How many protons are there in the nucleus of the atom shown in Figure 3A–2? What element does this correspond to?",
+   "answer": "6 protons as there are 6 orbiting electrons. Carbon",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3A.1"
+   ],
+   "img": [
+    "img/3A_fig3A-2.png"
+   ],
+   "src": {
+    "file": "3A Check-in – Set 1.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "Complete the following using the periodic table (Figure 3A–4 or see page 551 of Appendix 2).\n\n| Number of protons in the nucleus | Name of the element |\n|---|---|\n| 3 | |\n| | Iron |\n| 29 | |\n| | Gold |\n| 86 | |",
+   "answer": "| Number of protons in the nucleus | Name of the element |\n|---|---|\n| 3 | Lithium |\n| 26 | Iron |\n| 29 | Copper |\n| 79 | Gold |\n| 86 | Radon |",
+   "kind": "recall",
+   "size": "medium",
+   "criteria": [
+    "3A.1"
+   ],
+   "img": [
+    "img/3A_CI1-2.png",
+    "img/3A_fig3A-4.png"
+   ],
+   "src": {
+    "file": "3A Check-in – Set 1.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "What is an isotope of an element?",
+   "answer": "Each of two or more forms of the same element that contain equal numbers of protons but different numbers of neutrons in their nuclei.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Check-in – Set 2.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "What is a radioactive isotope of an element?",
+   "answer": "Any isotope of an element whose nuclei are unstable and spontaneously emit radiation in the form of alpha particles, beta particles and gamma rays.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Check-in – Set 2.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-CI3.1",
+   "set": 3,
+   "n": 1,
+   "question": "a Which one of the four fundamental forces is the least important in understanding the forces acting in the nucleus?\nb Explain your answer.",
+   "answer": "a Gravity\nb It is extremely weak compared to the other forces acting inside the nucleus.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "3A.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Check-in – Set 3.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-CI3.2",
+   "set": 3,
+   "n": 2,
+   "question": "Explain how nucleons are held together in the nucleus.",
+   "answer": "The pull of the strong nuclear force on the nucleons is much greater than the push of the protons electrostatically repelling each other in the nucleus.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "3A.2",
+    "3A.3",
+    "3A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Check-in – Set 3.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-CI4.1",
+   "set": 4,
+   "n": 1,
+   "question": "What is binding energy in relation to the nucleus?",
+   "answer": "The amount of energy required to split a nucleus into its individual nucleons.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "3A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Check-in – Set 4.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-CI4.2",
+   "set": 4,
+   "n": 2,
+   "question": "Explain what the average binding energy per nucleon is.",
+   "answer": "The average binding energy per nucleon is the total binding energy of a nucleus divided by the number of nucleons in the nucleus.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "3A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Check-in – Set 4.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-CI4.3",
+   "set": 4,
+   "n": 3,
+   "question": "The element iron-56 has the highest binding energy per nucleon. What is the implication of this for the stability of iron-56?",
+   "answer": "This means that iron-56 is the most stable of all nuclei.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "3A.6"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Check-in – Set 4.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "3A-SQ1",
+   "n": "1",
+   "question": "Uranium-235 has 92 protons in the nucleus. The number of neutrons in the nucleus is",
+   "options": [
+    "A. 92",
+    "B. 143",
+    "C. 235",
+    "D. 327"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-SQ2",
+   "n": "2",
+   "question": "Isotopes of an element have the same number of",
+   "options": [
+    "A. nucleons.",
+    "B. neutrons.",
+    "C. neutrons but a different number of protons.",
+    "D. protons but a different number of neutrons."
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-SQ3",
+   "n": "3",
+   "question": "Elements outside of the belt of stability are all",
+   "options": [
+    "A. α-emitters.",
+    "B. β-emitters.",
+    "C. γ-emitters.",
+    "D. radioactive."
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-SQ4",
+   "n": "4",
+   "question": "Inside a nucleus, the electrostatic force acts on the",
+   "options": [
+    "A. electrons.",
+    "B. protons.",
+    "C. neutrons.",
+    "D. nucleons."
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3A.2",
+    "3A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-SQ5",
+   "n": "5",
+   "question": "Inside a nucleus, the strong force acts on the",
+   "options": [
+    "A. electrons.",
+    "B. protons.",
+    "C. neutrons.",
+    "D. nucleons."
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3A.2",
+    "3A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-SQ6",
+   "n": "6",
+   "question": "Use the internationally accepted format $^{A}_{Z}\\text{X}$ to write down the elements containing the following nucleons:\na 2 neutrons and 1 proton\nb 12 protons and 25 nucleons\nc 94 protons and 143 neutrons",
+   "options": [],
+   "answer": "a $^{2}_{1}\\text{D}$\nb $^{25}_{12}\\text{Mg}$\nc $^{237}_{94}\\text{Pu}$",
+   "marks": null,
+   "kind": "recall",
+   "size": "medium",
+   "phase": [
+    "practice",
+    "youtry"
+   ],
+   "criteria": [
+    "3A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-SQ7",
+   "n": "7",
+   "question": "Explain why it is possible to have two different elements with the same number of nucleons.",
+   "options": [],
+   "answer": "Different number of neutrons/protons but same number of nucleons.",
+   "marks": null,
+   "kind": "explain",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "3A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-SQ8",
+   "n": "8",
+   "question": "What is the neutron/proton ratio range for an element to be in the belt of stability?",
+   "options": [],
+   "answer": "For an element to be in the belt of stability it must have a neutron/proton ratio between 1:1 and 1.5:1.",
+   "marks": null,
+   "kind": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-SQ9",
+   "n": "9",
+   "question": "What are two important characteristics of isotopes of elements that lie outside the belt of stability?",
+   "options": [],
+   "answer": "Isotopes of elements outside of the belt of stability are all radioactive and all undergo nuclear decay.",
+   "marks": null,
+   "kind": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "3A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-SQ10",
+   "n": "10",
+   "question": "Explain why the electrostatic force has more influence as nuclei get bigger and contain more protons and neutrons.",
+   "options": [],
+   "answer": "The strong nuclear force only acts over very small distances, so protons on the opposite sides of a big nucleus are further apart and will electrostatically repel each other even though they are bound to their immediate neighbours by the strong force.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "3A.3",
+    "3A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  },
+  {
+   "id": "3A-SQ11",
+   "n": "11",
+   "question": "a Which force is used to explain radioactive beta decay?\nb Explain what happens when a neutron inside the nucleus turns into a proton.\nc Explain what happens when a proton inside the nucleus turns into a neutron.",
+   "options": [],
+   "answer": "a Weak force or weak interaction.\nb The nucleus emits a β⁻-particle (electron).\nc The nucleus emits a β⁺-particle (positron).",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "3A.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "3A Section questions.docx",
+    "answer_file": "Chapter 3 Suggested responses.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 3A–1 Nuclear stability: forces",
+  "total": 16,
+  "file": "3A Worksheet 3A–1 Nuclear stability- forces.docx",
+  "questions": [
+   {
+    "id": "WS3A-1a",
+    "n": "1a",
+    "question": "Explain what is meant by the term: an isotope of an element",
+    "answer": "An isotope of an element is each of two or more forms of the same element that contain equal numbers of protons but different numbers of neutrons in their nuclei.",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3A.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3A Worksheet 3A–1 Nuclear stability- forces.docx",
+     "answer_file": "3A Worksheet 3A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3A-1b",
+    "n": "1b",
+    "question": "Explain what is meant by the term: a radioisotope of an element.",
+    "answer": "A radioisotope of an element is one whose nuclei are unstable and spontaneously emit radiation (1 mark) in the form of alpha particles, beta particles and gamma rays (1 mark).",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3A.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3A Worksheet 3A–1 Nuclear stability- forces.docx",
+     "answer_file": "3A Worksheet 3A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3A-2a",
+    "n": "2a",
+    "question": "What is the definition of an electronvolt?",
+    "answer": "An electronvolt is the energy that an electron would gain if it were accelerated by a voltage of 1 volt.",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3A.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "3A Worksheet 3A–1 Nuclear stability- forces.docx",
+     "answer_file": "3A Worksheet 3A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3A-2b",
+    "n": "2b",
+    "question": "Convert 10 MeV into J.",
+    "answer": "10 MeV = 10 × $10^{6}$ eV = 10 × $10^{6}$ × 1.6 × $10^{-19}$ = 1.6 × $10^{-12}$ J\n(Note: the conversion factor is 1.0 eV = 1.6 × $10^{-19}$ J)",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "wedo"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3A.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "3A Worksheet 3A–1 Nuclear stability- forces.docx",
+     "answer_file": "3A Worksheet 3A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3A-3",
+    "n": "3",
+    "question": "What is meant by the term ‘the binding energy of a nucleus’?",
+    "answer": "The amount of energy required to split a nucleus into its individual nucleons (2 marks).",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3A.6"
+    ],
+    "img": [],
+    "src": {
+     "file": "3A Worksheet 3A–1 Nuclear stability- forces.docx",
+     "answer_file": "3A Worksheet 3A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3A-4a",
+    "n": "4a",
+    "question": "Use the internationally accepted format $^{A}_{Z}\\text{X}$ and a periodic table to write down the elements containing the following nucleons: 3 neutrons and 2 protons",
+    "answer": "$^{5}_{2}\\text{He}$",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "wedo"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3A.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3A Worksheet 3A–1 Nuclear stability- forces.docx",
+     "answer_file": "3A Worksheet 3A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3A-4b",
+    "n": "4b",
+    "question": "Use the internationally accepted format $^{A}_{Z}\\text{X}$ and a periodic table to write down the elements containing the following nucleons: 12 protons and 26 neutrons",
+    "answer": "$^{26}_{12}\\text{Mg}$",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3A.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3A Worksheet 3A–1 Nuclear stability- forces.docx",
+     "answer_file": "3A Worksheet 3A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3A-4c",
+    "n": "4c",
+    "question": "Use the internationally accepted format $^{A}_{Z}\\text{X}$ and a periodic table to write down the elements containing the following nucleons: 92 protons and 235 neutrons",
+    "answer": "$^{235}_{92}\\text{U}$",
+    "marks": 1,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3A.1"
+    ],
+    "img": [],
+    "src": {
+     "file": "3A Worksheet 3A–1 Nuclear stability- forces.docx",
+     "answer_file": "3A Worksheet 3A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3A-5a",
+    "n": "5a",
+    "question": "List the four fundamental forces",
+    "answer": "Gravitational force, weak nuclear force, electromagnetic force and the strong nuclear force (in any order). (2 marks)",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3A.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "3A Worksheet 3A–1 Nuclear stability- forces.docx",
+     "answer_file": "3A Worksheet 3A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3A-5b",
+    "n": "5b",
+    "question": "List the order of the four fundamental forces in terms of strength from strongest to weakest.",
+    "answer": "Strong nuclear force > electromagnetic force > weak nuclear force > gravitational force (2 marks)",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3A.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "3A Worksheet 3A–1 Nuclear stability- forces.docx",
+     "answer_file": "3A Worksheet 3A–1 Answers.docx"
+    }
+   },
+   {
+    "id": "WS3A-6",
+    "n": "6",
+    "question": "Explain why the electrostatic force between the protons in a nucleus has more influence as nuclei get bigger.",
+    "answer": "The strong nuclear force only acts over very small distances (1 mark). Protons on the opposite sides of a big nucleus are further apart and will electrostatically repel each other even though they are bound to their immediate neighbours by the strong force (1 mark).",
+    "marks": 2,
+    "kind": "explain",
+    "size": "medium",
+    "phase": [
+     "practice"
+    ],
+    "pair_with": null,
+    "criteria": [
+     "3A.3",
+     "3A.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "3A Worksheet 3A–1 Nuclear stability- forces.docx",
+     "answer_file": "3A Worksheet 3A–1 Answers.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "3A.6"
+   ],
+   "wedo": "WE3A-1",
+   "youtry": [],
+   "note": "Only binding-energy-per-nucleon calculation in the chapter; Cambridge has no matching question for You try. Use 3A-CI4.2/4.3 as a concept check, or write an 'own' question."
+  },
+  {
+   "criteria": [
+    "3A.1"
+   ],
+   "wedo": "WS3A-4a",
+   "youtry": [
+    "WS3A-4b",
+    "WS3A-4c"
+   ],
+   "origin": "adapted",
+   "note": "No worked example for isotope notation; WS3A-4a worked as We do (steps from the answer). Same skill: write $^{A}_{Z}$X from p and n counts. 3A-SQ6 is extra practice."
+  },
+  {
+   "criteria": [
+    "3A.6",
+    "3B.1"
+   ],
+   "wedo": "WS3A-2b",
+   "youtry": [
+    "3B-CI2.3"
+   ],
+   "origin": "adapted",
+   "note": "MeV to J conversion (3A Skills box). You try converts J to MeV (reverse direction); WE3B-1 covers it fully in 3B."
+  }
+ ],
+ "skills": [
+  {
+   "id": "3A-SK1",
+   "heading": "Converting units of energy",
+   "text": "In nuclear physics you sometimes use different units of energy from what you would use in, for example, mechanics. It is an important skill to know how to convert from one unit to another.\n\nThe main unit of energy used in this textbook is the joule (J). The joule is a very convenient unit when dealing with the amounts of energy involved in things and processes we can see. For the very small amounts of energy of individual atoms and subatomic particles it is more convenient to use units known as electronvolts.\n\nAn electronvolt is the energy that an electron would gain if it was accelerated by a voltage of 1 volt. The conversion factor is 1.0 eV = 1.6 × $10^{-19}$J, so the electronvolt is unimaginably small.\n\nEnergies involved with emissions of nuclear radiation are usually in the range 0.1 – 10 MeV. The ‘M’ is the SI unit prefix ‘mega-’, meaning $10^{6}$, i.e. a million.\n\n1.0 MeV = 1.0 × $10^{6}$ eV (one million electronvolts)",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 17,
+    "book_page": 96
+   }
+  },
+  {
+   "id": "3A-SK2",
+   "heading": "Building a glossary",
+   "text": "In studying physics, you are required to remember, apply and explain many terms.\n\nBefore you start applying new terms, you need to understand them. A strategy to achieve this is to create a glossary of your own. A glossary will sharpen your skills in defining and understanding the meaning of terms.\n\nThis area of study ‘Radiation from the nucleus’ introduces to you many terms that you probably either haven’t met before (e.g. activity (becquerel), radiation weighting factors, strong nuclear force) or have never had a precise definition for (e.g. nucleons, half-life, radioactive decay chain).\n\nTo define is to state the precise meaning of the terms. For example, if you were asked to define ‘activity (becquerel)’, then the following definition in your notes may help.\n\nDefinition: The ‘strength’ of any given radioactive source is determined by its activity.\n\nThe activity is defined as the number of nuclei that decay each second; that is, the number of disintegrations per second. The unit of activity is the becquerel (Bq), where 1 becquerel is defined as 1 disintegration per second (1 Bq = 1 disintegration $s^{-1}$).\n\nTo start creating your own glossary, you can use the highlighted glossary terms in this textbook. However the best way to learn and remember the terms is to rewrite the definitions in your own words and then write out an example of the use of the term. The Interactive Textbook includes a ‘scorcher’ quiz based on the terms and definitions, and it is a good idea to self-assess your understanding and to return to this quiz from time to time.",
+   "src": {
+    "file": "Physics12_Ch03.pdf",
+    "page": 17,
+    "book_page": 96
+   }
+  }
+ ],
+ "pracs": [],
+ "notes": "No worked example for isotope notation or forces; WE3A-1 (binding energy per nucleon) is the only one. Worksheet 3A–1 Q4a answer gives He-5 (as in source). Coulomb's law appears in a NOTE (not needed in Unit 1). Table 3A–1 values are in the image only."
+}

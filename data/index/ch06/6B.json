@@ -1,0 +1,948 @@
+{
+ "code": "6B",
+ "title": "Electricity at home",
+ "chapter": 6,
+ "unit": 1,
+ "aos": 3,
+ "study_design": [
+  "Model household (AC) electrical systems as simple direct current (DC) circuits",
+  "Model household electricity connections as a simple DC circuit comprising fuses, switches, circuit breakers, loads and earth",
+  "Apply concepts of charge (Q), electric current (I), potential difference (V), energy (E) and power (P), in electric circuits",
+  "Apply the kilowatt-hour (kW h) as a unit of energy",
+  "Compare power transfers in series and parallel circuits",
+  "Explain why the circuits in homes are mostly parallel circuits"
+ ],
+ "criteria": [
+  "6B.1",
+  "6B.2",
+  "6B.3",
+  "6B.4",
+  "6B.5"
+ ],
+ "glossary": [
+  {
+   "id": "6B-G1",
+   "term": "Kilowatt-hour (kW h)",
+   "def": "a unit of electrical energy based on a power of 1 kW running for 1 h, equivalent to 3.6 MJ; used on electricity supply meters and bills",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 27
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F6B-1",
+   "name": "Kilowatt-hour to joules",
+   "latex": "1\\ \\text{kW h} = 1000\\ \\text{J s}^{-1} \\times 3600\\ \\text{s} = 3\\,600\\,000\\ \\text{J} = 3.6\\ \\text{MJ}",
+   "where": [],
+   "criteria": [
+    "6B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "F6B-2",
+   "name": "Energy from power and time",
+   "latex": "E = Pt",
+   "where": [
+    {
+     "sym": "E",
+     "meaning": "energy",
+     "unit": "J or kW h"
+    },
+    {
+     "sym": "P",
+     "meaning": "power",
+     "unit": "W or kW"
+    },
+    {
+     "sym": "t",
+     "meaning": "time",
+     "unit": "s or h"
+    }
+   ],
+   "criteria": [
+    "6B.3",
+    "6B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "F6B-3",
+   "name": "Power (current drawn by an appliance)",
+   "latex": "P = VI",
+   "where": [
+    {
+     "sym": "P",
+     "meaning": "power",
+     "unit": "W"
+    },
+    {
+     "sym": "V",
+     "meaning": "potential difference",
+     "unit": "V"
+    },
+    {
+     "sym": "I",
+     "meaning": "current",
+     "unit": "A"
+    }
+   ],
+   "criteria": [
+    "6B.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 31
+   }
+  },
+  {
+   "id": "F6B-4",
+   "name": "Cost of running an appliance",
+   "latex": "\\text{cost} = P\\ (\\text{in kW}) \\times t\\ (\\text{in hours}) \\times \\text{cost}\\ (\\text{in \\$ per kW h})",
+   "where": [],
+   "criteria": [
+    "6B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 32
+   }
+  }
+ ],
+ "engage": {
+  "heading": "Electric vehicles",
+  "text": "Until recently, the biggest consumer of electricity in the home, as well as the most expensive electrical equipment in most homes, was heating and air conditioning systems. That is changing rapidly as more and more families now have an electric vehicle (EV) as their most expensive (if not most power-hungry) electrical device, requiring a charging station hooked up to the main electricity supply to be installed in the garage. EVs store energy in batteries that power electric motors to drive the wheels rather than burning liquid fuels in internal combustion engines. For about 130 years, the internal combustion engine has been the unrivalled source of power for road vehicles. It is only since about 2015 that EVs have started to challenge that domination. In Norway, for example, EVs made up 65% of new car sales in 2021 (85% in January 2022 due to changed tax rates), and in the UK new petrol and diesel passenger vehicles will not be sold after 2030.\n\nIt may surprise you to know therefore that the concept of vehicles using electricity to power their movement is actually a slightly older technology than fossil fuels. The first electric motors and internal combustion engines appeared in the early 1800s but were not applied to road vehicles until later. Then, the first battery-powered electric cars appeared in the early 1880s, while the first internal combustion engine-powered car only appeared in the late 1880s.\n\nSubsequently, the low cost of liquid fuel, the ease of distributing it and the greater distance travelled on a tank of fuel for combustion-powered cars led to their complete dominance on the roads during the twentieth century. Batteries were too heavy and expensive, and their lower energy capacity (therefore short range) and the lack of battery recharging points confined EVs to a footnote in history for more than a century.\n\nWhat changed in the last decade to make EVs so popular that sales of new EVs around the world are predicted to overtake the sale of combustion engine vehicles by 2030? First battery technology has improved and become cheaper, while the cost of oil-based fuel has steadily risen. Lithium-ion batteries store more energy, have faster battery charging speeds and are much lighter than the previous alternative – lead–acid batteries. Second, public opinion has increasingly favoured the reduction of greenhouse gases and other pollutants produced by combustion engine vehicles so, even though EVs cost more, consumers are willing to pay the extra. Third, governments and local authorities have encouraged the provision of more recharging points as part of a policy to reduce greenhouse gas emissions.\n\nAn example of an EV that has achieved mass production and increasing consumer demand is the Tesla Model 3. Launched in the middle of 2017, the Model 3 became the first EV to surpass one million sales globally in June 2021. Other major car makers have all commited to produce more EV models by 2025 and to gradually phase out internal combustion vehicles by 2035.\n\nOur use of electricity has developed in the last 40 years, and more changes are planned for the next 10 years. Household electrical systems will need to be adapted to suit the new energy environment. In Victoria we already have smart meters, which can account for production from solar panels and can be read remotely. Infrastructure for EV charging and/or batteries that can run a house and store solar output will be key to the electrical revolution taking place. The basics of how homes are wired and made safe, however, are unlikely to change in the near future.",
+  "src": {
+   "file": "Physics12_Ch06.pdf",
+   "page": 22
+  }
+ },
+ "chunks": [
+  {
+   "id": "6B-E1",
+   "heading": "Circuits at home (or series versus parallel)",
+   "text": "The focus of this section is the analysis of electrical circuits commonly found in the home. Typical appliances are included, to demonstrate how to investigate the way they work. Some features of house wiring are included too, since an understanding of how mains electricity is distributed around a house contributes to its safe use.\n\nSafety note: any investigation of mains-operated appliances or domestic installations should be carried out only under strict supervision. An appliance should never be opened up for study until its mains plug and cord have been permanently removed. Mains fittings should never, under any circumstances, be tampered with. An electrician’s licence is required to work on mains circuits and appliances connected to the mains. Work carried out by unlicensed people could cause fires, malfunctioning of appliances or personal injury.",
+   "figures": [],
+   "criteria": [
+    "6B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 23
+   }
+  },
+  {
+   "id": "6B-E2",
+   "heading": "Features of mains electrical circuits",
+   "text": "All mains electrical circuits have the following in common:\n• a source of EMF (potential difference) such as the mains supply (230 V AC)\n• a form of protection against excessive currents (e.g. a fuse or circuit breaker)\n• a form of control (e.g. a switch)\n• the load, which converts electrical energy to some other form of energy (e.g. a bulb or motor)\n• low-resistance cables to join the parts together (Figure 6B–2).\n\nMost of the mains voltage appears across the load. Because the connecting wires and fuses are of low resistance, the potential dropped across them may only amount to about 1 V.\n\nCircuits are made up of combinations of series and parallel connections, so it is important to be able to identify each in a circuit diagram.\n\nMains supply is AC (alternating current) in which the current and potential difference oscillate backwards and forwards 50 times per second (Figure 6B–3 top). This can be modelled as a DC circuit of the type considered in Chapter 5. Instead of a power supply with + and – terminals, there is an active and a neutral wire, the significance of which will be covered in Section 6C, along with other safety devices, including the earth wire.",
+   "figures": [
+    "6B-F2",
+    "6B-F3"
+   ],
+   "criteria": [
+    "6B.1",
+    "6B.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "6B-E3",
+   "heading": "More series and parallel circuits",
+   "text": "When the electricity supply enters a house, it first passes through the meter. Since the meter must measure the total energy consumption, all the current flowing into the house must pass through it. The meter is, therefore, connected in series with the active (live) wire of the supply. A mains switch, also in series in the active wire, is added here so that the electrical supply to the whole house may be cut off for repairs and maintenance or in an emergency.\n\nThe supply divides into separate circuits, corresponding to discrete areas of the house, and is further divided into power and lighting circuits. Every power point and light fitting must deliver the full mains potential difference, so the separate circuits are in parallel with one another.\n\nTo protect the circuits from excessive current loading, each has its own circuit breaker (or fuse in older houses). These safety devices are covered in Section 6C. They automatically cut the circuit when excessive current flows, isolating each circuit from the others. The circuit breakers and switch are wired in series in the active wire for each circuit.\n\nIn each room, power points are wired in parallel with one another, so that each can deliver the full mains voltage. A parallel connection is also used for lights within a room (Figure 6B–5).\n\nLight fittings are connected with a switch in series with the active wire. Note that the neutral and earth wires loop into the switch on their way to the light fitting. While most light fixtures do not require an earth, because they have no exposed metal parts (they are ‘double insulated’), an earth wire must be included in the wiring so that a light fixture needing an earth may be installed at a later date.\n\nSeveral lights in a room may be controlled from one switch. In such a situation, the lights are wired in parallel with one another, with the switch in series with the group of lights (Figure 6B–5). However, in some cases low-voltage bulbs are preferred because of their small size and for safety. Transformers are required to provide this low voltage (see Unit 3).",
+   "figures": [
+    "6B-F4",
+    "6B-F5"
+   ],
+   "criteria": [
+    "6B.1",
+    "6B.2",
+    "6B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 25
+   }
+  },
+  {
+   "id": "6B-E4",
+   "heading": "Measuring the amount of electrical energy used: the kilowatt-hour",
+   "text": "Electricity supplied to a house passes through a meter before it can be used. The meter records the amount of electrical energy used. It is read regularly (advanced or ‘smart’ meters installed in Victoria since 2011 can be read remotely as well as onsite). This provides the electricity supply company with a record of energy consumption from which the cost can be calculated and a bill produced. Smart meters are also able to record a second number, for the usage by storage appliances that use off-peak electricity (since energy used between about 11 p.m. and 5 a.m. is sometimes priced at a lower rate) and other time-of-use tariffs can be easily calculated. Input to the grid from solar panels and home battery storage is also recorded on the smart meter. In most installations of solar panels, the energy produced locally is used in the house if possible, rather than being immediately exported.\n\nWhen the consumer buys energy from the supplier, it would be possible to measure consumption in joules, the SI unit of energy, if the power is measured in watts and the time in seconds. However, it is more convenient to measure the consumption of domestic electricity in a unit called the kilowatt-hour (kW h) because it is easy to calculate consumption directly from the power rating of each appliance. (All devices for use with the mains supply carry a nameplate which shows the rating of the appliance; how much power it consumes under normal conditions.) The rating of an electric kettle, for example, may be up to 3 kW (3000 W).\n\nThe kW h is a unit of energy and it is possible to compare it directly to the SI unit of energy, the joule, as follows:\n$1\\ \\text{kW} = 1000\\ \\text{W} = 1000\\ \\text{J s}^{-1}$\n$1\\ \\text{h} = 3600\\ \\text{s}$\nTherefore:\n$1\\ \\text{kW h} = 1000\\ \\text{J s}^{-1} \\times 3600\\ \\text{s} = 3\\,600\\,000\\ \\text{J} = 3.6\\ \\text{MJ}$",
+   "figures": [],
+   "criteria": [
+    "6B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "6B-E5",
+   "heading": "Appliance power ratings",
+   "text": "Appliances for use with the mains electrical supply all have their power consumption rating (in watts or kilowatts) on a plate, usually underneath or on the back. More obviously, a star rating system is used on every new appliance sold: the more stars, the more efficient the appliance and the cheaper it will be to run.\n\nThe energy rating label can give you all the information you need to select the most efficient and lowest running cost, but take care to compare the actual figures. A three-star 32-inch TV will use a lot less energy than a 65” TV with five stars.\n\nA typical Australian household spent up to $2000 on electricity in 2021. An estimated breakdown of where energy is used is given in Table 6B–1.\n\nGood energy-efficient design, with low-emissivity glass and full wall, floor and ceiling insulation assists with heating and cooling the home efficiently. Not only does this save money, but it also reduces greenhouse emissions from excessive use of electrical energy that may be from non-renewable sources.\n\nThere are many devices available to measure the current an appliance draws, either by encircling the power cord, plugging in between the mains and the appliance or even attached to the electricity meter with a Bluetooth readout to a smartphone app. Usually the readout is converted to kW h and shown as energy used.\n\nMany appliances are designed with a standby power mode enabling them to detect remote control devices or to sense movement, when that is used as the cue to activate automatically. Generally, an LED glows constantly to indicate it is in standby and the power is on. Although standby mode and LEDs consume only a small amount of power, over the course of year it may add up to much more than people realise. Figure 6B–9 shows standby and power-on LEDs glowing in a room at night when the lights are off.",
+   "figures": [
+    "6B-F8"
+   ],
+   "criteria": [
+    "6B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 28
+   }
+  },
+  {
+   "id": "6B-E6",
+   "heading": "Power and current rating calculations",
+   "text": "It is possible to calculate the current drawn by an appliance using the power equation, $P = VI$, if its normal operating voltage and power are known from its nameplate rating.",
+   "figures": [],
+   "criteria": [
+    "6B.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 31
+   }
+  },
+  {
+   "id": "6B-E7",
+   "heading": "Cost of running appliances",
+   "text": "To estimate the cost of running an appliance, you first calculate the kW h used, then multiply by the cost of electrical energy per kW h.",
+   "figures": [],
+   "criteria": [
+    "6B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 32
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "6B-F2",
+   "label": "Figure 6B–2",
+   "caption": "Simplified circuit diagram for household appliances that do not require an earth connection",
+   "img": "img/6B_fig6B-2.png",
+   "important": true,
+   "why": "Mains circuit modelled as DC: supply, breaker, switch, load",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "6B-F3",
+   "label": "Figure 6B–3",
+   "caption": "Alternating current (AC) in which the current and potential difference oscillate backwards and forwards 50 times per second, compared with direct current (DC) from a battery",
+   "img": "img/6B_fig6B-3.png",
+   "important": true,
+   "why": "AC vs DC graphs",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 24
+   }
+  },
+  {
+   "id": "6B-F4",
+   "label": "Figure 6B–4",
+   "caption": "A simple schematic house wiring diagram, with the mains supply connecting at the top. It is usual to have lights, power outlets, cooker and water heater on separate circuits. (There may also be separate circuits not shown here for heavy consumers of power such as heating systems, air conditioning units, heat pumps or pool pumps.) Trace the circuit for each appliance, starting at the brown active wire (A). Neutral (N) wires are blue, and earth (E) wires are green with a yellow stripe. Each appliance is in parallel with all the others, meaning they each have a potential difference of close to 230 V across them, and receive the correct current to run at their given power rating.",
+   "img": "img/6B_fig6B-4.png",
+   "important": true,
+   "why": "House wiring: parallel circuits, breakers, meter",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 25
+   }
+  },
+  {
+   "id": "6B-F5",
+   "label": "Figure 6B–5",
+   "caption": "In a normal household circuit, the lights in a room are wired in parallel so they can be switched on and off independently. Each has full mains voltage (230 V).",
+   "img": "img/6B_fig6B-5.png",
+   "important": true,
+   "why": "Parallel lighting circuit with switches",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "6B-F8",
+   "label": "Figure 6B–8",
+   "caption": "Heating and cooling generally use the most energy in Australian homes, followed by water heating, laundry and entertainment. Food refrigeration and lighting have become more efficient.",
+   "img": "img/6B_fig6B-8.png",
+   "important": true,
+   "why": "Household energy use breakdown (Table 6B–1 as picture)",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 30
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE6B-1",
+   "title": "Using kilowatt-hours",
+   "question": "a How much energy would an electric kettle with a power rating of 2500 W use in 1 hour? Answer in kW h and in J.\nb How much energy (in kW h and J) will the same electric kettle use in 5 minutes?",
+   "steps": [
+    "a The kettle has a power rating: $P = 2500\\ \\text{W} = 2.5\\ \\text{kW}$",
+    "In $t$ = 1 hour, the kettle will use energy:",
+    "$E = Pt$",
+    "$= 2.5 \\times 1$",
+    "$= 2.5\\ \\text{kW h}$",
+    "To calculate in J, recall: 1 kW h = 3.6 MJ",
+    "Either convert: $2.5 \\times 3.6 = 9$ MJ of energy",
+    "OR",
+    "Use $E = Pt$ with $P$ in watts and $t$ in seconds:",
+    "$P = 2500\\ \\text{W};\\ t = 1\\ \\text{h} \\times 60 \\times 60\\ \\text{s}$",
+    "$E = 2500 \\times 1 \\times 60 \\times 60$",
+    "$= 9 \\times 10^{6}\\ \\text{J or } 9\\ \\text{MJ}$",
+    "b The energy used per hour from part a is 2.5 kW h.",
+    "In 5 minutes, $\\frac{5}{60} = \\frac{1}{12}$ of this energy is used:",
+    "$E_{\\text{in 5 min}} = \\frac{5}{60} = \\frac{1}{12} \\times 2.5$",
+    "$= 0.21\\ \\text{kW h}$",
+    "In J, it’s the same proportion:",
+    "$E = \\frac{5}{60} = \\frac{1}{12} \\times 9 \\times 10^{6}$",
+    "$= 0.75\\ \\text{MJ}$"
+   ],
+   "answer": "a 2.5 kW h = 9 MJ; b 0.21 kW h = 0.75 MJ",
+   "img": [],
+   "criteria": [
+    "6B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 27
+   }
+  },
+  {
+   "id": "WE6B-2",
+   "title": "Power consumption in kW h",
+   "question": "a A 55-inch 4K television is rated at 80 W. Calculate the current, in mA, that it draws. For ease of calculation, assume the mains supply is 230 V.\nb If the same TV is left on standby mode it only draws 2.5 mA of current. Calculate how much power the TV uses when in standby and the energy in kilowatt-hours that the TV will use during a year in standby mode.",
+   "steps": [
+    "a $P = 80$ W",
+    "$V = 240$ V",
+    "$I = ?$",
+    "Rearrange the equation for power, then substitute:",
+    "$I = \\frac{P}{V}$",
+    "$I = \\frac{80}{240}$",
+    "$= 0.333\\ \\text{A or approximately } 330\\ \\text{mA}$",
+    "b Again using the power equation:",
+    "$P = V \\times I$",
+    "$= 240 \\times 2.5 \\times 10^{-3}$",
+    "$= 0.6\\ \\text{W}$",
+    "So, in standby mode, the TV uses 0.6 W (or $6 \\times 10^{-4}$ kW) of power.",
+    "To calculate the energy used in a year, use $P$ in kW and convert 1 year to hours:",
+    "$E = P\\ (\\text{in kW}) \\times t\\ (\\text{in h})$",
+    "$= 6 \\times 10^{-4} \\times 1 \\times 365 \\times 24$",
+    "$= 5.256$ kW h is the energy used by the TV in standby mode for a year."
+   ],
+   "answer": "a 0.333 A ≈ 330 mA; b 0.6 W, 5.256 kW h per year",
+   "img": [],
+   "criteria": [
+    "6B.3",
+    "6B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 31
+   },
+   "note": "Question says 230 V but solution uses 240 V (verbatim)."
+  },
+  {
+   "id": "WE6B-3",
+   "title": "Cost of running appliances",
+   "question": "a Using the 55-inch 4K TV from Worked example 6B–2, calculate the cost of running the TV for 2 hours in the evening. Assume the electricity costs $0.30/kW h. Ignore the supply charge.\nb Calculate the cost to run the TV for a week if it is on for 2 hours every day. Assume the TV is on standby (as in Worked Example 6B–2) apart from those 2 hours.\nc A household battery stores 13.5 kW h of energy. How many days could this power the TV under the conditions in part b?",
+   "steps": [
+    "a $P = 80\\ \\text{W} = 0.08\\ \\text{kW}$",
+    "$t$ = 2 hours",
+    "So,",
+    "$E = P \\times t$",
+    "$= 0.08\\ \\text{kW} \\times 2$",
+    "$= 0.16\\ \\text{kW h}$",
+    "At $0.30/kW h:",
+    "cost = $E$ (in kW h) × price (in $ per kW h)",
+    "$= 0.16 \\times 0.30$",
+    "= $0.048 or 4.8 cents",
+    "Note that a shortcut would be:",
+    "cost = $P$ (in kW) × $t$ (in hours) × cost (in $ per kW h)",
+    "Notice how the units reduce to $ when you cancel kW and h: $\\text{kW} \\times \\text{h} \\times \\frac{\\$}{\\text{kW h}} = \\$$",
+    "b For one day:",
+    "cost = (energy used in 2 hours ‘on’ + energy used in 22 hours ‘standby’) × price per kW h",
+    "$= (0.16 + 0.6 \\times 22) \\times 0.30$",
+    "$= (0.16 + 13.2) \\times 0.30$",
+    "$= 13.36 \\times 0.30$",
+    "= $4.008 ≈ $4.01 per day",
+    "This is a lot to pay for a TV you’re not watching!",
+    "c The battery can supply $E_{\\text{batt}}$ = 13.5 kW h, and the power used per day (on for 2 hours, standby for 22 hours) $E_{\\text{required}}$ = 13.36 kW h/day, from the calculations in part b.",
+    "time = $\\frac{13.5\\ \\text{kW h}}{13.36\\ \\text{kW h/day}}$ = 1.01 day or just over 1 day (1 day 14 minutes)",
+    "The battery can run the TV (on standby for 22 h and on for 2 h) for 1 day. It would be wise not to leave the TV on standby but to turn it right off! There may also be an issue of the battery not fully returning all the energy that is stored in it, which would shorten the time further."
+   ],
+   "answer": "a $0.048 (4.8 c); b $4.01 per day; c about 1 day",
+   "img": [],
+   "criteria": [
+    "6B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 32
+   },
+   "note": "Textbook error kept verbatim: part b uses 0.6 (W) as if kW (0.6 W × 22 h = 0.0132 kW h, not 13.2). Correct daily cost ≈ (0.16 + 0.0132) × 0.30 ≈ $0.052. Part b also asks for a week but answers per day. Fix before teaching."
+  }
+ ],
+ "checkins": [
+  {
+   "id": "6B-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "Recall two advantages of parallel circuits over series circuits and explain how these make it more convenient to wire household lights and power points in parallel.",
+   "answer": "Parallel circuits provide the same potential difference to each appliance, so in household circuits, appliances operate correctly at the voltage they are designed for (230 V). In series, the potential difference would be shared with all the appliances in the circuit, so none would receive the full 230 V (unless they happened to be the only device connected at that moment).\nAlso, connecting power points and lights in parallel allows a separate switch for each one, which is convenient for control. In a series circuit, any switch would operate all the appliances on that circuit at once, which would be most inconvenient.",
+   "kind": "explain",
+   "size": "medium",
+   "criteria": [
+    "6B.2",
+    "6B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "6B-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "Why are switches and circuit breakers wired in series with their appliances, not parallel?",
+   "answer": "A switch needs to break the supply of potential difference (and current), so it needs to be in series with the appliance. A switch in parallel would leave the appliance connected even when it was 'off', which could be very dangerous, and would short-circuit the appliance when switched on.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "6B.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 26
+   }
+  },
+  {
+   "id": "6B-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "Why are kilowatt-hours the domestic unit of energy instead of joules?",
+   "answer": "It is more convenient to use kilowatt-hours because traditionally most appliances used large amounts of power (kW and more) for longer times (5 minutes or more, not seconds). It is also easier to think about the cost in easy to calculate units rather than thousands of watts $\\times$ many thousands of seconds.",
+   "kind": "explain",
+   "size": "quick",
+   "criteria": [
+    "6B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 28
+   }
+  },
+  {
+   "id": "6B-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "Calculate the total energy used when an induction cooktop using 2 kW of power for 10 minutes and a 1500 W heater is on for 2 hours.",
+   "answer": "For each appliance: $E = P \\times t$\nSo, adding them together and taking care with units:\n$E_{total} = 2 \\times \\frac{5}{60} + 1.5 \\times 2$\n$E = 3.16\\ \\text{kW h}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "6B.3",
+    "6B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 28
+   },
+   "note": "Suggested response uses 5/60 h for 10 minutes (should be 10/60: E = 0.333 + 3 = 3.33 kW h)."
+  },
+  {
+   "id": "6B-CI3.1",
+   "set": 3,
+   "n": 1,
+   "question": "Calculate the cost of running an electric jug kettle for 10 minutes, if it has a power rating of 3000 W. Assume the cost of electricity is $0.30/kW h.",
+   "answer": "Because the jug has a rating of 3000 W, it uses 3 kW h of energy per hour. As 10 minutes is $\\frac{1}{6}$ of an hour, this means that in 10 minutes the same jug will use 0.5 kW h of energy. Since electricity cost is 0.30 $/kW h, the cost of running the jug for 10 minutes will be 0.5 $\\times$ 0.30 = $0.15. So, the cost is 15 cents.",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "6B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 33
+   }
+  },
+  {
+   "id": "6B-CI3.2",
+   "set": 3,
+   "n": 2,
+   "question": "Most electric jug kettles will only need to be on for perhaps 2–5 minutes to boil water. How much energy will a 3 kW kettle use if it is on for 5 minutes? What will this cost?",
+   "answer": "Power used by kettle: $P$ = 3 kW\nTime: $t$ = 5 minutes = $\\frac{5}{60}$ = 0.083 hours\nTherefore, energy used by the kettle in 10 minutes:\n$E = P \\times t = 3 \\times \\frac{5}{60}$ = 0.25 kW h\nCost = 0.25 $\\times$ 0.30 = $0.075 or 7.5 cents",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "6B.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 33
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "6B-SQ1",
+   "n": "1",
+   "question": "A fan heater is rated at 2400 W. If it is left on for 5 hours, the energy used would be",
+   "options": [
+    "A. 1200 kW h.",
+    "B. 120 kW h.",
+    "C. 12 kW h.",
+    "D. 1.2 kW h."
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "donow",
+    "exit"
+   ],
+   "criteria": [
+    "6B.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "6B Section questions.docx"
+   }
+  },
+  {
+   "id": "6B-SQ2",
+   "n": "2",
+   "question": "What is the current in a 1200 W heater connected to a 240 V mains supply?",
+   "options": [
+    "A. 0.2 A",
+    "B. 5 A",
+    "C. 20 A",
+    "D. 28 kA"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "donow",
+    "exit"
+   ],
+   "criteria": [
+    "6B.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "6B Section questions.docx"
+   }
+  },
+  {
+   "id": "6B-SQ3",
+   "n": "3",
+   "question": "A 5 kW water heater takes 3 hours to heat the water it holds. How much will this cost, assuming $0.30/kW h?",
+   "options": [
+    "A. $0.45",
+    "B. $4.50",
+    "C. $45.00",
+    "D. $450.00"
+   ],
+   "answer": "B",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "6B.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "6B Section questions.docx"
+   }
+  },
+  {
+   "id": "6B-SQ4",
+   "n": "4",
+   "question": "A 960 W washing machine is connected to a 240 V mains supply in parallel with a 2000 W clothes dryer. The total current drawn when both are operating at the same time is",
+   "options": [
+    "A. 1.23 A.",
+    "B. 4.00 A.",
+    "C. 8.33 A.",
+    "D. 12.3 A."
+   ],
+   "answer": "D",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "6B.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "6B Section questions.docx"
+   }
+  },
+  {
+   "id": "6B-SQ5",
+   "n": "5",
+   "question": "The filament globe headlights on a car operate typically at 60 W each and the tail lights at 10 W, while the parking lights usually operate at 5 W each. How long would a 0.32 kW h car battery take to discharge if the lights (all eight of them in parallel) were accidentally left on?",
+   "options": [
+    "A. 1 hour",
+    "B. 2 hours",
+    "C. 4.5 hours",
+    "D. 6 hours"
+   ],
+   "answer": "C",
+   "marks": null,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "6B.3",
+    "6B.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "6B Section questions.docx"
+   }
+  },
+  {
+   "id": "6B-SQ6",
+   "n": "6",
+   "question": "A 15 W desk lamp made with LEDs is connected to a 240 V mains supply.\na What current does it draw?\nb What is the resistance of the lamp?\nc How much energy, in kW h, does it draw in 45 minutes?\nd What is the cost to run this lamp for 45 minutes if the price of electricity is $0.30/kW h?",
+   "answer": "a $P$ = 15 W\n$V$ = 6.0 V\n$P = VI$\n$I = \\frac{P}{V} = \\frac{240}{15}$ = 16 A\nb $V = IR$\n$R = \\frac{V}{I} = \\frac{240}{16}$ = 15 Ω (assuming constant filament temperatures)\nc $t$ = 45 min = $\\frac{45}{60}$ hours\n$E = Pt$ = 15 × $\\frac{45}{60}$ = 11.25 W h = 0.011 kW h\nd Cost = energy used × price per kW h = 0.011 × 0.30 = 0.33 cents",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "6B.3",
+    "6B.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "6B Section questions.docx"
+   },
+   "note": "Suggested response a and b are wrong (I = 15/240 = 0.0625 A; R = 240/0.0625 = 3840 Ω). c and d are right."
+  },
+  {
+   "id": "6B-SQ7",
+   "n": "7",
+   "question": "A washing machine is labelled ‘240 V, 960 W’.\na Find the current when the machine is operating normally.\nb What is the resistance in the circuit when the machine is in use?\nc How much does a normal cycle wash cost if it takes 90 minutes and the price of electricity is $0.30/kW h?",
+   "answer": "a $P$ = 960 W, $V$ = 240 V, $P = VI$, $I = \\frac{P}{V} = \\frac{960}{240}$ = 4 A\nb $R = \\frac{V^{2}}{P} = \\frac{240^{2}}{960}$ = 60 Ω\nc $t$ = 90 min = 1.5 hours at 0.30 $/kW h\nCost = $Pt$ × $/kW h = 0.960 × 1.5 × 0.3 = $0.432 = 43 cents",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "6B.3",
+    "6B.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "6B Section questions.docx"
+   }
+  },
+  {
+   "id": "6B-SQ8",
+   "n": "8",
+   "question": "a Calculate the combined resistance of two filament car headlamps, each rated 20 W, running from a 12 V car battery in:\ni series\nii parallel.\nb What energy is drawn in an hour by the two headlamps in series?\nc What energy is drawn in an hour by the parallel combination?\nd Which arrangement, series or parallel, would use less energy from the car battery?\ne Which arrangement, series or parallel, would provide the most light?",
+   "answer": "a i Two lamps, each $P$ = 20 W; Battery $V$ = 12 V; $R_{each} = \\frac{V^2}{P}$ = 7.2 Ω; Two identical lamps in series; double the resistance = 14.4 Ω\nii $R_{equivalent} = \\frac{R_1 R_2}{R_1 + R_2} = \\frac{7.2^{2}}{14.4}$ = 3.6 Ω\nb $E = Pt$ and $P = VI = \\frac{V^{2}}{R} = I^2R$; $= \\frac{V^{2}}{R_{equivalent}} \\times 1$ h $= \\frac{12^{2}}{14.4} \\times 1 = 10$ W h = 0.01 kW h\nc $E = \\frac{V^2}{R} \\times t = \\frac{12^{2}}{3.6} \\times 1 = 40$ W h = 0.04 kW h\nd Series uses less energy than parallel; battery lasts longer but not as much light.\ne Parallel provided more light; battery runs flat sooner but headlamps provide nice bright light.",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "6B.3",
+    "6B.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "6B Section questions.docx"
+   },
+   "note": "Some answer lines were WMF equation images; reconstructed as $V^2/P$ and $V^2/R \\times t$ from context."
+  },
+  {
+   "id": "6B-SQ9",
+   "n": "9",
+   "question": "A 6.6 kW solar system in Victoria costs around $8000 to install, after government rebates (in 2022). If the household is able to use all the power produced by the panels (in preference to drawing from the mains supply), estimate how many years it would take to pay off the cost of the panel installation. Assume that electricity costs $0.25/kW h and that the panels produce on average 20 kW h per day.",
+   "answer": "Without solar panels, the cost of electricity usage = $E$ × $/kW h = 20 × 0.25 = $5\nUsing entirely solar power means that $5 per day is available to pay off the $8000 installation.\n$\\frac{8000}{5}$ = 1600 days = 4.38 years",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "6B.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "6B Section questions.docx"
+   },
+   "note": "Division line was a WMF image; reconstructed as 8000/5."
+  },
+  {
+   "id": "6B-SQ10",
+   "n": "10",
+   "question": "An electric oil-filled space heater is rated at 3000 kW.\na How many units (kW h) would be consumed by this electric heater operating for 2 h?\nb How much would this cost, assuming $0.30/kW h?\nc Compare this to the cost of a reverse-cycle heat pump air conditioner operating in heating mode, rated 2.5 kW, which takes 30 minutes to heat the room to the same temperature due to its superior efficiency (CoP (coefficient of performance, a measure of efficiency) 300 compared to CoP 90).",
+   "answer": "a $E = Pt$ = 3 kW × 2 h = 6 kW h\nb Cost = 6 × 0.30 = $1.80\nc $P$ = 2.5 kW, $t$ = 0.5 h; Cost = 2.5 × 0.5 × 0.30 = $0.375. This option is cheaper.",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "6B.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "6B Section questions.docx"
+   },
+   "note": "Question typo: '3000 kW' means 3000 W (answer uses 3 kW)."
+  },
+  {
+   "id": "6B-SQ11",
+   "n": "11",
+   "question": "a During what part of the day is most electrical energy used in a house?\nb Estimate the maximum value of electrical energy used for a typical household.\nc When would the energy use be lowest?\nd How low might energy use go for a typical household?\ne Suggest strategies that could reduce the energy use at peak times?",
+   "answer": "a Generally on weekdays there are two peaks; 7–8:30 am and 4:30–8 pm corresponding to the times most people are cooking, using hot water for showers and heating or cooling their homes. The evening peak is the larger one.\nb Depending on the size of the house, insulation, window types and direction of shading as well as the number of people and appliances, electricity needs vary from 5 kW h to 40 kW h or even more per day.\nc Middle of the night\nd With efficient appliances and well-designed buildings, heating and cooling can be minimised. Induction cooktops and heatpump hot water are the most efficient, Fridges, dishwashers, washing machines and dryers still use a fair bit of energy. A minimum to aim for, for a family of four, is about 12–15 kW h per day.\ne Shading windows from the summer sun. Install solar panels to do washing, major cooking etc. in the middle of the day when most light is on solar panels. Set timers for heating and cooling to use daytime electricity from solar farms rather than peak evening power; coming home to a house at a comfortable temperature. Short showers.",
+   "marks": null,
+   "kind": "explain",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "6B.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "6B Section questions.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 6B–1 Electricity at home",
+  "total": 16,
+  "questions": [
+   {
+    "id": "WS6B-1",
+    "n": "1",
+    "question": "Provide a definition for kilowatt-hour. Use a calculation to show the amount of energy in one kilowatt-hour. (2 marks)",
+    "answer": "A kilowatt-hour is a unit of electrical energy based on a power of 1 kW running for 1 hour (1 mark)\n$1\\ \\text{kW} = 1000\\ \\text{W} = 1000\\ \\text{J s}^{-1}$; $1\\ \\text{h} = 3600\\ \\text{s}$; $1\\ \\text{kW h} = 1000 \\times 3600 = 3\\,600\\,000\\ \\text{J} = 3.6\\ \\text{MJ}$ (1 mark)",
+    "marks": 2,
+    "kind": "recall",
+    "size": "quick",
+    "phase": [
+     "donow",
+     "exit"
+    ],
+    "criteria": [
+     "6B.5"
+    ],
+    "img": [],
+    "src": {
+     "file": "6B Worksheet 6B–1 Electricity at home.docx"
+    }
+   },
+   {
+    "id": "WS6B-2",
+    "n": "2",
+    "question": "A hairdryer has a power rating of 800 W. Calculate the energy it would use in 10 minutes. Provide answers in both kW h and J. (3 marks)",
+    "answer": "$E = Pt = 800 \\times \\frac{10}{60}$ (1 mark) $= 133.33\\ \\text{kW h}$ (1 mark) $= 133.33 \\times 3.6 = 480\\ \\text{J}$ (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "6B.5"
+    ],
+    "img": [],
+    "src": {
+     "file": "6B Worksheet 6B–1 Electricity at home.docx"
+    },
+    "note": "Answer key is wrong in units: 800 W × 10/60 h = 133.33 W h = 0.133 kW h = 480 000 J (0.48 MJ). Fix before use."
+   },
+   {
+    "id": "WS6B-3",
+    "n": "3",
+    "question": "A desktop computer is connected to 230 V mains supply and rated at 250 W.\na Calculate the current drawn by the computer. (1 mark)\nb Calculate the energy in kilowatt-hours used in a year if the computer is used for four hours each day. (1 mark)\nc When the computer is left on standby mode, it draws 5 mA of current. Calculate how much power the computer draws when in standby mode and not in use. (1 mark)\nd Calculate the energy in kilowatt-hours that the computer uses when in standby mode. (1 mark)\ne If electricity costs 0.25 $/kW h, calculate the total cost of running the computer for a year. (2 marks)",
+    "answer": "a $I = \\frac{P}{V} = \\frac{250}{230} = 1.087\\ \\text{A}$\nb $E = Pt = 0.25 \\times 4 \\times 365 = 365\\ \\text{kW h}$\nc $P = VI = 230 \\times 0.005 = 1.15\\ \\text{W}$\nd $E = Pt = 0.00115 \\times \\frac{20}{24} \\times 365 = 0.350\\ \\text{kW h}$\ne Total kW h = 365 + 0.350 = 365.350 (1 mark); Cost = kW h × 0.25 = 365.35 × 0.25 = $91.34 (1 mark)",
+    "marks": 6,
+    "kind": "calc",
+    "size": "long",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "6B.3",
+     "6B.5"
+    ],
+    "img": [],
+    "src": {
+     "file": "6B Worksheet 6B–1 Electricity at home.docx"
+    },
+    "note": "Part d answer uses 20/24 instead of 20 h per day (should be 0.00115 × 20 × 365 = 8.4 kW h). Check before use."
+   },
+   {
+    "id": "WS6B-4",
+    "n": "4",
+    "question": "The image below compares the energy usage for air conditioners across different states. Use the information to compare the cost of cooling a house in Darwin and Perth, if the average cost of electricity is 0.40 $/kW h. (2 marks)",
+    "answer": "Darwin cost = 452 kW h × 0.4 = $180.8 (1 mark)\nPerth cost = 155 kW h × 0.4 = $62 (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "criteria": [
+     "6B.5"
+    ],
+    "img": [
+     "img/6B_WS4.png"
+    ],
+    "src": {
+     "file": "6B Worksheet 6B–1 Electricity at home.docx"
+    }
+   },
+   {
+    "id": "WS6B-5",
+    "n": "5",
+    "question": "A solar battery can store up to 10 kW h per day and costs $9000 to install. If all the stored power is used every day, estimate how many years it would take to pay off the cost of installing the battery. Electricity costs about 0.30 $/kW h. (3 marks)",
+    "answer": "10 kW h per day × 365 days = 3650 kW h per year (1 mark)\n3650 × 0.3 = $1095 saved per year (1 mark)\n$\\frac{9000}{1095}$ = 8.22 years to pay off battery (1 mark)",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "6B.5"
+    ],
+    "img": [],
+    "src": {
+     "file": "6B Worksheet 6B–1 Electricity at home.docx"
+    }
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "6B.5"
+   ],
+   "wedo": "WE6B-1",
+   "youtry": [
+    "WS6B-2"
+   ],
+   "note": "Energy in kW h and J from power and time (fix WS answer units)."
+  },
+  {
+   "criteria": [
+    "6B.3",
+    "6B.5"
+   ],
+   "wedo": "WE6B-2",
+   "youtry": [
+    "WS6B-3"
+   ],
+   "note": "Current from P = VI, standby power and yearly energy: WS Q3 mirrors WE6B-2 almost exactly (use a to d)."
+  },
+  {
+   "criteria": [
+    "6B.5"
+   ],
+   "wedo": "WE6B-3",
+   "youtry": [
+    "6B-SQ10",
+    "WS6B-5"
+   ],
+   "note": "Cost of running and battery/solar payback. WE6B-3b has a textbook unit error; teach part a and c, or fix b."
+  },
+  {
+   "criteria": [
+    "6B.2",
+    "6B.4"
+   ],
+   "wedo": "6B-CI1.1",
+   "youtry": [
+    "6B-CI1.2"
+   ],
+   "origin": "adapted",
+   "note": "No worked example for why homes are wired in parallel; use Check-in Set 1 as We do / You try with Figure 6B–4 and 6B–5."
+  },
+  {
+   "criteria": [
+    "6B.3",
+    "6B.4"
+   ],
+   "wedo": "6B-SQ8",
+   "youtry": [
+    "6B-SQ7"
+   ],
+   "origin": "adapted",
+   "note": "Series vs parallel power comparison: no worked example; SQ8 (headlamps) as We do from suggested response."
+  }
+ ],
+ "skills": [
+  {
+   "id": "6B-SK1",
+   "heading": "Techniques for solving kW h problems",
+   "text": "It is easy to become confused when there are several different units in use for the same quantity. A good technique is to follow these steps.\n1 Underline each value given and its unit, and write the symbol for the quantity nearby: P, t, E, $, etc.\n2 Write down each useful quantity and the relevant formula for solving the question.\n3 Before substituting, convert the quantities into compatible units. For example: hours (× 60 × 60) become seconds for answers in joules, or minutes (÷ 60) to hours for answers in kW h. It’s often useful to keep the conversion factors, rather than using a calculator at this point as you may be able to cancel down in the next step, saving time on calculations (and making fewer data-entry errors).\n4 Write the equation, and underneath in the next line substitute the quantities and their conversion factors, in the correct units.\n5 Cancel wherever possible (but leave your substitutions legible!) and then calculate your answer. Remember to include the correct unit.\nGo back to Worked Example 6B–2 to see how these steps apply.\nThink ahead when doing these questions and aim to use the simplest method with the fewest calculations, as this will reduce calculator errors. Also, try to get a feel for how big the numbers should be, so you can detect any mistakes in your calculations.",
+   "src": {
+    "file": "Physics12_Ch06.pdf",
+    "page": 34
+   }
+  }
+ ],
+ "pracs": [],
+ "notes": "No Cambridge practicals for 6B. Many Cambridge errors to fix before use: WE6B-3b (0.6 W treated as kW), WE6B-2 (230 V stated, 240 V used), CI2.2 answer (5/60 for 10 min), SQ6a,b answers (inverted P/V), SQ10 '3000 kW', WS6B-2 answer units (kW h vs W h, J), WS6B-3d (20/24). Section questions use 240 V; textbook body uses 230 V. Activities 6B–1 and 6B–2 (research tasks) and Table 6B–1 (energy tips) not indexed as questions. 6B.1 (re-draw a picture as a circuit diagram) has no section question; Review Q20 covers it."
+}

@@ -1,0 +1,1230 @@
+{
+ "code": "7A",
+ "title": "Concepts used to model motion",
+ "chapter": 7,
+ "unit": 2,
+ "aos": 1,
+ "study_design": [
+  "Identify parameters of motion as vectors or scalars",
+  "Apply the vector model of forces, including vector addition and components of forces, to readily observable forces including the force due to gravity, friction and normal forces"
+ ],
+ "criteria": [
+  "7A.1",
+  "7A.2",
+  "7A.3",
+  "7A.4",
+  "7A.5"
+ ],
+ "glossary": [
+  {
+   "id": "7A-G1",
+   "term": "Quantitative",
+   "def": "data that can be measured by the quantity",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "7A-G2",
+   "term": "Vector",
+   "def": "a quantity that is described by both a magnitude (how big it is) and a direction",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "7A-G3",
+   "term": "Scalar",
+   "def": "a quantity that is fully described by a magnitude (it doesn’t need a direction)",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "7A-G4",
+   "term": "Magnitude",
+   "def": "a number the defines only the size of a quantity",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "7A-G5",
+   "term": "Resultant vector",
+   "def": "a single vector that is equivalent to the sum of two or more vectors",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "7A-G6",
+   "term": "Velocity",
+   "def": "the rate of change of displacement",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "7A-G7",
+   "term": "Displacement",
+   "def": "the shortest distance from one point to another",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "7A-G8",
+   "term": "Friction",
+   "def": "a force that resists the relative motion of solid surfaces and fluid layers sliding against each other",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 8
+   }
+  }
+ ],
+ "formulas": [
+  {
+   "id": "F7A-1",
+   "name": "Solving for an unknown vector",
+   "latex": "\\Delta V = V_{\\text{final}} - V_{\\text{initial}}",
+   "where": [
+    {
+     "sym": "\\Delta V",
+     "meaning": "Unknown vector, also called the change in the initial vector",
+     "unit": null
+    },
+    {
+     "sym": "V_{\\text{final}}",
+     "meaning": "Final vector",
+     "unit": null
+    },
+    {
+     "sym": "V_{\\text{initial}}",
+     "meaning": "Initial vector",
+     "unit": null
+    }
+   ],
+   "img": "img/7A_formula7A-1.png",
+   "criteria": [
+    "7A.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 10
+   }
+  }
+ ],
+ "engage": {
+  "heading": "The shortest way isn’t always the quickest",
+  "text": "Mountaineering was first popularised by the scientist Horace-Bénédict de Saussure following his visit to Mont Blanc in 1760. At 4807 m tall, Mont Blanc is one or the tallest peaks in Europe and the young scientist was determined that the mountain would be conquered. Therefore, he offered a prize for anyone who was able to ascend Mont Blanc. It would take 26 years before the prize money was claimed by an unassuming doctor and his porter.\nIn 1854, mountaineering took off. This was an era that would become known as the golden age of mountaineering. Predominately British climbers, with Italian, French and Swiss guides, began ascending the high peaks of the Swiss alps for no other reason than the satisfaction of getting to the top. Mountaineering involves monitoring weather conditions, hiking challenging terrain, including steep rocks, snow and ice. The shortest way to the top of the mountains is rarely the best and the first mountaineers would carefully record their winding path to the top so that others could follow. In such hostile conditions, knowing where one camp was relative to another became a matter of life and death.\nThe climax of the golden era of mountaineering was when a British team of mountaineers, led by Edward Whyper, first scaled the Matterhorn on 14 July 1865.",
+  "src": {
+   "file": "Physics12_Ch07.pdf",
+   "page": 4
+  }
+ },
+ "chunks": [
+  {
+   "id": "7A-E1",
+   "heading": "Vectors and scalars",
+   "text": "In science, all quantitative measurements are either vectors or scalars. A vector is a quantity that requires both a magnitude (size) and direction. For example, if you give someone directions to a shop, you would not say it is 500 m away, you would include a direction and say it is 500 m to the north, for example. A scalar quantity only requires a magnitude; no direction is needed. For example, if someone asks you to pour 500 mL of milk to make a cake, it would not make sense to give a direction for the the 500 mL, the action of pouring has an implicit direction.\nTable 7A–1 shows a list of examples of vector and scalar quantities.",
+   "figures": [
+    "7A-T1"
+   ],
+   "criteria": [
+    "7A.1",
+    "7A.2"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "7A-E2",
+   "heading": "Vector addition",
+   "text": "When adding any vector, you must remember that only the same types of vectors can be added. For example, you can add two velocity vectors but you cannot add a velocity vector to an acceleration vector. Vectors are often represented by arrows. The direction of the arrow indicates the direction of the vector, and the length of the arrow represents the magnitude of the vector.\nWhen objects are moving in one dimension, the direction of the vector can be represented by either a positive or negative sign. In Figure 7A–2, you can represent the vectors on the balls as 5 $\\text{m s}^{-1}$ and −8 $\\text{m s}^{-1}$, in this case the direction right is positive. It is important to note you could also represent the vectors on the balls as −5 $\\text{m s}^{-1}$ and 8 $\\text{m s}^{-1}$; in this case the direction left is positive.",
+   "figures": [
+    "7A-F2"
+   ],
+   "criteria": [
+    "7A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "7A-E3",
+   "heading": "Vector addition in one dimension",
+   "text": "When adding two or more of the same type of vector, the vectors must be added head-to-tail; the vector being added should start where the previous vector finished. The resultant vector is then drawn from the tail of the first vector to the head of the final vector. The order in which you add the vectors does not affect the resultant vector.",
+   "figures": [],
+   "criteria": [
+    "7A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "7A-E4",
+   "heading": "Vector addition in two dimensions",
+   "text": "When an aircraft is flying through the air, the pilot must consider the direction of the wind and which way to point the nose of the plane in order to fly straight. This is one of many examples where finding the resultant vector acting on a body is needed.\nThe same set of principles apply when adding vectors in one dimension to adding vectors in two dimensions. This means that vectors are added head-to-tail, and the resultant vector extends from the start of the first vector drawn to the head of the last vector drawn.",
+   "figures": [],
+   "criteria": [
+    "7A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "7A-E5",
+   "heading": "Friction",
+   "text": "Friction is a force that resists the relative motion of solid surfaces and fluid layers sliding against each other. The force of friction always acts parallel to the surface. There are two main types of friction: static friction and kinetic friction.\nStatic friction is the force that resists the initiation of movement. Static friction helps you to push off the ground and walk, and is also why cars are able to move forwards. The static friction between your foot and the road or the tyre and the road pushes in the direction of travel, producing forwards motion. If you were to try and walk on ice, you would probably slip, and if you tried to drive on ice, the wheels would just spin. This is because there is insufficient static friction to cause forward motion.\nKinetic friction resists the motion of one object moving over another. This friction always opposes the direction of relative motion. If you push a flat box over the ground, it requires effort as you need to overcome the kinetic frictional force.\nFrictional forces are also present when an object moves through a fluid (liquids and gases). These kinds of frictional forces are called drag forces. The mechanism of these frictional forces is different from solid on solid frictional force.",
+   "figures": [
+    "7A-F3"
+   ],
+   "criteria": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "7A-E6",
+   "heading": "Component vectors",
+   "text": "In many cases it is useful to break up vector into their components. For example, when a projectile is launched at an angle, it is useful to determine the horizontal and vertical components of the projectile’s velocity. This is because, if air resistance is ignored, the horizontal component of the velocity will not change but the vertical velocity will be constantly changing because it is acted upon by the force of gravity throughout its flight.\nAny vector can be broken up into its component vectors by forming a right-angled triangle and then using a trigonometric function to solve for the components.",
+   "figures": [
+    "7A-F4"
+   ],
+   "criteria": [
+    "7A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "7A-E7",
+   "heading": "Solving for unknown vectors",
+   "text": "There will be situations where you will be given the resultant vector and will have to solve for an unknown vector. In these situations you can determine the unknown vector by either drawing a vector diagram or determining an equation to solve the unknown vector. The unknown vector will add to the initial vector to cause a change and produce the resultant vector. A general equation to solve for an unknown vector is shown below.",
+   "figures": [],
+   "criteria": [
+    "7A.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 10
+   }
+  }
+ ],
+ "figures": [
+  {
+   "id": "7A-F1",
+   "label": "Figure 7A–1",
+   "caption": "One route up the Matterhorn, a mountain in the Swiss and Italian Alps",
+   "img": null,
+   "important": false,
+   "why": "Engage photo; not cropped",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 4
+   }
+  },
+  {
+   "id": "7A-T1",
+   "label": "Table 7A–1",
+   "caption": "Examples of vector and scalar quantities",
+   "img": "img/7A_table7A-1.png",
+   "important": true,
+   "why": "Vector vs scalar list for a key-ideas slide",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "7A-F2",
+   "label": "Figure 7A–2",
+   "caption": "Two balls moving towards each other. The arrows indicate the magnitude and direction of the balls’ velocity.",
+   "img": "img/7A_fig7A-2.png",
+   "important": true,
+   "why": "Vectors as arrows; sign convention in 1D",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "7A-F3",
+   "label": "Figure 7A–3",
+   "caption": "The chains on a car’s tyre increase the friction between the wheels and the icy road so that forward motion of the car can be generated.",
+   "img": null,
+   "important": false,
+   "why": "Photo; not cropped",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "7A-F4",
+   "label": "Figure 7A–4",
+   "caption": "When the javelin is released its velocity can be broken up into horizontal and vertical components. The magnitude of these two components affects how far the javelin will travel. Therefore, a javelin thrower must consider the launch angle of their javelin to maximise the distance that the javelin travels.",
+   "img": null,
+   "important": false,
+   "why": "Photo with arrow; not cropped (WE7A-4 diagram is better for components)",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 9
+   }
+  }
+ ],
+ "worked_examples": [
+  {
+   "id": "WE7A-1",
+   "title": "Vector addition in 1D",
+   "question": "A person walks 200 m east and then turns around and walks 50 m west.\na Draw a vector diagram for this situation.\nb Calculate how far the person is away from the origin at the end of their journey.",
+   "steps": [
+    "a Let east be to the right. The 200 m east vector is draw to the right. The 50 m west vector then starts at the end (tail) of the previous vector and points to the left indicating the direction, west.",
+    "[diagram: 200 m arrow right, 50 m arrow left from its head]",
+    "b This question is asking you to find the sum of the two displacement vectors. To find this, the vectors are added head-to-tail and the resultant vector runs from the start of the first vector to the head of the final vector, as shown below.",
+    "[diagram: resultant drawn from tail of 200 m vector to head of 50 m vector]",
+    "The magnitude of the resultant vector is found by 200 – 50 = 150 m, where the positive indicated the direction east. Therefore, the final answer is 150 m to the east."
+   ],
+   "answer": "150 m to the east",
+   "img": [
+    "img/7A_WE7A-1.png"
+   ],
+   "criteria": [
+    "7A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "WE7A-2",
+   "title": "Vector addition in 2D",
+   "question": "A boat is moving north at 10 $\\text{m s}^{-1}$ through a lake that has a current of 3 $\\text{m s}^{-1}$ east. Calculate the net velocity, $v$, of the boat. Ensure that you include a direction for the velocity.",
+   "steps": [
+    "First, draw a vector diagram of this situation.",
+    "Rearrange Pythagoras’ theorem, $a^2 = b^2 + c^2$, to determine the magnitude of the velocity.",
+    "$v = \\sqrt{10^2 + 3^2} = 10.4$ $\\text{m s}^{-1}$",
+    "Determine the angle by using a trigonometric function (sin, cos or tan):",
+    "$\\tan\\theta = \\frac{3}{10}$",
+    "$\\theta = \\tan^{-1}\\frac{3}{10} = 16.7^\\circ$",
+    "Note that the angle is measured from the north and the angle moved towards the east. Hence, the angle is written as N16.7°E, which means 16.7° from the north towards the east. Therefore, the final velocity is 10.4 $\\text{m s}^{-1}$ N16.7°E."
+   ],
+   "answer": "10.4 $\\text{m s}^{-1}$ N16.7°E",
+   "img": [
+    "img/7A_WE7A-2.png"
+   ],
+   "criteria": [
+    "7A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 6
+   }
+  },
+  {
+   "id": "WE7A-3",
+   "title": "Finding total displacement",
+   "question": "A hiker walks 5 km north, then 8 km east and finally 9 km south. What is the displacement of the hiker from their starting point? Include a direction in your answer.",
+   "steps": [
+    "First, draw a vector diagram of the situation.",
+    "From the diagram, you should be able to see that the north vector will partially cancel out the south vector. This will leave a right-angled triangle that has a length of 8 km one side, 4 km on the other and the hypotenuse will be the net displacement as shown below.",
+    "Rearrange Pythagoras’ theorem, $a^2 = b^2 + c^2$, to determine the magnitude of the displacement.",
+    "$v = \\sqrt{8^2 + 4^2}$",
+    "$= 8.94$ km",
+    "Determine the angle by using a trigonometric function (sin, cos or tan):",
+    "$\\tan\\theta = \\frac{4}{8}$",
+    "$\\theta = \\tan^{-1}\\frac{4}{8}$",
+    "$= 26.6^\\circ$",
+    "The displacement is 8.94 km at E26.6°S."
+   ],
+   "answer": "8.94 km at E26.6°S",
+   "img": [
+    "img/7A_WE7A-3.png"
+   ],
+   "criteria": [
+    "7A.3"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 7
+   }
+  },
+  {
+   "id": "WE7A-4",
+   "title": "Finding vector components",
+   "question": "A cannon fires a cannonball at an angle of 28° up to the horizontal at an initial velocity of 50 $\\text{m s}^{-1}$. Calculate the horizontal and vertical components of the cannonball’s initial velocity.",
+   "steps": [
+    "Draw the velocity vector and then apply appropriate trigonometric functions to determine the components.",
+    "horizontal component $= 50\\cos 28^\\circ$",
+    "$= 44.1$ $\\text{m s}^{-1}$",
+    "vertical component $= 50\\sin 28^\\circ$",
+    "$= 23.5$ $\\text{m s}^{-1}$"
+   ],
+   "answer": "horizontal 44.1 $\\text{m s}^{-1}$, vertical 23.5 $\\text{m s}^{-1}$",
+   "img": [
+    "img/7A_WE7A-4.png"
+   ],
+   "criteria": [
+    "7A.4"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 9
+   }
+  },
+  {
+   "id": "WE7A-5",
+   "title": "Change in velocity",
+   "question": "A ball is thrown north against a wall with a velocity of 5 $\\text{m s}^{-1}$. The ball then hits the wall and rebounds at a velocity of 3 $\\text{m s}^{-1}$ south. Calculate the magnitude and direction of the change in velocity of the ball.",
+   "steps": [
+    "Let north be positive:",
+    "$\\Delta v = v_{\\text{final}} - v_{\\text{initial}} = (-3) - (5) = -8$ $\\text{m s}^{-1}$",
+    "The negative sign indicates the direction: south.",
+    "This can also be solved by drawing a vector diagram. Because 3 $\\text{m s}^{-1}$ south is the resultant vector, it must be drawn from the tail of the first vector, as shown below.",
+    "The unknown vector is then drawn from the end of the first vector to the end of the resultant vector, as shown below."
+   ],
+   "answer": "8 $\\text{m s}^{-1}$ south",
+   "img": [
+    "img/7A_WE7A-5.png"
+   ],
+   "criteria": [
+    "7A.5"
+   ],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 10
+   }
+  }
+ ],
+ "checkins": [
+  {
+   "id": "7A-CI1.1",
+   "set": 1,
+   "n": 1,
+   "question": "List four vector quantities and four scalar quantities.",
+   "answer": "Vectors: displacement, velocity, acceleration, force, momentum, impulse, torque, electrical fields, magnetic fields\nScalars: distance, speed, mass, volume, area, energy, power, temperature, time",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "7A.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "7A-CI1.2",
+   "set": 1,
+   "n": 2,
+   "question": "What is the difference between a vector and a scalar?",
+   "answer": "A vector has a magnitude and a direction, but a scalar only has a direction.",
+   "kind": "recall",
+   "size": "quick",
+   "criteria": [
+    "7A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 5
+   }
+  },
+  {
+   "id": "7A-CI2.1",
+   "set": 2,
+   "n": 1,
+   "question": "If a runner runs at 9.65 $\\text{m s}^{-1}$ into a 2 $\\text{m s}^{-1}$ headwind (a headwind blows against the direction of travel), calculate the net velocity of the runner relative to the ground.",
+   "answer": "$9.65 - 2 = 7.65$ $\\text{m s}^{-1}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "7A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "7A-CI2.2",
+   "set": 2,
+   "n": 2,
+   "question": "A hiker starts from their camp and walks 40 km south, stops and walks 10 km north and then walks another 9 km south. What is the displacement of the hiker relative to the camp? Include a direction in your answer.",
+   "answer": "$40 - 10 + 9 = 39$ km south",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "7A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 8
+   }
+  },
+  {
+   "id": "7A-CI3.1",
+   "set": 3,
+   "n": 1,
+   "question": "A cannonball is launched with a velocity of 15 $\\text{m s}^{-1}$ at an angle of 23.5° from the horizontal. Calculate the horizontal and vertical components of the cannonball’s initial velocity.",
+   "answer": "$v_h = 15\\cos 23.5 = 13.8$ $\\text{m s}^{-1}$\n$v_v = 15\\sin 23.5 = 5.98$ $\\text{m s}^{-1}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "7A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "7A-CI3.2",
+   "set": 3,
+   "n": 2,
+   "question": "An aircraft has an air speed of 40.9 $\\text{m s}^{-1}$ at an angle of S12°W. Calculate the magnitude of the aircraft's velocity, if it was flying through still air, as well as the crosswind velocity. It is given that a crosswind blows perpendicular to the aircraft and that the nose of the plane is pointing in the south direction.",
+   "answer": "Driving velocity $= 40.9\\cos 12 = 40$ $\\text{m s}^{-1}$\nCrosswind $= 40.9\\sin 12 = 8.50$ $\\text{m s}^{-1}$",
+   "kind": "calc",
+   "size": "medium",
+   "criteria": [
+    "7A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 10
+   }
+  },
+  {
+   "id": "7A-CI4.1a",
+   "set": 4,
+   "n": "1a",
+   "question": "A car travels 200 km east in 2 hours then 150 km west in 2 hours before finally turning around and travelling 50 km east in 1 hour.\na Calculate the average velocity of the car in the first 2 hours.",
+   "answer": "$v = \\frac{200}{2} = 100$ $\\text{km h}^{-1}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "7A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "7A-CI4.1b",
+   "set": 4,
+   "n": "1b",
+   "question": "b Calculate the total distance covered by the car in the 5-hour journey.",
+   "answer": "$d = 200 + 150 + 50 = 400$ km",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "7A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "7A-CI4.1c",
+   "set": 4,
+   "n": "1c",
+   "question": "c Calculate the net displacement of the car in the 5-hour journey.",
+   "answer": "$s = 200 - 150 + 50 = 100$ km east",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "7A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "7A-CI4.1d",
+   "set": 4,
+   "n": "1d",
+   "question": "d Calculate the magnitude of the average velocity of the car for the 5-hour journey.",
+   "answer": "$v = \\frac{100}{5} = 20$ $\\text{km h}^{-1}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "7A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 11
+   }
+  },
+  {
+   "id": "7A-CI4.1e",
+   "set": 4,
+   "n": "1e",
+   "question": "e Calculate the average speed of the car in the 5-hour journey.",
+   "answer": "$v = \\frac{400}{5} = 80$ $\\text{km h}^{-1}$",
+   "kind": "calc",
+   "size": "quick",
+   "criteria": [
+    "7A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 11
+   }
+  }
+ ],
+ "section_questions": [
+  {
+   "id": "7A-SQ1",
+   "n": "1",
+   "question": "Which of the following is not a vector quantity?",
+   "options": [
+    "A velocity",
+    "B force",
+    "C distance",
+    "D acceleration"
+   ],
+   "answer": "C",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow",
+    "practice"
+   ],
+   "criteria": [
+    "7A.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "7A Section questions.docx"
+   }
+  },
+  {
+   "id": "7A-SQ2",
+   "n": "2",
+   "question": "A 50 kg cannon ball is launched from a cannon with a velocity of 20 $\\text{m s}^{-1}$ at an angle of inclination of 30° from the horizontal. What is the horizontal component of the cannon ball’s velocity?",
+   "options": [
+    "A 20.0 $\\text{m s}^{-1}$",
+    "B 17.3 $\\text{m s}^{-1}$",
+    "C 11.5 $\\text{m s}^{-1}$",
+    "D 10.0 $\\text{m s}^{-1}$"
+   ],
+   "answer": "B",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "7A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "7A Section questions.docx"
+   }
+  },
+  {
+   "id": "7A-SQ3",
+   "n": "3",
+   "question": "A vector requires",
+   "options": [
+    "A a magnitude.",
+    "B a direction.",
+    "C an unbalanced force.",
+    "D both A and B."
+   ],
+   "answer": "D",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "recall",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "donow"
+   ],
+   "criteria": [
+    "7A.1"
+   ],
+   "img": [],
+   "src": {
+    "file": "7A Section questions.docx"
+   }
+  },
+  {
+   "id": "7A-SQ4",
+   "n": "4",
+   "question": "A light aircraft is travelling through a storm, due north, with an air speed of 52.5 $\\text{m s}^{-1}$ (the speed if there was no wind). A cross wind is blowing towards the east with a velocity of 15 $\\text{m s}^{-1}$. This situation is shown below.\nThe magnitude of the net velocity of the aircraft relative to the ground is:",
+   "options": [
+    "A 54.6 $\\text{m s}^{-1}$",
+    "B 67.5 $\\text{m s}^{-1}$",
+    "C 72.4 $\\text{m s}^{-1}$",
+    "D $2.98 \\times 10^3$ $\\text{m s}^{-1}$"
+   ],
+   "answer": "A",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "7A.3"
+   ],
+   "img": [
+    "img/7A_SQ4.png"
+   ],
+   "src": {
+    "file": "7A Section questions.docx"
+   }
+  },
+  {
+   "id": "7A-SQ5",
+   "n": "5",
+   "question": "A ball is thrown east at a wall with a speed of 10 $\\text{m s}^{-1}$, the ball rebounds and travels west at a speed of 5 $\\text{m s}^{-1}$. The change in velocity of the ball is:",
+   "options": [
+    "A 5 $\\text{m s}^{-1}$ west",
+    "B 5 $\\text{m s}^{-1}$ east",
+    "C 15 $\\text{m s}^{-1}$ west",
+    "D 15 $\\text{m s}^{-1}$ east"
+   ],
+   "answer": "C",
+   "marks": 1,
+   "kind": "mc",
+   "kind2": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "7A.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "7A Section questions.docx"
+   }
+  },
+  {
+   "id": "7A-SQ6",
+   "n": "6",
+   "question": "What is the difference between a vector and a scalar? Your answer must include an example to demonstrate your point.",
+   "answer": "A vector requires both a magnitude and direction while a scalar only requires a magnitude. For example, if a hiker walks from their campsite, their exact position can be given by their displacement, which is the distance from the campsite and the angle that they travelled. The hiker’s displacement is a vector quantity; this is much different from the scalar quantity of distance that would describe only the total distance that the hiker has covered.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7A.1",
+    "7A.2"
+   ],
+   "img": [],
+   "src": {
+    "file": "7A Section questions.docx"
+   }
+  },
+  {
+   "id": "7A-SQ7",
+   "n": "7",
+   "question": "A ball is thrown with a velocity of 18.1 $\\text{m s}^{-1}$ south at an angle of 15.0° to the horizontal. Calculate the magnitude of the horizontal and vertical components of the ball’s velocity.",
+   "answer": "$V_h = v\\cos\\theta = 17.5$ $\\text{m s}^{-1}$\n$v_v = v\\sin\\theta = 4.68$ $\\text{m s}^{-1}$",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "7A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "7A Section questions.docx"
+   }
+  },
+  {
+   "id": "7A-SQ8a",
+   "n": "8a",
+   "question": "A car is travelling along a straight road at a constant velocity of 80 $\\text{km h}^{-1}$ south.\na The driver then accelerates, which increases the thrust force to 2250 N and increases the frictional force to 1750 N. What is the net force on the car, given that the net force is the sum of all of the forces acting on the body?",
+   "answer": "2250 – 1750 = 500 N south",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "7A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "7A Section questions.docx"
+   }
+  },
+  {
+   "id": "7A-SQ8b",
+   "n": "8b",
+   "question": "b The driver then approaches a pedestrian crossing and slows down to 40 $\\text{km h}^{-1}$ south. What is the magnitude and direction of the change in the car’s velocity?",
+   "answer": "$\\Delta v = v_{\\text{final}} - v_{\\text{initial}} = (40) - (80) = -40$ $\\text{km h}^{-1}$; the negative sign indicates the direction, north",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "7A.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "7A Section questions.docx"
+   }
+  },
+  {
+   "id": "7A-SQ9a",
+   "n": "9a",
+   "question": "An aircraft is attempting to travel north towards its landing strip. The aircraft has an air speed of 42 $\\text{m s}^{-1}$. While the aircraft is trying to land a 5.55 $\\text{m s}^{-1}$ wind blows from the west towards the east.\na What is the final velocity of the aircraft?",
+   "answer": "[vector diagram] $v = \\sqrt{42^2 + 5.55^2} = 42.4$ $\\text{m s}^{-1}$; $\\theta = \\tan^{-1}\\frac{5.55}{42} = 7.53^\\circ$; $v = 42.4$ $\\text{m s}^{-1}$ N 7.53° E",
+   "marks": null,
+   "kind": "calc",
+   "size": "medium",
+   "phase": [
+    "youtry",
+    "practice"
+   ],
+   "criteria": [
+    "7A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "7A Section questions.docx"
+   },
+   "answer_img": [
+    "img/7A_SQ9a_ans.png"
+   ]
+  },
+  {
+   "id": "7A-SQ9b",
+   "n": "9b",
+   "question": "b In order to fly straight, the pilot angles the aircraft into the wind. Explain how this enables the aircraft to fly straight, draw a diagram to aid your answer.",
+   "answer": "The pilot must angle into the wind so that a component of the aircraft’s velocity cancels out the wind, allowing the plane to fly straight. As shown in the diagram below, if the pilot angles 7.53° into the wind, the west component of the aircraft’s velocity will cancel the wind, which means the plane will fly straight.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7A.3",
+    "7A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "7A Section questions.docx"
+   },
+   "answer_img": [
+    "img/7A_SQ9b_ans.png"
+   ]
+  },
+  {
+   "id": "7A-SQ10",
+   "n": "10",
+   "question": "During the Australian Open a tennis ball is travelling west towards a player at 25 $\\text{m s}^{-1}$. The player strikes the tennis ball and sends the ball back east towards their opponent at 19.5 $\\text{m s}^{-1}$. What was the change in velocity of the tennis ball? Include a direction in your answer.",
+   "answer": "Let west be positive: $\\Delta v = v_{\\text{final}} - v_{\\text{initial}} = -19.5 - 25 = -44.5$ $\\text{m s}^{-1}$; the negative indicates the direction, east",
+   "marks": null,
+   "kind": "calc",
+   "size": "quick",
+   "phase": [
+    "youtry",
+    "exit",
+    "practice"
+   ],
+   "criteria": [
+    "7A.5"
+   ],
+   "img": [],
+   "src": {
+    "file": "7A Section questions.docx"
+   }
+  },
+  {
+   "id": "7A-SQ11a",
+   "n": "11a",
+   "question": "A swimmer intends to cross a river that is 1 km wide. The river has a current of 0.25 $\\text{m s}^{-1}$ east and the swimmer swims with a speed of 1.43 $\\text{m s}^{-1}$ in still water.\na On the diagram above, trace the path that the swimmer would take.",
+   "answer": "[diagram answer]",
+   "marks": null,
+   "kind": "graph",
+   "size": "quick",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7A.3"
+   ],
+   "img": [
+    "img/7A_SQ11.png"
+   ],
+   "src": {
+    "file": "7A Section questions.docx"
+   },
+   "answer_img": [
+    "img/7A_SQ11a_ans.png"
+   ]
+  },
+  {
+   "id": "7A-SQ11b",
+   "n": "11b",
+   "question": "b Calculate how much extra distance the swimmer would travel due to the current.",
+   "answer": "Find the angle that the swimmer is swimming across the river by adding the two velocity vectors. $\\theta = \\tan^{-1}\\frac{0.25}{1.43} = 9.92^\\circ$. Because the swimmer will travel at this angle, a triangle can be formed with the distances: $h =$ [value missing in source]. The extra distance covered is therefore [value missing in source]",
+   "marks": null,
+   "kind": "calc",
+   "size": "long",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7A.3"
+   ],
+   "img": [],
+   "src": {
+    "file": "7A Section questions.docx"
+   },
+   "answer_img": [
+    "img/7A_SQ11b_ans1.png",
+    "img/7A_SQ11b_ans2.png"
+   ]
+  },
+  {
+   "id": "7A-SQ11c",
+   "n": "11c",
+   "question": "c Suggest a way that the swimmer could swim directly north. Justify your answer.",
+   "answer": "They could swim partially into the current. This means a component of the swimmer’s velocity could cancel out the velocity of the current. The net result of this is that the swimmer would swim directly north.",
+   "marks": null,
+   "kind": "explain",
+   "size": "medium",
+   "phase": [
+    "practice"
+   ],
+   "criteria": [
+    "7A.3",
+    "7A.4"
+   ],
+   "img": [],
+   "src": {
+    "file": "7A Section questions.docx"
+   }
+  }
+ ],
+ "worksheet": {
+  "title": "Worksheet 7A–1 Concepts used to model motion",
+  "total": 21,
+  "file": "7A Worksheet 7A–1 Concepts used to model motion.docx",
+  "answers_file": "7A Worksheet 7A–1 Answers.docx",
+  "questions": [
+   {
+    "id": "WS7A-1",
+    "n": "1",
+    "question": "Identify the following quantities as either vector or scalar: (8 marks)\na Volume\nb Velocity\nc Mass\nd Force\ne Impulse\nf Distance\ng Energy\nh Momentum",
+    "answer": "a Scalar\nb Vector\nc Scalar\nd Vector\ne Vector\nf Scalar\ng Scalar\nh Vector",
+    "marks": 8,
+    "kind": "recall",
+    "size": "medium",
+    "phase": [
+     "wedo",
+     "practice"
+    ],
+    "criteria": [
+     "7A.1",
+     "7A.2"
+    ],
+    "img": [],
+    "src": {
+     "file": "7A Worksheet 7A–1 Concepts used to model motion.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS7A-2a",
+    "n": "2a",
+    "question": "A person walks 350 m south and then walks 100 m east.\na Draw a vector diagram for this situation. (2 marks)",
+    "answer": "[vector diagram]",
+    "marks": 2,
+    "kind": "graph",
+    "size": "quick",
+    "phase": [
+     "practice"
+    ],
+    "criteria": [
+     "7A.3"
+    ],
+    "img": [],
+    "src": {
+     "file": "7A Worksheet 7A–1 Concepts used to model motion.docx"
+    },
+    "pair_with": "WE7A-1",
+    "answer_img": [
+     "img/7A_WS2a_ans.png"
+    ]
+   },
+   {
+    "id": "WS7A-2b",
+    "n": "2b",
+    "question": "b What is the total distance travelled by the person? (1 mark)",
+    "answer": "350 + 100 = 450 m",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "criteria": [
+     "7A.3"
+    ],
+    "img": [],
+    "src": {
+     "file": "7A Worksheet 7A–1 Concepts used to model motion.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS7A-2c",
+    "n": "2c",
+    "question": "c Calculate how far the person is away from the origin at the end of their journey. (2 marks)",
+    "answer": "$r = \\sqrt{350^2 + 100^2}$ (1 mark) $= 364$ m (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry",
+     "practice"
+    ],
+    "criteria": [
+     "7A.3"
+    ],
+    "img": [],
+    "src": {
+     "file": "7A Worksheet 7A–1 Concepts used to model motion.docx"
+    },
+    "pair_with": "WE7A-3"
+   },
+   {
+    "id": "WS7A-3",
+    "n": "3",
+    "question": "A student throws a paper plane at 12 $\\text{m s}^{-1}$ north. The plane encounters a crosswind of 2.5 $\\text{m s}^{-1}$ blowing from the east to the west. Calculate the net velocity of the paper plane. Ensure that you include a direction for the velocity. (2 marks)",
+    "answer": "$v = \\sqrt{12^2 + 2.5^2} = 12.3$ $\\text{m s}^{-1}$ (1 mark); $\\tan^{-1}\\frac{2.5}{12} = 11.8^\\circ$ from north (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "7A.3"
+    ],
+    "img": [],
+    "src": {
+     "file": "7A Worksheet 7A–1 Concepts used to model motion.docx"
+    },
+    "pair_with": "WE7A-2"
+   },
+   {
+    "id": "WS7A-4a",
+    "n": "4a",
+    "question": "In a day, a hiker walks 35 km south then 15 km east, 28 km north and finally 3 km west.\na Calculate the total distance covered by the hiker. (1 mark)",
+    "answer": "35 + 15 + 28 + 3 = 81 km",
+    "marks": 1,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "practice",
+     "exit"
+    ],
+    "criteria": [
+     "7A.3"
+    ],
+    "img": [],
+    "src": {
+     "file": "7A Worksheet 7A–1 Concepts used to model motion.docx"
+    },
+    "pair_with": null
+   },
+   {
+    "id": "WS7A-4b",
+    "n": "4b",
+    "question": "b What is the displacement of the hiker from their starting point? Include a direction in your answer. (3 marks)",
+    "answer": "[vector diagram] (1 mark); $r = \\sqrt{7^2 + 12^2} = 13.9$ km (1 mark); $\\tan^{-1}\\frac{12}{7} = 59.7^\\circ$ (1 mark). The displacement is 13.9 km at an angle of S59.7°E",
+    "marks": 3,
+    "kind": "calc",
+    "size": "medium",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "7A.3"
+    ],
+    "img": [],
+    "src": {
+     "file": "7A Worksheet 7A–1 Concepts used to model motion.docx"
+    },
+    "pair_with": "WE7A-3",
+    "answer_img": [
+     "img/7A_WS4b_ans.png"
+    ]
+   },
+   {
+    "id": "WS7A-5",
+    "n": "5",
+    "question": "A football player kicks a ball at an angle of 35° to the horizontal at an initial velocity of 37 $\\text{m s}^{-1}$. Calculate the horizontal and vertical components of the football’s velocity. (2 marks)",
+    "answer": "$v_v = 37\\sin 35 = 21.2$ $\\text{m s}^{-1}$ (1 mark); $v_h = 37\\cos 35 = 30.3$ $\\text{m s}^{-1}$ (1 mark)",
+    "marks": 2,
+    "kind": "calc",
+    "size": "quick",
+    "phase": [
+     "youtry"
+    ],
+    "criteria": [
+     "7A.4"
+    ],
+    "img": [],
+    "src": {
+     "file": "7A Worksheet 7A–1 Concepts used to model motion.docx"
+    },
+    "pair_with": "WE7A-4"
+   }
+  ]
+ },
+ "wedo_plan": [
+  {
+   "criteria": [
+    "7A.1",
+    "7A.2"
+   ],
+   "wedo": "WS7A-1",
+   "youtry": [
+    "7A-SQ1",
+    "7A-SQ3"
+   ],
+   "origin": "adapted",
+   "note": "No worked example for vectors vs scalars; classify a few of WS Q1 together, students finish the rest, then the two MC section questions."
+  },
+  {
+   "criteria": [
+    "7A.3"
+   ],
+   "wedo": "WE7A-1",
+   "youtry": [
+    "7A-SQ8a"
+   ],
+   "note": "1D addition with a sign convention; SQ8a adds opposing forces in a line. CI2.2 also fits as a do now."
+  },
+  {
+   "criteria": [
+    "7A.3"
+   ],
+   "wedo": "WE7A-2",
+   "youtry": [
+    "WS7A-3",
+    "7A-SQ9a"
+   ],
+   "note": "Two perpendicular velocities: Pythagoras + tan for bearing."
+  },
+  {
+   "criteria": [
+    "7A.3"
+   ],
+   "wedo": "WE7A-3",
+   "youtry": [
+    "WS7A-4b",
+    "WS7A-2c"
+   ],
+   "note": "Multi-leg hike: cancel opposite legs, then Pythagoras + bearing."
+  },
+  {
+   "criteria": [
+    "7A.4"
+   ],
+   "wedo": "WE7A-4",
+   "youtry": [
+    "WS7A-5",
+    "7A-SQ7"
+   ],
+   "note": "Components with cos/sin of launch angle."
+  },
+  {
+   "criteria": [
+    "7A.5"
+   ],
+   "wedo": "WE7A-5",
+   "youtry": [
+    "7A-SQ10",
+    "7A-SQ5"
+   ],
+   "note": "Change in velocity on rebound, sign convention."
+  }
+ ],
+ "skills": [
+  {
+   "id": "7A-SK1",
+   "heading": "Using direction in an equation",
+   "text": "In any question that involves a vector quantity, the direction of the vector must be considered and incorporated into your equation. Direction can be incorporated into an equation with a positive and negative sign representing different directions. This means that whenever you encounter a problem involving vectors, one of the first things you must do is determine which direction will be positive and which direction will be negative. Once you have made this decision, write it down on the page as this will allow you to keep track of the meaning of a negative or positive answer. For example:\nQuestion\nA jet plane is moving through the air with a velocity of 150 $\\text{m s}^{-1}$ south when it encounters a headwind blowing 25 $\\text{m s}^{-1}$ northerly (a northerly wind blows from the north towards the south). What is the velocity of the jet plane relative to the ground?\nSolution\nDetermine which direction is positive.\npositive direction = south\nAdd the vectors:\n$v = 150 + (-25)$\n$= 125$ $\\text{m s}^{-1}$ south\nNote that the positive answer gave the direction south.\nWe could also let south be negative and the solution would still be the same:\n$v = -150 + 25$\n$= -125$ $\\text{m s}^{-1}$\nThe negative indicates the direction: south.",
+   "src": {
+    "file": "Physics12_Ch07.pdf",
+    "page": 11
+   }
+  }
+ ],
+ "pracs": [
+  {
+   "id": "P7A-1",
+   "title": "Practical 7A–1 Drawing vectors",
+   "file": "7A Practical 7A–1 Drawing vectors.docx",
+   "aim": "To give a practical understanding of vectors, including components of vectors and vector addition."
+  }
+ ],
+ "notes": "No worked example for 7A.1/7A.2 (vectors vs scalars): WS7A-1 used as an adapted We do. Friction (7A-E5) is not linked to any checklist criterion but is in the study design dot point. Suggested responses for 7A-SQ11b are incomplete in the source (the value of h and the extra distance were equation objects that did not render): answer partly null. Check-in 7A-CI1.2 answer is verbatim from Suggested responses but contains an error ('a scalar only has a direction'; should be magnitude). Worksheet 7A–1 Q2 parts are mis-lettered (a, i, j) in the docx; indexed as a, b, c to match the answers. Answer images for diagram answers are in answer_img."
+}
