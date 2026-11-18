@@ -1,3 +1,3 @@
-# 11PHY planner 2027
+# Physics planner
 
-Year 11 VCE Physics planner for 2027 (Mr. Catalano).
+Physics planner for Years 7 to 12 (Mr. Catalano). Live site: https://roccatalano.github.io/Physics/

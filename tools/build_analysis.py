@@ -64,8 +64,8 @@ h1,h2,h3{font-family:'Space Grotesk','Segoe UI',sans-serif;letter-spacing:-.01em
 table{width:100%;border-collapse:collapse;font-size:14px;background:#141b42;border-radius:14px;overflow:hidden}th{background:#1f2860;color:#7dd3fc;text-align:left;padding:10px;font-size:12px;text-transform:uppercase;letter-spacing:.06em}td{padding:8px 10px;border-top:1px solid #222b5e;vertical-align:top}td.n{text-align:center}.chrow td{background:#1a2150;padding:10px}.none{color:#fb7185}
 .flag{background:#1a2150;border-left:6px solid #fb7185;border-radius:14px;padding:14px 18px;margin-bottom:10px}.flag p{font-size:14.5px;color:#cbd5e1;margin-top:4px}
 .src{font-size:13px;color:#94a3c8;margin-top:40px}nav{margin-bottom:26px;font-size:14px}"""
-page=f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>11PHY · How the Cambridge resources are meant to be used</title><style>{CSS}</style></head><body><div class="wrap">
-<nav><a href="./">11PHY Planner</a> › Cambridge resources</nav>
+page=f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Physics · How the Cambridge resources are meant to be used</title><style>{CSS}</style></head><body><div class="wrap">
+<nav><a href="./">Physics Planner</a> › Cambridge resources</nav>
 <div class="tags"><span style="--k:#7dd3fc">Unit 1</span><span style="--k:#fbb040">Cambridge VCE Physics 1&amp;2</span><span style="--k:#f472b6">Analysis</span></div>
 <h1>How the Cambridge resources are meant to be used</h1>
 <p class="lead">What Cambridge provides for Unit 1, how its pieces fit together, what Cambridge says each one is for, and what that means for planning. Based on the textbook's "How to use this resource" overview, the six Unit 1 chapter PDFs and every file in the Cambridge Resources folder on the shared drive.</p>
