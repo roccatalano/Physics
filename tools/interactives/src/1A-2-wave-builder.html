@@ -1,0 +1,59 @@
+<!--{"id":"1A-2-wave-builder","section":"1A","title":"Wave builder: v = fλ","criteria":["1A.4","1A.6"],
+"blurb":"Set amplitude, frequency and speed. Read A and λ off the distance graph, T off the time graph, and check λ = v/f and T = 1/f live.",
+"source":"Cambridge VCE Physics Units 1&2, 1A The properties of waves, Formula 1A–1 (p. 9).","colour":"#fbb040"}-->
+<div class="ctx">A wave travels along a long rope. You control <b>the source</b> (how big and how often the end is shaken) and <b>the rope</b> (how fast waves travel along it).</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc;gap:6px"><h3>Displacement–distance: a snapshot of the whole rope</h3><svg id="dx" viewBox="0 0 860 200"></svg>
+  <h3 style="margin-top:4px;color:#f472b6">Displacement–time: the particle at P (x = 2 m)</h3><svg id="dt" viewBox="0 0 860 200"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Source and rope</h3>
+   <div class="sl"><span class="nm">Amplitude</span><input type="range" id="A" min="0.1" max="0.5" step="0.05" value="0.3"><span class="v" id="Av"></span></div>
+   <div class="sl"><span class="nm">Frequency</span><input type="range" id="f" min="0.25" max="2" step="0.05" value="0.5"><span class="v" id="fv"></span></div>
+   <div class="sl"><span class="nm">Wave speed</span><input type="range" id="v" min="0.5" max="4" step="0.1" value="1.5"><span class="v" id="vv"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80"><h3>Calculate</h3>
+   <div>$\lambda = \dfrac{v}{f}$ <span class="kr">=</span> <span class="kr" id="lc"></span></div>
+   <div style="margin-top:6px">$T = \dfrac{1}{f}$ <span class="kr">=</span> <span class="kr" id="tc"></span></div>
+  </div>
+  <div class="rule">Measure <b>λ</b> and <b>T</b> crest to crest. Pause (space) to measure.</div>
+ </div>
+</div>
+<script>
+const P=2,XM=8,TM=8,GX=60,GW=730,GY=100,GA=80,AMAX=.5;
+let A=.3,f=.5,v=1.5;
+function axes(svg,max,lab,unit,col){el('line',{x1:GX,x2:GX+GW,y1:GY,y2:GY,stroke:'#36418a','stroke-width':2},svg);el('line',{x1:GX,x2:GX,y1:GY-GA-10,y2:GY+GA+10,stroke:'#36418a','stroke-width':2},svg);
+ for(let i=0;i<=max;i++){const x=GX+i*GW/max;el('line',{x1:x,x2:x,y1:GY-4,y2:GY+4,stroke:'#5b6690','stroke-width':2},svg);txt(svg,x,GY+GA+26,i,{fill:'#5b6690','font-size':14,'text-anchor':'middle'})}
+ txt(svg,GX+GW+6,GY+GA+26,unit,{fill:'#5b6690','font-size':14});[[.5,'0.5'],[-.5,'−0.5']].forEach(([a,s])=>{const y=GY-a/AMAX*GA;el('line',{x1:GX-4,x2:GX+GW,y1:y,y2:y,stroke:'#232c63','stroke-dasharray':'3 6'},svg);txt(svg,GX-8,y+5,s,{fill:'#5b6690','font-size':13,'text-anchor':'end'})});
+ txt(svg,GX-8,GY-GA-14,'y (m)',{fill:'#5b6690','font-size':13,'text-anchor':'middle'});return el('path',{fill:'none',stroke:col,'stroke-width':4},svg)}
+const dx=document.getElementById('dx'),dt=document.getElementById('dt');
+const pdx=axes(dx,XM,'x','x (m)','#7dd3fc'),pdt=axes(dt,TM,'t','t (s)','#f472b6');
+const pP=el('circle',{r:9,fill:'#f472b6'},dx);const pl=txt(dx,0,0,'P',{fill:'#f472b6','font-size':17,'font-weight':700});
+function brace(svg,c){const g=el('g',{},svg);const l=el('line',{stroke:c,'stroke-width':3},g),a=el('line',{stroke:c,'stroke-width':3},g),b=el('line',{stroke:c,'stroke-width':3},g),t=txt(g,0,0,'',{fill:c,'font-size':17,'font-weight':700,'text-anchor':'middle'});
+ return(x1,x2,y,s)=>{g.style.display=x1==null?'none':'';if(x1==null)return;[[l,x1,x2,y,y],[a,x1,x1,y-8,y+8],[b,x2,x2,y-8,y+8]].forEach(([e,p,q,r,s2])=>{e.setAttribute('x1',p);e.setAttribute('x2',q);e.setAttribute('y1',r);e.setAttribute('y2',s2)});t.setAttribute('x',(x1+x2)/2);t.setAttribute('y',y-10);t.textContent=s}}
+const bL=brace(dx,'#fbb040'),bA=brace(dx,'#4ade80'),bT=brace(dt,'#fbb040');
+const cur=el('line',{stroke:'#fbb040','stroke-width':2,'stroke-dasharray':'5 5'},dt),dot=el('circle',{r:8,fill:'#f472b6'},dt);
+const note=txt(dx,GX+GW,GY-GA-14,'',{fill:'#fbb040','font-size':14,'text-anchor':'end'}),noteT=txt(dt,GX+GW,GY-GA-14,'',{fill:'#fbb040','font-size':14,'text-anchor':'end'});
+const upd=()=>{const lam=v/f,T=1/f;document.getElementById('lc').innerHTML=`<span style="display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1.1"><span>${f2(v,1)}</span><span style="border-top:2px solid;padding-top:2px">${f2(f)}</span></span> = <b class="hi">${sig(lam)} m</b>`;
+ document.getElementById('tc').innerHTML=`<span style="display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1.1"><span>1</span><span style="border-top:2px solid;padding-top:2px">${f2(f)}</span></span> = <b class="hi">${sig(T)} s</b>`};
+slider('A',x=>f2(x)+' m',x=>{A=x;upd()});slider('f',x=>f2(x)+' Hz',x=>{f=x;upd()});slider('v',x=>f2(x,1)+' m/s',x=>{v=x;upd()});
+const sx=x=>GX+x*GW/XM,st=t=>GX+t*GW/TM,sy=y=>GY-y/AMAX*GA;
+IX.anims.push(t=>{const lam=v/f,T=1/f,y=(x,tt)=>A*Math.sin(2*Math.PI*(f*tt-x/lam));
+ let d='';for(let i=0;i<=400;i++){const x=i*XM/400;d+=(i?'L':'M')+sx(x).toFixed(1)+','+sy(y(x,t)).toFixed(1)}pdx.setAttribute('d',d);
+ pP.setAttribute('cx',sx(P));pP.setAttribute('cy',sy(y(P,t)));pl.setAttribute('x',sx(P)-28);pl.setAttribute('y',sy(y(P,t))+6);
+ // crests on the snapshot: f t - x/lam = 1/4 + n
+ const c0=lam*(f*t-.25);let n=Math.ceil((c0-XM)/lam);let cs=[];for(let k=0;k<40;k++){const x=c0-(n+k)*lam;if(x<0)break;if(x<=XM)cs.unshift(x)}cs=cs.filter(x=>x>=.15).sort((a,b)=>a-b);
+ if(cs.length>=2){bL(sx(cs[0]),sx(cs[1]),sy(A)-22,'λ = '+sig(lam)+' m');note.textContent=''}else{bL(null);note.textContent='λ = '+sig(lam)+' m is longer than this window'}
+ const ax=cs.length?cs[0]:null;if(ax!=null){bA(null);}
+ // amplitude marker at the first crest
+ if(cs.length){const x=sx(cs[0])+0;bA(null)}
+ const tr=Math.max(0,t-TM);let e='';for(let i=0;i<=500;i++){const tt=i*TM/500;e+=(i?'L':'M')+st(tt).toFixed(1)+','+sy(y(P,tt+tr)).toFixed(1)}pdt.setAttribute('d',e);
+ const tc=Math.min(t,TM);cur.setAttribute('x1',st(tc));cur.setAttribute('x2',st(tc));cur.setAttribute('y1',GY-GA-6);cur.setAttribute('y2',GY+GA+6);dot.setAttribute('cx',st(tc));dot.setAttribute('cy',sy(y(P,tc+tr)));
+ // crests in time at P: f tt - P/lam = 1/4 + n  -> tt = (1/4 + n + P/lam)/f - tr
+ let ts=[];for(let k=-2;k<40;k++){const tt=(.25+k+P/lam)/f-tr;if(tt>.1&&tt<=TM)ts.push(tt)}
+ if(ts.length>=2){bT(st(ts[0]),st(ts[1]),sy(A)-22,'T = '+sig(T)+' s');noteT.textContent=''}else{bT(null);noteT.textContent='T = '+sig(T)+' s is longer than this window'}
+ // amplitude: drawn on the snapshot, from rest line to the first crest
+ if(cs.length){const x=sx(cs[0])-0;bAv(x)}else bAv(null);
+});
+const ag=el('g',{},dx),al=el('line',{stroke:'#4ade80','stroke-width':3},ag),at=txt(ag,0,0,'',{fill:'#4ade80','font-size':17,'font-weight':700});
+function bAv(x){ag.style.display=x==null?'none':'';if(x==null)return;const X=x-0;al.setAttribute('x1',X);al.setAttribute('x2',X);al.setAttribute('y1',GY);al.setAttribute('y2',sy(A));at.setAttribute('x',X+8);at.setAttribute('y',(GY+sy(A))/2+6);at.textContent='A = '+f2(A)+' m'}
+</script>

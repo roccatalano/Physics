@@ -71,12 +71,15 @@ for un in (1,2):
       C['chapter']=dict(C['chapter']);C['files']=fl(ch['files']);C['pearson']=PM['ch'].get(n,[]);A['chapters'].append(C)
     U['aos'].append(A)
   out['units'].append(U)
+IXF=os.path.join(H,'..','interactives','interactives.json');IXS=json.load(open(IXF)) if os.path.exists(IXF) else []
 LI=json.load(open(os.path.join(H,'lesson_index.json'))) if os.path.exists(os.path.join(H,'lesson_index.json')) else {}
 for u in out['units']:
   for a in u['aos']:
     for c in a['chapters']:
       for s_ in c['sections']:
         if s_['code'] in LI:s_['lesson']=LI[s_['code']]
+        ix=[{'id':m['id'],'title':m['title']} for m in IXS if m['section']==s_['code']]
+        if ix:s_['interactives']=ix
 os.makedirs(os.path.join(H,'..','data'),exist_ok=True)
 json.dump(out,open(os.path.join(H,'..','data','year11.json'),'w'),indent=1,ensure_ascii=False)
 print('chapters',sum(len(a['chapters']) for u in out['units'] for a in u['aos']),'sections',sum(len(c['sections']) for u in out['units'] for a in u['aos'] for c in a['chapters']))

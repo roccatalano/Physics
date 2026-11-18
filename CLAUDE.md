@@ -60,6 +60,12 @@ Do now (3 retrieval questions: last lesson / last week / last term, from Cambrid
 - Private index of all Cambridge Units 1&2 lesson material (Ch 1 to 9): `VCE Physics Units 1 2 [2027]\Yr 11 Cambridge Index\` (format in its `SCHEMA.md`, errors and gaps in its `README.md`). Verbatim text, answers, tags, We do/You try plans, exit candidates, 652 images. Never copy its text into this public repo.
 - `tools/build_lesson_index.py <index folder>` writes `tools/lesson_index.json` (IDs, headings, counts only); `build_year11.py` attaches it to section cards as a green "Lesson resources (index)" group. `SHOW` in that script lists which sections show it (1A so far).
 
+## Interactives (Rocco, 18 Nov 2026)
+- One standalone, offline HTML per interactive in `interactives/` (gallery `interactives/index.html`, list `interactives/interactives.json`), built by `python3 tools/interactives/build.py` from `tools/interactives/src/<id>.html` (JSON header + body + script), shared look `ix.css` / helpers `ix.js`, fonts and KaTeX embedded from `tools/interactives/vendor/` ($...$ pre-rendered with node). 1280×720, scales to fit; `?bare` hides title/context/footer for embedding in a slide iframe. Space = pause, F = full screen, slow-motion button.
+- House style: the physics deck look (navy, moving background waves, Space Grotesk + Inter, coloured-edge cards) + 12MAG interactive rules: a context line, controls (sliders + preset buttons), live readouts, a rule box, footer = source + "Interactive by teacher". Must be physically correct at the slider extremes.
+- Section cards list their interactives (`build_year11.py` reads interactives.json). Copies go to `Desktop\2027 Planning\Year 11 Physics\Slides\interactives\`.
+- Planned list per section (agreed 18 Nov): see HANDOFF.md. Done: 1A (wave types, wave builder, source and medium).
+
 ## Planner
 - One lesson card per lesson. Show the Cambridge section, key knowledge, learning goals, the lesson sequence with minutes, every Cambridge resource with its file location, prac details and CFAT/SAC markers.
 - Include an assessment-plan view (outcomes, SACs, CFATs, exams).

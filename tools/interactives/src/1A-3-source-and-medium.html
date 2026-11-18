@@ -1,0 +1,55 @@
+<!--{"id":"1A-3-source-and-medium","section":"1A","title":"The source sets f, the medium sets v","criteria":["1A.5"],
+"blurb":"A wave crosses from one rope into another. Frequency stays the same, speed changes, so the wavelength changes.",
+"source":"Cambridge VCE Physics Units 1&2, 1A The properties of waves (p. 9). Reflection at the join is not shown.","colour":"#f472b6"}-->
+<div class="ctx">A wave travels along a light rope that is joined to a second rope. The hand shaking the end is <b>the source</b>. Each rope is <b>a medium</b>. What changes when the wave crosses the join?</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc"><h3>Two ropes joined at x = 5 m</h3><svg id="sv" viewBox="0 0 860 400"></svg><div class="rule" style="font-size:17px;padding:8px 14px">Crossing into a new medium, <b>the frequency stays the same</b> (the source sets it) and <b>the speed changes</b> (the medium sets it), so <b>the wavelength changes</b>: $\lambda = \dfrac{v}{f}$.</div>
+</div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>The source</h3>
+   <div class="sl"><span class="nm">Frequency</span><input type="range" id="f" min="0.2" max="1" step="0.05" value="0.6"><span class="v" id="fv"></span></div>
+  </div>
+  <div class="card ctl" style="--c:#f472b6"><h3>The second rope</h3>
+   <div class="btns"><button class="m2 on" data-v="1">Heavier (slower)</button><button class="m2" data-v="2">Same rope</button><button class="m2" data-v="4">Lighter (faster)</button></div>
+   <div class="btns"><button id="go">↻ Send a new wave</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px"><h3>Compare</h3><div id="cmp"></div></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),X0=40,XW=790,XM=10,B=5,V1=2,AM=.5,CY=160,SC=110;
+let f=.6,v2=1,t0=0;
+const sx=x=>X0+x*XW/XM;
+el('rect',{x:sx(B),y:20,width:sx(XM)-sx(B),height:300,fill:'#f472b6','fill-opacity':.06},sv);
+el('line',{x1:sx(B),x2:sx(B),y1:20,y2:320,stroke:'#f472b6','stroke-dasharray':'6 6','stroke-width':2},sv);
+txt(sv,sx(B/2),306,'Rope 1',{fill:'#7dd3fc','text-anchor':'middle','font-size':20,'font-weight':700});const r2t=txt(sv,sx(B+B/2),306,'Rope 2',{fill:'#f472b6','text-anchor':'middle','font-size':20,'font-weight':700});
+el('line',{x1:X0,x2:sx(XM),y1:CY,y2:CY,stroke:'#36418a','stroke-dasharray':'6 6','stroke-width':2},sv);
+for(let i=0;i<=XM;i++)txt(sv,sx(i),340,i,{fill:'#5b6690','font-size':14,'text-anchor':'middle'});txt(sv,sx(XM),362,'x (m)',{fill:'#5b6690','font-size':14,'text-anchor':'middle'});
+const p1=el('path',{fill:'none',stroke:'#7dd3fc','stroke-width':5},sv),p2=el('path',{fill:'none',stroke:'#f472b6','stroke-width':8},sv);
+const hand=el('rect',{x:X0-18,width:22,height:34,rx:8,fill:'#fbb040'},sv);
+const QA=2.5,QB=7.5,dA=el('circle',{r:10,fill:'#fbb040'},sv),dB=el('circle',{r:10,fill:'#fbb040'},sv);
+const cA=txt(sv,sx(QA),392,'',{fill:'#fbb040','text-anchor':'middle','font-size':16}),cB=txt(sv,sx(QB),392,'',{fill:'#fbb040','text-anchor':'middle','font-size':16});
+function brace(c){const g=el('g',{},sv);const l=el('line',{stroke:c,'stroke-width':3},g),a=el('line',{stroke:c,'stroke-width':3},g),b=el('line',{stroke:c,'stroke-width':3},g),t=txt(g,0,0,'',{fill:c,'font-size':17,'font-weight':700,'text-anchor':'middle'});
+ return(x1,x2,y,s)=>{g.style.display=x1==null?'none':'';if(x1==null)return;[[l,x1,x2,y,y],[a,x1,x1,y-8,y+8],[b,x2,x2,y-8,y+8]].forEach(([e,p,q,r,s2])=>{e.setAttribute('x1',p);e.setAttribute('x2',q);e.setAttribute('y1',r);e.setAttribute('y2',s2)});t.setAttribute('x',(x1+x2)/2);t.setAttribute('y',y-10);t.textContent=s}}
+const b1=brace('#7dd3fc'),b2=brace('#f472b6');
+const tau=x=>x<=B?x/V1:B/V1+(x-B)/v2;
+const restart=()=>{t0=IX.t};
+function cmp(){const l1=V1/f,l2=v2/f;document.getElementById('cmp').innerHTML=
+ `<table style="width:100%;border-collapse:collapse"><tr style="color:#94a3c8;font-size:15px"><td></td><td>Rope 1</td><td>Rope 2</td></tr>
+ <tr><td><span class="k">f</span></td><td>${f2(f)} Hz</td><td class="${''}">${f2(f)} Hz</td></tr>
+ <tr><td><span class="k">v</span></td><td>${f2(V1,1)} m/s</td><td class="pk"><b>${f2(v2,1)} m/s</b></td></tr>
+ <tr><td><span class="k">λ</span></td><td>${sig(l1)} m</td><td class="pk"><b>${sig(l2)} m</b></td></tr></table>`;
+ r2t.textContent=v2<V1?'Rope 2 (slower)':v2>V1?'Rope 2 (faster)':'Rope 2 (same)'}
+slider('f',x=>f2(x)+' Hz',x=>{f=x;cmp();restart()});
+group('.m2',v=>{v2=+v;cmp();restart()});document.getElementById('go').onclick=restart;cmp();
+IX.anims.push(T=>{const t=T-t0,y=x=>{const d=t-tau(x);return d>0?AM*Math.sin(2*Math.PI*f*d):0},Y=x=>CY-SC*y(x)/AM*.9;
+ let a='',b='';for(let i=0;i<=500;i++){const x=i*XM/500,s=sx(x).toFixed(1)+','+Y(x).toFixed(1);if(x<=B)a+=(a?'L':'M')+s;if(x>=B)b+=(b?'L':'M')+s}p1.setAttribute('d',a);p2.setAttribute('d',b);
+ hand.setAttribute('y',Y(0)-17);dA.setAttribute('cx',sx(QA));dA.setAttribute('cy',Y(QA));dB.setAttribute('cx',sx(QB));dB.setAttribute('cy',Y(QB));
+ const nA=Math.max(0,Math.floor(f*(t-tau(QA)))),nB=Math.max(0,Math.floor(f*(t-tau(QB))));cA.textContent=`${nA} vibration${nA===1?'':'s'}`;cB.textContent=`${nB} vibration${nB===1?'':'s'}`;
+ // wavelength braces between neighbouring crests that have arrived: crest where f(t - tau(x)) = 1/4 + n
+ const crests=(lo,hi)=>{const r=[];for(let i=0;i<=2000;i++){const x=lo+(hi-lo)*i/2000,d=t-tau(x);if(d<=0)continue;const ph=f*d-.25,n=Math.round(ph);if(Math.abs(ph-n)<.004&&n>=0&&(!r.length||x-r[r.length-1]>.2))r.push(x)}return r};
+ const c1=crests(0,B),c2=crests(B,XM);
+ if(c1.length>=2){const k=c1.length-2;b1(sx(c1[k]),sx(c1[k+1]),CY-SC-24,'λ = '+sig(V1/f)+' m')}else b1(null);
+ if(c2.length>=2)b2(sx(c2[0]),sx(c2[1]),CY-SC-24,'λ = '+sig(v2/f)+' m');else b2(null);
+});
+</script>

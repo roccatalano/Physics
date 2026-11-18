@@ -732,7 +732,21 @@
            "img/1A_fig1A-3.png"
           ],
           "missingAnswers": []
-         }
+         },
+         "interactives": [
+          {
+           "id": "1A-1-wave-types",
+           "title": "Transverse and longitudinal waves"
+          },
+          {
+           "id": "1A-2-wave-builder",
+           "title": "Wave builder: v = fλ"
+          },
+          {
+           "id": "1A-3-source-and-medium",
+           "title": "The source sets f, the medium sets v"
+          }
+         ]
         },
         {
          "pearson": [

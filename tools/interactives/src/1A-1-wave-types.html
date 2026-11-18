@@ -1,0 +1,67 @@
+<!--{"id":"1A-1-wave-types","section":"1A","title":"Transverse and longitudinal waves","criteria":["1A.1","1A.2","1A.3"],
+"blurb":"Slinky-style waves side by side. Follow one particle: it only vibrates, the energy travels. Examples sort into each type.",
+"source":"Cambridge VCE Physics Units 1&2, 1A The properties of waves (pp. 7–9).","colour":"#7dd3fc"}-->
+<div class="ctx">A slinky spring is shaken at a steady rate. <b>Watch the orange coil.</b> Does it travel along the spring with the wave, or does it stay where it is?</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc"><h3 id="ptitle">Transverse wave</h3><svg id="sv" viewBox="0 0 860 380"></svg><div class="rule" id="rule" style="font-size:17px;padding:8px 14px"></div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Wave type</h3>
+   <div class="btns"><button class="md on" data-v="t">Transverse</button><button class="md" data-v="l">Longitudinal</button><button class="md" data-v="b">Both</button></div>
+   <div class="btns"><button id="fol">Follow a particle</button><button id="lab">Labels</button></div>
+  </div>
+  <div class="card" style="--c:#4ade80"><h3>Examples</h3>
+   <div class="btns"><button class="ex" data-v="sound">Sound</button><button class="ex" data-v="light">Light</button><button class="ex" data-v="p">Earthquake P wave</button><button class="ex" data-v="s">Earthquake S wave</button></div>
+   <div class="out" id="exo" style="font-size:18px;margin-top:10px;min-height:52px;color:#cfd7f5">Tap an example to see which type it is.</div>
+  </div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),W=860,H=420,X0=40,XW=780,LAM=260,F=.45,A=70,AL=24,N=80;
+let mode='t',follow=false,labels=false;
+const g={t:el('g',{},sv),l:el('g',{},sv)};
+function arrowDef(id,c){const m=el('marker',{id,viewBox:'0 0 10 10',refX:5,refY:5,markerWidth:5,markerHeight:5,orient:'auto-start-reverse'},el('defs',{},sv));el('path',{d:'M0 0L10 5L0 10z',fill:c},m)}
+arrowDef('ag','#4ade80');arrowDef('ao','#fbb040');
+// transverse
+const T={g:g.t};T.en=el('line',{x1:560,x2:800,stroke:'#4ade80','stroke-width':5,'marker-end':'url(#ag)'},T.g);T.ent=txt(T.g,560,0,'energy travels',{fill:'#4ade80'});
+T.rest=el('line',{x1:X0,x2:X0+XW,stroke:'#36418a','stroke-dasharray':'6 6','stroke-width':2},T.g);
+T.path=el('path',{fill:'none',stroke:'#7dd3fc','stroke-width':4},T.g);
+T.dots=[];for(let i=0;i<=26;i++)T.dots.push(el('circle',{r:i===13?11:6,fill:i===13?'#fbb040':'#eef2ff'},T.g));
+T.va=el('line',{stroke:'#fbb040','stroke-width':4,'marker-start':'url(#ao)','marker-end':'url(#ao)'},T.g);T.vt=txt(T.g,0,0,'vibrates up and down',{fill:'#fbb040'});
+T.lab=[0,1,2,3,4,5].map(i=>txt(T.g,0,0,i%2?'trough':'crest',{fill:i%2?'#f472b6':'#7dd3fc','text-anchor':'middle'}));
+// longitudinal
+const L={g:g.l};L.en=el('line',{x1:560,x2:800,stroke:'#4ade80','stroke-width':5,'marker-end':'url(#ag)'},L.g);L.ent=txt(L.g,560,0,'energy travels',{fill:'#4ade80'});
+L.ls=[];for(let i=0;i<N;i++)L.ls.push(el('line',{stroke:i===40?'#fbb040':'#eef2ff','stroke-width':i===40?6:2.5},L.g));
+L.home=el('line',{stroke:'#fbb040','stroke-dasharray':'4 5','stroke-width':2,opacity:.8},L.g);
+L.ha=el('line',{stroke:'#fbb040','stroke-width':4,'marker-start':'url(#ao)','marker-end':'url(#ao)'},L.g);L.ht=txt(L.g,0,0,'vibrates back and forth',{fill:'#fbb040'});
+L.lab=[0,1,2,3,4,5].map(i=>txt(L.g,0,0,i%2?'rarefaction':'compression',{fill:i%2?'#f472b6':'#7dd3fc','text-anchor':'middle'}));
+function layout(){const both=mode==='b';
+ g.t.style.display=mode==='l'?'none':'';g.l.style.display=mode==='t'?'none':'';
+ T.cy=both?110:200;T.a=both?50:A;L.y1=both?235:130;L.y2=both?330:280;
+ T.en.setAttribute('y1',both?20:40);T.en.setAttribute('y2',both?20:40);T.ent.setAttribute('y',both?14:30);T.ent.style.display=both?'none':'';
+ L.en.setAttribute('y1',both?245:90);L.en.setAttribute('y2',both?245:90);L.ent.setAttribute('y',both?239:80);L.ent.style.display=both?'none':'';
+ if(both){T.en.style.display='none';L.en.setAttribute('y1',20);L.en.setAttribute('y2',20);L.en.setAttribute('x1',560);L.en.setAttribute('x2',800);L.ent.style.display='';L.ent.setAttribute('y',14)}else{T.en.style.display=''}
+ T.rest.setAttribute('y1',T.cy);T.rest.setAttribute('y2',T.cy);
+ document.getElementById('ptitle').textContent={t:'Transverse wave',l:'Longitudinal wave',b:'Transverse (top) and longitudinal (bottom)'}[mode];
+ document.getElementById('rule').innerHTML=mode==='l'?'<b>Longitudinal:</b> the particles vibrate <b>parallel</b> to the direction the energy travels. They bunch up (compressions) and spread out (rarefactions).':
+  mode==='t'?'<b>Transverse:</b> the particles vibrate <b>at right angles</b> to the direction the energy travels. High points are crests, low points are troughs.':
+  'Both waves carry energy from left to right. <b>No particle travels along with the wave:</b> each one only vibrates about its rest position.'}
+group('.md',v=>{mode=v;layout()});toggle('fol',v=>follow=v,false);toggle('lab',v=>labels=v,false);layout();
+const EX={sound:['l','<b class="cy">Longitudinal.</b> Air particles vibrate back and forth along the direction the sound travels.'],
+ light:['t','<b class="cy">Transverse.</b> Electric and magnetic fields vibrate at right angles to the direction of travel. No particles needed.'],
+ p:['l','<b class="cy">Longitudinal.</b> P (primary) waves push and pull the rock along their direction of travel.'],
+ s:['t','<b class="cy">Transverse.</b> S (secondary) waves shake the rock side to side, across their direction of travel.'],
+ rope:['t','<b class="cy">Transverse.</b> Each bit of rope moves up and down while the wave moves along the rope.']};
+group('.ex',v=>{mode=EX[v][0];document.querySelectorAll('.md').forEach(b=>b.classList.toggle('on',b.dataset.v===mode));layout();document.getElementById('exo').innerHTML=EX[v][1]});
+IX.anims.push(t=>{const ph=F*t;
+ // transverse
+ const y=x=>T.cy-T.a*Math.sin(2*Math.PI*(x/LAM-ph));let d='';for(let x=0;x<=XW;x+=5)d+=(x?'L':'M')+(X0+x)+','+y(x).toFixed(1);T.path.setAttribute('d',d);
+ T.dots.forEach((c,i)=>{const x=i*30;c.setAttribute('cx',X0+x);c.setAttribute('cy',y(x))});
+ const fx=13*30;[T.va,T.vt].forEach(e=>e.style.display=follow?'':'none');T.va.setAttribute('x1',X0+fx+30);T.va.setAttribute('x2',X0+fx+30);T.va.setAttribute('y1',T.cy-T.a);T.va.setAttribute('y2',T.cy+T.a);T.vt.setAttribute('x',X0+fx+42);T.vt.setAttribute('y',T.cy+6);
+ T.lab.forEach((e,i)=>{const n=Math.floor(i/2),off=i%2?.75:.25;let u=((ph+off)%1+1)%1;const x=(u+n)*LAM;e.style.display=labels&&x<XW-30&&x>20&&!(follow&&Math.abs(x-fx-120)<170)?'':'none';e.setAttribute('x',X0+x);e.setAttribute('y',i%2?T.cy+T.a+28:T.cy-T.a-14)});
+ // longitudinal
+ const dx=XW/(N-1);L.ls.forEach((l,i)=>{const x0=i*dx,x=X0+x0+AL*Math.sin(2*Math.PI*(x0/LAM-ph));l.setAttribute('x1',x);l.setAttribute('x2',x);l.setAttribute('y1',L.y1);l.setAttribute('y2',L.y2)});
+ const hx=X0+40*dx;[L.home,L.ha,L.ht].forEach(e=>e.style.display=follow?'':'none');L.home.setAttribute('x1',hx);L.home.setAttribute('x2',hx);L.home.setAttribute('y1',L.y1-14);L.home.setAttribute('y2',L.y2+14);
+ L.ha.setAttribute('x1',hx-AL);L.ha.setAttribute('x2',hx+AL);L.ha.setAttribute('y1',L.y2+22);L.ha.setAttribute('y2',L.y2+22);L.ht.setAttribute('x',hx+AL+14);L.ht.setAttribute('y',L.y2+28);
+ L.lab.forEach((e,i)=>{const n=Math.floor(i/2),off=i%2?0:.5;let u=((ph+off)%1+1)%1;const x=(u+n)*LAM;e.style.display=labels&&x<XW-50&&x>40&&!(follow&&i%2&&Math.abs(X0+x-hx-120)<190)?'':'none';e.setAttribute('x',X0+x);e.setAttribute('y',i%2?L.y2+28:L.y1-12)});
+});
+</script>

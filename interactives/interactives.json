@@ -1,0 +1,38 @@
+[
+ {
+  "id": "1A-1-wave-types",
+  "section": "1A",
+  "title": "Transverse and longitudinal waves",
+  "criteria": [
+   "1A.1",
+   "1A.2",
+   "1A.3"
+  ],
+  "blurb": "Slinky-style waves side by side. Follow one particle: it only vibrates, the energy travels. Examples sort into each type.",
+  "source": "Cambridge VCE Physics Units 1&2, 1A The properties of waves (pp. 7–9).",
+  "colour": "#7dd3fc"
+ },
+ {
+  "id": "1A-2-wave-builder",
+  "section": "1A",
+  "title": "Wave builder: v = fλ",
+  "criteria": [
+   "1A.4",
+   "1A.6"
+  ],
+  "blurb": "Set amplitude, frequency and speed. Read A and λ off the distance graph, T off the time graph, and check λ = v/f and T = 1/f live.",
+  "source": "Cambridge VCE Physics Units 1&2, 1A The properties of waves, Formula 1A–1 (p. 9).",
+  "colour": "#fbb040"
+ },
+ {
+  "id": "1A-3-source-and-medium",
+  "section": "1A",
+  "title": "The source sets f, the medium sets v",
+  "criteria": [
+   "1A.5"
+  ],
+  "blurb": "A wave crosses from one rope into another. Frequency stays the same, speed changes, so the wavelength changes.",
+  "source": "Cambridge VCE Physics Units 1&2, 1A The properties of waves (p. 9). Reflection at the join is not shown.",
+  "colour": "#f472b6"
+ }
+]
