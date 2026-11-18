@@ -1,0 +1,60 @@
+<!--{"id":"6B-1-power-circuit","section":"6B","title":"Appliances in parallel on one circuit","criteria":["6B.1","6B.2","6B.3","6B.4"],
+"blurb":"Switch on appliances on a 230 V power circuit. Each gets the full 230 V and draws I = P/V. The currents add up in the active wire: too much and the circuit breaker trips.",
+"source":"Cambridge VCE Physics Units 1&2, 6B Electricity at home (pp. 25–31). Modelled as DC at 230 V; wiring resistance ignored.","colour":"#fbb040"}-->
+<div class="ctx">Kitchen power points are wired <b>in parallel</b>; the circuit breaker is <b>in series</b> in the active. <b>What happens as you switch more on?</b></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc"><h3>Kitchen power circuit (230 V)</h3><svg id="sv" viewBox="0 0 860 420"></svg><div class="rule" style="font-size:17px;padding:8px 14px">Each appliance gets the <b>full 230 V</b> and draws $I = \dfrac{P}{V}$. The branch currents <b>add up</b> in the active wire, so the breaker trips if the total passes its rating.</div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Switch on</h3>
+   <div class="btns" id="apps"></div>
+  </div>
+  <div class="card ctl" style="--c:#f472b6"><h3>Circuit breaker rating</h3>
+   <div class="btns"><button class="cb" data-v="10">10 A</button><button class="cb on" data-v="16">16 A</button><button class="cb" data-v="20">20 A</button><button id="rs">Reset</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px"><h3>Total in the active wire</h3>
+   <div><span class="k">I</span> <span class="kr">=</span> <span class="kr" id="sum"></span></div>
+   <div><span class="big" id="tot"></span> <span id="st" style="font-weight:700"></span></div>
+  </div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv');
+const A=[['Kettle',2400],['Toaster',1000],['Heater',2000],['Microwave',1100],['TV',80],['Laptop',65]];
+const on=A.map((a,i)=>i===4);let rating=16,tripped=false;
+const ap=document.getElementById('apps');A.forEach(([n,P],i)=>{const b=document.createElement('button');b.textContent=n;b.classList.toggle('on',on[i]);b.onclick=()=>{on[i]=!on[i];b.classList.toggle('on',on[i]);calc()};ap.append(b)});
+const YA=70,YN=330,X0=150,DX=112;
+// switchboard
+el('rect',{x:14,y:YA-40,width:110,height:YN-YA+80,rx:12,fill:'#141a40',stroke:'#36418a','stroke-width':2},sv);
+txt(sv,69,YA+(YN-YA)/2-6,'230 V',{'text-anchor':'middle','font-size':20});txt(sv,69,YA+(YN-YA)/2+18,'supply',{'text-anchor':'middle','font-size':16,fill:'#a5b4d8'});
+const cbBox=el('rect',{x:84,y:YA-22,width:56,height:44,rx:8,fill:'#232c63',stroke:'#f472b6','stroke-width':3},sv);
+const cbT=txt(sv,112,YA+7,'CB',{'text-anchor':'middle','font-size':17,fill:'#f472b6','font-weight':700});
+const active=el('line',{x1:140,x2:X0+5*DX+40,y1:YA,y2:YA,stroke:'#b8763a','stroke-width':6},sv);
+el('line',{x1:124,x2:X0+5*DX+40,y1:YN,y2:YN,stroke:'#3b82f6','stroke-width':6},sv);
+txt(sv,150,YA-16,'active',{fill:'#d9965a','font-size':17});txt(sv,150,YN+30,'neutral',{fill:'#60a5fa','font-size':17});
+const br=A.map(([n,P],i)=>{const x=X0+40+i*DX;const g={x};
+ g.w=el('line',{x1:x,x2:x,y1:YA,y2:YN,stroke:'#5b6690','stroke-width':4},sv);el('circle',{cx:x,cy:YA,r:6,fill:'#b8763a'},sv);el('circle',{cx:x,cy:YN,r:6,fill:'#3b82f6'},sv);
+ g.box=el('rect',{x:x-50,y:150,width:100,height:100,rx:12,fill:'#1a2150',stroke:'#5b6690','stroke-width':3},sv);
+ txt(sv,x,180,n,{'text-anchor':'middle','font-size':17});txt(sv,x,206,P>=1000?(P/1000)+' kW':P+' W',{'text-anchor':'middle','font-size':17,fill:'#fbb040'});
+ g.i=txt(sv,x,236,'',{'text-anchor':'middle','font-size':18,'font-weight':700,fill:'#7dd3fc'});
+ g.d=[0,1,2].map(()=>el('circle',{r:5,fill:'#fde047'},sv));g.ph=0;return g});
+// meter
+const MX=150,MY=376,MW=670;el('rect',{x:MX,y:MY,width:MW,height:22,rx:8,fill:'#141a40',stroke:'#36418a','stroke-width':2},sv);
+const mbar=el('rect',{x:MX+2,y:MY+2,height:18,rx:6,fill:'#4ade80'},sv);const rl=el('line',{y1:MY-8,y2:MY+30,stroke:'#f472b6','stroke-width':4},sv);
+const rlt=txt(sv,0,MY-12,'',{fill:'#f472b6','font-size':16,'text-anchor':'middle'});const IMAX=30;
+const ad=[0,1,2,3,4,5,6,7].map(()=>el('circle',{r:6,fill:'#fde047'},sv));let aph=0;
+let Itot=0;
+function calc(){const Is=A.map(([n,P],i)=>on[i]?P/230:0);Itot=tripped?0:Is.reduce((a,b)=>a+b,0);
+ const raw=Is.reduce((a,b)=>a+b,0);if(!tripped&&raw>rating){tripped=true;Itot=0}
+ br.forEach((g,i)=>{const I=tripped?0:Is[i];g.I=I;g.i.textContent=on[i]?f2(Is[i])+' A':'off';g.i.setAttribute('fill',on[i]&&!tripped?'#7dd3fc':'#5b6690');g.box.setAttribute('stroke',on[i]&&!tripped?'#fbb040':'#5b6690');g.w.setAttribute('stroke',on[i]&&!tripped?'#cfd7f5':'#5b6690')});
+ const terms=A.filter((a,i)=>on[i]).map(a=>f2(a[1]/230));document.getElementById('sum').textContent=terms.length?terms.join(' + '):'0';
+ document.getElementById('tot').textContent=f2(raw,1)+' A';const st=document.getElementById('st');
+ st.textContent=tripped?'over '+rating+' A: TRIPPED':raw>rating*0.8?'close to the limit':'OK';st.style.color=tripped?'#f472b6':raw>rating*.8?'#fbb040':'#4ade80';
+ mbar.setAttribute('width',Math.min(MW-4,raw/IMAX*(MW-4)));mbar.setAttribute('fill',raw>rating?'#f472b6':'#4ade80');
+ const rx=MX+rating/IMAX*MW;rl.setAttribute('x1',rx);rl.setAttribute('x2',rx);rlt.setAttribute('x',rx);rlt.textContent=rating+' A limit';
+ cbBox.setAttribute('fill',tripped?'#f472b6':'#232c63');cbT.setAttribute('fill',tripped?'#0d1330':'#f472b6');cbT.textContent=tripped?'OFF':'CB';
+ active.setAttribute('stroke',tripped?'#5b6690':'#b8763a')}
+group('.cb',v=>{rating=+v;calc()});document.getElementById('rs').onclick=()=>{tripped=false;calc()};calc();
+IX.anims.push((t,dt)=>{const k=dt*IX.speed*(IX.play?1:0);
+ br.forEach(g=>{g.ph+=g.I*30*k;g.d.forEach(d=>d.setAttribute('cx',g.x));g.d.forEach((d,j)=>{const s=((g.ph+j*87)%260);const y=YA+s;d.setAttribute('cy',y);d.style.display=g.I&&(y<150||y>250)?'':'none'})});
+ aph+=Itot*6*k;ad.forEach((d,j)=>{const s=(aph+j*90)%720;d.setAttribute('cx',140+s);d.setAttribute('cy',YA);const xe=Math.max(...br.filter(g=>g.I).map(g=>g.x),0);d.style.display=Itot&&140+s<=xe?'':'none'})});
+</script>

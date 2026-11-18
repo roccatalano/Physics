@@ -1,0 +1,58 @@
+<!--{"id":"8A-1-collision-lab","section":"8A","title":"Collision lab: momentum and kinetic energy","criteria":["8A.1","8A.2","8A.3","8A.4"],
+"blurb":"Two carts collide head on or rear end. Total momentum is the same before and after every time; total kinetic energy is only kept in an elastic collision.",
+"source":"Cambridge VCE Physics Units 1&2, 8A Momentum, Formulas 8A–1 to 8A–3. Frictionless track, collision in a straight line.","colour":"#fbb040"}-->
+<div class="ctx">Two carts roll on a frictionless track and collide. Right is <b>positive</b>. Change the masses, the starting velocities and the type of collision.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc"><h3>The track, then the totals before and after</h3><svg id="sv" viewBox="0 0 860 445"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:9px"><h3>Carts</h3>
+   <div class="sl"><span class="nm cy">$m_1$</span><input type="range" id="m1" min="0.5" max="4" step="0.5" value="2"><span class="v" id="m1v"></span></div>
+   <div class="sl"><span class="nm cy">$u_1$</span><input type="range" id="u1" min="0" max="4" step="0.5" value="3"><span class="v" id="u1v"></span></div>
+   <div class="sl"><span class="nm pk">$m_2$</span><input type="range" id="m2" min="0.5" max="4" step="0.5" value="1"><span class="v" id="m2v"></span></div>
+   <div class="sl"><span class="nm pk">$u_2$</span><input type="range" id="u2" min="-4" max="2" step="0.5" value="-1"><span class="v" id="u2v"></span></div>
+   <div class="btns"><button class="ty" data-v="1">Elastic</button><button class="ty on" data-v="0.5">Inelastic</button><button class="ty" data-v="0">Stick</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5"><h3>After</h3><div id="ro"></div></div>
+ </div>
+</div>
+<script>
+const g=9.8,TC=1.6,CYC=5,XC=7,TX=40,TW=780,XM=14,sx=x=>TX+x*TW/XM;
+const sg=v=>(v<-0.004?"−":"")+f2(Math.abs(v));
+const sg1=v=>(v<-0.04?"−":"")+f2(Math.abs(v),1);
+let m1=2,u1=3,m2=1,u2=-1,e=.5;
+const sv=document.getElementById('sv');
+const cp=el('clipPath',{id:'cl'},el('defs',{},sv));el('rect',{x:TX,y:0,width:TW,height:200},cp);
+el('line',{x1:TX,x2:TX+TW,y1:120,y2:120,stroke:'#36418a','stroke-width':4},sv);
+const G=el('g',{'clip-path':'url(#cl)'},sv);
+function cart(c,n){const g2=el('g',{},G);const r=el('rect',{y:60,height:52,rx:8,fill:c},g2);const w1=el('circle',{r:8,cy:114,fill:'#0d1330',stroke:c,'stroke-width':3},g2),w2=el('circle',{r:8,cy:114,fill:'#0d1330',stroke:c,'stroke-width':3},g2);
+ const t=txt(g2,0,93,n,{fill:'#0d1330','font-size':18,'font-weight':700,'text-anchor':'middle'});const a=el('path',{fill:c},g2),vt=txt(g2,0,48,'',{fill:c,'font-size':17,'text-anchor':'middle'});
+ return(x,w,v)=>{const X=sx(x),W=w*TW/XM;r.setAttribute('x',X);r.setAttribute('width',W);w1.setAttribute('cx',X+W*.25);w2.setAttribute('cx',X+W*.75);t.setAttribute('x',X+W/2);
+  const L=v*14,y=38,cx=X+W/2;vt.setAttribute('x',cx);vt.setAttribute('y',22);vt.textContent=(v>=0?'+':'−')+f2(Math.abs(v),2)+' m/s';
+  if(Math.abs(L)<2){a.setAttribute('d','');return}const s=Math.sign(L);a.setAttribute('d',`M${cx-L/2},${y-3}L${cx+L/2-s*10},${y-3}L${cx+L/2-s*10},${y-9}L${cx+L/2},${y}L${cx+L/2-s*10},${y+9}L${cx+L/2-s*10},${y+3}L${cx-L/2},${y+3}Z`)}}
+const c1=cart('#7dd3fc','1'),c2=cart('#f472b6','2');
+const msg=txt(sv,TX+TW/2,162,'',{fill:'#fbb040','font-size':19,'text-anchor':'middle'});
+// bar charts
+const BY=310,BH=85;
+function bars(x0,title,unit){txt(sv,x0+170,196,title,{fill:'#a5b4d8','font-size':17,'text-anchor':'middle'});el('line',{x1:x0,x2:x0+340,y1:BY,y2:BY,stroke:'#5b6690','stroke-width':2},sv);
+ const mk=(i,l)=>{const r=el('rect',{x:x0+30+i*170,width:110,fill:'#fbb040'},sv);const t=txt(sv,x0+85+i*170,0,'',{'font-size':18,'text-anchor':'middle'});txt(sv,x0+85+i*170,BY+BH+28,l,{fill:'#a5b4d8','font-size':17,'text-anchor':'middle'});return[r,t]};
+ return[mk(0,'before'),mk(1,'after')]}
+const PB=bars(40,'Total momentum Σp (kg m/s)'),EB=bars(480,'Total kinetic energy Eₖ (J)');
+function setbar([r,t],val,max,c,s){const h=Math.abs(val)/max*BH,up=val>=0;r.setAttribute('y',up?BY-h:BY);r.setAttribute('height',Math.max(h,.5));r.setAttribute('fill',c);t.setAttribute('y',up?BY-h-8:BY+h+20);t.textContent=s}
+let v1,v2,ok;
+function upd(){ok=u1>u2;const P=m1*u1+m2*u2,M=m1+m2;v1=(P+m2*e*(u2-u1))/M;v2=(P+m1*e*(u1-u2))/M;
+ const Eb=.5*m1*u1*u1+.5*m2*u2*u2,Ea=.5*m1*v1*v1+.5*m2*v2*v2;
+ setbar(PB[0],P,16,'#fbb040',sg1(P));setbar(PB[1],ok?P:0,16,'#fbb040',ok?sg1(m1*v1+m2*v2):'');
+ setbar(EB[0],Eb,64,'#4ade80',f2(Eb,1));setbar(EB[1],ok?Ea:0,64,'#4ade80',ok?f2(Ea,1):'');
+ const ro=document.getElementById('ro');
+ if(!ok){ro.innerHTML='Cart 1 is not catching cart 2, so they never collide.';return}
+ ro.innerHTML=`<span class="cy">v<sub>1</sub></span> = <b>${sg(v1)}</b> m/s<br><span class="pk">v<sub>2</sub></span> = <b>${sg(v2)}</b> m/s<br>Σp: <b class="hi">${sg1(P)} → ${sg1(m1*v1+m2*v2)}</b><br>Eₖ: <b class="gr">${f2(Eb,1)} → ${f2(Ea,1)} J</b><br>${e==1?'Eₖ kept: <b>elastic</b>':'Eₖ lost: <b>inelastic</b>'}`}
+slider('m1',x=>f2(x,1)+' kg',x=>{m1=x;upd()});slider('m2',x=>f2(x,1)+' kg',x=>{m2=x;upd()});
+slider('u1',x=>(x>0?'+':'')+f2(x,1)+' m/s',x=>{u1=x;upd()});slider('u2',x=>(x>0?'+':x<0?'−':'')+f2(Math.abs(x),1)+' m/s',x=>{u2=x;upd()});
+group('.ty',v=>{e=+v;upd()});
+const W=m=>.6+.25*m;
+IX.anims.push(t=>{const w1=W(m1),w2=W(m2);const tc=t%CYC;
+ if(!ok){const k=Math.min(tc,3.5);c1(XC-w1-1.5+u1*k,w1,u1);c2(XC+1.5+u2*k,w2,u2);msg.textContent='No collision: cart 1 must be faster to the right than cart 2';return}
+ msg.textContent=tc<TC?'Before':'After';
+ const a=Math.min(tc,TC),b=Math.max(0,tc-TC);
+ c1(XC-w1+u1*(a-TC)+v1*b,w1,tc<TC?u1:v1);c2(XC+u2*(a-TC)+v2*b,w2,tc<TC?u2:v2)});
+</script>

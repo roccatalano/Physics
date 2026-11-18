@@ -1,0 +1,56 @@
+<!--{"id":"8C-1-seesaw-torque","section":"8C","title":"Seesaw: balancing torques","criteria":["8C.1","8C.2","8C.3"],
+"blurb":"Drag two masses along a seesaw. Each weight makes a torque τ = r⊥F about the pivot. It balances only when the anticlockwise torques equal the clockwise torques.",
+"source":"Cambridge VCE Physics Units 1&2, 8C Equilibrium, Formulas 8C–1 to 8C–3, g = 9.8 N/kg. Light beam (mass ignored); torques worked out with the beam level.","colour":"#a78bfa"}-->
+<div class="ctx">Two masses sit on a light seesaw. <b>Drag them</b> along the beam or use the sliders. Which way does it turn, and where does it balance?</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#a78bfa"><h3>The seesaw (distances from the pivot)</h3><svg id="sv" viewBox="0 0 860 470" style="touch-action:none"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:9px"><h3>Masses</h3>
+   <div class="sl"><span class="nm cy">Left m</span><input type="range" id="m1" min="5" max="60" step="5" value="40"><span class="v" id="m1v"></span></div>
+   <div class="sl"><span class="nm cy">Left r</span><input type="range" id="r1" min="0.2" max="2" step="0.1" value="1"><span class="v" id="r1v"></span></div>
+   <div class="sl"><span class="nm pk">Right m</span><input type="range" id="m2" min="5" max="60" step="5" value="20"><span class="v" id="m2v"></span></div>
+   <div class="sl"><span class="nm pk">Right r</span><input type="range" id="r2" min="0.2" max="2" step="0.1" value="1.5"><span class="v" id="r2v"></span></div>
+   <div class="btns"><button id="bal">Balance it</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.45"><h3>Calculate</h3><div id="ro"></div></div>
+ </div>
+</div>
+<script>
+const g=9.8,PX=430,PY=290,SC=180,MAXA=8;let m1=40,r1=1,m2=20,r2=1.5,ang=0,tgt=0;
+const sv=document.getElementById('sv');
+el('line',{x1:30,x2:830,y1:400,y2:400,stroke:'#5b6690','stroke-width':4},sv);
+el('path',{d:`M${PX},${PY+8}L${PX-50},400L${PX+50},400Z`,fill:'#36418a'},sv);
+const beamG=el('g',{},sv);el('rect',{x:-2*SC-10,y:-9,width:4*SC+20,height:18,rx:6,fill:'#a78bfa'},beamG);
+for(let i=-2;i<=2;i+=.5)el('line',{x1:i*SC,x2:i*SC,y1:-9,y2:9,stroke:'#0d1330','stroke-width':i%1?1.5:3},beamG);
+el('circle',{cx:PX,cy:PY,r:8,fill:'#eef2ff'},sv);
+function mass(c){const gg=el('g',{style:'cursor:grab'},beamG);const r=el('rect',{rx:6,fill:c},gg),t=txt(gg,0,0,'',{fill:'#0d1330','font-size':19,'font-weight':700,'text-anchor':'middle'});
+ const rl=el('line',{stroke:c,'stroke-width':2,'stroke-dasharray':'5 5'},beamG),rt=txt(beamG,0,44,'',{fill:c,'font-size':19,'font-weight':700,'text-anchor':'middle'});
+ return{g:gg,set(x,m){const s=34+m*.9;r.setAttribute('x',x-s/2);r.setAttribute('y',-9-s);r.setAttribute('width',s);r.setAttribute('height',s);t.setAttribute('x',x);t.setAttribute('y',-9-s/2+7);t.textContent=m+' kg';
+  rl.setAttribute('x1',0);rl.setAttribute('x2',x);rl.setAttribute('y1',26);rl.setAttribute('y2',26);rt.setAttribute('x',x/2);rt.textContent='r = '+f2(Math.abs(x)/SC,1)+' m'}}}
+const M1=mass('#7dd3fc'),M2=mass('#f472b6');
+// turning arrows: one per side, thickness grows with torque
+function turn(c,cx,cw){const p=el('path',{fill:'none',stroke:c,'stroke-linecap':'round'},sv),h=el('path',{fill:c},sv),t=txt(sv,cx,175,'',{fill:c,'font-size':22,'font-weight':700,'text-anchor':'middle'});
+ const R=46,cy=150,a0=cw?200:-20,a1=cw?340:-160,P=a=>[cx+R*Math.cos(a*Math.PI/180),cy+R*Math.sin(a*Math.PI/180)*.55];const[x0,y0]=P(a0),[x1,y1]=P(a1);
+ return k=>{const w=Math.min(14,3+k/60);p.setAttribute('stroke-width',w);p.setAttribute('d',`M${x0},${y0}A${R},${R*.55} 0 0 ${cw?1:0} ${x1},${y1}`);
+  const ux=cw?.5:-.5,uy=.87,s2=8+w;h.setAttribute('d',`M${x1+ux*s2*1.4},${y1+uy*s2*1.4}L${x1-uy*s2},${y1+ux*s2}L${x1+uy*s2},${y1-ux*s2}Z`);t.textContent=f2(k,0)+' N m'}}
+const tA=turn('#7dd3fc',PX-230,0),tC=turn('#f472b6',PX+230,1);
+const lab=txt(sv,PX,40,'',{fill:'#fbb040','font-size':24,'font-weight':700,'text-anchor':'middle'});
+const lA=txt(sv,PX-230,92,'anticlockwise τ',{fill:'#7dd3fc','font-size':19,'text-anchor':'middle'}),lC=txt(sv,PX+230,92,'clockwise τ',{fill:'#f472b6','font-size':19,'text-anchor':'middle'});
+const S={};function upd(){const ta=r1*m1*g,tc=r2*m2*g,d=tc-ta;tgt=Math.abs(d)<1e-6?0:Math.sign(d)*MAXA;
+ M1.set(-r1*SC,m1);M2.set(r2*SC,m2);tA(ta);tC(tc);
+ lab.textContent=Math.abs(d)<1e-6?'Balanced: Στ = 0':d>0?'Turns clockwise':'Turns anticlockwise';
+ document.getElementById('ro').innerHTML=`<span class="cy">Anticlockwise</span><br>${f2(r1,1)} × ${f2(m1*g,0)} = <b>${f2(ta,0)} N m</b><br><span class="pk">Clockwise</span><br>${f2(r2,1)} × ${f2(m2*g,0)} = <b>${f2(tc,0)} N m</b><br>`+
+ (Math.abs(d)<1e-6?'<b class="gr">Equal: rotational equilibrium</b>':`Unbalanced by <b class="hi">${f2(Math.abs(d),0)} N m</b>`)+`<br>Pivot pushes up: ${f2((m1+m2)*g,0)} N`;
+ ['m1','r1','m2','r2'].forEach(k=>{const r=document.getElementById(k);if(+r.value!==eval(k)){r.value=eval(k);document.getElementById(k+'v').textContent=fm[k](eval(k))}})}
+const fm={m1:x=>x+' kg',m2:x=>x+' kg',r1:x=>f2(x,1)+' m',r2:x=>f2(x,1)+' m'};
+slider('m1',fm.m1,x=>{m1=x;upd()});slider('r1',fm.r1,x=>{r1=x;upd()});slider('m2',fm.m2,x=>{m2=x;upd()});slider('r2',fm.r2,x=>{r2=x;upd()});
+document.getElementById('bal').onclick=()=>{let r=Math.round(r1*m1/m2*10)/10;if(r>=.2&&r<=2&&Math.abs(r*m2-r1*m1)<1e-9){r2=r}else{// try moving the left mass instead
+  const l=Math.round(r2*m2/m1*10)/10;if(l>=.2&&l<=2&&Math.abs(l*m1-r2*m2)<1e-9)r1=l;else{for(let a=2;a>=.2;a-=.1){const b=Math.round(a*m1/m2*10)/10;if(b>=.2&&b<=2&&Math.abs(b*m2-a*m1)<1e-6){r1=Math.round(a*10)/10;r2=b;break}}}}upd()};
+// dragging
+let drag=null;const pt=e=>{const p=sv.createSVGPoint();p.x=e.clientX;p.y=e.clientY;return p.matrixTransform(sv.getScreenCTM().inverse())};
+[[M1,1],[M2,2]].forEach(([M,i])=>M.g.addEventListener('pointerdown',e=>{drag=i;sv.setPointerCapture(e.pointerId)}));
+sv.addEventListener('pointermove',e=>{if(!drag)return;const p=pt(e);let r=Math.round(Math.abs(p.x-PX)/SC/Math.cos(ang*Math.PI/180)*10)/10;r=Math.min(2,Math.max(.2,r));if(drag==1)r1=r;else r2=r;upd()});
+addEventListener('pointerup',()=>drag=null);
+upd();
+IX.anims.push((t,dt)=>{ang+=(tgt-ang)*Math.min(1,dt*4);beamG.setAttribute('transform',`translate(${PX},${PY}) rotate(${ang})`)});
+</script>

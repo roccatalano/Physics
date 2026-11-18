@@ -1,0 +1,41 @@
+<!--{"id":"2A-4-thermal-equilibrium","section":"2A","title":"Reaching thermal equilibrium","criteria":["2A.2","2A.8","2A.9"],
+"blurb":"Drop a hot object into cool water. Heat flows until both reach the same temperature; energy lost equals energy gained.",
+"source":"Cambridge VCE Physics Units 1&2, 2A Thermal energy (pp. 7, 14–15). Insulated container: no energy lost to the surroundings. Cooling rate shape is illustrative.","colour":"#4ade80"}-->
+<div class="ctx">A hot block is dropped into a cup of cool water. <b>What final temperature do they both reach?</b></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#4ade80"><h3>Temperature against time</h3><svg id="sv" viewBox="0 0 860 380"></svg><div class="rule" style="font-size:17px;padding:8px 14px">Heat flows from hot to cold until the temperatures are equal (<b>thermal equilibrium</b>). With no losses, <b>energy lost by the hot object = energy gained by the water</b>: $m_1c_1\Delta T_1 = m_2c_2\Delta T_2$.</div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#ef4444"><h3>Hot object</h3>
+   <div class="btns"><button style="padding:7px 10px;font-size:16px" class="ob on" data-v="385">Copper</button><button style="padding:7px 10px;font-size:16px" class="ob" data-v="900">Aluminium</button><button style="padding:7px 10px;font-size:16px" class="ob" data-v="4180">Water</button></div>
+   <div class="sl" style="grid-template-columns:76px 1fr 86px"><span class="nm">Mass</span><input type="range" id="m1" min="0.1" max="2" step="0.1" value="0.5"><span class="v" id="m1v"></span></div>
+   <div class="sl" style="grid-template-columns:76px 1fr 86px"><span class="nm">Start T</span><input type="range" id="T1" min="30" max="100" step="1" value="100"><span class="v" id="T1v"></span></div>
+  </div>
+  <div class="card ctl" style="--c:#38bdf8"><h3>Cool water</h3>
+   <div class="sl" style="grid-template-columns:76px 1fr 86px"><span class="nm">Mass</span><input type="range" id="m2" min="0.1" max="2" step="0.1" value="0.5"><span class="v" id="m2v"></span></div>
+   <div class="sl" style="grid-template-columns:76px 1fr 86px"><span class="nm">Start T</span><input type="range" id="T2" min="0" max="29" step="1" value="20"><span class="v" id="T2v"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:18px;line-height:1.45"><h3>Result</h3><div id="ro"></div></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),X0=80,X1=830,Y0=320,Y1=30,TM=20;let c1=385,m1=.5,T1=100,m2=.5,T2=20,t0=0;
+const sx=s=>X0+(X1-X0)*s/TM,sy=T=>Y0-(Y0-Y1)*T/100;
+el('line',{x1:X0,x2:X1,y1:Y0,y2:Y0,stroke:'#5b6690','stroke-width':2},sv);el('line',{x1:X0,x2:X0,y1:Y0,y2:Y1-10,stroke:'#5b6690','stroke-width':2},sv);
+for(let T=0;T<=100;T+=20){el('line',{x1:X0,x2:X1,y1:sy(T),y2:sy(T),stroke:'#232c63'},sv);txt(sv,X0-10,sy(T)+6,T,{'text-anchor':'end','font-size':16,fill:'#a5b4d8'})}
+txt(sv,X0-10,Y1-16,'T (°C)',{'text-anchor':'end','font-size':16,fill:'#a5b4d8'});txt(sv,X1,Y0+30,'time',{'text-anchor':'end','font-size':16,fill:'#a5b4d8'});
+const eq=el('line',{x1:X0,x2:X1,stroke:'#4ade80','stroke-width':2,'stroke-dasharray':'8 6'},sv),eqt=txt(sv,X1,0,'',{'text-anchor':'end',fill:'#4ade80'});
+const p1=el('path',{fill:'none',stroke:'#ef4444','stroke-width':6},sv),p2=el('path',{fill:'none',stroke:'#38bdf8','stroke-width':6},sv);
+const l1=txt(sv,0,0,'hot object',{fill:'#ef4444'}),l2=txt(sv,0,0,'water',{fill:'#38bdf8'});
+const C1=()=>m1*c1,C2=()=>m2*4180,Tf=()=>(C1()*T1+C2()*T2)/(C1()+C2());
+const restart=()=>{t0=IX.t};
+function ro(){const f=Tf(),q1=C1()*(T1-f),q2=C2()*(f-T2);document.getElementById('ro').innerHTML=
+ `Final <span class="k">T</span> = <b class="gr" style="font-size:24px">${f.toFixed(1)} °C</b><br>Lost by object: <b class="pk">${sig(q1/1000)} kJ</b><br>Gained by water: <b class="cy">${sig(q2/1000)} kJ</b>`;
+ eq.setAttribute('y1',sy(f));eq.setAttribute('y2',sy(f));eqt.setAttribute('y',sy(f)-10);eqt.textContent='equilibrium '+f.toFixed(1)+' °C'}
+[['m1',x=>f2(x,1)+' kg',x=>m1=x],['T1',x=>x+' °C',x=>T1=x],['m2',x=>f2(x,1)+' kg',x=>m2=x],['T2',x=>x+' °C',x=>T2=x]].forEach(([i,f,c])=>slider(i,f,x=>{c(x);ro();restart()}));
+group('.ob',v=>{c1=+v;ro();restart()});ro();
+IX.anims.push(T=>{const s=Math.min(TM,(T-t0)*2),f=Tf(),k=Math.min(1,Math.max(.3,.6*(1/C1()+1/C2())*1045));
+ const a=x=>f+(T1-f)*Math.exp(-k*x),b=x=>f+(T2-f)*Math.exp(-k*x);let d1='',d2='';
+ for(let i=0;i<=200;i++){const x=s*i/200;d1+=(i?'L':'M')+sx(x).toFixed(1)+','+sy(a(x)).toFixed(1);d2+=(i?'L':'M')+sx(x).toFixed(1)+','+sy(b(x)).toFixed(1)}
+ p1.setAttribute('d',d1);p2.setAttribute('d',d2);
+ const ya=sy(a(s)),yb=sy(b(s)),sep=Math.abs(ya-yb)<24?14:0;l1.setAttribute('x',Math.min(sx(s)+10,X1-110));l1.setAttribute('y',ya-8-sep);l2.setAttribute('x',Math.min(sx(s)+10,X1-110));l2.setAttribute('y',yb+22+sep)});
+</script>

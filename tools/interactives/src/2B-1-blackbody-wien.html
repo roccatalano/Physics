@@ -1,0 +1,48 @@
+<!--{"id":"2B-1-blackbody-wien","section":"2B","title":"Blackbody radiation and Wien's law","criteria":["2B.1","2B.2","2B.3"],
+"blurb":"Change the temperature of a blackbody. The peak moves to shorter wavelengths and the area under the curve grows fast. Compare the Sun and Earth.",
+"source":"Cambridge VCE Physics Units 1&2, 2B Thermal energy and EM radiation (pp. 23–25). Ideal blackbody (Planck) curves; wavelength axis is logarithmic.","colour":"#facc15"}-->
+<div class="ctx">A <b>blackbody</b> emits every wavelength as well as possible. <b>Where is the peak, and how much does it emit?</b></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#facc15"><h3>Intensity against wavelength</h3><svg id="sv" viewBox="0 0 860 380"></svg><div class="rule" style="font-size:17px;padding:8px 14px">Hotter: the peak moves to <b>shorter wavelengths</b> and the total energy (<b>area under the curve</b>) rises steeply. Wien's law: $\lambda_{max}T = b$, $b = 2.898\times10^{-3}\ \text{m K}$.</div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Blackbody temperature</h3>
+   <div class="sl" style="grid-template-columns:96px 1fr 80px"><span class="nm">T</span><input type="range" id="Tsl" min="0" max="1000" step="1" value="1000"><span class="v" id="Tslv"></span></div>
+   <div class="btns" style="gap:6px"><button style="padding:7px 9px;font-size:16px" class="pr" data-v="288">Earth</button><button style="padding:7px 9px;font-size:16px" class="pr" data-v="310">Human</button><button style="padding:7px 9px;font-size:16px" class="pr" data-v="3000">Lamp</button><button style="padding:7px 9px;font-size:16px" class="pr on" data-v="5778">Sun</button></div>
+  </div>
+  <div class="card ctl" style="--c:#7dd3fc"><h3>Compare</h3>
+   <div class="btns"><button id="cs">Sun (5778 K)</button><button id="ce">Earth (288 K)</button></div>
+   <div class="btns"><button id="fitb">Zoom to fit</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5"><h3>Wien's law</h3><div id="ro"></div></div>
+ </div>
+</div>
+<script>
+const h=6.626e-34,c=2.998e8,kB=1.381e-23,b=2.898e-3,sv=document.getElementById('sv'),X0=70,X1=840,Y0=320,Y1=20,LA=-7,LB=-4; // 0.1 um to 100 um
+const sx=l=>X0+(X1-X0)*(Math.log10(l)-LA)/(LB-LA);let T=5778,cs=false,ce=false,fitb=false;
+const B=(l,T)=>2*h*c*c/l**5/(Math.exp(h*c/(l*kB*T))-1);
+// visible band
+const vb=el('g',{},sv);const vis=[[380,'#7c3aed'],[450,'#2563eb'],[495,'#16a34a'],[570,'#eab308'],[590,'#f97316'],[620,'#dc2626'],[750]];
+for(let i=0;i<vis.length-1;i++)el('rect',{x:sx(vis[i][0]*1e-9),y:Y1,width:sx(vis[i+1][0]*1e-9)-sx(vis[i][0]*1e-9),height:Y0-Y1,fill:vis[i][1],'fill-opacity':.25},vb);
+txt(sv,sx(5.3e-7),Y1+18,'visible',{'text-anchor':'middle','font-size':15,fill:'#cfd7f5'});
+txt(sv,sx(2e-7),Y1+18,'UV',{'text-anchor':'middle','font-size':15,fill:'#a5b4d8'});txt(sv,sx(5e-6),Y1+18,'infrared',{'text-anchor':'middle','font-size':15,fill:'#a5b4d8'});
+el('line',{x1:X0,x2:X1,y1:Y0,y2:Y0,stroke:'#5b6690','stroke-width':2},sv);el('line',{x1:X0,x2:X0,y1:Y0,y2:Y1,stroke:'#5b6690','stroke-width':2},sv);
+[[1e-7,'0.1'],[1e-6,'1'],[1e-5,'10'],[1e-4,'100']].forEach(([l,s])=>{el('line',{x1:sx(l),x2:sx(l),y1:Y0,y2:Y0+8,stroke:'#5b6690','stroke-width':2},sv);txt(sv,sx(l),Y0+28,s,{'text-anchor':'middle','font-size':16,fill:'#a5b4d8'})});
+txt(sv,X1,Y0+52,'wavelength (μm)',{'text-anchor':'end','font-size':16,fill:'#a5b4d8'});txt(sv,X0-10,Y1+180,'intensity',{'text-anchor':'middle','font-size':16,fill:'#a5b4d8',transform:`rotate(-90 ${X0-14} ${Y1+150})`});
+const ps=el('path',{fill:'none',stroke:'#fbb040','stroke-width':3,'stroke-dasharray':'8 6'},sv),pe=el('path',{fill:'none',stroke:'#38bdf8','stroke-width':3,'stroke-dasharray':'8 6'},sv);
+const pa=el('path',{fill:'#facc15','fill-opacity':.18,stroke:'none'},sv),pm=el('path',{fill:'none',stroke:'#facc15','stroke-width':5},sv);
+const pk=el('line',{stroke:'#fff','stroke-width':2,'stroke-dasharray':'4 5'},sv),pkt=txt(sv,0,0,'',{fill:'#fff','font-size':17});
+const note=txt(sv,X0+12,Y0-14,'',{fill:'#f472b6','font-size':17});
+const Tof=s=>Math.round(200*Math.exp(Math.log(50)*s/1000)),sOf=T=>1000*Math.log(T/200)/Math.log(50);
+const S=slider('Tsl',x=>Tof(x)+' K',x=>{T=Tof(x);document.querySelectorAll('.pr').forEach(b=>b.classList.toggle('on',+b.dataset.v===T))});
+document.querySelectorAll('.pr').forEach(bt=>bt.onclick=()=>{S.value=sOf(+bt.dataset.v);S.dispatchEvent(new Event('input'));T=+bt.dataset.v;document.getElementById('Tslv').textContent=T+' K'});
+document.querySelector('.pr[data-v="5778"]').click();
+toggle('cs',v=>cs=v,false);toggle('ce',v=>ce=v,false);toggle('fitb',v=>fitb=v,false);
+const path=(T,k)=>{let d='';for(let i=0;i<=300;i++){const l=10**(LA+(LB-LA)*i/300);d+=(i?'L':'M')+sx(l).toFixed(1)+','+(Y0-Math.min(Y0-Y1+30,(Y0-Y1-30)*B(l,T)/k)).toFixed(1)}return d};
+IX.anims.push(()=>{const lm=b/T,pkv=B(lm,T);let mx=pkv;if(!fitb){if(cs)mx=Math.max(mx,B(b/5778,5778));if(ce)mx=Math.max(mx,B(b/288,288))}
+ const d=path(T,mx);pm.setAttribute('d',d);pa.setAttribute('d',d+`L${X1},${Y0}L${X0},${Y0}Z`);
+ const off=TT=>B(b/TT,TT)>mx*1.05;ps.setAttribute('d',cs&&!off(5778)?path(5778,mx):'');pe.setAttribute('d',ce&&!off(288)?path(288,mx):'');const offs=[cs&&off(5778)?'Sun':'',ce&&off(288)?'Earth':''].filter(Boolean);
+ const yp=Y0-(Y0-Y1-30)*pkv/mx;pk.setAttribute('x1',sx(lm));pk.setAttribute('x2',sx(lm));pk.setAttribute('y1',Y0);pk.setAttribute('y2',Math.min(Y0,yp));
+ pkt.setAttribute('x',Math.min(X1-150,sx(lm)+10));pkt.setAttribute('y',Math.max(Y1+60,yp+10));pkt.textContent='λmax = '+(lm<1e-6?Math.round(lm*1e9)+' nm':sig(lm*1e6)+' μm');
+ const r=(T/5778)**4;note.textContent=!fitb&&pkv/mx<.03?'curve too small to see: try Zoom to fit':offs.length?offs.join(' and ')+' off the scale (far bigger)':'';
+ document.getElementById('ro').innerHTML=`<span class="k">T</span> = <b>${T} K</b> (${Math.round(T-273.15)} °C)<br><span class="k">λ</span><sub>max</sub> = <span class="k">b</span>/<span class="k">T</span> = <b class="hi">${sig(lm*1e6)} μm</b><br>Power/m² vs Sun: <b>×${r>=.01?sig(r):(()=>{const [m,e]=r.toExponential(1).split('e');return m+' × 10<sup>'+(+e)+'</sup>'})()}</b>`});
+</script>

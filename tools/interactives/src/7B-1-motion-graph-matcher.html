@@ -1,0 +1,69 @@
+<!--{"id":"7B-1-motion-graph-matcher","section":"7B","title":"Motion graph matcher","criteria":["7B.1","7B.2","7B.3","7B.4","7B.5","7B.6","7B.7"],
+"blurb":"A trolley moves along a track while its displacement–time, velocity–time and acceleration–time graphs draw live. Gradient and area tools link the three graphs.",
+"source":"Cambridge VCE Physics Units 1&2, 7B Analysing motion through graphs. Model: straight track, constant acceleration in each stage. Right is positive.","colour":"#c084fc"}-->
+<div class="ctx">A trolley moves along a straight track, <b>right is positive</b>. Watch all three graphs draw at once.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#c084fc;padding:12px 16px"><svg id="sv" viewBox="0 0 860 520"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:9px"><h3 style="margin-bottom:2px">Motion</h3>
+   <div class="btns"><button class="pr on" data-v="0">Steady</button><button class="pr" data-v="1">Speeding up</button><button class="pr" data-v="2">Slowing down</button><button class="pr" data-v="3">Up and back</button><button class="pr" data-v="4">Stop and go</button><button class="pr" data-v="5">Reverse first</button></div>
+   <div class="btns"><button id="gr">Gradient</button><button id="ar">Area</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.45;padding:12px 18px" id="ro"></div>
+  <div class="rule" id="rule" style="font-size:17px;padding:10px 14px"></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),TM=10,GX=78,GW=720,DT=.01;
+// stages: [duration, acceleration]; u = initial velocity
+const P=[{u:2.5,st:[[10,0]]},{u:0,st:[[10,.5]]},{u:5,st:[[10,-.5]]},{u:5,st:[[10,-1]]},{u:0,st:[[3,1],[3,0],[2,-1.5],[2,0]]},{u:-2,st:[[10,.7]]}];
+let p=0,showG=false,showA=false,D=[];
+function build(){const q=P[p];D=[];let s=0,v=q.u,d=0,t=0;
+ const aAt=tt=>{let c=0;for(const[du,a]of q.st){if(tt<c+du-1e-9)return a;c+=du}return q.st[q.st.length-1][1]};
+ for(let i=0;i<=TM/DT+1e-6;i++){t=i*DT;const a=aAt(t);D.push({t,s,v,a,d});const v2=v+a*DT;const ds=(v+v2)/2*DT;s+=ds;d+=Math.abs(ds);v=v2}}
+// graph boxes
+const G=[{k:'s',lab:'s (m)',y0:118,h:118,mn:-10,mx:30,tk:[-10,0,10,20,30],c:'#7dd3fc',name:'Displacement–time'},
+ {k:'v',lab:'v (m s⁻¹)',y0:262,h:110,mn:-6,mx:6,tk:[-6,-3,0,3,6],c:'#f472b6',name:'Velocity–time'},
+ {k:'a',lab:'a (m s⁻²)',y0:398,h:96,mn:-2,mx:2,tk:[-2,-1,0,1,2],c:'#fbb040',name:'Acceleration–time'}];
+const tx=t=>GX+t/TM*GW;
+// track
+const TR={y:46,x0:GX,w:GW,mn:-10,mx:30};const trx=s=>TR.x0+(s-TR.mn)/(TR.mx-TR.mn)*TR.w;
+el('line',{x1:trx(-10),x2:trx(30),y1:TR.y+16,y2:TR.y+16,stroke:'#36418a','stroke-width':4},sv);
+for(let s=-10;s<=30;s+=5){el('line',{x1:trx(s),x2:trx(s),y1:TR.y+12,y2:TR.y+22,stroke:'#5b6690','stroke-width':2},sv);if(s%10===0)txt(sv,trx(s),TR.y+40,s+(s===30?' m':''),{fill:'#7f8bb5','font-size':15,'text-anchor':'middle'})}
+const trol=el('g',{},sv);el('rect',{x:-22,y:-14,width:44,height:22,rx:6,fill:'#c084fc'},trol);el('circle',{cx:-12,cy:10,r:6,fill:'#eef2ff'},trol);el('circle',{cx:12,cy:10,r:6,fill:'#eef2ff'},trol);
+const mkr=el('marker',{id:'vh',viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:4,markerHeight:4,orient:'auto'},el('defs',{},sv));el('path',{d:'M0 0L10 5L0 10z',fill:'#f472b6'},mkr);
+const vArr=el('line',{stroke:'#f472b6','stroke-width':5,'marker-end':'url(#vh)'},sv);
+txt(sv,GX-8,TR.y+8,'track',{fill:'#7f8bb5','font-size':15,'text-anchor':'end'});
+G.forEach(g=>{g.sy=v=>g.y0+g.h/2-(v-(g.mn+g.mx)/2)/(g.mx-g.mn)*g.h;g.g=el('g',{},sv);
+ el('rect',{x:GX,y:g.y0,width:GW,height:g.h,fill:'#141a40',rx:6},g.g);
+ g.tk.forEach(v=>{el('line',{x1:GX,x2:GX+GW,y1:g.sy(v),y2:g.sy(v),stroke:v?'#232c63':'#5b6690','stroke-width':v?1:2},g.g);txt(g.g,GX-8,g.sy(v)+5,v,{fill:'#7f8bb5','font-size':14,'text-anchor':'end'})});
+ txt(g.g,GX+8,g.y0-6,g.name+'   '+g.lab,{fill:g.c,'font-size':16,'font-weight':700});
+ g.area=el('path',{stroke:'none'},g.g);g.areaN=el('path',{stroke:'none'},g.g);
+ g.path=el('path',{fill:'none',stroke:g.c,'stroke-width':4,'stroke-linejoin':'round'},g.g);
+ g.tan=el('line',{stroke:'#eef2ff','stroke-width':3,'stroke-dasharray':'8 5'},g.g);g.tanT=txt(g.g,0,0,'',{fill:'#eef2ff','font-size':17,'font-weight':700,'text-anchor':'end'});
+ g.dot=el('circle',{r:7,fill:g.c},g.g);g.aT=txt(g.g,0,0,'',{fill:'#eef2ff','font-size':17,'font-weight':700,'text-anchor':'end'})});
+for(let t=0;t<=TM;t+=2)txt(sv,tx(t),G[2].y0+G[2].h+20,t+(t===TM?' s':''),{fill:'#7f8bb5','font-size':15,'text-anchor':'middle'});
+const cur=el('line',{stroke:'#eef2ff','stroke-opacity':.35,'stroke-width':2},sv);
+const fmt=(v,d=1)=>(v<-1e-9?'−':'')+Math.abs(v).toFixed(d);
+function fill(g,n,pos){let d='';const pts=D.slice(0,n+1);if(pts.length<2)return '';d='M'+tx(0)+','+g.sy(0);
+ pts.forEach(q=>{const v=pos?Math.max(0,q[g.k]):Math.min(0,q[g.k]);d+='L'+tx(q.t).toFixed(1)+','+g.sy(v).toFixed(1)});return d+'L'+tx(pts[pts.length-1].t)+','+g.sy(0)+'Z'}
+const RULE={g:'<b>Gradient</b> of s–t = velocity.<br><b>Gradient</b> of v–t = acceleration.',a:'<b>Area</b> under v–t = displacement (red counts negative).<br><b>Area</b> under a–t = change in velocity.',n:'s: <b>where</b> it is. v: <b>how fast, which way</b>. a: <b>how v changes</b>.'};
+IX.anims.push(t=>{const T=t%(TM+2.5),tc=Math.min(T,TM),n=Math.max(0,Math.min(D.length-1,Math.round(tc/DT))),q=D[n];
+ trol.setAttribute('transform',`translate(${trx(q.s)},${TR.y})`);
+ const L=q.v*9;vArr.setAttribute('x1',trx(q.s));vArr.setAttribute('x2',trx(q.s)+L);vArr.setAttribute('y1',TR.y-26);vArr.setAttribute('y2',TR.y-26);vArr.style.display=Math.abs(q.v)<.05?'none':'';
+ cur.setAttribute('x1',tx(tc));cur.setAttribute('x2',tx(tc));cur.setAttribute('y1',G[0].y0);cur.setAttribute('y2',G[2].y0+G[2].h);
+ G.forEach((g,i)=>{let d='';for(let j=0;j<=n;j+=2)d+=(j?'L':'M')+tx(D[j].t).toFixed(1)+','+g.sy(D[j][g.k]).toFixed(1);d+='L'+tx(q.t).toFixed(1)+','+g.sy(q[g.k]).toFixed(1);g.path.setAttribute('d',d);
+  g.dot.setAttribute('cx',tx(q.t));g.dot.setAttribute('cy',g.sy(q[g.k]));
+  // gradient on s-t (slope v) and v-t (slope a)
+  const slope=i===0?q.v:i===1?q.a:null;
+  if(showG&&slope!=null){const w=1.6;const y1=q[g.k]-slope*w,y2=q[g.k]+slope*w;g.tan.style.display='';g.tan.setAttribute('x1',tx(q.t-w));g.tan.setAttribute('x2',tx(q.t+w));g.tan.setAttribute('y1',g.sy(y1));g.tan.setAttribute('y2',g.sy(y2));
+   g.tanT.textContent='gradient = '+(i===0?'v = '+fmt(q.v)+' m s⁻¹':'a = '+fmt(q.a)+' m s⁻²');g.tanT.setAttribute('x',GX+GW);g.tanT.setAttribute('y',g.y0-6)}else{g.tan.style.display='none';g.tanT.textContent=''}
+  if(showA&&i>0){g.area.setAttribute('d',fill(g,n,true));g.area.setAttribute('fill',g.c);g.area.setAttribute('fill-opacity',.3);g.areaN.setAttribute('d',fill(g,n,false));g.areaN.setAttribute('fill','#ef4444');g.areaN.setAttribute('fill-opacity',.35);
+   const ar=i===1?q.s-D[0].s:q.v-D[0].v;g.aT.textContent='area = '+(i===1?'Δs = '+fmt(ar)+' m':'Δv = '+fmt(ar)+' m s⁻¹');g.aT.setAttribute('x',GX+GW);g.aT.setAttribute('y',g.y0-6)}else{g.area.setAttribute('d','');g.areaN.setAttribute('d','');g.aT.textContent=''}});
+ document.getElementById('ro').innerHTML=`<div style="font:700 22px 'Space Grotesk';color:#4ade80">t = ${tc.toFixed(1)} s</div>s = <b class="cy">${fmt(q.s)} m</b><br>v = <b class="pk">${fmt(q.v)} m s⁻¹</b><br>a = <b class="hi">${fmt(q.a)} m s⁻²</b><br>distance = <b class="gr">${q.d.toFixed(1)} m</b>`});
+function rule(){document.getElementById('rule').innerHTML=showA?RULE.a:showG?RULE.g:RULE.n}
+group('.pr',v=>{p=+v;build();IX.t=0});
+toggle('gr',on=>{showG=on;if(on){showA=false;document.getElementById('ar').classList.remove('on')}rule()},false);
+toggle('ar',on=>{showA=on;if(on){showG=false;document.getElementById('gr').classList.remove('on')}rule()},false);
+build();rule();
+</script>

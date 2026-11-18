@@ -1,0 +1,68 @@
+<!--{"id":"5D-1-parallel-builder","section":"5D","title":"Parallel circuit builder","criteria":["5D.1","5D.2","5D.3","5D.4","5D.5"],
+"blurb":"Add up to four branches in parallel. Every branch gets the full supply voltage, the current splits at the junctions, and adding a branch lowers the equivalent resistance.",
+"source":"Cambridge VCE Physics Units 1&2, 5D Modelling resistance in parallel circuits. Ideal battery, wires and meters. Dot speed only shows the current roughly.","colour":"#f472b6"}-->
+<style>.sl{grid-template-columns:76px 1fr 84px}</style>
+<div class="ctx">Resistors side by side give <b>several paths</b>. The current splits at a junction and joins up again.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#f472b6;gap:8px"><h3 id="ph">Parallel circuit</h3><svg id="sv" viewBox="0 0 860 380"></svg>
+  <div class="rule" style="font-size:17px;padding:8px 14px">Parallel: every branch has <b>the full supply voltage</b>. The currents <b>add up</b> to the total. More branches means <b>less</b> equivalent resistance and more total current.</div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:9px"><h3>Build</h3>
+   <div class="btns"><span style="font-size:18px;font-weight:600;align-self:center;margin-right:4px">Branches</span><button class="nr" data-v="1">1</button><button class="nr on" data-v="2">2</button><button class="nr" data-v="3">3</button><button class="nr" data-v="4">4</button></div>
+   <div class="sl"><span class="nm">Supply</span><input type="range" id="V" min="1" max="24" step="1" value="12"><span class="v" id="Vv"></span></div>
+   <div class="sl" id="s1"><span class="nm" style="color:#7dd3fc">$R_1$</span><input type="range" id="R1" min="1" max="50" step="1" value="20"><span class="v" id="R1v"></span></div>
+   <div class="sl" id="s2"><span class="nm" style="color:#f472b6">$R_2$</span><input type="range" id="R2" min="1" max="50" step="1" value="20"><span class="v" id="R2v"></span></div>
+   <div class="sl" id="s3"><span class="nm" style="color:#4ade80">$R_3$</span><input type="range" id="R3" min="1" max="50" step="1" value="40"><span class="v" id="R3v"></span></div>
+   <div class="sl" id="s4"><span class="nm" style="color:#c4b5fd">$R_4$</span><input type="range" id="R4" min="1" max="50" step="1" value="10"><span class="v" id="R4v"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5"><h3>Calculate</h3>
+   <div id="c1"></div><div id="c2"></div><div id="c3"></div>
+  </div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),X0=90,Y0=50,Y1=250,BY=150,BXS=[260,405,550,695];
+const CL=['#7dd3fc','#f472b6','#4ade80','#c4b5fd'];
+const wires=el('path',{fill:'none',stroke:'#8b96c9','stroke-width':4,'stroke-linejoin':'round'},sv);
+const dg=el('g',{},sv);
+// battery
+el('rect',{x:X0-40,y:BY-14,width:80,height:28,fill:'#1a2150'},sv);
+el('line',{x1:X0-36,x2:X0+36,y1:BY-9,y2:BY-9,stroke:'#eef2ff','stroke-width':5},sv);el('line',{x1:X0-18,x2:X0+18,y1:BY+9,y2:BY+9,stroke:'#eef2ff','stroke-width':10},sv);
+txt(sv,X0-50,BY-2,'+',{fill:'#fbb040','font-size':26,'font-weight':800,'text-anchor':'middle'});txt(sv,X0-50,BY+24,'−',{fill:'#7dd3fc','font-size':26,'font-weight':800,'text-anchor':'middle'});
+const vs=txt(sv,X0+28,BY+8,'',{fill:'#fbb040','font-size':22,'font-weight':700,'font-family':'Space Grotesk'});
+// main ammeter
+const AX=190;el('circle',{cx:AX,cy:Y0,r:22,fill:'#1a2150',stroke:'#4ade80','stroke-width':3},sv);txt(sv,AX,Y0+8,'A',{fill:'#4ade80','font-size':22,'font-weight':800,'text-anchor':'middle'});
+const at=txt(sv,AX,Y0-30,'',{fill:'#4ade80','font-size':21,'font-weight':700,'text-anchor':'middle','font-family':'Space Grotesk'});
+const js=[0,1,2].flatMap(k=>[Y0,Y1].map(y=>{const c=el('circle',{cx:BXS[k],cy:y,r:7,fill:'#eef2ff'},sv);c.k=k;return c}));
+const br=[0,1,2,3].map(k=>{const g=el('g',{},sv),x=BXS[k];el('rect',{x:x-20,y:BY-44,width:40,height:88,rx:4,fill:'#1a2150',stroke:CL[k],'stroke-width':4},g);
+ const f=el('rect',{x:x-16,y:BY-40,width:32,height:80,rx:2,fill:CL[k]},g);
+ const n=txt(g,x+30,BY-22,'',{fill:CL[k],'font-size':19,'font-weight':700}),v=txt(g,x+30,BY+6,'',{fill:'#fbb040','font-size':19,'font-weight':700}),i=txt(g,x+30,BY+34,'',{fill:'#4ade80','font-size':19,'font-weight':700});return{g,f,n,v,i}});
+// current-sharing bar
+const BX=90,BW=690,BT=300,bt=txt(sv,BX,BT-10,'',{fill:'#a5b4d8','font-size':17});
+const bars=[0,1,2,3].map(k=>({r:el('rect',{y:BT,height:44,fill:CL[k],stroke:'#0d1330','stroke-width':3},sv),t:txt(sv,0,BT+30,'',{fill:'#0d1330','font-size':19,'font-weight':800,'text-anchor':'middle'})}));
+let n=2,V=12,R=[20,20,40,10],Ik=[],It=0,segs=[];
+const DS=34,pool=[];for(let i=0;i<80;i++)pool.push(el('circle',{r:6,fill:'#fbb040'},dg));
+function upd(){Ik=R.slice(0,n).map(r=>V/r);It=Ik.reduce((a,b)=>a+b,0);const Req=V/It,xl=BXS[n-1];
+ [1,2,3,4].forEach(k=>document.getElementById('s'+k).style.display=k<=n?'':'none');
+ let d=`M${X0},${Y1} L${X0},${Y0} L${xl},${Y0} M${X0},${Y1} L${xl},${Y1}`;for(let k=0;k<n;k++)d+=` M${BXS[k]},${Y0} L${BXS[k]},${Y1}`;wires.setAttribute('d',d);
+ js.forEach(c=>c.style.display=c.k<n-1?'':'none');
+ const old=segs;segs=[{p:[[X0,Y1],[X0,Y0]],I:It}];let xp=X0;
+ for(let j=0;j<n;j++){const Ij=Ik.slice(j).reduce((a,b)=>a+b,0);segs.push({p:[[xp,Y0],[BXS[j],Y0]],I:Ij},{p:[[BXS[j],Y1],[xp,Y1]],I:Ij},{p:[[BXS[j],Y0],[BXS[j],Y1]],I:Ik[j]});xp=BXS[j]}
+ segs.forEach((s,i)=>s.ph=old[i]?old[i].ph:0);
+ vs.textContent=V+' V';at.textContent=sig(It)+' A';
+ let x=BX;br.forEach((b,k)=>{const on=k<n;b.g.style.display=on?'':'none';bars[k].r.style.display=bars[k].t.style.display=on?'':'none';if(!on)return;
+  b.f.setAttribute('fill-opacity',(.15+.6*R[k]/50).toFixed(2));b.n.textContent=R[k]+' Ω';b.v.textContent=V+' V';b.i.textContent=sig(Ik[k])+' A';
+  const w=BW*Ik[k]/It;bars[k].r.setAttribute('x',x);bars[k].r.setAttribute('width',w);bars[k].t.setAttribute('x',x+w/2);bars[k].t.textContent=w>110?'I'+(k+1)+' = '+sig(Ik[k])+' A':w>48?sig(Ik[k],2):'';x+=w});
+ bt.textContent=n===1?'All of the '+sig(It)+' A goes through R1':'The total current of '+sig(It)+' A splits between the branches';
+ document.getElementById('ph').textContent='Parallel circuit with '+n+' branch'+(n>1?'es':'');
+ document.getElementById('c1').innerHTML='1/R<sub>eq</sub> = '+R.slice(0,n).map(r=>'1/'+r).join(' + ');
+ document.getElementById('c2').innerHTML='R<sub>eq</sub> = <b class="hi">'+sig(Req)+' Ω</b>';
+ document.getElementById('c3').innerHTML='I<sub>total</sub> = '+V+' ÷ '+sig(Req)+' = <b class="hi">'+sig(It)+' A</b>'}
+group('.nr',v=>{n=+v;upd()});
+slider('V',x=>x+' V',x=>{V=x;upd()});[1,2,3,4].forEach(k=>slider('R'+k,x=>x+' Ω',x=>{R[k-1]=x;upd()}));
+let lt=0;
+IX.anims.push(t=>{const d=Math.max(0,t-lt);lt=t;let u=0;
+ segs.forEach(s=>{s.ph+=d*140*s.I/(s.I+1.5);const[a,b]=s.p,len=Math.hypot(b[0]-a[0],b[1]-a[1]);
+  for(let q=(s.ph%DS);q<len;q+=DS){if(u>=pool.length)break;const c=pool[u++],k=q/len;c.style.display='';c.setAttribute('cx',a[0]+k*(b[0]-a[0]));c.setAttribute('cy',a[1]+k*(b[1]-a[1]))}});
+ for(;u<pool.length;u++)pool[u].style.display='none'});
+</script>

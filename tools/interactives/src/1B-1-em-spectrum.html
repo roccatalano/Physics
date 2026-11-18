@@ -1,0 +1,88 @@
+<!--{"id":"1B-1-em-spectrum","section":"1B","title":"The electromagnetic spectrum","criteria":["1B.2","1B.3","1B.4"],
+"blurb":"Drag along the spectrum: read the wavelength, frequency (from c = fλ), region and uses. Show the Sun's output: mainly UV, visible and IR.",
+"source":"Cambridge VCE Physics Units 1&2, 1B Electromagnetic waves, Figure 1B–3, Table 1B–1, Figure 1B–4. Region boundaries are approximate. Sun curve: ideal 5800 K emitter.","colour":"#c084fc"}-->
+<div class="ctx">Every electromagnetic wave travels at $c = 3.00 \times 10^{8}\ \text{m s}^{-1}$ in a vacuum. <b>Drag the marker</b> along the spectrum: as the wavelength gets shorter, the frequency gets higher.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#c084fc"><h3>Drag along the spectrum (log scale: each tick is 100 times bigger)</h3><svg id="sv" viewBox="0 0 860 440" style="cursor:ew-resize;touch-action:none"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Jump to a region</h3>
+   <div class="btns" id="rb"></div>
+   <div class="btns"><button id="sun">☀ The Sun's output</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.45;flex:1"><h3>Readout</h3>
+   <div class="big" id="rn" style="font-size:28px"></div>
+   <div>$\lambda$ <span class="kr">=</span> <b class="hi" id="lv"></b></div>
+   <div>$f = \dfrac{c}{\lambda}$ <span class="kr">=</span> <b class="hi" id="fv2"></b></div>
+   <div id="rg" style="font-size:17px;color:#a5b4d8"></div><div id="us" style="margin-top:6px;font-size:17px;color:#cfd7f5"></div>
+  </div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),C=3e8,L0=-13,L1=4,X0=40,XW=780,BY=150,BH=70;
+// gamma on the left (high f), radio on the right (long wavelength), as in Figure 1B-3
+const R=[
+ ['Gamma rays',-13,-11,'#f87171','Sterilising food and medical tools; PET scans; cancer therapy'],
+ ['X-rays',-11,-8,'#fb923c','Medical imaging and CT scans; airport security; checking welds and art forgeries'],
+ ['Ultraviolet',-8,Math.log10(400e-9),'#c084fc','Vitamin D made in the skin; sterilising; UV astronomy'],
+ ['Visible',Math.log10(400e-9),Math.log10(700e-9),'url(#vis)','Vision and lighting; lasers; photosynthesis'],
+ ['Infrared',Math.log10(700e-9),-3,'#f472b6','Thermal imaging; TV remotes; optical fibre signals'],
+ ['Microwaves',-3,0,'#fbbf24','Microwave ovens; radar; mobile phones and wifi'],
+ ['Radio',0,4,'#4ade80','AM and FM radio, TV; GPS; MRI; RFID tags']];
+const sx=l=>X0+(l-L0)/(L1-L0)*XW, lx=x=>L0+(x-X0)/XW*(L1-L0);
+const defs=el('defs',{},sv),g=el('linearGradient',{id:'vis',x1:0,x2:1,y1:0,y2:0},defs);
+['#8b00ff','#2b5cff','#00c8ff','#22e04b','#ffe600','#ff8a00','#ff1f1f'].forEach((c,i)=>el('stop',{offset:i/6,'stop-color':c},g));
+R.forEach(([n,a,b,c])=>{el('rect',{x:sx(a),y:BY,width:sx(b)-sx(a),height:BH,fill:c,'fill-opacity':c.startsWith('url')?1:.55},sv)});
+el('rect',{x:X0,y:BY,width:XW,height:BH,fill:'none',stroke:'#36418a','stroke-width':2},sv);
+R.forEach(([n,a,b])=>{if(n==='Visible')return;const s={'Gamma rays':'Gamma','Ultraviolet':'UV','Infrared':'IR','Microwaves':'Micro'}[n]||n;txt(sv,(sx(a)+sx(b))/2,BY+BH/2+7,s,{'text-anchor':'middle','font-size':19,'font-weight':700,fill:'#fff'})});
+// visible label with a pointer
+el('line',{x1:sx(-6.3),x2:sx(-6.3),y1:BY+BH,y2:BY+BH+16,stroke:'#fff','stroke-width':2},sv);
+// wavelength axis below, frequency axis above
+for(let l=-12;l<=4;l+=2){const x=sx(l);el('line',{x1:x,x2:x,y1:BY+BH,y2:BY+BH+8,stroke:'#5b6690','stroke-width':2},sv);
+ const t=txt(sv,x,BY+BH+30,'',{'text-anchor':'middle','font-size':16,fill:'#a5b4d8'});t.innerHTML=`10<tspan dy="-7" font-size="12">${l}</tspan>`}
+txt(sv,X0+XW,BY+BH+54,'wavelength λ (m) →',{'text-anchor':'end','font-size':16,fill:'#a5b4d8'});
+txt(sv,sx(-6.3),BY+BH+54,'visible',{'text-anchor':'middle','font-size':16,fill:'#fff'});
+[22,20,18,16,14,12,10,8,6].forEach(e=>{const x=sx(Math.log10(C)-e);if(x<X0||x>X0+XW)return;el('line',{x1:x,x2:x,y1:BY-8,y2:BY,stroke:'#5b6690','stroke-width':2},sv);
+ const t=txt(sv,x,BY-14,'',{'text-anchor':'middle','font-size':16,fill:'#a5b4d8'});t.innerHTML=`10<tspan dy="-7" font-size="12">${e}</tspan>`});
+txt(sv,X0,BY-40,'← frequency f (Hz) higher',{'font-size':16,fill:'#a5b4d8'});
+// wave sketch (not to scale)
+const wp=el('path',{fill:'none',stroke:'#7dd3fc','stroke-width':4},sv);txt(sv,X0+XW,22,'wave sketch, not to scale',{'text-anchor':'end','font-size':14,fill:'#5b6690'});
+// marker
+const mk=el('g',{},sv),ml=el('line',{y1:BY-30,y2:BY+BH+12,stroke:'#fff','stroke-width':3},mk),mt=el('path',{fill:'#fbb040',stroke:'#0d1330','stroke-width':2},mk);
+// Sun inset (linear wavelength 0 to 2500 nm)
+const sun=el('g',{},sv);sun.style.display='none';
+const IX0=90,IW=700,IY=412,IH=100,NMX=2500,ix=nm=>IX0+nm/NMX*IW;
+function planck(nm){const l=nm*1e-9,h=6.626e-34,k=1.381e-23;return 1/Math.pow(l,5)/(Math.exp(h*C/(l*k*5800))-1)}
+let pm=0;for(let n=100;n<=2500;n+=5)pm=Math.max(pm,planck(n));
+[[100,400,'#c084fc','UV 7%'],[400,700,'url(#vis)','Visible 44%'],[700,2500,'#f472b6','IR 48%']].forEach(([a,b,c,s])=>{let d=`M${ix(a)},${IY}`;for(let n=a;n<=b;n+=5)d+=`L${ix(n).toFixed(1)},${(IY-planck(n)/pm*IH).toFixed(1)}`;d+=`L${ix(b)},${IY}Z`;el('path',{d,fill:c,'fill-opacity':c.startsWith('url')?.85:.55},sun)});
+let dd='';for(let n=100;n<=2500;n+=5)dd+=(n>100?'L':'M')+ix(n).toFixed(1)+','+(IY-planck(n)/pm*IH).toFixed(1);el('path',{d:dd,fill:'none',stroke:'#fff','stroke-width':2.5},sun);
+el('line',{x1:IX0,x2:IX0+IW,y1:IY,y2:IY,stroke:'#5b6690','stroke-width':2},sun);
+[500,1000,1500,2000,2500].forEach(n=>txt(sun,ix(n),IY+19,n,{'text-anchor':'middle','font-size':14,fill:'#a5b4d8'}));txt(sun,IX0-10,IY+19,"λ (nm)",{'text-anchor':'middle','font-size':14,fill:'#a5b4d8'});
+txt(sun,ix(150),IY-IH+40,'UV 7%',{'text-anchor':'middle','font-size':18,fill:'#c084fc','font-weight':700});
+txt(sun,ix(550),IY-IH-6,'Visible 44%',{'text-anchor':'middle','font-size':18,fill:'#fff','font-weight':700});
+txt(sun,ix(1350),IY-IH+46,'Infrared 48%',{'text-anchor':'middle','font-size':18,fill:'#f472b6','font-weight':700});
+txt(sun,IX0+IW,IY-IH+30,'other 1%',{'text-anchor':'end','font-size':15,fill:'#a5b4d8'});
+txt(sun,IX0+IW,IY-IH-6,"☀ Sun's output, zoomed in to 0 to 2500 nm",{'text-anchor':'end','font-size':15,fill:'#fbb040','font-weight':700});
+const smk=el('line',{y1:IY-IH-2,y2:IY,stroke:'#fbb040','stroke-width':3},sun);
+const hint=txt(sv,430,360,'Drag anywhere on the spectrum',{'text-anchor':'middle','font-size':18,fill:'#5b6690'});
+let L=Math.log10(550e-9),showSun=false;
+function lam(l){const v=Math.pow(10,l);const u=[[1e3,'km'],[1,'m'],[1e-3,'mm'],[1e-6,'μm'],[1e-9,'nm'],[1e-12,'pm']].find(([s])=>v>=s*.9999)||[1e-12,'pm'];return sig(v/u[0])+' '+u[1]}
+function sci(v){const e=Math.floor(Math.log10(v)+1e-9),m=v/Math.pow(10,e);return `${m.toFixed(2)} × 10<sup>${e}</sup> Hz`}
+function region(l){return R.find(([n,a,b])=>l>=a&&l<b)||(l<L0+1?R[0]:R[6])}
+function upd(){L=Math.max(L0,Math.min(L1,L));const x=sx(L),r=region(L);ml.setAttribute('x1',x);ml.setAttribute('x2',x);mt.setAttribute('d',`M${x-12},${BY-48}L${x+12},${BY-48}L${x},${BY-30}Z`);
+ document.getElementById('rn').textContent=r[0];document.getElementById('rn').style.color=r[3].startsWith('url')?'#fff':r[3];
+ document.getElementById('lv').textContent=lam(L);document.getElementById('fv2').innerHTML=sci(C/Math.pow(10,L));document.getElementById('us').textContent='Uses: '+r[4];document.getElementById('rg').textContent='Region: '+(r[0]==='Gamma rays'?'below 10 pm':r[0]==='Radio'?'above 1 m':lam(r[2])+' down to '+lam(r[1]));
+ document.querySelectorAll('#rb button').forEach(b=>b.classList.toggle('on',b.dataset.v===r[0]));
+ const nm=Math.pow(10,L)*1e9;smk.style.display=nm>=0&&nm<=NMX?'':'none';smk.setAttribute('x1',ix(nm));smk.setAttribute('x2',ix(nm));
+ if(nm>=380&&nm<=750)ml.setAttribute('stroke','#fff');}
+document.getElementById('rb').innerHTML=R.map(([n])=>`<button data-v="${n}" style="padding:6px 10px">${{'Gamma rays':'Gamma','Ultraviolet':'UV','Infrared':'IR','Microwaves':'Microwave'}[n]||n}</button>`).join('');
+const centre={'Visible':Math.log10(550e-9),'Ultraviolet':Math.log10(200e-9),'Infrared':Math.log10(10e-6)};
+document.querySelectorAll('#rb button').forEach(b=>b.onclick=()=>{const r=R.find(x=>x[0]===b.dataset.v);L=centre[r[0]]??(r[1]+r[2])/2;upd()});
+const sb=document.getElementById('sun');sb.onclick=()=>{showSun=!showSun;sb.classList.toggle('on',showSun);sun.style.display=showSun?'':'none';hint.style.display=showSun?'none':'';
+ if(showSun&&!(L>-7.1&&L<-5.6)){L=Math.log10(550e-9);upd()}};
+let drag=false;const pt=e=>{const p=sv.createSVGPoint();p.x=e.clientX;p.y=e.clientY;return p.matrixTransform(sv.getScreenCTM().inverse())};
+sv.addEventListener('pointerdown',e=>{const p=pt(e);if(showSun&&p.y>IY-IH-30){if(p.x>=IX0&&p.x<=IX0+IW){L=Math.log10(Math.max(100,(p.x-IX0)/IW*NMX)*1e-9);drag=2;upd()}return}drag=1;L=lx(p.x);upd();sv.setPointerCapture(e.pointerId)});
+sv.addEventListener('pointermove',e=>{if(!drag)return;const p=pt(e);if(drag===2)L=Math.log10(Math.max(100,Math.min(NMX,(p.x-IX0)/IW*NMX))*1e-9);else L=lx(p.x);upd()});
+addEventListener('pointerup',()=>drag=false);
+upd();
+IX.anims.push(t=>{const per=14+(L-L0)/(L1-L0)*300;let d='';for(let x=X0;x<=X0+XW;x+=2)d+=(x>X0?'L':'M')+x+','+(60-28*Math.sin(2*Math.PI*((x-X0)/per-t*.5))).toFixed(1);wp.setAttribute('d',d);const r=region(L);wp.setAttribute('stroke',r[3].startsWith('url')?'#fff':r[3])});
+</script>

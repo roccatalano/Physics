@@ -1,0 +1,63 @@
+<!--{"id":"4B-2-sun-fusion","section":"4B","title":"Fusion in the Sun","criteria":["4B.1"],
+"blurb":"The proton–proton chain step by step: four hydrogen nuclei end up as one helium-4 nucleus. Then turn the Sun's mass loss per second into its power output with E = Δmc² and P = E/t.",
+"source":"Cambridge VCE Physics Units 1&2, 4B (fusion in the Sun, Skills: power output of a star). Neutrinos (ν) added: the textbook equations leave them out.","colour":"#fbb040"}-->
+<div class="ctx">The Sun's core fuses hydrogen into helium in three steps. <b>Four protons go in, one helium-4 nucleus comes out</b>, and it is a little lighter than the four protons were.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#fbb040"><h3 id="ph">Proton–proton chain</h3><svg id="sv" viewBox="0 0 720 270"></svg>
+  <div style="font-size:19px;display:flex;flex-direction:column;gap:2px;margin-top:2px">
+   <div class="st" data-s="0"><b class="hi">1</b> ${}^{1}_{1}\text{H} + {}^{1}_{1}\text{H} \rightarrow {}^{2}_{1}\text{H} + {}^{0}_{1}\text{e} + \nu$</div>
+   <div class="st" data-s="1"><b class="hi">2</b> ${}^{2}_{1}\text{H} + {}^{1}_{1}\text{H} \rightarrow {}^{3}_{2}\text{He} + \gamma$</div>
+   <div class="st" data-s="2"><b class="hi">3</b> ${}^{3}_{2}\text{He} + {}^{3}_{2}\text{He} \rightarrow {}^{4}_{2}\text{He} + {}^{1}_{1}\text{H} + {}^{1}_{1}\text{H}$</div>
+  </div>
+ </div>
+ <div class="side">
+  <div class="card ctl" style="--c:#7dd3fc"><h3>Power of a star</h3>
+   <div class="sl" style="grid-template-columns:118px 1fr 70px"><span class="nm">Mass lost each second</span><input type="range" id="m" min="1" max="10" step="0.1" value="4.2"><span class="v" id="mv"></span></div>
+   <div style="font-size:16px;color:#a5b4d8;margin-top:-6px">million tonnes per second. The Sun fuses 600 million t of hydrogen a second and loses 0.7% of it.</div>
+   <div class="btns"><button id="sun">The Sun: 4.20</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:18px;line-height:1.55"><h3>Calculate</h3><div id="o"></div></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),CYC=11;
+const P='#f472b6',N='#9aa3c7';
+function nuc(g,parts){// parts: list of 'p'/'n'
+ const off=[[0,0],[18,0],[9,-16],[9,15]];g.innerHTML='';parts.forEach((t,i)=>el('circle',{cx:parts.length===1?0:off[i][0]-9,cy:parts.length===1?0:off[i][1],r:15,fill:t==='p'?P:N,stroke:'#0d1330','stroke-width':2},g))}
+function mk(parts){const g=el('g',{},sv);nuc(g,parts);g.parts=parts.join('');return g}
+function at(g,x,y,o=1){g.setAttribute('transform',`translate(${x},${y})`);g.setAttribute('opacity',o)}
+const L=(a,b,u)=>a+(b-a)*Math.max(0,Math.min(1,u));
+// objects: two lanes (top y=80, bottom y=210)
+const lanes=[70,185].map(y=>({y,a:mk(['p']),b:mk(['p']),c:mk(['p']),e:txt(sv,0,0,'e⁺',{fill:'#fbb040','font-size':24,'font-weight':700}),nu:txt(sv,0,0,'ν',{fill:'#cfd7f5','font-size':24}),g:el('path',{fill:'none',stroke:'#fde047','stroke-width':3},sv),gt:txt(sv,0,0,'γ',{fill:'#fde047','font-size':22,'font-weight':700}),lab:txt(sv,0,0,'',{'font-size':20,fill:'#cfd7f5','text-anchor':'middle'})}));
+const out1=mk(['p']),out2=mk(['p']),he4L=txt(sv,530,140,'',{'font-size':22,fill:'#4ade80','text-anchor':'middle','font-weight':700});
+const key=el('g',{},sv);el('circle',{cx:520,cy:22,r:9,fill:P},key);txt(key,536,28,'proton',{'font-size':17});el('circle',{cx:615,cy:22,r:9,fill:N},key);txt(key,631,28,'neutron',{'font-size':17});
+const net=txt(sv,360,262,'',{'font-size':21,fill:'#fbb040','text-anchor':'middle','font-weight':700});
+const sts=[...document.querySelectorAll('.st')];
+IX.anims.push(t=>{const s=t%CYC;const stage=s<3.3?0:s<6.3?1:s<9?2:3;
+ sts.forEach((d,i)=>d.style.opacity=stage===3||i===stage?1:.35);
+ lanes.forEach((l,k)=>{const y=l.y;const want=s<1.2?'p':s<4.5?'pn':'pnp';if(l.a.parts!==want){nuc(l.a,want.split(''));l.a.parts=want}
+  // step 1: a and b collide at x=170 by s=1.2 -> deuteron
+  if(s<1.2){if(l.a.parts!=='p')nuc(l.a,['p']),l.a.parts='p';at(l.a,L(40,158,s/1.2),y);at(l.b,L(300,182,s/1.2),y);}
+  else{if(l.a.parts!=='pn'&&s<3.3){nuc(l.a,['p','n']);l.a.parts='pn'}at(l.b,0,0,0)}
+  const u1=(s-1.2)/1.6;[l.e,l.nu].forEach(e=>e.style.display=s>1.2&&s<3?'':'none');
+  l.e.setAttribute('x',L(180,260,u1));l.e.setAttribute('y',L(y-14,y-60+(k?100:0),u1)*1);l.nu.setAttribute('x',L(150,70,u1));l.nu.setAttribute('y',L(y-14,y-50+(k?100:0),u1));
+  // step 2: proton c arrives from right
+  if(s<3.3){at(l.c,0,0,0)}else if(s<4.5){at(l.c,L(320,186,(s-3.3)/1.2),y);if(s>3.3&&l.a.parts!=='pn'){nuc(l.a,['p','n']);l.a.parts='pn'}at(l.a,170,y)}
+  else{at(l.c,0,0,0);if(l.a.parts!=='ppn'&&s<6.3){nuc(l.a,['p','n','p']);l.a.parts='ppn'}}
+  const gv=s>4.5&&s<6.2;l.g.style.display=l.gt.style.display=gv?'':'none';
+  if(gv){const x0=190+(s-4.5)*90;let d='';for(let i=0;i<=60;i+=3)d+=(i?'L':'M')+(x0+i)+','+(y+(k?14:-14)+6*Math.sin(i/3));l.g.setAttribute('d',d);l.gt.setAttribute('x',x0+66);l.gt.setAttribute('y',y+(k?22:-8))}
+  l.lab.style.display=s>1.3&&s<6.3?'':'none';l.lab.setAttribute('x',170);l.lab.setAttribute('y',y+48);l.lab.textContent=s<4.5?'H-2 (deuterium)':'He-3';
+  // step 3: He-3 nuclei move to centre (520,145)
+  if(s>=6.3&&s<9){const u=(s-6.3)/1.3;at(l.a,L(170,505+k*30,u),L(y,145,u));if(u>=1){at(l.a,0,0,0)}}
+  if(s<6.3)at(l.a,s<1.2?L(40,158,s/1.2):170,y);if(s>=9)at(l.a,0,0,0);
+ });
+ // helium-4 and the two freed protons
+ const he=lanes[0].c;if(s>=7.6){at(out1,L(520,680,(s-7.6)/1.4),L(145,60,(s-7.6)/1.4));at(out2,L(540,680,(s-7.6)/1.4),L(145,230,(s-7.6)/1.4))}else{at(out1,0,0,0);at(out2,0,0,0)}
+ if(!sv.he){sv.he=mk(['p','n','p','n'])}at(sv.he,530,145,s>=7.6?1:0);he4L.textContent=s>=7.6?'He-4':'';he4L.setAttribute('y',190);
+ net.textContent=s>=9?'Net: 4 H-1 → He-4 + 2e⁺ + 2ν + energy (26.7 MeV)':'';
+ document.getElementById('ph').textContent=['Step 1: two protons fuse','Step 2: deuterium captures a proton','Step 3: two He-3 nuclei fuse','Proton–proton chain: net result'][stage];
+});
+function calc(m){const dm=m*1e9,E=dm*9e16;const e=v=>{const p=Math.floor(Math.log10(v));return (v/10**p).toFixed(2)+' × 10<sup>'+p+'</sup>'};
+ document.getElementById('o').innerHTML=`Δ<i>m</i> = ${m.toFixed(2)} × 10<sup>6</sup> × 1000 = ${e(dm)} kg<br><i>E</i> = Δ<i>mc</i><sup>2</sup> = ${e(dm)} × (3.00 × 10<sup>8</sup>)<sup>2</sup> = ${e(E)} J<br><i>P</i> = <i>E</i>/<i>t</i> = <span class="big">${e(E)} W</span>`}
+const ms=slider('m',v=>v.toFixed(2),calc);document.getElementById('sun').onclick=()=>{ms.value=4.2;ms.dispatchEvent(new Event('input'))};
+</script>

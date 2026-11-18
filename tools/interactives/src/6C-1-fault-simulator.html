@@ -1,0 +1,106 @@
+<!--{"id":"6C-1-fault-simulator","section":"6C","title":"Fault simulator: who gets the current?","criteria":["6C.2","6C.4","6C.5","6C.6"],
+"blurb":"A loose active wire touches a toaster's metal case while someone holds it. Compare no earth, earth with a circuit breaker, an RCD, and double insulation, with dry or wet skin.",
+"source":"Cambridge VCE Physics Units 1&2, 6C Electrical safety, Tables 6C–1, 6C–2. DC model: skin 100 kΩ dry, 1 kΩ wet; wires 0.5 Ω; CB 16 A, 10 ms; RCD 30 mA, 30 ms.","colour":"#f472b6"}-->
+<div class="ctx">A knife dislodges a heater wire so the <b>active touches the metal case</b> of a toaster. Someone is holding the toaster. <b>Where does the current go, and what switches it off?</b></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc"><h3 id="ptitle">Switchboard, wiring and toaster</h3><svg id="sv" viewBox="0 0 860 430"></svg><div class="rule" id="rule" style="font-size:17px;padding:8px 14px;min-height:62px"></div></div>
+ <div class="side" style="width:360px">
+  <div class="card ctl" style="--c:#fbb040;gap:9px"><h3>Protection</h3>
+   <div class="btns"><button class="cs on" data-v="m">Metal case</button><button class="cs" data-v="d">Double insulated</button></div>
+   <div class="btns"><button id="ew">Earth wire</button><button id="rcd">RCD</button></div>
+   <div class="btns"><button class="sk on" data-v="1e5">Dry skin</button><button class="sk" data-v="1e3">Wet skin</button></div>
+   <div class="btns"><button id="fl" style="border-color:#f472b6">Make the fault</button><button id="rs">Reset</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:18px;line-height:1.45"><h3>During the fault</h3><div id="pw" style="font-weight:700"></div>
+   <div>Through the person: <b id="ip" class="pk"></b></div>
+   <div>In the earth wire: <b id="ie" class="gr"></b></div>
+   <div>Active <b id="ia"></b> · Neutral <b id="in"></b></div>
+   <div>Shock: <b id="tt" class="hi"></b></div>
+  </div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv');
+let cas='m',earth=true,rcd=false,Rb=1e5,fault=false,t0=0,tSim=0,tripAt=Infinity,tripBy='';
+const YA=100,YN=150,YE=200,BX=200,CX0=400,CX1=580,CY0=56,CY1=264,GY=405,PX=690;
+const AC='#c47a3c',NC='#3b82f6',EC='#4ade80';
+// switchboard
+el('rect',{x:16,y:44,width:BX-16,height:300,rx:12,fill:'#141a40',stroke:'#36418a','stroke-width':2},sv);txt(sv,30,334,'switchboard',{fill:'#8b96c4','font-size':16});
+txt(sv,28,YA-36,'230 V supply',{'font-size':17});
+const cbB=el('rect',{x:120,y:YA-18,width:62,height:36,rx:7,fill:'#232c63',stroke:'#f472b6','stroke-width':3},sv);const cbT=txt(sv,151,YA+6,'CB',{'text-anchor':'middle','font-size':16,'font-weight':700,fill:'#f472b6'});
+const rcB=el('rect',{x:84,y:YA-26,width:28,height:YN-YA+52,rx:6,fill:'#232c63',stroke:'#7dd3fc','stroke-width':3},sv);const rcT=txt(sv,98,YN+48,'RCD',{'text-anchor':'middle','font-size':15,'font-weight':700,fill:'#7dd3fc'});
+el('line',{x1:70,x2:120,y1:YA,y2:YA,stroke:AC,'stroke-width':5},sv);el('line',{x1:70,x2:BX,y1:YN,y2:YN,stroke:NC,'stroke-width':5},sv);
+el('line',{x1:60,x2:BX,y1:YE+40,y2:YE+40,stroke:EC,'stroke-width':5},sv);el('line',{x1:60,x2:60,y1:YN,y2:YE+40,stroke:'#8b96c4','stroke-width':3,'stroke-dasharray':'5 4'},sv);
+txt(sv,68,YE+28,'N–E link',{fill:'#8b96c4','font-size':14});
+// stake
+el('line',{x1:160,x2:160,y1:YE+40,y2:GY+10,stroke:EC,'stroke-width':5},sv);[0,1,2].forEach(i=>el('line',{x1:160-18+i*6,x2:160+18-i*6,y1:GY+14+i*7,y2:GY+14+i*7,stroke:EC,'stroke-width':3},sv));
+txt(sv,172,GY-14,'earth stake',{fill:EC,'font-size':15});
+// ground
+el('line',{x1:160,x2:820,y1:GY,y2:GY,stroke:'#5b6690','stroke-width':3,'stroke-dasharray':'10 6'},sv);txt(sv,780,GY-10,'ground',{fill:'#8b96c4','font-size':15,'text-anchor':'middle'});
+// cables
+el('line',{x1:182,x2:CX0,y1:YA,y2:YA,stroke:AC,'stroke-width':6},sv);el('line',{x1:BX,x2:CX0,y1:YN,y2:YN,stroke:NC,'stroke-width':6},sv);
+txt(sv,230,YA-12,'active',{fill:'#e0a06a','font-size':16});txt(sv,230,YN-12,'neutral',{fill:'#60a5fa','font-size':16});
+const ewire=el('path',{d:`M${BX} ${YE+40}H300V${YE}H${CX0}`,fill:'none',stroke:EC,'stroke-width':6},sv);const ewY=el('path',{d:`M${BX} ${YE+40}H300V${YE}H${CX0}`,fill:'none',stroke:'#fde047','stroke-width':6,'stroke-dasharray':'10 10'},sv);
+const ewt=txt(sv,230,YE+28,'earth',{fill:EC,'font-size':16});const brk=txt(sv,212,YE+70,'✕ broken',{fill:'#f472b6','font-size':17,'font-weight':700});
+// toaster
+const caseR=el('rect',{x:CX0,y:CY0,width:CX1-CX0,height:CY1-CY0,rx:14,fill:'#2a3368',stroke:'#cbd5e1','stroke-width':6},sv);
+const ins=el('rect',{x:CX0+10,y:CY0+10,width:CX1-CX0-20,height:CY1-CY0-20,rx:10,fill:'none',stroke:'#cbd5e1','stroke-width':3,'stroke-dasharray':'8 6'},sv);
+const caseT=txt(sv,(CX0+CX1)/2,CY1-22,'metal case',{'text-anchor':'middle','font-size':17,fill:'#cbd5e1'});
+el('line',{x1:CX0,x2:440,y1:YA,y2:YA,stroke:AC,'stroke-width':5},sv);el('line',{x1:CX0,x2:540,y1:YN,y2:YN,stroke:NC,'stroke-width':5},sv);el('line',{x1:540,x2:540,y1:YA,y2:YN,stroke:'#cfd7f5','stroke-width':4},sv);
+let zz='M440 '+YA;for(let i=1;i<=10;i++)zz+=`L${440+i*10} ${YA+(i%2?-10:10)}`;zz+=`L540 ${YA}`;el('path',{d:zz,fill:'none',stroke:'#fb923c','stroke-width':4},sv);
+txt(sv,490,YA+40,'heater',{'text-anchor':'middle','font-size':15,fill:'#fb923c'});
+const fz=el('path',{d:`M470 ${YA-8}L480 80L462 74L474 ${CY0}`,fill:'none',stroke:'#f472b6','stroke-width':5},sv);
+// person
+const pg=el('g',{},sv);el('circle',{cx:PX,cy:190,r:24,fill:'none',stroke:'#eef2ff','stroke-width':5},pg);
+el('path',{d:`M${PX} 214V320M${PX} 320L${PX-26} ${GY}M${PX} 320L${PX+26} ${GY}M${PX} 240L${CX1+4} 200M${PX} 240L${PX+40} 290`,fill:'none',stroke:'#eef2ff','stroke-width':6,'stroke-linecap':'round'},pg);
+
+// dots along polylines
+function poly(pts){const seg=[];let L=0;for(let i=1;i<pts.length;i++){const[a,b]=[pts[i-1],pts[i]];const l=Math.hypot(b[0]-a[0],b[1]-a[1]);seg.push([a,b,L,l]);L+=l}return{seg,L,at(s){s=((s%L)+L)%L;for(const[a,b,o,l]of seg)if(s<=o+l){const u=(s-o)/l;return[a[0]+u*(b[0]-a[0]),a[1]+u*(b[1]-a[1])]}return pts[0]}}}
+const P={n:poly([[70,YA],[440,YA],[540,YA],[540,YN],[70,YN]]),
+ e:poly([[70,YA],[470,YA],[474,CY0],[CX0,CY0],[CX0,YE],[300,YE],[300,YE+40],[60,YE+40],[60,YN],[70,YN]]),
+ p:poly([[70,YA],[470,YA],[474,CY0],[CX1,CY0],[CX1,200],[PX,240],[PX,320],[PX,GY],[160,GY],[160,YE+40],[60,YE+40],[60,YN],[70,YN]])};
+const D={};for(const k in P){D[k]={ph:0,I:0,c:k==='n'?'#fde047':k==='e'?'#4ade80':'#f472b6',d:[]};const n=Math.round(P[k].L/45);for(let i=0;i<n;i++)D[k].d.push(el('circle',{r:k==='n'?5:6,fill:D[k].c},sv))}
+// timeline
+const TX=230,TW=560,TY=24;el('rect',{x:TX,y:TY-8,width:TW,height:14,rx:7,fill:'#141a40',stroke:'#36418a','stroke-width':2},sv);
+const tbar=el('rect',{x:TX,y:TY-6,height:10,rx:5,fill:'#f472b6'},sv);txt(sv,TX-10,TY+5,'0',{'text-anchor':'end','font-size':15,fill:'#8b96c4'});txt(sv,TX+TW+8,TY+5,'1 s',{'font-size':15,fill:'#8b96c4'});
+[[.01,'10 ms'],[.03,'30 ms'],[.2,'200 ms'],[.4,'400 ms']].forEach(([s,l],i)=>{const x=TX+Math.sqrt(s)*TW;el('line',{x1:x,x2:x,y1:TY-12,y2:TY+10,stroke:'#5b6690','stroke-width':2},sv);txt(sv,x+(i===0?-12:i===1?12:0),TY+28,l,{'text-anchor':'middle','font-size':14,fill:'#8b96c4'})});
+const fmtI=I=>I===0?'0':I>=1?sig(I,3)+' A':sig(I*1000,3)+' mA';
+const T1=[[.001,'Able to be felt'],[.003,'Easily felt'],[.01,'Painful'],[.016,'Hard to let go'],[.02,'Breathing muscles paralysed'],[.05,'Severe shock'],[.1,'Heart fibrillation'],[.15,'Breathing very difficult'],[.2,'Death likely'],[.5,'Burns, breathing stops']];
+function effect(I){let r='Not felt';T1.forEach(([a,s])=>{if(I>=a)r=s});return r}
+function model(){// currents during the fault (before any trip)
+ const Il=1000/230;if(!fault||cas==='d')return{Il,Ip:0,Ie:0,trip:Infinity,by:''};
+ let Ip,Ie=0,trip=Infinity,by='';
+ if(earth){Ie=230/1.0;Ip=115/Rb;trip=0.010;by='CB'}else{Ip=230/Rb}
+ if(rcd&&Ip+Ie>=0.03&&0.03<trip){trip=0.03;by='RCD'}
+ if(!earth&&Ip+Il>16){trip=0.01;by='CB'}
+ return{Il,Ip,Ie,trip,by}}
+function setup(){document.getElementById('ew').disabled=cas==='d';
+ const m=cas==='m';caseR.setAttribute('fill',m?'#3a4478':'#1e2a5a');caseR.setAttribute('stroke',m?'#cbd5e1':'#a78bfa');ins.style.display=m?'none':'';caseT.textContent=m?'metal case':'double insulated';caseT.setAttribute('fill',m?'#cbd5e1':'#a78bfa');
+ const eOn=earth&&m;[ewire,ewY,ewt].forEach(e=>e.style.display=m?'':'none');[ewire,ewY].forEach(e=>e.style.opacity=eOn?1:.25);brk.style.display=m&&!earth?'':'none';ewt.style.opacity=eOn?1:.4;
+ rcB.style.display=rcT.style.display=rcd?'':'none';fz.style.display=fault&&m?'':'none';
+ if(fault&&!m){fz.style.display='';fz.setAttribute('d',`M470 ${YA-8}L480 84L466 80L472 ${CY0+12}`)}else fz.setAttribute('d',`M470 ${YA-8}L480 80L462 74L474 ${CY0}`)}
+function reset(){fault=false;tSim=0;setup()}
+group('.cs',v=>{cas=v;reset()});group('.sk',v=>{Rb=+v;reset()});toggle('ew',v=>{earth=v;reset()},true);toggle('rcd',v=>{rcd=v;reset()},false);
+document.getElementById('fl').onclick=()=>{reset();fault=true;tSim=0;setup()};document.getElementById('rs').onclick=reset;
+const RULE={none:'Press <b>Make the fault</b>. Normal current goes out on the active and back on the neutral.',
+ d:'<b>Double insulation:</b> two layers of insulation between live parts and the user, so the fault cannot reach the outside. No earth wire is needed.',
+ cb:'<b>Earthed:</b> the thick earth wire is a very low resistance path, so a huge current flows to earth and the <b>circuit breaker</b> trips almost at once.',
+ rcd:'<b>RCD:</b> it compares active and neutral. Current leaking through the person makes them unequal, so it trips within 30 ms.',
+ rcdlow:'The leak is under 30 mA, so the RCD does not trip. Dry skin keeps the current small: it is felt but not dangerous.',
+ open:'<b>No protection works:</b> the current through the person is far below the breaker rating, so the CB never trips. The shock keeps going.'};
+IX.anims.push((t,dt)=>{const k=dt*IX.speed*(IX.play?1:0);if(fault)tSim+=k*0.05;
+ const M=model(),off=tSim>=M.trip;const on=!off;
+ D.n.I=on?M.Il:0;D.e.I=on?M.Ie:0;D.p.I=on?M.Ip:0;
+ for(const key in D){const g=D[key];g.ph+=(g.I>0?Math.min(260,40+60*Math.log10(1+g.I*1000)):0)*k;g.d.forEach((d,i)=>{const[x,y]=P[key].at(g.ph+i*P[key].L/g.d.length);d.setAttribute('cx',x);d.setAttribute('cy',y);d.style.display=g.I>0?'':'none'})}
+ const tr=fault&&off;cbB.setAttribute('fill',tr&&M.by==='CB'?'#f472b6':'#232c63');cbT.setAttribute('fill',tr&&M.by==='CB'?'#0d1330':'#f472b6');cbT.textContent=tr&&M.by==='CB'?'OFF':'CB';
+ rcB.setAttribute('fill',tr&&M.by==='RCD'?'#7dd3fc':'#232c63');
+ const dur=fault&&M.Ip>0?Math.min(tSim,M.trip):0;tbar.setAttribute('width',Math.sqrt(Math.min(1,dur))*TW);
+ pg.querySelectorAll('*').forEach(e=>e.setAttribute('stroke',on&&M.Ip>0?(M.Ip>=0.03?'#f472b6':'#f9a8d4'):'#eef2ff'));
+ document.getElementById('ip').textContent=fmtI(M.Ip)+(M.Ip>0?' ('+(M.trip<=0.2&&M.Ip>=0.01?'only '+M.trip*1000+' ms: usually no lasting harm':effect(M.Ip))+')':'');
+ document.getElementById('ie').textContent=fmtI(M.Ie);
+ const Ia=M.Il+M.Ie+M.Ip,In=M.Il;document.getElementById('pw').textContent=off&&fault?'Power OFF ('+M.by+' tripped)':fault&&cas==='d'?'Fault stays inside the insulation':fault?'Fault current flowing':'Toaster on, normal';document.getElementById('pw').style.color=fault&&cas==='d'?'#4ade80':off&&fault?'#4ade80':fault?'#f472b6':'#cfd7f5';const f4=I=>I>=1&&I<100?sig(I,4)+' A':fmtI(I);document.getElementById('ia').textContent=f4(Ia);document.getElementById('in').textContent=f4(In);
+ document.getElementById('tt').textContent=!fault||M.Ip===0?'no shock':isFinite(M.trip)?(M.trip*1000)+' ms, then '+M.by+' trips':(tSim<1?Math.round(tSim*1000)+' ms':'over 1 s')+' and still going';
+ const key=!fault?'none':cas==='d'?'d':M.by==='CB'&&earth?'cb':M.by==='RCD'?'rcd':rcd&&M.Ip<0.03?'rcdlow':'open';
+ const r=document.getElementById('rule');if(r.dataset.k!==key){r.dataset.k=key;r.innerHTML=RULE[key]}});
+setup();
+</script>

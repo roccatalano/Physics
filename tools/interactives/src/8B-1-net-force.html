@@ -1,0 +1,43 @@
+<!--{"id":"8B-1-net-force","section":"8B","title":"Free body diagram: net force and F = ma","criteria":["8B.1","8B.2","8B.3","8B.4","8B.7"],
+"blurb":"Push a box along a floor with friction. The free body diagram updates live, the forces add to a net force, and a = F_net / m sets how fast it speeds up.",
+"source":"Cambridge VCE Physics Units 1&2, 8B Newton’s laws of motion, Formulas 8B–1 and 8B–2, g = 9.8 N/kg. Friction matches the push up to its maximum.","colour":"#7dd3fc"}-->
+<div class="ctx">A box sits on a floor. You push it to the right; friction pushes back. Right is <b>positive</b>. When does it move, and how fast does it speed up?</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc"><h3>The box, its free body diagram and the net force</h3><svg id="sv" viewBox="0 0 860 470"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:10px"><h3>Forces</h3>
+   <div class="sl"><span class="nm">Mass</span><input type="range" id="m" min="1" max="10" step="0.5" value="4"><span class="v" id="mv"></span></div>
+   <div class="sl"><span class="nm">Push</span><input type="range" id="F" min="0" max="60" step="1" value="30"><span class="v" id="Fv"></span></div>
+   <div class="sl"><span class="nm">Max friction</span><input type="range" id="f" min="0" max="30" step="1" value="10"><span class="v" id="fv"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:20px"><h3>Calculate</h3><div id="ro"></div></div>
+  <div class="rule" style="font-size:17px">$F_\text{g}$ and $N$ cancel. Only the <b>unbalanced</b> force accelerates the box: $a = \dfrac{F_\text{net}}{m}$.</div>
+ </div>
+</div>
+<script>
+const g=9.8,K=1.35;let m=4,F=30,fm=10,fr,Fn,a;
+const sv=document.getElementById('sv');
+function arrow(c,lab){const gg=el('g',{},sv),l=el('line',{stroke:c,'stroke-width':6,'stroke-linecap':'round'},gg),h=el('path',{fill:c},gg),t=txt(gg,0,0,'',{fill:c,'font-size':19,'font-weight':700});
+ return(x,y,dx,dy,s,tx,ty,anc)=>{const L=Math.hypot(dx,dy);gg.style.display=L<3?'none':'';if(L<3)return;const ux=dx/L,uy=dy/L,hx=x+dx,hy=y+dy;
+  l.setAttribute('x1',x);l.setAttribute('y1',y);l.setAttribute('x2',hx-ux*14);l.setAttribute('y2',hy-uy*14);
+  h.setAttribute('d',`M${hx},${hy}L${hx-ux*20-uy*11},${hy-uy*20+ux*11}L${hx-ux*20+uy*11},${hy-uy*20-ux*11}Z`);
+  t.setAttribute('x',hx+(tx||0));t.setAttribute('y',hy+(ty||0));t.setAttribute('text-anchor',anc||'middle');t.textContent=s}}
+// scene
+el('line',{x1:20,x2:840,y1:120,y2:120,stroke:'#5b6690','stroke-width':4},sv);for(let x=30;x<840;x+=30)el('line',{x1:x,x2:x-14,y1:122,y2:136,stroke:'#36418a','stroke-width':2},sv);
+const box=el('rect',{y:60,width:70,height:60,rx:6,fill:'#fbb040'},sv);const hand=arrow('#f472b6');const sp=txt(sv,430,30,'',{fill:'#a5b4d8','font-size':18,'text-anchor':'middle'});
+el('line',{x1:20,x2:840,y1:165,y2:165,stroke:'#232c63','stroke-width':2},sv);
+txt(sv,230,188,'Free body diagram',{fill:'#a5b4d8','font-size':18,'text-anchor':'middle'});txt(sv,640,188,'Net force',{fill:'#a5b4d8','font-size':18,'text-anchor':'middle'});
+const CX=230,CY=330;el('rect',{x:CX-24,y:CY-24,width:48,height:48,rx:5,fill:'none',stroke:'#fbb040','stroke-width':3},sv);el('circle',{cx:CX,cy:CY,r:6,fill:'#eef2ff'},sv);
+const aG=arrow('#7dd3fc'),aN=arrow('#4ade80'),aF=arrow('#f472b6'),aFr=arrow('#fb7185');
+const aNet=arrow('#fbb040');el('circle',{cx:640,cy:CY,r:6,fill:'#eef2ff'},sv);const nt=txt(sv,640,CY+56,'',{fill:'#fbb040','font-size':22,'font-weight':700,'text-anchor':'middle'});
+function upd(){const W=m*g;fr=F<=fm?F:fm;Fn=F-fr;a=Fn/m;
+ const KV=.85,KH=2.4,E=24;aG(CX,CY+E,0,W*KV,'Fg = '+f2(W,1)+' N',0,26);aN(CX,CY-E,0,-W*KV,'N = '+f2(W,1)+' N',0,-10);
+ aF(CX+E,CY,F*KH,0,'F = '+F+' N',10,7,'start');aFr(CX-E,CY,-fr*KH,0,'f = '+fr+' N',-10,7,'end');
+ aNet(640,CY,Fn*KH,0,'',0,0);nt.textContent=Fn?'F net = '+Fn+' N right':'F net = 0';
+ document.getElementById('ro').innerHTML=`F<sub>net</sub> = ${F} − ${fr} = <b class="hi">${Fn} N</b><br>a = ${Fn} / ${f2(m,1)} = <b class="gr">${f2(a)} m/s²</b><br>${Fn?'The box speeds up.':F?'Friction matches the push: <b>no motion</b>.':'No push, no friction.'}`}
+slider('m',x=>f2(x,1)+' kg',x=>{m=x;upd()});slider('F',x=>x+' N',x=>{F=x;upd()});slider('f',x=>x+' N',x=>{fm=x;upd()});
+const PX=40,PPM=45;let T=0;
+IX.anims.push((t,dt)=>{if(IX.play)T+=dt*IX.speed;let x=.5*a*T*T;if(PX+x*PPM>760||T>6){T=0;x=0}
+ const bx=PX+x*PPM;box.setAttribute('x',bx);box.setAttribute('width',50+m*4);box.setAttribute('y',120-(40+m*2.5));box.setAttribute('height',40+m*2.5);
+ hand(bx-F*1.2-6,120-(20+m*1.25),F*1.2,0,'',0,0);sp.textContent='t = '+f2(T,1)+' s  ·  v = '+f2(a*T,1)+' m/s'});
+</script>

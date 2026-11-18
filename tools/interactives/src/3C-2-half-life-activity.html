@@ -1,0 +1,45 @@
+<!--{"id":"3C-2-half-life-activity","section":"3C","title":"Half-life and activity","criteria":["3C.1","3C.2"],
+"blurb":"Choose an isotope and a starting activity, then step through whole half-lives. Each step halves the activity: A = A₀(1/2)ⁿ.",
+"source":"Cambridge VCE Physics Units 1&2, 3C Modelling radioactive decay, Formula 3C–1 (p. 114). Half-lives as in the book.","colour":"#4ade80"}-->
+<div class="ctx">Every half-life, <b>half</b> of the radioactive nuclei left decay, so the <b>activity halves</b> too.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#4ade80"><h3>Activity against time</h3><svg id="sv" viewBox="0 0 780 420"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Isotope</h3>
+   <div class="btns"><button class="is on" data-v="0">Tc-99m</button><button class="is" data-v="1">I-131</button><button class="is" data-v="2">Co-60</button><button class="is" data-v="3">C-14</button></div>
+   <div class="sl" style="grid-template-columns:40px 1fr 116px"><span class="nm">$A_0$</span><input type="range" id="a0" min="100" max="1600" step="100" value="800"><span class="v" id="a0v"></span></div>
+   <div class="sl" style="grid-template-columns:40px 1fr 116px"><span class="nm">$n$</span><input type="range" id="n" min="0" max="6" step="1" value="0"><span class="v" id="nv"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:20px"><h3>Calculate</h3>
+   <div>$A = A_0\left(\tfrac{1}{2}\right)^{n}$</div><div id="c1"></div><div id="c2" style="margin-top:4px"></div></div>
+  <div class="rule"><b>Activity</b> = decays per second. 1 Bq = 1 decay per second.</div>
+ </div>
+</div>
+<script>
+const ISO=[['Tc-99m',6.0,'h',1],['I-131',8.0,'days',1],['Co-60',5.27,'years',2],['C-14',5730,'years',0]];
+let I=0,A0=800,n=0,shown=0;
+const sv=document.getElementById('sv'),GX=90,GW=650,GT=20,GB=340,NM=6;
+const sx=k=>GX+k/NM*GW,sy=A=>GB-A/A0*(GB-GT-20);
+const ax=el('g',{},sv),cv=el('path',{fill:'none',stroke:'#4ade80','stroke-width':4},sv),steps=el('g',{},sv),cur=el('g',{},sv);
+const dot=el('circle',{r:10,fill:'#fbb040',stroke:'#0d1330','stroke-width':3},cur),vl=el('line',{stroke:'#fbb040','stroke-width':2.5,'stroke-dasharray':'6 5'},cur),hlab=el('line',{stroke:'#fbb040','stroke-width':2.5,'stroke-dasharray':'6 5'},cur),lab=txt(cur,0,0,'',{fill:'#fbb040','font-size':20,'font-weight':700});
+const fmtT=v=>v.toLocaleString('en-AU',{minimumFractionDigits:ISO[I][3],maximumFractionDigits:ISO[I][3]});
+function axes(){ax.innerHTML='';const[nm,th,u]=ISO[I];
+ el('line',{x1:GX,x2:GX+GW,y1:GB,y2:GB,stroke:'#36418a','stroke-width':2},ax);el('line',{x1:GX,x2:GX,y1:GT,y2:GB,stroke:'#36418a','stroke-width':2},ax);
+ [0,1,2,3].forEach(k=>{const A=A0*.5**k;el('line',{x1:GX,x2:GX+GW,y1:sy(A),y2:sy(A),stroke:'#2c3670','stroke-dasharray':'4 6'},ax);txt(ax,GX-10,sy(A)+6,+sig(A,3),{fill:'#8b96c0','font-size':17,'text-anchor':'end'})});txt(ax,GX-10,sy(0)+6,0,{fill:'#8b96c0','font-size':17,'text-anchor':'end'});
+ txt(ax,GX-10,GT,'A (MBq)',{fill:'#cfd7f5','font-size':17,'text-anchor':'end'});
+ for(let k=0;k<=NM;k++){el('line',{x1:sx(k),x2:sx(k),y1:GB,y2:GB+7,stroke:'#5b6690','stroke-width':2},ax);txt(ax,sx(k),GB+28,k?fmtT(k*th):'0',{fill:'#8b96c0','font-size':17,'text-anchor':'middle'})}
+ txt(ax,GX+GW,GB+58,'time ('+u+')',{fill:'#cfd7f5','font-size':18,'text-anchor':'end'});txt(ax,GX,GB+58,'1 half-life = '+fmtT(th)+' '+u,{fill:'#4ade80','font-size':18})}
+function curve(){let d='';for(let i=0;i<=300;i++){const k=i*NM/300;d+=(i?'L':'M')+sx(k).toFixed(1)+','+sy(A0*.5**k).toFixed(1)}cv.setAttribute('d',d);
+ steps.innerHTML='';for(let k=1;k<=NM;k++)el('circle',{cx:sx(k),cy:sy(A0*.5**k),r:5,fill:'#4ade80'},steps)}
+function upd(){const[nm,th,u]=ISO[I],A=A0*.5**n;
+ document.getElementById('c1').innerHTML=`= ${A0} × (½)<sup>${n}</sup> = <b class="hi">${+sig(A,3)} MBq</b>`;
+ document.getElementById('c2').innerHTML=`$t$ = ${n} × ${fmtT(th)} ${u} = <b class="hi">${n?fmtT(n*th):0} ${u}</b>`.replace('$t$','<span class="k">t</span>')}
+group('.is',v=>{I=+v;axes();upd()});
+slider('a0',x=>x+' MBq',x=>{A0=x;axes();curve();upd()});slider('n',x=>x+(x===1?' half-life':' half-lives'),x=>{n=x;upd()});
+document.querySelectorAll('.sl .v').forEach(e=>e.style.fontSize='18px');
+axes();curve();upd();
+IX.anims.push((t,dt)=>{shown+=(n-shown)*Math.min(1,dt*6);if(Math.abs(n-shown)<.003)shown=n;const A=A0*.5**shown,x=sx(shown),y=sy(A);
+ dot.setAttribute('cx',x);dot.setAttribute('cy',y);vl.setAttribute('x1',x);vl.setAttribute('x2',x);vl.setAttribute('y1',y);vl.setAttribute('y2',GB);
+ hlab.setAttribute('x1',GX);hlab.setAttribute('x2',x);hlab.setAttribute('y1',y);hlab.setAttribute('y2',y);
+ lab.textContent=(+sig(A,3))+' MBq';lab.setAttribute('x',shown>4.5?x-14:x+14);lab.setAttribute('text-anchor',shown>4.5?'end':'start');lab.setAttribute('y',shown<.5?y+30:y-14);dot.setAttribute('r',10+1.5*Math.sin(t*5))});
+</script>

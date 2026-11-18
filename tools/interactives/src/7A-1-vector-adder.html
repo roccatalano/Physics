@@ -1,0 +1,75 @@
+<!--{"id":"7A-1-vector-adder","section":"7A","title":"Vector adder","criteria":["7A.1","7A.3","7A.4","7A.5"],
+"blurb":"Drag arrow tips on a grid. The arrows join tip to tail and the resultant shows its magnitude and bearing. Turn on components, or subtract to find a change in a vector.",
+"source":"Cambridge VCE Physics Units 1&2, 7A Concepts used to model motion, Worked examples 7A–1 to 7A–5. Grid squares are 1 unit; tips snap to the grid.","colour":"#7dd3fc"}-->
+<div class="ctx">A vector has a <b>size and a direction</b>. Drag the round tips. The resultant <b>R</b> runs from the first tail to the last tip.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc"><h3 id="ptitle">2D: drag the tips</h3><svg id="sv" viewBox="0 0 860 470" style="touch-action:none"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Set up</h3>
+   <div class="btns"><button class="md" data-v="1">1D</button><button class="md on" data-v="2">2D</button><button id="sub">Subtract: A − B</button></div>
+   <div class="btns"><button class="pr" data-v="boat">Boat</button><button class="pr" data-v="hike">Hiker</button><button class="pr" data-v="line">In a line</button></div>
+   <div class="btns"><button id="cmp">Components</button><button id="tt">Tip to tail</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80"><h3>Resultant</h3><div id="ro" style="font-size:20px;line-height:1.5"></div></div>
+  <div class="rule" id="rule"></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),U=20,OX=430,OY=235,NX=20,NY=11;
+let mode='2',subtract=false,showC=false,tip=true;
+let V=[{n:'A',c:'#7dd3fc',x:0,y:6},{n:'B',c:'#f472b6',x:8,y:0}];
+const defs=el('defs',{},sv);
+function mk(id,c){const m=el('marker',{id,viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:4,markerHeight:4,orient:'auto'},defs);el('path',{d:'M0 0L10 5L0 10z',fill:c},m)}
+['#7dd3fc','#f472b6','#c084fc','#4ade80','#fbb040'].forEach((c,i)=>mk('m'+i,c));
+const mid=c=>'url(#m'+['#7dd3fc','#f472b6','#c084fc','#4ade80','#fbb040'].indexOf(c)+')';
+const grid=el('g',{},sv);
+for(let i=-NX;i<=NX;i++)el('line',{x1:OX+i*U,x2:OX+i*U,y1:OY-NY*U,y2:OY+NY*U,stroke:i?'#232c63':'#36418a','stroke-width':i?1:2},grid);
+for(let j=-NY;j<=NY;j++)el('line',{x1:OX-NX*U,x2:OX+NX*U,y1:OY+j*U,y2:OY+j*U,stroke:j?'#232c63':'#36418a','stroke-width':j?1:2},grid);
+// compass
+const cg=el('g',{},sv);[['N',0,-1],['S',0,1],['E',1,0],['W',-1,0]].forEach(([s,a,b])=>txt(cg,812+a*22,40+b*22+6,s,{fill:'#a5b4d8','font-size':17,'text-anchor':'middle'}));
+const cmpG=el('g',{},sv),arrG=el('g',{},sv),resG=el('g',{},sv),hG=el('g',{},sv);
+const sx=x=>OX+x*U,sy=y=>OY-y*U;
+function arrow(g,x1,y1,x2,y2,c,w,dash){if(x1===x2&&y1===y2)return;const a={x1:sx(x1),y1:sy(y1),x2:sx(x2),y2:sy(y2),stroke:c,'stroke-width':w,'marker-end':mid(c),'stroke-linecap':'round'};if(dash)a['stroke-dasharray']=dash;el('line',a,g)}
+function bearing(x,y){if(Math.abs(x)<1e-9&&Math.abs(y)<1e-9)return '';
+ if(mode==='1')return x>0?'east':'west';
+ if(Math.abs(x)<1e-9)return y>0?'north':'south';if(Math.abs(y)<1e-9)return x>0?'east':'west';
+ const th=Math.atan(Math.abs(x)/Math.abs(y))*180/Math.PI;return (y>0?'N':'S')+f2(th,1)+'°'+(x>0?'E':'W')}
+const fx=v=>(v<0?'−':'')+(Number.isInteger(v)?Math.abs(v):sig(Math.abs(v),3));
+function draw(){[cmpG,arrG,resG,hG].forEach(g=>g.innerHTML='');
+ const vs=V.map((v,i)=>({...v,x:(subtract&&i===1?-v.x:v.x),y:(subtract&&i===1?-v.y:v.y),orig:v}));
+ let px=0,py=0;const tails=[];
+ vs.forEach((v,i)=>{const tx=tip?px:0,ty=(tip?py:0)+(mode==='1'?2*(i+1):0);tails.push([tx,ty]);
+  if(subtract&&i===1){arrow(arrG,0,0,v.orig.x,v.orig.y,'#5b6690',4,'6 6');txt(arrG,sx(v.orig.x)+8,sy(v.orig.y)-8,'B',{fill:'#5b6690','font-size':17})}
+  arrow(arrG,tx,ty,tx+v.x,ty+v.y,subtract&&i===1?'#c084fc':v.c,6);
+  txt(arrG,sx(tx+v.x/2)+(v.y?10:-6),sy(ty+v.y/2)-(v.y?0:12),subtract&&i===1?'−B':v.n,{fill:subtract&&i===1?'#c084fc':v.c,'font-size':20,'font-weight':700});
+  px+=v.x;py+=v.y});
+ {arrow(resG,0,0,px,py,'#4ade80',7);if(px||py){const L=Math.hypot(px,py);txt(resG,sx(px/2)+(py/L)*-26-8,sy(py/2)+(px/L)*-26+8,'R',{fill:'#4ade80','font-size':22,'font-weight':800})}}
+ if(showC&&(px||py)){arrow(cmpG,0,0,px,0,'#fbb040',4,'8 6');arrow(cmpG,px,0,px,py,'#fbb040',4,'8 6');
+  if(px)txt(cmpG,sx(px/2),sy(0)+(py>0?24:-10),fx(px),{fill:'#fbb040','font-size':18,'text-anchor':'middle'});
+  if(py)txt(cmpG,sx(px)+(px>=0?8:-8),sy(py/2)+6,fx(py),{fill:'#fbb040','font-size':18,'text-anchor':px>=0?'start':'end'})}
+ // handles at each tip
+ vs.forEach((v,i)=>{const [tx,ty]=tails[i];const h=subtract&&i===1?[v.orig.x,v.orig.y]:[tx+v.x,ty+v.y];
+  const c=el('circle',{cx:sx(h[0]),cy:sy(h[1]),r:10,fill:'#0d1330',stroke:v.orig.c,'stroke-width':4,style:'cursor:grab'},hG);
+  c.onpointerdown=e=>{drag={i,tail:subtract&&i===1?[0,0]:[tx,ty]};sv.setPointerCapture(e.pointerId)}});
+ const m=Math.hypot(px,py),ro=document.getElementById('ro');
+ const lines=vs.map(v=>`<span style="color:${subtract&&v.orig===V[1]?'#c084fc':v.c}">${subtract&&v.orig===V[1]?'−B':v.n}</span> = (${fx(v.x)}, ${fx(v.y)})`).join('<br>');
+ ro.innerHTML=`<div style="font-size:18px;color:#cfd7f5">${lines}</div><div style="margin-top:6px">size <b class="big gr">${fx(m)}</b></div><div>direction <b class="big hi">${bearing(px,py)||'none'}</b></div>`;
+ document.getElementById('rule').innerHTML=subtract?'ΔV = V<sub>final</sub> − V<sub>initial</sub>. To subtract B, <b>add −B</b>: same size, opposite way.':mode==='1'?'<b>In a line:</b> one way is +, the other is −. Then just add.':'Size by <b>Pythagoras</b>, angle by <b>tan</b>. N30°E: 30° from north towards east.';
+ document.getElementById('ptitle').textContent=(mode==='1'?'1D':'2D')+(subtract?': R = A + (−B)':': R = '+V.map(v=>v.n).join(' + '));}
+let drag=null;
+sv.addEventListener('pointermove',e=>{if(!drag)return;const p=new DOMPoint(e.clientX,e.clientY).matrixTransform(sv.getScreenCTM().inverse());
+ let x=Math.round((p.x-OX)/U),y=Math.round((OY-p.y)/U);x=Math.max(-NX,Math.min(NX,x));y=Math.max(-NY,Math.min(NY,y));
+ const v=V[drag.i];v.x=x-drag.tail[0];v.y=mode==='1'?0:y-drag.tail[1];
+ const lim=NX;v.x=Math.max(-lim,Math.min(lim,v.x));v.y=Math.max(-NY,Math.min(NY,v.y));draw()});
+sv.addEventListener('pointerup',()=>drag=null);
+group('.md',v=>{mode=v;V.forEach(q=>q.y=mode==='1'?0:q.y);if(mode==='1'&&V.every(q=>!q.x))V[0].x=5;draw()});
+group('.pr',v=>{const p={boat:[[0,10],[3,0]],hike:[[0,5],[8,0],[0,-9]],line:[[6,0],[-4,0]]}[v];
+ const C=['#7dd3fc','#f472b6','#c084fc'];V=p.map((q,i)=>({n:'ABC'[i],c:C[i],x:q[0],y:q[1]}));
+ mode=v==='line'?'1':'2';document.querySelectorAll('.md').forEach(b=>b.classList.toggle('on',b.dataset.v===mode));
+ subtract=false;document.getElementById('sub').classList.remove('on');draw()});
+toggle('sub',on=>{subtract=on;if(on)V=V.slice(0,2);draw()},false);
+toggle('cmp',on=>{showC=on;draw()},false);
+toggle('tt',on=>{tip=!on;draw()},false);
+document.getElementById('tt').textContent='Tails together';
+draw();
+</script>

@@ -1,0 +1,52 @@
+<!--{"id":"1C-2-wavefronts","section":"1C","title":"Why light bends: wavefronts at a boundary","criteria":["1C.1","1C.2","1C.3","1C.5"],
+"blurb":"Wave crests slow down as they cross into a denser medium. The frequency stays the same, the wavelength shrinks, and the side that enters first slows first, so the wave turns.",
+"source":"Cambridge VCE Physics Units 1&2, 1C, Figures 1C–6 and 1C–10, Formulas 1C–1 to 1C–3. Light of wavelength 600 nm in air. Reflected light not shown; motion slowed.","colour":"#fbb040"}-->
+<div class="ctx">A beam of light crosses from air into another material. The lines are <b>wave crests</b>, at right angles to the ray. <b>Watch the highlighted crest</b>: one end slows down first, so the wave turns.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#fbb040;gap:8px"><h3>Wave crests and the ray</h3><svg id="sv" viewBox="0 0 860 400"></svg>
+  <div class="sl" style="grid-template-columns:150px 1fr 80px"><span class="nm">Angle θ<sub>1</sub></span><input type="range" id="th" min="0" max="70" step="1" value="40"><span class="v" id="thv"></span></div>
+ </div>
+ <div class="side">
+  <div class="card ctl" style="--c:#f472b6"><h3>Second material</h3>
+   <div class="btns"><button class="mb" data-v="1">Air</button><button class="mb" data-v="1.33">Water</button><button class="mb on" data-v="1.52">Glass</button><button class="mb" data-v="2.42">Diamond</button></div></div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.45"><h3>Compare</h3><div id="cmp"></div></div>
+  <div class="rule">Slower in the new material, so <b>λ is shorter</b>. The source sets <b>f</b>, so it stays the same. $n_1 v_1 = n_2 v_2$</div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),OX=430,OY=190,W=190,LP=56,FD=.45;let th=40,n2=1.52;const d=Math.PI/180;
+const cp=el('clipPath',{id:'cl'},el('defs',{},sv));el('rect',{x:0,y:0,width:860,height:400},cp);
+el('rect',{x:0,y:OY,width:860,height:400-OY,fill:'#f472b6','fill-opacity':.12},sv);
+const bnd=el('line',{x1:0,x2:860,y1:OY,y2:OY,stroke:'#a5b4d8','stroke-width':2},sv);
+el('line',{x1:OX,x2:OX,y1:6,y2:394,stroke:'#a5b4d8','stroke-width':2,'stroke-dasharray':'8 7'},sv);
+const t1=txt(sv,14,28,'Air, n₁ = 1.00',{fill:'#7dd3fc','font-size':19,'font-weight':700}),t2=txt(sv,14,388,'',{fill:'#f472b6','font-size':19,'font-weight':700});
+const g=el('g',{'clip-path':'url(#cl)'},sv);
+const NL=40,L1=[],L2=[];for(let i=0;i<NL;i++){L1.push(el('line',{stroke:'#7dd3fc','stroke-width':3,'stroke-linecap':'round'},g));L2.push(el('line',{stroke:'#f472b6','stroke-width':3,'stroke-linecap':'round'},g))}
+const ray1=el('line',{stroke:'#fde68a','stroke-width':3,'stroke-dasharray':'2 0'},g),ray2=el('line',{stroke:'#fde68a','stroke-width':3},g),hd1=el('path',{fill:'#fde68a'},g),hd2=el('path',{fill:'#fde68a'},g);
+const hal={stroke:'#1a2150','stroke-width':6,'paint-order':'stroke'};const b1=txt(sv,846,28,'λ₁ = 600 nm',Object.assign({fill:'#7dd3fc','font-size':19,'font-weight':700,'text-anchor':'end'},hal)),b2=txt(sv,846,388,'',Object.assign({fill:'#f472b6','font-size':19,'font-weight':700,'text-anchor':'end'},hal));[t1,t2].forEach(e=>{for(const k in hal)e.setAttribute(k,hal[k])});sv.appendChild(t1);sv.appendChild(t2);
+const set=(e,a,b)=>{e.setAttribute('x1',a[0]);e.setAttribute('y1',a[1]);e.setAttribute('x2',b[0]);e.setAttribute('y2',b[1])};
+function head(p,x,y,ang){p.setAttribute('d',`M${x+14*Math.cos(ang)},${y+14*Math.sin(ang)}L${x-10*Math.cos(ang)+9*Math.sin(ang)},${y-10*Math.sin(ang)-9*Math.cos(ang)}L${x-10*Math.cos(ang)-9*Math.sin(ang)},${y-10*Math.sin(ang)+9*Math.cos(ang)}Z`)}
+// clip a segment a->b to y<=OY (side=-1) or y>=OY (side=1)
+function clipY(a,b,side){const ina=side<0?a[1]<=OY:a[1]>=OY,inb=side<0?b[1]<=OY:b[1]>=OY;if(ina&&inb)return[a,b];if(!ina&&!inb)return null;const t=(OY-a[1])/(b[1]-a[1]),m=[a[0]+t*(b[0]-a[0]),OY];return ina?[a,m]:[m,b]}
+function cmp(){const t2v=Math.asin(Math.sin(th*d)/n2)/d,v2=3/n2,l2=600/n2;t2.textContent=`${{1:'Air',1.33:'Water',1.52:'Glass',2.42:'Diamond'}[n2]}, n₂ = ${n2.toFixed(2)}`;
+ document.getElementById('cmp').innerHTML=`<table style="width:100%;border-collapse:collapse"><tr style="color:#94a3c8;font-size:15px"><td></td><td>Air</td><td>Material 2</td></tr>
+ <tr><td>f (Hz)</td><td>5.00 × 10<sup>14</sup></td><td>5.00 × 10<sup>14</sup></td></tr>
+ <tr><td>v (m/s)</td><td>3.00 × 10<sup>8</sup></td><td class="pk"><b>${v2.toFixed(2)} × 10<sup>8</sup></b></td></tr>
+ <tr><td>λ</td><td>600 nm</td><td class="pk"><b>${Math.round(l2)} nm</b></td></tr>
+ <tr><td>θ</td><td>${th}°</td><td class="pk"><b>${t2v.toFixed(1)}°</b></td></tr></table>`}
+slider('th',x=>x+'°',x=>{th=x;cmp()});group('.mb',v=>{n2=+v;cmp()});
+IX.anims.push(t=>{const a1=th*d,a2=Math.asin(Math.sin(a1)/n2),l1=LP,l2=LP/n2,W2=W*Math.cos(a2)/Math.cos(a1);
+ const k1=[Math.sin(a1),Math.cos(a1)],p1=[Math.cos(a1),-Math.sin(a1)],k2=[Math.sin(a2),Math.cos(a2)],p2=[Math.cos(a2),-Math.sin(a2)];
+ const ph=FD*t,m0=Math.floor(ph);
+ for(let i=0;i<NL;i++){const m=m0-i+8,u=m-ph; // crest index m; u = phase position (crests ahead of O have u>0)
+  const hl=((m%6)+6)%6===0,c1=hl?'#fbb040':'#7dd3fc',c2=hl?'#fbb040':'#f472b6',w=hl?6:3;
+  // medium 1
+  const o1=[OX+k1[0]*l1*u,OY+k1[1]*l1*u],A=[o1[0]-p1[0]*W/2,o1[1]-p1[1]*W/2],B=[o1[0]+p1[0]*W/2,o1[1]+p1[1]*W/2];
+  const s1=clipY(A,B,-1);if(s1){set(L1[i],s1[0],s1[1]);L1[i].style.display=''}else L1[i].style.display='none';L1[i].setAttribute('stroke',c1);L1[i].setAttribute('stroke-width',w);
+  const o2=[OX+k2[0]*l2*u,OY+k2[1]*l2*u],C=[o2[0]-p2[0]*W2/2,o2[1]-p2[1]*W2/2],D=[o2[0]+p2[0]*W2/2,o2[1]+p2[1]*W2/2];
+  const s2=clipY(C,D,1);if(s2){set(L2[i],s2[0],s2[1]);L2[i].style.display=''}else L2[i].style.display='none';L2[i].setAttribute('stroke',c2);L2[i].setAttribute('stroke-width',w)}
+ set(ray1,[OX-k1[0]*400,OY-k1[1]*400],[OX,OY]);set(ray2,[OX,OY],[OX+k2[0]*400,OY+k2[1]*400]);
+ head(hd1,OX-k1[0]*100,OY-k1[1]*100,Math.atan2(k1[1],k1[0]));head(hd2,OX+k2[0]*150,OY+k2[1]*150,Math.atan2(k2[1],k2[0]));
+ b2.textContent='λ₂ = '+Math.round(600/n2)+' nm';
+});
+</script>

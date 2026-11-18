@@ -1,0 +1,53 @@
+<!--{"id":"4A-2-mass-defect","section":"4A","title":"Mass defect in a fission reaction","criteria":["4A.1","4A.2"],
+"blurb":"Add up the mass before and after a U-235 fission. The products are lighter: the missing mass becomes energy, E = Δmc². Step through the calculation for three fission routes.",
+"source":"Cambridge VCE Physics Units 1&2, 4A and 4B (Worked example 4B–2 masses). Ba/Kr and Xe/Sr masses from standard atomic mass tables. 1 J = 6.242 × 10¹⁸ eV.","colour":"#f472b6"}-->
+<div class="ctx">When a U-235 nucleus splits, the pieces have <b>less mass</b> than what you started with. Where did the mass go? Step through the calculation.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#f472b6"><h3>Fission equation</h3>
+  <div id="eq" style="font-size:24px;text-align:center;min-height:44px">
+   <span class="eq" data-v="rb">${}^{235}_{92}\text{U} + {}^{1}_{0}\text{n} \rightarrow {}^{93}_{37}\text{Rb} + {}^{141}_{55}\text{Cs} + 2\,{}^{1}_{0}\text{n} + \text{energy}$</span>
+   <span class="eq" data-v="ba">${}^{235}_{92}\text{U} + {}^{1}_{0}\text{n} \rightarrow {}^{141}_{56}\text{Ba} + {}^{92}_{36}\text{Kr} + 3\,{}^{1}_{0}\text{n} + \text{energy}$</span>
+   <span class="eq" data-v="xe">${}^{235}_{92}\text{U} + {}^{1}_{0}\text{n} \rightarrow {}^{140}_{54}\text{Xe} + {}^{94}_{38}\text{Sr} + 2\,{}^{1}_{0}\text{n} + \text{energy}$</span>
+  </div>
+  <div id="bal" style="font-size:18px;text-align:center;color:#a5b4d8;margin-top:4px"></div>
+  <div class="out" id="steps" style="font-size:20px;line-height:1.5;margin-top:14px;padding:0 10px"></div>
+ </div>
+ <div class="side" style="width:370px">
+  <div class="card ctl" style="--c:#7dd3fc"><h3>Fission route</h3>
+   <div class="btns"><button class="rx on" data-v="rb">Rb + Cs</button><button class="rx" data-v="ba">Ba + Kr</button><button class="rx" data-v="xe">Xe + Sr</button></div>
+   <div class="btns"><button id="nx">Next step ▶</button><button id="al">Show all</button><button id="cl">Clear</button></div>
+  </div>
+  <div class="card plot" style="--c:#4ade80"><h3>Mass (× 10⁻²⁷ kg)</h3><svg id="sv" viewBox="0 0 330 230"></svg></div>
+ </div>
+</div>
+<script>
+const U=1.66054,MN=1.675;// u to 1e-27 kg; neutron mass as in the textbook
+const RX={rb:{b:[['U-235',390.173],['n',MN]],a:[['Rb-93',154.248],['Cs-141',233.927],['2 n',2*MN]],A:'235 + 1 = 93 + 141 + 2',Z:'92 + 0 = 37 + 55 + 0'},
+ ba:{b:[['U-235',235.043930*U],['n',MN]],a:[['Ba-141',140.914411*U],['Kr-92',91.926156*U],['3 n',3*MN]],A:'235 + 1 = 141 + 92 + 3',Z:'92 + 0 = 56 + 36 + 0'},
+ xe:{b:[['U-235',235.043930*U],['n',MN]],a:[['Xe-140',139.921646*U],['Sr-94',93.915356*U],['2 n',2*MN]],A:'235 + 1 = 140 + 94 + 2',Z:'92 + 0 = 54 + 38 + 0'}};
+let cur='rb',step=0;const sv=document.getElementById('sv');
+const sum=a=>a.reduce((s,p)=>s+p[1],0),e=(v,n=3)=>{const p=Math.floor(Math.log10(Math.abs(v)));return (v/10**p).toFixed(n-1)+' × 10<sup>'+p+'</sup>'};
+function render(){const R=RX[cur],mb=sum(R.b),ma=sum(R.a),dm=mb-ma,E=dm*1e-27*9e16,MeV=E*6.242e18/1e6,perkg=E/(mb*1e-27-MN*1e-27);
+ document.querySelectorAll('.eq').forEach(s=>s.style.display=s.dataset.v===cur?'':'none');
+ document.getElementById('bal').innerHTML='Nucleons: '+R.A+' &nbsp;·&nbsp; Protons: '+R.Z;
+ const S=[`<i>m</i><sub>before</sub> = ${R.b.map(p=>p[1].toFixed(3)).join(' + ')} = <b class="cy">${mb.toFixed(3)}</b>`,
+  `<i>m</i><sub>after</sub> = ${R.a.map(p=>p[1].toFixed(3)).join(' + ')} = <b class="cy">${ma.toFixed(3)}</b>`,
+  `Δ<i>m</i> = ${mb.toFixed(3)} − ${ma.toFixed(3)} = <b class="pk">${dm.toFixed(3)}</b> × 10<sup>−27</sup> kg`,
+  `<i>E</i> = Δ<i>mc</i><sup>2</sup> = (${e(dm*1e-27)})(3.00 × 10<sup>8</sup>)<sup>2</sup> = <b class="hi">${e(E)} J</b>`,
+  `<i>E</i> = ${e(E)} × 6.242 × 10<sup>18</sup> eV = <b class="big">${MeV.toFixed(0)} MeV</b> per fission`,
+  `1.0 kg of U-235 fissioning this way: ${e(perkg,2)} J, about <b class="hi">${(perkg/4.18e12).toFixed(0)} kt</b> of TNT`];
+ document.getElementById('steps').innerHTML=S.slice(0,step).map(s=>'<div style="margin-bottom:4px">'+s+'</div>').join('')||'<span style="color:#a5b4d8">Press <b>Next step</b>.</span>';
+ // bars: axis from 389.5 to 392.0
+ sv.innerHTML='';const x0=78,W=240,lo=389.5,hi=392,X=m=>x0+W*(m-lo)/(hi-lo);
+ [['Before',mb,'#7dd3fc',20],['After',ma,'#4ade80',100]].forEach(([n,m,c,y],i)=>{const show=step>i;
+  el('rect',{x:x0,y,width:Math.max(0,X(m)-x0),height:50,rx:6,fill:c,opacity:show?.85:.15},sv);
+  txt(sv,x0-10,y+34,n,{'text-anchor':'end','font-size':18});if(show)txt(sv,X(m)-8,y+32,m.toFixed(3),{'font-size':18,fill:'#0d1330','text-anchor':'end','font-weight':700})});
+ if(step>=3){el('rect',{x:X(ma),y:100,width:X(mb)-X(ma),height:50,fill:'none',stroke:'#f472b6','stroke-width':3,'stroke-dasharray':'6 5'},sv);
+  el('line',{x1:X(mb),x2:X(mb),y1:70,y2:150,stroke:'#f472b6','stroke-width':2,'stroke-dasharray':'4 4'},sv);
+  txt(sv,X(mb),196,'Δm becomes energy',{'text-anchor':'end','font-size':20,fill:'#f472b6'})}
+ txt(sv,0,224,'axis starts at 389.5, not 0',{'font-size':16,fill:'#6b78b0'});
+}
+group('.rx',v=>{cur=v;render()});
+document.getElementById('nx').onclick=()=>{step=Math.min(6,step+1);render()};document.getElementById('al').onclick=()=>{step=6;render()};document.getElementById('cl').onclick=()=>{step=0;render()};
+render();
+</script>

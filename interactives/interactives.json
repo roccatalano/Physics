@@ -34,5 +34,609 @@
   "blurb": "A wave crosses from one rope into another. Frequency stays the same, speed changes, so the wavelength changes.",
   "source": "Cambridge VCE Physics Units 1&2, 1A The properties of waves (p. 9). Reflection at the join is not shown.",
   "colour": "#f472b6"
+ },
+ {
+  "id": "1B-1-em-spectrum",
+  "section": "1B",
+  "title": "The electromagnetic spectrum",
+  "criteria": [
+   "1B.2",
+   "1B.3",
+   "1B.4"
+  ],
+  "blurb": "Drag along the spectrum: read the wavelength, frequency (from c = fλ), region and uses. Show the Sun's output: mainly UV, visible and IR.",
+  "source": "Cambridge VCE Physics Units 1&2, 1B Electromagnetic waves, Figure 1B–3, Table 1B–1, Figure 1B–4. Region boundaries are approximate. Sun curve: ideal 5800 K emitter.",
+  "colour": "#c084fc"
+ },
+ {
+  "id": "1B-2-em-wave-3d",
+  "section": "1B",
+  "title": "An electromagnetic wave in 3D",
+  "criteria": [
+   "1B.1"
+  ],
+  "blurb": "Electric and magnetic fields vibrate at right angles to each other and to the direction of travel, so light is a transverse wave travelling at c.",
+  "source": "Cambridge VCE Physics Units 1&2, 1B Electromagnetic waves, Figure 1B–2. B is drawn the same size as E (not to scale). The motion is slowed about 10¹⁵ times.",
+  "colour": "#7dd3fc"
+ },
+ {
+  "id": "1C-1-snell-ray-box",
+  "section": "1C",
+  "title": "Snell's law ray box",
+  "criteria": [
+   "1C.2",
+   "1C.4",
+   "1C.5",
+   "1C.7",
+   "1C.8"
+  ],
+  "blurb": "Drag the ray box. Choose the two materials. Watch the refracted and partly reflected rays, the critical angle and total internal reflection.",
+  "source": "Cambridge VCE Physics Units 1&2, 1C, Table 1C–1, Formulas 1C–3 and 1C–4. Ray brightness: Fresnel equations, unpolarised light.",
+  "colour": "#4ade80"
+ },
+ {
+  "id": "1C-2-wavefronts",
+  "section": "1C",
+  "title": "Why light bends: wavefronts at a boundary",
+  "criteria": [
+   "1C.1",
+   "1C.2",
+   "1C.3",
+   "1C.5"
+  ],
+  "blurb": "Wave crests slow down as they cross into a denser medium. The frequency stays the same, the wavelength shrinks, and the side that enters first slows first, so the wave turns.",
+  "source": "Cambridge VCE Physics Units 1&2, 1C, Figures 1C–6 and 1C–10, Formulas 1C–1 to 1C–3. Light of wavelength 600 nm in air. Reflected light not shown; motion slowed.",
+  "colour": "#fbb040"
+ },
+ {
+  "id": "1C-3-dispersion-prism",
+  "section": "1C",
+  "title": "Dispersion in a prism",
+  "criteria": [
+   "1C.9",
+   "1C.10"
+  ],
+  "blurb": "White light enters a glass prism. Each colour has a slightly different refractive index, so each bends a different amount at both faces and the colours spread out.",
+  "source": "Cambridge VCE Physics Units 1&2, 1C, Table 1C–2 (glass: red 1.509 to violet 1.521), Figure 1C–21. Rays traced with Snell's law at both faces; reflections not shown.",
+  "colour": "#f472b6"
+ },
+ {
+  "id": "1C-4-optical-fibre",
+  "section": "1C",
+  "title": "Optical fibre: total internal reflection",
+  "criteria": [
+   "1C.8",
+   "1C.12"
+  ],
+  "blurb": "Light zigzags along the core of an optical fibre. If it hits the core wall at more than the critical angle it is totally internally reflected; if not, it leaks out.",
+  "source": "Cambridge VCE Physics Units 1&2, 1C, Formula 1C–4, Worked example 1C–5. Fibre drawn very short and wide; leak strength from the Fresnel equations; light slowed.",
+  "colour": "#7dd3fc"
+ },
+ {
+  "id": "2A-1-particle-temperature",
+  "section": "2A",
+  "title": "Temperature and moving particles",
+  "criteria": [
+   "2A.1",
+   "2A.2",
+   "2A.3"
+  ],
+  "blurb": "Heat or cool a box of gas. The particles speed up or slow down; the thermometer reads in kelvin and degrees Celsius.",
+  "source": "Cambridge VCE Physics Units 1&2, 2A Thermal energy (pp. 6–7). Gas model: nitrogen, particle speeds not to scale, potential energy not shown.",
+  "colour": "#fb923c"
+ },
+ {
+  "id": "2A-2-heating-curve",
+  "section": "2A",
+  "title": "Heating curve: Q = mcΔT and Q = mL",
+  "criteria": [
+   "2A.5",
+   "2A.6",
+   "2A.8",
+   "2A.9",
+   "2A.10"
+  ],
+  "blurb": "Heat a solid steadily until it is a gas. Sloped parts use Q = mcΔT; flat parts (changes of state) use Q = mL.",
+  "source": "Cambridge VCE Physics Units 1&2, 2A Thermal energy (pp. 14–17, Figure 2A–13). No losses to surroundings; ethanol values approximate; animation 60× real time.",
+  "colour": "#fbb040"
+ },
+ {
+  "id": "2A-3-conduction-convection",
+  "section": "2A",
+  "title": "Conduction and convection",
+  "criteria": [
+   "2A.4"
+  ],
+  "blurb": "A rod heated at one end passes vibrations along (conduction). Water heated from below circulates (convection).",
+  "source": "Cambridge VCE Physics Units 1&2, 2A Thermal energy (pp. 7–10). Particle model only, not to scale; radiation not shown.",
+  "colour": "#ef4444"
+ },
+ {
+  "id": "2A-4-thermal-equilibrium",
+  "section": "2A",
+  "title": "Reaching thermal equilibrium",
+  "criteria": [
+   "2A.2",
+   "2A.8",
+   "2A.9"
+  ],
+  "blurb": "Drop a hot object into cool water. Heat flows until both reach the same temperature; energy lost equals energy gained.",
+  "source": "Cambridge VCE Physics Units 1&2, 2A Thermal energy (pp. 7, 14–15). Insulated container: no energy lost to the surroundings. Cooling rate shape is illustrative.",
+  "colour": "#4ade80"
+ },
+ {
+  "id": "2B-1-blackbody-wien",
+  "section": "2B",
+  "title": "Blackbody radiation and Wien's law",
+  "criteria": [
+   "2B.1",
+   "2B.2",
+   "2B.3"
+  ],
+  "blurb": "Change the temperature of a blackbody. The peak moves to shorter wavelengths and the area under the curve grows fast. Compare the Sun and Earth.",
+  "source": "Cambridge VCE Physics Units 1&2, 2B Thermal energy and EM radiation (pp. 23–25). Ideal blackbody (Planck) curves; wavelength axis is logarithmic.",
+  "colour": "#facc15"
+ },
+ {
+  "id": "2B-2-energy-budget",
+  "section": "2B",
+  "title": "Earth's energy budget and the greenhouse effect",
+  "criteria": [
+   "2B.3",
+   "2B.4"
+  ],
+  "blurb": "Raise the greenhouse gases. Back radiation grows, Earth absorbs more than it emits, and the surface warms until the budget balances again.",
+  "source": "Cambridge VCE Physics Units 1&2, 2B (pp. 28–30). One-layer model: no convection, evaporation or sunlight absorbed by air, so numbers differ from NASA's.",
+  "colour": "#4ade80"
+ },
+ {
+  "id": "3A-1-stability-chart",
+  "section": "3A",
+  "title": "The belt of stability",
+  "criteria": [
+   "3A.1"
+  ],
+  "blurb": "Every stable nucleus up to lead on an N against Z chart. Tap any square to read N, Z, A and N/Z, and see why heavy nuclei need extra neutrons.",
+  "source": "Cambridge VCE Physics Units 1&2, 3A Nuclear stability (Figure 3A–7). Stable = no observed decay. Decay mode is the usual one for that region.",
+  "colour": "#7dd3fc"
+ },
+ {
+  "id": "3A-2-nuclear-forces",
+  "section": "3A",
+  "title": "Strong force against electrostatic force",
+  "criteria": [
+   "3A.2",
+   "3A.3",
+   "3A.4"
+  ],
+  "blurb": "Two protons at a separation you choose. Compare the electrostatic push with the strong nuclear pull, and find the distance where the strong force stops winning.",
+  "source": "Cambridge VCE Physics Units 1&2, 3A Nuclear stability (Figures 3A–12, 3A–13). Strong force: illustrative model, core below 0.7 fm not shown.",
+  "colour": "#f472b6"
+ },
+ {
+  "id": "3B-1-penetration",
+  "section": "3B",
+  "title": "Penetrating power: α, β and γ",
+  "criteria": [
+   "3B.1",
+   "3E.2"
+  ],
+  "blurb": "Fire alpha, beta or gamma radiation through air, paper, aluminium or lead and count what reaches the Geiger counter.",
+  "source": "Cambridge VCE Physics Units 1&2, 3B Alpha, beta and gamma radiation (pp. 102–106). Beam drawn parallel (no spreading). γ through 2 cm lead uses Co-60 γ.",
+  "colour": "#fbb040"
+ },
+ {
+  "id": "3B-2-decay-equations",
+  "section": "3B",
+  "title": "Decay equation builder",
+  "criteria": [
+   "3B.2",
+   "3B.1"
+  ],
+  "blurb": "Pick a parent nucleus and a decay type. Predict the daughter, then reveal it and check that mass numbers and atomic numbers balance.",
+  "source": "Cambridge VCE Physics Units 1&2, 3B Nuclear transformations (pp. 103–108), notation as in the book. Neutrinos from β decay not shown (no effect on A or Z).",
+  "colour": "#a78bfa"
+ },
+ {
+  "id": "3C-1-dice-decay",
+  "section": "3C",
+  "title": "Random decay with 120 dice",
+  "criteria": [
+   "3C.1"
+  ],
+  "blurb": "Roll 120 dice and remove every 6 (it has decayed). You cannot say which die goes next, but the graph of dice left is smooth and halves every 3.8 rolls.",
+  "source": "Cambridge VCE Physics Units 1&2, 3C Modelling radioactive decay, dice simulation (Table 3C–1). Dashed theory curve: N = 120 × (5/6)ⁿ, or (1/2)ⁿ for odds.",
+  "colour": "#4ade80"
+ },
+ {
+  "id": "3C-2-half-life-activity",
+  "section": "3C",
+  "title": "Half-life and activity",
+  "criteria": [
+   "3C.1",
+   "3C.2"
+  ],
+  "blurb": "Choose an isotope and a starting activity, then step through whole half-lives. Each step halves the activity: A = A₀(1/2)ⁿ.",
+  "source": "Cambridge VCE Physics Units 1&2, 3C Modelling radioactive decay, Formula 3C–1 (p. 114). Half-lives as in the book.",
+  "colour": "#4ade80"
+ },
+ {
+  "id": "3D-1-u238-chain",
+  "section": "3D",
+  "title": "The uranium-238 decay series",
+  "criteria": [
+   "3D.1"
+  ],
+  "blurb": "Step U-238 down its decay series on an N against Z grid: 8 alpha and 6 beta-minus decays to stable lead-206, with each equation and half-life.",
+  "source": "Cambridge VCE Physics Units 1&2, 3D Analysing decay series diagrams (Figure 3D–2). γ emissions are not shown, as they do not change N or Z.",
+  "colour": "#f472b6"
+ },
+ {
+  "id": "3E-1-dose-calculator",
+  "section": "3E",
+  "title": "Absorbed dose and dose equivalent",
+  "criteria": [
+   "3E.5",
+   "3E.2",
+   "3E.3"
+  ],
+  "blurb": "Set the energy absorbed, the mass of tissue and the type of radiation. Get the absorbed dose in gray and the dose equivalent in sievert, and see where it sits on a scale of effects.",
+  "source": "Cambridge VCE Physics Units 1&2, 3E The effect of radiation on humans (pp. 131–136). Radiation weighting factors: α 20, β and γ 1. Scale markers from the book.",
+  "colour": "#f87171"
+ },
+ {
+  "id": "4A-1-chain-reaction",
+  "section": "4A",
+  "title": "Fission chain reaction",
+  "criteria": [
+   "4A.3",
+   "4A.4"
+  ],
+  "blurb": "Neutrons from each U-235 fission go on to split more nuclei, escape, or get soaked up by control rods. Change fuel size, rods and moderator to make the reaction subcritical, critical or supercritical.",
+  "source": "Cambridge VCE Physics Units 1&2, 4A Nuclear energy (chain reactions, critical mass, control rods). Simplified model: fixed chance of each fate.",
+  "colour": "#fbb040"
+ },
+ {
+  "id": "4A-2-mass-defect",
+  "section": "4A",
+  "title": "Mass defect in a fission reaction",
+  "criteria": [
+   "4A.1",
+   "4A.2"
+  ],
+  "blurb": "Add up the mass before and after a U-235 fission. The products are lighter: the missing mass becomes energy, E = Δmc². Step through the calculation for three fission routes.",
+  "source": "Cambridge VCE Physics Units 1&2, 4A and 4B (Worked example 4B–2 masses). Ba/Kr and Xe/Sr masses from standard atomic mass tables. 1 J = 6.242 × 10¹⁸ eV.",
+  "colour": "#f472b6"
+ },
+ {
+  "id": "4B-1-binding-energy-curve",
+  "section": "4B",
+  "title": "The binding energy curve",
+  "criteria": [
+   "4B.1",
+   "4B.2"
+  ],
+  "blurb": "Average binding energy per nucleon against mass number. Fusing light nuclei and splitting heavy nuclei both climb towards iron-56, so both release energy.",
+  "source": "Cambridge VCE Physics Units 1&2, 4B Comparing fusion and fission (binding energy curve, Worked examples 4B–1 and 4B–2). ABE from standard mass data.",
+  "colour": "#4ade80"
+ },
+ {
+  "id": "4B-2-sun-fusion",
+  "section": "4B",
+  "title": "Fusion in the Sun",
+  "criteria": [
+   "4B.1"
+  ],
+  "blurb": "The proton–proton chain step by step: four hydrogen nuclei end up as one helium-4 nucleus. Then turn the Sun's mass loss per second into its power output with E = Δmc² and P = E/t.",
+  "source": "Cambridge VCE Physics Units 1&2, 4B (fusion in the Sun, Skills: power output of a star). Neutrinos (ν) added: the textbook equations leave them out.",
+  "colour": "#fbb040"
+ },
+ {
+  "id": "5A-1-charge-flow",
+  "section": "5A",
+  "title": "Charge flow: electrons and conventional current",
+  "criteria": [
+   "5A.2",
+   "5A.3",
+   "5A.5",
+   "5A.6"
+  ],
+  "blurb": "Watch charge move around a circuit. Switch between electron flow and conventional current, read the ammeter and count the charge that passes with Q = It.",
+  "source": "Cambridge VCE Physics Units 1&2, 5A Charge and current, Formula 5A–1. Dot speed is exaggerated: real drift speeds are far smaller.",
+  "colour": "#7dd3fc"
+ },
+ {
+  "id": "5B-1-energy-per-charge",
+  "section": "5B",
+  "title": "Potential difference: energy per coulomb",
+  "criteria": [
+   "5B.1",
+   "5B.2",
+   "5B.3",
+   "5B.5"
+  ],
+  "blurb": "Each coulomb is lifted by the battery and drops through the resistor. The potential hill below the circuit shows V = E/Q, and the calculator gives E = QV.",
+  "source": "Cambridge VCE Physics Units 1&2, 5B Electrical energy and potential difference, Formula 5B–1. Ideal battery and wires: no energy is lost in the wires.",
+  "colour": "#fbb040"
+ },
+ {
+  "id": "5C-1-series-builder",
+  "section": "5C",
+  "title": "Series circuit builder",
+  "criteria": [
+   "5C.2",
+   "5C.3",
+   "5C.4",
+   "5C.5",
+   "5C.6"
+  ],
+  "blurb": "Add up to four resistors in series. The current is the same everywhere, the supply voltage is shared in proportion to resistance, and with two resistors it is a potential divider.",
+  "source": "Cambridge VCE Physics Units 1&2, 5C Modelling resistance in series circuits. Ideal battery, wires and meters. Dot speed only shows the current roughly.",
+  "colour": "#7dd3fc"
+ },
+ {
+  "id": "5D-1-parallel-builder",
+  "section": "5D",
+  "title": "Parallel circuit builder",
+  "criteria": [
+   "5D.1",
+   "5D.2",
+   "5D.3",
+   "5D.4",
+   "5D.5"
+  ],
+  "blurb": "Add up to four branches in parallel. Every branch gets the full supply voltage, the current splits at the junctions, and adding a branch lowers the equivalent resistance.",
+  "source": "Cambridge VCE Physics Units 1&2, 5D Modelling resistance in parallel circuits. Ideal battery, wires and meters. Dot speed only shows the current roughly.",
+  "colour": "#f472b6"
+ },
+ {
+  "id": "5E-1-power-brightness",
+  "section": "5E",
+  "title": "Power and brightness: series vs parallel",
+  "criteria": [
+   "5E.2",
+   "5E.3",
+   "5E.4"
+  ],
+  "blurb": "Compare one globe with two globes in series and in parallel. Brightness follows power: P = VI = I²R = V²/R.",
+  "source": "Cambridge VCE Physics Units 1&2, 5E Electric power, Formula 5E–3. Globes are modelled as fixed (ohmic) resistors; real filaments change resistance as they heat.",
+  "colour": "#fde68a"
+ },
+ {
+  "id": "6A-1-iv-curve-tracer",
+  "section": "6A",
+  "title": "I–V curve tracer",
+  "criteria": [
+   "6A.1",
+   "6A.2",
+   "6A.4",
+   "6A.5",
+   "6A.8"
+  ],
+  "blurb": "Sweep the potential difference across a resistor, globe, diode, LED, thermistor or LDR and watch the I–V graph appear. Read R = V/I at any point.",
+  "source": "Cambridge VCE Physics Units 1&2, 6A (pp. 6–17). Model: 100 Ω resistor, NTC thermistor 100 Ω at 25 °C, LDR as Fig. 6A–16. Breakdown not shown.",
+  "colour": "#fbb040"
+ },
+ {
+  "id": "6A-2-sensor-divider",
+  "section": "6A",
+  "title": "Sensor in a potential divider",
+  "criteria": [
+   "6A.3",
+   "6A.4",
+   "6A.5",
+   "6A.6",
+   "6A.7",
+   "6A.8"
+  ],
+  "blurb": "An LDR or thermistor shares 9 V with a variable resistor. Change the light or temperature, watch V_out cross the 4.5 V switching level, and use the variable resistor to set when it switches.",
+  "source": "Cambridge VCE Physics Units 1&2, 6A (pp. 11–18). Model: LDR as Fig. 6A–16, NTC thermistor 10 kΩ at 25 °C, switch draws no current.",
+  "colour": "#4ade80"
+ },
+ {
+  "id": "6B-1-power-circuit",
+  "section": "6B",
+  "title": "Appliances in parallel on one circuit",
+  "criteria": [
+   "6B.1",
+   "6B.2",
+   "6B.3",
+   "6B.4"
+  ],
+  "blurb": "Switch on appliances on a 230 V power circuit. Each gets the full 230 V and draws I = P/V. The currents add up in the active wire: too much and the circuit breaker trips.",
+  "source": "Cambridge VCE Physics Units 1&2, 6B Electricity at home (pp. 25–31). Modelled as DC at 230 V; wiring resistance ignored.",
+  "colour": "#fbb040"
+ },
+ {
+  "id": "6B-2-kwh-cost",
+  "section": "6B",
+  "title": "Kilowatt-hours and running cost",
+  "criteria": [
+   "6B.3",
+   "6B.5"
+  ],
+  "blurb": "Pick an appliance, how long it runs each day and for how many days. Watch the meter count the kW h, then convert to MJ and dollars, step by step.",
+  "source": "Cambridge VCE Physics Units 1&2, 6B Electricity at home, Worked examples 6B–1 to 6B–3 (pp. 27–32). Supply charge ignored.",
+  "colour": "#4ade80"
+ },
+ {
+  "id": "6C-1-fault-simulator",
+  "section": "6C",
+  "title": "Fault simulator: who gets the current?",
+  "criteria": [
+   "6C.2",
+   "6C.4",
+   "6C.5",
+   "6C.6"
+  ],
+  "blurb": "A loose active wire touches a toaster's metal case while someone holds it. Compare no earth, earth with a circuit breaker, an RCD, and double insulation, with dry or wet skin.",
+  "source": "Cambridge VCE Physics Units 1&2, 6C Electrical safety, Tables 6C–1, 6C–2. DC model: skin 100 kΩ dry, 1 kΩ wet; wires 0.5 Ω; CB 16 A, 10 ms; RCD 30 mA, 30 ms.",
+  "colour": "#f472b6"
+ },
+ {
+  "id": "7A-1-vector-adder",
+  "section": "7A",
+  "title": "Vector adder",
+  "criteria": [
+   "7A.1",
+   "7A.3",
+   "7A.4",
+   "7A.5"
+  ],
+  "blurb": "Drag arrow tips on a grid. The arrows join tip to tail and the resultant shows its magnitude and bearing. Turn on components, or subtract to find a change in a vector.",
+  "source": "Cambridge VCE Physics Units 1&2, 7A Concepts used to model motion, Worked examples 7A–1 to 7A–5. Grid squares are 1 unit; tips snap to the grid.",
+  "colour": "#7dd3fc"
+ },
+ {
+  "id": "7B-1-motion-graph-matcher",
+  "section": "7B",
+  "title": "Motion graph matcher",
+  "criteria": [
+   "7B.1",
+   "7B.2",
+   "7B.3",
+   "7B.4",
+   "7B.5",
+   "7B.6",
+   "7B.7"
+  ],
+  "blurb": "A trolley moves along a track while its displacement–time, velocity–time and acceleration–time graphs draw live. Gradient and area tools link the three graphs.",
+  "source": "Cambridge VCE Physics Units 1&2, 7B Analysing motion through graphs. Model: straight track, constant acceleration in each stage. Right is positive.",
+  "colour": "#c084fc"
+ },
+ {
+  "id": "7C-1-constant-acceleration",
+  "section": "7C",
+  "title": "Constant acceleration animator",
+  "criteria": [
+   "7C.1"
+  ],
+  "blurb": "Set u, a and t and watch the motion, with dots every 0.5 s and the velocity–time graph. The equations of motion are worked live. Vertical throw mode uses g = 9.8 m s⁻².",
+  "source": "Cambridge VCE Physics Units 1&2, 7C Analysing straight-line motion with uniform acceleration, Worked examples 7C–1 to 7C–3. Vertical mode ignores air resistance.",
+  "colour": "#4ade80"
+ },
+ {
+  "id": "8A-1-collision-lab",
+  "section": "8A",
+  "title": "Collision lab: momentum and kinetic energy",
+  "criteria": [
+   "8A.1",
+   "8A.2",
+   "8A.3",
+   "8A.4"
+  ],
+  "blurb": "Two carts collide head on or rear end. Total momentum is the same before and after every time; total kinetic energy is only kept in an elastic collision.",
+  "source": "Cambridge VCE Physics Units 1&2, 8A Momentum, Formulas 8A–1 to 8A–3. Frictionless track, collision in a straight line.",
+  "colour": "#fbb040"
+ },
+ {
+  "id": "8A-2-impulse",
+  "section": "8A",
+  "title": "Impulse: the area under F–t",
+  "criteria": [
+   "8A.5",
+   "8A.6"
+  ],
+  "blurb": "A lump of clay hits a wall and stops. The area under the force–time graph is the impulse. Stretch the contact time and the same impulse needs a much smaller force.",
+  "source": "Cambridge VCE Physics Units 1&2, 8A Momentum, Formula 8A–4. Force modelled as a smooth pulse; the contact is shown in slow motion.",
+  "colour": "#f472b6"
+ },
+ {
+  "id": "8B-1-net-force",
+  "section": "8B",
+  "title": "Free body diagram: net force and F = ma",
+  "criteria": [
+   "8B.1",
+   "8B.2",
+   "8B.3",
+   "8B.4",
+   "8B.7"
+  ],
+  "blurb": "Push a box along a floor with friction. The free body diagram updates live, the forces add to a net force, and a = F_net / m sets how fast it speeds up.",
+  "source": "Cambridge VCE Physics Units 1&2, 8B Newton’s laws of motion, Formulas 8B–1 and 8B–2, g = 9.8 N/kg. Friction matches the push up to its maximum.",
+  "colour": "#7dd3fc"
+ },
+ {
+  "id": "8B-2-inclined-plane",
+  "section": "8B",
+  "title": "Inclined plane: components of weight",
+  "criteria": [
+   "8B.2",
+   "8B.3",
+   "8B.4",
+   "8B.5"
+  ],
+  "blurb": "A block on a slope. Split the force due to gravity into parts along and into the slope. With friction it stays still (f = mg sin θ); without friction it slides with a = g sin θ.",
+  "source": "Cambridge VCE Physics Units 1&2, 8B Newton’s laws of motion, Figure 8B–15 and Formula 8B–4, g = 9.8 m/s². Friction is just enough to hold the block still.",
+  "colour": "#4ade80"
+ },
+ {
+  "id": "8C-1-seesaw-torque",
+  "section": "8C",
+  "title": "Seesaw: balancing torques",
+  "criteria": [
+   "8C.1",
+   "8C.2",
+   "8C.3"
+  ],
+  "blurb": "Drag two masses along a seesaw. Each weight makes a torque τ = r⊥F about the pivot. It balances only when the anticlockwise torques equal the clockwise torques.",
+  "source": "Cambridge VCE Physics Units 1&2, 8C Equilibrium, Formulas 8C–1 to 8C–3, g = 9.8 N/kg. Light beam (mass ignored); torques worked out with the beam level.",
+  "colour": "#a78bfa"
+ },
+ {
+  "id": "9A-1-work-area",
+  "section": "9A",
+  "title": "Work: force × distance, and the area under the graph",
+  "criteria": [
+   "9A.1",
+   "9A.2",
+   "9A.3"
+  ],
+  "blurb": "Push a box with a constant or fading force, at any angle. The area under the force–distance graph fills in as the box moves: that area is the work done.",
+  "source": "Cambridge VCE Physics Units 1&2, 9A Work (pp. 7–10). Box motion is for show only.",
+  "colour": "#fbb040"
+ },
+ {
+  "id": "9B-1-skate-park",
+  "section": "9B",
+  "title": "Skate park: kinetic and gravitational energy",
+  "criteria": [
+   "9B.1",
+   "9B.2",
+   "9B.5",
+   "9B.6",
+   "9B.7",
+   "9B.8"
+  ],
+  "blurb": "A skater rolls in a half-pipe. Energy bars swap between Ek and Eg; total stays constant with no friction. Turn friction on to see heat, efficiency and power.",
+  "source": "Cambridge VCE Physics Units 1&2, 9B (pp. 14–23). g = 9.8 N kg⁻¹. Skater is a point mass; friction is a constant 0.04mg.",
+  "colour": "#4ade80"
+ },
+ {
+  "id": "9C-1-hookes-law",
+  "section": "9C",
+  "title": "Hooke's law and elastic potential energy",
+  "criteria": [
+   "9C.1",
+   "9C.2",
+   "9C.3",
+   "9C.4"
+  ],
+  "blurb": "Stretch or compress a spring. The force–extension graph is a straight line: its gradient is k, and the shaded triangle under it is the stored energy ½kx².",
+  "source": "Cambridge VCE Physics Units 1&2, 9C Springs (pp. 29–36). Ideal spring: massless, obeys Hooke's law, within its elastic limit.",
+  "colour": "#f472b6"
+ },
+ {
+  "id": "9C-2-spring-oscillator",
+  "section": "9C",
+  "title": "Oscillating spring: where is the energy?",
+  "criteria": [
+   "9C.3",
+   "9C.5",
+   "9C.6"
+  ],
+  "blurb": "A mass bounces on an ideal spring, sideways on a frictionless floor or hanging vertically. Energy bars show Ek, elastic and gravitational energy swapping while the total stays the same.",
+  "source": "Cambridge VCE Physics Units 1&2, 9C Springs (pp. 36–41). Ideal spring, no friction or air resistance. g = 9.8 N kg⁻¹. Eg measured from the lowest point.",
+  "colour": "#7dd3fc"
  }
 ]

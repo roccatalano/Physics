@@ -1,0 +1,76 @@
+<!--{"id":"6A-2-sensor-divider","section":"6A","title":"Sensor in a potential divider","criteria":["6A.3","6A.4","6A.5","6A.6","6A.7","6A.8"],
+"blurb":"An LDR or thermistor shares 9 V with a variable resistor. Change the light or temperature, watch V_out cross the 4.5 V switching level, and use the variable resistor to set when it switches.",
+"source":"Cambridge VCE Physics Units 1&2, 6A (pp. 11–18). Model: LDR as Fig. 6A–16, NTC thermistor 10 kΩ at 25 °C, switch draws no current.","colour":"#4ade80"}-->
+<div class="ctx">A sensor and a variable resistor share <b>9 V</b>. The output switches on when <span class="k">V</span><sub>out</sub> (across the <b>lower</b> part) reaches <b>4.5 V</b>.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc"><h3 id="ptitle">Potential divider</h3><svg id="sv" viewBox="0 0 860 440"></svg><div class="rule" id="rule" style="font-size:17px;padding:8px 14px"></div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Set up</h3>
+   <div class="btns"><button class="sn on" data-v="ldr">LDR</button><button class="sn" data-v="th">Thermistor</button></div>
+   <div class="btns"><button class="ps on" data-v="b">Sensor at bottom</button><button class="ps" data-v="t">Sensor at top</button></div>
+   <div class="sl" id="sL"><span class="nm">Light</span><input type="range" id="L" min="1" max="3" step="0.02" value="2.3"><span class="v" id="Lv"></span></div>
+   <div class="sl" id="sT"><span class="nm">Temp.</span><input type="range" id="T" min="0" max="100" step="1" value="25"><span class="v" id="Tv"></span></div>
+   <div class="sl"><span class="nm">Resistor</span><input type="range" id="R" min="2" max="5" step="0.02" value="3"><span class="v" id="Rv"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5"><h3>Calculate</h3>
+   <div><span class="k">I</span> <span class="kr">=</span> <span class="k">V</span><span class="kr">/</span><span class="k">R</span><sub>total</sub> <span class="kr">=</span> <span class="kr" id="Io"></span></div>
+   <div><span class="k">V</span><sub>out</sub> <span class="kr">=</span> <span class="k">IR</span><sub>lower</sub> <span class="kr">=</span> <span class="kr" id="Vo"></span></div>
+  </div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv');let sens='ldr',pos='b',lux=200,T=25,Rv=1000;
+const Rldr=l=>1e6*Math.pow(l/10,-2.5),Rth=t=>1e4*Math.exp(3950*(1/(t+273.15)-1/298.15));
+const fR=R=>R>=1e6?sig(R/1e6,3)+' MΩ':R>=1e3?sig(R/1e3,3)+' kΩ':sig(R,3)+' Ω';
+const W='#a5b4d8',XL=80,XR=330,YT=50,YB=400;
+// wires: loop
+el('path',{d:`M${XL} ${YT}H${XR}V${YB}H${XL}Z`,fill:'none',stroke:W,'stroke-width':4},sv);
+// battery on left
+el('rect',{x:XL-30,y:200,width:60,height:50,fill:'#1a2150'},sv);
+el('line',{x1:XL-28,x2:XL+28,y1:210,y2:210,stroke:'#eef2ff','stroke-width':4},sv);el('line',{x1:XL-14,x2:XL+14,y1:238,y2:238,stroke:'#eef2ff','stroke-width':8},sv);
+txt(sv,XL-36,232,'9 V',{'text-anchor':'end','font-size':20});txt(sv,XL+34,206,'+',{fill:'#f472b6','font-size':20});
+// component boxes on right at top and bottom
+function comp(y){const g=el('g',{},sv);el('rect',{x:XR-22,y:y-55,width:44,height:110,fill:'#1a2150',stroke:'#eef2ff','stroke-width':4,rx:3},g);return g}
+const gt=el('g',{},sv),gb=el('g',{},sv);
+function draw(g,kind,y){g.innerHTML='';el('rect',{x:XR-22,y:y-55,width:44,height:110,fill:'#1a2150',stroke:'#eef2ff','stroke-width':4,rx:3},g);
+ if(kind==='var'){el('line',{x1:XR-42,y1:y+50,x2:XR+38,y2:y-50,stroke:'#fbb040','stroke-width':4,'marker-end':'url(#ar)'},g)}
+ else if(kind==='ldr'){el('circle',{cx:XR,cy:y,r:66,fill:'none',stroke:'#eef2ff','stroke-width':3},g);[[-30],[0]].forEach(([d])=>el('line',{x1:XR-120,y1:y-60+d,x2:XR-74,y2:y-30+d,stroke:'#fde047','stroke-width':4,'marker-end':'url(#ay)'},g))}
+ else{el('path',{d:`M${XR-40} ${y+50}L${XR+36} ${y-46}H${XR+56}`,fill:'none',stroke:'#eef2ff','stroke-width':3},g)}
+ const lab={var:'variable resistor',ldr:'LDR',th:'thermistor'}[kind];const t=txt(g,XR+(kind==='ldr'?80:60),y-14,lab,{'font-size':18,fill:kind==='var'?'#fbb040':'#7dd3fc'});
+ const r=txt(g,XR+(kind==='ldr'?80:60),y+14,'',{'font-size':20,'font-weight':700});return r}
+const defs=el('defs',{},sv);[['ar','#fbb040'],['ay','#fde047']].forEach(([id,c])=>{const m=el('marker',{id,viewBox:'0 0 10 10',refX:5,refY:5,markerWidth:4,markerHeight:4,orient:'auto'},defs);el('path',{d:'M0 0L10 5L0 10z',fill:c},m)});
+// Vout tap
+const YM=225;el('circle',{cx:XR,cy:YM,r:6,fill:W},sv);el('line',{x1:XR,x2:520,y1:YM,y2:YM,stroke:W,'stroke-width':3},sv);el('line',{x1:XR,x2:520,y1:YB,y2:YB,stroke:W,'stroke-width':3,'stroke-dasharray':'2 0'},sv);
+el('circle',{cx:XR,cy:YB,r:6,fill:W},sv);
+// meter
+const MX=540,MW=70,M0=YB,M1=YT+10,VH=(M0-M1)/9;
+el('rect',{x:MX,y:M1,width:MW,height:M0-M1,fill:'#141a40',stroke:'#36418a','stroke-width':2,rx:6},sv);
+const bar=el('rect',{x:MX+6,width:MW-12,fill:'#7dd3fc',rx:4},sv);
+for(let v=0;v<=9;v+=3)txt(sv,MX+MW+10,M0-v*VH+6,v+' V',{fill:'#8b96c4','font-size':16});
+const thy=M0-4.5*VH;el('line',{x1:MX-12,x2:MX+MW+12,y1:thy,y2:thy,stroke:'#f472b6','stroke-width':3,'stroke-dasharray':'6 4'},sv);txt(sv,MX-16,thy+6,'4.5 V',{fill:'#f472b6','font-size':16,'text-anchor':'end'});
+txt(sv,MX+MW/2,M1-14,'V',{'font-size':18,'text-anchor':'middle','font-style':'italic'});txt(sv,MX+MW/2+10,M1-10,'out',{'font-size':13,'text-anchor':'start'});
+const vtx=txt(sv,MX+MW/2,M0+30,'',{'font-size':22,'font-weight':700,'text-anchor':'middle',fill:'#7dd3fc'});
+// output device
+const OXc=760,OYc=200;const glow=el('circle',{cx:OXc,cy:OYc,r:70,fill:'#fde047',opacity:0},sv);
+const bulb=el('circle',{cx:OXc,cy:OYc,r:40,fill:'#232c63',stroke:'#eef2ff','stroke-width':3},sv);
+const devt=txt(sv,OXc,OYc+90,'',{'text-anchor':'middle','font-size':19});const stt=txt(sv,OXc,OYc+120,'',{'text-anchor':'middle','font-size':24,'font-weight':700});
+// current dots
+const dots=[];for(let i=0;i<14;i++)dots.push(el('circle',{r:5,fill:'#fbb040'},sv));const L=2*(XR-XL)+2*(YB-YT);
+function at(s){s=((s%L)+L)%L;const a=XR-XL,b=YB-YT;if(s<a)return[XL+s,YT];s-=a;if(s<b)return[XR,YT+s];s-=b;if(s<a)return[XR-s,YB];s-=a;return[XL,YB-s]}
+let rt,rb,I=0,Vout=0,ph=0;
+function setup(){rt=draw(gt,pos==='t'?sens:'var',137);rb=draw(gb,pos==='b'?sens:'var',312);
+ document.getElementById('sL').style.display=sens==='ldr'?'':'none';document.getElementById('sT').style.display=sens==='th'?'':'none';calc()}
+function calc(){if(!rt)return;const Rs=sens==='ldr'?Rldr(lux):Rth(T);const Rtop=pos==='t'?Rs:Rv,Rbot=pos==='b'?Rs:Rv;
+ I=9/(Rtop+Rbot);Vout=I*Rbot;rt.textContent=fR(Rtop);rb.textContent=fR(Rbot);
+ document.getElementById('Io').textContent=I>=1e-3?sig(I*1000,3)+' mA':sig(I*1e6,3)+' µA';document.getElementById('Vo').textContent=f2(Vout)+' V';
+ bar.setAttribute('y',M0-Vout*VH);bar.setAttribute('height',Math.max(0,Vout*VH));const on=Vout>=4.5;bar.setAttribute('fill',on?'#4ade80':'#7dd3fc');vtx.textContent=f2(Vout)+' V';
+ const dev=sens==='ldr'?(pos==='b'?'night light':'light-activated alarm'):(pos==='b'?'heater':'cooling fan');
+ devt.textContent='Output: '+dev;stt.textContent=on?'ON':'OFF';stt.setAttribute('fill',on?'#4ade80':'#8b96c4');glow.setAttribute('opacity',on?.35:0);bulb.setAttribute('fill',on?'#fde047':'#232c63');
+ document.getElementById('ptitle').textContent='Potential divider with '+(sens==='ldr'?'an LDR':'a thermistor')+' at the '+(pos==='b'?'bottom':'top');
+ const cond=sens==='ldr'?(pos==='b'?'it gets <b>dark</b>':'it gets <b>bright</b>'):(pos==='b'?'it gets <b>cold</b>':'it gets <b>hot</b>');
+ document.getElementById('rule').innerHTML='The bigger resistance takes the bigger share of the 9 V. Here <span class="k">V</span><sub>out</sub> rises when '+cond+', so the '+dev+' switches on. Turn the <b class="hi">variable resistor</b> to change the level at which it switches.'}
+group('.sn',v=>{sens=v;setup()});group('.ps',v=>{pos=v;setup()});
+slider('L',v=>Math.round(Math.pow(10,v))+' lx',v=>{lux=Math.pow(10,v);calc()});slider('T',v=>v+' °C',v=>{T=v;calc()});slider('R',v=>fR(Math.pow(10,v)),v=>{Rv=Math.pow(10,v);calc()});
+setup();
+IX.anims.push((t,dt)=>{const sp=Math.max(0,Math.log10(I*1e6)+0.5)*40;ph+=sp*dt*IX.speed*(IX.play?1:0);dots.forEach((d,i)=>{const[x,y]=at(ph+i*L/14);d.setAttribute('cx',x);d.setAttribute('cy',y);d.style.display=(x>XL-40&&x<XL+40&&y>195&&y<255)||(x===XR&&(Math.abs(y-137)<58||Math.abs(y-312)<58))?'none':''})});
+</script>

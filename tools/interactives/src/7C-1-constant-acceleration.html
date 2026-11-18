@@ -1,0 +1,84 @@
+<!--{"id":"7C-1-constant-acceleration","section":"7C","title":"Constant acceleration animator","criteria":["7C.1"],
+"blurb":"Set u, a and t and watch the motion, with dots every 0.5 s and the velocity–time graph. The equations of motion are worked live. Vertical throw mode uses g = 9.8 m s⁻².",
+"source":"Cambridge VCE Physics Units 1&2, 7C Analysing straight-line motion with uniform acceleration, Worked examples 7C–1 to 7C–3. Vertical mode ignores air resistance.","colour":"#4ade80"}-->
+<div class="ctx">Set <b>u</b>, <b>a</b> and <b>t</b>. Dots show the object every 0.5 s: wider gaps mean faster.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#4ade80;padding:12px 16px"><h3 id="ptitle">Car on a straight road</h3><svg id="sv" viewBox="0 0 860 470"></svg></div>
+ <div class="side">
+  <style>.sl{grid-template-columns:22px 1fr 112px}</style><div class="card ctl" style="--c:#fbb040;gap:10px"><h3 style="margin-bottom:2px">Set up</h3>
+   <div class="btns"><button class="md on" data-v="h">Road</button><button class="md" data-v="v">Vertical throw</button></div>
+   <div class="sl"><span class="nm">u</span><input type="range" id="u" min="-10" max="20" step="1" value="0"><span class="v" id="uv"></span></div>
+   <div class="sl" id="arow"><span class="nm">a</span><input type="range" id="a" min="-5" max="5" step="0.5" value="2"><span class="v" id="av"></span></div>
+   <div class="sl"><span class="nm">t</span><input type="range" id="t" min="0.5" max="8" step="0.5" value="5"><span class="v" id="tv"></span></div>
+   <div class="btns" id="pres"></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5;padding:12px 18px">
+   <div>$v = u + at$</div><div id="o1" style="font-size:18px"></div>
+   <div style="margin-top:4px">$s = ut + \tfrac{1}{2}at^2$</div><div id="o2" style="font-size:18px"></div>
+  </div>
+  <div class="rule" id="rule" style="font-size:17px;padding:10px 14px"></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv');let mode='h',u=0,a=2,T=5;
+const scene=el('g',{},sv),graph=el('g',{},sv),live=el('g',{},sv);
+const nice=r=>{const m=Math.pow(10,Math.floor(Math.log10(r)));return [1,2,5,10].map(k=>k*m).find(k=>r/k<=6)};
+const fmt=(v,d=1)=>(v<-1e-9?'−':'')+Math.abs(v).toFixed(d);
+let L={};
+function setup(){scene.innerHTML='';graph.innerHTML='';live.innerHTML='';
+ const s=t=>u*t+.5*a*t*t,vt=t=>u+a*t;
+ let smin=0,smax=0;for(let i=0;i<=200;i++){const q=s(T*i/200);smin=Math.min(smin,q);smax=Math.max(smax,q)}
+ if(smax-smin<1){smax+=.5;smin-=.5}
+ const st=nice(smax-smin);const s0=Math.floor(smin/st)*st,s1=Math.ceil(smax/st)*st;
+ // scene geometry
+ let pos;if(mode==='h'){const X0=70,W=720,Y=60;pos=q=>[X0+(q-s0)/(s1-s0)*W,Y];
+  el('line',{x1:X0-20,x2:X0+W+20,y1:Y+22,y2:Y+22,stroke:'#36418a','stroke-width':4},scene);
+  for(let q=s0;q<=s1+1e-9;q+=st){el('line',{x1:pos(q)[0],x2:pos(q)[0],y1:Y+18,y2:Y+28,stroke:'#5b6690','stroke-width':2},scene);txt(scene,pos(q)[0],Y+48,fmt(q,st<1?1:0)+(q+st>s1+1e-9?' m':''),{fill:'#7f8bb5','font-size':15,'text-anchor':'middle'})}
+  L.gb={x:80,y:150,w:740,h:270};}
+ else{const X=140,Y0=30,H=400;pos=q=>[X,Y0+H-(q-s0)/(s1-s0)*H];
+  el('line',{x1:X-46,x2:X-46,y1:Y0-6,y2:Y0+H+6,stroke:'#36418a','stroke-width':3},scene);
+  for(let q=s0;q<=s1+1e-9;q+=st){el('line',{x1:X-52,x2:X-40,y1:pos(q)[1],y2:pos(q)[1],stroke:'#5b6690','stroke-width':2},scene);txt(scene,X-58,pos(q)[1]+5,fmt(q,st<1?1:0),{fill:'#7f8bb5','font-size':15,'text-anchor':'end'})}
+  txt(scene,X-58,Y0-12,'s (m)',{fill:'#7f8bb5','font-size':15,'text-anchor':'end'});
+  el('line',{x1:X-30,x2:X+40,y1:pos(0)[1],y2:pos(0)[1],stroke:'#fbb040','stroke-width':2,'stroke-dasharray':'5 5'},scene);txt(scene,X+44,pos(0)[1]+5,'hand',{fill:'#fbb040','font-size':15});
+  L.gb={x:340,y:40,w:480,h:380};}
+ // dots every 0.5 s
+ for(let t=0;t<=T+1e-9;t+=.5){const [x0,y]=pos(s(t)),x=mode==='v'&&a<0&&t>-u/a+1e-9?x0+18:x0;el('circle',{cx:x,cy:y,r:5,fill:'#eef2ff','fill-opacity':.45},scene)}
+ // v-t graph
+ const g=L.gb,vmn=Math.min(0,u,vt(T)),vmx=Math.max(0,u,vt(T)),vs=nice(Math.max(1,vmx-vmn)),v0=Math.floor(vmn/vs)*vs,v1=Math.max(Math.ceil(vmx/vs)*vs,v0+vs);
+ const gx=t=>g.x+t/T*g.w,gy=v=>g.y+g.h-(v-v0)/(v1-v0)*g.h;L.gx=gx;L.gy=gy;
+ el('rect',{x:g.x,y:g.y,width:g.w,height:g.h,fill:'#141a40',rx:6},graph);
+ for(let v=v0;v<=v1+1e-9;v+=vs){el('line',{x1:g.x,x2:g.x+g.w,y1:gy(v),y2:gy(v),stroke:Math.abs(v)<1e-9?'#5b6690':'#232c63','stroke-width':Math.abs(v)<1e-9?2:1},graph);txt(graph,g.x-8,gy(v)+5,fmt(v,vs<1?1:0),{fill:'#7f8bb5','font-size':14,'text-anchor':'end'})}
+ const ts=T>4?1:.5;for(let t=0;t<=T+1e-9;t+=ts)txt(graph,gx(t),g.y+g.h+20,t+(t+ts>T+1e-9?' s':''),{fill:'#7f8bb5','font-size':14,'text-anchor':'middle'});
+ txt(graph,g.x+8,g.y-8,'Velocity–time   v (m s⁻¹)   area = displacement s',{fill:'#f472b6','font-size':16,'font-weight':700});
+ L.aP=el('path',{fill:'#4ade80','fill-opacity':.3},graph);L.aN=el('path',{fill:'#ef4444','fill-opacity':.35},graph);
+ el('line',{x1:gx(0),y1:gy(u),x2:gx(T),y2:gy(vt(T)),stroke:'#f472b6','stroke-width':4,'stroke-opacity':.35},graph);
+ L.vl=el('line',{stroke:'#f472b6','stroke-width':4},graph);L.vd=el('circle',{r:7,fill:'#f472b6'},graph);
+ L.obj=el('g',{},live);if(mode==='h'){el('rect',{x:-24,y:-16,width:48,height:24,rx:7,fill:'#4ade80'},L.obj);el('circle',{cx:-13,cy:10,r:7,fill:'#eef2ff'},L.obj);el('circle',{cx:13,cy:10,r:7,fill:'#eef2ff'},L.obj)}else el('circle',{r:14,fill:'#4ade80'},L.obj);
+ const mk=el('marker',{id:'vh',viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:4,markerHeight:4,orient:'auto'},el('defs',{},live));el('path',{d:'M0 0L10 5L0 10z',fill:'#f472b6'},mk);L.va=el('line',{stroke:'#f472b6','stroke-width':5,'marker-end':'url(#vh)'},live);L.vt=txt(live,0,0,'',{fill:'#f472b6','font-size':17,'font-weight':700});
+ L.pos=pos;L.s=s;L.v=vt;L.k=(mode==='h'?110:80)/Math.max(1,Math.abs(u),Math.abs(vt(T)));
+ const v=vt(T),S=s(T);const g1=x=>Number.isInteger(x)?fmt(x,0):fmt(x,1);const n=x=>(x<0?'('+g1(x)+')':g1(x));
+ document.getElementById('o1').innerHTML=`= ${n(u)} + ${n(a)} × ${n(T)} = <b class="pk">${g1(v)} m s⁻¹</b>`;
+ document.getElementById('o2').innerHTML=`= ${n(u)} × ${n(T)} + ½ × ${n(a)} × ${n(T)}² = <b class="hi">${fmt(S,1)} m</b>`;
+ const tstop=a!==0?-u/a:null;
+ document.getElementById('rule').innerHTML=mode==='v'?(tstop>0&&tstop<T?`<b>Top</b> at t = ${fmt(tstop,2)} s: v = 0 but a is still −9.8 m s⁻².`:'<b>Up is positive</b>, so a = −9.8 m s⁻² all the way.')
+  :(tstop>0&&tstop<T?`<b>v = 0 at t = ${fmt(tstop,2)} s</b>, then it turns back. s is displacement.`:'Pick a <b>positive direction</b>: u, v, a and s all carry signs.');
+ document.getElementById('ptitle').textContent=mode==='h'?'Car on a straight road: right is positive':'Ball thrown straight up: up is positive';}
+function area(t,pos){const g=L.gb;let d='M'+L.gx(0)+','+L.gy(0);for(let i=0;i<=60;i++){const tt=t*i/60,v=pos?Math.max(0,L.v(tt)):Math.min(0,L.v(tt));d+='L'+L.gx(tt).toFixed(1)+','+L.gy(v).toFixed(1)}return d+'L'+L.gx(t)+','+L.gy(0)+'Z'}
+IX.anims.push(t=>{const tc=Math.min(t%(T+2),T),[x,y]=L.pos(L.s(tc)),v=L.v(tc);
+ L.obj.setAttribute('transform',`translate(${x},${y})`);
+ const k=L.k;if(mode==='h'){L.va.setAttribute('x1',x);L.va.setAttribute('x2',x+v*k);L.va.setAttribute('y1',y-30);L.va.setAttribute('y2',y-30);L.vt.setAttribute('x',Math.max(90,Math.min(760,x)));L.vt.setAttribute('y',y-46);L.vt.setAttribute('text-anchor','middle')}
+ else{L.va.setAttribute('x1',x+30);L.va.setAttribute('x2',x+30);L.va.setAttribute('y1',y);L.va.setAttribute('y2',y-v*k);L.vt.setAttribute('x',x+42);L.vt.setAttribute('y',y+6);L.vt.setAttribute('text-anchor','start')}
+ L.vt.textContent='v = '+fmt(v)+' m s⁻¹';
+ L.vl.setAttribute('x1',L.gx(0));L.vl.setAttribute('y1',L.gy(u));L.vl.setAttribute('x2',L.gx(tc));L.vl.setAttribute('y2',L.gy(v));L.vd.setAttribute('cx',L.gx(tc));L.vd.setAttribute('cy',L.gy(v));
+ L.aP.setAttribute('d',area(tc,true));L.aN.setAttribute('d',area(tc,false))});
+const PH={h:[['Go',0,2,5],['Brake',20,-5,4],['Reverse',10,-4,5]],v:[['Throw',20,-9.8,4.1],['Drop',0,-9.8,3],['Toss',8,-9.8,1.6]]};
+const ur=document.getElementById('u'),ar=document.getElementById('a'),tr=document.getElementById('t');
+const upd=()=>{IX.t=0;setup()};
+slider('u',x=>fmt(x,0)+' m s⁻¹',x=>{u=x;upd()});slider('a',x=>fmt(x)+' m s⁻²',x=>{a=mode==='v'?-9.8:x;upd()});slider('t',x=>f2(x,1)+' s',x=>{T=x;upd()});
+function presets(){const b=document.getElementById('pres');b.innerHTML='';PH[mode].forEach(([n,uu,aa,tt])=>{const e=document.createElement('button');e.textContent=n;e.onclick=()=>{ur.value=uu;if(mode==='h')ar.value=aa;tr.value=tt;[ur,ar,tr].forEach(r=>r.dispatchEvent(new Event('input')))};b.append(e)})}
+group('.md',v=>{mode=v;const vert=v==='v';document.getElementById('arow').style.opacity=vert?.45:1;ar.disabled=vert;
+ ur.min=vert?0:-10;ur.max=vert?30:20;tr.max=vert?6:8;presets();
+ if(vert){ur.value=20;tr.value=4.1}else{ur.value=0;ar.value=2;tr.value=5}
+ [ur,ar,tr].forEach(r=>r.dispatchEvent(new Event('input')));document.getElementById('av').textContent=vert?'−9.8 m s⁻²':fmt(+ar.value)+' m s⁻²'});
+presets();setup();
+</script>

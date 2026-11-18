@@ -1,0 +1,49 @@
+<!--{"id":"4B-1-binding-energy-curve","section":"4B","title":"The binding energy curve","criteria":["4B.1","4B.2"],
+"blurb":"Average binding energy per nucleon against mass number. Fusing light nuclei and splitting heavy nuclei both climb towards iron-56, so both release energy.",
+"source":"Cambridge VCE Physics Units 1&2, 4B Comparing fusion and fission (binding energy curve, Worked examples 4B–1 and 4B–2). ABE from standard mass data.","colour":"#4ade80"}-->
+<div class="ctx">The higher a nucleus sits on this curve, the more tightly its nucleons are bound. <b>Any reaction that moves nucleons up the curve releases energy.</b></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#4ade80"><h3>Average binding energy per nucleon (ABE)</h3><svg id="sv" viewBox="0 0 860 400"></svg><div class="out" id="o" style="font-size:19px;line-height:1.45;min-height:84px;padding-left:10px"></div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#7dd3fc"><h3>Reaction</h3>
+   <div class="btns"><button class="rx" data-v="dt">Fusion: D + T</button><button class="rx" data-v="sun">Fusion: He-3 + He-3</button><button class="rx" data-v="fis">Fission: U-235</button><button class="rx" data-v="fe">Fuse iron?</button><button class="rx on" data-v="none">Curve only</button></div>
+   <div class="btns"><button id="zn">Shade regions</button></div>
+  </div>
+  <div class="rule" style="font-size:17px"><b>TBE = A × ABE.</b> Energy released = TBE after − TBE before. Light nuclei <b>fuse</b> and heavy nuclei <b>split</b>, both moving up towards iron-56.</div>
+ </div>
+</div>
+<script>
+// [name, A, Z-symbol label, ABE MeV]
+const D=[['H-1',1,0],['H-2',2,1.112],['H-3',3,2.827],['He-3',3,2.573],['He-4',4,7.074],['Li-6',6,5.332],['Li-7',7,5.606],['Be-9',9,6.463],['B-11',11,6.928],['C-12',12,7.680],['N-14',14,7.476],['O-16',16,7.976],['Ne-20',20,8.032],['Mg-24',24,8.261],['Si-28',28,8.448],['S-32',32,8.493],['Ar-40',40,8.595],['Cr-52',52,8.776],['Fe-56',56,8.790],['Ni-62',62,8.795],['Zn-64',64,8.736],['Kr-84',84,8.717],['Zr-90',90,8.710],['Rb-93',93,8.541],['Sr-94',94,8.594],['Mo-98',98,8.635],['Ag-107',107,8.554],['Te-112',112,8.40],['Sn-120',120,8.505],['I-127',127,8.445],['Ba-138',138,8.393],['Xe-140',140,8.291],['Cs-141',141,8.294],['Nd-142',142,8.346],['Gd-158',158,8.202],['Er-166',166,8.142],['W-184',184,8.005],['Au-197',197,7.916],['Pb-208',208,7.868],['Th-232',232,7.615],['U-235',235,7.591],['U-238',238,7.570]];
+const B=Object.fromEntries(D.map(d=>[d[0],d]));
+const sv=document.getElementById('sv'),X0=70,XW=760,Y0=350,YH=320,X=a=>X0+XW*Math.sqrt(a/240),Y=e=>Y0-YH*e/9;
+const zone=el('g',{},sv);
+el('rect',{x:X0,y:Y(9),width:X(56)-X0,height:YH,fill:'#7dd3fc',opacity:.12},zone);el('rect',{x:X(56),y:Y(9),width:X(240)-X(56),height:YH,fill:'#f472b6',opacity:.1},zone);
+txt(zone,X(22),Y(1.2),'Fusion releases energy',{'text-anchor':'middle',fill:'#7dd3fc','font-size':18});txt(zone,X(150),Y(5.5),'Fission releases energy',{'text-anchor':'middle',fill:'#f472b6','font-size':20});
+for(let e=0;e<=9;e++){el('line',{x1:X0,x2:X(240),y1:Y(e),y2:Y(e),stroke:'#2c3670'},sv);txt(sv,X0-10,Y(e)+6,e,{'text-anchor':'end','font-size':16,fill:'#a5b4d8'})}
+for(const a of [0,4,16,36,56,100,144,196,240])txt(sv,X(a),Y0+24,a,{'text-anchor':'middle','font-size':16,fill:'#a5b4d8'});
+el('line',{x1:X0,x2:X0,y1:Y(9),y2:Y0,stroke:'#6b78b0','stroke-width':2},sv);el('line',{x1:X0,x2:X(240),y1:Y0,y2:Y0,stroke:'#6b78b0','stroke-width':2},sv);
+txt(sv,X(120),Y0+46,'Mass number A (square-root scale, to spread out light nuclei)',{'text-anchor':'middle','font-size':17,fill:'#cfd7f5'});
+txt(sv,22,Y(4.5),'ABE (MeV)',{'text-anchor':'middle','font-size':17,fill:'#cfd7f5',transform:`rotate(-90 22 ${Y(4.5)})`});
+const cv=D.filter(d=>!['He-3','Xe-140','Cs-141','Rb-93','Sr-94','Te-112'].includes(d[0]));
+el('polyline',{points:cv.map(d=>X(d[1])+','+Y(d[2])).join(' '),fill:'none',stroke:'#4ade80','stroke-width':3.5,'stroke-linejoin':'round'},sv);
+D.forEach(d=>el('circle',{cx:X(d[1]),cy:Y(d[2]),r:3.5,fill:'#4ade80'},sv));
+el('circle',{cx:X(56),cy:Y(8.79),r:8,fill:'none',stroke:'#fbb040','stroke-width':3},sv);txt(sv,X(56),Y(8.79)-16,'Fe-56: most stable',{'text-anchor':'middle',fill:'#fbb040','font-size':17});
+const lay=el('g',{},sv);
+const defs=el('defs',{},sv),mk=el('marker',{id:'ah',viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:6,markerHeight:6,orient:'auto'},defs);el('path',{d:'M0 0L10 5L0 10z',fill:'#fbb040'},mk);
+const RX={dt:{in:[['H-2',1],['H-3',1]],out:[['He-4',1]],free:'(+ n: no binding energy)',name:'D + T → He-4 + n'},
+ sun:{in:[['He-3',2]],out:[['He-4',1]],free:'(+ 2 H-1: no binding energy)',name:'He-3 + He-3 → He-4 + 2 H-1'},
+ fis:{in:[['U-235',1]],out:[['Rb-93',1],['Cs-141',1]],free:'(+ 2 n: no binding energy)',name:'U-235 + n → Rb-93 + Cs-141 + 2n'},
+ fe:{in:[['Fe-56',2]],out:[['Te-112',1]],free:'',name:'Fe-56 + Fe-56 → Te-112'}};
+function tbe(list){return list.reduce((s,[n,c])=>s+c*B[n][1]*B[n][2],0)}
+function show(v){lay.innerHTML='';const o=document.getElementById('o');
+ if(v==='none'){o.innerHTML='<span style="color:#a5b4d8">Choose a reaction to see its total binding energy (TBE) before and after.</span>';return}
+ const R=RX[v],bi=tbe(R.in),bo=tbe(R.out),q=bo-bi;
+ R.in.forEach(([n])=>R.out.forEach(([m])=>{const a=B[n],b=B[m];el('line',{x1:X(a[1]),y1:Y(a[2]),x2:X(b[1]),y2:Y(b[2]),stroke:'#fbb040','stroke-width':4,'marker-end':'url(#ah)',opacity:.9},lay)}));
+ const lab=(n,col,dy)=>{const d=B[n];el('circle',{cx:X(d[1]),cy:Y(d[2]),r:9,fill:col},lay);txt(lay,X(d[1])+(d[1]>200?-14:14),Y(d[2])+dy,n,{fill:col,'font-size':18,'font-weight':700,'text-anchor':d[1]>200?'end':'start'})};
+ R.in.forEach(([n])=>lab(n,'#7dd3fc',n==='H-2'||n==='Fe-56'?28:-12));R.out.forEach(([n])=>lab(n,'#f472b6',n==='Cs-141'?28:-12));
+ const row=l=>l.map(([n,c])=>(c>1?c+' × ':'')+B[n][1]+' × '+B[n][2].toFixed(3)).join(' + ');
+ o.innerHTML=`<b>${R.name}</b> &nbsp; ${q>0?`released <span class="big">${q.toFixed(1)} MeV</span>`:`<span class="big pk">${q.toFixed(1)} MeV</span> energy must be <b>put in</b>`}<br>TBE before: ${row(R.in)} = <b class="cy">${bi.toFixed(1)} MeV</b><br>TBE after: ${row(R.out)} = <b class="pk">${bo.toFixed(1)} MeV</b> <span style="color:#a5b4d8">${R.free}</span>`;
+}
+group('.rx',show);toggle('zn',v=>zone.style.display=v?'':'none',false);show('none');
+</script>

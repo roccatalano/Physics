@@ -1,0 +1,62 @@
+<!--{"id":"3B-1-penetration","section":"3B","title":"Penetrating power: α, β and γ","criteria":["3B.1","3E.2"],
+"blurb":"Fire alpha, beta or gamma radiation through air, paper, aluminium or lead and count what reaches the Geiger counter.",
+"source":"Cambridge VCE Physics Units 1&2, 3B Alpha, beta and gamma radiation (pp. 102–106). Beam drawn parallel (no spreading). γ through 2 cm lead uses Co-60 γ.","colour":"#fbb040"}-->
+<div class="ctx">A source fires radiation at a Geiger counter. Put something in the way and see <b>what gets through</b>.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#fbb040"><h3 id="pt">Source, absorber and detector</h3><svg id="sv" viewBox="0 0 780 380"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Radiation</h3>
+   <div class="btns"><button class="rd on" data-v="a">α</button><button class="rd" data-v="b">β</button><button class="rd" data-v="g">γ</button></div>
+   <h3 style="margin:6px 0 0">Absorber</h3>
+   <div class="btns"><button class="ab on" data-v="none">None</button><button class="ab" data-v="paper">Paper</button><button class="ab" data-v="al">Al 3 mm</button><button class="ab" data-v="pb">Pb 2 cm</button></div>
+   <div class="sl" style="grid-template-columns:96px 1fr 84px"><span class="nm">Air gap</span><input type="range" id="d" min="2" max="100" step="1" value="20"><span class="v" id="dv"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80"><h3>Reaching the detector</h3><div><span class="big" id="pc"></span> <span id="pw" style="font-size:18px;color:#cfd7f5"></span></div></div>
+  <div class="rule"><b>α</b>: paper. <b>β</b>: a few mm of aluminium. <b>γ</b>: lead only reduces it.</div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),SX=70,PX=5.9,BY=170,AX=4; // px per cm, absorber at 4 cm
+const X=c=>SX+c*PX;
+const C={a:'#f87171',b:'#7dd3fc',g:'#fbb040'},NAME={a:'α particles',b:'β particles',g:'γ rays'};
+// axis
+el('line',{x1:X(0),x2:X(100),y1:310,y2:310,stroke:'#36418a','stroke-width':2},sv);
+for(let c=0;c<=100;c+=20){el('line',{x1:X(c),x2:X(c),y1:304,y2:316,stroke:'#5b6690','stroke-width':2},sv);txt(sv,X(c),340,c,{fill:'#8b96c0','font-size':18,'text-anchor':'middle'})}
+txt(sv,X(100)+40,370,'distance from source (cm)',{fill:'#cfd7f5','font-size':18,'text-anchor':'end'});
+// source
+el('rect',{x:SX-56,y:BY-38,width:50,height:76,rx:8,fill:'#36418a',stroke:'#8b96c0','stroke-width':2},sv);txt(sv,SX-31,BY+66,'source',{fill:'#cfd7f5','font-size':17,'text-anchor':'middle'});
+const tre=el('circle',{cx:SX-31,cy:BY,r:10,fill:'#fbb040'},sv);
+// absorber
+const abs=el('rect',{y:BY-90,height:180,rx:3},sv),absT=txt(sv,0,BY-102,'',{'font-size':17,'text-anchor':'middle'});
+// detector
+const det=el('g',{},sv);el('rect',{x:0,y:-46,width:66,height:92,rx:10,fill:'#232c63',stroke:'#4ade80','stroke-width':3},det);el('rect',{x:-8,y:-14,width:10,height:28,fill:'#4ade80'},det);
+const flash=el('circle',{cx:33,cy:-20,r:9,fill:'#4ade80'},det);const dct=txt(det,33,24,'0',{fill:'#fff','font-size':20,'text-anchor':'middle'});txt(det,33,72,'Geiger',{fill:'#4ade80','font-size':17,'text-anchor':'middle'});
+const layer=el('g',{},sv);const what=txt(sv,X(0)-56,50,'',{'font-size':22,'font-weight':700});
+const WHAT={a:'α: 2 protons + 2 neutrons, charge +2, slow and heavy',b:'β: a fast electron (β⁻) or positron (β⁺), charge ±1',g:'γ: an electromagnetic wave (photon), no charge'};
+const MAT={none:{n:'',w:0,c:'none'},paper:{n:'paper',w:3,c:'#e5e7eb'},al:{n:'aluminium',w:10,c:'#9ca3af'},pb:{n:'lead',w:2*PX,c:'#64748b'}};
+// probability of passing the absorber
+const PASS={a:{none:1,paper:0,al:0,pb:0},b:{none:1,paper:.95,al:0,pb:0},g:{none:1,paper:1,al:.97,pb:.27}};
+let R='a',M='none',D=20,parts=[],hits=0,fl=0;
+function range(k){return k==='a'?4.5+Math.random()*1.0:k==='b'?40+Math.random()*60:1e9} // cm of air
+function frac(){if(R==='a')return M==='none'&&D<5?1:M==='none'?(D>=5.5?0:(5.5-D)):0;
+ let p=PASS[R][M];if(R==='b')p*=Math.max(0,Math.min(1,(100-D)/60));return p}
+function upd(){const ab=MAT[M];abs.style.display=M==='none'?'none':'';abs.setAttribute('x',X(AX));abs.setAttribute('width',ab.w);abs.setAttribute('fill',ab.c);absT.setAttribute('x',X(AX)+ab.w/2);absT.textContent=ab.n;absT.setAttribute('fill',ab.c);
+ det.setAttribute('transform',`translate(${X(D)+6},${BY})`);tre.setAttribute('fill',C[R]);what.textContent=WHAT[R];what.setAttribute('fill',C[R]);
+ const f=frac();document.getElementById('pc').textContent=Math.round(f*100)+'%';document.getElementById('pc').style.color=f>0?'#4ade80':'#f472b6';
+ document.getElementById('pw').textContent=f>0?'of '+NAME[R]:NAME[R]+' all stopped';hits=0}
+group('.rd',v=>{R=v;parts.forEach(p=>p.e.remove());parts=[];upd()});group('.ab',v=>{M=v;upd()});slider('d',x=>x+' cm',x=>{D=x;upd()});
+let acc=0;
+IX.anims.push((t,dt)=>{const sdt=IX.play?dt*IX.speed:0;acc+=sdt*14;
+ while(acc>1){acc--;const k=R,y=BY+(Math.random()-.5)*60;let stop=range(k);
+  if(M!=='none'&&stop>AX&&Math.random()>PASS[k][M])stop=AX+(k==='g'?Math.random()*2:0)+Math.random()*.3;
+  const e=k==='g'?el('path',{fill:'none',stroke:C.g,'stroke-width':3},layer):el('circle',{r:k==='a'?8:4.5,fill:C[k]},layer);
+  parts.push({k,x:0,y,stop,e,sp:k==='a'?18:k==='b'?45:70,dead:0})}
+ parts=parts.filter(p=>{if(p.dead){p.dead-=sdt;p.e.setAttribute('opacity',Math.max(0,p.dead/0.5));if(p.dead<=0){p.e.remove();return false}return true}
+  p.x+=p.sp*sdt;
+  if(p.x>=D){hits++;fl=1;p.e.remove();return false}
+  if(p.x>=p.stop){p.x=p.stop;p.dead=.5}
+  if(p.k==='g'){const x0=X(p.x);let d='';for(let i=0;i<=12;i++)d+=(i?'L':'M')+(x0-24+i*2)+','+(p.y+5*Math.sin(i*1.6));p.e.setAttribute('d',d)}else{p.e.setAttribute('cx',X(p.x));p.e.setAttribute('cy',p.y)}
+  return true});
+ fl=Math.max(0,fl-dt*4);flash.setAttribute('opacity',.25+.75*fl);dct.textContent=hits;
+ tre.setAttribute('r',10+2*Math.sin(t*8))});
+</script>

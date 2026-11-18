@@ -1,0 +1,50 @@
+<!--{"id":"3C-1-dice-decay","section":"3C","title":"Random decay with 120 dice","criteria":["3C.1"],
+"blurb":"Roll 120 dice and remove every 6 (it has decayed). You cannot say which die goes next, but the graph of dice left is smooth and halves every 3.8 rolls.",
+"source":"Cambridge VCE Physics Units 1&2, 3C Modelling radioactive decay, dice simulation (Table 3C–1). Dashed theory curve: N = 120 × (5/6)ⁿ, or (1/2)ⁿ for odds.","colour":"#4ade80"}-->
+<div class="ctx">Each die is a nucleus. A die showing the <b>removal face</b> has decayed. Which goes next? <b>Nobody can say.</b></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#4ade80;gap:6px"><h3>120 dice</h3><svg id="dz" viewBox="0 0 780 200" style="flex:none;height:200px"></svg>
+  <h3 style="margin-top:2px;color:#7dd3fc">Dice left after each roll</h3><svg id="gr" viewBox="0 0 780 230"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Rule</h3>
+   <div class="btns"><button class="ru on" data-v="6">Remove 6s</button><button class="ru" data-v="odd">Remove odds</button></div>
+   <div class="btns"><button id="roll">Roll once</button><button id="auto">Auto roll</button><button id="rst">Reset</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:20px;line-height:1.5"><h3>Results</h3><div id="ro"></div></div>
+  <div class="rule">Each roll removes about the same <b>fraction</b>. The <b>half-life</b> is the number of rolls to halve the dice.</div>
+ </div>
+</div>
+<script>
+const N0=120,dz=document.getElementById('dz'),gr=document.getElementById('gr');
+let P=1/6,odd=false,dice=[],hist=[N0],rolling=0,auto=false,lastRoll=-9;
+const COLS=20,CS=37;
+for(let i=0;i<N0;i++){const g=el('g',{transform:`translate(${14+(i%COLS)*CS},${8+Math.floor(i/COLS)*CS*0.88})`},dz);
+ const r=el('rect',{width:31,height:28,rx:6,fill:'#eef2ff'},g);const t=txt(g,15.5,21,'',{fill:'#0d1330','font-size':19,'font-weight':700,'text-anchor':'middle'});dice.push({g,r,t,alive:true,face:1+Math.floor(Math.random()*6)})}
+const GX=70,GW=680,GT=12,GB=180;let XM=25;
+const ax=el('g',{},gr),pts=el('g',{},gr),theo=el('path',{fill:'none',stroke:'#7dd3fc','stroke-width':2.5,'stroke-dasharray':'7 6'},gr),hl=el('g',{},gr);
+const sx=n=>GX+n/XM*GW,sy=N=>GB-N/N0*(GB-GT);
+function axes(){ax.innerHTML='';el('line',{x1:GX,x2:GX+GW,y1:GB,y2:GB,stroke:'#36418a','stroke-width':2},ax);el('line',{x1:GX,x2:GX,y1:GT,y2:GB,stroke:'#36418a','stroke-width':2},ax);
+ [0,30,60,90,120].forEach(N=>{txt(ax,GX-8,sy(N)+6,N,{fill:'#8b96c0','font-size':17,'text-anchor':'end'})});
+ el('line',{x1:GX,x2:GX+GW,y1:sy(60),y2:sy(60),stroke:'#fbb040','stroke-dasharray':'4 6','stroke-width':2},ax);txt(ax,GX+GW,sy(60)-8,'half (60)',{fill:'#fbb040','font-size':17,'text-anchor':'end'});
+ const st=XM>12?5:1;for(let n=0;n<=XM;n+=st)txt(ax,sx(n),GB+24,n,{fill:'#8b96c0','font-size':17,'text-anchor':'middle'});txt(ax,GX+GW,GB+46,'roll number',{fill:'#cfd7f5','font-size':17,'text-anchor':'end'});
+ let d='';for(let i=0;i<=200;i++){const n=i*XM/200;d+=(i?'L':'M')+sx(n).toFixed(1)+','+sy(N0*(1-P)**n).toFixed(1)}theo.setAttribute('d',d)}
+const th=()=>Math.log(2)/-Math.log(1-P);
+function halfFromData(){for(let i=1;i<hist.length;i++)if(hist[i]<=60){const a=hist[i-1],b=hist[i];return i-1+(a-60)/(a-b)}return null}
+function draw(){pts.innerHTML='';let d='';hist.forEach((N,i)=>{d+=(i?'L':'M')+sx(i)+','+sy(N);el('circle',{cx:sx(i),cy:sy(N),r:6,fill:'#4ade80'},pts)});el('path',{d,fill:'none',stroke:'#4ade80','stroke-width':2.5},pts).parentNode.prepend(pts.lastChild);
+ hl.innerHTML='';const h=halfFromData();if(h!=null){el('line',{x1:sx(h),x2:sx(h),y1:sy(60),y2:GB,stroke:'#fbb040','stroke-width':2.5},hl);txt(hl,sx(h)+6,GB-8,'≈ '+h.toFixed(1),{fill:'#fbb040','font-size':18})}
+ const n=hist.length-1,N=hist[n],rem=n?hist[n-1]-N:0;
+ document.getElementById('ro').innerHTML=`Roll <b>${n}</b>: <b class="gr">${N}</b> left (${rem} removed)<br>Half-life from data: <b class="hi">${h!=null?h.toFixed(1)+' rolls':'not yet'}</b><br>Theory: <b class="cy">${th().toFixed(1)} rolls</b>`}
+function faces(){dice.forEach(d=>{d.t.textContent=d.alive?d.face:'';d.r.setAttribute('fill',d.alive?'#eef2ff':'none');d.r.setAttribute('stroke',d.alive?'none':'#36418a')})}
+const dead=f=>odd?f%2===1:f===6;
+function roll(){if(rolling>0||hist[hist.length-1]===0||hist.length>XM)return;rolling=.6;lastRoll=IX.t}
+function finish(){dice.forEach(d=>{if(!d.alive)return;d.face=1+Math.floor(Math.random()*6);if(dead(d.face)){d.hit=1}});
+ faces();dice.forEach(d=>{if(d.hit)d.r.setAttribute('fill','#f472b6')});setTimeout(()=>{dice.forEach(d=>{if(d.hit){d.alive=false;d.hit=0}});hist.push(dice.filter(d=>d.alive).length);faces();draw()},450)}
+function reset(){dice.forEach(d=>{d.alive=true;d.hit=0;d.face=1+Math.floor(Math.random()*6)});hist=[N0];rolling=0;XM=odd?10:25;axes();faces();draw()}
+group('.ru',v=>{odd=v==='odd';P=odd?.5:1/6;reset()});
+document.getElementById('roll').onclick=roll;document.getElementById('rst').onclick=()=>{reset()};
+toggle('auto',on=>{auto=on});
+reset();
+IX.anims.push((t,dt)=>{if(rolling>0){rolling-=IX.play?dt*IX.speed:0;dice.forEach(d=>{if(d.alive)d.t.textContent=1+Math.floor(Math.random()*6)});if(rolling<=0){rolling=0;finish()}}
+ else if(auto&&t-lastRoll>1.4)roll();
+ dice.forEach((d,i)=>{if(d.alive&&rolling>0)d.g.setAttribute('transform',`translate(${14+(i%COLS)*CS+2*Math.sin(t*40+i)},${8+Math.floor(i/COLS)*CS*0.88})`)})});
+</script>

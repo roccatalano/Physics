@@ -1,0 +1,62 @@
+<!--{"id":"5A-1-charge-flow","section":"5A","title":"Charge flow: electrons and conventional current","criteria":["5A.2","5A.3","5A.5","5A.6"],
+"blurb":"Watch charge move around a circuit. Switch between electron flow and conventional current, read the ammeter and count the charge that passes with Q = It.",
+"source":"Cambridge VCE Physics Units 1&2, 5A Charge and current, Formula 5A–1. Dot speed is exaggerated: real drift speeds are far smaller.","colour":"#7dd3fc"}-->
+<style>.sl{grid-template-columns:76px 1fr 84px}</style>
+<div class="ctx">The ammeter measures how much charge passes it <b>each second</b>. Which way does the charge really move?</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc"><h3 id="ph">Electron flow</h3><svg id="sv" viewBox="0 0 860 420"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Show</h3>
+   <div class="btns"><button class="md on" data-v="e">Electrons</button><button class="md" data-v="c">Conventional</button><button class="md" data-v="b">Both</button></div>
+   <div class="sl"><span class="nm">Current</span><input type="range" id="I" min="0.1" max="5" step="0.1" value="2"><span class="v" id="Iv"></span></div>
+   <div class="btns"><button id="rs">↻ Reset count</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:20px"><h3>Charge through the ammeter</h3>
+   <div>$t$ <span class="kr">=</span> <b id="tt"></b></div>
+   <div>$Q = It$ <span class="kr">=</span> <b class="hi" id="qq"></b></div>
+   <div style="font-size:18px">electrons <span class="kr">=</span> <b id="nn"></b></div>
+  </div>
+  <div class="rule"><b>Electrons</b> flow out of the − terminal. <b>Conventional current</b> is drawn from + to −.</div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),X0=90,X1=770,Y0=60,Y1=360,W=X1-X0,H=Y1-Y0,L=2*(W+H),BY=210;
+function pt(s){s=((s%L)+L)%L;if(s<W)return[X0+s,Y0];s-=W;if(s<H)return[X1,Y0+s];s-=H;if(s<W)return[X1-s,Y1];s-=W;return[X0,Y1-s]}
+el('rect',{x:X0,y:Y0,width:W,height:H,fill:'none',stroke:'#8b96c9','stroke-width':5,rx:4},sv);
+const eg=el('g',{},sv),cg=el('g',{},sv),N=36;
+const ed=[...Array(N)].map(()=>{const g=el('g',{},eg);el('circle',{r:11,fill:'#7dd3fc'},g);txt(g,0,6,'−',{fill:'#0d1330','font-size':20,'font-weight':800,'text-anchor':'middle'});return g});
+const cd=[...Array(N)].map(()=>{const g=el('g',{},cg);el('circle',{r:11,fill:'#fbb040'},g);txt(g,0,6,'+',{fill:'#0d1330','font-size':20,'font-weight':800,'text-anchor':'middle'});return g});
+// battery (left side, + on top)
+el('rect',{x:X0-50,y:BY-22,width:100,height:44,fill:'#1a2150'},sv);
+el('line',{x1:X0-46,x2:X0+46,y1:BY-14,y2:BY-14,stroke:'#eef2ff','stroke-width':5},sv);
+el('line',{x1:X0-22,x2:X0+22,y1:BY+14,y2:BY+14,stroke:'#eef2ff','stroke-width':11},sv);
+txt(sv,X0-62,BY-6,'+',{fill:'#fbb040','font-size':30,'font-weight':800,'text-anchor':'middle'});txt(sv,X0-62,BY+28,'−',{fill:'#7dd3fc','font-size':30,'font-weight':800,'text-anchor':'middle'});
+txt(sv,X0+58,BY+8,'battery',{fill:'#a5b4d8','font-size':18});
+// globe (right side)
+el('circle',{cx:X1,cy:BY,r:34,fill:'#1a2150',stroke:'#eef2ff','stroke-width':4},sv);
+const glow=el('circle',{cx:X1,cy:BY,r:30,fill:'#fde68a'},sv);
+el('line',{x1:X1-24,y1:BY-24,x2:X1+24,y2:BY+24,stroke:'#eef2ff','stroke-width':4},sv);el('line',{x1:X1-24,y1:BY+24,x2:X1+24,y2:BY-24,stroke:'#eef2ff','stroke-width':4},sv);
+txt(sv,X1-50,BY+8,'globe',{fill:'#a5b4d8','font-size':18,'text-anchor':'end'});
+// ammeter (top middle)
+const AX=(X0+X1)/2;el('circle',{cx:AX,cy:Y0,r:32,fill:'#1a2150',stroke:'#4ade80','stroke-width':4},sv);txt(sv,AX,Y0+10,'A',{fill:'#4ade80','font-size':30,'font-weight':800,'text-anchor':'middle'});
+el('rect',{x:AX-90,y:Y0+44,width:180,height:44,rx:10,fill:'#0d1330',stroke:'#4ade80','stroke-width':2},sv);
+const am=txt(sv,AX,Y0+76,'',{fill:'#4ade80','font-size':28,'font-weight':700,'text-anchor':'middle','font-family':'Space Grotesk'});
+// direction labels
+const eLab=el('g',{},sv),cLab=el('g',{},sv);
+function arrowLab(g,x,y,dir,s,c){const p=dir>0?`M${x-50},${y} L${x+40},${y} M${x+28},${y-10} L${x+42},${y} L${x+28},${y+10}`:`M${x+50},${y} L${x-40},${y} M${x-28},${y-10} L${x-42},${y} L${x-28},${y+10}`;el('path',{d:p,stroke:c,'stroke-width':4,fill:'none','stroke-linecap':'round'},g);txt(g,x,y+34,s,{fill:c,'font-size':19,'font-weight':700,'text-anchor':'middle'})}
+arrowLab(eLab,AX,Y1-60,1,'electron flow',  '#7dd3fc');
+arrowLab(cLab,AX,Y1-60,-1,'conventional current I','#fbb040');
+const note=txt(sv,AX,Y1+44,'',{fill:'#a5b4d8','font-size':18,'text-anchor':'middle'});
+let mode='e',I=2,ph=0,lt=0,T=0,Q=0;
+const fmtE=n=>{if(n<=0)return '0';const p=Math.floor(Math.log10(n));return (n/10**p).toFixed(2)+' × 10<sup>'+p+'</sup>'};
+function show(){eg.style.display=mode!=='c'?'':'none';cg.style.display=mode==='c'?'':'none';eLab.style.display=mode!=='c'?'':'none';cLab.style.display=mode!=='e'?'':'none';
+ if(mode==='b'){cLab.setAttribute('transform','translate(0,-100)')}else cLab.removeAttribute('transform');
+ document.getElementById('ph').textContent={e:'Electron flow (what really moves in a metal wire)',c:'Conventional current (+ to −)',b:'Electrons move one way, I is drawn the other way'}[mode]}
+group('.md',v=>{mode=v;show()});show();
+slider('I',x=>f2(x,1)+' A',x=>{I=x;T=0;Q=0;am.textContent=f2(x,2)+' A';glow.setAttribute('fill-opacity',(.15+.85*x/5).toFixed(2))});
+document.getElementById('rs').onclick=()=>{T=0;Q=0};
+IX.anims.push(t=>{const d=Math.max(0,t-lt);lt=t;ph+=I*24*d;T+=d;Q+=I*d;
+ for(let i=0;i<N;i++){const a=pt(i*L/N-ph),b=pt(i*L/N+ph+L/(2*N));ed[i].setAttribute('transform',`translate(${a[0]},${a[1]})`);cd[i].setAttribute('transform',`translate(${b[0]},${b[1]})`)}
+ const Tr=+f2(T,1),Qr=I*Tr;document.getElementById('tt').textContent=f2(Tr,1)+' s';document.getElementById('qq').textContent=f2(I,1)+' × '+f2(Tr,1)+' = '+sig(Qr)+' C';
+ document.getElementById('nn').innerHTML=fmtE(Qr/1.6e-19)});
+</script>

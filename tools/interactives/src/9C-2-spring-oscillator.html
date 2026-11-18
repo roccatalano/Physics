@@ -1,0 +1,66 @@
+<!--{"id":"9C-2-spring-oscillator","section":"9C","title":"Oscillating spring: where is the energy?","criteria":["9C.3","9C.5","9C.6"],
+"blurb":"A mass bounces on an ideal spring, sideways on a frictionless floor or hanging vertically. Energy bars show Ek, elastic and gravitational energy swapping while the total stays the same.",
+"source":"Cambridge VCE Physics Units 1&2, 9C Springs (pp. 36–41). Ideal spring, no friction or air resistance. g = 9.8 N kg⁻¹. Eg measured from the lowest point.","colour":"#7dd3fc"}-->
+<style>.sl{grid-template-columns:98px 1fr 108px}</style>
+<div class="ctx">A mass on an ideal spring is pulled and let go. <b>Pause it</b> at the ends and in the middle: which energy bar is biggest each time?</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc"><h3 id="pt">Horizontal spring</h3><svg id="sv" viewBox="0 0 860 410"></svg>
+  <div class="rule" id="rule" style="font-size:18px;padding:8px 14px"></div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Set up</h3>
+   <div class="btns"><button class="md on" data-v="h">Horizontal</button><button class="md" data-v="v">Vertical</button></div>
+   <div class="sl"><span class="nm">Mass m</span><input type="range" id="m" min="0.2" max="1" step="0.1" value="0.5"><span class="v" id="mv"></span></div>
+   <div class="sl"><span class="nm">Constant k</span><input type="range" id="k" min="20" max="200" step="10" value="40"><span class="v" id="kv"></span></div>
+   <div class="sl" id="arow"><span class="nm">Pull A</span><input type="range" id="A" min="0.05" max="0.3" step="0.01" value="0.2"><span class="v" id="Av"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5"><h3>Live values</h3><div id="ro"></div></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),g=9.8;let m=.5,k=40,A=.2,mode='h',t0=0;
+function coil(x1,y1,x2,y2,n,w){const L=Math.hypot(x2-x1,y2-y1),ux=(x2-x1)/L,uy=(y2-y1)/L,nx=-uy,ny=ux,e=12,st=(L-2*e)/n;
+ const P=(s,o)=>`${(x1+ux*s+nx*o).toFixed(1)},${(y1+uy*s+ny*o).toFixed(1)}`;let d=`M${P(0,0)}L${P(e,0)}`;for(let i=0;i<n;i++)d+=`L${P(e+st*(i+.25),w)}L${P(e+st*(i+.75),-w)}`;return d+`L${P(L-e,0)}L${P(L,0)}`}
+const H=el('g',{},sv),Vg=el('g',{},sv);
+// horizontal scene: wall, floor, spring, block. 500 px per m
+const HX=30,HL=280,HS=500,HY=230,BWd=70;
+el('rect',{x:HX-20,y:HY-90,width:20,height:130,fill:'#36418a'},H);el('line',{x1:HX-20,x2:520,y1:HY+40,y2:HY+40,stroke:'#5b6690','stroke-width':3},H);
+const hEq=el('line',{x1:HX+HL,x2:HX+HL,y1:HY-80,y2:HY+52,stroke:'#a5b4d8','stroke-dasharray':'5 5','stroke-width':2},H);txt(H,HX+HL,HY+76,'equilibrium',{fill:'#a5b4d8','font-size':17,'text-anchor':'middle'});
+const hSp=el('path',{fill:'none',stroke:'#eef2ff','stroke-width':3.5,'stroke-linejoin':'round'},H),hB=el('rect',{y:HY-40,width:BWd,height:80,rx:8,fill:'#7dd3fc'},H);
+const hX=el('line',{stroke:'#4ade80','stroke-width':3},H),hXt=txt(H,0,HY-100,'',{fill:'#4ade80','font-size':18,'font-weight':700,'text-anchor':'middle'});
+// vertical scene: ceiling, spring, block. 200 px per m
+const VX=230,VY=30,VL=110,VS=200;
+el('rect',{x:VX-90,y:VY-14,width:180,height:14,fill:'#36418a'},Vg);
+const vNat=el('line',{x1:VX-90,x2:VX+90,y1:VY+VL,y2:VY+VL,stroke:'#a5b4d8','stroke-dasharray':'5 5','stroke-width':2},Vg),vNt=txt(Vg,VX+100,VY+VL+6,'unstretched',{fill:'#a5b4d8','font-size':17});
+const vEq=el('line',{x1:VX-90,x2:VX+90,stroke:'#4ade80','stroke-dasharray':'5 5','stroke-width':2},Vg),vEt=txt(Vg,VX+100,0,'equilibrium',{fill:'#4ade80','font-size':17});
+const vLo=el('line',{x1:VX-90,x2:VX+90,stroke:'#f472b6','stroke-dasharray':'5 5','stroke-width':2},Vg),vLt=txt(Vg,VX+100,0,'lowest point',{fill:'#f472b6','font-size':17});
+const vSp=el('path',{fill:'none',stroke:'#eef2ff','stroke-width':3.5,'stroke-linejoin':'round'},Vg),vB=el('rect',{x:VX-35,width:70,height:56,rx:8,fill:'#7dd3fc'},Vg);
+// bars
+const BX=548,BW=50,BG=24,BB=340,BHt=270;el('line',{x1:BX-8,x2:BX+4*(BW+BG),y1:BB,y2:BB,stroke:'#5b6690','stroke-width':2},sv);
+const BN=[['Ek','#7dd3fc'],['Es','#f472b6'],['Eg','#4ade80'],['Total','#fbb040']];
+const bars=BN.map(([n,c],i)=>{const x=BX+i*(BW+BG);const lab=txt(sv,x+BW/2,BB+28,n,{fill:c,'font-size':19,'text-anchor':'middle'});return{lab,r:el('rect',{x,width:BW,rx:4,fill:c},sv),t:txt(sv,x+BW/2,0,'',{fill:'#eef2ff','font-size':15,'text-anchor':'middle'})}});
+txt(sv,BX+2*(BW+BG)-BG/2,40,'Energy (J)',{fill:'#a5b4d8','font-size':18,'text-anchor':'middle'});
+const mJ=e=>e<5e-6?'0 J':e<1?sig(e*1000,3)+' mJ':sig(e,3)+' J';
+function setRule(){document.getElementById('pt').textContent=mode==='h'?'Horizontal spring on a frictionless floor':'Vertical spring, released from its unstretched length';
+ document.getElementById('rule').innerHTML=mode==='h'?'At the ends all the energy is <b>elastic</b> ($\\tfrac12kx^2$). At equilibrium it is all <b>kinetic</b>. The total never changes.'.replace('$\\tfrac12kx^2$','½<span class="k">kx</span>²'):
+ 'At the lowest point $mgx = \\tfrac12kx^2$, so it stretches <b>twice</b> as far as the equilibrium point, where <span class="k">kx</span> = <span class="k">mg</span>.'.replace('$mgx = \\tfrac12kx^2$','<span class="k">mgx</span> = ½<span class="k">kx</span>²');
+ H.style.display=mode==='h'?'':'none';Vg.style.display=mode==='v'?'':'none';document.getElementById('arow').style.opacity=mode==='h'?1:.35;document.getElementById('A').disabled=mode!=='h';
+ bars[2].r.style.display=bars[2].t.style.display=bars[2].lab.style.display=mode==='v'?'':'none';t0=IX.t}
+slider('m',v=>f2(v,1)+' kg',v=>{m=v;t0=IX.t});slider('k',v=>v+' N m⁻¹',v=>{k=v;t0=IX.t});slider('A',v=>f2(v)+' m',v=>{A=v;t0=IX.t});
+group('.md',v=>{mode=v;setRule()});setRule();
+IX.anims.push(t=>{const w=Math.sqrt(k/m),tt=t-t0;let Ek,Es,Eg=0,ET,ro;
+ if(mode==='h'){const x=A*Math.cos(w*tt),v=-A*w*Math.sin(w*tt);Ek=.5*m*v*v;Es=.5*k*x*x;ET=.5*k*A*A;
+  const bx=HX+HL+x*HS-BWd/2;hSp.setAttribute('d',coil(HX,HY,bx,HY,12,18));hB.setAttribute('x',bx);
+  hX.setAttribute('x1',HX+HL);hX.setAttribute('x2',HX+HL+x*HS);hX.setAttribute('y1',HY-60);hX.setAttribute('y2',HY-60);hXt.setAttribute('x',HX+HL+x*HS/2);hXt.setAttribute('y',HY-68);hXt.textContent=Math.abs(x)>.03?'x = '+f2(x)+' m':'';
+  ro=`<span class="k">x</span> = ${f2(x)} m, <span class="k">v</span> = ${f2(v)} m s⁻¹<br><span class="k">E</span><sub>k</sub> = ½<span class="k">mv</span>² = <b class="cy">${mJ(Ek)}</b><br><span class="k">E</span><sub>s</sub> = ½<span class="k">kx</span>² = <b class="pk">${mJ(Es)}</b><br>total = ½<span class="k">kA</span>² = <b class="hi">${mJ(ET)}</b>`}
+ else{const xe=m*g/k,x=xe*(1-Math.cos(w*tt)),v=xe*w*Math.sin(w*tt);Ek=.5*m*v*v;Es=.5*k*x*x;Eg=m*g*(2*xe-x);ET=2*m*g*xe;
+  const top=VY+VL+x*VS;vSp.setAttribute('d',coil(VX,VY,VX,top,12,18));vB.setAttribute('y',top);
+  const ye=VY+VL+xe*VS+28,yl=VY+VL+2*xe*VS+28;vEq.setAttribute('y1',ye);vEq.setAttribute('y2',ye);vLo.setAttribute('y1',yl);vLo.setAttribute('y2',yl);
+  // labels: spread them out when lines are close
+  const yn=VY+VL+28;let a=yn+6,b=Math.max(ye+6,a+24),c=Math.max(yl+6,b+24);vNt.setAttribute('y',a);vEt.setAttribute('y',b);vLt.setAttribute('y',c);
+  vNat.setAttribute('y1',yn);vNat.setAttribute('y2',yn);
+  ro=`stretch <span class="k">x</span> = ${f2(x,3)} m<br>equilibrium at <span class="k">mg</span>/<span class="k">k</span> = ${f2(xe,3)} m<br><span class="k">E</span><sub>k</sub> = <b class="cy">${mJ(Ek)}</b>, <span class="k">E</span><sub>s</sub> = <b class="pk">${mJ(Es)}</b><br><span class="k">E</span><sub>g</sub> = <b class="gr">${mJ(Eg)}</b>, total = <b class="hi">${mJ(ET)}</b>`}
+ [Ek,Es,Eg,ET].forEach((e,i)=>{const h=BHt*e/ET;bars[i].r.setAttribute('y',BB-h);bars[i].r.setAttribute('height',Math.max(0,h));bars[i].t.setAttribute('y',BB-h-8);bars[i].t.textContent=mJ(e)});
+ // move the Total bar next to the others when Eg is hidden
+ const tx=BX+(mode==='v'?3:2)*(BW+BG);bars[3].r.setAttribute('x',tx);bars[3].t.setAttribute('x',tx+BW/2);bars[3].lab.setAttribute('x',tx+BW/2);
+ document.getElementById('ro').innerHTML=ro});
+</script>

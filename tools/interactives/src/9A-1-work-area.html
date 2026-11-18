@@ -1,0 +1,70 @@
+<!--{"id":"9A-1-work-area","section":"9A","title":"Work: force × distance, and the area under the graph","criteria":["9A.1","9A.2","9A.3"],
+"blurb":"Push a box with a constant or fading force, at any angle. The area under the force–distance graph fills in as the box moves: that area is the work done.",
+"source":"Cambridge VCE Physics Units 1&2, 9A Work (pp. 7–10). Box motion is for show only.","colour":"#fbb040"}-->
+<style>.sl{grid-template-columns:96px 1fr 70px}</style>
+<div class="ctx">A box is pushed along the floor. Only the part of the force <b>along the direction of motion</b> does work. Watch the shaded area grow as the box moves.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#fbb040"><h3>Force–distance graph</h3><svg id="sv" viewBox="0 0 860 440"></svg><div class="rule" style="font-size:18px;padding:8px 14px">Work = <b>area under the force–distance graph</b>. Only $F\cos\theta$, the part along the motion, does work. At 90° no work is done.</div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#7dd3fc"><h3>The push</h3>
+   <div class="btns"><button class="md on" data-v="c">Constant force</button><button class="md" data-v="f">Force fades out</button></div>
+   <div class="sl"><span class="nm">Force F</span><input type="range" id="F" min="0" max="1000" step="50" value="500"><span class="v" id="Fv"></span></div>
+   <div class="sl"><span class="nm">Distance s</span><input type="range" id="ds" min="3" max="30" step="1" value="20"><span class="v" id="dsv"></span></div>
+   <div class="sl"><span class="nm">Angle θ</span><input type="range" id="th" min="0" max="90" step="5" value="0"><span class="v" id="thv"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px"><h3>Calculate</h3>
+   <div id="calc"></div>
+   <div style="margin-top:6px">Work so far: <b class="hi" id="sofar"></b></div>
+  </div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv');
+let F=500,S=20,TH=0,mode='c';
+const GX=90,GW=680,GB=395,GH=215,SMAX=30,FMAX=1000;
+const X=s=>GX+s/SMAX*GW,Y=f=>GB-f/FMAX*GH;
+function mk(id,c){const m=el('marker',{id,viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:4.5,markerHeight:4.5,orient:'auto'},el('defs',{},sv));el('path',{d:'M0 0L10 5L0 10z',fill:c},m)}
+mk('ao','#fbb040');mk('ag','#4ade80');
+// scene
+const GY=132;el('line',{x1:GX,x2:GX+GW+40,y1:GY,y2:GY,stroke:'#5b6690','stroke-width':3},sv);
+for(let x=GX;x<GX+GW+40;x+=24)el('line',{x1:x,x2:x-12,y1:GY,y2:GY+12,stroke:'#36418a','stroke-width':2},sv);
+const box=el('rect',{y:GY-56,width:64,height:56,rx:6,fill:'#7dd3fc',stroke:'#eef2ff','stroke-width':2},sv);
+const fa=el('line',{stroke:'#fbb040','stroke-width':6,'marker-end':'url(#ao)'},sv),ft=txt(sv,0,0,'F',{fill:'#fbb040','font-size':22,'font-weight':700});
+const ca=el('line',{stroke:'#4ade80','stroke-width':5,'stroke-dasharray':'8 5','marker-end':'url(#ag)'},sv),ct=txt(sv,0,0,'F cos θ',{fill:'#4ade80','font-size':19,'font-weight':700});
+const arc=el('path',{fill:'none',stroke:'#eef2ff','stroke-width':2},sv),at=txt(sv,0,0,'θ',{'font-size':19});
+// graph axes
+el('line',{x1:GX,x2:GX+GW+10,y1:GB,y2:GB,stroke:'#5b6690','stroke-width':2},sv);el('line',{x1:GX,x2:GX,y1:GB,y2:GB-GH-14,stroke:'#5b6690','stroke-width':2},sv);
+for(let s=0;s<=SMAX;s+=5){el('line',{x1:X(s),x2:X(s),y1:GB,y2:GB+6,stroke:'#5b6690','stroke-width':2},sv);txt(sv,X(s),GB+26,s,{fill:'#a5b4d8','font-size':17,'text-anchor':'middle'})}
+for(let f=0;f<=FMAX;f+=250){if(f)el('line',{x1:GX,x2:GX+GW,y1:Y(f),y2:Y(f),stroke:'#232c63','stroke-dasharray':'3 6'},sv);txt(sv,GX-10,Y(f)+6,f,{fill:'#a5b4d8','font-size':17,'text-anchor':'end'})}
+txt(sv,GX+GW+16,GB+6,'s (m)',{fill:'#a5b4d8','font-size':17});
+txt(sv,GX-80,GB-GH-22,'F along motion (N)',{fill:'#a5b4d8','font-size':17});
+const area=el('path',{fill:'#4ade80','fill-opacity':.35},sv),full=el('path',{fill:'none',stroke:'#fbb040','stroke-width':4},sv);
+const wt=txt(sv,0,0,'',{fill:'#eef2ff','font-size':22,'font-weight':700,'text-anchor':'middle'});
+const fp=s=>{const Fp=F*Math.cos(TH*Math.PI/180);if(mode==='c')return Fp;const s1=S*2/3;return s<=s1?Fp:Fp*(S-s)/(S-s1)};
+const Wupto=d=>{const Fp=F*Math.cos(TH*Math.PI/180);if(mode==='c')return Fp*d;const s1=S*2/3;if(d<=s1)return Fp*d;const f2_=fp(d);return Fp*s1+(Fp+f2_)/2*(d-s1)};
+const J=w=>Math.abs(w)<5e-9?'0 J':(Math.abs(w)>=1e4?sig(w/1000,3)+' kJ':Math.round(w)+' J');
+function upd(){const c=Math.cos(TH*Math.PI/180),Fp=F*c;
+ const pts=mode==='c'?[[0,Fp],[S,Fp]]:[[0,Fp],[S*2/3,Fp],[S,0]];
+ full.setAttribute('d','M'+X(0)+','+Y(0)+pts.map(p=>'L'+X(p[0])+','+Y(p[1])).join('')+'L'+X(S)+','+Y(0));
+ const W=Wupto(S),fc=TH===90?'0':sig(c,3);
+ document.getElementById('calc').innerHTML=mode==='c'?
+  `<span class="k">W</span> = <span class="k">Fs</span> cos <span class="k">θ</span><br>= ${F} × ${S} × ${fc}<br>= <b class="hi">${J(W)}</b>`:
+  `<span class="k">W</span> = area (rectangle + triangle)<br>= ${Math.round(Fp)} × ${sig(S*2/3,3)} + ½ × ${Math.round(Fp)} × ${sig(S/3,3)}<br>= <b class="hi">${J(W)}</b>`}
+slider('F',v=>v+' N',v=>{F=v;upd()});slider('ds',v=>v+' m',v=>{S=v;upd()});slider('th',v=>v+'°',v=>{TH=v;upd()});
+group('.md',v=>{mode=v;upd()});upd();
+IX.anims.push(t=>{const u=Math.min(1,(t%6)/4.5),d=S*u,bx=X(d)-32;
+ box.setAttribute('x',bx);const cx=bx+32,cy=GY-28,r=TH*Math.PI/180,L=30+70*F/FMAX;
+ const vis=F>0;[fa,ft,ca,ct,arc,at].forEach(e=>e.style.display=vis?'':'none');
+ // force arrow drawn from the back of the box, pushing at angle θ (below horizontal for a push, shown above for clarity of the angle)
+ const x0=cx,y0=cy;fa.setAttribute('x1',x0);fa.setAttribute('y1',y0);fa.setAttribute('x2',x0+L*Math.cos(r));fa.setAttribute('y2',y0-L*Math.sin(r));
+ ft.setAttribute('x',x0+L*Math.cos(r)+(TH>60?12:6));ft.setAttribute('y',Math.max(20,y0-L*Math.sin(r)-(TH>60?0:10)));
+ const Lc=L*Math.cos(r);ca.style.display=vis&&Lc>14?'':'none';ct.style.display=vis&&TH>0&&Lc>14?'':'none';
+ ca.setAttribute('x1',x0);ca.setAttribute('y1',y0+14);ca.setAttribute('x2',x0+Lc);ca.setAttribute('y2',y0+14);ct.setAttribute('x',x0+Math.max(Lc,40)+10);ct.setAttribute('y',y0+22);
+ const ar=52;arc.style.display=at.style.display=vis&&TH>0?'':'none';arc.setAttribute('d',`M${x0+ar},${y0} A${ar},${ar} 0 0 0 ${x0+ar*Math.cos(r)},${y0-ar*Math.sin(r)}`);
+ at.setAttribute('x',x0+ar+8);at.setAttribute('y',y0-Math.max(6,ar*Math.sin(r/2))-2);
+ // area so far
+ let p='M'+X(0)+','+Y(0);const n=60;for(let i=0;i<=n;i++){const s=d*i/n;p+='L'+X(s)+','+Y(fp(s))}p+='L'+X(d)+','+Y(0)+'Z';area.setAttribute('d',p);
+ const W=Wupto(d);document.getElementById('sofar').textContent=J(W);
+ const fm=fp(Math.min(d,S*.5));wt.textContent=d>S*.25&&fm>FMAX*.08?'W = '+J(W):'';wt.setAttribute('x',X(Math.min(d,mode==='c'?d:S*2/3)/2));wt.setAttribute('y',Math.min(GB-14,Y(fm/2)+8));
+});
+</script>

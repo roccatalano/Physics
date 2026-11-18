@@ -1,0 +1,54 @@
+<!--{"id":"5E-1-power-brightness","section":"5E","title":"Power and brightness: series vs parallel","criteria":["5E.2","5E.3","5E.4"],
+"blurb":"Compare one globe with two globes in series and in parallel. Brightness follows power: P = VI = I²R = V²/R.",
+"source":"Cambridge VCE Physics Units 1&2, 5E Electric power, Formula 5E–3. Globes are modelled as fixed (ohmic) resistors; real filaments change resistance as they heat.","colour":"#fde68a"}-->
+<style>.sl{grid-template-columns:76px 1fr 84px}</style>
+<div class="ctx">Brightness depends on <b>power</b>, the energy transformed each second. Which globes glow brightest?</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#fde68a;gap:8px"><h3 id="ph">One globe</h3><svg id="sv" viewBox="0 0 860 370"></svg>
+  <div class="rule" style="font-size:17px;padding:8px 14px"><b>Series</b>: same current, so the <b>larger</b> resistance is brighter ($P = I^2R$). <b>Parallel</b>: same voltage, so the <b>smaller</b> resistance is brighter ($P = V^2/R$).</div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:10px"><h3>Circuit</h3>
+   <div class="btns"><button class="md on" data-v="1">One globe</button><button class="md" data-v="s">Series</button><button class="md" data-v="p">Parallel</button></div>
+   <div class="sl"><span class="nm">Supply</span><input type="range" id="V" min="1" max="12" step="0.5" value="12"><span class="v" id="Vv"></span></div>
+   <div class="sl"><span class="nm" style="color:#7dd3fc">$R_1$</span><input type="range" id="R1" min="2" max="24" step="1" value="12"><span class="v" id="R1v"></span></div>
+   <div class="sl" id="s2"><span class="nm" style="color:#f472b6">$R_2$</span><input type="range" id="R2" min="2" max="24" step="1" value="12"><span class="v" id="R2v"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5"><h3>Calculate</h3>
+   <div id="c1"></div><div id="c2"></div><div id="c3"></div>
+  </div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),X0=110,BY=180,Y0=70,Y1=290;
+const defs=el('defs',{},sv);const gr=el('radialGradient',{id:'gl'},defs);[['0','#fff7d6',1],['.35','#fde68a',.8],['1','#fbb040',0]].forEach(([o,c,a])=>el('stop',{offset:o,'stop-color':c,'stop-opacity':a},gr));
+const wires=el('path',{fill:'none',stroke:'#8b96c9','stroke-width':4,'stroke-linejoin':'round'},sv);
+el('rect',{x:X0-40,y:BY-14,width:80,height:28,fill:'#1a2150'},sv);
+el('line',{x1:X0-36,x2:X0+36,y1:BY-9,y2:BY-9,stroke:'#eef2ff','stroke-width':5},sv);el('line',{x1:X0-18,x2:X0+18,y1:BY+9,y2:BY+9,stroke:'#eef2ff','stroke-width':10},sv);
+txt(sv,X0-50,BY-2,'+',{fill:'#fbb040','font-size':26,'font-weight':800,'text-anchor':'middle'});txt(sv,X0-50,BY+24,'−',{fill:'#7dd3fc','font-size':26,'font-weight':800,'text-anchor':'middle'});
+const vs=txt(sv,X0+28,BY+8,'',{fill:'#fbb040','font-size':22,'font-weight':700,'font-family':'Space Grotesk'});
+const CL=['#7dd3fc','#f472b6'];
+const G=[0,1].map(k=>{const g=el('g',{},sv);const glow=el('circle',{r:40,fill:'url(#gl)'},g);el('circle',{r:28,fill:'#1a2150',stroke:CL[k],'stroke-width':4},g);const core=el('circle',{r:24,fill:'#fde68a'},g);
+ el('line',{x1:-19,y1:-19,x2:19,y2:19,stroke:'#eef2ff','stroke-width':3.5},g);el('line',{x1:-19,y1:19,x2:19,y2:-19,stroke:'#eef2ff','stroke-width':3.5},g);
+ const l=el('g',{},sv);const a=txt(l,0,0,'',{fill:CL[k],'font-size':19,'font-weight':700}),b=txt(l,0,24,'',{fill:'#eef2ff','font-size':18}),c=txt(l,0,50,'',{fill:'#fde68a','font-size':22,'font-weight':800,'font-family':'Space Grotesk'});
+ return{g,glow,core,l,a,b,c}});
+let m='1',V=12,R=[12,12];
+const br=P=>Math.min(1,Math.pow(P/72,.4));
+function place(k,x,y,lx,ly,anc){G[k].g.setAttribute('transform',`translate(${x},${y})`);G[k].l.setAttribute('transform',`translate(${lx},${ly})`);[G[k].a,G[k].b,G[k].c].forEach(t=>t.setAttribute('text-anchor',anc))}
+function upd(){let d,Vk,Ik,n=m==='1'?1:2;
+ if(m==='1'){d=`M${X0},${Y1} L${X0},${Y0} L700,${Y0} L700,${Y1} Z`;place(0,405,Y0,405,Y0+70,'middle');Vk=[V];Ik=[V/R[0]]}
+ else if(m==='s'){d=`M${X0},${Y1} L${X0},${Y0} L700,${Y0} L700,${Y1} Z`;place(0,300,Y0,300,Y0+70,'middle');place(1,540,Y0,540,Y0+70,'middle');const I=V/(R[0]+R[1]);Ik=[I,I];Vk=[I*R[0],I*R[1]]}
+ else{d=`M${X0},${Y1} L${X0},${Y0} L620,${Y0} L620,${Y1} Z M360,${Y0} L360,${Y1}`;place(0,360,BY,400,BY-26,'start');place(1,620,BY,660,BY-26,'start');Vk=[V,V];Ik=[V/R[0],V/R[1]]}
+ wires.setAttribute('d',d);vs.textContent=f2(V,1)+' V';document.getElementById('s2').style.display=n===2?'':'none';
+ let Pt=0;[0,1].forEach(k=>{const on=k<n;G[k].g.style.display=G[k].l.style.display=on?'':'none';if(!on)return;const P=Vk[k]*Ik[k];Pt+=P;const b=br(P);
+  G[k].glow.setAttribute('r',(30+70*b).toFixed(1));G[k].glow.setAttribute('opacity',b.toFixed(2));G[k].core.setAttribute('fill-opacity',(.08+.92*b).toFixed(2));
+  G[k].a.textContent='Globe '+(k+1)+' ('+R[k]+' Ω)';G[k].b.textContent=sig(Vk[k])+' V,  '+sig(Ik[k])+' A';G[k].c.textContent='P = '+sig(P)+' W'});
+ document.getElementById('ph').textContent={'1':'One globe','s':'Two globes in series','p':'Two globes in parallel'}[m];
+ const c=document.getElementById.bind(document);
+ if(m==='1'){c('c1').innerHTML='P = V<sup>2</sup>/R = '+f2(V,1)+'<sup>2</sup> ÷ '+R[0];c('c2').innerHTML='&nbsp;&nbsp;= <b class="hi">'+sig(Pt)+' W</b>';c('c3').innerHTML=''}
+ else if(m==='s'){c('c1').innerHTML='Same I = <b>'+sig(Ik[0])+' A</b>, use P = I<sup>2</sup>R';c('c2').innerHTML='P<sub>1</sub> = <b class="hi">'+sig(Vk[0]*Ik[0])+' W</b>, P<sub>2</sub> = <b class="hi">'+sig(Vk[1]*Ik[1])+' W</b>';c('c3').innerHTML='Total = <b class="hi">'+sig(Pt)+' W</b>'}
+ else{c('c1').innerHTML='Same V = <b>'+f2(V,1)+' V</b>, use P = V<sup>2</sup>/R';c('c2').innerHTML='P<sub>1</sub> = <b class="hi">'+sig(Vk[0]*Ik[0])+' W</b>, P<sub>2</sub> = <b class="hi">'+sig(Vk[1]*Ik[1])+' W</b>';c('c3').innerHTML='Total = <b class="hi">'+sig(Pt)+' W</b>'}}
+group('.md',v=>{m=v;upd()});
+slider('V',x=>f2(x,1)+' V',x=>{V=x;upd()});slider('R1',x=>x+' Ω',x=>{R[0]=x;upd()});slider('R2',x=>x+' Ω',x=>{R[1]=x;upd()});
+// gentle flicker-free shimmer so the glow reads as light
+IX.anims.push(t=>{G.forEach((g,k)=>g.glow.setAttribute('transform',`scale(${(1+.03*Math.sin(t*3+k)).toFixed(3)})`))});
+</script>

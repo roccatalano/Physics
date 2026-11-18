@@ -1,0 +1,61 @@
+<!--{"id":"9B-1-skate-park","section":"9B","title":"Skate park: kinetic and gravitational energy","criteria":["9B.1","9B.2","9B.5","9B.6","9B.7","9B.8"],
+"blurb":"A skater rolls in a half-pipe. Energy bars swap between Ek and Eg; total stays constant with no friction. Turn friction on to see heat, efficiency and power.",
+"source":"Cambridge VCE Physics Units 1&2, 9B (pp. 14–23). g = 9.8 N kg⁻¹. Skater is a point mass; friction is a constant 0.04mg.","colour":"#4ade80"}-->
+<style>.sl{grid-template-columns:110px 1fr 70px}</style>
+<div class="ctx">A skater starts from rest on one side of a half-pipe. <b>Watch the energy bars:</b> where does the energy go as the skater rolls down and back up?</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#4ade80"><h3>Half-pipe and energy bars</h3><svg id="sv" viewBox="0 0 860 410"></svg><div class="rule" id="rule" style="font-size:18px;padding:8px 14px"></div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Set up</h3>
+   <div class="sl"><span class="nm">Mass m</span><input type="range" id="m" min="20" max="100" step="5" value="60"><span class="v" id="mv"></span></div>
+   <div class="sl"><span class="nm">Start height</span><input type="range" id="h" min="1" max="6" step="0.5" value="5"><span class="v" id="hv"></span></div>
+   <div class="btns"><button id="fr">Friction</button><button id="go">Restart</button></div>
+  </div>
+  <div class="card out" style="--c:#7dd3fc;font-size:19px;line-height:1.5"><h3>Live values</h3><div id="ro"></div></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),g=9.8,HM=6,XM=12;
+let m=60,h0=5,fric=false,Xs,v,Q,stopped;
+const TX=30,TW=500,TB=370,TS=55; // track: 12 m wide, 55 px per m vertically
+const hh=x=>HM*((x-6)/6)**2,dh=x=>2*HM*(x-6)/36;
+const px=x=>TX+x/XM*TW,py=y=>TB-y*TS;
+// track
+let d='';for(let i=0;i<=120;i++){const x=i*XM/120;d+=(i?'L':'M')+px(x)+','+py(hh(x))}
+el('path',{d:d+`L${px(XM)},${TB+12}L${px(0)},${TB+12}Z`,fill:'#232c63'},sv);el('path',{d,fill:'none',stroke:'#a5b4d8','stroke-width':5},sv);
+for(let y=1;y<=6;y++){el('line',{x1:TX-6,x2:TX+TW,y1:py(y),y2:py(y),stroke:'#232c63','stroke-dasharray':'3 7'},sv)}
+const hl=el('line',{stroke:'#fbb040','stroke-width':3,'stroke-dasharray':'6 5'},sv),ht=txt(sv,0,0,'',{fill:'#fbb040','font-size':18});
+const sk=el('g',{},sv);el('line',{x1:-18,x2:18,y1:-4,y2:-4,stroke:'#fbb040','stroke-width':6,'stroke-linecap':'round'},sk);el('circle',{cx:-11,cy:1,r:4,fill:'#eef2ff'},sk);el('circle',{cx:11,cy:1,r:4,fill:'#eef2ff'},sk);
+el('line',{x1:0,x2:0,y1:-8,y2:-36,stroke:'#eef2ff','stroke-width':6,'stroke-linecap':'round'},sk);el('circle',{cx:0,cy:-46,r:10,fill:'#eef2ff'},sk);el('line',{x1:-14,x2:14,y1:-28,y2:-28,stroke:'#eef2ff','stroke-width':5,'stroke-linecap':'round'},sk);
+const st=txt(sv,TX+TW/2,30,'',{fill:'#f472b6','font-size':20,'text-anchor':'middle'});
+// bars
+const B=[['Ek','#7dd3fc'],['Eg','#4ade80'],['Heat','#f472b6'],['Total','#fbb040']],BX=590,BW=50,BG=16,BB=350,BH=280;
+el('line',{x1:BX-10,x2:BX+4*(BW+BG),y1:BB,y2:BB,stroke:'#5b6690','stroke-width':2},sv);
+const bars=B.map(([n,c],i)=>{const x=BX+i*(BW+BG);txt(sv,x+BW/2,BB+28,n,{fill:c,'font-size':19,'text-anchor':'middle'});
+ return{r:el('rect',{x,width:BW,fill:c,rx:4},sv),t:txt(sv,x+BW/2,0,'',{fill:'#eef2ff','font-size':16,'text-anchor':'middle'})}});
+txt(sv,BX+2*(BW+BG)-BG/2,30,'Energy (J)',{fill:'#a5b4d8','font-size':18,'text-anchor':'middle'});
+function reset(){Xs=6-6*Math.sqrt(h0/HM)+1e-6;v=0;Q=0;stopped=false}
+slider('m',x=>x+' kg',x=>{m=x;reset()});slider('h',x=>f2(x,1)+' m',x=>{h0=x;reset()});
+toggle('fr',x=>{fric=x;reset();document.getElementById('rule').innerHTML=x?
+ 'Friction turns some energy into <b>heat and sound</b>. The skater never gets back to the start height.':
+ 'No friction (closed system): <span class="k">E</span><sub>k</sub> + <span class="k">E</span><sub>g</sub> stays constant: the skater returns to the <b>same height</b>.'},false);
+document.getElementById('go').onclick=reset;reset();
+IX.anims.push((t,dt)=>{dt*=IX.play?IX.speed:0;const Ff=fric?0.04*m*g:0;
+ const n=Math.ceil(dt/0.0005);for(let i=0;i<n&&!stopped;i++){const h=dt/n,s=dh(Xs),c=1/Math.sqrt(1+s*s),sn=s*c;
+  let a=-g*sn;if(v!==0)a-=Math.sign(v)*Ff/m;else if(Math.abs(g*sn)>Ff/m)a-=Math.sign(-sn)*Ff/m;else{stopped=true;break}
+  const v2=v+a*h;if(v!==0&&Math.sign(v2)!==Math.sign(v)&&Math.abs(g*sn)<=Ff/m){v=0;stopped=true;break}
+  v=v2;Xs+=v*c*h;Q+=Ff*Math.abs(v)*h;Xs=Math.min(XM,Math.max(0,Xs))}
+ const E0=m*g*h0,Eg=m*g*hh(Xs),Ek=Math.max(0,E0-Q-Eg),spd=Math.sqrt(2*Ek/m),H=hh(Xs);
+ const s=dh(Xs),ang=Math.atan(s)*180/Math.PI,x=px(Xs),y=py(H);
+ const nx=-s/Math.sqrt(1+s*s)*(TS/(TW/XM)),ny=1;// keep upright-ish: rotate with slope in screen units
+ const sang=Math.atan(s*TS/(TW/XM))*180/Math.PI;sk.setAttribute('transform',`translate(${x},${y-4}) rotate(${-sang})`);
+ hl.setAttribute('x1',x);hl.setAttribute('x2',x);hl.setAttribute('y1',y);hl.setAttribute('y2',TB);hl.style.display=H>.15?'':'none';
+ ht.textContent=H>.15?'h = '+f2(H,1)+' m':'';ht.setAttribute('x',x+(Xs<6?-10:10));ht.setAttribute('text-anchor',Xs<6?'end':'start');ht.setAttribute('y',(y+TB)/2+6);
+ st.textContent=stopped&&fric?'Stopped: all the energy is now heat':'';
+ [Ek,Eg,Q,Ek+Eg+Q].forEach((e,i)=>{const hgt=BH*e/E0;bars[i].r.setAttribute('y',BB-hgt);bars[i].r.setAttribute('height',Math.max(0,hgt));bars[i].t.setAttribute('y',BB-hgt-8);bars[i].t.textContent=Math.round(e)});
+ const eta=(Ek+Eg)/E0*100,P=Ff*spd;
+ document.getElementById('ro').innerHTML=`$E_\\text{g}$ = <span class="k">mgh</span> = <b class="gr">${Math.round(Eg)} J</b><br>$E_\\text{k}$ = ½<span class="k">mv</span>² = <b class="cy">${Math.round(Ek)} J</b><br>speed <span class="k">v</span> = <b>${f2(spd,1)} m s⁻¹</b>`
+  .replace('$E_\\text{g}$','<span class="k">E</span><sub>g</sub>').replace('$E_\\text{k}$','<span class="k">E</span><sub>k</sub>')+
+  (fric?`<br>η = <b class="hi">${Math.round(eta)}%</b> still mechanical<br>heat power <span class="k">P = Fv</span> = <b class="pk">${Math.round(P)} W</b>`:`<br>total = <b class="hi">${Math.round(E0)} J</b> (constant)`);
+});
+</script>

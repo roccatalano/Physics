@@ -1,0 +1,38 @@
+<!--{"id":"2B-2-energy-budget","section":"2B","title":"Earth's energy budget and the greenhouse effect","criteria":["2B.3","2B.4"],
+"blurb":"Raise the greenhouse gases. Back radiation grows, Earth absorbs more than it emits, and the surface warms until the budget balances again.",
+"source":"Cambridge VCE Physics Units 1&2, 2B (pp. 28–30). One-layer model: no convection, evaporation or sunlight absorbed by air, so numbers differ from NASA's.","colour":"#4ade80"}-->
+<div class="ctx">Earth absorbs about <b>240 W m⁻²</b> from the Sun. Greenhouse gases absorb infrared from the surface and send some of it back down. <b>What happens when we add more?</b></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#4ade80"><h3>Energy flows (W m⁻²)</h3><svg id="sv" viewBox="0 0 860 380"></svg><div class="rule" style="font-size:17px;padding:8px 14px">More greenhouse gas means more <b>back radiation</b>. Energy in is then more than energy out, so the surface <b>warms until the budget balances</b> again at a higher temperature.</div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Atmosphere</h3>
+   <div class="sl" style="grid-template-columns:96px 1fr 80px"><span class="nm">IR held</span><input type="range" id="e" min="0" max="100" step="1" value="77"><span class="v" id="ev"></span></div>
+   <div class="btns"><button class="pr" data-v="0">No greenhouse</button><button class="pr on" data-v="77">Today</button><button class="pr" data-v="85">More CO₂</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5"><h3>Surface</h3><div id="ro"></div></div>
+ </div>
+</div>
+<script>
+const sg=5.67e-8,IN=340,RF=100,AB=IN-RF,sv=document.getElementById('sv');let e=.77,Ts=288;
+const C={y:'#facc15',w:'#e2e8f0',r:'#ef4444',p:'#f472b6',o:'#fb923c'};
+txt(sv,845,26,'SPACE',{fill:'#5b6690','font-size':16,'text-anchor':'end'});
+const atm=el('rect',{x:0,y:120,width:860,height:60,fill:'#7dd3fc'},sv);txt(sv,845,156,'atmosphere',{fill:'#cfd7f5','font-size':16,'text-anchor':'end'});
+el('rect',{x:0,y:310,width:860,height:70,fill:'#14532d'},sv);txt(sv,845,350,'surface',{fill:'#bbf7d0','font-size':16,'text-anchor':'end'});
+function A(k,x,y1,y2,name){const g=el('g',{},sv);const p=el('path',{fill:C[k]},g);const t=txt(g,0,0,'',{fill:C[k],'font-size':19,'font-weight':700}),n=txt(g,0,0,name,{fill:C[k],'font-size':15});
+ return v=>{g.style.display=v<.5?'none':'';const w=Math.max(3,v/14),hw=w/2+9,hl=16,d=Math.sign(y2-y1),ye=y2-d*hl;
+  p.setAttribute('d',`M${x-w/2},${y1}L${x-w/2},${ye}L${x-hw},${ye}L${x},${y2}L${x+hw},${ye}L${x+w/2},${ye}L${x+w/2},${y1}Z`);
+  const ym=(y1+y2)/2;t.setAttribute('x',x+hw+6);t.setAttribute('y',ym);t.textContent=Math.round(v);n.setAttribute('x',x+hw+6);n.setAttribute('y',ym+19)}}
+const aIn=A('y',60,20,305,'in'),aRf=A('w',190,305,20,'reflected'),aSu=A('r',330,305,125,'surface IR'),aWin=A('o',470,305,20,'escapes'),aUp=A('p',600,118,20,'to space'),aBk=A('p',730,182,305,'back');
+const dots=[];for(let i=0;i<30;i++)dots.push(el('circle',{r:4,fill:'#fff','fill-opacity':.8},sv));
+const res=txt(sv,560,240,'',{'text-anchor':'middle','font-size':17,fill:'#cfd7f5'});
+const S=slider('e',x=>x+' %',x=>{e=x/100;document.querySelectorAll('.pr').forEach(b=>b.classList.toggle('on',+b.dataset.v===x))});document.querySelectorAll('.pr').forEach(b=>b.onclick=()=>{S.value=b.dataset.v;S.dispatchEvent(new Event('input'))});
+IX.anims.push((t,dt)=>{const h=IX.play?dt*IX.speed:0,U=sg*Ts**4,back=e*U/2,win=(1-e)*U,up=e*U/2,out=win+up,net=AB+back-U;
+ Ts+=net*h/60;
+ aIn(IN);aRf(RF);aSu(U);aWin(win);aUp(up);aBk(back);
+ atm.setAttribute('fill-opacity',.08+.35*e);
+ res.textContent='';
+ const sp=[[60,20,290],[190,300,30],[330,300,135],[470,300,30],[600,115,30],[730,185,290]],vv=[IN,RF,U,win,up,back];
+ dots.forEach((d,i)=>{const j=i%6,[x,a,b2]=sp[j],ph=((t*.6+i/30*5)%1);d.style.display=vv[j]<.5?'none':'';d.setAttribute('cx',x);d.setAttribute('cy',a+(b2-a)*ph)});
+ const eq=Math.pow(AB/(sg*(1-e/2)),.25),im=AB-out;
+ document.getElementById('ro').innerHTML=`<span class="k">T</span> = <b style="font-size:24px">${(Ts-273.15).toFixed(1)} °C</b> (${Math.round(Ts)} K)<br>In − out: <b class="${Math.abs(im)<.5?'gr':'pk'}">${im>=0?'+':''}${im.toFixed(1)} W m⁻²</b><br>${Math.abs(im)<.5?'Balanced: temperature steady':im>0?'Absorbing more than emitting: <b>warming</b>':'Emitting more than absorbing: <b>cooling</b>'}<br>Settles at <b class="hi">${(eq-273.15).toFixed(1)} °C</b>`});
+</script>

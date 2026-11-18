@@ -1,0 +1,49 @@
+<!--{"id":"1C-3-dispersion-prism","section":"1C","title":"Dispersion in a prism","criteria":["1C.9","1C.10"],
+"blurb":"White light enters a glass prism. Each colour has a slightly different refractive index, so each bends a different amount at both faces and the colours spread out.",
+"source":"Cambridge VCE Physics Units 1&2, 1C, Table 1C–2 (glass: red 1.509 to violet 1.521), Figure 1C–21. Rays traced with Snell's law at both faces; reflections not shown.","colour":"#f472b6"}-->
+<div class="ctx">Newton shone sunlight through a glass prism and got a spectrum. In glass, <b>violet light travels slowest</b>, so it has the biggest refractive index and bends the most.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#f472b6;gap:8px"><h3>White light through a 60° glass prism</h3><svg id="sv" viewBox="0 0 860 400"></svg>
+  <div class="sl" style="grid-template-columns:200px 1fr 80px"><span class="nm">Angle of incidence</span><input type="range" id="i" min="35" max="80" step="1" value="50"><span class="v" id="iv"></span></div>
+ </div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Spread</h3>
+   <div class="btns"><button class="xb on" data-v="1">Real glass</button><button class="xb" data-v="12">Spread × 12</button></div></div>
+  <div class="card out" style="--c:#4ade80;font-size:18px;line-height:1.4"><h3>Each colour</h3><div id="tb"></div></div>
+  <div class="rule">Higher <b>n</b> means slower light and <b>more bending</b>. Violet bends most, red least.</div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),d=Math.PI/180;
+const COL=[['Red',640,1.509,'#ff3b3b'],['Yellow',589,1.511,'#ffe14a'],['Green',509,1.515,'#3be36b'],['Blue',486,1.517,'#3b8bff'],['Violet',434,1.521,'#b06bff']];
+const A=[400,40],B=[220,352],C=[580,352];let inc=50,K=1;
+el('path',{d:`M${A}L${B}L${C}Z`,fill:'#7dd3fc','fill-opacity':.13,stroke:'#7dd3fc','stroke-width':3},sv);
+txt(sv,400,330,'glass',{fill:'#7dd3fc','font-size':18,'text-anchor':'middle'});
+const nrm=el('line',{stroke:'#a5b4d8','stroke-width':2,'stroke-dasharray':'7 6'},sv);
+const inL=el('line',{stroke:'#fff','stroke-width':6,'stroke-linecap':'round'},sv);
+const rays=COL.map(c=>[el('line',{stroke:c[3],'stroke-width':3},sv),el('line',{stroke:c[3],'stroke-width':4},sv)]);
+const ia=el('path',{fill:'none',stroke:'#fbb040','stroke-width':3},sv),il=txt(sv,0,0,'',{fill:'#fbb040','font-size':18,'text-anchor':'end'});
+const sub=(a,b)=>[a[0]-b[0],a[1]-b[1]],add=(a,b)=>[a[0]+b[0],a[1]+b[1]],mul=(a,k)=>[a[0]*k,a[1]*k],dot=(a,b)=>a[0]*b[0]+a[1]*b[1],nz=a=>mul(a,1/Math.hypot(a[0],a[1]));
+const set=(e,a,b)=>{e.setAttribute('x1',a[0]);e.setAttribute('y1',a[1]);e.setAttribute('x2',b[0]);e.setAttribute('y2',b[1])};
+function refr(dv,n,n1,n2){// n points back towards the incoming side
+ const eta=n1/n2,ci=-dot(n,dv),k=1-eta*eta*(1-ci*ci);if(k<0)return null;return nz(add(mul(dv,eta),mul(n,eta*ci-Math.sqrt(k))))}
+function hit(p,dv,a,b){const e=sub(b,a),den=dv[0]*e[1]-dv[1]*e[0];if(Math.abs(den)<1e-9)return null;const w=sub(a,p);const t=(w[0]*e[1]-w[1]*e[0])/den,u=(w[0]*dv[1]-w[1]*dv[0])/den;return t>1e-6&&u>=0&&u<=1?[add(p,mul(dv,t)),t]:null}
+const L=sub(B,A),nL=nz([-L[1],L[0]]);// outward normal of left face (points left-up)
+const R=sub(C,A),nR=nz([R[1],-R[0]]);// outward normal of right face
+const P=add(A,mul(L,.5));
+function toEdge(p,dv){let t=2000;[[0,0,1,0],[860,0,-1,0],[0,0,0,1],[0,400,0,-1]];const tx=dv[0]>0?(860-p[0])/dv[0]:dv[0]<0?-p[0]/dv[0]:1e9,ty=dv[1]>0?(400-p[1])/dv[1]:dv[1]<0?-p[1]/dv[1]:1e9;return add(p,mul(dv,Math.min(tx,ty)))}
+function draw(){const a=inc*d;// incoming direction: inward normal (-nL) rotated so the ray comes from lower left
+ const ni=mul(nL,-1),ca=Math.cos(a),sa=Math.sin(a);const dv=[ni[0]*ca+ni[1]*sa,-ni[0]*sa+ni[1]*ca];
+ set(inL,add(P,mul(dv,-330)),P);set(nrm,add(P,mul(nL,110)),add(P,mul(nL,-90)));
+ const n0=Math.atan2(nL[1],nL[0]),dn=Math.atan2(-dv[1],-dv[0]);
+ const r=62;ia.setAttribute('d',`M${P[0]+r*Math.cos(n0)},${P[1]+r*Math.sin(n0)}A${r},${r} 0 0 ${dn>n0?1:0} ${P[0]+r*Math.cos(dn)},${P[1]+r*Math.sin(dn)}`);
+ const mv=nz(add(nL,mul(dv,-1)));il.setAttribute('x',P[0]+(r+14)*mv[0]);il.setAttribute('y',P[1]+(r+14)*mv[1]+6);il.textContent=inc+'°';
+ let rows='',dev=[];
+ COL.forEach((c,k)=>{const n=1.515+K*(c[2]-1.515);const t1=refr(dv,nL,1,n);const h=hit(P,t1,A,C)||hit(P,t1,B,C);const [l1,l2]=rays[k];
+  set(l1,P,h[0]);let out='TIR';
+  if(hit(P,t1,A,C)){const t2=refr(t1,mul(nR,-1),n,1);if(t2){set(l2,h[0],toEdge(h[0],t2));l2.style.display='';const D=Math.acos(Math.max(-1,Math.min(1,dot(dv,t2))))/d;out=D.toFixed(2)+'°';dev.push(D)}else{l2.style.display='none'}}else l2.style.display='none';
+  rows+=`<tr><td style="color:${c[3]};font-weight:700">${c[0]}</td><td>${c[1]} nm</td><td>${n.toFixed(3)}</td><td><b>${out}</b></td></tr>`});
+ const sp=dev.length===5?(dev[4]-dev[0]).toFixed(2)+'°':'';
+ document.getElementById('tb').innerHTML=`<table style="width:100%;border-collapse:collapse"><tr style="color:#94a3c8;font-size:15px"><td>Colour</td><td>λ</td><td>n</td><td>Bent by</td></tr>${rows}</table>${K>1?'<div style="color:#fbb040;font-size:16px">Not real glass: n spread × 12</div>':''}<div style="margin-top:4px">Violet minus red: <b class="hi">${sp}</b></div>`}
+slider('i',x=>x+'°',x=>{inc=x;draw()});group('.xb',v=>{K=+v;draw()});
+</script>

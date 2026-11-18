@@ -3,7 +3,9 @@
 # Each source file starts with a JSON header in <!-- --> (id, section, title, criteria, blurb), then the body HTML,
 # then <script> for its own JS. Shared look and helpers: ix.css, ix.js. Embed in a slide with an iframe; add ?bare
 # to hide the title, context line and footer.
-# Usage: python3 tools/interactives/build.py
+# Usage: python3 tools/interactives/build.py            (everything + gallery)
+#        python3 tools/interactives/build.py 1B 1C    (only sources whose file name starts with these; no gallery)
+import sys
 import os,re,json,base64,subprocess,glob,html
 H=os.path.dirname(os.path.abspath(__file__));V=os.path.join(H,'vendor');OUT=os.path.join(H,'..','..','interactives')
 b64=lambda f:base64.b64encode(open(os.path.join(V,f),'rb').read()).decode()
@@ -21,17 +23,22 @@ def katex(src):
   r=json.loads(subprocess.run(['node','-e',js,os.path.join(V,'katex.min.js')],input=json.dumps(maths),capture_output=True,text=True,check=True).stdout)
   it=iter(r);return ''.join(next(it) if p.startswith('$') and p.endswith('$') and len(p)>2 else p for p in parts)
 os.makedirs(OUT,exist_ok=True);meta=[]
+# background per Area of Study (Rocco, 18 Nov 2026): U1 AoS1 waves, AoS2 nuclear particles, AoS3 circuit traces, U2 AoS1 motion arcs
+BG={'1':'waves','2':'waves','3':'nuclear','4':'nuclear','5':'circuit','6':'circuit','7':'motion','8':'motion','9':'motion'}
+ONLY=sys.argv[1:]
 for f in sorted(glob.glob(os.path.join(H,'src','*.html'))):
+  if ONLY and not any(os.path.basename(f).startswith(o) for o in ONLY):continue
   s=open(f).read();m=re.match(r'\s*<!--(.*?)-->',s,re.S);M=json.loads(m.group(1));s=s[m.end():]
   body,_,script=s.partition('<script>');script=script.rsplit('</script>',1)[0]
   body=katex(body)
   page=f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(M['section']+' · '+M['title'])}</title>
-<style>{FONTS}{kcss}{CSS}</style></head><body><div id="stage"><svg id="bg" viewBox="0 0 1280 720"></svg><div class="tools"></div>
+<style>{FONTS}{kcss}{CSS}</style></head><body data-bg="{BG.get(M['section'][0],'waves')}"><div id="stage"><svg id="bg" viewBox="0 0 1280 720"></svg><div class="tools"></div>
 <div class="ix" style="--c:{M.get('colour','#7dd3fc')}"><div class="head"><div><div class="label">{html.escape(M['section'])} · Interactive</div><h1>{html.escape(M['title'])}</h1></div></div>
 {body}</div><div class="foot"><span>{html.escape(M.get('source',''))}</span><span>Interactive by teacher</span></div></div>
 <script>{JS}</script><script>{script}</script></body></html>"""
   open(os.path.join(OUT,M['id']+'.html'),'w').write(page);meta.append(M)
   print(M['id'],len(page)//1024,'KB')
+if ONLY:sys.exit()
 json.dump(meta,open(os.path.join(OUT,'interactives.json'),'w'),indent=1,ensure_ascii=False)
 cards=''.join(f'<a class="g" href="{m["id"]}.html" style="--c:{m.get("colour","#7dd3fc")}"><span>{html.escape(m["section"])} · {html.escape(", ".join(m.get("criteria",[])))}</span><b>{html.escape(m["title"])}</b><i>{html.escape(m.get("blurb",""))}</i></a>' for m in meta)
 open(os.path.join(OUT,'index.html'),'w').write(f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Physics interactives</title><style>{FONTS}

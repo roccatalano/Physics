@@ -1,0 +1,47 @@
+<!--{"id":"2A-2-heating-curve","section":"2A","title":"Heating curve: Q = mcΔT and Q = mL","criteria":["2A.5","2A.6","2A.8","2A.9","2A.10"],
+"blurb":"Heat a solid steadily until it is a gas. Sloped parts use Q = mcΔT; flat parts (changes of state) use Q = mL.",
+"source":"Cambridge VCE Physics Units 1&2, 2A Thermal energy (pp. 14–17, Figure 2A–13). No losses to surroundings; ethanol values approximate; animation 60× real time.","colour":"#fbb040"}-->
+<div class="ctx">A heater of constant power warms a solid sample until it is all gas. <b>Why does the temperature stop rising twice?</b></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#fbb040"><h3 id="pt">Temperature against energy added</h3><svg id="sv" viewBox="0 0 860 380"></svg><div class="rule" style="font-size:17px;padding:8px 14px">Sloped: particles speed up, the temperature rises, $Q = mc\Delta T$. Flat: energy breaks bonds, <b>the temperature stays constant</b> while the state changes, $Q = mL$.</div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Sample</h3>
+   <div class="btns"><button class="sb on" data-v="w">Water</button><button class="sb" data-v="e">Ethanol</button></div>
+   <div class="sl" style="grid-template-columns:70px 1fr 92px"><span class="nm">Mass</span><input type="range" id="m" min="0.1" max="2" step="0.1" value="1"><span class="v" id="mv"></span></div>
+   <div class="sl" style="grid-template-columns:70px 1fr 92px"><span class="nm">Power</span><input type="range" id="P" min="500" max="3000" step="100" value="2000"><span class="v" id="Pv"></span></div>
+   <div class="btns"><button id="go">↻ Start again</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5"><h3>Now</h3><div id="ro"></div></div>
+ </div>
+</div>
+<script>
+const S={w:{n:'Water',s:'ice',l:'water',g:'steam',mp:0,bp:100,cs:2093,cl:4180,cg:2010,Lf:334e3,Lv:2256e3},
+ e:{n:'Ethanol',s:'solid ethanol',l:'liquid ethanol',g:'ethanol gas',mp:-114,bp:78,cs:1000,cl:2440,cg:1420,Lf:108e3,Lv:846e3}};
+const sv=document.getElementById('sv'),X0=90,X1=830,Y0=320,Y1=30;let sub=S.w,m=1,P=2000,Q=0,segs=[],Qt=0;
+const ax=el('g',{},sv),gc=el('g',{},sv);
+const full=el('path',{fill:'none',stroke:'#36418a','stroke-width':4,'stroke-dasharray':'8 6'},sv),done=el('path',{fill:'none',stroke:'#fbb040','stroke-width':6},sv);
+const dot=el('circle',{r:11,fill:'#fff',stroke:'#fbb040','stroke-width':4},sv);
+function build(){const s=sub,T0=s.mp-20,T1=s.bp+20;
+ segs=[{q:m*s.cs*20,a:T0,b:s.mp,st:s.s,f:'Q = mc_{s}ΔT',col:'#7dd3fc',ph:'solid warming'},{q:m*s.Lf,a:s.mp,b:s.mp,st:s.s+' + '+s.l,f:'Q = mL_{f}',col:'#f472b6',ph:'melting'},
+ {q:m*s.cl*(s.bp-s.mp),a:s.mp,b:s.bp,st:s.l,f:'Q = mc_{l}ΔT',col:'#4ade80',ph:'liquid warming'},{q:m*s.Lv,a:s.bp,b:s.bp,st:s.l+' + '+s.g,f:'Q = mL_{v}',col:'#f472b6',ph:'boiling'},
+ {q:m*s.cg*20,a:s.bp,b:T1,st:s.g,f:'Q = mc_{g}ΔT',col:'#fb923c',ph:'gas warming'}];
+ Qt=segs.reduce((a,x)=>a+x.q,0);gc.innerHTML='';ax.innerHTML='';
+ const sx=q=>X0+(X1-X0)*q/Qt,sy=T=>Y0-(Y0-Y1)*(T-T0)/(T1-T0);build.sx=sx;build.sy=sy;
+ el('line',{x1:X0,x2:X1,y1:Y0,y2:Y0,stroke:'#5b6690','stroke-width':2},ax);el('line',{x1:X0,x2:X0,y1:Y0,y2:Y1-10,stroke:'#5b6690','stroke-width':2},ax);
+ for(const T of [T0,s.mp,s.bp,T1]){el('line',{x1:X0-6,x2:X1,y1:sy(T),y2:sy(T),stroke:'#232c63','stroke-width':1.5},ax);txt(ax,X0-10,sy(T)+6,T+' °C',{'text-anchor':'end','font-size':16,fill:'#a5b4d8'})}
+ txt(ax,X1,Y0+48,'energy added, Q (kJ)',{'text-anchor':'end','font-size':16,fill:'#a5b4d8'});
+ const step=[50,100,200,500,1000,2000][[50,100,200,500,1000,2000].findIndex(v=>Qt/1000/v<=8)]||5000;
+ for(let k=0;k*step*1000<=Qt;k++)txt(ax,sx(k*step*1000),Y0+24,k*step,{'text-anchor':'middle','font-size':15,fill:'#5b6690'});
+ let d='',q=0;segs.forEach((g,i)=>{d+=(i?'L':'M')+sx(q)+','+sy(g.a);q+=g.q;d+='L'+sx(q)+','+sy(g.b);
+  const xm=sx(q-g.q/2),flat=g.a===g.b,wide=sx(q)-sx(q-g.q)>70;
+  if(wide)txt(gc,flat?xm:xm+8,flat?sy(g.a)-14:sy((g.a+g.b)/2)+(i===0||i===4?-14:0),g.ph,{'text-anchor':flat?'middle':'start','font-size':16,fill:g.col})});
+ full.setAttribute('d',d);Q=0}
+function rd(){let q=Q,i=0;while(i<segs.length-1&&q>segs[i].q){q-=segs[i].q;i++}const g=segs[i],fr=Math.min(1,q/g.q),T=g.a+(g.b-g.a)*fr;return{i,g,T,fr}}
+slider('m',x=>f2(x,1)+' kg',x=>{m=x;build()});slider('P',x=>x+' W',x=>{P=x});
+group('.sb',v=>{sub=S[v];build()});document.getElementById('go').onclick=()=>{Q=0};build();
+const ro=document.getElementById('ro');
+IX.anims.push((t,dt)=>{if(IX.play)Q=Math.min(Qt,Q+P*60*dt*IX.speed);const r=rd(),sx=build.sx,sy=build.sy;
+ let d='',q=0;for(let i=0;i<=r.i;i++){const g=segs[i];d+=(i?'L':'M')+sx(q)+','+sy(g.a);const qq=i<r.i?g.q:g.q*r.fr;d+='L'+sx(q+qq)+','+sy(g.a+(g.b-g.a)*qq/g.q);q+=g.q}
+ done.setAttribute('d',d);dot.setAttribute('cx',sx(Q));dot.setAttribute('cy',sy(r.T));
+ ro.innerHTML=`<b style="color:${r.g.col}">${r.g.ph[0].toUpperCase()+r.g.ph.slice(1)}</b> (${r.g.st})<br><span class="k">T</span> = <b>${r.T.toFixed(1)} °C</b><br>Stage: <b class="hi">${r.g.f.replace(/_\{(\w)\}/,'<sub>$1</sub>')}</b> = ${sig(r.g.q/1000)} kJ<br><span class="k">Q</span> so far: <b>${sig(Q/1000)} kJ</b><br>Heater time: <b>${(Q/P/60).toFixed(1)} min</b>`});
+</script>

@@ -1,0 +1,47 @@
+<!--{"id":"6B-2-kwh-cost","section":"6B","title":"Kilowatt-hours and running cost","criteria":["6B.3","6B.5"],
+"blurb":"Pick an appliance, how long it runs each day and for how many days. Watch the meter count the kW h, then convert to MJ and dollars, step by step.",
+"source":"Cambridge VCE Physics Units 1&2, 6B Electricity at home, Worked examples 6B–1 to 6B–3 (pp. 27–32). Supply charge ignored.","colour":"#4ade80"}-->
+<div class="ctx">The meter measures energy in <b>kilowatt-hours</b>: 1 kW running for 1 hour. <b>How much energy does an appliance use, and what does it cost?</b></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc"><h3>One day of use</h3><svg id="sv" viewBox="0 0 860 150" style="flex:none;height:150px"></svg>
+  <div id="steps" style="font-size:25px;line-height:1.8;padding:10px 18px 0;color:#cfd7f5"></div>
+ </div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Appliance</h3>
+   <div class="btns"><button class="pr" data-v="2400,0.25">Kettle</button><button class="pr on" data-v="80,2">TV</button><button class="pr" data-v="2000,5">Heater</button><button class="pr" data-v="0.58,22">TV standby</button><button class="pr" data-v="10,6">LED globe</button></div>
+   <div class="sl"><span class="nm">Power</span><input type="range" id="P" min="-0.3" max="3.5" step="0.01" value="1.9"><span class="v" id="Pv"></span></div>
+   <div class="sl"><span class="nm">Hours a day</span><input type="range" id="h" min="0.25" max="24" step="0.25" value="2"><span class="v" id="hv"></span></div>
+   <div class="sl"><span class="nm">Days</span><input type="range" id="d" min="1" max="365" step="1" value="7"><span class="v" id="dv"></span></div>
+   <div class="sl"><span class="nm">Price</span><input type="range" id="c" min="0.10" max="0.60" step="0.01" value="0.30"><span class="v" id="cv"></span></div>
+  </div>
+  <div class="rule" style="font-size:17px"><b>1 kW h = 3.6 MJ</b><br>(1000 W for 3600 s). Use kW and hours to get kW h. Cost = kW h × price per kW h.</div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv');let P=80,h=2,d=7,c=0.30,shown=0;
+const X0=40,XW=780,Y=40,HH=44;
+el('rect',{x:X0,y:Y,width:XW,height:HH,rx:8,fill:'#141a40',stroke:'#36418a','stroke-width':2},sv);
+const run=el('rect',{y:Y+3,height:HH-6,rx:6,fill:'#fbb040',opacity:.85},sv);
+for(let i=0;i<=24;i+=6){const x=X0+i/24*XW;el('line',{x1:x,x2:x,y1:Y+HH,y2:Y+HH+8,stroke:'#5b6690','stroke-width':2},sv);txt(sv,x,Y+HH+28,i===24?'midnight':i===12?'noon':i===0?'midnight':i===6?'6 am':'6 pm',{'text-anchor':'middle','font-size':16,fill:'#8b96c4'})}
+const hand=el('line',{y1:Y-8,y2:Y+HH+8,stroke:'#eef2ff','stroke-width':3},sv);
+const lab=txt(sv,X0,Y-12,'',{'font-size':17,fill:'#fbb040'});
+const meter=txt(sv,X0+XW,Y+HH+60,'',{'text-anchor':'end','font-size':26,'font-weight':700,fill:'#4ade80','font-family':'Space Grotesk'});
+txt(sv,X0,Y+HH+60,'Meter, today:',{'font-size':18,fill:'#a5b4d8'});
+const fP=P=>P>=1000?(+(P/1000).toPrecision(3))+' kW':(+P.toPrecision(3))+' W';
+function n(v){return v>=1000?Math.round(v).toLocaleString('en-AU'):v>=100?v.toFixed(0):v>=1?sig(v,3):sig(v,2)}
+function calc(){const kW=P/1000,t=h*d,E=kW*t,MJ=E*3.6,cost=E*c;
+ const st=8-h/2;run.setAttribute('x',X0+(st<0?0:st)/24*XW);run.setAttribute('width',Math.min(h,24)/24*XW);lab.setAttribute('x',X0+(st<0?0:st)/24*XW);lab.textContent='on for '+h+' h';
+ document.getElementById('steps').innerHTML=
+ `<div><span class="k">P</span> = ${fP(P)} = <b class="hi">${+kW.toPrecision(3)} kW</b></div>
+  <div><span class="k">t</span> = ${h} h × ${d} day${d>1?'s':''} = <b class="hi">${n(t)} h</b></div>
+  <div><span class="k">E</span> = <span class="k">Pt</span> = ${+kW.toPrecision(3)} × ${n(t)} = <b class="gr">${n(E)} kW h</b> <span style="color:#8b96c4">= ${n(MJ)} MJ</span></div>
+  <div>Cost = ${n(E)} kW h × $${c.toFixed(2)} = <b style="color:#fff;font-size:28px">$${cost<0.995?cost.toFixed(2):cost<100?cost.toFixed(2):Math.round(cost).toLocaleString('en-AU')}</b></div>`}
+group('.pr',v=>{const[a,b]=v.split(',').map(Number);const r=document.getElementById('P');r.value=Math.log10(a);r.dispatchEvent(new Event('input'));P=a;document.getElementById('Pv').textContent=fP(a);const q=document.getElementById('h');q.value=b;q.dispatchEvent(new Event('input'));calc()});
+const clr=()=>document.querySelectorAll('.pr').forEach(b=>b.classList.remove('on'));
+slider('P',v=>fP(Math.pow(10,v)),v=>{P=+Math.pow(10,v).toPrecision(3);calc()}).addEventListener('input',e=>e.isTrusted&&clr());
+slider('h',v=>v+' h',v=>{h=v;calc()}).addEventListener('input',e=>e.isTrusted&&clr());
+slider('d',v=>v,v=>{d=v;calc()});slider('c',v=>'$'+v.toFixed(2),v=>{c=v;calc()});
+document.querySelector('.pr.on').click();
+IX.anims.push(t=>{const hr=(t*2)%24;const x=X0+hr/24*XW;hand.setAttribute('x1',x);hand.setAttribute('x2',x);
+ const st=Math.max(0,8-h/2),en=Math.min(24,st+h);const used=Math.max(0,Math.min(hr,en)-st)*P/1000;meter.textContent=used.toFixed(used<0.1?4:3)+' kW h'});
+</script>

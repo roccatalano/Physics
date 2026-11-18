@@ -1,0 +1,61 @@
+<!--{"id":"3A-2-nuclear-forces","section":"3A","title":"Strong force against electrostatic force","criteria":["3A.2","3A.3","3A.4"],
+"blurb":"Two protons at a separation you choose. Compare the electrostatic push with the strong nuclear pull, and find the distance where the strong force stops winning.",
+"source":"Cambridge VCE Physics Units 1&2, 3A Nuclear stability (Figures 3A–12, 3A–13). Strong force: illustrative model, core below 0.7 fm not shown.","colour":"#f472b6"}-->
+<div class="ctx">Two protons <b>repel</b> electrostatically and <b>attract</b> through the strong force. Which wins?</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#f472b6;gap:4px"><h3>Two protons</h3><svg id="pp" viewBox="0 0 780 110" style="flex:none;height:110px"></svg>
+  <h3 style="margin-top:2px;color:#7dd3fc">Size of each force against separation (log scale)</h3><svg id="gr" viewBox="0 0 780 290"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Separation</h3>
+   <div class="sl" style="grid-template-columns:30px 1fr 92px"><span class="nm">r</span><input type="range" id="r" min="0.8" max="4" step="0.05" value="1.2"><span class="v" id="rv"></span></div>
+   <div class="btns"><button class="pr" data-v="0.9">Touching</button><button class="pr" data-v="1.2">Neighbours</button><button class="pr" data-v="3.6">Far apart</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80"><h3>Forces at this distance</h3>
+   <div>Electrostatic <span class="pk">push</span>: <b id="fe"></b></div>
+   <div>Strong nuclear <span class="cy">pull</span>: <b id="fs"></b></div>
+   <div style="margin-top:4px" id="win"></div>
+  </div>
+  <div class="rule">Strong force: huge but <b>short range</b>. Electrostatic force: reaches <b>across the whole nucleus</b>.</div>
+ </div>
+</div>
+<script>
+const K=230.7; // ke^2 in N fm^2: 8.99e9*(1.6e-19)^2/1e-30
+const Fe=r=>K/(r*r),Fs=r=>8000*Math.exp(-(r-1)/0.35);
+let cross=1;for(let r=1;r<5;r+=.001)if(Fs(r)<Fe(r)){cross=r;break}
+const gr=document.getElementById('gr'),pp=document.getElementById('pp');
+const GX=78,GW=670,GT=10,GB=240,RMIN=.8,RMAX=4,LMIN=0,LMAX=5;
+const sx=r=>GX+(r-RMIN)/(RMAX-RMIN)*GW,sy=F=>GB-(Math.log10(Math.max(F,1))-LMIN)/(LMAX-LMIN)*(GB-GT);
+el('rect',{x:sx(cross),y:GT,width:sx(RMAX)-sx(cross),height:GB-GT,fill:'#f472b6','fill-opacity':.08},gr);
+el('rect',{x:GX,y:GT,width:sx(cross)-GX,height:GB-GT,fill:'#7dd3fc','fill-opacity':.07},gr);
+txt(gr,(GX+sx(cross))/2,GT+22,'strong force wins',{fill:'#7dd3fc','font-size':18,'text-anchor':'middle'});
+txt(gr,(sx(cross)+sx(RMAX))/2,GT+22,'electrostatic force wins',{fill:'#f472b6','font-size':17,'text-anchor':'middle'});
+for(let p=0;p<=5;p++){el('line',{x1:GX,x2:GX+GW,y1:sy(10**p),y2:sy(10**p),stroke:'#232c63'},gr);txt(gr,GX-8,sy(10**p)+6,p===0?'1 N':'10'+'⁰¹²³⁴⁵'[p]+' N',{fill:'#8b96c0','font-size':18,'text-anchor':'end'})}
+for(let r=1;r<=4;r++)txt(gr,sx(r),GB+24,r,{fill:'#8b96c0','font-size':17,'text-anchor':'middle'});txt(gr,GX+GW,GB+46,'r (fm)',{fill:'#cfd7f5','font-size':17,'text-anchor':'end'});
+el('line',{x1:GX,x2:GX+GW,y1:GB,y2:GB,stroke:'#36418a','stroke-width':2},gr);
+let d1='',d2='';for(let i=0;i<=200;i++){const r=RMIN+i*(RMAX-RMIN)/200;d1+=(i?'L':'M')+sx(r).toFixed(1)+','+sy(Fe(r)).toFixed(1);if(Fs(r)>=1)d2+=(d2?'L':'M')+sx(r).toFixed(1)+','+sy(Fs(r)).toFixed(1)}
+el('path',{d:d1,fill:'none',stroke:'#f472b6','stroke-width':4},gr);el('path',{d:d2,fill:'none',stroke:'#7dd3fc','stroke-width':4},gr);
+txt(gr,sx(3.3),sy(Fe(3.3))-12,'electrostatic',{fill:'#f472b6','font-size':17});txt(gr,sx(1.5)+12,sy(Fs(1.5))-6,'strong nuclear',{fill:'#7dd3fc','font-size':17});
+el('line',{x1:sx(cross),x2:sx(cross),y1:GT+32,y2:GB,stroke:'#fbb040','stroke-width':2,'stroke-dasharray':'5 5'},gr);
+const cur=el('line',{stroke:'#fff','stroke-width':2.5},gr),c1=el('circle',{r:8,fill:'#f472b6'},gr),c2=el('circle',{r:8,fill:'#7dd3fc'},gr);
+// protons
+function arrowDef(id,c){const m=el('marker',{id,viewBox:'0 0 10 10',refX:5,refY:5,markerWidth:4,markerHeight:4,orient:'auto-start-reverse'},el('defs',{},pp));el('path',{d:'M0 0L10 5L0 10z',fill:c},m)}
+arrowDef('ap','#f472b6');arrowDef('ac','#7dd3fc');
+const PX=390,PS=95; // px per fm
+const P=[0,1].map(i=>{const g=el('g',{},pp);el('circle',{r:26,fill:'#ef4444',stroke:'#fff','stroke-width':2},g);txt(g,0,8,'p',{'text-anchor':'middle','font-size':24,fill:'#fff'});return g});
+const ae=[0,1].map(()=>el('line',{stroke:'#f472b6','stroke-width':7,'marker-end':'url(#ap)'},pp)),as=[0,1].map(()=>el('line',{stroke:'#7dd3fc','stroke-width':7,'marker-end':'url(#ac)'},pp));
+const rl=txt(pp,PX,106,'',{fill:'#fbb040','font-size':17,'text-anchor':'middle'});
+let r=1.2;const L=F=>Math.max(0,Math.log10(Math.max(F,1)))*22;
+const fmt=F=>F>=100?(Math.round(F/10**(Math.floor(Math.log10(F))-1))*10**(Math.floor(Math.log10(F))-1)).toLocaleString('en-AU')+' N':F>=1?sig(F,2)+' N':'less than 1 N';
+function upd(){const e=Fe(r),s=Fs(r);document.getElementById('fe').textContent=fmt(e);document.getElementById('fs').textContent=fmt(s);
+ document.getElementById('win').innerHTML=s>e?`Net force: <b class="cy">attraction</b>`:`Net force: <b class="pk">repulsion</b>`;
+ cur.setAttribute('x1',sx(r));cur.setAttribute('x2',sx(r));cur.setAttribute('y1',GT);cur.setAttribute('y2',GB);c1.setAttribute('cx',sx(r));c1.setAttribute('cy',sy(e));c2.setAttribute('cx',sx(r));c2.setAttribute('cy',sy(Math.max(s,1)));c2.style.display=s>=1?'':'none'}
+slider('r',x=>f2(x)+' fm',x=>{r=x;upd()});
+document.querySelectorAll('.pr').forEach(b=>b.onclick=()=>{const i=document.getElementById('r');i.value=b.dataset.v;i.dispatchEvent(new Event('input'))});
+IX.anims.push(t=>{const w=1+.04*Math.sin(t*6),half=r*PS/2,xs=[PX-half,PX+half];
+ P.forEach((g,i)=>g.setAttribute('transform',`translate(${xs[i]+(i?1:-1)*2*Math.sin(t*6+i)},52)`));
+ const le=L(Fe(r))*w,ls=L(Fs(r))*w;
+ [0,1].forEach(i=>{const sgn=i?1:-1,x=xs[i];
+  ae[i].setAttribute('x1',x+sgn*28);ae[i].setAttribute('x2',x+sgn*(28+le));ae[i].setAttribute('y1',34);ae[i].setAttribute('y2',34);
+  as[i].style.display=ls>4?'':'none';as[i].setAttribute('x1',x+sgn*(30+ls));as[i].setAttribute('x2',x+sgn*30);as[i].setAttribute('y1',72);as[i].setAttribute('y2',72);});
+ rl.textContent='r = '+f2(r)+' fm';});
+</script>

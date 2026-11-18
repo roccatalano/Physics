@@ -1,0 +1,60 @@
+<!--{"id":"8A-2-impulse","section":"8A","title":"Impulse: the area under F–t","criteria":["8A.5","8A.6"],
+"blurb":"A lump of clay hits a wall and stops. The area under the force–time graph is the impulse. Stretch the contact time and the same impulse needs a much smaller force.",
+"source":"Cambridge VCE Physics Units 1&2, 8A Momentum, Formula 8A–4. Force modelled as a smooth pulse; the contact is shown in slow motion.","colour":"#f472b6"}-->
+<div class="ctx">A lump of clay hits a wall and stops. The wall pushes on it for a short <b>contact time</b>. Right is positive.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#f472b6;gap:4px"><h3>The collision (contact shown in slow motion)</h3><svg id="sc" viewBox="0 0 860 110" style="flex:0 0 110px"></svg>
+  <h3 style="margin-top:6px;color:#fbb040">Force on the clay by the wall against time</h3><svg id="gr" viewBox="0 0 860 320"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:10px"><h3>The clay</h3>
+   <div class="sl"><span class="nm">Mass</span><input type="range" id="m" min="0.2" max="2" step="0.1" value="0.5"><span class="v" id="mv"></span></div>
+   <div class="sl"><span class="nm">Speed u</span><input type="range" id="u" min="1" max="10" step="0.5" value="6"><span class="v" id="uv"></span></div>
+   <div class="sl"><span class="nm">Contact Δt</span><input type="range" id="dt" min="0.01" max="0.2" step="0.01" value="0.05"><span class="v" id="dtv"></span></div>
+   <div class="btns"><button class="pr" data-v="0.01">Hard wall</button><button class="pr" data-v="0.15">Soft cushion</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.55"><h3>Calculate</h3><div id="ro"></div></div>
+  <div class="rule" style="font-size:17px">Same $\Delta p$, longer $\Delta t$, <b>smaller force</b>. This is why airbags and crumple zones work.</div>
+ </div>
+</div>
+<script>
+let m=.5,u=6,DT=.05;
+const sc=document.getElementById('sc'),gr=document.getElementById('gr');
+// scene
+el('rect',{x:760,y:8,width:28,height:96,fill:'#5b6690'},sc);for(let i=0;i<6;i++)el('line',{x1:788,x2:806,y1:14+i*16,y2:4+i*16,stroke:'#5b6690','stroke-width':3},sc);
+el('line',{x1:20,x2:760,y1:104,y2:104,stroke:'#36418a','stroke-width':3},sc);
+const clay=el('ellipse',{cy:74,fill:'#f472b6'},sc),cl=txt(sc,0,40,'',{fill:'#f472b6','font-size':17,'text-anchor':'middle'});
+// graph
+const GX=90,GW=730,GY=270,GH=225,TM=.25;
+el('line',{x1:GX,x2:GX+GW,y1:GY,y2:GY,stroke:'#5b6690','stroke-width':2},gr);el('line',{x1:GX,x2:GX,y1:GY,y2:GY-GH-10,stroke:'#5b6690','stroke-width':2},gr);
+for(let i=0;i<=5;i++){const x=GX+i*.05/TM*GW;txt(gr,x,GY+24,f2(i*.05),{fill:'#a5b4d8','font-size':19,'text-anchor':'middle'})}
+txt(gr,GX+GW,GY+46,'t (s)',{fill:'#a5b4d8','font-size':19,'text-anchor':'end'});txt(gr,GX-10,GY-GH-18,'F (N)',{fill:'#a5b4d8','font-size':19,'text-anchor':'middle'});
+const yt=[0,1].map(i=>[el('line',{x1:GX,x2:GX+GW,stroke:'#232c63','stroke-dasharray':'3 6'},gr),txt(gr,GX-10,0,'',{fill:'#a5b4d8','font-size':19,'text-anchor':'end'})]);
+const ghost=el('path',{fill:'none',stroke:'#a5b4d8','stroke-width':2.5,'stroke-dasharray':'6 6'},gr);const gl=txt(gr,GX+GW,GY-GH,'',{fill:'#a5b4d8','font-size':17,'text-anchor':'end'});
+const area=el('path',{fill:'#fbb040','fill-opacity':.35},gr),curve=el('path',{fill:'none',stroke:'#fbb040','stroke-width':4},gr);
+const avl=el('line',{stroke:'#4ade80','stroke-width':3,'stroke-dasharray':'8 6'},gr),avt=txt(gr,0,0,'',{fill:'#4ade80','font-size':17,'font-weight':700});
+const it=txt(gr,0,0,'',{fill:'#fbb040','font-size':18,'font-weight':700,'text-anchor':'middle'});
+const T0=.03;let FM=1,pk=1,Fav=1,dp=1;
+const F=t=>t<T0||t>T0+DT?0:pk*Math.sin(Math.PI*(t-T0)/DT);
+const gx=t=>GX+t/TM*GW,gy=f=>GY-f/FM*GH;
+function nice(v){const p=Math.pow(10,Math.floor(Math.log10(v)));for(const k of[1,1.5,2,2.5,3,4,5,6,8,10])if(k*p>=v)return k*p}
+function upd(){dp=m*u;Fav=dp/DT;pk=Math.PI/2*Fav;FM=nice(pk*1.15);
+ yt.forEach(([l,t],i)=>{const f=FM*(i+1)/2;const y=gy(f);l.setAttribute('y1',y);l.setAttribute('y2',y);t.setAttribute('y',y+5);t.textContent=sig(f)});
+ let d='';for(let i=0;i<=500;i++){const t=i*TM/500;d+=(i?'L':'M')+gx(t).toFixed(1)+','+gy(F(t)).toFixed(1)}curve.setAttribute('d',d);
+ const y=gy(Fav);avl.setAttribute('x1',gx(T0));avl.setAttribute('x2',gx(T0+DT));avl.setAttribute('y1',y);avl.setAttribute('y2',y);avt.setAttribute('x',gx(T0+DT)+10);avt.setAttribute('y',y+6);avt.innerHTML='F<tspan dy="5" font-size="13">av</tspan><tspan dy="-5"> = '+sig(Fav)+' N</tspan>';
+ it.setAttribute('x',gx(T0+DT/2));it.setAttribute('y',GY-24);
+ document.getElementById('ro').innerHTML=`I = Δp = mΔv<br>= ${f2(m,1)} × ${f2(u,1)} = <b class="hi">${sig(dp)} N s</b><br>F<sub>av</sub> = Δp / Δt = <b class="gr">${sig(Fav)} N</b><br>Peak force ≈ <b>${sig(pk)} N</b>`;
+ // keep label readable for narrow pulses
+ if(gx(T0+DT)-gx(T0)<90){it.setAttribute('x',gx(T0+DT)+80);it.setAttribute('y',GY-GH*0.8)}}
+document.getElementById('ro').dataset.k=1;
+slider('m',x=>f2(x,1)+' kg',x=>{m=x;upd()});slider('u',x=>f2(x,1)+' m/s',x=>{u=x;upd()});let prev=null;const sdt=slider('dt',x=>f2(x)+' s',x=>{if(prev!=null&&prev!==x){ghost.setAttribute('d',curve.getAttribute('d'));gl.textContent='dashed: last contact time ('+f2(prev)+' s)'}prev=x;DT=x;upd()});
+const _m=()=>{ghost.setAttribute('d','');gl.textContent=''};document.getElementById('m').addEventListener('input',_m);document.getElementById('u').addEventListener('input',_m);
+group('.pr',v=>{sdt.value=v;sdt.dispatchEvent(new Event('input'))});
+const CY=4.5,R=26;
+IX.anims.push(t=>{const c=t%CY;let x,sq=0,tg;// 0-1.2 approach, 1.2-3.2 contact (slow), then rest
+ if(c<1.2){x=740-R-(1.2-c)*u*45;tg=c/1.2*T0}else if(c<3.2){const k=(c-1.2)/2;tg=T0+k*DT;const v=u*(1+Math.cos(Math.PI*k))/2;sq=1-v/u;x=740-R+0}else{tg=T0+DT+(c-3.2)/1.3*(TM-T0-DT);sq=1;x=740-R}
+ const rx=R*(1-.45*sq),ry=R*(1+.25*sq);clay.setAttribute('cx',760-rx);clay.setAttribute('rx',rx);clay.setAttribute('ry',ry);clay.setAttribute('cy',104-ry);
+ if(c<1.2){clay.setAttribute('cx',Math.max(-40,x));}
+ const v=c<1.2?u:c<3.2?u*(1+Math.cos(Math.PI*(c-1.2)/2))/2:0;cl.setAttribute('x',Math.max(60,+clay.getAttribute('cx')));cl.textContent='v = '+f2(v,1)+' m/s';
+ let d='M'+gx(0)+','+GY;const n=200;for(let i=0;i<=n;i++){const tt=i*tg/n;d+='L'+gx(tt).toFixed(1)+','+gy(F(tt)).toFixed(1)}d+='L'+gx(tg)+','+GY+'Z';area.setAttribute('d',d);
+ it.textContent=tg>T0?'I = '+sig(dp*(tg>=T0+DT?1:(1-Math.cos(Math.PI*(tg-T0)/DT))/2))+' N s':''});
+</script>

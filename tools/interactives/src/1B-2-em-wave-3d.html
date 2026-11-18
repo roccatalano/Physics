@@ -1,0 +1,58 @@
+<!--{"id":"1B-2-em-wave-3d","section":"1B","title":"An electromagnetic wave in 3D","criteria":["1B.1"],
+"blurb":"Electric and magnetic fields vibrate at right angles to each other and to the direction of travel, so light is a transverse wave travelling at c.",
+"source":"Cambridge VCE Physics Units 1&2, 1B Electromagnetic waves, Figure 1B–2. B is drawn the same size as E (not to scale). The motion is slowed about 10¹⁵ times.","colour":"#7dd3fc"}-->
+<div class="ctx">Light is a wave of <b>changing electric (E) and magnetic (B) fields</b>. It needs no medium. Turn the view to see how the two fields sit at right angles.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc"><h3>One light wave travelling to the right</h3><svg id="sv" viewBox="0 0 860 420"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>View and wave</h3>
+   <div class="btns"><button class="vw on" data-v="3d">3D</button><button class="vw" data-v="side">Side</button><button class="vw" data-v="top">Top</button><button class="vw" data-v="end">End on</button></div>
+   <div class="btns"><button id="sE">E field</button><button id="sB">B field</button></div>
+   <div class="sl" style="grid-template-columns:96px 1fr 84px"><span class="nm">λ</span><input type="range" id="L" min="400" max="700" step="10" value="600"><span class="v" id="Lv"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80"><h3>Calculate</h3>
+   <div>$f = \dfrac{c}{\lambda}$ <span class="kr">=</span> <span id="fc"></span></div>
+  </div>
+  <div class="rule"><b>E</b>, <b>B</b> and the direction of travel are at <b>right angles</b>: light is <b>transverse</b>.</div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),WIN=2000,AMP=105,LEN=640,CX=430,CY=215;
+const V={'3d':[-32,22],side:[0,0],top:[0,90],end:[-90,0]};
+let lamb=600,yaw=-32,pitch=22,ty=-32,tp=22,showE=true,showB=true;
+const d2r=Math.PI/180;
+function P(x,y,z){// x along travel in px from centre, y up (E), z depth (B)
+ const cy=Math.cos(yaw*d2r),sy_=Math.sin(yaw*d2r),cp=Math.cos(pitch*d2r),sp=Math.sin(pitch*d2r);
+ const X=x*cy-z*sy_,Z=x*sy_+z*cy;return [CX+X,CY-(y*cp+Z*sp)]}
+const gB=el('g',{},sv),gAx=el('g',{},sv),gE=el('g',{},sv),gLab=el('g',{},sv);
+const axis=el('line',{stroke:'#eef2ff','stroke-width':3},gAx),ah=el('path',{fill:'#eef2ff'},gAx);
+const pE=el('path',{fill:'none',stroke:'#fbb040','stroke-width':4},gE),pB=el('path',{fill:'none',stroke:'#7dd3fc','stroke-width':4},gB);
+const N=34,aE=[],aB=[];for(let i=0;i<N;i++){aE.push(el('line',{stroke:'#fbb040','stroke-width':2,'stroke-opacity':.75},gE));aB.push(el('line',{stroke:'#7dd3fc','stroke-width':2,'stroke-opacity':.75},gB))}
+const lE=txt(gLab,0,0,'E',{fill:'#fbb040','font-size':26,'font-weight':700}),lB=txt(gLab,0,0,'B',{fill:'#7dd3fc','font-size':26,'font-weight':700}),lC=txt(gLab,0,0,'direction of travel, speed c',{fill:'#eef2ff','font-size':18,'text-anchor':'end'});
+// right-angle triad at the left end
+const tri=[el('line',{stroke:'#fbb040','stroke-width':3},gLab),el('line',{stroke:'#7dd3fc','stroke-width':3},gLab),el('line',{stroke:'#eef2ff','stroke-width':3},gLab)];
+const bc=el('path',{fill:'none',stroke:'#f472b6','stroke-width':3},gLab);const brt=txt(gLab,0,0,'',{fill:'#f472b6','font-size':17,'font-weight':700,'text-anchor':'middle'});
+const set=(e,a,b)=>{e.setAttribute('x1',a[0]);e.setAttribute('y1',a[1]);e.setAttribute('x2',b[0]);e.setAttribute('y2',b[1])};
+group('.vw',v=>{[ty,tp]=V[v]});
+toggle('sE',v=>{showE=v;gE.style.display=v?'':'none'},true);toggle('sB',v=>{showB=v;gB.style.display=v?'':'none'},true);
+slider('L',x=>x+' nm',x=>{lamb=x;const f=3e8/(x*1e-9);document.getElementById('fc').innerHTML=`<span style="display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1.1;font-size:17px"><span>3.00 × 10<sup>8</sup></span><span style="border-top:2px solid;padding-top:2px">${x} × 10<sup>−9</sup></span></span><br><span class="kr">=</span> <b class="hi">${(f/1e14).toFixed(2)} × 10<sup>14</sup> Hz</b>`});
+const col=n=>{const h=270-(n-400)/300*270;return `hsl(${h},90%,62%)`};
+IX.anims.push(t=>{yaw+=(ty-yaw)*.08;pitch+=(tp-pitch)*.08;
+ const k=LEN/WIN, sp=110; // px per second along the wave (slowed down)
+ const ph=x=>2*Math.PI*((x+LEN/2)/(lamb*k)-t*sp/(lamb*k));
+ let de='',db='';for(let i=0;i<=300;i++){const x=-LEN/2+i*LEN/300,s=Math.sin(ph(x));const a=P(x,AMP*s,0),b=P(x,0,AMP*s);de+=(i?'L':'M')+a[0].toFixed(1)+','+a[1].toFixed(1);db+=(i?'L':'M')+b[0].toFixed(1)+','+b[1].toFixed(1)}
+ pE.setAttribute('d',de);pB.setAttribute('d',db);
+ for(let i=0;i<N;i++){const x=-LEN/2+(i+.5)*LEN/N,s=Math.sin(ph(x));set(aE[i],P(x,0,0),P(x,AMP*s,0));set(aB[i],P(x,0,0),P(x,0,AMP*s))}
+ const a0=P(-LEN/2-20,0,0),a1=P(LEN/2+40,0,0);set(axis,a0,a1);const ang=Math.atan2(a1[1]-a0[1],a1[0]-a0[0]);
+ ah.setAttribute('d',`M${a1[0]+14*Math.cos(ang)},${a1[1]+14*Math.sin(ang)}L${a1[0]-10*Math.cos(ang)+9*Math.sin(ang)},${a1[1]-10*Math.sin(ang)-9*Math.cos(ang)}L${a1[0]-10*Math.cos(ang)-9*Math.sin(ang)},${a1[1]-10*Math.sin(ang)+9*Math.cos(ang)}Z`);
+ const hon=Math.abs(yaw)>70;lC.textContent=hon?'travelling straight towards you at c':'direction of travel, speed c';if(hon){lC.setAttribute('x',600);lC.setAttribute('y',400);}else{lC.setAttribute('x',Math.min(840,a1[0]+10));lC.setAttribute('y',Math.min(405,Math.max(30,a1[1]+40)));}
+ const e=P(-LEN/2,AMP+30,0),b=P(-LEN/2,0,AMP+30);lE.setAttribute('x',e[0]-8);lE.setAttribute('y',e[1]);lB.setAttribute('x',b[0]-24);lB.setAttribute('y',b[1]+8);
+ lE.style.display=showE?'':'none';lB.style.display=showB?'':'none';
+ // wavelength bracket on E (crest to crest)
+ const kk=lamb*k;let c0=((t*sp-LEN/2)%kk+kk)%kk; // find x where phase = pi/2
+ let xs=[];for(let m=-5;m<10;m++){const x=(.25+m)*kk+t*sp-LEN/2;const xx=x-Math.floor((t*sp)/kk)*kk;}
+ xs=[];for(let x=-LEN/2;x<=LEN/2;x+=1){const s1=Math.sin(ph(x)),s0=Math.sin(ph(x-1)),s2=Math.sin(ph(x+1));if(s1>=s0&&s1>s2&&s1>.99)xs.push(x)}
+ if(xs.length>=2&&showE&&!hon&&pitch<45){const y=AMP+16,p1=P(xs[0],y,0),p2=P(xs[1],y,0);bc.setAttribute('d',`M${p1[0]},${p1[1]+8}V${p1[1]}L${p2[0]},${p2[1]}V${p2[1]+8}`);brt.setAttribute('x',(p1[0]+p2[0])/2);brt.setAttribute('y',Math.min(p1[1],p2[1])-8);brt.textContent='λ = '+lamb+' nm';bc.style.display=brt.style.display=''}else bc.style.display=brt.style.display='none';
+ tri.forEach(x=>x.style.display='none');
+});
+</script>

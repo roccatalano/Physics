@@ -819,7 +819,17 @@
          "pracs": [],
          "ppts": 2,
          "workedExamples": [],
-         "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch01 EM radiation\\1B EM waves"
+         "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch01 EM radiation\\1B EM waves",
+         "interactives": [
+          {
+           "id": "1B-1-em-spectrum",
+           "title": "The electromagnetic spectrum"
+          },
+          {
+           "id": "1B-2-em-wave-3d",
+           "title": "An electromagnetic wave in 3D"
+          }
+         ]
         },
         {
          "pearson": [
@@ -944,7 +954,25 @@
           "1C-4 Critical angle calculation",
           "1C-5 Application of total internal reflection"
          ],
-         "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch01 EM radiation\\1C Refraction"
+         "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch01 EM radiation\\1C Refraction",
+         "interactives": [
+          {
+           "id": "1C-1-snell-ray-box",
+           "title": "Snell's law ray box"
+          },
+          {
+           "id": "1C-2-wavefronts",
+           "title": "Why light bends: wavefronts at a boundary"
+          },
+          {
+           "id": "1C-3-dispersion-prism",
+           "title": "Dispersion in a prism"
+          },
+          {
+           "id": "1C-4-optical-fibre",
+           "title": "Optical fibre: total internal reflection"
+          }
+         ]
         }
        ],
        "chapter": {
@@ -1210,7 +1238,25 @@
           "2A-2 Energy in phase change of water",
           "2A-3 Application to cooling a drink"
          ],
-         "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch02 Thermal energy\\2A Thermal energy"
+         "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch02 Thermal energy\\2A Thermal energy",
+         "interactives": [
+          {
+           "id": "2A-1-particle-temperature",
+           "title": "Temperature and moving particles"
+          },
+          {
+           "id": "2A-2-heating-curve",
+           "title": "Heating curve: Q = mcΔT and Q = mL"
+          },
+          {
+           "id": "2A-3-conduction-convection",
+           "title": "Conduction and convection"
+          },
+          {
+           "id": "2A-4-thermal-equilibrium",
+           "title": "Reaching thermal equilibrium"
+          }
+         ]
         },
         {
          "pearson": [
@@ -1286,7 +1332,17 @@
           "2B-1 Peak wavelength of a human",
           "2B-2 Peak wavelength emitted by Earth"
          ],
-         "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch02 Thermal energy\\2B Global warming"
+         "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch02 Thermal energy\\2B Global warming",
+         "interactives": [
+          {
+           "id": "2B-1-blackbody-wien",
+           "title": "Blackbody radiation and Wien's law"
+          },
+          {
+           "id": "2B-2-energy-budget",
+           "title": "Earth's energy budget and the greenhouse effect"
+          }
+         ]
         }
        ],
        "chapter": {
@@ -1510,7 +1566,17 @@
          "workedExamples": [
           "3A-1 Binding energy in oxygen"
          ],
-         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3A Nuclear stability"
+         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3A Nuclear stability",
+         "interactives": [
+          {
+           "id": "3A-1-stability-chart",
+           "title": "The belt of stability"
+          },
+          {
+           "id": "3A-2-nuclear-forces",
+           "title": "Strong force against electrostatic force"
+          }
+         ]
         },
         {
          "pearson": [
@@ -1655,7 +1721,17 @@
          "workedExamples": [
           "3B-1 Energy of an α-particle"
          ],
-         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3B Alpha beta gamma"
+         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3B Alpha beta gamma",
+         "interactives": [
+          {
+           "id": "3B-1-penetration",
+           "title": "Penetrating power: α, β and γ"
+          },
+          {
+           "id": "3B-2-decay-equations",
+           "title": "Decay equation builder"
+          }
+         ]
         },
         {
          "pearson": [
@@ -1748,7 +1824,17 @@
           "3C-1 Half-life of carbon",
           "3C-2 Half-life of cobalt-60"
          ],
-         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3C Half-life"
+         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3C Half-life",
+         "interactives": [
+          {
+           "id": "3C-1-dice-decay",
+           "title": "Random decay with 120 dice"
+          },
+          {
+           "id": "3C-2-half-life-activity",
+           "title": "Half-life and activity"
+          }
+         ]
         },
         {
          "pearson": [],
@@ -1790,7 +1876,13 @@
          "pracs": [],
          "ppts": 1,
          "workedExamples": [],
-         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3D Decay series"
+         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3D Decay series",
+         "interactives": [
+          {
+           "id": "3D-1-u238-chain",
+           "title": "The uranium-238 decay series"
+          }
+         ]
         },
         {
          "pearson": [
@@ -1889,7 +1981,13 @@
          "workedExamples": [
           "3E-1 Radiation dose"
          ],
-         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3E Radiation and humans"
+         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3E Radiation and humans",
+         "interactives": [
+          {
+           "id": "3E-1-dose-calculator",
+           "title": "Absorbed dose and dose equivalent"
+          }
+         ]
         }
        ],
        "chapter": {
@@ -2078,7 +2176,17 @@
           "4A-1 Mass conversion",
           "4A-2 Energy of a nuclear bomb"
          ],
-         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy\\4A Mass-energy"
+         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy\\4A Mass-energy",
+         "interactives": [
+          {
+           "id": "4A-1-chain-reaction",
+           "title": "Fission chain reaction"
+          },
+          {
+           "id": "4A-2-mass-defect",
+           "title": "Mass defect in a fission reaction"
+          }
+         ]
         },
         {
          "pearson": [
@@ -2155,7 +2263,17 @@
           "4B-1 Energy of nuclear fusion",
           "4B-2 Energy of nuclear fission"
          ],
-         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy\\4B Fusion and fission"
+         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy\\4B Fusion and fission",
+         "interactives": [
+          {
+           "id": "4B-1-binding-energy-curve",
+           "title": "The binding energy curve"
+          },
+          {
+           "id": "4B-2-sun-fusion",
+           "title": "Fusion in the Sun"
+          }
+         ]
         },
         {
          "pearson": [
@@ -2486,7 +2604,13 @@
           "5A-1 Circuits",
           "5A-2 Electrical charge from current"
          ],
-         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5A Charge and current"
+         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5A Charge and current",
+         "interactives": [
+          {
+           "id": "5A-1-charge-flow",
+           "title": "Charge flow: electrons and conventional current"
+          }
+         ]
         },
         {
          "pearson": [
@@ -2617,7 +2741,13 @@
           "5B-1 Potential difference in a battery",
           "5B-2 Electrical energy of appliances"
          ],
-         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5B Energy and PD"
+         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5B Energy and PD",
+         "interactives": [
+          {
+           "id": "5B-1-energy-per-charge",
+           "title": "Potential difference: energy per coulomb"
+          }
+         ]
         },
         {
          "pearson": [
@@ -2705,7 +2835,13 @@
           "5C-4 Ohm’s law for series resistance",
           "5C-5 Using a potential divider"
          ],
-         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5C Series circuits"
+         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5C Series circuits",
+         "interactives": [
+          {
+           "id": "5C-1-series-builder",
+           "title": "Series circuit builder"
+          }
+         ]
         },
         {
          "pearson": [
@@ -2816,7 +2952,13 @@
           "5D-3 Graphical approach to series resistance",
           "5D-4 Graphical approach to parallel resistance"
          ],
-         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5D Parallel circuits"
+         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5D Parallel circuits",
+         "interactives": [
+          {
+           "id": "5D-1-parallel-builder",
+           "title": "Parallel circuit builder"
+          }
+         ]
         },
         {
          "pearson": [
@@ -2896,7 +3038,13 @@
           "5E-6 Resistance from power consumption",
           "5E-7 Power loss in series and parallel"
          ],
-         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5E Power"
+         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5E Power",
+         "interactives": [
+          {
+           "id": "5E-1-power-brightness",
+           "title": "Power and brightness: series vs parallel"
+          }
+         ]
         }
        ],
        "chapter": {
@@ -3188,7 +3336,17 @@
           "6A-3 LDR circuit",
           "6A-4 Thermistor circuit"
          ],
-         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity\\6A Components"
+         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity\\6A Components",
+         "interactives": [
+          {
+           "id": "6A-1-iv-curve-tracer",
+           "title": "I–V curve tracer"
+          },
+          {
+           "id": "6A-2-sensor-divider",
+           "title": "Sensor in a potential divider"
+          }
+         ]
         },
         {
          "pearson": [],
@@ -3248,7 +3406,17 @@
           "6B-2 Power consumption in kW h",
           "6B-3 Cost of running appliances"
          ],
-         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity\\6B Electricity at home"
+         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity\\6B Electricity at home",
+         "interactives": [
+          {
+           "id": "6B-1-power-circuit",
+           "title": "Appliances in parallel on one circuit"
+          },
+          {
+           "id": "6B-2-kwh-cost",
+           "title": "Kilowatt-hours and running cost"
+          }
+         ]
         },
         {
          "pearson": [],
@@ -3304,7 +3472,13 @@
          "pracs": [],
          "ppts": 2,
          "workedExamples": [],
-         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity\\6C Safety"
+         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity\\6C Safety",
+         "interactives": [
+          {
+           "id": "6C-1-fault-simulator",
+           "title": "Fault simulator: who gets the current?"
+          }
+         ]
         }
        ],
        "chapter": {
@@ -3560,7 +3734,13 @@
          ],
          "ppts": 0,
          "workedExamples": null,
-         "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion\\7A Modelling motion"
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion\\7A Modelling motion",
+         "interactives": [
+          {
+           "id": "7A-1-vector-adder",
+           "title": "Vector adder"
+          }
+         ]
         },
         {
          "pearson": [
@@ -3670,7 +3850,13 @@
          ],
          "ppts": 5,
          "workedExamples": null,
-         "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion\\7B Motion graphs"
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion\\7B Motion graphs",
+         "interactives": [
+          {
+           "id": "7B-1-motion-graph-matcher",
+           "title": "Motion graph matcher"
+          }
+         ]
         },
         {
          "pearson": [
@@ -3754,7 +3940,13 @@
          ],
          "ppts": 1,
          "workedExamples": null,
-         "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion\\7C Uniform acceleration"
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion\\7C Uniform acceleration",
+         "interactives": [
+          {
+           "id": "7C-1-constant-acceleration",
+           "title": "Constant acceleration animator"
+          }
+         ]
         }
        ],
        "chapter": {
@@ -3960,7 +4152,17 @@
          ],
          "ppts": 1,
          "workedExamples": null,
-         "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces\\8A Momentum"
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces\\8A Momentum",
+         "interactives": [
+          {
+           "id": "8A-1-collision-lab",
+           "title": "Collision lab: momentum and kinetic energy"
+          },
+          {
+           "id": "8A-2-impulse",
+           "title": "Impulse: the area under F–t"
+          }
+         ]
         },
         {
          "pearson": [
@@ -4065,7 +4267,17 @@
          ],
          "ppts": 3,
          "workedExamples": null,
-         "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces\\8B Newtons laws"
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces\\8B Newtons laws",
+         "interactives": [
+          {
+           "id": "8B-1-net-force",
+           "title": "Free body diagram: net force and F = ma"
+          },
+          {
+           "id": "8B-2-inclined-plane",
+           "title": "Inclined plane: components of weight"
+          }
+         ]
         },
         {
          "pearson": [
@@ -4156,7 +4368,13 @@
          ],
          "ppts": 1,
          "workedExamples": null,
-         "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces\\8C Equilibrium"
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces\\8C Equilibrium",
+         "interactives": [
+          {
+           "id": "8C-1-seesaw-torque",
+           "title": "Seesaw: balancing torques"
+          }
+         ]
         }
        ],
        "chapter": {
@@ -4308,7 +4526,13 @@
          ],
          "ppts": 0,
          "workedExamples": null,
-         "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy\\9A Work"
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy\\9A Work",
+         "interactives": [
+          {
+           "id": "9A-1-work-area",
+           "title": "Work: force × distance, and the area under the graph"
+          }
+         ]
         },
         {
          "pearson": [
@@ -4391,7 +4615,13 @@
          ],
          "ppts": 1,
          "workedExamples": null,
-         "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy\\9B Energy and power"
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy\\9B Energy and power",
+         "interactives": [
+          {
+           "id": "9B-1-skate-park",
+           "title": "Skate park: kinetic and gravitational energy"
+          }
+         ]
         },
         {
          "pearson": [
@@ -4466,7 +4696,17 @@
          ],
          "ppts": 1,
          "workedExamples": null,
-         "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy\\9C Springs"
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy\\9C Springs",
+         "interactives": [
+          {
+           "id": "9C-1-hookes-law",
+           "title": "Hooke's law and elastic potential energy"
+          },
+          {
+           "id": "9C-2-spring-oscillator",
+           "title": "Oscillating spring: where is the energy?"
+          }
+         ]
         }
        ],
        "chapter": {

@@ -1,0 +1,62 @@
+<!--{"id":"5B-1-energy-per-charge","section":"5B","title":"Potential difference: energy per coulomb","criteria":["5B.1","5B.2","5B.3","5B.5"],
+"blurb":"Each coulomb is lifted by the battery and drops through the resistor. The potential hill below the circuit shows V = E/Q, and the calculator gives E = QV.",
+"source":"Cambridge VCE Physics Units 1&2, 5B Electrical energy and potential difference, Formula 5B–1. Ideal battery and wires: no energy is lost in the wires.","colour":"#fbb040"}-->
+<style>.sl{grid-template-columns:76px 1fr 84px}</style>
+<div class="ctx">The battery gives each coulomb energy and the resistor takes it back. <b>Potential difference</b> is energy per coulomb.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#fbb040"><h3>The circuit, and the same charges on an energy hill</h3><svg id="sv" viewBox="0 0 860 440"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Battery and charge</h3>
+   <div class="sl"><span class="nm">Battery</span><input type="range" id="V" min="1.5" max="12" step="0.5" value="6"><span class="v" id="Vv"></span></div>
+   <div class="sl"><span class="nm">Charge</span><input type="range" id="Q" min="1" max="10" step="1" value="3"><span class="v" id="Qv"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80"><h3>Calculate</h3>
+   <div style="font-size:19px">Each coulomb: gains <b class="hi" id="pc"></b>, loses <b class="hi" id="pc2"></b></div>
+   <div style="margin-top:8px">$E = QV$ <span class="kr">=</span> <b class="hi" id="ec"></b></div>
+  </div>
+  <div class="rule">$V = \dfrac{E}{Q}$: <b>1 V = 1 J per coulomb</b>. The battery lifts each coulomb, the resistor lets it drop.</div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv');
+// ---- circuit (top) ----
+const X0=260,X1=600,Y0=30,Y1=190,BY=110;
+const segs=[ // [fraction of loop, polyline]
+ [.08,[[X0,BY+18],[X0,BY-18]]],
+ [.40,[[X0,BY-18],[X0,Y0],[X1,Y0],[X1,BY-34]]],
+ [.17,[[X1,BY-34],[X1,BY+34]]],
+ [.35,[[X1,BY+34],[X1,Y1],[X0,Y1],[X0,BY+18]]]];
+function along(poly,f){let L=0;const d=[];for(let i=1;i<poly.length;i++){const l=Math.hypot(poly[i][0]-poly[i-1][0],poly[i][1]-poly[i-1][1]);d.push(l);L+=l}let r=f*L;for(let i=0;i<d.length;i++){if(r<=d[i]||i===d.length-1){const k=d[i]?Math.min(1,r/d[i]):0;return[poly[i][0]+k*(poly[i+1][0]-poly[i][0]),poly[i][1]+k*(poly[i+1][1]-poly[i][1])]}r-=d[i]}}
+function seg(u){u=((u%1)+1)%1;let a=0;for(let i=0;i<segs.length;i++){if(u<a+segs[i][0])return[i,(u-a)/segs[i][0]];a+=segs[i][0]}return[3,1]}
+el('rect',{x:X0,y:Y0,width:X1-X0,height:Y1-Y0,fill:'none',stroke:'#8b96c9','stroke-width':4},sv);
+el('rect',{x:X0-40,y:BY-14,width:80,height:28,fill:'#1a2150'},sv);
+el('line',{x1:X0-36,x2:X0+36,y1:BY-9,y2:BY-9,stroke:'#eef2ff','stroke-width':5},sv);el('line',{x1:X0-18,x2:X0+18,y1:BY+9,y2:BY+9,stroke:'#eef2ff','stroke-width':10},sv);
+txt(sv,X0-50,BY-2,'+',{fill:'#fbb040','font-size':26,'font-weight':800,'text-anchor':'middle'});txt(sv,X0-50,BY+24,'−',{fill:'#7dd3fc','font-size':26,'font-weight':800,'text-anchor':'middle'});
+el('rect',{x:X1-16,y:BY-34,width:32,height:68,fill:'#1a2150',stroke:'#eef2ff','stroke-width':4},sv);
+const resGlow=el('rect',{x:X1-12,y:BY-30,width:24,height:60,fill:'#f87171'},sv);
+// voltmeters
+function vm(x,lab,dx){el('circle',{cx:x,cy:BY,r:22,fill:'#1a2150',stroke:'#4ade80','stroke-width':3},sv);txt(sv,x,BY+8,'V',{fill:'#4ade80','font-size':22,'font-weight':800,'text-anchor':'middle'});
+ const t=txt(sv,x+dx,BY+2,'',{fill:'#4ade80','font-size':24,'font-weight':700,'text-anchor':dx<0?'end':'start','font-family':'Space Grotesk'});txt(sv,x+dx,BY+26,lab,{fill:'#a5b4d8','font-size':17,'text-anchor':dx<0?'end':'start'});return t}
+[[X0-100,X0],[X1+100,X1]].forEach(([x,w])=>{const p=`M${w},${BY-48} L${x},${BY-48} L${x},${BY-22} M${x},${BY+22} L${x},${BY+48} L${w},${BY+48}`;el('path',{d:p,fill:'none',stroke:'#4ade80','stroke-width':2.5,'stroke-dasharray':'6 4'},sv);el('circle',{cx:w,cy:BY-48,r:4,fill:'#4ade80'},sv);el('circle',{cx:w,cy:BY+48,r:4,fill:'#4ade80'},sv)});
+const vb=vm(X0-100,'battery',-32),vr=vm(X1+100,'resistor',32);
+// ---- energy hill (bottom) ----
+const PX=[90,150,500,620,800],PB=400,HS=150/12;
+el('line',{x1:70,x2:820,y1:PB,y2:PB,stroke:'#36418a','stroke-width':2},sv);
+txt(sv,70,226,'energy per coulomb (J/C = V)',{fill:'#a5b4d8','font-size':16});
+[['battery',0],['wire',1],['resistor',2],['wire',3]].forEach(([s,i])=>txt(sv,(PX[i]+PX[i+1])/2,PB+26,s,{fill:'#5b6690','font-size':15,'text-anchor':'middle'}));
+const hill=el('path',{fill:'#fbb040','fill-opacity':.08,stroke:'#fbb040','stroke-width':4,'stroke-linejoin':'round'},sv);
+const hb=el('g',{},sv),hl=el('line',{stroke:'#fbb040','stroke-width':2,'stroke-dasharray':'4 4'},hb),ht=txt(hb,0,0,'',{fill:'#fbb040','font-size':19,'font-weight':700});
+const N=14,cc=[...Array(N)].map(()=>el('circle',{r:10,stroke:'#0d1330','stroke-width':2},sv)),hc=[...Array(N)].map(()=>el('circle',{r:10,stroke:'#0d1330','stroke-width':2},sv));
+let V=6,Q=3,ph=0,lt=0;
+function upd(){const h=PB-V*HS;hill.setAttribute('d',`M${PX[0]},${PB} L${PX[1]},${h} L${PX[2]},${h} L${PX[3]},${PB} L${PX[4]},${PB} Z`);
+ hl.setAttribute('x1',PX[0]+4);hl.setAttribute('x2',PX[0]+4);hl.setAttribute('y1',PB);hl.setAttribute('y2',h);ht.setAttribute('x',PX[3]+20);ht.setAttribute('y',Math.min(h+24,PB-36));ht.textContent=f2(V,1)+' J per coulomb';
+ vb.textContent=f2(V,1)+' V';vr.textContent=f2(V,1)+' V';resGlow.setAttribute('fill-opacity',(.15+.75*V/12).toFixed(2));
+ document.getElementById('pc').textContent=f2(V,1)+' J';document.getElementById('pc2').textContent=f2(V,1)+' J';
+ document.getElementById('ec').textContent=Q+' × '+f2(V,1)+' = '+sig(Q*V)+' J'}
+slider('V',x=>f2(x,1)+' V',x=>{V=x;upd()});slider('Q',x=>x+' C',x=>{Q=x;upd()});
+const col=e=>{const a=[0x5b,0x66,0x90],b=[0xfb,0xb0,0x40];return'rgb('+a.map((v,i)=>Math.round(v+(b[i]-v)*e)).join(',')+')'};
+IX.anims.push(t=>{const d=Math.max(0,t-lt);lt=t;ph+=d*.07;
+ for(let i=0;i<N;i++){const u=i/N+ph,[k,f]=seg(u),p=along(segs[k][1],f);
+  const e=[f,1,1-f,0][k];cc[i].setAttribute('cx',p[0]);cc[i].setAttribute('cy',p[1]);const c=col(e);cc[i].setAttribute('fill',c);hc[i].setAttribute('fill',c);
+  const x=PX[k]+f*(PX[k+1]-PX[k]);hc[i].setAttribute('cx',x);hc[i].setAttribute('cy',PB-e*V*HS-11)}});
+</script>

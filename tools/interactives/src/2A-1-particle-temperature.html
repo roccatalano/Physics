@@ -1,0 +1,47 @@
+<!--{"id":"2A-1-particle-temperature","section":"2A","title":"Temperature and moving particles","criteria":["2A.1","2A.2","2A.3"],
+"blurb":"Heat or cool a box of gas. The particles speed up or slow down; the thermometer reads in kelvin and degrees Celsius.",
+"source":"Cambridge VCE Physics Units 1&2, 2A Thermal energy (pp. 6–7). Gas model: nitrogen, particle speeds not to scale, potential energy not shown.","colour":"#fb923c"}-->
+<div class="ctx">A sealed box of gas sits on a heater. <b>Turn the heater on or off</b> and watch the particles. What does a thermometer really measure?</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#fb923c"><h3>Inside the box</h3><svg id="sv" viewBox="0 0 860 380"></svg><div class="rule" style="font-size:17px;padding:8px 14px">Hotter means the particles move faster on average: <b>more random kinetic energy</b>. Temperature tracks this. $T(\text{K}) = T(^\circ\text{C}) + 273.15$, and at <b>0 K</b> the motion is at its minimum.</div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Heater</h3>
+   <div class="btns"><button class="hm" data-v="1">Heat</button><button class="hm on" data-v="0">Off</button><button class="hm" data-v="-1">Cool</button></div>
+   <div class="sl" style="grid-template-columns:60px 1fr 80px"><span class="nm">Set T</span><input type="range" id="T" min="0" max="600" step="1" value="293"><span class="v" id="Tv"></span></div>
+   <div class="btns"><button class="pr" data-v="0">0 K</button><button class="pr" data-v="273">Ice melts</button><button class="pr" data-v="373">Water boils</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80"><h3>Readings</h3><div id="ro"></div></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),BX=30,BY=20,BW=560,BH=290,N=36,kB=1.380649e-23,mN2=28*1.6605e-27;
+let T=293,heat=0;
+el('rect',{x:BX,y:BY,width:BW,height:BH,rx:14,fill:'#101640',stroke:'#7dd3fc','stroke-width':4},sv);
+const hb=el('rect',{x:BX+20,y:BY+BH+12,width:BW-40,height:22,rx:8,fill:'#36418a'},sv);
+const ht=txt(sv,BX+BW/2,BY+BH+60,'heater off',{fill:'#94a3c8','text-anchor':'middle','font-size':18});
+const P=[];for(let i=0;i<N;i++){const a=Math.random()*2*Math.PI,s=.6+Math.random()*.8;P.push({x:BX+20+Math.random()*(BW-40),y:BY+20+Math.random()*(BH-40),ux:Math.cos(a)*s,uy:Math.sin(a)*s,c:el('circle',{r:10},sv)})}
+// thermometer with two scales
+const TX=700,TY0=320,TY1=40,TM=600,ty=t=>TY0-(TY0-TY1)*t/TM;
+el('rect',{x:TX-12,y:TY1-10,width:24,height:TY0-TY1+20,rx:12,fill:'#101640',stroke:'#cfd7f5','stroke-width':3},sv);
+el('circle',{cx:TX,cy:TY0+22,r:22,fill:'#ef4444',stroke:'#cfd7f5','stroke-width':3},sv);
+const col=el('rect',{x:TX-6,width:12,fill:'#ef4444'},sv);
+for(const k of [0,100,200,273,373,500,600]){const y=ty(k);el('line',{x1:TX-26,x2:TX-14,y1:y,y2:y,stroke:'#cfd7f5','stroke-width':2},sv);txt(sv,TX-32,y+6,k,{'text-anchor':'end','font-size':16,fill:'#7dd3fc'})}
+for(const c of [-273,-200,-100,0,100,200,300]){const y=ty(c+273.15);el('line',{x1:TX+14,x2:TX+26,y1:y,y2:y,stroke:'#cfd7f5','stroke-width':2},sv);txt(sv,TX+32,y+6,c,{'font-size':16,fill:'#fbb040'})}
+txt(sv,TX-32,TY1-20,'K',{'text-anchor':'end',fill:'#7dd3fc'});txt(sv,TX+32,TY1-20,'°C',{fill:'#fbb040'});
+const Ts=slider('T',x=>Math.round(x)+' K',x=>{T=x});
+group('.hm',v=>{heat=+v});group('.pr',v=>{T=+v;Ts.value=T;Ts.dispatchEvent(new Event('input'));heat=0;document.querySelectorAll('.pr').forEach(b=>b.classList.remove('on'));document.querySelectorAll('.hm').forEach(b=>b.classList.toggle('on',b.dataset.v==='0'))});
+const ro=document.getElementById('ro');
+IX.anims.push((t,dt)=>{
+ if(heat&&IX.play){T=Math.min(600,Math.max(0,T+heat*60*dt*IX.speed));Ts.value=T;document.getElementById('Tv').textContent=Math.round(T)+' K'}
+ hb.setAttribute('fill',heat>0?'#ef4444':heat<0?'#38bdf8':'#36418a');ht.textContent=heat>0?'heater on: energy flows in':heat<0?'cooling: energy flows out':'heater off';
+ const s=Math.sqrt(T/293)*140; // px/s at room temperature
+ const hue=Math.max(0,220-T*.4);
+ P.forEach(p=>{p.x+=p.ux*s*dt*IX.speed*(IX.play?1:0);p.y+=p.uy*s*dt*IX.speed*(IX.play?1:0);
+  if(p.x<BX+10){p.x=BX+10;p.ux=Math.abs(p.ux)}if(p.x>BX+BW-10){p.x=BX+BW-10;p.ux=-Math.abs(p.ux)}
+  if(p.y<BY+10){p.y=BY+10;p.uy=Math.abs(p.uy)}if(p.y>BY+BH-10){p.y=BY+BH-10;p.uy=-Math.abs(p.uy)}
+  p.c.setAttribute('cx',p.x);p.c.setAttribute('cy',p.y);p.c.setAttribute('fill',`hsl(${hue},90%,62%)`)});
+ col.setAttribute('y',ty(T));col.setAttribute('height',TY0+10-ty(T));
+ const v=Math.sqrt(3*kB*T/mN2);
+ ro.innerHTML=`<span class="k">T</span> = <b class="cy">${Math.round(T)} K</b> = <b class="hi">${(T-273.15).toFixed(0)} °C</b><br>Typical speed (N<sub>2</sub>): <b>${Math.round(v)} m/s</b><br>Average KE vs room temp: <b>×${(T/293).toFixed(2)}</b>`;
+});
+</script>

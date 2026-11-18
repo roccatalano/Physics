@@ -1,0 +1,55 @@
+<!--{"id":"1C-4-optical-fibre","section":"1C","title":"Optical fibre: total internal reflection","criteria":["1C.8","1C.12"],
+"blurb":"Light zigzags along the core of an optical fibre. If it hits the core wall at more than the critical angle it is totally internally reflected; if not, it leaks out.",
+"source":"Cambridge VCE Physics Units 1&2, 1C, Formula 1C–4, Worked example 1C–5. Fibre drawn very short and wide; leak strength from the Fresnel equations; light slowed.","colour":"#7dd3fc"}-->
+<div class="ctx">An optical fibre has a <b>core</b> wrapped in <b>cladding</b> with a smaller refractive index. Light stays in the core only if it hits the wall at <b>more than the critical angle</b>.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc;gap:8px"><h3>Side view of a fibre</h3><svg id="sv" viewBox="0 0 860 380"></svg>
+  <div class="sl" style="grid-template-columns:240px 1fr 80px"><span class="nm">Angle entering the end</span><input type="range" id="a" min="0" max="85" step="1" value="10"><span class="v" id="av"></span></div>
+ </div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Fibre</h3>
+   <div class="btns"><button class="fb on" data-v="1.50,1.46">Typical</button><button class="fb" data-v="1.66,1.644">WE 1C–5</button><button class="fb" data-v="1.50,1.00">No cladding</button></div>
+   <div class="sl" style="grid-template-columns:110px 1fr 64px"><span class="nm">Cladding n₂</span><input type="range" id="n2" min="1" max="1.49" step="0.01" value="1.46"><span class="v" id="n2v"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5;flex:1"><h3>Calculate</h3><div id="out"></div></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),d=Math.PI/180,X0=150,XE=845,CY=190,H=55,CL=45;let n1=1.5,n2=1.46,al=10,path=[],segs=[];
+el('rect',{x:X0,y:CY-H-CL,width:XE-X0+20,height:2*(H+CL),fill:'#a5b4d8','fill-opacity':.14},sv);
+el('rect',{x:X0,y:CY-H,width:XE-X0+20,height:2*H,fill:'#7dd3fc','fill-opacity':.2},sv);
+[CY-H,CY+H].forEach(y=>el('line',{x1:X0,x2:XE+20,y1:y,y2:y,stroke:'#7dd3fc','stroke-width':2},sv));
+el('line',{x1:X0,x2:X0,y1:CY-H-CL,y2:CY+H+CL,stroke:'#a5b4d8','stroke-width':2},sv);
+const lc1=txt(sv,XE,CY-H+24,'',{fill:'#7dd3fc','font-size':17,'text-anchor':'end','font-weight':700}),lc2=txt(sv,XE,CY+H+CL-10,'',{fill:'#a5b4d8','font-size':17,'text-anchor':'end','font-weight':700});
+txt(sv,20,CY-H-CL-10,'air, n = 1.00',{fill:'#a5b4d8','font-size':17});
+el('line',{x1:20,x2:X0,y1:CY,y2:CY,stroke:'#5b6690','stroke-width':2,'stroke-dasharray':'6 6'},sv);
+const g=el('g',{},sv),gl=el('g',{},sv);
+const inR=el('line',{stroke:'#fde68a','stroke-width':5,'stroke-linecap':'round'},sv),src=el('rect',{width:46,height:24,rx:5,fill:'#5b6690',stroke:'#eef2ff','stroke-width':2},sv);
+const nm=el('line',{stroke:'#eef2ff','stroke-width':2,'stroke-dasharray':'6 5'},sv),arc=el('path',{fill:'none',stroke:'#fbb040','stroke-width':3},sv),al2=txt(sv,0,0,'',{fill:'#fbb040','font-size':18,'font-weight':700});
+const msg=txt(sv,430,370,'',{'font-size':22,'font-weight':700,'text-anchor':'middle'});
+const pulses=[0,1,2].map(()=>el('circle',{r:8,fill:'#fff'},sv));
+const set=(e,a,b)=>{e.setAttribute('x1',a[0]);e.setAttribute('y1',a[1]);e.setAttribute('x2',b[0]);e.setAttribute('y2',b[1])};
+function fres(a,b,ti,tt){const ci=Math.cos(ti),ct=Math.cos(tt);return(((a*ci-b*ct)/(a*ci+b*ct))**2+((a*ct-b*ci)/(a*ct+b*ci))**2)/2}
+function build(){g.innerHTML='';gl.innerHTML='';const b=Math.asin(Math.sin(al*d)/n1),wall=90-b/d,crit=Math.asin(n2/n1)/d,trap=wall>=crit;
+ // entry ray from air (comes from upper left, going down-right)
+ const L=110,s=[X0-L*Math.cos(al*d),CY-L*Math.sin(al*d)];set(inR,s,[X0,CY]);src.setAttribute('x',s[0]-23);src.setAttribute('y',s[1]-12);src.setAttribute('transform',`rotate(${al} ${s[0]} ${s[1]})`);
+ let p=[X0,CY],dir=[Math.cos(b),Math.sin(b)],I=1;path=[{p,I}];let first=null;
+ for(let k=0;k<200&&p[0]<XE;k++){const ty=dir[1]>0?(CY+H-p[1])/dir[1]:dir[1]<0?(CY-H-p[1])/dir[1]:1e9,tx=(XE-p[0])/dir[0],t=Math.min(tx,ty);const q=[p[0]+dir[0]*t,p[1]+dir[1]*t];
+  const seg=el('line',{stroke:'#fde68a','stroke-width':2+3*I,'stroke-opacity':Math.max(.15,I),'stroke-linecap':'round'},g);set(seg,p,q);path.push({p:q,I});
+  if(tx<=ty)break;if(!first)first=q;
+  if(!trap){const ti=(90-b/d)*d,tt=Math.asin(n1*Math.sin(ti)/n2),R=fres(n1,n2,ti,tt);const lk=[Math.sin(tt)*Math.sign(dir[0]),Math.cos(tt)*Math.sign(dir[1])];
+   const e=el('line',{stroke:'#f472b6','stroke-width':2+3*I*(1-R),'stroke-opacity':Math.max(.2,I*(1-R))},gl);set(e,q,[q[0]+lk[0]*140,q[1]+lk[1]*140]);I*=R}
+  dir=[dir[0],-dir[1]];p=q}
+ if(first){set(nm,[first[0],first[1]-Math.sign(first[1]-CY)*0],[first[0],CY+(first[1]>CY?-1:1)*0]);set(nm,[first[0],first[1]+(first[1]>CY?25:-25)],[first[0],first[1]+(first[1]>CY?-70:70)]);
+  const up=first[1]>CY?-1:1,a0=up<0?-Math.PI/2:Math.PI/2,r=44,ang=Math.atan2(-dir[1]*0+(-(path[1].p[1]-path[0].p[1])),-(path[1].p[0]-path[0].p[0]));
+  const A1=[first[0]+r*Math.cos(a0),first[1]+r*Math.sin(a0)],dv=[path[0].p[0]-first[0],path[0].p[1]-first[1]],m=Math.hypot(...dv),A2=[first[0]+r*dv[0]/m,first[1]+r*dv[1]/m];
+  arc.setAttribute('d',`M${A1}A${r},${r} 0 0 ${up<0?0:1} ${A2}`);al2.setAttribute('x',first[0]-8-0);al2.setAttribute('y',first[1]+up*70+(up<0?-6:20));al2.setAttribute('text-anchor','middle');al2.textContent=wall.toFixed(1)+'°';
+  [nm,arc,al2].forEach(e=>e.style.display='')}else [nm,arc,al2].forEach(e=>e.style.display='none');
+ lc1.textContent=`core n₁ = ${n1.toFixed(2)}`;lc2.textContent=`cladding n₂ = ${n2.toFixed(n2===1.644?3:2)}`;
+ msg.textContent=!first?'Straight down the middle':trap?'Total internal reflection: trapped in the core':'Below the critical angle: light leaks out';msg.setAttribute('fill',trap||!first?'#4ade80':'#f472b6');
+ document.getElementById('out').innerHTML=`<div>$\\theta_c$</div>`.replace(/.*/,'')+`<div>sin θ<sub>c</sub> = n<sub>2</sub> ÷ n<sub>1</sub> = ${(n2/n1).toFixed(3)}</div><div>θ<sub>c</sub> = <b class="hi">${crit.toFixed(1)}°</b></div><div>Angle at the wall: <b class="hi">${wall.toFixed(1)}°</b></div><div style="color:${trap?'#4ade80':'#f472b6'};font-weight:700">${wall.toFixed(1)}° ${trap?'≥':'<'} ${crit.toFixed(1)}°: ${trap?'trapped':'leaks'}</div>`;
+ let tot=0;for(let i=1;i<path.length;i++)tot+=Math.hypot(path[i].p[0]-path[i-1].p[0],path[i].p[1]-path[i-1].p[1]);path.tot=tot}
+const n2s=slider('n2',x=>x.toFixed(2),x=>{n2=x;build()});slider('a',x=>x+'°',x=>{al=x;build()});
+group('.fb',v=>{[n1,n2]=v.split(',').map(Number);n2s.max=(n1-.01).toFixed(2);n2s.value=n2;document.getElementById('n2v').textContent=n2.toFixed(2);build()});
+IX.anims.push(t=>{if(!path.tot)return;pulses.forEach((c,k)=>{let s=((t*160+k*path.tot/3)%path.tot);for(let i=1;i<path.length;i++){const a=path[i-1].p,b=path[i].p,l=Math.hypot(b[0]-a[0],b[1]-a[1]);if(s<=l){c.setAttribute('cx',a[0]+(b[0]-a[0])*s/l);c.setAttribute('cy',a[1]+(b[1]-a[1])*s/l);c.setAttribute('fill-opacity',Math.max(.15,path[i-1].I));break}s-=l}})});
+</script>

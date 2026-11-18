@@ -1,0 +1,60 @@
+<!--{"id":"5C-1-series-builder","section":"5C","title":"Series circuit builder","criteria":["5C.2","5C.3","5C.4","5C.5","5C.6"],
+"blurb":"Add up to four resistors in series. The current is the same everywhere, the supply voltage is shared in proportion to resistance, and with two resistors it is a potential divider.",
+"source":"Cambridge VCE Physics Units 1&2, 5C Modelling resistance in series circuits. Ideal battery, wires and meters. Dot speed only shows the current roughly.","colour":"#7dd3fc"}-->
+<style>.sl{grid-template-columns:76px 1fr 84px}</style>
+<div class="ctx">Resistors joined end to end make <b>one path</b>. Watch the current and the voltage across each resistor.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc;gap:8px"><h3 id="ph">Series circuit</h3><svg id="sv" viewBox="0 0 860 380"></svg>
+  <div class="rule" style="font-size:17px;padding:8px 14px">Series: <b>the same current</b> passes through every resistor. The supply voltage is <b>shared</b>, and the biggest resistor gets the biggest share ($V = IR$).</div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:9px"><h3>Build</h3>
+   <div class="btns"><span style="font-size:18px;font-weight:600;align-self:center;margin-right:4px">Resistors</span><button class="nr" data-v="1">1</button><button class="nr on" data-v="2">2</button><button class="nr" data-v="3">3</button><button class="nr" data-v="4">4</button></div>
+   <div class="sl"><span class="nm">Supply</span><input type="range" id="V" min="1" max="24" step="1" value="12"><span class="v" id="Vv"></span></div>
+   <div class="sl" id="s1"><span class="nm" style="color:#7dd3fc">$R_1$</span><input type="range" id="R1" min="1" max="50" step="1" value="10"><span class="v" id="R1v"></span></div>
+   <div class="sl" id="s2"><span class="nm" style="color:#f472b6">$R_2$</span><input type="range" id="R2" min="1" max="50" step="1" value="20"><span class="v" id="R2v"></span></div>
+   <div class="sl" id="s3"><span class="nm" style="color:#4ade80">$R_3$</span><input type="range" id="R3" min="1" max="50" step="1" value="30"><span class="v" id="R3v"></span></div>
+   <div class="sl" id="s4"><span class="nm" style="color:#c4b5fd">$R_4$</span><input type="range" id="R4" min="1" max="50" step="1" value="40"><span class="v" id="R4v"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5"><h3>Calculate</h3>
+   <div id="c1"></div><div id="c2"></div><div id="c3"></div>
+  </div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),X0=90,X1=780,Y0=70,Y1=250,BY=160,W=X1-X0,H=Y1-Y0,L=2*(W+H);
+const C=['#7dd3fc','#f472b6','#4ade80','#c4b5fd'];
+function pt(s){s=((s%L)+L)%L;if(s<W)return[X0+s,Y0];s-=W;if(s<H)return[X1,Y0+s];s-=H;if(s<W)return[X1-s,Y1];s-=W;return[X0,Y1-s]}
+el('rect',{x:X0,y:Y0,width:W,height:H,fill:'none',stroke:'#8b96c9','stroke-width':4},sv);
+const ND=34,dots=[...Array(ND)].map(()=>el('circle',{r:6,fill:'#fbb040'},sv));
+// battery
+el('rect',{x:X0-40,y:BY-14,width:80,height:28,fill:'#1a2150'},sv);
+el('line',{x1:X0-36,x2:X0+36,y1:BY-9,y2:BY-9,stroke:'#eef2ff','stroke-width':5},sv);el('line',{x1:X0-18,x2:X0+18,y1:BY+9,y2:BY+9,stroke:'#eef2ff','stroke-width':10},sv);
+txt(sv,X0-50,BY-2,'+',{fill:'#fbb040','font-size':26,'font-weight':800,'text-anchor':'middle'});txt(sv,X0-50,BY+24,'−',{fill:'#7dd3fc','font-size':26,'font-weight':800,'text-anchor':'middle'});
+const vs=txt(sv,X0+28,BY+8,'',{fill:'#fbb040','font-size':22,'font-weight':700,'font-family':'Space Grotesk'});
+// ammeters (bottom and right): same reading
+function am(x,y,lx,ly,anc){el('circle',{cx:x,cy:y,r:22,fill:'#1a2150',stroke:'#4ade80','stroke-width':3},sv);txt(sv,x,y+8,'A',{fill:'#4ade80','font-size':22,'font-weight':800,'text-anchor':'middle'});return txt(sv,lx,ly,'',{fill:'#4ade80','font-size':22,'font-weight':700,'text-anchor':anc,'font-family':'Space Grotesk'})}
+const a1=am((X0+X1)/2,Y1,(X0+X1)/2,Y1-32,'middle'),a2=am(X1,BY,X1-32,BY+8,'end');
+// resistors
+const rs=[0,1,2,3].map(k=>{const g=el('g',{},sv);const b=el('rect',{y:Y0-20,width:96,height:40,rx:4,fill:'#1a2150',stroke:C[k],'stroke-width':4},g);
+ const f=el('rect',{y:Y0-16,width:88,height:32,rx:2,fill:C[k]},g);const n=txt(g,0,Y0-32,'',{fill:C[k],'font-size':19,'font-weight':700,'text-anchor':'middle'});
+ const v=txt(g,0,Y0+52,'',{fill:C[k],'font-size':22,'font-weight':700,'text-anchor':'middle','font-family':'Space Grotesk'});return{g,b,f,n,v}});
+// shared-voltage bar
+const BX=90,BW=690,BT=300;txt(sv,BX,BT-10,'',{});const bt=txt(sv,BX,BT-10,'',{fill:'#a5b4d8','font-size':17});
+const bars=[0,1,2,3].map(k=>({r:el('rect',{y:BT,height:44,fill:C[k],stroke:'#0d1330','stroke-width':3},sv),t:txt(sv,0,BT+30,'',{fill:'#0d1330','font-size':19,'font-weight':800,'text-anchor':'middle'})}));
+let n=2,V=12,R=[10,20,30,40],I=0,ph=0,lt=0;
+function upd(){const Rt=R.slice(0,n).reduce((a,b)=>a+b,0);I=V/Rt;
+ [1,2,3,4].forEach(k=>document.getElementById('s'+k).style.display=k<=n?'':'none');
+ vs.textContent=V+' V';a1.textContent=sig(I)+' A';a2.textContent=sig(I)+' A';
+ let x=BX;rs.forEach((r,k)=>{const on=k<n;r.g.style.display=on?'':'none';bars[k].r.style.display=on?'':'none';bars[k].t.style.display=on?'':'none';if(!on)return;
+  const cx=X0+70+(k+.5)*(W-70)/n;r.b.setAttribute('x',cx-48);r.f.setAttribute('x',cx-44);r.f.setAttribute('fill-opacity',(.15+.6*R[k]/50).toFixed(2));
+  r.n.setAttribute('x',cx);r.v.setAttribute('x',cx);r.n.textContent='R'+(k+1)+' = '+R[k]+' Ω';const Vk=I*R[k];r.v.textContent=sig(Vk)+' V';
+  const w=BW*Vk/V;bars[k].r.setAttribute('x',x);bars[k].r.setAttribute('width',w);bars[k].t.setAttribute('x',x+w/2);bars[k].t.textContent=w>110?'V'+(k+1)+' = '+sig(Vk)+' V':w>44?sig(Vk,2):'';x+=w});
+ bt.textContent=n===1?'All '+V+' V of the supply is across R1':n===2?'Potential divider: the '+V+' V supply is split between R1 and R2':'The '+V+' V supply is shared: V1 + V2 + … = '+V+' V';
+ document.getElementById('ph').textContent=n===2?'Series circuit: a potential divider':'Series circuit with '+n+' resistor'+(n>1?'s':'');
+ document.getElementById('c1').innerHTML='R<sub>eq</sub> = '+R.slice(0,n).join(' + ')+' = <b class="hi">'+Rt+' Ω</b>';
+ document.getElementById('c2').innerHTML='I = '+V+' ÷ '+Rt+' = <b class="hi">'+sig(I)+' A</b>';
+ document.getElementById('c3').innerHTML=n===2?'V<sub>out</sub> = '+R[1]+'/'+Rt+' × '+V+' = <b class="hi">'+sig(R[1]/Rt*V)+' V</b>':n===1?'V<sub>1</sub> = '+V+' V (all of it)':'Sum: '+R.slice(0,n).map(r=>sig(I*r,2)).join(' + ')+' = <b class="hi">'+V+' V</b>'}
+group('.nr',v=>{n=+v;upd()});
+slider('V',x=>x+' V',x=>{V=x;upd()});[1,2,3,4].forEach(k=>slider('R'+k,x=>x+' Ω',x=>{R[k-1]=x;upd()}));
+IX.anims.push(t=>{const d=Math.max(0,t-lt);lt=t;ph+=d*160*I/(I+1.5);for(let i=0;i<ND;i++){const p=pt(i*L/ND+ph);dots[i].setAttribute('cx',p[0]);dots[i].setAttribute('cy',p[1])}});
+</script>

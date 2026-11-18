@@ -64,7 +64,8 @@ Do now (3 retrieval questions: last lesson / last week / last term, from Cambrid
 - One standalone, offline HTML per interactive in `interactives/` (gallery `interactives/index.html`, list `interactives/interactives.json`), built by `python3 tools/interactives/build.py` from `tools/interactives/src/<id>.html` (JSON header + body + script), shared look `ix.css` / helpers `ix.js`, fonts and KaTeX embedded from `tools/interactives/vendor/` ($...$ pre-rendered with node). 1280×720, scales to fit; `?bare` hides title/context/footer for embedding in a slide iframe. Space = pause, F = full screen, slow-motion button.
 - House style: the physics deck look (navy, moving background waves, Space Grotesk + Inter, coloured-edge cards) + 12MAG interactive rules: a context line, controls (sliders + preset buttons), live readouts, a rule box, footer = source + "Interactive by teacher". Must be physically correct at the slider extremes.
 - Section cards list their interactives (`build_year11.py` reads interactives.json). Copies go to `Desktop\2027 Planning\Year 11 Physics\Slides\interactives\`.
-- Planned list per section (agreed 18 Nov): see HANDOFF.md. Done: 1A (wave types, wave builder, source and medium).
+- Backgrounds by AoS (Rocco, 18 Nov): Ch 1–2 waves, Ch 3–4 drifting/decaying particles, Ch 5–6 circuit traces with charge pulses, Ch 7–9 projectile arcs (`BG` in build.py, drawn in ix.js). Slide decks should use the same.
+- Done (18 Nov): 49 interactives covering every section except 4C (discussion). Possible extras: an elevator normal-force interactive (8B WE8B-4).
 
 ## Planner
 - One lesson card per lesson. Show the Cambridge section, key knowledge, learning goals, the lesson sequence with minutes, every Cambridge resource with its file location, prac details and CFAT/SAC markers.

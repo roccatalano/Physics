@@ -1,0 +1,57 @@
+<!--{"id":"9C-1-hookes-law","section":"9C","title":"Hooke's law and elastic potential energy","criteria":["9C.1","9C.2","9C.3","9C.4"],
+"blurb":"Stretch or compress a spring. The force–extension graph is a straight line: its gradient is k, and the shaded triangle under it is the stored energy ½kx².",
+"source":"Cambridge VCE Physics Units 1&2, 9C Springs (pp. 29–36). Ideal spring: massless, obeys Hooke's law, within its elastic limit.","colour":"#f472b6"}-->
+<style>.sl{grid-template-columns:98px 1fr 108px}</style>
+<div class="ctx">A hand stretches or squashes an ideal spring. <b>Double the extension:</b> what happens to the force, and what happens to the stored energy?</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#f472b6"><h3>Force–extension graph</h3><svg id="sv" viewBox="0 0 860 410"></svg>
+  <div class="rule" style="font-size:18px;padding:8px 14px"><b>Gradient</b> of the graph = spring constant <span class="k">k</span>. <b>Area</b> under the graph = elastic potential energy stored.</div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Spring</h3>
+   <div class="btns"><button class="md on" data-v="1">Stretch</button><button class="md" data-v="-1">Compress</button><button id="cmp">Compare spring B</button></div>
+   <div class="sl"><span class="nm">Constant k</span><input type="range" id="k" min="50" max="500" step="10" value="300"><span class="v" id="kv"></span></div>
+   <div class="sl"><span class="nm">Change x</span><input type="range" id="x" min="0" max="0.4" step="0.01" value="0.2"><span class="v" id="xv"></span></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px"><h3>Calculate</h3><div id="calc"></div></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv');let k=300,x=.2,dir=1,cmp=false;const KB=150;
+function mk(id,c){const m=el('marker',{id,viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:4.5,markerHeight:4.5,orient:'auto'},el('defs',{},sv));el('path',{d:'M0 0L10 5L0 10z',fill:c},m)}
+mk('ao','#fbb040');mk('ap','#f472b6');
+function coil(x1,x2,y,n,w){let d=`M${x1},${y}`;const L=x2-x1,e=14,step=(L-2*e)/n;d+=`L${x1+e},${y}`;for(let i=0;i<n;i++)d+=`L${x1+e+step*(i+.25)},${y-w}L${x1+e+step*(i+.75)},${y+w}`;return d+`L${x2-e},${y}L${x2},${y}`}
+// scene
+const WX=40,L0=300,SC=500,SY=70;
+el('rect',{x:WX-24,y:SY-50,width:24,height:100,fill:'#36418a'},sv);
+const nat=el('line',{x1:WX+L0,x2:WX+L0,y1:SY-48,y2:SY+48,stroke:'#a5b4d8','stroke-dasharray':'5 5','stroke-width':2},sv);txt(sv,WX+L0,SY+68,'natural length',{fill:'#a5b4d8','font-size':16,'text-anchor':'middle'});
+const sp=el('path',{fill:'none',stroke:'#eef2ff','stroke-width':3.5,'stroke-linejoin':'round'},sv);
+const blk=el('rect',{y:SY-26,width:36,height:52,rx:6,fill:'#f472b6'},sv);
+const fa=el('line',{stroke:'#fbb040','stroke-width':6,'marker-end':'url(#ao)'},sv),ft=txt(sv,0,0,'',{fill:'#fbb040','font-size':19,'font-weight':700});
+const xb=el('line',{stroke:'#4ade80','stroke-width':3},sv),xt=txt(sv,0,0,'x',{fill:'#4ade80','font-size':19,'font-weight':700,'text-anchor':'middle'});
+// graph
+const GX=110,GW=600,GB=360,GH=200,XMAX=.4,FMAX=200;const X=v=>GX+v/XMAX*GW,Y=f=>GB-f/FMAX*GH;
+el('line',{x1:GX,x2:GX+GW+10,y1:GB,y2:GB,stroke:'#5b6690','stroke-width':2},sv);el('line',{x1:GX,x2:GX,y1:GB,y2:GB-GH-10,stroke:'#5b6690','stroke-width':2},sv);
+for(let i=0;i<=4;i++){const v=i/10;el('line',{x1:X(v),x2:X(v),y1:GB,y2:GB+6,stroke:'#5b6690','stroke-width':2},sv);txt(sv,X(v),GB+26,f2(v,1),{fill:'#a5b4d8','font-size':17,'text-anchor':'middle'})}
+for(let f=0;f<=FMAX;f+=50){if(f)el('line',{x1:GX,x2:GX+GW,y1:Y(f),y2:Y(f),stroke:'#232c63','stroke-dasharray':'3 6'},sv);txt(sv,GX-10,Y(f)+6,f,{fill:'#a5b4d8','font-size':17,'text-anchor':'end'})}
+txt(sv,GX+GW+16,GB+6,'x (m)',{fill:'#a5b4d8','font-size':17});txt(sv,GX-60,GB-GH-18,'F (N)',{fill:'#a5b4d8','font-size':17});
+const lineB=el('line',{stroke:'#a5b4d8','stroke-width':3,'stroke-dasharray':'8 6'},sv),lbB=txt(sv,0,0,'B: k = '+KB+' N m⁻¹',{fill:'#a5b4d8','font-size':17});
+const tri=el('path',{fill:'#4ade80','fill-opacity':.35},sv),line=el('line',{stroke:'#f472b6','stroke-width':4},sv),lbA=txt(sv,0,0,'',{fill:'#f472b6','font-size':17,'font-weight':700});
+const dot=el('circle',{r:8,fill:'#fbb040'},sv),et=txt(sv,0,0,'',{fill:'#eef2ff','font-size':19,'font-weight':700,'text-anchor':'middle'});
+function lineTo(l,kk){const xe=Math.min(XMAX,FMAX/kk);l.setAttribute('x1',X(0));l.setAttribute('y1',Y(0));l.setAttribute('x2',X(xe));l.setAttribute('y2',Y(kk*xe));return xe}
+function upd(){const F=k*x,E=.5*k*x*x;
+ const xe=lineTo(line,k);lbA.textContent='k = '+k+' N m⁻¹';const lx=X(xe),ly=Y(k*xe);lbA.setAttribute('x',Math.min(lx+8,GX+GW-150));lbA.setAttribute('y',xe<XMAX?ly+4:ly-12);lbA.setAttribute('text-anchor','start');
+ if(xe<XMAX){lbA.setAttribute('x',lx+10);lbA.setAttribute('y',ly+6)}
+ lineB.style.display=lbB.style.display=cmp?'':'none';const xb_=lineTo(lineB,KB);lbB.setAttribute('x',X(xb_)-200);lbB.setAttribute('y',Y(KB*xb_)+30);
+ tri.setAttribute('d',`M${X(0)},${Y(0)}L${X(x)},${Y(F)}L${X(x)},${Y(0)}Z`);dot.setAttribute('cx',X(x));dot.setAttribute('cy',Y(F));
+ et.textContent=x>=.06&&F>=25?'E = '+sig(E,3)+' J':'';et.setAttribute('x',X(x*2/3));et.setAttribute('y',Y(F/3)+7);
+ // scene
+ const xe2=WX+L0+dir*x*SC;sp.setAttribute('d',coil(WX,xe2,SY,12,16));blk.setAttribute('x',xe2);
+ const fl=F/FMAX*120;fa.style.display=ft.style.display=F>0?'':'none';
+ const fx0=dir>0?xe2+36:xe2+36+fl+20;fa.setAttribute('x1',dir>0?xe2+36:fx0);fa.setAttribute('x2',dir>0?xe2+36+fl+20:xe2+38);fa.setAttribute('y1',SY);fa.setAttribute('y2',SY);
+ ft.textContent='hand: '+sig(F,3)+' N';ft.setAttribute('x',Math.min(xe2+46,860-170));ft.setAttribute('y',SY-34);
+ const a=WX+L0,b=xe2;xb.style.display=xt.style.display=x>0?'':'none';xb.setAttribute('x1',a);xb.setAttribute('x2',b);xb.setAttribute('y1',SY+40);xb.setAttribute('y2',SY+40);xt.setAttribute('x',(a+b)/2);xt.setAttribute('y',SY+36);
+ document.getElementById('calc').innerHTML=`<span class="k">F</span> = <span class="k">kx</span> = ${k} × ${f2(x)}<br>= <b class="hi">${sig(F,3)} N</b><br><span class="k">E</span><sub>s</sub> = ½<span class="k">kx</span>² = ½ × ${k} × ${f2(x)}²<br>= <b class="gr">${sig(E,3)} J</b>`+
+  (dir>0?'':'<div style="font-size:17px;color:#a5b4d8;margin-top:4px">The spring pushes back with −<span class="k">kx</span>.</div>')}
+slider('k',v=>v+' N m⁻¹',v=>{k=v;upd()});slider('x',v=>f2(v)+' m',v=>{x=v;upd()});
+group('.md',v=>{dir=+v;upd()});toggle('cmp',v=>{cmp=v;upd()},false);
+</script>

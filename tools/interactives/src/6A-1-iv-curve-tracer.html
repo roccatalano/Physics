@@ -1,0 +1,63 @@
+<!--{"id":"6A-1-iv-curve-tracer","section":"6A","title":"I–V curve tracer","criteria":["6A.1","6A.2","6A.4","6A.5","6A.8"],
+"blurb":"Sweep the potential difference across a resistor, globe, diode, LED, thermistor or LDR and watch the I–V graph appear. Read R = V/I at any point.",
+"source":"Cambridge VCE Physics Units 1&2, 6A (pp. 6–17). Model: 100 Ω resistor, NTC thermistor 100 Ω at 25 °C, LDR as Fig. 6A–16. Breakdown not shown.","colour":"#fbb040"}-->
+<div class="ctx">Sweep the supply from <b>−6 V to +6 V</b> and record the current. <b>Is the graph a straight line through the origin?</b></div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#7dd3fc"><h3 id="ptitle">I–V characteristic</h3><svg id="sv" viewBox="0 0 860 440"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Component</h3>
+   <div class="btns"><button class="cp on" data-v="r">Resistor</button><button class="cp" data-v="g">Globe</button><button class="cp" data-v="d">Diode</button><button class="cp" data-v="led">LED</button><button class="cp" data-v="th">Thermistor</button><button class="cp" data-v="ldr">LDR</button></div>
+   <div class="sl" id="sT"><span class="nm">Temperature</span><input type="range" id="T" min="0" max="100" step="1" value="25"><span class="v" id="Tv"></span></div>
+   <div class="sl" id="sL"><span class="nm">Light</span><input type="range" id="L" min="1" max="3" step="0.02" value="2"><span class="v" id="Lv"></span></div>
+   <div class="sl"><span class="nm">Supply <span class="k">V</span></span><input type="range" id="V" min="-6" max="6" step="0.05" value="3"><span class="v" id="Vv"></span></div>
+   <div class="btns"><button id="sw">Auto sweep</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80"><h3>At the orange point</h3>
+   <div><span class="k">I</span> <span class="kr">=</span> <span class="kr" id="Io"></span></div>
+   <div><span class="k">R</span> <span class="kr">=</span> <span class="k">V</span><span class="kr">/</span><span class="k">I</span> <span class="kr">=</span> <span class="kr" id="Ro"></span></div>
+  </div>
+  <div class="rule" id="rule" style="font-size:17px"></div>
+ </div>
+</div>
+<script>
+const sv=document.getElementById('sv'),OX=430,OY=215,SX=380/6,IM=60,SY=190/IM;
+let comp='r',T=25,lux=100,V=3,sweep=false;
+// grid and axes
+for(let v=-6;v<=6;v++){const x=OX+v*SX;el('line',{x1:x,x2:x,y1:OY-190,y2:OY+190,stroke:v?'#1f2858':'#36418a','stroke-width':v?1:2},sv);if(v&&v%2===0)txt(sv,x,OY+22,v,{fill:'#8b96c4','font-size':16,'text-anchor':'middle'})}
+for(let i=-60;i<=60;i+=20){const y=OY-i*SY;el('line',{x1:OX-380,x2:OX+380,y1:y,y2:y,stroke:i?'#1f2858':'#36418a','stroke-width':i?1:2},sv);if(i)txt(sv,OX-386,y+5,i,{fill:'#8b96c4','font-size':16,'text-anchor':'end'})}
+txt(sv,OX+380,OY-10,'V (V)',{fill:'#a5b4d8','font-size':17,'text-anchor':'end'});txt(sv,OX+10,22,'I (mA)',{fill:'#a5b4d8','font-size':17});
+const ref=el('path',{fill:'none',stroke:'#7dd3fc','stroke-width':3,'stroke-dasharray':'8 7',opacity:.45},sv);
+const reft=txt(sv,0,0,'',{fill:'#7dd3fc','font-size':16,opacity:.8});
+const cur=el('path',{fill:'none',stroke:'#7dd3fc','stroke-width':5},sv);
+const tr=el('path',{fill:'none',stroke:'#fbb040','stroke-width':6,opacity:.55},sv);
+const pt=el('circle',{r:10,fill:'#fbb040',stroke:'#0d1330','stroke-width':3},sv);
+const off=txt(sv,0,0,'off scale',{fill:'#fbb040','font-size':16,'text-anchor':'middle'});
+const nVt=0.0514,ISD=0.05/Math.exp(0.75/nVt),ISL=0.05/Math.exp(2.0/nVt);
+const Rth=t=>100*Math.exp(3950*(1/(t+273.15)-1/298.15));const Rldr=l=>1e6*Math.pow(l/10,-2.5);
+function I(v,c,t,l){c=c||comp;t=t??T;l=l??lux;switch(c){
+ case 'r':return v/100;case 'g':return Math.sign(v)*0.05*Math.pow(Math.abs(v)/6,0.6);
+ case 'd':return ISD*(Math.exp(v/nVt)-1);case 'led':return ISL*(Math.exp(v/nVt)-1);
+ case 'th':return v/Rth(t);case 'ldr':return v/Rldr(l)}}
+function pathFor(f){let d='',pen=false;for(let v=-6;v<=6.001;v+=0.02){const i=f(v)*1000;if(Math.abs(i)>IM){pen=false;continue}d+=(pen?'L':'M')+(OX+v*SX).toFixed(1)+','+(OY-i*SY).toFixed(1);pen=true}return d}
+const INFO={r:['Ohmic resistor (100 Ω)','<b>Ohmic:</b> a straight line through the origin, so <span class="k">R</span> is constant. Reversing <span class="k">V</span> just reverses <span class="k">I</span>.'],
+ g:['Filament globe','<b>Non-ohmic:</b> the curve flattens. As more current flows the filament heats up and its resistance <b>rises</b>.'],
+ d:['Silicon diode','<b>Non-ohmic:</b> almost no current until about 0.7 V forward, then very low resistance. Reverse biased, the resistance is huge.'],
+ led:['Red LED','Like a diode, but it needs about 2 V forward before current flows (and it glows). Reverse biased, no current.'],
+ th:['NTC thermistor','Ohmic at a fixed temperature. <b>Hotter means lower resistance</b>, so the line gets steeper.'],
+ ldr:['Light dependent resistor','Ohmic at a fixed light level. <b>Brighter means lower resistance</b>, so the line gets steeper.']};
+function draw(){cur.setAttribute('d',pathFor(v=>I(v)));
+ const r=comp==='th'?[25,'25 °C']:comp==='ldr'?[100,'100 lx']:null;ref.style.display=reft.style.display=r?'':'none';
+ if(r){ref.setAttribute('d',pathFor(v=>comp==='th'?I(v,'th',25):I(v,'ldr',0,100)));reft.textContent=r[1];reft.setAttribute('x',OX+250);reft.setAttribute('y',OY-I(4,comp,25,100)*1000*SY-12)}
+ document.getElementById('ptitle').textContent='I–V characteristic: '+INFO[comp][0];document.getElementById('rule').innerHTML=INFO[comp][1];
+ document.getElementById('sT').style.display=comp==='th'?'':'none';document.getElementById('sL').style.display=comp==='ldr'?'':'none'}
+function point(){const i=I(V)*1000;const inS=Math.abs(i)<=IM;pt.setAttribute('cx',OX+V*SX);pt.setAttribute('cy',OY-Math.max(-IM,Math.min(IM,i))*SY);
+ off.style.display=inS?'none':'';off.setAttribute('x',OX+V*SX-(V>4?60:0));off.setAttribute('y',i>0?OY-IM*SY+34:OY+IM*SY-20);
+ let d='';const a=Math.min(0,V),b=Math.max(0,V);for(let v=a;v<=b+1e-9;v+=0.02){const ii=I(v)*1000;if(Math.abs(ii)>IM)break;d+=(d?'L':'M')+(OX+v*SX).toFixed(1)+','+(OY-ii*SY).toFixed(1)}tr.setAttribute('d',d);
+ const ia=Math.abs(i);document.getElementById('Io').textContent=ia<0.001?'0 mA':ia<1?sig(i,2)+' mA':sig(i,3)+' mA';
+ const R=Math.abs(V)<0.01?NaN:V/(i/1000);document.getElementById('Ro').textContent=Math.abs(V)<0.01?'(set V ≠ 0)':Math.abs(i)<1e-6?'huge (no current)':R>=1e6?sig(R/1e6,3)+' MΩ':R>=1e3?sig(R/1e3,3)+' kΩ':sig(R,3)+' Ω'}
+group('.cp',v=>{comp=v;draw();point()});
+slider('T',v=>v+' °C',v=>{T=v;draw();point()});slider('L',v=>(lux=Math.round(Math.pow(10,v)))+' lx',v=>{lux=Math.pow(10,v);draw();point()});
+const Vs=slider('V',v=>(v>0?'+':'')+f2(v)+' V',v=>{V=v;point()});
+toggle('sw',v=>sweep=v,false);draw();point();
+IX.anims.push((t,dt)=>{if(!sweep||!IX.play)return;V=-6+((t*1.5)%12);Vs.value=V;document.getElementById('Vv').textContent=(V>0?'+':'')+f2(V)+' V';point()});
+</script>

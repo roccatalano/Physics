@@ -1,0 +1,52 @@
+<!--{"id":"3B-2-decay-equations","section":"3B","title":"Decay equation builder","criteria":["3B.2","3B.1"],
+"blurb":"Pick a parent nucleus and a decay type. Predict the daughter, then reveal it and check that mass numbers and atomic numbers balance.",
+"source":"Cambridge VCE Physics Units 1&2, 3B Nuclear transformations (pp. 103–108), notation as in the book. Neutrinos from β decay not shown (no effect on A or Z).","colour":"#a78bfa"}-->
+<div class="ctx">The <b>top numbers (A)</b> balance and the <b>bottom numbers (Z)</b> balance. Predict, then reveal.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#a78bfa;gap:6px"><h3>The decay</h3><svg id="sv" viewBox="0 0 780 170" style="flex:none;height:170px"></svg>
+  <div id="eq" style="display:flex;align-items:center;justify-content:center;gap:22px;font:600 52px 'Space Grotesk';min-height:120px"></div>
+  <div id="bal" style="display:grid;grid-template-columns:auto auto;gap:6px 18px;justify-content:center;font-size:22px;margin-top:6px"></div>
+  <div id="real" style="text-align:center;font-size:18px;color:#a5b4d8;margin-top:auto"></div></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040"><h3>Parent nucleus</h3>
+   <div class="btns" id="pb"></div>
+   <h3 style="margin:4px 0 0">Decay type</h3>
+   <div class="btns"><button class="md on" data-v="a">α</button><button class="md" data-v="bm">β⁻</button><button class="md" data-v="bp">β⁺</button><button class="md" data-v="g">γ</button></div>
+   <div class="btns"><button id="rev">Reveal daughter</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.45"><h3>What changes</h3><div id="ch"></div></div>
+ </div>
+</div>
+<script>
+const SYM='n H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn Fr Ra Ac Th Pa U Np Pu Am'.split(' ');
+const PAR=[['U-238',92,238,'a'],['Ra-226',88,226,'a'],['Am-241',95,241,'a'],['C-14',6,14,'bm'],['Sr-90',38,90,'bm'],['I-131',53,131,'bm'],['F-18',9,18,'bp'],['Na-22',11,22,'bp'],['Ni-60*',28,60,'g']];
+const MODE={a:{n:'α',dA:-4,dZ:-2,p:[4,2,'He']},bm:{n:'β⁻',dA:0,dZ:1,p:[0,-1,'β']},bp:{n:'β⁺',dA:0,dZ:-1,p:[0,'+1','β']},g:{n:'γ',dA:0,dZ:0,p:[0,0,'γ']}};
+const CH={a:'Loses 2 protons and 2 neutrons. <b>A − 4, Z − 2</b>: a new element, two places down.',bm:'A neutron becomes a proton. <b>A same, Z + 1</b>: one place up.',bp:'A proton becomes a neutron. <b>A same, Z − 1</b>: one place down.',g:'Energy leaves an excited nucleus. <b>A and Z unchanged</b>: same nuclide.'};
+let P=PAR[0],M='a',shown=false;
+const pb=document.getElementById('pb');PAR.forEach((p,i)=>{const b=document.createElement('button');b.className='pp'+(i?'':' on');b.textContent=p[0];b.dataset.v=i;pb.appendChild(b)});
+const nuc=(A,Z,S,c,star)=>`<span style="display:inline-flex;align-items:center;color:${c}"><span style="display:inline-flex;flex-direction:column;align-items:flex-end;font-size:.5em;line-height:1.05;margin-right:3px"><span>${A}</span><span>${Z}</span></span>${S}${star?'<sup style="font-size:.55em">*</sup>':''}</span>`;
+const sv=document.getElementById('sv');
+const par=el('g',{},sv),dau=el('g',{},sv),emi=el('g',{},sv);
+function blob(g,n,r){g.innerHTML='';for(let i=0;i<n;i++){const a=i*2.4,d=r*Math.sqrt(i/n);el('circle',{cx:d*Math.cos(a),cy:d*Math.sin(a),r:7,fill:i%2?'#ef4444':'#94a3b8',stroke:'#0d1330','stroke-width':1.5},g)}}
+blob(par,40,40);
+let t0=0;
+function upd(){const[nm,Z,A]=P,m=MODE[M],gm=M==='g',z2=Z+m.dZ,a2=A+m.dA;
+ const pS=SYM[Z],dS=shown?SYM[z2]:'?',dA=shown?a2:'?',dZ=shown?z2:'?';
+ document.getElementById('eq').innerHTML=nuc(A,Z,pS,'#eef2ff',gm)+'<span style="color:#8b96c0">→</span>'+nuc(dA,dZ,dS,'#fbb040',false)+'<span style="color:#8b96c0">+</span>'+nuc(m.p[0],m.p[1],m.p[2],'#a78bfa',false);
+ const ok=(a,b,c)=>shown?`${a} = ${b} + ${c} <span class="gr">✓</span>`:`${a} = ? + ${c}`;
+ document.getElementById('bal').innerHTML=`<span style="color:#8b96c0">Top (A):</span><span>${ok(A,a2,m.p[0])}</span><span style="color:#8b96c0">Bottom (Z):</span><span>${ok(Z,z2,(+m.p[1]))}</span>`;
+ document.getElementById('ch').innerHTML=CH[M];
+ const real=P[3];document.getElementById('real').innerHTML=real===M?`<b>${nm}</b> really does decay by <b>${MODE[real].n}</b>.`:`<b>${nm}</b> really decays by <b>${MODE[real].n}</b>. This one is a practice equation.`;
+ document.getElementById('rev').textContent=shown?'Hide daughter':'Reveal daughter';t0=IX.t}
+group('.pp',v=>{P=PAR[+v];shown=false;upd()});group('.md',v=>{M=v;shown=false;upd()});
+document.getElementById('rev').onclick=()=>{shown=!shown;upd()};
+upd();
+const pt=el('g',{},emi);
+IX.anims.push(t=>{const s=(t-t0)%3.2,x0=250,y0=85;par.setAttribute('transform',`translate(${x0+(s<.4?3*Math.sin(t*40):0)},${y0})`);
+ pt.innerHTML='';const d=Math.max(0,s-.4)*230;
+ if(s>.4){if(M==='a'){[[0,-6],[12,0],[0,6],[-12,0]].forEach(([a,b],i)=>el('circle',{cx:x0+50+d+a,cy:y0+b,r:7,fill:i%2?'#ef4444':'#94a3b8',stroke:'#0d1330'},pt))}
+  else if(M==='g'){let p='';for(let i=0;i<=30;i++)p+=(i?'L':'M')+(x0+50+d-60+i*2)+','+(y0+8*Math.sin(i*.9));el('path',{d:p,fill:'none',stroke:'#a78bfa','stroke-width':3.5},pt)}
+  else{el('circle',{cx:x0+50+d,cy:y0,r:6,fill:'#7dd3fc'},pt);txt(pt,x0+50+d,y0-14,M==='bm'?'e⁻':'e⁺',{fill:'#7dd3fc','text-anchor':'middle','font-size':18})}}
+ txt(pt,x0,y0+72,shown||s<.4?(SYM[P[1]]+'-'+P[2]+(M==='g'?'*':'')+(s>.4&&shown?' → '+SYM[P[1]+MODE[M].dZ]+'-'+(P[2]+MODE[M].dA):'')):'',{fill:'#cfd7f5','text-anchor':'middle','font-size':18});
+});
+</script>

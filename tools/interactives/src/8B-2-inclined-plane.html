@@ -1,0 +1,49 @@
+<!--{"id":"8B-2-inclined-plane","section":"8B","title":"Inclined plane: components of weight","criteria":["8B.2","8B.3","8B.4","8B.5"],
+"blurb":"A block on a slope. Split the force due to gravity into parts along and into the slope. With friction it stays still (f = mg sin θ); without friction it slides with a = g sin θ.",
+"source":"Cambridge VCE Physics Units 1&2, 8B Newton’s laws of motion, Figure 8B–15 and Formula 8B–4, g = 9.8 m/s². Friction is just enough to hold the block still.","colour":"#4ade80"}-->
+<div class="ctx">A block rests on a slope. Gravity pulls <b>straight down</b>, but the slope only lets it move <b>along</b> the surface. Split the weight into two parts.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#4ade80"><h3>Forces on the block</h3><svg id="sv" viewBox="0 0 860 470"></svg></div>
+ <div class="side">
+  <div class="card ctl" style="--c:#fbb040;gap:10px"><h3>The slope</h3>
+   <div class="sl"><span class="nm">Mass</span><input type="range" id="m" min="1" max="20" step="1" value="10"><span class="v" id="mv"></span></div>
+   <div class="sl"><span class="nm">Angle θ</span><input type="range" id="th" min="5" max="60" step="1" value="30"><span class="v" id="thv"></span></div>
+   <div class="btns"><button class="fr on" data-v="1">Friction on</button><button class="fr" data-v="0">Frictionless</button></div>
+   <div class="btns"><button id="cmp" class="on">Show components</button></div>
+  </div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.55"><h3>Calculate</h3><div id="ro"></div></div>
+ </div>
+</div>
+<script>
+const g=9.8,K=.75;let m=10,th=30,fric=1,comp=1;
+const sv=document.getElementById('sv');
+function arrow(c,dash){const gg=el('g',{},sv),l=el('line',{stroke:c,'stroke-width':dash?4:6,'stroke-linecap':'round','stroke-dasharray':dash?'9 7':''},gg),h=el('path',{fill:c},gg),t=txt(gg,0,0,'',{fill:c,'font-size':19,'font-weight':700});
+ return(x,y,dx,dy,s,lx,ly,anc)=>{const L=Math.hypot(dx,dy);gg.style.display=L<3||s===null?'none':'';if(L<3||s===null)return;const ux=dx/L,uy=dy/L,hx=x+dx,hy=y+dy;
+  l.setAttribute('x1',x);l.setAttribute('y1',y);l.setAttribute('x2',hx-ux*14);l.setAttribute('y2',hy-uy*14);
+  h.setAttribute('d',`M${hx},${hy}L${hx-ux*20-uy*11},${hy-uy*20+ux*11}L${hx-ux*20+uy*11},${hy-uy*20-ux*11}Z`);
+  t.setAttribute('x',hx+(lx||0));t.setAttribute('y',hy+(ly||0));t.setAttribute('text-anchor',anc||'middle');t.textContent=s}}
+const slope=el('path',{fill:'#232c63',stroke:'#5b6690','stroke-width':3},sv),hz=el('line',{stroke:'#fbb040','stroke-width':2,'stroke-dasharray':'6 6'},sv),arc=el('path',{fill:'none',stroke:'#fbb040','stroke-width':3},sv),at=txt(sv,0,0,'θ',{fill:'#fbb040','font-size':22,'font-weight':700});
+const blk=el('rect',{x:-35,y:-24,width:70,height:48,rx:6,fill:'#fbb040'},sv);
+const aCos=arrow('#a5b4d8',1),aSin=arrow('#f472b6',1),aG=arrow('#7dd3fc'),aN=arrow('#4ade80'),aF=arrow('#fb7185');
+const BX=800,BY=440;let sPos=0,T=0;
+function upd(){const r=th*Math.PI/180,W=m*g,c=Math.cos(r),s=Math.sin(r);
+ document.getElementById('ro').innerHTML=`F<sub>g</sub> = mg = <b>${f2(W,1)} N</b><br><span class="pk">mg sin θ</span> = <b>${f2(W*s,1)} N</b><br><span class="gr">N = mg cos θ</span> = <b>${f2(W*c,1)} N</b><br>`+
+ (fric?`<span style="color:#fb7185">f = mg sin θ</span> = <b>${f2(W*s,1)} N</b><br>Net force 0: <b>stays still</b>`:`a = g sin θ = <b class="hi">${f2(g*s,2)} m/s²</b><br>down the slope (mass cancels)`);T=0}
+slider('m',x=>x+' kg',x=>{m=x;upd()});slider('th',x=>x+'°',x=>{th=x;upd()});group('.fr',v=>{fric=+v;upd()});toggle('cmp',v=>{comp=v},true);
+const P0=[440,250],LW=150,BOT=450;
+IX.anims.push((t,dt)=>{const r=th*Math.PI/180,c=Math.cos(r),s=Math.sin(r),dx=c,dy=s,nx=s,ny=-c;
+ const Q=[P0[0]-nx*25,P0[1]-ny*25],yl=x=>Q[1]+(x-Q[0])*s/c,xl=y=>Q[0]+(y-Q[1])*c/s;
+ const tx=Math.max(20,xl(20)),ty=yl(tx),bx=Math.min(840,xl(BOT)),by=yl(bx);
+ slope.setAttribute('d',`M${tx},${ty}L${bx},${by}L${bx},${BOT}L${tx},${BOT}Z`);
+ const R=90;arc.setAttribute('d',`M${tx+R},${ty}A${R},${R} 0 0 1 ${tx+R*c},${ty+R*s}`);hz.setAttribute('x1',tx);hz.setAttribute('x2',tx+R+50);hz.setAttribute('y1',ty);hz.setAttribute('y2',ty);
+ at.setAttribute('x',tx+R+16);at.setAttribute('y',ty+(R*s)/2+12);
+ if(IX.play&&!fric)T+=dt*IX.speed;let d=-110+.5*g*s*T*T*30;if(d>110){T=0;d=-110}if(fric){T=0;d=0}
+ const px=Q[0]+dx*d,py=Q[1]+dy*d,cx=px+nx*25,cy=py+ny*25;
+ blk.setAttribute('transform',`translate(${cx},${cy}) rotate(${th})`);
+ const L=(x,y,ex,ey)=>{const h=Math.hypot(ex,ey)||1;return[ex/h*30,ey/h*30+7]};
+ const W=LW;aG(cx,cy,0,W,'mg',...L(0,0,0,1));
+ aN(cx+nx*24,cy+ny*24,nx*W*c,ny*W*c,'N',...L(0,0,nx,ny));
+ aSin(cx,cy,dx*W*s,dy*W*s,comp?'mg sin θ':null,dx*40+30,dy*40+10,'start');aCos(cx,cy,-nx*W*c,-ny*W*c,comp?'mg cos θ':null,-18,8,'end');
+ aF(px-dx*20,py-dy*20,-dx*W*s,-dy*W*s,fric?'f':null,nx*26,ny*26+7)});
+upd();
+</script>

@@ -1,0 +1,66 @@
+<!--{"id":"1C-1-snell-ray-box","section":"1C","title":"Snell's law ray box","criteria":["1C.2","1C.4","1C.5","1C.7","1C.8"],
+"blurb":"Drag the ray box. Choose the two materials. Watch the refracted and partly reflected rays, the critical angle and total internal reflection.",
+"source":"Cambridge VCE Physics Units 1&2, 1C, Table 1C–1, Formulas 1C–3 and 1C–4. Ray brightness: Fresnel equations, unpolarised light.","colour":"#4ade80"}-->
+<div class="ctx">A thin ray of light hits the boundary between two materials. Part of it <b>reflects</b> and part <b>refracts</b>. <b>Drag the ray box</b> to change the angle of incidence.</div>
+<div class="row" style="flex:1">
+ <div class="card plot" style="--c:#4ade80;gap:8px"><h3>Ray diagram (angles measured from the normal)</h3><svg id="sv" viewBox="0 0 860 400" style="touch-action:none"></svg>
+  <div class="sl" style="grid-template-columns:150px 1fr 80px"><span class="nm">Angle θ<sub>1</sub></span><input type="range" id="th" min="0" max="89" step="1" value="40"><span class="v" id="thv"></span></div>
+ </div>
+ <div class="side">
+  <div class="card ctl" style="--c:#7dd3fc;gap:8px"><h3>Material 1 (ray starts in)</h3><div class="btns" id="m1"></div></div>
+  <div class="card ctl" style="--c:#f472b6;gap:8px"><h3>Material 2</h3><div class="btns" id="m2"></div></div>
+  <div class="card out" style="--c:#4ade80;font-size:19px;line-height:1.5;flex:1"><h3>Snell's law</h3><div id="out"></div></div>
+ </div>
+</div>
+<script>
+const M=[['Air',1.00],['Oil',1.20],['Water',1.33],['Glass',1.52],['Plastic',1.72],['Diamond',2.42]];
+const sv=document.getElementById('sv'),OX=430,OY=200,RL=185;let n1=1,n2=1.52,th=40,nm1='Air',nm2='Glass';
+['m1','m2'].forEach(id=>document.getElementById(id).innerHTML=M.map(([n,v])=>`<button class="${id}b" data-v="${n}" style="padding:5px 9px">${n}</button>`).join(''));
+const tp1=el('rect',{x:0,y:0,width:860,height:OY,fill:'#7dd3fc','fill-opacity':.04},sv),bot=el('rect',{x:0,y:OY,width:860,height:400-OY,fill:'#f472b6','fill-opacity':.12},sv);
+el('line',{x1:0,x2:860,y1:OY,y2:OY,stroke:'#a5b4d8','stroke-width':2},sv);
+el('line',{x1:OX,x2:OX,y1:10,y2:390,stroke:'#a5b4d8','stroke-width':2,'stroke-dasharray':'8 7'},sv);txt(sv,OX-8,384,'normal',{fill:'#a5b4d8','font-size':16,'text-anchor':'end'});
+const t1=txt(sv,16,30,'',{fill:'#7dd3fc','font-size':19,'font-weight':700}),t2=txt(sv,16,388,'',{fill:'#f472b6','font-size':19,'font-weight':700});
+const cl=el('line',{stroke:'#fbb040','stroke-width':2,'stroke-dasharray':'3 6'},sv),clt=txt(sv,0,0,'',{fill:'#fbb040','font-size':16,'text-anchor':'end'});
+const ray=(c,w)=>el('line',{stroke:c,'stroke-width':w,'stroke-linecap':'round'},sv);
+const rRefl=ray('#fde68a',6),rRefr=ray('#fde68a',6),rInc=ray('#fde68a',6);
+const arr=()=>el('path',{fill:'#fde68a'},sv);const aInc=arr(),aRefl=arr(),aRefr=arr();
+const box=el('rect',{width:70,height:34,rx:6,fill:'#5b6690',stroke:'#eef2ff','stroke-width':2,style:'cursor:grab'},sv);
+const arc=c=>el('path',{fill:'none',stroke:c,'stroke-width':3},sv);const a1=arc('#7dd3fc'),a2=arc('#f472b6'),ar=arc('#7dd3fc');
+const l1=txt(sv,0,0,'',{fill:'#7dd3fc','font-size':18,'text-anchor':'end'}),l2=txt(sv,0,0,'',{fill:'#f472b6','font-size':18,'text-anchor':'start'}),lr=txt(sv,0,0,'',{fill:'#7dd3fc','font-size':18,'text-anchor':'start'});
+const pR=txt(sv,0,0,'',{fill:'#fde68a','font-size':17,'text-anchor':'start'}),pT=txt(sv,0,0,'',{fill:'#fde68a','font-size':17,'text-anchor':'start'});
+const tir=txt(sv,OX,OY+110,'Total internal reflection',{fill:'#fbb040','font-size':24,'font-weight':700,'text-anchor':'middle'});
+const d=Math.PI/180;
+function setL(e,x1,y1,x2,y2){e.setAttribute('x1',x1);e.setAttribute('y1',y1);e.setAttribute('x2',x2);e.setAttribute('y2',y2)}
+function head(p,x,y,ang){p.setAttribute('d',`M${x+14*Math.cos(ang)},${y+14*Math.sin(ang)}L${x-10*Math.cos(ang)+10*Math.sin(ang)},${y-10*Math.sin(ang)-10*Math.cos(ang)}L${x-10*Math.cos(ang)-10*Math.sin(ang)},${y-10*Math.sin(ang)+10*Math.cos(ang)}Z`)}
+function arcp(p,from,to,r){// angles in screen radians
+ const x1=OX+r*Math.cos(from),y1=OY+r*Math.sin(from),x2=OX+r*Math.cos(to),y2=OY+r*Math.sin(to);p.setAttribute('d',`M${x1},${y1}A${r},${r} 0 0 ${to>from?1:0} ${x2},${y2}`)}
+function fres(n1,n2,ti,tt){const ci=Math.cos(ti),ct=Math.cos(tt);const rs=((n1*ci-n2*ct)/(n1*ci+n2*ct))**2,rp=((n1*ct-n2*ci)/(n1*ct+n2*ci))**2;return (rs+rp)/2}
+function draw(){const ti=th*d,s2=n1*Math.sin(ti)/n2,TIR=s2>1;const tt=TIR?0:Math.asin(s2);const R=TIR?1:fres(n1,n2,ti,tt);
+ // incident from upper left: direction angle (screen) pointing to O
+ const ix=OX-RL*Math.sin(ti),iy=OY-RL*Math.cos(ti);setL(rInc,ix,iy,OX,OY);
+ const mx=OX-130*Math.sin(ti),my=OY-130*Math.cos(ti);head(aInc,mx,my,Math.atan2(OY-iy,OX-ix));
+ box.setAttribute('x',ix-35);box.setAttribute('y',iy-17);box.setAttribute('transform',`rotate(${Math.atan2(OY-iy,OX-ix)/d} ${ix} ${iy})`);
+ const rx=OX+RL*Math.sin(ti),ry=OY-RL*Math.cos(ti);setL(rRefl,OX,OY,rx,ry);head(aRefl,OX+130*Math.sin(ti),OY-130*Math.cos(ti),Math.atan2(ry-OY,rx-OX));
+ rRefl.setAttribute('stroke-opacity',Math.max(.12,Math.sqrt(R)));aRefl.setAttribute('fill-opacity',Math.max(.12,Math.sqrt(R)));rRefl.setAttribute('stroke-width',2+4*R);
+ const tx=OX+RL*Math.sin(tt),ty=OY+RL*Math.cos(tt);setL(rRefr,OX,OY,tx,ty);head(aRefr,OX+130*Math.sin(tt),OY+130*Math.cos(tt),Math.atan2(ty-OY,tx-OX));
+ [rRefr,aRefr,a2,l2].forEach(e=>e.style.display=TIR?'none':'');rRefr.setAttribute('stroke-opacity',Math.sqrt(1-R));rRefr.setAttribute('stroke-width',2+4*(1-R));
+ tir.style.display=TIR?'':'none';pR.textContent='reflected '+Math.round(R*100)+'%';pR.setAttribute('x',Math.min(Math.max(rx+10,OX+50),740));pR.setAttribute('y',Math.min(ry,OY-14));pT.textContent=TIR?'':'refracted '+Math.round((1-R)*100)+'%';pT.setAttribute('x',Math.min(tx+10,740));pT.setAttribute('y',Math.max(tx>OX+40?ty+4:ty-8,OY+24));
+ if(th>2){arcp(a1,-Math.PI/2-ti,-Math.PI/2,60);arcp(ar,-Math.PI/2,-Math.PI/2+ti,60);const b1=Math.min(ti+.3,80*d);l1.setAttribute('x',OX-70*Math.sin(b1));l1.setAttribute('y',OY-70*Math.cos(b1)+6);l1.textContent='θ₁ = '+th+'°';
+  lr.setAttribute('x',OX+70*Math.sin(b1));lr.setAttribute('y',OY-70*Math.cos(b1)+6);lr.textContent=th+'°'}
+ [a1,ar,l1,lr].forEach(e=>e.style.display=th>2?'':'none');
+ if(!TIR&&tt>.03){arcp(a2,Math.PI/2,Math.PI/2-tt,60);const b2=tt>55*d?tt-.4:tt+.3;l2.setAttribute('x',OX+70*Math.sin(b2));l2.setAttribute('y',OY+70*Math.cos(b2)+14);l2.textContent='θ₂ = '+(tt/d).toFixed(1)+'°'}else a2.style.display=l2.style.display='none';
+ const crit=n1>n2?Math.asin(n2/n1):null;cl.style.display=clt.style.display=crit?'':'none';
+ if(crit){setL(cl,OX,OY,OX-RL*1.1*Math.sin(crit),OY-RL*1.1*Math.cos(crit));clt.setAttribute('x',OX-RL*1.1*Math.sin(crit)-4);clt.setAttribute('y',OY-RL*1.1*Math.cos(crit)-6);clt.textContent='θc = '+(crit/d).toFixed(1)+'°'}
+ t1.textContent=`${nm1}, n₁ = ${n1.toFixed(2)}`;t2.textContent=`${nm2}, n₂ = ${n2.toFixed(2)}`;
+ const s=x=>x.toFixed(2);let o=`<div>${s(n1)} × sin ${th}° = ${s(n2)} × sin θ<sub>2</sub></div>`;
+ o+=TIR?`<div>sin θ<sub>2</sub> = ${s2.toFixed(2)} &gt; 1</div><div class="hi"><b>No refracted ray</b></div>`:`<div><b class="hi">θ<sub>2</sub> = sin<sup>−1</sup>(${s2.toFixed(3)}) = ${(tt/d).toFixed(1)}°</b></div><div style="font-size:17px"> ${th===0?'(no bend along the normal)':n2>n1?'(towards normal)':n2<n1?'(away from normal)':'(no bend)'}</div>`;
+ o+=crit?`<div style="margin-top:4px">θ<sub>c</sub> = sin<sup>−1</sup>(${s(n2)} ÷ ${s(n1)}) = <b class="hi">${(crit/d).toFixed(1)}°</b></div>`:`<div style="margin-top:4px;color:#a5b4d8;font-size:17px">No critical angle: n<sub>2</sub> ≥ n<sub>1</sub></div>`;
+ document.getElementById('out').innerHTML=o}
+const thr=slider('th',x=>x+'°',x=>{th=x;draw()});
+group('.m1b',v=>{nm1=v;n1=M.find(m=>m[0]===v)[1];draw()});group('.m2b',v=>{nm2=v;n2=M.find(m=>m[0]===v)[1];draw()});
+document.querySelector('.m1b[data-v=Air]').classList.add('on');document.querySelector('.m2b[data-v=Glass]').classList.add('on');
+let drag=false;const pt=e=>{const p=sv.createSVGPoint();p.x=e.clientX;p.y=e.clientY;return p.matrixTransform(sv.getScreenCTM().inverse())};
+const fromPt=e=>{const p=pt(e);let a=Math.atan2(OX-p.x,OY-p.y)/d;th=Math.round(Math.max(0,Math.min(89,a)));thr.value=th;document.getElementById('thv').textContent=th+'°';draw()};
+sv.addEventListener('pointerdown',e=>{if(pt(e).y<OY){drag=true;sv.setPointerCapture(e.pointerId);fromPt(e)}});sv.addEventListener('pointermove',e=>{if(drag)fromPt(e)});addEventListener('pointerup',()=>drag=false);
+sv.appendChild(cl);sv.appendChild(clt);draw();
+</script>
