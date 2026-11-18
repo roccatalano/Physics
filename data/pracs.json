@@ -1,0 +1,881 @@
+[
+ {
+  "id": "P1C-1",
+  "section": "1C",
+  "n": 1,
+  "title": "Finding the refractive index of an unknown material",
+  "file": "1C Practical 1C–1 Finding the refractive index of an unknown material.docx",
+  "aim": "The aim of this practical activity is to calculate the refractive index of an unknown material by comparing the incident and reflected rays. Pre-lab questions 1.  What is the difference between reflection and refraction?",
+  "materials": [
+   "Hodson light box",
+   "Battery pack or power supply",
+   "Lenses",
+   "Single slit plate",
+   "Paper protractors (2 semi-circle images or one full circular image)",
+   "Pencil",
+   "Graph paper"
+  ],
+  "safety": "",
+  "method": [
+   "Set up the Hodson light box with a single slit adjacent to the light source.",
+   "Place a paper protractor with the rounded edge facing the light in front of the light box.",
+   "Place a second protractor so it makes a full circle. Alternatively, print the image in the appendix to use as a protractor.",
+   "Initially aim the light along the normal (at 90 degrees) so that with no change the light will continue along the line of the normal.",
+   "Place the transparent object that you are measuring at the diameter of the protractor circle.",
+   "Modify the angle of incidence to all angles between 10 and 80 degrees. Keep in mind 10 degrees means 10 away from 90 and so on. You must calculate from the normal.",
+   "Record the angle of refraction for each from your paper protractor.",
+   "Graph the sin  (i)  against the sin  (r)  for your calculations. Find the gradient of this graph. This will give you the refractive index of the unknown material.",
+   "Research what the material might be made of based on the refractive index you calculate."
+  ],
+  "prelab": [],
+  "has": [
+   "Discussion"
+  ]
+ },
+ {
+  "id": "P2A-1",
+  "section": "2A",
+  "n": 1,
+  "title": "Convection in water",
+  "file": "2A Practical 2A–1 Convection in water.docx",
+  "aim": "To make the convective flow in water visible and to investigate the conditions under which convection occurs in a liquid.",
+  "materials": [
+   "Bunsen burner for Part 1",
+   "200 mL beaker",
+   "A straw or thin rigid tube",
+   "Tweezers",
+   "Crystals of potassium permanganate (KMnO₄)",
+   "Retort stand and heatproof mat",
+   "Heat lamp for Part 2 (or a desk lamp with incandescent bulb of at least 100 W)",
+   "Ice cubes for Part 3",
+   "Plastic bag and string or twist-ties for Part 3"
+  ],
+  "safety": "Care should be taken when using Bunsen burners and heat lamps. Ensure that water is not spilled on the heat lamp. Be mindful that the beakers and water will be hot, so should be handled carefully and placed securely on the heatproof mat and retort stand. Allow it to cool before disposing of the permanganate solution.",
+  "method": [
+   "Place the beaker of water on the retort stand.",
+   "Put the straw in the water (at an oblique angle).",
+   "Allow to stand undisturbed for 5 minutes.",
+   "Use tweezers to drop only 2 or 3 potassium permanganate crystals down the straw so they settle at the bottom of the beaker, to the side.",
+   "Carefully withdraw the straw, avoiding disturbing the water.",
+   "Place the Bunsen burner to the beaker under the crystals, and light it.",
+   "Observe and sketch the direction of currents in the water, inferred from movement of the purple colour.",
+   "Place a beaker of fresh water on the bench.",
+   "Place the heat lamp (turned off) so that it will shine on the top of the water surface.",
+   "Use same procedure as in Part 1 Steps 2–5 with crystals and straw.",
+   "Turn on the lamp.",
+   "Observe and sketch the direction of inferred currents in the water as before.",
+   "Place a beaker of fresh lukewarm water on the bench, with a retort stand over it.",
+   "Follow Steps 2–5 of Part 1.",
+   "Place some ice cubes in a plastic bag, squeeze out the air, and tie it closed with the string or twist-tie. Gently immerse the plastic bag in the water above the potassium permanganate crystals, so it hangs just below the water surface, and tie it to the retort stand.",
+   "Observe and sketch the direction of inferred currents in the water as before."
+  ],
+  "prelab": [
+   "What explains the change of density with temperature?",
+   "Should liquid of lower density move up through liquid of higher density when the liquid is heated from below?",
+   "Should liquid be heated from above or below if you want to minimise the amount of energy used to heat it?",
+   "Explain whether a heating method that warms all parts of a liquid by the same amount at the same time, would result in convection currents.",
+   "Examining the patterns of convection and the efficiency of heating from below in contrast to from above",
+   "Compare the direction of the currents in Parts 1–3 of the experiment in the spaces below by drawing a diagram, including arrows for any currents observed and their direction. Below the diagram, summarise in words whether the water was heated or cooled at the top or the bottom, and describe any currents observed. (2 marks for each part)"
+  ],
+  "has": [
+   "Prelab"
+  ]
+ },
+ {
+  "id": "P2A-2",
+  "section": "2A",
+  "n": 2,
+  "title": "Specific heat capacity of water",
+  "file": "2A Practical 2A–2 Specific heat capacity of water.docx",
+  "aim": "The aim of this practical activity is to calculate the specific heat capacity of water but also sharpening your thinking about how to modify conditions to reduce the error in your result.",
+  "materials": [
+   "Electric hotplate",
+   "Thermometers × 2, analogue or digital",
+   "250 mL beaker (beaker 1)",
+   "800 mL beaker (beaker 2)",
+   "Measuring cylinder or digital scale",
+   "Retort stand"
+  ],
+  "safety": "Care should be taken when using electricity. Be mindful that the beakers and hotplate will be hot so should be handled carefully, or allowed to cool, to avoid burns.",
+  "method": [
+   "Record the power rating of the hotplate in kW, then turn electric hotplate full on.",
+   "Set up the retort stand so that the clamp is above the centre of the hotplate.",
+   "Measure 200 mL or 200 g water into beaker 1. If using volume, note that",
+   "Place the beaker on the centre of the hotplate.",
+   "Clamp the thermometer in the retort stand and position so that the bulb or sensor is in the water.",
+   "In the table in the Results section, record the temperature of the water every minute until it reaches 90°C.",
+   "Measure 200 mL or 200 g water into beaker 2 and repeat from Step 4.",
+   "Plot a graph of temperature against time (in seconds) for each beaker in the grid in the Results section. Label the graph with title, axis titles, units and beaker number."
+  ],
+  "prelab": [
+   "What is the definition of specific heat capacity?",
+   "What is the definition of power in terms of energy?",
+   "In Q = mcΔT, what are Q, m, c and ΔT?",
+   "Finding the specific heat capacity of water",
+   "Find the gradient $\\frac{\\mathrm{\\Delta}T}{t}\\ $of the graph for beaker 1. (2 marks)",
+   "To calculate the specific heat capacity of the water in beaker 1, start with the thermal energy change formula Q = mcΔT."
+  ],
+  "has": [
+   "Prelab",
+   "Results"
+  ]
+ },
+ {
+  "id": "P3B-1",
+  "section": "3B",
+  "n": 1,
+  "title": "Alpha decay simulation",
+  "file": "3B Practical 3B–1 Alpha decay simulation.docx",
+  "aim": "To use an online simulation of alpha decay to determine whether knowing the half-life of an isotope means that the quantity of matter remaining at any specified time is certain. <Teacher note: This practical requires each student or group to have live access to an external website. It is recommended that teachers explore the simulator and familiarise themselves with it before the practical, since not all its features may work as expected. To avoid delays, it is also suggested that students check before the practical that they can access the site using the link below.>",
+  "materials": [
+   "the Single Atom and Multiple Atom tabs",
+   "the Pause ( || )and Play ( ) buttons",
+   "the Reset Nucleus and Reset All buttons",
+   "the Choose Nucleus panel",
+   "the Time (secs) scale, on which time of decay can be measured, to compare to the published half-life of ²¹¹Po (marked in red)",
+   "the yellow or green slider on the red half-life line, found in the multiple atoms tab with Custom nucleus selected."
+  ],
+  "safety": "",
+  "method": [
+   "Start on the Single Atom tab and observe the decay of polonium-211.",
+   "Did you find the graph at the bottom helpful or not? Explain.",
+   "Consult a copy of the periodic table or other resources to determine the difference between polonium-211 and lead-207. Refer to their mass numbers, atomic numbers, and numbers of protons and neutrons.",
+   "Predict the decay product of the following isotopes when they undergo alpha decay:",
+   "Click on the Multiple Atoms tab and run a simulation with 10 atoms. Try with more atoms, and also with Custom Nucleus selected, which allows you to change the half-life setting. Note any additional or modified ideas that your exploration of the simulation gives you about radioactive decay and half-lives.",
+   "Click on the Multiple Atoms tab.",
+   "Run three trials of the decay of 10 atoms of ²¹¹Po, recording the half-life in a table.",
+   "Repeat for multiples of 10 atoms up to 100 atoms, recording the half-life in a table each time.",
+   "Describe what you notice about your data for half-life in terms of:",
+   "Now run a simulation with 100 atoms of polonium-211, clicking the Pause button when there are 50 undecayed atoms left. Record the elapsed time and press Play, pausing again and recording the time when 25, 13 and 6 undecayed atoms are left. Carry out three trials and average the times recorded. Record your results in the table and then plot the graph of the number of undecayed atoms against average time on the grid below.",
+   "In your own words, describe what ‘half-life’ means.",
+   "This part of the investigation tests your understanding of half-life through prediction."
+  ],
+  "prelab": [
+   "What is meant by half-life of a radioactive isotope of an element?",
+   "Is the decay of an atom dependant on the decay of any other atoms?",
+   "What charge is carried by the alpha particle?",
+   "Use a simulation of alpha decay to test concepts of nuclear decay and the half-life of a radioactive isotope",
+   "Write down the alpha decay reaction equation for ₈₄²¹¹Po. (1 mark)",
+   "The half-life of polonium-211 is 0.51 s. If you start with 10 atoms of that isotope, is it reasonable to assume that 0.51 s later only 5 will remain? Explain why or why not. (2 marks)"
+  ],
+  "has": [
+   "Prelab"
+  ]
+ },
+ {
+  "id": "P3B-2",
+  "section": "3B",
+  "n": 2,
+  "title": "Beta decay simulation",
+  "file": "3B Practical 3B–2 Beta decay simulation.docx",
+  "aim": "To use an online simulation of beta decay to determine whether the concept of half-life in alpha decay is also valid for beta decay. Note: β⁺ decay with emission of positron is not included in this practical. <Teacher note: It is assumed Practical 3A–1 Alpha decay has already been done. This practical requires each student or group having live access to an external website. It is recommended that teachers explore the simulator and familiarise themselves with it before the practical, since not all its features may work as expected. To avoid delays, it is also suggested that students check before the practical that they can access the site using the link below.>",
+  "materials": [
+   "the Single Atom and Multiple Atom tabs",
+   "the Pause ( || )and Play ( ) buttons",
+   "the Reset Nucleus and Reset All buttons",
+   "the Choose Nucleus panel, with hydrogen-3, carbon-14 or Custom options",
+   "the Time scale, on which time of decay can be measured, to compare to the",
+   "the yellow or green slider on the red half-life line, found when the Custom nucleus is selected, in both the single and multiple atoms tabs."
+  ],
+  "safety": "",
+  "method": [
+   "Start on the Single Atom tab and observe the decay of hydrogen-3 and carbon-14.",
+   "Explore the Custom nucleus setting and try changing the half-life using the slider. Write down any changes or additions to your description above.",
+   "Consult a copy of the periodic table or other resources to summarise the difference between atoms of hydrogen-3 and carbon-14 and their decay products.",
+   "Predict the decay products of the following isotopes undergoing decay:",
+   "Click on the Multiple Atoms tab.",
+   "Now run a simulation with 100 atoms of hydrogen-3, clicking the Pause button when there are 50 undecayed atoms left. Record the elapsed time and press Play, pausing again and recording the time when 25, 13 and 6 undecayed atoms are left. Carry out three trials and average the times recorded.",
+   "This part of the investigation tests your understanding of half-life through prediction."
+  ],
+  "prelab": [
+   "Carry out information research to find examples of isotopes of elements in the periodic table that decay by emitting β ⁻ particles (electrons).",
+   "What charge is carried by β ⁻ particles?",
+   "What are alpha particles and what is their charge?",
+   "Use a beta decay simulation to test ideas of the process compared to alpha decay",
+   "Explain why in Part 2 Step 2, these numbers of undecayed atoms been chosen as the levels at which the time is measured: 50, 25, 13 and 6. (3 marks)",
+   "Consider your results from Part 2 Step 2 of the practical."
+  ],
+  "has": [
+   "Prelab"
+  ]
+ },
+ {
+  "id": "P3C-1",
+  "section": "3C",
+  "n": 1,
+  "title": "Calculating half-life from a simulation",
+  "file": "3C Practical 3C–1 Calculating half-life from a simulation.docx",
+  "aim": "To model the number of undecayed and decayed atoms in a radioactive isotope sample using a probability experiment, showing how the half-life of a radioisotope is calculated, and the effect of the size of the starting numbers. <Teacher note: Teachers should instruct students on the policy for eating/not eating the M&Ms used in this practical, e.g. ‘you can eat decayed M&Ms as you go’ (depending on whether any have to be reused), or ‘no eating of the M&Ms during the practical, at the end you can divide them up to eat in the break’.>",
+  "materials": [
+   "100 chocolate M&Ms (do not use peanut M&Ms), there are about 200 in a 180 g packet, so one packet should be enough for two groups. The trial 1 M&Ms could be re-used in trial 2, then only 80 will be needed for each group. (Other brands of lolly could be used, as long as they have an equal chance of landing on either side, i.e. they are symmetrical, and a mark that distinguishes the sides).",
+   "A cup",
+   "Clean sheets of paper or trays",
+   "Coloured pencils or textas for different plotlines on graphs"
+  ],
+  "safety": "",
+  "method": [
+   "For trial 1, place 20 M&Ms into the cup.",
+   "Shake the cup and pour the M&M’s onto the paper or tray.",
+   "The M&Ms with the printed ‘M’ side up are regarded as ‘decayed’. Remove them from the trial and returning them to the packet. Record the number of ‘undecayed’ M&Ms remaining and in table in the Results section against ‘shake and pour’ event number 1. Record the next ‘shake and pour’ event as number 2, and so on.",
+   "Return the undecayed M&Ms to the cup and repeat Steps 2 and 3, recording the number of undecayed M&Ms in the table in the Results section against the shake and pour event number, until there are none left, or until 12 events have been carried out.",
+   "Repeat Steps 1–4 as the second trial, this time with 80 M&Ms.",
+   "Plot a graph of the results from the table in the Results section on the grid provided, using different colours for the plotlines of the two trials. Include a key. Note that the axis for trial 1 is on the left, the axis for trial 2 is on the right and they are not to the same scale. This is so the shape of the curves can be compared at the same size.",
+   "Use the graph to determine the half-life of M&Ms in terms of the number of pours."
+  ],
+  "prelab": [
+   "1 × 10⁶ atoms of a radioactive isotope start decaying and after 24 seconds there are 5 × 10⁵ undecayed atoms left. From this point, how long will it take on average for half of these to decay? Give your reasoning.",
+   "Is the decay of an atom in a sample of an isotope dependant on the decay of the neighbouring atoms?",
+   "A sample of a radioactive isotope decays for one half-life.",
+   "a.  After that time has elapsed, what is the chance that a single atom in the sample is observed to be decayed?",
+   "b.  Give an example of a simple probability trial (experiment) with two outcomes, a 50% chance of either happening and that could be used to model undecayed/decayed atoms in a sample.",
+   "Calculating half-life"
+  ],
+  "has": [
+   "Prelab",
+   "Results"
+  ]
+ },
+ {
+  "id": "P3E-1",
+  "section": "3E",
+  "n": 1,
+  "title": "Protection against radiation",
+  "file": "3E Practical 3E–1 Protection against radiation.docx",
+  "aim": "To investigate the shielding required for protection from external α-, β- and γ-radiation. <Teacher note: This practical requires the use of ionising radiation sources. Safety precautions are imperative. It may be done as a teacher demonstration rather than a student practical. See the safety notes below the material list. It is advisable to test the set-up with the sheets before the practical, to test the ideal distances of source, sheet and detector, so that the expected number of counts will be recorded in a minute.>",
+  "materials": [
+   "Alpha, beta and gamma sources produced for school laboratory use, sealed and complete with safe handling instructions",
+   "Stand and clamp to hold source",
+   "Radiation detector with stand and clamp",
+   "Counter and powerpack for the detector",
+   "Sheets of cardboard, aluminium, lead and, at the teacher’s discretion, sheets of other materials such as cloth, polythene, rubber and a lead block",
+   "Stand to hold the sheets between source and detector. Some sheets may need to be held at the top rather than the bottom.",
+   "Tongs",
+   "Gloves",
+   "Stopwatch",
+   "Ruler"
+  ],
+  "safety": "-   Care should be taken when using radioactive sources. Since radiation is invisible, it is important to be aware of the dangers involved. -   Always handle radioactive sources with a pair of tongs and wear gloves. -   Avoid having the sources close to your body. -   Never damage the container in which the radioisotope is held. -   Make sure all radioactive sources are in a lead lined container when not in use.",
+  "method": [
+   "Set up the apparatus as shown in the diagram below.",
+   "With all the radiation sources in their lead box, obtain a background radiation count by leaving the counter on for 3 minutes. Average this to calculate the number of counts per minute for the background value.",
+   "Place the alpha source (open side toward detector tube) about 5–10 mm away from the end of the detector tube and record the number of counts in 1 minute, as timed by the stopwatch. Subtract the background value from the recorded value to get the actual count from the source.",
+   "Now place a sheet of cardboard between the source and the tube. Record the counts in 1 minute and subtract the background count to get the actual count. Repeat this process with the other sheets chosen for the practical. Write names in the blank column headers in the table in the Results section.",
+   "Replace the alpha source with a beta source (radiation symbol toward detector) and repeat Steps 2 and 3.",
+   "Now replace the beta source with a gamma source (radiation symbol toward detector) and repeat Steps 2 and 3.",
+   "Also, using the lead block if required, determine how many millimetres of lead are required to effectively stop the gamma rays completely (i.e. reduce the count to the background level)."
+  ],
+  "prelab": [
+   "What type of particle or wave each comprises alpha, beta and gamma radiation?",
+   "What are the principal safety precautions around the use and handling of alpha, beta and gamma radiation sources?",
+   "What two physical properties of material used for shielding are most important in affecting the penetrating power of radiation from nuclear decay?",
+   "Protection against radiation",
+   "Summarise the minimum levels of shielding protection required (in terms of material) against the three types of ionising radiation in this practical. (3 marks)",
+   "Thinking about the role of shielding, what are the particular dangers of internal radiation? What does this mean for ingestion or inhalation of sources of α-, β- and γ-radiation, such as polonium-210 (an α-emitter) and lead-210 (a β-emitter) in cigarette smoke? (4 marks)"
+  ],
+  "has": [
+   "Prelab",
+   "Results"
+  ]
+ },
+ {
+  "id": "P4A-1",
+  "section": "4A",
+  "n": 1,
+  "title": "Nuclear fission simulation",
+  "file": "4A Practical 4A–1 Nuclear fission simulation.docx",
+  "aim": "To use an online simulation of nuclear fission to understand the process and what factors affect its rate, and how it can be controlled in nuclear reactors. <Teacher note: This practical requires each student or group to have live access to an external website. It is recommended that teachers explore the simulator and familiarise themselves with it before the practical, since not all its features may work as expected. To avoid delays, it is also suggested that students check before the practical that they can access the site using the link below.>",
+  "materials": [
+   "Pause ( || )and Play ( ) buttons",
+   "the red ‘fire’ button on the neutron gun (simulation must be playing)",
+   "the Reset Nucleus button which appears after firing.",
+   "to set the proportion of uranium-235 to uranium-238 nuclei (note some combinations aren’t possible)",
+   "to add a containment vessel",
+   "to read of the number of uranium-235 atoms fissioned",
+   "Note that if the fired neutron misses all the fissile nuclei, you can drag the mouth of the neutron gun to aim it.",
+   "the Control Rod Adjuster, the Fire Neutrons button and the Reset Nuclei button",
+   "the thermometer graphic display for temperature and the Energy Graphs pane."
+  ],
+  "safety": "",
+  "method": [
+   "Describe what happens when the uranium-235 nucleus is hit with a neutron. Use the Pause button when needed. Use Reset Nucleus to watch the process repeatedly.",
+   "What is emitted that is not included in the ‘Legend’ (key)?",
+   "U-235 100 Nuclei: Click the Reset All button and then set the initial number of uranium-235 nuclei to 100 and uranium-238 to 0. What happens when you fire the neutron gun (that differs from your answer to Part 1 Step 1)?",
+   "U-235 100 Nuclei: Explain what makes this a chain reaction.",
+   "Fewer U-235 nuclei: Continuing with the Containment Vessel box unticked and uranium-238 set to zero, explore using lower numbers of uranium-235. Try to find if there is a lowest number of uranium-235 nuclei that will produce a chain reaction that fissions all nuclei fission from firing one neutron.",
+   "U-238 100 Nuclei: Click Reset All and then set the initial number of uranium-238 nuclei to 100 and uranium-235 to 0. Explain what happens when you fire the gun. Try different numbers of uranium-238 nuclei, keeping uranium-235 to zero, and try to start a chain reaction with the uranium-238.",
+   "U-235 50 Nuclei and U-238 50 Nuclei: Click Reset All and set uranium-235 to 50 nuclei and uranium-238 to 50 nuclei. Aim the gun at a nearby cluster of uranium-235 and fire. Note the percentage of uranium-235 nuclei fissioned at the end. Repeat the simulation for five trials and say whether 100% of the uranium-235 nuclei fissioned in any of these.",
+   "Varying U-235 and U-238 nuclei numbers: Repeat Step 5 above, varying the numbers of uranium-235 and uranium-238 nuclei to find the highest number of uranium-238 and lowest number of uranium-235 where 100% of the uranium-235 are likely to fission. Describe and explain your findings.",
+   "Control rods fully inserted: Carry out three trials of firing the neutrons with the control rods fully inserted, noting where fission starts and proceeds and what was displayed in the energy bar graphs.",
+   "Control rods withdrawn halfway: Carry out three trials of firing the neutrons with the control rods withdrawn halfway, noting where fission starts and proceeds and what was displayed in the energy bar graphs.",
+   "Control rods fully withdrawn: Carry out three trials of firing the neutrons with the control rods fully withdrawn, noting where fission starts and proceeds and what was displayed in the energy bar graphs.",
+   "Control rods fully withdrawn then reinserted: Carry out three trials of firing the neutrons with the control rods fully withdrawn and watch the temperature display. When the temperature exceeds the halfway mark on the thermometer, quickly insert the control rods fully and note what happens."
+  ],
+  "prelab": [
+   "What is a chain reaction?",
+   "What do control rods do in a nuclear reactor to control the reaction, and how can a nuclear fission chain reaction be slowed and even stopped completely?",
+   "In the naturally occurring ores of an element, there is frequently more than one isotope present. What is the name of the process that increases the proportion of the desirable isotope in the element, and why is this done in the case of uranium?",
+   "Nuclear fission simulation",
+   "In the simulations, after a nucleus fission, there are loose neutrons flying about.",
+   "a.  What happens when a loose neutron hits a uranium-235, uranium-238 and uranium-239 nucleus? (3 marks)"
+  ],
+  "has": [
+   "Prelab"
+  ]
+ },
+ {
+  "id": "P5B-1",
+  "section": "5B",
+  "n": 1,
+  "title": "Using an ammeter and voltmeter in electrical circuits",
+  "file": "5B Practical 5B–1 Using an ammeter and voltmeter in electrical circuits.docx",
+  "aim": "To position ammeters and voltmeters correctly in an electrical circuit. In a simple electrical circuit comprising a power supply and a few loads (of any type) measure the current in the circuit and the voltage across various loads or supply by judicious placement of ammeters and voltmeters respectively.",
+  "materials": [
+   "Battery pack or power supply",
+   "Wires with plugs or clips (or a prepared circuit board)",
+   "Three loads (of any type: resistors, bulbs, ohmic or non-ohmic)",
+   "Ammeter (or 3 if sufficient available)",
+   "Voltmeter (or 4 if available) or multimeters"
+  ],
+  "safety": "Care should be taken when using electricity. Even low voltage sources will produce a spark or mild shock. Be careful to position ammeter correctly in the circuit to avoid short-circuiting the load. When using a multimeter, ensure correct mode (voltmeter or ammeter) is selected before turning on and before connecting in the circuit.",
+  "method": [
+   "Connect the elements as shown in the circuit diagram.",
+   "Do not turn on the power supply until the circuit has been checked by the teacher.",
+   "Measure the current using the ammeter (or the multimeter switched to ammeter mode).",
+   "Change the position of the ammeter to each of the positions shown as dotted circles in Circuit diagram 2 (below) and record the current at each position.",
+   "Rebuild the circuit using the voltmeter (or multimeter selected for voltage).",
+   "Place the voltmeter as seen in Circuit diagram 3 (below).",
+   "Record the voltage.",
+   "Move the voltmeter to the position parallel to the power supply (or battery pack) shown in Circuit diagram 4 (or use a second meter).",
+   "Record the voltage at each position.",
+   "Add two more loads to the circuit (as in Circuit diagram 2).",
+   "Using a voltmeter, record the voltage across each of the three loads."
+  ],
+  "prelab": [
+   "What is a fundamental difference between an ammeter and a voltmeter?",
+   "Why is the ammeter positioned in series with a load?",
+   "Why does a voltmeter have a very large internal resistance?",
+   "Using an ammeter and voltmeter in electrical circuits",
+   "Compare the current measured at each position in Circuit 2. Is the comparison as you expected? Explain why or why not. (1 mark)",
+   "Compare the voltage measured at each position in Circuit 4. Is the comparison as you expected? Explain why or why not. (1 mark)"
+  ],
+  "has": [
+   "Prelab"
+  ]
+ },
+ {
+  "id": "P5C-1",
+  "section": "5C",
+  "n": 1,
+  "title": "Using resistors in series",
+  "file": "5C Practical 5C–1 Using resistors in series.docx",
+  "aim": "To measure the effect on total resistance in a circuit of adding more resistors in series. In a simple electrical circuit comprising of a power supply and three resistors measure firstly the current in the circuit through, and the voltage across, each resistor separately, and then measure the current through, and the voltage supply to, all three resistors in the circuit.",
+  "materials": [
+   "Variable electrical power supply",
+   "Wires with plugs or clips (or a prepared circuit board)",
+   "Ohmic resistors × 3",
+   "Ammeter (or multimeter)",
+   "Voltmeter or 3 if available (or multimeters)"
+  ],
+  "safety": "Care should be taken when using electricity. Even low-voltage sources will produce a spark or mild shock. Be careful to position ammeter correctly in the circuit to avoid short-circuiting the load. When using a multimeter, ensure correct mode (voltmeter or ammeter) is selected before turning on and before connecting in the circuit.",
+  "method": [
+   "Connect the elements as shown in the circuit diagram below.",
+   "Do not turn on the power supply until the circuit has been checked by the teacher.",
+   "Select the smallest voltage setting on the power supply.",
+   "Measure the current using the ammeter (or the multimeter switched to ammeter mode).",
+   "Measure the voltage across each resistor.",
+   "Measure the voltage of the power supply (use a fourth voltmeter or remove one of the others).",
+   "In the table below, record the current in the circuit and the voltage for each resistor.",
+   "Plot I–V for each resistor and I–V_(supply) on one graph."
+  ],
+  "prelab": [
+   "What is Ohm’s law?",
+   "To which parts of a circuit does Ohm’s law apply?",
+   "If the components in a circuit are ohmic, what value could be calculated from the slope of a current–voltage graph?",
+   "Using resistors in series",
+   "Calculate the gradient for each plot on the graph. From that, as in Question 3 in the Prelab, calculate the resistance of each resistor and the effective resistance of the circuit. (1 mark)",
+   "Compare the calculated resistance (that is, the experimental resistance) of each resistor to the nominal resistance that is coded or written on the resistor. What is the usual tolerance of resistance of resistors? Is the expected value within the range of the experimental value? (1 mark)"
+  ],
+  "has": [
+   "Prelab"
+  ]
+ },
+ {
+  "id": "P5D-1",
+  "section": "5D",
+  "n": 1,
+  "title": "Using resistors in parallel",
+  "file": "5D Practical 5D–1 Using resistors in parallel.docx",
+  "aim": "To measure the effect on total resistance in a circuit of adding more resistors in parallel. In a simple electrical circuit comprising of a power supply and three resistors in parallel, measure firstly the current in the circuit through, and the voltage across, each resistor separately. Then measure the current through, and the voltage supply to, all three resistors in the circuit.",
+  "materials": [
+   "Variable electrical power supply",
+   "Wires with plugs or clips (or a prepared circuit board)",
+   "Ohmic resistors (or light bulbs if resistors not available) × 3",
+   "Voltmeter (or multimeter)",
+   "Ammeter or 3 if available (or multimeters)"
+  ],
+  "safety": "Care should be taken when using electricity. Even low-voltage sources will produce a spark or mild shock. Be careful to position the ammeter correctly in the circuit to avoid short-circuiting the load. When using a multimeter, ensure correct mode (voltmeter or ammeter) is selected before turning on and before connecting in the circuit.>",
+  "method": [
+   "Connect the elements as shown in Circuit diagram 1 (below). Replace the light bulbs with resistors if available.",
+   "Do not turn on the power supply until the circuit has been checked by the teacher.",
+   "Measure and record the voltage of the power supply.",
+   "Measure the current in the branch of R₁ with A₁, and of A with the power supply.",
+   "Add another resistor in parallel to the first resistor (as in Circuit diagram 2).",
+   "Measure the current in each position, at A₁, A₂ and at A.",
+   "Measure the voltage across the power supply.",
+   "Add another resistor in parallel to the first two resistors (as below in Circuit diagram 3).",
+   "Measure the current in each position, at A₁, A₂, A₃ and at A.",
+   "Measure the voltage across the power supply."
+  ],
+  "prelab": [
+   "What is Ohm’s law?",
+   "To which parts of the parallel elements in a circuit does Ohm’s law apply?",
+   "If three components in a circuit are in parallel branches, how would the voltage across the ends of each branch compare?",
+   "Using resistors in parallel",
+   "What is the comparison between the current at A and A₁ in Circuit 1; between A and the sum of currents A₁ and A₂ in Circuit 2; and between A and the sum of A₁, A₂ and A₃ in Circuit 3. (2 marks)",
+   "For each circuit, calculate the resistance (that is, the experimental resistance) of each resistor (R₁, R₂, R₃) by using Ohm’s law. Use the calculated resistances to estimate R_(effective) in Circuit 3 and compare to the experimental value of R_(effective). (3 marks)"
+  ],
+  "has": [
+   "Prelab",
+   "Extension"
+  ]
+ },
+ {
+  "id": "P6A-1",
+  "section": "6A",
+  "n": 1,
+  "title": "Non-ohmic resistor (a light bulb)",
+  "file": "6A Practical 6A–1 Non-ohmic resistor (a light bulb).docx",
+  "aim": "To show the nature of current dependency on electric potential energy difference (voltage) in a non-ohmic load (a light bulb). In a simple electrical circuit comprising of a variable power supply and a light bulb, measure the current in the circuit through, and the voltage across, the light bulb, and then display the current and voltage in a graph.",
+  "materials": [
+   "Variable electrical power supply",
+   "Wires with plugs or clips (or a prepared circuit board)",
+   "Light bulb",
+   "Ammeter (or multimeter)",
+   "Voltmeter (or multimeter)"
+  ],
+  "safety": "Care should be taken when using electricity. Even low-voltage sources will produce a spark or mild shock. Be careful to position the ammeter correctly in the circuit to avoid short-circuiting the load. When using a multimeter, ensure correct mode (voltmeter or ammeter) is selected before turning on and before connecting in the circuit.>",
+  "method": [
+   "Connect the elements as shown in the circuit diagram below.",
+   "Do not turn on the power supply until the circuit has been checked by the teacher.",
+   "Select the smallest voltage setting on the power supply.",
+   "Measure the current using the ammeter (or the multimeter switched to ammeter mode).",
+   "Measure the voltage across the light bulb.",
+   "In the table below, record the current in the circuit and the voltage for each resistor.",
+   "Repeat Steps 3, 4 and 5 with successively larger voltages of the power supply (do not exceed the voltage rating of the bulb)."
+  ],
+  "prelab": [
+   "What is Ohm’s law?",
+   "If the components in a circuit are not ohmic, which of the curves in this graph represent the current–voltage characteristics?",
+   "Non-ohmic resistor (a light bulb)"
+  ],
+  "has": [
+   "Prelab"
+  ]
+ },
+ {
+  "id": "P6A-2",
+  "section": "6A",
+  "n": 2,
+  "title": "A light dependent resistor (LDR)",
+  "file": "6A Practical 6A–2 A light dependent resistor (LDR).docx",
+  "aim": "To show the change in output voltages of parts of an electrical circuit when light shines on a light dependent resistor LDR. In a simple electrical circuit comprising of a power supply, a light dependent resistor LDR, and a light bulb, measure the voltage across the LDR, and the light bulb, for varying intensities of light shining on the LDR.",
+  "materials": [
+   "Electrical power supply",
+   "Wires with plugs or clips (or a prepared circuit board)",
+   "Light dependent resistor (LDR)",
+   "Light bulb (or a resistor)",
+   "Voltmeter(s) (or multimeters)",
+   "Small cardboard box (or similar) to be placed over the LDR"
+  ],
+  "safety": "Care should be taken when using electricity. Even low-voltage sources will produce a spark or mild shock. When using a multimeter, ensure the correct mode (voltmeter or ammeter) is selected before turning on and before connecting in the circuit, otherwise ammeter mode incorrectly positioned in the circuit could short-circuit the load.",
+  "method": [
+   "Connect the components as shown in the circuit diagram below.",
+   "Place the box over the LDR.",
+   "Select a supply voltage that is equal to the nominal operating voltage of the light bulb.",
+   "Do not turn on the power supply until the circuit has been checked by the teacher.",
+   "Measure (in the position marked ‘Output’ on the circuit diagram) the voltage using the voltmeter (or the multimeter switched to voltmeter mode) across the LDR.",
+   "Move the voltmeter (or use a second voltmeter if available) to measure the voltage across the light bulb.",
+   "Repeat Steps 5 and 6 without the box covering the LDR.",
+   "Repeat Steps 5 and 6 with the direct light of a desk lamp, or direct sunlight, shining on the LDR."
+  ],
+  "prelab": [
+   "For constant supply voltage in a circuit that includes a series resistor, what effect does decreasing the light shining on the LDR have on the output voltage, V_(out), across the transducer?",
+   "For a circuit such as described in Question 1, what effect does increasing the light shining on the LDR have on the voltage, V_(out)?",
+   "A light dependent resistor (LDR)",
+   "If a bulb was used in the circuit, how does the light output of the bulb compare to the lighting on the LDR? (If a resistor was used instead of an LDR, how does the voltage across the resistor compare to the lighting on the LDR?) Why? (2 marks)",
+   "If a bulb or buzzer was connected in parallel to the LDR (that is in place of the voltmeter at the position marked ‘Output’ on the circuit diagram), what would happen when no light shone on the LDR? Why? (2 marks)",
+   "Answers provided in the online Teacher Resources."
+  ],
+  "has": [
+   "Prelab"
+  ]
+ },
+ {
+  "id": "P6A-3",
+  "section": "6A",
+  "n": 3,
+  "title": "Voltage across a thermistor",
+  "file": "6A Practical 6A–3 Voltage across a thermistor.docx",
+  "aim": "To show the change in output voltages of a circuit with a variable resistor in series with a thermistor. In a simple electrical circuit comprising of a power supply, a thermistor and a variable resistor, measure the voltage across variable resistor, and across the thermistor for varying temperatures of a water bath containing the thermistor.",
+  "materials": [
+   "Electrical power supply",
+   "Wires with plugs or clips (or a prepared circuit board)",
+   "Thermistor",
+   "Water bath",
+   "Variable resistor",
+   "Voltmeter(s) (or multimeters)",
+   "A source of water of differing temperatures",
+   "Thermometer (analogue or digital)"
+  ],
+  "safety": "Care should be taken when using electricity. Even low-voltage sources will produce a spark or mild shock. When using a multimeter, ensure the correct mode (voltmeter or ammeter) is selected before turning on and before connecting in the circuit, otherwise ammeter mode incorrectly positioned in the circuit could short-circuit the load.",
+  "method": [
+   "Connect the elements as shown in the circuit diagram below.",
+   "Set the variable resistor []at some low value (but not zero).",
+   "Place the thermistor in a bath of iced water.",
+   "Select a supply voltage that is not more than the nominal operating voltage of the thermistor.",
+   "Do not turn on the power supply until the circuit has been checked by the teacher.",
+   "Measure (in the position marked ‘V’ on the circuit diagram) the voltage using the voltmeter (or the multimeter switched to voltmeter mode) across the thermistor.",
+   "Move the voltmeter (or use a second voltmeter if available) to measure the voltage across the variable resistor.",
+   "Measure the temperature of the water.",
+   "Repeat Steps 6, 7 and 8 with water at room temperature in the bath.",
+   "Repeat Steps 6, 7 and 8 with water at near boiling temperature.",
+   "Refill the bath with water at room temperature.",
+   "Increase slightly the resistance of the variable resistor.",
+   "Measure (in the position marked ‘V’ on the circuit diagram) the voltage using the voltmeter (or the multimeter switched to voltmeter mode) across the thermistor.",
+   "Move the voltmeter (or use a second voltmeter if available) to measure the voltage across the variable resistor.",
+   "Measure the temperature of the water.",
+   "Increase the resistance of the variable resistor to about half of the maximum.",
+   "Repeat Steps 13, 14 and 15.",
+   "Increase the resistance of the variable resistor to near maximum.",
+   "Repeat Steps 13, 14 and 15."
+  ],
+  "prelab": [
+   "For constant supply voltage in a circuit that includes a series resistor, what effect does increasing the temperature of the NTC thermistor have on the output voltage, V_(out), across the thermistor?",
+   "If the circuit described in Question 1 is at constant temperature, what effect does increasing the resistance on the variable resistor have on the voltage, V_(out), of the thermistor?",
+   "Voltage across a thermistor",
+   "What is the relationship between temperature and output voltage across the thermistor? Why? (2 marks)",
+   "What is the relationship between the voltages across the variable resistor and across the thermistor at constant temperature? Why? (2 marks)",
+   "The resistance of the NTC thermistor decreases for increasing temperature, so the resistance of the thermistor will be a decreasing fraction of the total resistance of the circuit. Therefore, the voltage across the thermistor will decrease. (2 marks)."
+  ],
+  "has": [
+   "Prelab",
+   "Extension"
+  ]
+ },
+ {
+  "id": "P7A-1",
+  "section": "7A",
+  "n": 1,
+  "title": "Drawing vectors",
+  "file": "7A Practical 7A–1 Drawing vectors.docx",
+  "aim": "To give a practical understanding of vectors, including components of vectors and vector addition. Question 1: Components of vectors For each of the following vectors, write down the appropriate components in the table below the diagram. The first one has been done for you. (5 marks)",
+  "materials": [],
+  "safety": "",
+  "method": [],
+  "prelab": [],
+  "has": []
+ },
+ {
+  "id": "P7B-1",
+  "section": "7B",
+  "n": 1,
+  "title": "Motion graphs",
+  "file": "7B Practical 7B–1 Motion graphs.docx",
+  "aim": "To build a practical understanding of motion graphs. Background Displacement, velocity and acceleration are three interrelated vector quantities all requiring a magnitude and direction. The relationship between the three can be demonstrated graphically and analytically. Devise a real-life example that demonstrates one of the following types of motion, as allocated and instructed by your teacher.",
+  "materials": [],
+  "safety": "",
+  "method": [],
+  "prelab": [],
+  "has": []
+ },
+ {
+  "id": "P7C-1",
+  "section": "7C",
+  "n": 1,
+  "title": "Water rockets",
+  "file": "7C Practical 7C–1 Water rockets.docx",
+  "aim": "Find the volume of water in a water rocket that will give the greatest flight duration or height.",
+  "materials": [
+   "Stopwatch, clinometer or both",
+   "Water bottle rocket (see diagram above) including a plastic soda bottle with fins attached",
+   "Launch tube or other type of launcher to which the bottle and air pump can be attached",
+   "Bike pump, preferably with air pressure gauge, and tube to connect securely to the launch tube",
+   "Water",
+   "Measuring cylinder to measure out volume of water (or electronic scales if measuring mass of water instead)",
+   "Funnel to pour water into the bottle"
+  ],
+  "safety": "-   All students must wear safety glasses at all times. -   The launch tube or other launch device must be placed securely in the ground so that it points vertically upwards without leaning or falling over. -   Students must not angle the rockets at any angle other than 90° to the ground at all times, especially when pressurised. -   Students should not exceed a maximum pressure of 50 psi (3.5 bar) on the pump’s air pressure gauge. If a rocket does not launch by the time the maximum is reached, students should consult the teacher to depressurise the rocket safely. -   All launches must be conducted in a space that is approximately a 30 m radius away from other people, trees and buildings. It is assumed that the same rocket and launcher will be used by all students. If more than one bottle rocket and launcher is available, they should be no closer than 30 m apart.",
+  "method": [
+   "Measure the desired amount of water and place it into the water bottle.",
+   "Attach the bottle rocket, complete with fins, to the launch tube.",
+   "Attach the bike pump to the launch tube.",
+   "Secure the launch tube on the ground ensuring it is perpendicular to the horizontal, and that it cannot lean or fall over.",
+   "Pump at an even rate until the water bottle rocket launches. At least one person should observe the air pressure gauge and call a halt if the maximum is reached.",
+   "Measure the duration of flight using a stopwatch or measure the height of the rocket with a clinometer.",
+   "Repeat Steps 4–9 with varying amounts of water, as worked out at Step 3.",
+   "Results should be recorded in an appropriate table. The average flight duration or height reached should be calculated for each volume or mass of water used."
+  ],
+  "prelab": [
+   "Answer the following questions about the variables in this experiment.",
+   "a.  What is the dependant variable for this experiment? (1 mark)",
+   "b.  What is the independent variable for this experiment? (1 mark)",
+   "c.  List at least four controlled variables for this experiment. (4 marks)",
+   "In the space below, construct a table with columns and column headers that can record all appropriate information for all groups participating in the experiment. Show just one blank row for the data. (3 marks)",
+   "If using flight duration instead of height reached measured with a clinometer, how could you calculate maximum height reached (i.e. maximum displacement, s) from the flight time, t? Show which general formula to use and adapt it to this specific situation using only s and t as unknowns and the value of 9.8 m s^(–2) for the acceleration due to gravity. (2 marks)"
+  ],
+  "has": []
+ },
+ {
+  "id": "P8A-1",
+  "section": "8A",
+  "n": 1,
+  "title": "Egg drop",
+  "file": "8A Practical 8A–1 Egg drop.docx",
+  "aim": "Part 1: Use the concepts of momentum and impulse to design a capsule that will protect an egg dropped from a height; test if your capsule prevents a dropped egg from breaking. <Teacher note: The capsule may include something to increase its air resistance, to slow its fall.> Part 2: Estimate the force experienced by the egg in colliding with the ground.",
+  "materials": [
+   "One or more eggs as determined by the teacher",
+   "Metre ruler or measuring tape to measure the distance the egg capsule will fall",
+   "Weight scale",
+   "Timer suitable to measure time taken for the capsule to fall",
+   "Sticky tape",
+   "Scissors",
+   "Material to construct the capsule and any attachments to increase air resistance:",
+   "paper of various types including tissue paper",
+   "egg cartons",
+   "polythene sheet and or bags",
+   "fabric material of different types and thicknesses",
+   "packaging materials such as bubble wrap, cottonwool, styrofoam, straw, wood shavings",
+   "string",
+   "glue"
+  ],
+  "safety": "",
+  "method": [
+   "Divide into groups and decide how many trials (egg drops) each group will perform.",
+   "Choose a location from which to drop the egg capsule from a measured height onto a hard floor, and a method of releasing it. For example, it may be released from the hand or held at a steady height by resting the wrist on top of a vertical pole.",
+   "Measure the height of the drop location to the floor and record this in a table similar to that in the Results section.",
+   "Practise using the timer to record the time taken for a dropped object such as a ball to hit the floor.",
+   "Using your knowledge of momentum and impulse, design a capsule to protect the egg when it is dropped.",
+   "Make your egg capsule and place the egg inside.",
+   "Measure the mass of the egg capsule with the egg inside, and record this in your results table.",
+   "Test your egg capsule by dropping from the drop location. In your results table, measure and record the time taken to fall and the resulting condition of the egg, e.g. unbroken, cracked or smashed.",
+   "Compare results between groups and conclude which design or designs offered the best protection for the egg."
+  ],
+  "prelab": [
+   "Does the experiment need a control? (1 mark)",
+   "Assume that the initial velocity of the egg capsule is zero. Use the following two formulas:",
+   "v² = u² + 2as",
+   "$$s = ut + \\frac{1}{2}at^{2}$$",
+   "to show that the impact velocity of the egg capsule, ignoring air resistance, can be given by:",
+   "$$v = \\frac{2s}{t}$$"
+  ],
+  "has": [
+   "Results"
+  ]
+ },
+ {
+  "id": "P8B-1",
+  "section": "8B",
+  "n": 1,
+  "title": "Newton’s second law",
+  "file": "8B Practical 8B–1 Newton’s second law.docx",
+  "aim": "To determine the effect of mass on acceleration.",
+  "materials": [
+   "Low-friction cart",
+   "250 g hanging mass, with string to attach it to the cart",
+   "50 g masses that can be added to the cart",
+   "A single pulley wheel that can clamp to the edge of a table or bench",
+   "Table or bench to which the pulley wheel can be clamped and which provides a smooth level surface for the cart to run on",
+   "Digital scales to weigh the cart",
+   "Stopwatch or electronic timing system, using light gates or other means to measure the duration of the cart’s run",
+   "Metre ruler",
+   "Sticky tape (such as masking tape) to mark the start and end positions of the cart’s run."
+  ],
+  "safety": "",
+  "method": [
+   "Measure the mass of the cart on the scales and record it in row 1 of the table in the Results section.",
+   "Measure out a 0.5 m distance that the cart will travel between start and end points (this is the displacement) and mark with the masking tape.",
+   "Set up the cart attached to the 250 g hanging mass as shown in the diagram above. The string from the cart to the pulley must be horizontal and aligned with the pulley.",
+   "If using light gates or other electronic timing devices, place at the start and end lines.",
+   "Pull the cart back to the start line so that it will accelerate towards the end line and pulley when it is released.",
+   "Release the cart from its starting position and measure the time it takes to reach the end line. Use a stopwatch if no electronic timing device is available.",
+   "Record 3 trials.",
+   "Add one 50 g mass to the cart and repeat Steps 5 to 7. Write the total mass of cart plus added mass in the table in the Results section.",
+   "Repeat Step 8, recording 3 trials for each added 50 g mass, until 5 masses have been added (i.e. a total of 18 trials).",
+   "Calculate average run time for each cart mass and insert in column 5 of the table in the Results section."
+  ],
+  "prelab": [
+   "State the formula for Newton’s second law using symbols and words. Include units. (2 marks)",
+   "How is the cart accelerated in this experiment? (2 marks)",
+   "What is the force that the hanging mass applies to the cart? Use 9.8 m s^(–2) for the acceleration due to gravity. (2 marks)",
+   "Should the acceleration on the cart be greater than, less than or equal to the acceleration of gravity? Explain your answer. Ignore friction and the mass of the string. (4 marks)",
+   "a What equation will give the acceleration, a, of the cart from the mass of the system, as predicted by Newton’s second law? Rearrange the formula for Newton’s second law in terms of a and modify it to use the force from Question 3 and the mass of the system, i.e. the hanging mass, 0.25 kg, plus the total mass of the cart, m_(cart). (2 marks)",
+   "b Use the formula from part a to complete the last column of the table in the Results section by calculating the acceleration for every row. (6 marks)"
+  ],
+  "has": [
+   "Results"
+  ]
+ },
+ {
+  "id": "P8C-1",
+  "section": "8C",
+  "n": 1,
+  "title": "Torque and rotational equilibrium",
+  "file": "8C Practical 8C–1 Torque and rotational equilibrium.docx",
+  "aim": "To gain a practical understanding of torque and rotational equilibrium.",
+  "materials": [
+   "Torque balance apparatus as shown below. This has a metre ruler as an arm, attached in the middle to a pivot point on a stand, which allows it to rotate. Adjustable clamped hooks are attached to the arm from which masses can be suspended at measured distances from the pivot point.",
+   "Masses of various values (e.g. 50 g, 100 g, 200 g)"
+  ],
+  "safety": "",
+  "method": [
+   "Place a 200 g mass at 20 cm to the right of the pivot point of the torque balance.",
+   "Place a 100g mass 20 cm to the left of the pivot point.",
+   "Keeping the 200 g mass and 100 g mass to the right and left respectively, find out three ways in which the arm can be returned to the horizontal, i.e. in rotational equilibrium. You may add masses to the arm or change the position of the 100 g and 200 g masses already attached.",
+   "Write down your three ways from Step 3 below.",
+   "Place one 400 g mass on the left side and one 100 g mass the right side of the torque balance.",
+   "Find four ways to balance the arm by moving the 400 g and 100 g masses and record their positions in the table in the Results section."
+  ],
+  "prelab": [
+   "When a mass is placed either side of the pivot force, it creates a torque that causes the ruler to turn. Without changing the mass, how can the torque be increased? (1 mark)",
+   "What trend do you notice in the data? (1 mark)",
+   "Explain this trend using your knowledge of torque and find the ratio of y to x, where y is the distance of the 100 g mass from the pivot point and x is the distance of the 400 g mass from the pivot point. (4 marks)",
+   "Consider a 100 g mass hanging 20 cm to the left of the pivot point of a torque balance.",
+   "a.  How far to the right of the pivot point would a 300 g mass need to be placed for the arm to remain in equilibrium? (2 marks)",
+   "b.  Continuing with the set-up in your answer to part a, on the left arm, you now move the 100 g mass from 20 cm to 40 cm away from the pivot point, keeping the 300 g mass where it is. By how much, relative to its previous value, does this change the torque on the left-hand side. In which direction does the arm rotate? (2 marks)"
+  ],
+  "has": [
+   "Results"
+  ]
+ },
+ {
+  "id": "P9A-1",
+  "section": "9A",
+  "n": 1,
+  "title": "Work",
+  "file": "9A Practical 9A–1 Work.docx",
+  "aim": "To investigate the effect that changing the force applied to a cart has on the kinetic energy transferred to another cart. Background Figure 1 The net force on the object parallel to the slope is given by:",
+  "materials": [
+   "Cart track with a smooth surface, consisting of a ramp and horizontal surface. The angle of the ramp, θ, should be adjustable, for example by moving the block supporting its higher end and/or by changing the size of the block. A release mechanism for the cart on the ramp may be an advantage, but if one is not available it can be held in position and released by hand.",
+   "Protractor to measure the angle of the ramp, θ",
+   "Crash carts × 2; test that they run true, i.e. in a straight line",
+   "Ruler to measure out the position of the start and finish lines",
+   "Masking tape to mark the start and finish lines",
+   "Stopwatch or timing device"
+  ],
+  "safety": "",
+  "method": [
+   "Set up the track as shown in Figure 2. Set the angle of the ramp to 4° to the horizontal.",
+   "Measure the mass of the carts and record them in the table in the Results section.",
+   "Measure out a start line on the ramp, 0.6 m from the end of the ramp, and mark with a piece of masking tape.",
+   "Place cart B at the end of the ramp, on the horizontal section of the track.",
+   "Measure out a finish line, 0.5 m from crash cart B, and mark with a piece of masking tape.",
+   "Place cart A at the start line, ensuring the centre of its front will collide with the centre of the back of cart B, i.e. so that the contact is not offset. Carry out a test run and use masking tape to mark the placement of both carts to ensure the collision is aligned in this way.",
+   "With the timing method ready, release cart A, allowing it to roll down and hit cart B.",
+   "Start the time at the point of collision and stop it when cart B reaches the finish line. Record the duration of the run of cart B in the table in the Results section.",
+   "Return both carts to their original position and carry out three trials, repeating Steps 7 and 8.",
+   "Increase the angle θ of the ramp to the horizontal by 4° and carry out three trials at that angle.",
+   "Repeat Step 10, increasing the angle of the ramp by 4° each time, until you have completed three trials at each of five different angles.",
+   "Complete the table in Results by calculating the values required in the remaining columns.",
+   "What is the independent variable for this experiment? (1 mark)",
+   "What is the dependent variable for this experiment? (1 mark)",
+   "Name two control variables for this experiment. (2 marks)"
+  ],
+  "prelab": [
+   "Identify and describe any trend in the results. Express the relationship between the dependent variable and the independent variable in mathematical terms. (2 marks)",
+   "Use your knowledge of physics to explain the trend in your answer to Question 1.",
+   "(2 marks)",
+   "In each collision, is the kinetic energy transferred to cart B the same as the work done on cart A travelling down the ramp? Explain what happens in the energy transfer of the collision. (3 marks)",
+   "Instead of changing the angle of the ramp in this experiment, you could fix the angle of the ramp and change the mass of cart A. Explain how the kinetic energy transferred to cart B would change as the mass of cart A is increased. (2 marks)",
+   "Answers provided in the online Teacher Resources."
+  ],
+  "has": [
+   "Results"
+  ]
+ },
+ {
+  "id": "P9B-1",
+  "section": "9B",
+  "n": 1,
+  "title": "Energy",
+  "file": "9B Practical 9B–1 Energy.docx",
+  "aim": "Part 1: To investigate the effect of changing the release height of a cart travelling down a ramp, on the kinetic energy transferred to a second cart in a collision. Part 2: To investigate the effect that changing the mass of a cart has on the kinetic energy transferred to another cart.",
+  "materials": [
+   "Cart track with a smooth surface, consisting of a ramp and horizontal surface. A release mechanism for the cart on the ramp may be an advantage, but if one is not available it can be held in position and released by hand.",
+   "Crash carts × 2; test that they run true, i.e. in a straight line",
+   "Ruler to measure out the position of the start and finish lines, and the height of the cart on the ramp",
+   "Masking tape to mark the start and finish lines",
+   "Stopwatch or timing device",
+   "0.5 kg masses × 4"
+  ],
+  "safety": "",
+  "method": [
+   "Set up the track as shown in Figure 1. Set the angle of the ramp so that cart A can be placed from 5 cm to 25 cm above the horizontal surface of the track, with a minimum distance of",
+   "Measure the mass of the carts and record them in Table 1 in the Results section.",
+   "Place cart B at the end of the ramp, on the horizontal section of the track.",
+   "Measure out a finish line, 0.5 m from crash cart B, and mark with masking tape.",
+   "Using the ruler to find the point on the ramp that is 5 cm above the horizontal surface. Place a piece of masking tape at this point to mark the start line on the ramp. Record the height in the first row of Table 1 in the Results section. This is the first measurement of h in the diagram, to be used as change in height, Δh, in calculations.",
+   "Find the centre of mass of cart A by balancing it lengthways across the edge of a ruler. Mark a cross on the side of the cart to indicate the position of its centre of mass when viewed from the side. Relative to the height of the body of the cart, you can assume this will be about halfway up, as shown in Figure 1.",
+   "Place cart A so that its centre of mass is vertically above the start line. Align it on the ramp so that the centre of its front will collide with the centre of the back of cart B, i.e. so that contact is not offset. Carry out a test run and use additional masking tape to mark the placement of both carts to ensure the collision is aligned in this way.",
+   "With the timing method ready, release cart A, allowing it to roll down and hit cart B.",
+   "Start the timer at the point of collision and stop it when cart B reaches the finish line. Record the duration of the run of cart B in Table 1 in the Results section.",
+   "Return both carts to their original position and carry out three trials at the same height of the start line, repeating Steps 7–9.",
+   "Unpeel the start line masking tape and, with the help of the ruler, replace it higher up the ramp so that its height, h, above the horizontal is increased by 5 cm.",
+   "Carry out three trials at the new height.",
+   "Repeat Steps 11–12, increasing the height of the start line by 5 cm each time, until you have completed three trials at a maximum height of 25 cm.",
+   "Complete Table 1 in the Results section by calculating the values required in the remaining columns.",
+   "What is the independent variable for this experiment? (1 mark)",
+   "What is the dependent variable for this experiment? (1 mark)",
+   "Name two control variables for this experiment. (2 marks)",
+   "What is the independent variable for this experiment? (1 mark)",
+   "What is the dependent variable for this experiment? (1 mark)",
+   "Name two control variables for this experiment. (2 marks)"
+  ],
+  "prelab": [
+   "Identify and describe any trend in the results. Express the relationship between the dependent variable and the independent variable in mathematical terms. (2 marks)",
+   "Use the trend identified in your answer to Question 1 to evaluate your hypothesis. (2 marks)",
+   "Errors are inherent in every experiment and will affect the results in different ways.",
+   "a.  Name one random and one systematic error in this experiment and classify them as random or systematic. (2 marks)",
+   "b.  For each error you listed in part a, state how they will affect the calculated kinetic energy of cart B. Note that it is not enough to simply say that the final kinetic energy will be inaccurate. (4 marks)",
+   "c.  For each error you listed in part a, explain their effect on the accuracy and the precision. (4 marks)"
+  ],
+  "has": [
+   "Results"
+  ]
+ },
+ {
+  "id": "P9C-1",
+  "section": "9C",
+  "n": 1,
+  "title": "Spring constants and elastic potential energy",
+  "file": "9C Practical 9C–1 Spring constants and elastic potential energy.docx",
+  "aim": "To find the spring constant and stored elastic potential energy for a 5 cm extension of three different springs.",
+  "materials": [
+   "Three springs each with a hook at one end and a ring at the other so they can be hung from an arm and a weight can be attached to them. Each should have a different spring constant, judged by feeling how much force is required to gently stretch them in your hands. Number the springs 1, 2 and 3.",
+   "Retort stand and clamp, plus a clamp to fix the base of the stand to the bench or table",
+   "Metre ruler",
+   "50 g masses"
+  ],
+  "safety": "",
+  "method": [
+   "Set up the first spring so that it is hanging vertically from an arm clamped to a retort stand and clamp as shown in the diagram below.",
+   "Attach a ruler with sticky tape or other methods so it hangs vertically next to the spring, with the 0 graduation aligned with the top of the first coil of the spring. Then, the changing length of the spring can be read off the ruler.",
+   "Measure the unextended length of the spring with no masses attached by noting where the bottom of the last coil aligns with the ruler. Record in Table 1 in the Results section.",
+   "Hang a 50 g mass from the end of the spring and record how much it stretches (∆x) in the results table provided below.",
+   "Add another 50 g mass to the spring and record the new value of ∆x. Note that this is the change in length from the unextended length.",
+   "Repeat Step 5 two more times, so that an extra mass of 200 g total has been added to the spring.",
+   "Repeat Steps 3–6 for each spring and record the results in Table 2 and 3 in the Results section.",
+   "Complete the last column of each table in the Results section by calculating the force, F newtons, applied to the spring by the mass, m kilograms, using F = mg with g = 9.8 m s^(–2)."
+  ],
+  "prelab": [
+   "Write down a general formula or method to calculate the spring constant for a spring from its force–extension graph. (2 marks)",
+   "What is the spring constant of each spring in the graph you plotted? (3 marks)",
+   "Use the graph you plotted to calculate the spring potential energy of each spring when the extension is 5 cm. (3 marks)",
+   "Which of the three springs is the stiffest? Explain your answer. (2 marks)",
+   "All experiments will have some error present in them.",
+   "a.  Name at least two possible sources of error in this experiment and classify them as random or systematic. Name one random error and one systematic error. (2 marks)"
+  ],
+  "has": [
+   "Results"
+  ]
+ }
+]

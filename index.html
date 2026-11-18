@@ -203,7 +203,7 @@ a.ext{color:var(--accent)}
 <script>
 const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 const $=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-let VIEW=store.get('ph:view','plan');const VIEWS=[['plan','Course plan'],['cambridge','Cambridge course'],['pearson','Pearson cross-map'],['sd','Study design']];
+let VIEW=store.get('ph:view','plan');const VIEWS=[['plan','Course plan'],['cambridge','Cambridge course'],['pearson','Pearson cross-map'],['sd','Study design'],['pracs','Pracs']];
 let YEARS=[],DATA={},tab=store.get('ph:tab',11),open=new Set(store.get('ph:open',[])),filt='';
 const V='?v='+Date.now();
 async function load(){YEARS=(await (await fetch('data/years.json'+V)).json()).years;
@@ -250,6 +250,7 @@ function render(){tabs();const y=YEARS.find(x=>x.year==tab)||YEARS.find(x=>x.yea
  if(y.page)return frame(y.page+V);
  if(d&&VIEW=='cambridge')return frame('analysis.html'+V);
  if(d&&VIEW=='sd')return frame('studydesign.html'+V);
+ if(d&&VIEW=='pracs')return frame('pracs.html'+V);
  if(d&&VIEW=='pearson')return frame('pearson.html'+V);
  const f=$('#aosFilter');
  if(!d){f.style.display='none';$('#main').innerHTML=`<div class="unit">${esc(y.title)} Physics</div><div class="placeholder"><b>${esc(y.course)}</b><p>Not planned yet.</p><ul><li>Source materials: to be decided</li><li>Course plan: to come</li><li>Lesson resources: to come</li></ul></div>`;return}

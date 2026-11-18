@@ -54,3 +54,9 @@ Start a new chat with: "Read HANDOFF.md and CLAUDE.md in roccatalano/Physics and
 * APK: from the Progression tab links.
 * Do now: generator from check-in questions, indexed by section (tag recall/calc).
 * Exit tickets: review questions matched to success criteria (start from the Chapter Checklist links), tagged quick/long.
+
+
+## Pracs tab (18 Nov 2026)
+- New Year 11 sub-tab **Pracs** (`pracs.html`, `tools/build_pracs.py`). Cambridge card: 23 pracs by AoS, each opens to aim, materials, safety, method, prelab, Word file link, matching Pearson pracs and interactives. Pearson card: PA01 to PA23, 22 online experiments, AoS teacher notes/solutions/risk assessments, course-wide list.
+- Gaps: 7A-1 and 7B-1 are worksheet-style (no materials or method list); some pracs have no safety notes in Cambridge's file.
+- Next: Rocco to choose which pracs to run (Unit 1 needs 12 prac lessons, Unit 2 needs 8 + 6 for the investigation).
