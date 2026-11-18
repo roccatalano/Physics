@@ -19,7 +19,7 @@ Start a new chat with: "Read HANDOFF.md and CLAUDE.md in roccatalano/Physics and
 - Study design deep dive (prac hours: Unit 1 15 h, Unit 2 10 h + 7 h investigation).
 - Verdict so far: Cambridge is the stronger base; Pearson is a top-up (6 sections have no Pearson extras: 3A, 3D, 4A, 6B, 6C, 9A).
 
-* Years 7 to 10 tabs merged into one **Progression** tab: 60 Jacaranda physics subtopics in 6 strands, linked to Cambridge sections (click a card to highlight links). Gaps with no feeder: 3D, 4A, 5E, 9C.
+* Years 7 to 10 tabs merged into one **Progression** tab: 60 Jacaranda physics subtopics in 6 strands, linked to Cambridge sections (click a card to highlight links). Gaps with no feeder: 3D, 4A, 5E, 9C. Then added a Year 12 (Units 3 and 4) column: Year 11 sections link forward; Y12 sections with no earlier feeder flagged "new" (8A, 8B, 9A to 9C).
 
 ## Next
 1. Year-by-year tabs (e.g. 2027 overview calendar like 12MAG).
