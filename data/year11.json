@@ -1,0 +1,715 @@
+{
+ "year": 11,
+ "title": "Year 11 Physics",
+ "course": "VCE Physics Units 1 and 2",
+ "source": "Cambridge Senior Science VCE Physics Units 1&2 (2023)",
+ "root": "G:\\Shared drives\\1. EKC CURRICULUM\\1. KLA Folders\\SCIENCE\\VCE Physics\\VCE Physics Units 1 2 [2027]\\Cambridge Resources\\",
+ "units": [
+  {
+   "n": 1,
+   "title": "How is energy useful to society?",
+   "aos": [
+    {
+     "n": 1,
+     "title": "How are light and heat explained?",
+     "folder": "U1 AoS1 Light and heat",
+     "chapters": [
+      {
+       "n": 1,
+       "title": "EM radiation",
+       "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch01 EM radiation",
+       "sections": [
+        {
+         "code": "1A",
+         "title": "Waves",
+         "checkins": 2,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [],
+         "ppts": 0,
+         "workedExamples": [
+          "1A-1 Period and frequency of a wave"
+         ],
+         "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch01 EM radiation\\1A Waves"
+        },
+        {
+         "code": "1B",
+         "title": "EM waves",
+         "checkins": 2,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [],
+         "ppts": 2,
+         "workedExamples": [],
+         "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch01 EM radiation\\1B EM waves"
+        },
+        {
+         "code": "1C",
+         "title": "Refraction",
+         "checkins": 4,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "1C-1 Finding the refractive index of an unknown material"
+         ],
+         "ppts": 3,
+         "workedExamples": [
+          "1C-1 Wavelength of light in a medium",
+          "1C-2 Application of Snell’s law",
+          "1C-3 Partial internal reflection and refraction",
+          "1C-4 Critical angle calculation",
+          "1C-5 Application of total internal reflection"
+         ],
+         "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch01 EM radiation\\1C Refraction"
+        }
+       ],
+       "chapter": {
+        "book": 1,
+        "checklist": 1,
+        "links": 1,
+        "review": 1,
+        "summary": 1,
+        "wsans": 3,
+        "resp": 1,
+        "test": 1
+       },
+       "testMarks": 28
+      },
+      {
+       "n": 2,
+       "title": "Thermal energy",
+       "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch02 Thermal energy",
+       "sections": [
+        {
+         "code": "2A",
+         "title": "Thermal energy",
+         "checkins": 3,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "2A-1 Convection in water",
+          "2A-2 Specific heat capacity of water"
+         ],
+         "ppts": 1,
+         "workedExamples": [
+          "2A-1 Thermal energy change in water",
+          "2A-2 Energy in phase change of water",
+          "2A-3 Application to cooling a drink"
+         ],
+         "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch02 Thermal energy\\2A Thermal energy"
+        },
+        {
+         "code": "2B",
+         "title": "Global warming",
+         "checkins": 2,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [],
+         "ppts": 2,
+         "workedExamples": [
+          "2B-1 Peak wavelength of a human",
+          "2B-2 Peak wavelength emitted by Earth"
+         ],
+         "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch02 Thermal energy\\2B Global warming"
+        }
+       ],
+       "chapter": {
+        "book": 1,
+        "checklist": 1,
+        "links": 1,
+        "review": 1,
+        "summary": 1,
+        "wsans": 2,
+        "resp": 1,
+        "test": 1
+       },
+       "testMarks": 22
+      }
+     ],
+     "files": []
+    },
+    {
+     "n": 2,
+     "title": "How is energy from the nucleus utilised?",
+     "folder": "U1 AoS2 Nuclear",
+     "chapters": [
+      {
+       "n": 3,
+       "title": "Nuclear radiation",
+       "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation",
+       "sections": [
+        {
+         "code": "3A",
+         "title": "Nuclear stability",
+         "checkins": 4,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [],
+         "ppts": 1,
+         "workedExamples": [
+          "3A-1 Binding energy in oxygen"
+         ],
+         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3A Nuclear stability"
+        },
+        {
+         "code": "3B",
+         "title": "Alpha beta gamma",
+         "checkins": 5,
+         "sectionQs": 1,
+         "worksheets": 0,
+         "pracs": [
+          "3B-1 Alpha decay simulation",
+          "3B-2 Beta decay simulation"
+         ],
+         "ppts": 3,
+         "workedExamples": [
+          "3B-1 Energy of an α-particle"
+         ],
+         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3B Alpha beta gamma"
+        },
+        {
+         "code": "3C",
+         "title": "Half-life",
+         "checkins": 2,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "3C-1 Calculating half-life from a simulation"
+         ],
+         "ppts": 1,
+         "workedExamples": [
+          "3C-1 Half-life of carbon",
+          "3C-2 Half-life of cobalt-60"
+         ],
+         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3C Half-life"
+        },
+        {
+         "code": "3D",
+         "title": "Decay series",
+         "checkins": 1,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [],
+         "ppts": 1,
+         "workedExamples": [],
+         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3D Decay series"
+        },
+        {
+         "code": "3E",
+         "title": "Radiation and humans",
+         "checkins": 5,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "3E-1 Protection against radiation"
+         ],
+         "ppts": 0,
+         "workedExamples": [
+          "3E-1 Radiation dose"
+         ],
+         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3E Radiation and humans"
+        }
+       ],
+       "chapter": {
+        "book": 1,
+        "checklist": 1,
+        "links": 1,
+        "review": 1,
+        "summary": 1,
+        "wsans": 5,
+        "resp": 1,
+        "test": 1
+       },
+       "testMarks": 25
+      },
+      {
+       "n": 4,
+       "title": "Nuclear energy",
+       "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy",
+       "sections": [
+        {
+         "code": "4A",
+         "title": "Mass-energy",
+         "checkins": 3,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "4A-1 Nuclear fission simulation"
+         ],
+         "ppts": 2,
+         "workedExamples": [
+          "4A-1 Mass conversion",
+          "4A-2 Energy of a nuclear bomb"
+         ],
+         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy\\4A Mass-energy"
+        },
+        {
+         "code": "4B",
+         "title": "Fusion and fission",
+         "checkins": 2,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [],
+         "ppts": 1,
+         "workedExamples": [
+          "4B-1 Energy of nuclear fusion",
+          "4B-2 Energy of nuclear fission"
+         ],
+         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy\\4B Fusion and fission"
+        },
+        {
+         "code": "4C",
+         "title": "Nuclear for Australia",
+         "checkins": 1,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [],
+         "ppts": 0,
+         "workedExamples": [],
+         "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy\\4C Nuclear for Australia"
+        }
+       ],
+       "chapter": {
+        "book": 1,
+        "checklist": 1,
+        "links": 1,
+        "ppt": 1,
+        "review": 1,
+        "summary": 1,
+        "wsans": 3,
+        "resp": 1,
+        "test": 1
+       },
+       "testMarks": 30
+      }
+     ],
+     "files": []
+    },
+    {
+     "n": 3,
+     "title": "How can electricity be used to transfer energy?",
+     "folder": "U1 AoS3 Electricity",
+     "chapters": [
+      {
+       "n": 5,
+       "title": "Electricity",
+       "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity",
+       "sections": [
+        {
+         "code": "5A",
+         "title": "Charge and current",
+         "checkins": 5,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [],
+         "ppts": 2,
+         "workedExamples": [
+          "5A-1 Circuits",
+          "5A-2 Electrical charge from current"
+         ],
+         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5A Charge and current"
+        },
+        {
+         "code": "5B",
+         "title": "Energy and PD",
+         "checkins": 4,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "5B-1 Using an ammeter and voltmeter in electrical circuits"
+         ],
+         "ppts": 2,
+         "workedExamples": [
+          "5B-1 Potential difference in a battery",
+          "5B-2 Electrical energy of appliances"
+         ],
+         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5B Energy and PD"
+        },
+        {
+         "code": "5C",
+         "title": "Series circuits",
+         "checkins": 3,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "5C-1 Using resistors in series"
+         ],
+         "ppts": 1,
+         "workedExamples": [
+          "5C-1 Applying Ohm’s law to a car headlight",
+          "5C-2 Current in a light bulb",
+          "5C-3 Meter readings in a circuit",
+          "5C-4 Ohm’s law for series resistance",
+          "5C-5 Using a potential divider"
+         ],
+         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5C Series circuits"
+        },
+        {
+         "code": "5D",
+         "title": "Parallel circuits",
+         "checkins": 2,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "5D-1 Using resistors in parallel"
+         ],
+         "ppts": 2,
+         "workedExamples": [
+          "5D-1 Resistance in parallel",
+          "5D-2 Resistance in parallel and series",
+          "5D-3 Graphical approach to series resistance",
+          "5D-4 Graphical approach to parallel resistance"
+         ],
+         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5D Parallel circuits"
+        },
+        {
+         "code": "5E",
+         "title": "Power",
+         "checkins": 4,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [],
+         "ppts": 1,
+         "workedExamples": [
+          "5E-1 Power in a kettle",
+          "5E-2 Power in a stove",
+          "5E-3 Power in a light bulb",
+          "5E-4 Comparing power consumption",
+          "5E-5 Power loss due to resistance",
+          "5E-6 Resistance from power consumption",
+          "5E-7 Power loss in series and parallel"
+         ],
+         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5E Power"
+        }
+       ],
+       "chapter": {
+        "book": 1,
+        "checklist": 1,
+        "links": 1,
+        "review": 1,
+        "summary": 1,
+        "wsans": 5,
+        "resp": 1,
+        "test": 1
+       },
+       "testMarks": 58
+      },
+      {
+       "n": 6,
+       "title": "Using electricity",
+       "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity",
+       "sections": [
+        {
+         "code": "6A",
+         "title": "Components",
+         "checkins": 4,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "6A-1 Non-ohmic resistor (a light bulb)",
+          "6A-2 A light dependent resistor (LDR)",
+          "6A-3 Voltage across a thermistor"
+         ],
+         "ppts": 5,
+         "workedExamples": [
+          "6A-1 Potentiometer",
+          "6A-2 Rheostat or variable resistor",
+          "6A-3 LDR circuit",
+          "6A-4 Thermistor circuit"
+         ],
+         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity\\6A Components"
+        },
+        {
+         "code": "6B",
+         "title": "Electricity at home",
+         "checkins": 3,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [],
+         "ppts": 1,
+         "workedExamples": [
+          "6B-1 Using kilowatt-hours",
+          "6B-2 Power consumption in kW h",
+          "6B-3 Cost of running appliances"
+         ],
+         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity\\6B Electricity at home"
+        },
+        {
+         "code": "6C",
+         "title": "Safety",
+         "checkins": 2,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [],
+         "ppts": 2,
+         "workedExamples": [],
+         "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity\\6C Safety"
+        }
+       ],
+       "chapter": {
+        "book": 1,
+        "checklist": 1,
+        "links": 1,
+        "review": 1,
+        "summary": 1,
+        "wsans": 3,
+        "resp": 1,
+        "test": 1
+       },
+       "testMarks": 44
+      }
+     ],
+     "files": []
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "How does physics help us to understand the world?",
+   "aos": [
+    {
+     "n": 1,
+     "title": "How is motion understood?",
+     "folder": "U2 AoS1 Motion",
+     "chapters": [
+      {
+       "n": 7,
+       "title": "Modelling motion",
+       "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion",
+       "sections": [
+        {
+         "code": "7A",
+         "title": "Modelling motion",
+         "checkins": 4,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "7A-1 Drawing vectors"
+         ],
+         "ppts": 0,
+         "workedExamples": null,
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion\\7A Modelling motion"
+        },
+        {
+         "code": "7B",
+         "title": "Motion graphs",
+         "checkins": 3,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "7B-1 Motion graphs"
+         ],
+         "ppts": 5,
+         "workedExamples": null,
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion\\7B Motion graphs"
+        },
+        {
+         "code": "7C",
+         "title": "Uniform acceleration",
+         "checkins": 1,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "7C-1 Water rockets"
+         ],
+         "ppts": 1,
+         "workedExamples": null,
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion\\7C Uniform acceleration"
+        }
+       ],
+       "chapter": {
+        "book": 1,
+        "checklist": 1,
+        "links": 1,
+        "review": 1,
+        "summary": 1,
+        "wsans": 4,
+        "resp": 1,
+        "test": 1
+       },
+       "testMarks": null
+      },
+      {
+       "n": 8,
+       "title": "Forces",
+       "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces",
+       "sections": [
+        {
+         "code": "8A",
+         "title": "Momentum",
+         "checkins": 2,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "8A-1 Egg drop"
+         ],
+         "ppts": 1,
+         "workedExamples": null,
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces\\8A Momentum"
+        },
+        {
+         "code": "8B",
+         "title": "Newtons laws",
+         "checkins": 2,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "8B-1 Newton’s second law"
+         ],
+         "ppts": 3,
+         "workedExamples": null,
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces\\8B Newtons laws"
+        },
+        {
+         "code": "8C",
+         "title": "Equilibrium",
+         "checkins": 2,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "8C-1 Torque and rotational equilibrium"
+         ],
+         "ppts": 1,
+         "workedExamples": null,
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces\\8C Equilibrium"
+        }
+       ],
+       "chapter": {
+        "book": 1,
+        "checklist": 1,
+        "links": 1,
+        "review": 1,
+        "summary": 1,
+        "wsans": 3,
+        "resp": 1,
+        "test": 1
+       },
+       "testMarks": null
+      },
+      {
+       "n": 9,
+       "title": "Energy",
+       "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy",
+       "sections": [
+        {
+         "code": "9A",
+         "title": "Work",
+         "checkins": 1,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "9A-1 Work"
+         ],
+         "ppts": 0,
+         "workedExamples": null,
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy\\9A Work"
+        },
+        {
+         "code": "9B",
+         "title": "Energy and power",
+         "checkins": 2,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "9B-1 Energy"
+         ],
+         "ppts": 1,
+         "workedExamples": null,
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy\\9B Energy and power"
+        },
+        {
+         "code": "9C",
+         "title": "Springs",
+         "checkins": 2,
+         "sectionQs": 1,
+         "worksheets": 1,
+         "pracs": [
+          "9C-1 Spring constants and elastic"
+         ],
+         "ppts": 1,
+         "workedExamples": null,
+         "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy\\9C Springs"
+        }
+       ],
+       "chapter": {
+        "book": 1,
+        "checklist": 1,
+        "links": 1,
+        "review": 1,
+        "summary": 1,
+        "wsans": 3,
+        "resp": 1,
+        "test": 1
+       },
+       "testMarks": null
+      }
+     ],
+     "files": []
+    },
+    {
+     "n": 2,
+     "title": "Options: How does physics inform contemporary issues and applications in society?",
+     "folder": "U2 AoS2 Options",
+     "chapters": [],
+     "files": [
+      "About Unit 2 Options.docx"
+     ],
+     "options": [
+      {
+       "n": "2.1",
+       "title": "Climate change"
+      },
+      {
+       "n": "2.3",
+       "title": "Flight"
+      },
+      {
+       "n": "2.4",
+       "title": "Structures and materials"
+      },
+      {
+       "n": "2.8",
+       "title": "Human vision"
+      },
+      {
+       "n": "2.9",
+       "title": "Photography"
+      },
+      {
+       "n": "2.10",
+       "title": "Music"
+      },
+      {
+       "n": "2.11",
+       "title": "Ball sports"
+      },
+      {
+       "n": "2.13",
+       "title": "Stars and black holes"
+      },
+      {
+       "n": "2.14",
+       "title": "Life beyond the Solar System"
+      },
+      {
+       "n": "2.15",
+       "title": "Traditional artefacts"
+      },
+      {
+       "n": "2.17",
+       "title": "Origins of matter"
+      }
+     ]
+    },
+    {
+     "n": 3,
+     "title": "How do physicists undertake investigations?",
+     "folder": "U2 AoS3 Investigation",
+     "chapters": [],
+     "files": [],
+     "options": []
+    }
+   ]
+  }
+ ]
+}

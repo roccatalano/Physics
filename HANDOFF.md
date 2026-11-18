@@ -9,6 +9,9 @@ _Last updated 18 Nov 2026_
 - Cambridge resources analysis page built (`analysis.html`, from `tools/build_analysis.py` and `tools/cambridge_unit1_sections.json`). Linked from the home page.
 - Rocco has not yet decided where do-now, APK and exit-ticket questions come from. Don't assume the old plan.
 
+- 18 Nov: site turned into a **Physics Planner with tabs for Years 7 to 12**, in the 12MAG planner's design. Year 11 shows Unit 1 and 2 by AoS, chapter cards with Cambridge resource badges, and section-by-section resources. Other years are placeholders.
+- Unit 2 worked examples are not indexed yet (needs the Ch 7 to 9 PDFs).
+
 ## Next
 1. Confirm timing, prac model, assessment plan and lesson shape with Rocco (see CLAUDE.md, "Still to confirm").
 2. Draft the Unit 1 lesson-by-lesson plan from the Cambridge order and show it to Rocco.
