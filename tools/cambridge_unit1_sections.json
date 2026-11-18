@@ -1,0 +1,342 @@
+{
+ "1A": {
+  "name": "Waves",
+  "checkin": 2,
+  "ws": [
+   "1A–1 The properties of waves"
+  ],
+  "prac": [],
+  "ppt": 0,
+  "other": [],
+  "we": [
+   "1A–1 Period and frequency of a wave"
+  ],
+  "skills": "Multichoice questions on definitions"
+ },
+ "1B": {
+  "name": "EM waves",
+  "checkin": 2,
+  "ws": [
+   "1B–1 Electromagnetic radiation"
+  ],
+  "prac": [],
+  "ppt": 2,
+  "other": [],
+  "we": [],
+  "skills": "VIDEO 1B–2"
+ },
+ "1C": {
+  "name": "Refraction",
+  "checkin": 4,
+  "ws": [
+   "1C–1 Reflection, refraction and"
+  ],
+  "prac": [
+   "1C–1 Finding the refractive index of an unknown material"
+  ],
+  "ppt": 3,
+  "other": [],
+  "we": [
+   "1C–1 Wavelength of light in a medium",
+   "1C–2 Application of Snell’s law",
+   "1C–3 Partial internal reflection and refraction",
+   "1C–4 Critical angle calculation",
+   "1C–5 Application of total internal reflection"
+  ],
+  "skills": "1 It is essential to be able to apply Snell’s law to the refracted paths of light rays in this"
+ },
+ "2A": {
+  "name": "Thermal energy",
+  "checkin": 3,
+  "ws": [
+   "2A–1 Thermal energy"
+  ],
+  "prac": [
+   "2A–1 Convection in water",
+   "2A–2 Specific heat capacity of water"
+  ],
+  "ppt": 1,
+  "other": [],
+  "we": [
+   "2A–1 Thermal energy change in water",
+   "2A–2 Energy in phase change of water",
+   "2A–3 Application to cooling a drink"
+  ],
+  "skills": "1 Most calculations in this section use kelvin rather than degrees Celsius. Make sure"
+ },
+ "2B": {
+  "name": "Global warming",
+  "checkin": 2,
+  "ws": [
+   "2B–1 Thermal energy and electromagnetic"
+  ],
+  "prac": [],
+  "ppt": 2,
+  "other": [],
+  "we": [
+   "2B–1 Peak wavelength of a human",
+   "2B–2 Peak wavelength emitted by Earth"
+  ],
+  "skills": "1 Make sure that you can use Wien’s law (λmaxT = 0.00289) with either T or λmax as the"
+ },
+ "3A": {
+  "name": "Nuclear stability",
+  "checkin": 4,
+  "ws": [
+   "3A–1 Nuclear stability- forces"
+  ],
+  "prac": [],
+  "ppt": 1,
+  "other": [],
+  "we": [
+   "3A–1 Binding energy in oxygen"
+  ],
+  "skills": "Converting units of energy"
+ },
+ "3B": {
+  "name": "Alpha beta gamma",
+  "checkin": 5,
+  "ws": [],
+  "prac": [
+   "3B–1 Alpha decay simulation",
+   "3B–2 Beta decay simulation"
+  ],
+  "ppt": 3,
+  "other": [],
+  "we": [
+   "3B–1 Energy of an α-particle"
+  ],
+  "skills": "Writing nuclear transformation equations"
+ },
+ "3C": {
+  "name": "Half-life",
+  "checkin": 2,
+  "ws": [
+   "3C–1 Modelling radioactive decay"
+  ],
+  "prac": [
+   "3C–1 Calculating half-life from a simulation"
+  ],
+  "ppt": 1,
+  "other": [
+   "3C Simulating random radioactive decay using a.xlsx"
+  ],
+  "we": [
+   "3C–1 Half-life of carbon",
+   "3C–2 Half-life of cobalt-60"
+  ],
+  "skills": "119"
+ },
+ "3D": {
+  "name": "Decay series",
+  "checkin": 1,
+  "ws": [
+   "3D–1 Analysing decay series diagrams"
+  ],
+  "prac": [],
+  "ppt": 1,
+  "other": [],
+  "we": [],
+  "skills": "Interpreting decay chain diagrams"
+ },
+ "3E": {
+  "name": "Radiation and humans",
+  "checkin": 5,
+  "ws": [
+   "3E–1 The effect of radiation on humans"
+  ],
+  "prac": [
+   "3E–1 Protection against radiation"
+  ],
+  "ppt": 0,
+  "other": [],
+  "we": [
+   "3E–1 Radiation dose"
+  ],
+  "skills": "Identifying exact meaning for key terms"
+ },
+ "4A": {
+  "name": "Mass-energy",
+  "checkin": 3,
+  "ws": [
+   "4A–1 Nuclear energy & energy–mass"
+  ],
+  "prac": [
+   "4A–1 Nuclear fission simulation"
+  ],
+  "ppt": 2,
+  "other": [],
+  "we": [
+   "4A–1 Mass conversion",
+   "4A–2 Energy of a nuclear bomb"
+  ],
+  "skills": "VIDEO 4A–2"
+ },
+ "4B": {
+  "name": "Fusion and fission",
+  "checkin": 2,
+  "ws": [
+   "4B–1 Comparing fusion and fission"
+  ],
+  "prac": [],
+  "ppt": 1,
+  "other": [],
+  "we": [
+   "4B–1 Energy of nuclear fusion",
+   "4B–2 Energy of nuclear fission"
+  ],
+  "skills": "Calculating the power output of stellar nuclear fusion"
+ },
+ "4C": {
+  "name": "Nuclear for Australia",
+  "checkin": 1,
+  "ws": [
+   "4C–1 Nuclear energy for Australia"
+  ],
+  "prac": [],
+  "ppt": 0,
+  "other": [],
+  "we": [],
+  "skills": "VIDEO 4C–1"
+ },
+ "5A": {
+  "name": "Charge and current",
+  "checkin": 5,
+  "ws": [
+   "5A–1 Charge (Q) and current (I)"
+  ],
+  "prac": [],
+  "ppt": 2,
+  "other": [],
+  "we": [
+   "5A–1 Circuits",
+   "5A–2 Electrical charge from current"
+  ],
+  "skills": "VIDEO 5A–2"
+ },
+ "5B": {
+  "name": "Energy and PD",
+  "checkin": 4,
+  "ws": [
+   "5B–1 Electrical energy and potential"
+  ],
+  "prac": [
+   "5B–1 Using an ammeter and voltmeter in electrical circuits"
+  ],
+  "ppt": 2,
+  "other": [],
+  "we": [
+   "5B–1 Potential difference in a battery",
+   "5B–2 Electrical energy of appliances"
+  ],
+  "skills": "VIDEO 5B–1"
+ },
+ "5C": {
+  "name": "Series circuits",
+  "checkin": 3,
+  "ws": [
+   "5C–1 Modelling resistance in series"
+  ],
+  "prac": [
+   "5C–1 Using resistors in series"
+  ],
+  "ppt": 1,
+  "other": [],
+  "we": [
+   "5C–1 Applying Ohm’s law to a car headlight",
+   "5C–2 Current in a light bulb",
+   "5C–3 Meter readings in a circuit",
+   "5C–4 Ohm’s law for series resistance",
+   "5C–5 Using a potential divider"
+  ],
+  "skills": "Resistor code"
+ },
+ "5D": {
+  "name": "Parallel circuits",
+  "checkin": 2,
+  "ws": [
+   "5D–1 Modelling resistance in parallel"
+  ],
+  "prac": [
+   "5D–1 Using resistors in parallel"
+  ],
+  "ppt": 2,
+  "other": [],
+  "we": [
+   "5D–1 Resistance in parallel",
+   "5D–2 Resistance in parallel and series",
+   "5D–3 Graphical approach to series resistance",
+   "5D–4 Graphical approach to parallel resistance"
+  ],
+  "skills": "Complex circuit skills"
+ },
+ "5E": {
+  "name": "Power",
+  "checkin": 4,
+  "ws": [
+   "5E–1 Electric power"
+  ],
+  "prac": [],
+  "ppt": 1,
+  "other": [],
+  "we": [
+   "5E–1 Power in a kettle",
+   "5E–2 Power in a stove",
+   "5E–3 Power in a light bulb",
+   "5E–4 Comparing power consumption",
+   "5E–5 Power loss due to resistance",
+   "5E–6 Resistance from power consumption",
+   "5E–7 Power loss in series and parallel"
+  ],
+  "skills": "VIDEO 5E–2"
+ },
+ "6A": {
+  "name": "Components",
+  "checkin": 4,
+  "ws": [
+   "6A–1 Useful electronic components"
+  ],
+  "prac": [
+   "6A–1 Non-ohmic resistor (a light bulb)",
+   "6A–2 A light dependent resistor (LDR)",
+   "6A–3 Voltage across a thermistor"
+  ],
+  "ppt": 5,
+  "other": [],
+  "we": [
+   "6A–1 Potentiometer",
+   "6A–2 Rheostat or variable resistor",
+   "6A–3 LDR circuit",
+   "6A–4 Thermistor circuit"
+  ],
+  "skills": "Technique for analysing potential divider circuits containing input transducers"
+ },
+ "6B": {
+  "name": "Electricity at home",
+  "checkin": 3,
+  "ws": [
+   "6B–1 Electricity at home"
+  ],
+  "prac": [],
+  "ppt": 1,
+  "other": [],
+  "we": [
+   "6B–1 Using kilowatt-hours",
+   "6B–2 Power consumption in kW h",
+   "6B–3 Cost of running appliances"
+  ],
+  "skills": "Techniques for solving kW h problems"
+ },
+ "6C": {
+  "name": "Safety",
+  "checkin": 2,
+  "ws": [
+   "6C–1 Electrical safety"
+  ],
+  "prac": [],
+  "ppt": 2,
+  "other": [],
+  "we": [],
+  "skills": "VIDEO 6C–2"
+ }
+}
