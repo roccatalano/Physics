@@ -1,4 +1,183 @@
 {
+ "courseCambridge": [
+  {
+   "kind": "other",
+   "label": "Other",
+   "name": "Curriculum grid",
+   "ext": "docx",
+   "id": "1Rjg4AhyMtnJHvK_gUbek_4fk-JNPTBCy"
+  },
+  {
+   "kind": "other",
+   "label": "Other",
+   "name": "Physics12_book",
+   "ext": "pdf",
+   "id": "1lPxK88-ZYuFoXR9l8MPXo6uKnViWfdrG"
+  },
+  {
+   "kind": "other",
+   "label": "Other",
+   "name": "Practice exam",
+   "ext": "docx",
+   "id": "1jpGHuGpc85GnGUmKrFKqkP4e9NS17D4d"
+  },
+  {
+   "kind": "other",
+   "label": "Other",
+   "name": "Practice exam",
+   "ext": "pdf",
+   "id": "1EwtLed2WE1oj8a6CTLUcxXjAu32M9i1r"
+  },
+  {
+   "kind": "other",
+   "label": "Other",
+   "name": "Practice exam ANSWERS",
+   "ext": "docx",
+   "id": "1hzfEb6cHoWzYK8MBm3yOE7rjfwWzu0ZT"
+  },
+  {
+   "kind": "other",
+   "label": "Other",
+   "name": "Practice exam ANSWERS",
+   "ext": "pdf",
+   "id": "1tVKd8301Rw3wL04EcoJ_0Di116ClOV9n"
+  },
+  {
+   "kind": "other",
+   "label": "Other",
+   "name": "Textbook appendix",
+   "ext": "pdf",
+   "id": "1zOL-SexVU7Jswih4Rx0gV46Oij3GJNa4"
+  },
+  {
+   "kind": "other",
+   "label": "Other",
+   "name": "Textbook front matter",
+   "ext": "pdf",
+   "id": "17i0S0sM3Zhk58iZG6MamCuKrr-WnnfLx"
+  },
+  {
+   "kind": "other",
+   "label": "Other",
+   "name": "Updates_Feb2023",
+   "ext": "pdf",
+   "id": "1kEjc1JW4QgYvyCheh4LYzCuMp0lhCk3T"
+  }
+ ],
+ "coursePearson": [
+  {
+   "label": "Physics formulas and data sheet",
+   "name": "Physics formulas and data sheet",
+   "ext": "pdf",
+   "id": "1-JtAFWrDnSxv_H4MoVh_8Nh_ppRgG3HY",
+   "ref": "Course-wide",
+   "path": "00 Course-wide/Physics formulas and data sheet.pdf"
+  },
+  {
+   "label": "Practice exam mapping document",
+   "name": "Practice exam mapping document",
+   "ext": "docx",
+   "id": "1Ze1a9vfv8hAqwkNBnf5HjVlcM52H2Px_",
+   "ref": "Course-wide",
+   "path": "00 Course-wide/Practice exam (Units 1 and 2)/Practice exam mapping document.docx"
+  },
+  {
+   "label": "Practice exam multiple-choice answer sheet",
+   "name": "Practice exam multiple-choice answer sheet",
+   "ext": "docx",
+   "id": "1LvZ7lpspofLaCL5l5AfCdgHekkiHHKhZ",
+   "ref": "Course-wide",
+   "path": "00 Course-wide/Practice exam (Units 1 and 2)/Practice exam multiple-choice answer sheet.docx"
+  },
+  {
+   "label": "Practice exam suggested answers",
+   "name": "Practice exam suggested answers",
+   "ext": "docx",
+   "id": "1rovAimywAydg_ITMrkoVJxMv3q6vuUlM",
+   "ref": "Course-wide",
+   "path": "00 Course-wide/Practice exam (Units 1 and 2)/Practice exam suggested answers.docx"
+  },
+  {
+   "label": "Practice exam",
+   "name": "Practice exam",
+   "ext": "docx",
+   "id": "1SvnMOFt5DkAv_iNc8wXl9420PgZ4-Lwn",
+   "ref": "Course-wide",
+   "path": "00 Course-wide/Practice exam (Units 1 and 2)/Practice exam.docx"
+  },
+  {
+   "label": "Unit 1 sample teaching plan",
+   "name": "Unit 1 sample teaching plan",
+   "ext": "docx",
+   "id": "1SArkkDELBytFu6kGDCvOi6MK4Aw-nARr",
+   "ref": "Course-wide",
+   "path": "00 Course-wide/Teaching plans/Unit 1 sample teaching plan.docx"
+  },
+  {
+   "label": "Unit 1 teaching plan template",
+   "name": "Unit 1 teaching plan template",
+   "ext": "docx",
+   "id": "14B3rtav6MNbVkhTTvnJ36gmhQGGbprcp",
+   "ref": "Course-wide",
+   "path": "00 Course-wide/Teaching plans/Unit 1 teaching plan template.docx"
+  },
+  {
+   "label": "Unit 2 sample teaching plan",
+   "name": "Unit 2 sample teaching plan",
+   "ext": "docx",
+   "id": "1Adtl2ydO8Gu2S-1Flk01tjAyp9J2Jf0h",
+   "ref": "Course-wide",
+   "path": "00 Course-wide/Teaching plans/Unit 2 sample teaching plan.docx"
+  },
+  {
+   "label": "Unit 2 teaching plan template",
+   "name": "Unit 2 teaching plan template",
+   "ext": "docx",
+   "id": "1aSYCWf75yIBQRmOV4M6JCK5QFkB7otV4",
+   "ref": "Course-wide",
+   "path": "00 Course-wide/Teaching plans/Unit 2 teaching plan template.docx"
+  },
+  {
+   "label": "Online experiment risk assessment template",
+   "name": "Online experiment risk assessment template",
+   "ext": "docx",
+   "id": "1JwaT1AyyqfuYt_zH-qRHlDNkosOx0VDL",
+   "ref": "Course-wide",
+   "path": "00 Course-wide/Templates/Online experiment risk assessment template.docx"
+  },
+  {
+   "label": "SAB prac risk assessment template",
+   "name": "SAB prac risk assessment template",
+   "ext": "docx",
+   "id": "1zLmH_gYvKTO9wUGU0jmN98Q0s8GUOqL1",
+   "ref": "Course-wide",
+   "path": "00 Course-wide/Templates/SAB prac risk assessment template.docx"
+  },
+  {
+   "label": "Units 3 and 4 exam readiness guide",
+   "name": "Units 3 and 4 exam readiness guide",
+   "ext": "pdf",
+   "id": "12iIRbcIung1fkCqpt3ssM6381GmfhiGk",
+   "ref": "Course-wide",
+   "path": "00 Course-wide/Units 3 and 4 exam readiness guide.pdf"
+  },
+  {
+   "label": "practical activities list",
+   "name": "practical activities list",
+   "ext": "pdf",
+   "id": "1y28L1glAFWgF7hm7DjSZjvmd3NM0gibE",
+   "ref": "Course-wide",
+   "path": "00 Course-wide/practical activities list.pdf"
+  },
+  {
+   "label": "videos list",
+   "name": "videos list",
+   "ext": "pdf",
+   "id": "1avOTvQcK-CH-YDYd7Vu8B62jWnoIoSta",
+   "ref": "Course-wide",
+   "path": "00 Course-wide/videos list.pdf"
+  }
+ ],
  "year": 11,
  "title": "Year 11 Physics",
  "course": "VCE Physics Units 1 and 2",
@@ -20,6 +199,40 @@
        "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch01 EM radiation",
        "sections": [
         {
+         "pearson": [
+          {
+           "label": "Teacher notes",
+           "name": "OE 2.2.1 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "1Wk9ICwgVdTnSW41W3jmFxqmF8N-mVOEj",
+           "ref": "OE 2.2.1",
+           "path": "Unit 1/AoS1 Light and heat/Ch02 Waves and electromagnetic radiation/Online experiments/OE 2.2.1 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 2.2.1 The speed of sound by clap and echo",
+           "ext": "pdf",
+           "id": "1XM98zLx-axMUuup2Cdse2tz_M-YdN08e",
+           "ref": "OE 2.2.1",
+           "path": "Unit 1/AoS1 Light and heat/Ch02 Waves and electromagnetic radiation/Online experiments/OE 2.2.1 The speed of sound by clap and echo.pdf"
+          },
+          {
+           "label": "Video",
+           "name": "Extreme wave science",
+           "ext": "mp4",
+           "id": "1K8-jfuhb83QZvKwfudy6EZ5VS3ngNh3L",
+           "ref": "",
+           "path": "Unit 1/AoS1 Light and heat/Ch02 Waves and electromagnetic radiation/Videos/Extreme wave science.mp4"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA01 Waves in slinky springs and ropes",
+           "ext": "spklab",
+           "id": "1ZAkYN5wD8BHAbo8ZnlWXiKMRwbdctl6X",
+           "ref": "PA01",
+           "path": "Unit 1/AoS1 Light and heat/Pracs (SAB SPARKlabs)/PA01 Waves in slinky springs and ropes.spklab"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -63,6 +276,24 @@
          "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch01 EM radiation\\1A Waves"
         },
         {
+         "pearson": [
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA03 Measuring the speed of light",
+           "ext": "spklab",
+           "id": "1nPbBexib42IV7V32aG-rzbtFC9oiP_fv",
+           "ref": "PA03",
+           "path": "Unit 1/AoS1 Light and heat/Pracs (SAB SPARKlabs)/PA03 Measuring the speed of light.spklab"
+          },
+          {
+           "label": "Risk assessment",
+           "name": "PA03 risk assessment",
+           "ext": "pdf",
+           "id": "1mt7IzB9_y-sB0stk6S1-eXolGLiWEtAJ",
+           "ref": "PA03",
+           "path": "Unit 1/AoS1 Light and heat/Pracs (SAB SPARKlabs)/Teacher/PA03 risk assessment.pdf"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -118,6 +349,40 @@
          "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch01 EM radiation\\1B EM waves"
         },
         {
+         "pearson": [
+          {
+           "label": "Teacher notes",
+           "name": "OE 3.2.1 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "10wUjthKzRHFO0h3a3O4gOzAP5B06uAH7",
+           "ref": "OE 3.2.1",
+           "path": "Unit 1/AoS1 Light and heat/Ch03 Light/Online experiments/OE 3.2.1 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 3.2.1 Polarisation effects with light",
+           "ext": "pdf",
+           "id": "1G2iPJ9cToNKMjORjDUl6LJOPX-kW3xmL",
+           "ref": "OE 3.2.1",
+           "path": "Unit 1/AoS1 Light and heat/Ch03 Light/Online experiments/OE 3.2.1 Polarisation effects with light.pdf"
+          },
+          {
+           "label": "Video",
+           "name": "Why is the ocean blue-",
+           "ext": "mp4",
+           "id": "1h2PLlVdy5PbPC6yERATTe12GDke0z3eV",
+           "ref": "",
+           "path": "Unit 1/AoS1 Light and heat/Ch03 Light/Videos/Why is the ocean blue-.mp4"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA02 Dispersion and refraction",
+           "ext": "spklab",
+           "id": "1i7i84v3b-XglQT84BW7lCrK409QgPpIE",
+           "ref": "PA02",
+           "path": "Unit 1/AoS1 Light and heat/Pracs (SAB SPARKlabs)/PA02 Dispersion and refraction.spklab"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -291,6 +556,24 @@
          "ext": "docx",
          "id": "1srglyq1wp0tvUlAe47NdBXUggyo9P24D"
         }
+       ],
+       "pearson": [
+        {
+         "label": "Fully worked solutions",
+         "name": "Ch02 fully worked solutions",
+         "ext": "pdf",
+         "id": "1FUuzv6K5iyiZdb9SP3BwyfA-L7xUBj7r",
+         "ref": "Pearson Ch 2",
+         "path": "Unit 1/AoS1 Light and heat/Ch02 Waves and electromagnetic radiation/Ch02 fully worked solutions.pdf"
+        },
+        {
+         "label": "Fully worked solutions",
+         "name": "Ch03 fully worked solutions",
+         "ext": "pdf",
+         "id": "1-P3gZHfDJyKPiYF2YGouqoCss4aWsx1S",
+         "ref": "Pearson Ch 3",
+         "path": "Unit 1/AoS1 Light and heat/Ch03 Light/Ch03 fully worked solutions.pdf"
+        }
        ]
       },
       {
@@ -299,6 +582,88 @@
        "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch02 Thermal energy",
        "sections": [
         {
+         "pearson": [
+          {
+           "label": "Teacher notes",
+           "name": "OE 4.4.1 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "1fsdpsCvYhdXkGBPAUVLJ-SqoiC-aMtlU",
+           "ref": "OE 4.4.1",
+           "path": "Unit 1/AoS1 Light and heat/Ch04 Thermal energy/Online experiments/OE 4.4.1 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Risk assessment",
+           "name": "OE 4.4.1 - teacher risk assessment",
+           "ext": "pdf",
+           "id": "1gkBwIOoMTxAdfc2BFA7XENNpCIJpNyLN",
+           "ref": "OE 4.4.1",
+           "path": "Unit 1/AoS1 Light and heat/Ch04 Thermal energy/Online experiments/OE 4.4.1 - teacher risk assessment.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 4.4.1 Transfer of energy",
+           "ext": "pdf",
+           "id": "1bF0YckSdyAxM5zTPEFba3ue4m3yPGRgD",
+           "ref": "OE 4.4.1",
+           "path": "Unit 1/AoS1 Light and heat/Ch04 Thermal energy/Online experiments/OE 4.4.1 Transfer of energy.pdf"
+          },
+          {
+           "label": "Teacher notes",
+           "name": "OE 4.4.2 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "1reNhy7UbyVD4nnLwW8p7n7OwFpL4b29o",
+           "ref": "OE 4.4.2",
+           "path": "Unit 1/AoS1 Light and heat/Ch04 Thermal energy/Online experiments/OE 4.4.2 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Risk assessment",
+           "name": "OE 4.4.2 - teacher risk assessment",
+           "ext": "pdf",
+           "id": "1TpD4xZ5j4gwqeVLTEPmng6iUs1mLFdJH",
+           "ref": "OE 4.4.2",
+           "path": "Unit 1/AoS1 Light and heat/Ch04 Thermal energy/Online experiments/OE 4.4.2 - teacher risk assessment.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 4.4.2 Insulation investigation",
+           "ext": "pdf",
+           "id": "1ZiVoL1e62NPDFfnEIw1TzhLh2egeVGt1",
+           "ref": "OE 4.4.2",
+           "path": "Unit 1/AoS1 Light and heat/Ch04 Thermal energy/Online experiments/OE 4.4.2 Insulation investigation.pdf"
+          },
+          {
+           "label": "Video",
+           "name": "What is fire-",
+           "ext": "mp4",
+           "id": "1ADFg6_2KLMNf8GwzUn1Py5mfDjr1-Vb8",
+           "ref": "",
+           "path": "Unit 1/AoS1 Light and heat/Ch05 Thermal energy, EM radiation and climate/Videos/What is fire-.mp4"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA04 The relationship between temperature and heat",
+           "ext": "spklab",
+           "id": "1A3Js4LS19iJZPAPQQqKFejk4SdFC2wMy",
+           "ref": "PA04",
+           "path": "Unit 1/AoS1 Light and heat/Pracs (SAB SPARKlabs)/PA04 The relationship between temperature and heat.spklab"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA05 Determining the specific heat capacity of a substance",
+           "ext": "spklab",
+           "id": "12x6xHQuBpwXUCSaWNy5_nRne7NLkw3Tg",
+           "ref": "PA05",
+           "path": "Unit 1/AoS1 Light and heat/Pracs (SAB SPARKlabs)/PA05 Determining the specific heat capacity of a substance.spklab"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA06 Latent heat of fusion",
+           "ext": "spklab",
+           "id": "1TseZH0iYYmPkLfow__OY77iuI_5OUDEX",
+           "ref": "PA06",
+           "path": "Unit 1/AoS1 Light and heat/Pracs (SAB SPARKlabs)/PA06 Latent heat of fusion.spklab"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -375,6 +740,24 @@
          "folder": "Unit 1\\U1 AoS1 Light and heat\\Ch02 Thermal energy\\2A Thermal energy"
         },
         {
+         "pearson": [
+          {
+           "label": "Online experiment",
+           "name": "Online experiment 5.2.1 Research topics",
+           "ext": "pdf",
+           "id": "11FhYZOqU3MD5qoaQjBpJpRc2OwvWb5Up",
+           "ref": "OE 5.2.1",
+           "path": "Unit 1/AoS1 Light and heat/Ch05 Thermal energy, EM radiation and climate/Online experiment 5.2.1 Research topics.pdf"
+          },
+          {
+           "label": "Video",
+           "name": "The greenhouse effect and global warming",
+           "ext": "mp4",
+           "id": "1KGpTQtN-4bH5wCfmT6SwgpED3cYKFGfu",
+           "ref": "",
+           "path": "Unit 1/AoS1 Light and heat/Ch05 Thermal energy, EM radiation and climate/Videos/The greenhouse effect and global warming.mp4"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -508,10 +891,78 @@
          "ext": "docx",
          "id": "19x5BAAXEEix5C8C43MBfpHyTQBzAVKxK"
         }
+       ],
+       "pearson": [
+        {
+         "label": "Fully worked solutions",
+         "name": "Ch04 fully worked solutions",
+         "ext": "pdf",
+         "id": "1vNSXAfxdkwyjUrRISO_as45GnxDnlqAx",
+         "ref": "Pearson Ch 4",
+         "path": "Unit 1/AoS1 Light and heat/Ch04 Thermal energy/Ch04 fully worked solutions.pdf"
+        },
+        {
+         "label": "Fully worked solutions",
+         "name": "Ch05 fully worked solutions",
+         "ext": "pdf",
+         "id": "19xcIIbC8zCmsZa2UdCFYgNlFnlSBNm9p",
+         "ref": "Pearson Ch 5",
+         "path": "Unit 1/AoS1 Light and heat/Ch05 Thermal energy, EM radiation and climate/Ch05 fully worked solutions.pdf"
+        }
        ]
       }
      ],
-     "files": []
+     "files": [],
+     "pearson": [
+      {
+       "label": "AoS review solutions",
+       "name": "AoS1 Review fully worked solutions",
+       "ext": "pdf",
+       "id": "1BlQz5YsLehhH3FUJaVe-k9ekRRD_tbLQ",
+       "ref": "Pearson Unit 1 AoS 1",
+       "path": "Unit 1/AoS1 Light and heat/AoS1 Review fully worked solutions.pdf"
+      },
+      {
+       "label": "Prac solutions",
+       "name": "AoS1 SAB practical activity solutions",
+       "ext": "pdf",
+       "id": "13DClGu41Xh_k1a2M0xdl6MxsW6Kva9zw",
+       "ref": "Pearson Unit 1 AoS 1",
+       "path": "Unit 1/AoS1 Light and heat/Pracs (SAB SPARKlabs)/Teacher/AoS1 SAB practical activity solutions.pdf"
+      },
+      {
+       "label": "Prac teacher notes",
+       "name": "AoS1 SAB practical activity teacher notes",
+       "ext": "pdf",
+       "id": "1ac4YkxQQvfhzszH4WEBxlJTzfv29oAmi",
+       "ref": "Pearson Unit 1 AoS 1",
+       "path": "Unit 1/AoS1 Light and heat/Pracs (SAB SPARKlabs)/Teacher/AoS1 SAB practical activity teacher notes.pdf"
+      },
+      {
+       "label": "Risk assessment",
+       "name": "Heating pracs risk assessment",
+       "ext": "pdf",
+       "id": "1V2ddqIUora961vts8z9jauhK8EH3csaE",
+       "ref": "Pearson Unit 1 AoS 1",
+       "path": "Unit 1/AoS1 Light and heat/Pracs (SAB SPARKlabs)/Teacher/Heating pracs risk assessment.pdf"
+      },
+      {
+       "label": "SAB exam question solutions",
+       "name": "AoS1 SAB exam question solutions",
+       "ext": "pdf",
+       "id": "1teYVqd7E3ReCReUYtX1fRlEVLzA1s_DQ",
+       "ref": "Pearson Unit 1 AoS 1",
+       "path": "Unit 1/AoS1 Light and heat/SAB answers (teacher only)/AoS1 SAB exam question solutions.pdf"
+      },
+      {
+       "label": "SAB worksheet solutions",
+       "name": "AoS1 SAB worksheet solutions",
+       "ext": "pdf",
+       "id": "1R4q27po1YJRW2SebehpGcyv_4AHrFxZg",
+       "ref": "Pearson Unit 1 AoS 1",
+       "path": "Unit 1/AoS1 Light and heat/SAB answers (teacher only)/AoS1 SAB worksheet solutions.pdf"
+      }
+     ]
     },
     {
      "n": 2,
@@ -524,6 +975,7 @@
        "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation",
        "sections": [
         {
+         "pearson": [],
          "files": [
           {
            "kind": "checkin",
@@ -588,6 +1040,56 @@
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3A Nuclear stability"
         },
         {
+         "pearson": [
+          {
+           "label": "Teacher notes",
+           "name": "OE 6.3.1 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "19cjz5KkfSxD_XIcUHZwS5PQx00juyfMi",
+           "ref": "OE 6.3.1",
+           "path": "Unit 1/AoS2 Nuclear/Ch06 Radiation from the nucleus/Online experiments/OE 6.3.1 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Risk assessment",
+           "name": "OE 6.3.1 - teacher risk assessment",
+           "ext": "pdf",
+           "id": "1FkzZSQaOlNOQDub9Rssh9Hmle2od0l-l",
+           "ref": "OE 6.3.1",
+           "path": "Unit 1/AoS2 Nuclear/Ch06 Radiation from the nucleus/Online experiments/OE 6.3.1 - teacher risk assessment.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 6.3.1 The diffusion cloud chamber",
+           "ext": "pdf",
+           "id": "1KEpemd-GSkgVInebxDk_Rfjb1LmNnEQi",
+           "ref": "OE 6.3.1",
+           "path": "Unit 1/AoS2 Nuclear/Ch06 Radiation from the nucleus/Online experiments/OE 6.3.1 The diffusion cloud chamber.pdf"
+          },
+          {
+           "label": "Video",
+           "name": "Alpha, beta and gamma radiation",
+           "ext": "mp4",
+           "id": "1Q8KnpoguH9oI6lzDoojrK1uDkFoeBR4H",
+           "ref": "",
+           "path": "Unit 1/AoS2 Nuclear/Ch06 Radiation from the nucleus/Videos/Alpha, beta and gamma radiation.mp4"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA07 Detecting radiation with a G-M tube",
+           "ext": "spklab",
+           "id": "15diQaWYJRJwWDBpVm4fCi21pcnQ5eJZp",
+           "ref": "PA07",
+           "path": "Unit 1/AoS2 Nuclear/Pracs (SAB SPARKlabs)/PA07 Detecting radiation with a G-M tube.spklab"
+          },
+          {
+           "label": "Risk assessment",
+           "name": "PA07 risk assessment",
+           "ext": "pdf",
+           "id": "1xILo39ivx3D08ivXgIDxtr7KIRizQUgM",
+           "ref": "PA07",
+           "path": "Unit 1/AoS2 Nuclear/Pracs (SAB SPARKlabs)/Teacher/PA07 risk assessment.pdf"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -683,6 +1185,32 @@
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3B Alpha beta gamma"
         },
         {
+         "pearson": [
+          {
+           "label": "Teacher notes",
+           "name": "OE 6.3.2 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "1VxQ8qCECfB0GX5MrCEzvIvYT6zHqG1AV",
+           "ref": "OE 6.3.2",
+           "path": "Unit 1/AoS2 Nuclear/Ch06 Radiation from the nucleus/Online experiments/OE 6.3.2 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 6.3.2 Data analysis- Decay of thorium-234",
+           "ext": "pdf",
+           "id": "1_GMPq3X5_9uDz2Ql-9aVlqBP5X5i9TCt",
+           "ref": "OE 6.3.2",
+           "path": "Unit 1/AoS2 Nuclear/Ch06 Radiation from the nucleus/Online experiments/OE 6.3.2 Data analysis- Decay of thorium-234.pdf"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA08 An analogue model of radioactive decay",
+           "ext": "spklab",
+           "id": "1nkkE4Ibs9ajBcjF7b_uoJhDkrkdX6hq7",
+           "ref": "PA08",
+           "path": "Unit 1/AoS2 Nuclear/Pracs (SAB SPARKlabs)/PA08 An analogue model of radioactive decay.spklab"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -750,6 +1278,7 @@
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3C Half-life"
         },
         {
+         "pearson": [],
          "files": [
           {
            "kind": "checkin",
@@ -791,6 +1320,32 @@
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch03 Nuclear radiation\\3D Decay series"
         },
         {
+         "pearson": [
+          {
+           "label": "Online experiment",
+           "name": "Online experiment 6.4.1 Research topics",
+           "ext": "pdf",
+           "id": "1Xa9sKkCVBaQFeWSwNZ0SmLAJYeDBn2NE",
+           "ref": "OE 6.4.1",
+           "path": "Unit 1/AoS2 Nuclear/Ch06 Radiation from the nucleus/Online experiment 6.4.1 Research topics.pdf"
+          },
+          {
+           "label": "Teacher notes",
+           "name": "OE 6.4.2 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "12ANxmrGKDepVheNAtBNiIGUDbi_sLMU1",
+           "ref": "OE 6.4.2",
+           "path": "Unit 1/AoS2 Nuclear/Ch06 Radiation from the nucleus/Online experiments/OE 6.4.2 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 6.4.2 Medical radiation",
+           "ext": "pdf",
+           "id": "13gOB_pwynTxvunnZJvV0dyBXO9ka2pSD",
+           "ref": "OE 6.4.2",
+           "path": "Unit 1/AoS2 Nuclear/Ch06 Radiation from the nucleus/Online experiments/OE 6.4.2 Medical radiation.pdf"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -960,6 +1515,16 @@
          "ext": "docx",
          "id": "1SUdlkAfDEHiNAr8FO-qmRS2aSJGWn5GQ"
         }
+       ],
+       "pearson": [
+        {
+         "label": "Fully worked solutions",
+         "name": "Ch06 fully worked solutions",
+         "ext": "pdf",
+         "id": "11YPgVrDmHTIeFkax2DybjNG5SHpf1OAX",
+         "ref": "Pearson Ch 6",
+         "path": "Unit 1/AoS2 Nuclear/Ch06 Radiation from the nucleus/Ch06 fully worked solutions.pdf"
+        }
        ]
       },
       {
@@ -968,6 +1533,7 @@
        "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy",
        "sections": [
         {
+         "pearson": [],
          "files": [
           {
            "kind": "checkin",
@@ -1042,6 +1608,32 @@
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy\\4A Mass-energy"
         },
         {
+         "pearson": [
+          {
+           "label": "Teacher notes",
+           "name": "OE 7.2.1 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "1MfRRxpNQmL4LZSqwTndPrmqEgPRjrGnL",
+           "ref": "OE 7.2.1",
+           "path": "Unit 1/AoS2 Nuclear/Ch07 Nuclear energy/Online experiments/OE 7.2.1 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 7.2.1 Data analysis- Critical mass",
+           "ext": "pdf",
+           "id": "1CwbjSTuY8xy3yoK12IAyhu0tonyHp2QW",
+           "ref": "OE 7.2.1",
+           "path": "Unit 1/AoS2 Nuclear/Ch07 Nuclear energy/Online experiments/OE 7.2.1 Data analysis- Critical mass.pdf"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA09 The OPAL research reactor, Lucas Heights-how can the energy of the atomic n",
+           "ext": "spklab",
+           "id": "1XhQHQF0fn53hI7MPHvVN93zjJ2HCp3eD",
+           "ref": "PA09",
+           "path": "Unit 1/AoS2 Nuclear/Pracs (SAB SPARKlabs)/PA09 The OPAL research reactor, Lucas Heights—how can the energy of the atomic n.spklab"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -1093,6 +1685,16 @@
          "folder": "Unit 1\\U1 AoS2 Nuclear\\Ch04 Nuclear energy\\4B Fusion and fission"
         },
         {
+         "pearson": [
+          {
+           "label": "Online experiment",
+           "name": "Online experiment 7.2.2 Research topics",
+           "ext": "pdf",
+           "id": "1uHBuEl1xiFghLRkxJDRH2ArnWPqkrrt1",
+           "ref": "OE 7.2.2",
+           "path": "Unit 1/AoS2 Nuclear/Ch07 Nuclear energy/Online experiment 7.2.2 Research topics.pdf"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -1217,10 +1819,62 @@
          "ext": "docx",
          "id": "1OoGxalJSLIQKbenGFII3YnS08GJcJOO_"
         }
+       ],
+       "pearson": [
+        {
+         "label": "Fully worked solutions",
+         "name": "Ch07 fully worked solutions",
+         "ext": "pdf",
+         "id": "1W_D-2IW2kiFySIPij7zIJma7P_e3sdaS",
+         "ref": "Pearson Ch 7",
+         "path": "Unit 1/AoS2 Nuclear/Ch07 Nuclear energy/Ch07 fully worked solutions.pdf"
+        }
        ]
       }
      ],
-     "files": []
+     "files": [],
+     "pearson": [
+      {
+       "label": "AoS review solutions",
+       "name": "AoS2 Review fully worked solutions",
+       "ext": "pdf",
+       "id": "11eiEXPuN6rt9mZdP_siuMpTYcBW62Sqk",
+       "ref": "Pearson Unit 1 AoS 2",
+       "path": "Unit 1/AoS2 Nuclear/AoS2 Review fully worked solutions.pdf"
+      },
+      {
+       "label": "Prac solutions",
+       "name": "AoS2 SAB practical activity solutions",
+       "ext": "pdf",
+       "id": "1BjV7dg3-AjpaWh5-iFAEfqyB1twsT5If",
+       "ref": "Pearson Unit 1 AoS 2",
+       "path": "Unit 1/AoS2 Nuclear/Pracs (SAB SPARKlabs)/Teacher/AoS2 SAB practical activity solutions.pdf"
+      },
+      {
+       "label": "Prac teacher notes",
+       "name": "AoS2 SAB practical activity teacher notes",
+       "ext": "pdf",
+       "id": "1SmbFdpQyBz4ftP5hD1SWBHmABUe76OUw",
+       "ref": "Pearson Unit 1 AoS 2",
+       "path": "Unit 1/AoS2 Nuclear/Pracs (SAB SPARKlabs)/Teacher/AoS2 SAB practical activity teacher notes.pdf"
+      },
+      {
+       "label": "SAB exam question solutions",
+       "name": "AoS2 SAB exam question solutions",
+       "ext": "pdf",
+       "id": "1anQkTzMdb_M_WVB6FVTQ3VNUEGGdR0tF",
+       "ref": "Pearson Unit 1 AoS 2",
+       "path": "Unit 1/AoS2 Nuclear/SAB answers (teacher only)/AoS2 SAB exam question solutions.pdf"
+      },
+      {
+       "label": "SAB worksheet solutions",
+       "name": "AoS2 SAB worksheet solutions",
+       "ext": "pdf",
+       "id": "1mL-_kBdm03TuRVjbOlIOu-WG_Ln1Sc0_",
+       "ref": "Pearson Unit 1 AoS 2",
+       "path": "Unit 1/AoS2 Nuclear/SAB answers (teacher only)/AoS2 SAB worksheet solutions.pdf"
+      }
+     ]
     },
     {
      "n": 3,
@@ -1233,6 +1887,56 @@
        "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity",
        "sections": [
         {
+         "pearson": [
+          {
+           "label": "Teacher notes",
+           "name": "OE 8.1.1 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "1e0psVyMve0wTw0T85JpoXIq9AyIrwPBL",
+           "ref": "OE 8.1.1",
+           "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Online experiments/OE 8.1.1 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Risk assessment",
+           "name": "OE 8.1.1 - teacher risk assessment",
+           "ext": "pdf",
+           "id": "1RgBdWZGiGcxvFJ4ibpqSvY1NfmuMPbcc",
+           "ref": "OE 8.1.1",
+           "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Online experiments/OE 8.1.1 - teacher risk assessment.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 8.1.1 Connecting circuits",
+           "ext": "pdf",
+           "id": "10a6gZllbXptBg-lai9HVUS1F3Img3XzS",
+           "ref": "OE 8.1.1",
+           "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Online experiments/OE 8.1.1 Connecting circuits.pdf"
+          },
+          {
+           "label": "Video",
+           "name": "Flow of charge through a conductor",
+           "ext": "mp4",
+           "id": "18XPE6w-ivW7crHWYl305ZxT1y6t9IPI8",
+           "ref": "",
+           "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Videos/Flow of charge through a conductor.mp4"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA10 Electrostatics with a Van de Graaff generator",
+           "ext": "spklab",
+           "id": "13-XmxpJGBhTKmhmzvos2b8TALv87DmwH",
+           "ref": "PA10",
+           "path": "Unit 1/AoS3 Electricity/Pracs (SAB SPARKlabs)/PA10 Electrostatics with a Van de Graaff generator.spklab"
+          },
+          {
+           "label": "Risk assessment",
+           "name": "PA10 risk assessment",
+           "ext": "pdf",
+           "id": "1-VVb1Py2OEtYYMTcK-C8_jf4eTpixPBw",
+           "ref": "PA10",
+           "path": "Unit 1/AoS3 Electricity/Pracs (SAB SPARKlabs)/Teacher/PA10 risk assessment.pdf"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -1312,6 +2016,56 @@
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5A Charge and current"
         },
         {
+         "pearson": [
+          {
+           "label": "Teacher notes",
+           "name": "OE 8.2.1 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "1bS84WMr2GABHydh-PMzibPGP7dvig5ok",
+           "ref": "OE 8.2.1",
+           "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Online experiments/OE 8.2.1 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Risk assessment",
+           "name": "OE 8.2.1 - teacher risk assessment",
+           "ext": "pdf",
+           "id": "1DxLws0MWNLXm-Ke84GXtBMBUtn2Woi67",
+           "ref": "OE 8.2.1",
+           "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Online experiments/OE 8.2.1 - teacher risk assessment.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 8.2.1 Using an ammeter",
+           "ext": "pdf",
+           "id": "15aO1mpceMza4Dr-wvLmj1zlSjhDCIMa4",
+           "ref": "OE 8.2.1",
+           "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Online experiments/OE 8.2.1 Using an ammeter.pdf"
+          },
+          {
+           "label": "Teacher notes",
+           "name": "OE 8.2.2 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "1uugo5b12s-EzJfRsGiklXIH1knD10bg6",
+           "ref": "OE 8.2.2",
+           "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Online experiments/OE 8.2.2 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Risk assessment",
+           "name": "OE 8.2.2 - teacher risk assessment",
+           "ext": "pdf",
+           "id": "1Ius75j4e63tbQZ1uQzz6B8NSTGaSlcWz",
+           "ref": "OE 8.2.2",
+           "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Online experiments/OE 8.2.2 - teacher risk assessment.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 8.2.2 Using a voltmeter",
+           "ext": "pdf",
+           "id": "1RJR6qIFipO03wMpDyWsyAhg37Q53q4Mc",
+           "ref": "OE 8.2.2",
+           "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Online experiments/OE 8.2.2 Using a voltmeter.pdf"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -1393,6 +2147,24 @@
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5B Energy and PD"
         },
         {
+         "pearson": [
+          {
+           "label": "Video",
+           "name": "The properties of a series circuit",
+           "ext": "mp4",
+           "id": "1Jiakc45AYLKCCrBHBt2uqGj-Nj8qX7ju",
+           "ref": "",
+           "path": "Unit 1/AoS3 Electricity/Ch09 Electric circuits/Videos/The properties of a series circuit.mp4"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA12 Finding the resistance of an ohmic resistor",
+           "ext": "spklab",
+           "id": "1fJ1XDZLqzfhojETPdRJcCLfU98TjL_1i",
+           "ref": "PA12",
+           "path": "Unit 1/AoS3 Electricity/Pracs (SAB SPARKlabs)/PA12 Finding the resistance of an ohmic resistor.spklab"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -1463,6 +2235,48 @@
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5C Series circuits"
         },
         {
+         "pearson": [
+          {
+           "label": "Teacher notes",
+           "name": "OE 8.4.2 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "1HInZzLIYA2M3vCRE-uDCn6Cr9gCXo9N9",
+           "ref": "OE 8.4.2",
+           "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Online experiments/OE 8.4.2 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Risk assessment",
+           "name": "OE 8.4.2 - teacher risk assessment",
+           "ext": "pdf",
+           "id": "1KSuA7Fmv7F7TLmPjaAQ-eX3GXw8M-w9W",
+           "ref": "OE 8.4.2",
+           "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Online experiments/OE 8.4.2 - teacher risk assessment.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 8.4.2 Resistance in a combination circuit",
+           "ext": "pdf",
+           "id": "1Pz1lwFdGjhaPhpf2PNXRdrqHX3aIzZHN",
+           "ref": "OE 8.4.2",
+           "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Online experiments/OE 8.4.2 Resistance in a combination circuit.pdf"
+          },
+          {
+           "label": "Video",
+           "name": "Current in a parallel circuit",
+           "ext": "mp4",
+           "id": "1oiUxe1HM6MNDyvEnmci8Y403O5ISCryn",
+           "ref": "",
+           "path": "Unit 1/AoS3 Electricity/Ch09 Electric circuits/Videos/Current in a parallel circuit.mp4"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA13 Series and parallel circuits",
+           "ext": "spklab",
+           "id": "1s1PYm7P2gkOCmbGiGWqH8F7xRcLcOCLX",
+           "ref": "PA13",
+           "path": "Unit 1/AoS3 Electricity/Pracs (SAB SPARKlabs)/PA13 Series and parallel circuits.spklab"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -1532,6 +2346,16 @@
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch05 Electricity\\5D Parallel circuits"
         },
         {
+         "pearson": [
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA14 Electrical equivalent of heat",
+           "ext": "spklab",
+           "id": "1ATyhZUZli11eJzHtksyUvkKW_frmHjjo",
+           "ref": "PA14",
+           "path": "Unit 1/AoS3 Electricity/Pracs (SAB SPARKlabs)/PA14 Electrical equivalent of heat.spklab"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -1698,6 +2522,24 @@
          "ext": "docx",
          "id": "1tgkOKDSOB-GtcSwe4lZrh4ab60v2u1Ut"
         }
+       ],
+       "pearson": [
+        {
+         "label": "Fully worked solutions",
+         "name": "Ch08 fully worked solutions",
+         "ext": "pdf",
+         "id": "1VwKCOaBJnuf_yMJDyZxvzCnUY_I0HsNz",
+         "ref": "Pearson Ch 8",
+         "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Ch08 fully worked solutions.pdf"
+        },
+        {
+         "label": "Fully worked solutions",
+         "name": "Ch09 fully worked solutions",
+         "ext": "pdf",
+         "id": "1KWHjhQgGeYWZx--5yM2yTS_SewxGptBC",
+         "ref": "Pearson Ch 9",
+         "path": "Unit 1/AoS3 Electricity/Ch09 Electric circuits/Ch09 fully worked solutions.pdf"
+        }
        ]
       },
       {
@@ -1706,6 +2548,56 @@
        "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity",
        "sections": [
         {
+         "pearson": [
+          {
+           "label": "Teacher notes",
+           "name": "OE 8.4.1 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "1R2ZyHxBEqt4uci6MRlRXfO13xVg8BsD5",
+           "ref": "OE 8.4.1",
+           "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Online experiments/OE 8.4.1 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 8.4.1 Data analysis- Unknown electrical devices",
+           "ext": "pdf",
+           "id": "1pg-nfvuN1gDH7K62n6ahB-gmN3aUeY2h",
+           "ref": "OE 8.4.1",
+           "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Online experiments/OE 8.4.1 Data analysis- Unknown electrical devices.pdf"
+          },
+          {
+           "label": "Teacher notes",
+           "name": "OE 9.1.1 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "1nfhyYybcqx18He9jGMniUmHsDmHprQSl",
+           "ref": "OE 9.1.1",
+           "path": "Unit 1/AoS3 Electricity/Ch09 Electric circuits/Online experiments/OE 9.1.1 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Risk assessment",
+           "name": "OE 9.1.1 - teacher risk assessment",
+           "ext": "pdf",
+           "id": "1qVT4n_ABVT-jgYFmgn2an9JZxYy1hrfO",
+           "ref": "OE 9.1.1",
+           "path": "Unit 1/AoS3 Electricity/Ch09 Electric circuits/Online experiments/OE 9.1.1 - teacher risk assessment.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 9.1.1 Resistance and temperature",
+           "ext": "pdf",
+           "id": "1hG7KpI04hRkRA1td0HWgotv3BYL8vN2L",
+           "ref": "OE 9.1.1",
+           "path": "Unit 1/AoS3 Electricity/Ch09 Electric circuits/Online experiments/OE 9.1.1 Resistance and temperature.pdf"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA11 Ohmic and non-ohmic conductors",
+           "ext": "spklab",
+           "id": "1-cHKJ3NfH0oEgfrJvYVA2ms7g4EdOdLm",
+           "ref": "PA11",
+           "path": "Unit 1/AoS3 Electricity/Pracs (SAB SPARKlabs)/PA11 Ohmic and non-ohmic conductors.spklab"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -1826,6 +2718,7 @@
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity\\6A Components"
         },
         {
+         "pearson": [],
          "files": [
           {
            "kind": "checkin",
@@ -1885,6 +2778,7 @@
          "folder": "Unit 1\\U1 AoS3 Electricity\\Ch06 Using electricity\\6B Electricity at home"
         },
         {
+         "pearson": [],
          "files": [
           {
            "kind": "checkin",
@@ -2022,10 +2916,88 @@
          "ext": "docx",
          "id": "1GgDP2lQk0GlAe93UDzLnyKOCy6dwAQUc"
         }
+       ],
+       "pearson": [
+        {
+         "label": "Fully worked solutions",
+         "name": "Ch08 fully worked solutions",
+         "ext": "pdf",
+         "id": "1VwKCOaBJnuf_yMJDyZxvzCnUY_I0HsNz",
+         "ref": "Pearson Ch 8",
+         "path": "Unit 1/AoS3 Electricity/Ch08 Electrical physics/Ch08 fully worked solutions.pdf"
+        },
+        {
+         "label": "Fully worked solutions",
+         "name": "Ch09 fully worked solutions",
+         "ext": "pdf",
+         "id": "1KWHjhQgGeYWZx--5yM2yTS_SewxGptBC",
+         "ref": "Pearson Ch 9",
+         "path": "Unit 1/AoS3 Electricity/Ch09 Electric circuits/Ch09 fully worked solutions.pdf"
+        }
        ]
       }
      ],
-     "files": []
+     "files": [],
+     "pearson": [
+      {
+       "label": "AoS review solutions",
+       "name": "AoS3 Review fully worked solutions",
+       "ext": "pdf",
+       "id": "1Fv8gaZtFL8a17JgtcKyEu7q7Sk33VVz-",
+       "ref": "Pearson Unit 1 AoS 3",
+       "path": "Unit 1/AoS3 Electricity/AoS3 Review fully worked solutions.pdf"
+      },
+      {
+       "label": "Prac solutions",
+       "name": "AoS3 SAB practical activity solutions",
+       "ext": "pdf",
+       "id": "1gmuVs25_2gQUSVq3XfHHeURRNrgXtDX5",
+       "ref": "Pearson Unit 1 AoS 3",
+       "path": "Unit 1/AoS3 Electricity/Pracs (SAB SPARKlabs)/Teacher/AoS3 SAB practical activity solutions.pdf"
+      },
+      {
+       "label": "Prac teacher notes",
+       "name": "AoS3 SAB practical activity teacher notes",
+       "ext": "pdf",
+       "id": "1HJkJVFdItl7prVx9O5vPZbIcksobsYqG",
+       "ref": "Pearson Unit 1 AoS 3",
+       "path": "Unit 1/AoS3 Electricity/Pracs (SAB SPARKlabs)/Teacher/AoS3 SAB practical activity teacher notes.pdf"
+      },
+      {
+       "label": "Risk assessment",
+       "name": "Electricity pracs risk assessment",
+       "ext": "pdf",
+       "id": "1tI7rsny07mEdvWVSuvqY-zz_jFr_9nlg",
+       "ref": "Pearson Unit 1 AoS 3",
+       "path": "Unit 1/AoS3 Electricity/Pracs (SAB SPARKlabs)/Teacher/Electricity pracs risk assessment.pdf"
+      },
+      {
+       "label": "SAB exam question solutions",
+       "name": "AoS3 SAB exam question solutions",
+       "ext": "pdf",
+       "id": "19ytvFp8DvyKIS5z26GHWyMyF0goQJpoj",
+       "ref": "Pearson Unit 1 AoS 3",
+       "path": "Unit 1/AoS3 Electricity/SAB answers (teacher only)/AoS3 SAB exam question solutions.pdf"
+      },
+      {
+       "label": "SAB worksheet solutions",
+       "name": "AoS3 SAB worksheet solutions",
+       "ext": "pdf",
+       "id": "10TPNafWHkLFfa_hZooSPESwJGkSQBpSJ",
+       "ref": "Pearson Unit 1 AoS 3",
+       "path": "Unit 1/AoS3 Electricity/SAB answers (teacher only)/AoS3 SAB worksheet solutions.pdf"
+      }
+     ]
+    }
+   ],
+   "pearson": [
+    {
+     "label": "Fully worked solutions (all chapters)",
+     "name": "Unit 1 fully worked solutions (all chapters)",
+     "ext": "pdf",
+     "id": "1xFxuaP3UU4oKkBOgfAfpDyTHUYdqlKk0",
+     "ref": "Pearson",
+     "path": "Unit 1/Unit 1 fully worked solutions (all chapters).pdf"
     }
    ]
   },
@@ -2044,6 +3016,16 @@
        "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion",
        "sections": [
         {
+         "pearson": [
+          {
+           "label": "Video",
+           "name": "Scalars and vectors",
+           "ext": "mp4",
+           "id": "14hahZ8_rMPfD--AxJaEigN42SKwtBKJv",
+           "ref": "",
+           "path": "Unit 2/AoS1 Motion/Ch10 Scalars and vectors/Videos/Scalars and vectors.mp4"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -2108,6 +3090,24 @@
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion\\7A Modelling motion"
         },
         {
+         "pearson": [
+          {
+           "label": "Video",
+           "name": "Reading from a graph",
+           "ext": "mp4",
+           "id": "1-kbXNaNdzXXVL9YkRX-UrARbxj7dMd_X",
+           "ref": "",
+           "path": "Unit 2/AoS1 Motion/Ch11 Linear motion/Videos/Reading from a graph.mp4"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA15 Analysing motion with a motion sensor",
+           "ext": "spklab",
+           "id": "1YCdt3C8V-vWazYmWnbfo5kC5n0L-FT39",
+           "ref": "PA15",
+           "path": "Unit 2/AoS1 Motion/Pracs (SAB SPARKlabs)/PA15 Analysing motion with a motion sensor.spklab"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -2200,6 +3200,40 @@
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch07 Modelling motion\\7B Motion graphs"
         },
         {
+         "pearson": [
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA16 A reaction timer",
+           "ext": "spklab",
+           "id": "17zgaxXNuR41r2S7XXrLtvu7yjy4e-5Rd",
+           "ref": "PA16",
+           "path": "Unit 2/AoS1 Motion/Pracs (SAB SPARKlabs)/PA16 A reaction timer.spklab"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA17 Measuring height or distance using kinematics",
+           "ext": "spklab",
+           "id": "1MiV8h_gPW_S8ZbiUjvPLl2HX3mOqSUee",
+           "ref": "PA17",
+           "path": "Unit 2/AoS1 Motion/Pracs (SAB SPARKlabs)/PA17 Measuring height or distance using kinematics.spklab"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA18 Acceleration down an incline",
+           "ext": "spklab",
+           "id": "1CMRUNtGWdHqK4xDxr3mBKBGQazieoF0J",
+           "ref": "PA18",
+           "path": "Unit 2/AoS1 Motion/Pracs (SAB SPARKlabs)/PA18 Acceleration down an incline.spklab"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA20 Verifying the value of acceleration due to gravity at the Earth’s surface",
+           "ext": "spklab",
+           "id": "18-dC_o6oJ7IFN-H_GciK8jefbJg4pRTc",
+           "ref": "PA20",
+           "path": "Unit 2/AoS1 Motion/Pracs (SAB SPARKlabs)/PA20 Verifying the value of acceleration due to gravity at the Earth’s surface.spklab"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -2339,6 +3373,24 @@
          "ext": "docx",
          "id": "1xFfWUuGveHx42nYWJZmuV0kWAMnfmj9S"
         }
+       ],
+       "pearson": [
+        {
+         "label": "Fully worked solutions",
+         "name": "Ch10 fully worked solutions",
+         "ext": "pdf",
+         "id": "1ZS4wdfo3LeC1jFp5VXyurzkC_ybNwml1",
+         "ref": "Pearson Ch 10",
+         "path": "Unit 2/AoS1 Motion/Ch10 Scalars and vectors/Ch10 fully worked solutions.pdf"
+        },
+        {
+         "label": "Fully worked solutions",
+         "name": "Ch11 fully worked solutions",
+         "ext": "pdf",
+         "id": "11CcjTBMG9CpusC3EsU-Bu23Hfv9F43rC",
+         "ref": "Pearson Ch 11",
+         "path": "Unit 2/AoS1 Motion/Ch11 Linear motion/Ch11 fully worked solutions.pdf"
+        }
        ]
       },
       {
@@ -2347,6 +3399,40 @@
        "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces",
        "sections": [
         {
+         "pearson": [
+          {
+           "label": "Online experiment",
+           "name": "Online experiment 12.6.1 Research topics",
+           "ext": "pdf",
+           "id": "1FATOO9Nc2GfhksceleoEIS_E-ta-ZAJ6",
+           "ref": "OE 12.6.1",
+           "path": "Unit 2/AoS1 Motion/Ch12 Momentum and force/Online experiment 12.6.1 Research topics.pdf"
+          },
+          {
+           "label": "Teacher notes",
+           "name": "OE 12.4.1 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "1Dk3my2gxN8Zpzl_YrbPc1-nlmpCQJ1EM",
+           "ref": "OE 12.4.1",
+           "path": "Unit 2/AoS1 Motion/Ch12 Momentum and force/Online experiments/OE 12.4.1 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 12.4.1 Conservation of momentum in explosions",
+           "ext": "pdf",
+           "id": "1X0o8ESAyQFZUiydxPzisfoNB5CyHQ3m4",
+           "ref": "OE 12.4.1",
+           "path": "Unit 2/AoS1 Motion/Ch12 Momentum and force/Online experiments/OE 12.4.1 Conservation of momentum in explosions.pdf"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA22 Conservation of momentum",
+           "ext": "spklab",
+           "id": "1iAbmFP8ExZIWQ598y8rLLzeJX5JMSol3",
+           "ref": "PA22",
+           "path": "Unit 2/AoS1 Motion/Pracs (SAB SPARKlabs)/PA22 Conservation of momentum.spklab"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -2404,6 +3490,40 @@
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces\\8A Momentum"
         },
         {
+         "pearson": [
+          {
+           "label": "Teacher notes",
+           "name": "OE 12.3.1 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "1eRhYx5NakMQwHHXUpWS8dus6Ghg5YSgl",
+           "ref": "OE 12.3.1",
+           "path": "Unit 2/AoS1 Motion/Ch12 Momentum and force/Online experiments/OE 12.3.1 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 12.3.1 Action and reaction",
+           "ext": "pdf",
+           "id": "1a0R2iP5g1lVF-Xuj6TvBhrJOds5UDBMe",
+           "ref": "OE 12.3.1",
+           "path": "Unit 2/AoS1 Motion/Ch12 Momentum and force/Online experiments/OE 12.3.1 Action and reaction.pdf"
+          },
+          {
+           "label": "Video",
+           "name": "How do airplanes fly-",
+           "ext": "mp4",
+           "id": "1Nhzj_JJ-2JvOkYb5lFYmbqdILI_FAIdN",
+           "ref": "",
+           "path": "Unit 2/AoS1 Motion/Ch12 Momentum and force/Videos/How do airplanes fly-.mp4"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA19 Newton’s second law",
+           "ext": "spklab",
+           "id": "1sxyfD_ljpO4dnpmdYTj7a5xiJzj8Era5",
+           "ref": "PA19",
+           "path": "Unit 2/AoS1 Motion/Pracs (SAB SPARKlabs)/PA19 Newton’s second law.spklab"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -2475,6 +3595,40 @@
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch08 Forces\\8B Newtons laws"
         },
         {
+         "pearson": [
+          {
+           "label": "Teacher notes",
+           "name": "OE 10.3.1 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "1DYz3jztrpNQf4VeP35LHxf61RNC6NEF8",
+           "ref": "OE 10.3.1",
+           "path": "Unit 2/AoS1 Motion/Ch10 Scalars and vectors/Online experiments/OE 10.3.1 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 10.3.1 Vector components and balanced forces",
+           "ext": "pdf",
+           "id": "1AEeWYCYN-ucaZkcLp0v1g8U0FewluZ-e",
+           "ref": "OE 10.3.1",
+           "path": "Unit 2/AoS1 Motion/Ch10 Scalars and vectors/Online experiments/OE 10.3.1 Vector components and balanced forces.pdf"
+          },
+          {
+           "label": "Video",
+           "name": "Equilibrium",
+           "ext": "mp4",
+           "id": "1nrf3fcZyhzU_tKEgMAzcyF6l-8Oz6Kre",
+           "ref": "",
+           "path": "Unit 2/AoS1 Motion/Ch14 Forces and equilibrium/Videos/Equilibrium.mp4"
+          },
+          {
+           "label": "Video",
+           "name": "Force arm",
+           "ext": "mp4",
+           "id": "1dchOvobgxuqjfwIUBlNgnsPTRXEZXPkn",
+           "ref": "",
+           "path": "Unit 2/AoS1 Motion/Ch14 Forces and equilibrium/Videos/Force arm.mp4"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -2614,6 +3768,24 @@
          "ext": "docx",
          "id": "1QheXqaJvF_qRdasSqOA2iyedCIGzkMKD"
         }
+       ],
+       "pearson": [
+        {
+         "label": "Fully worked solutions",
+         "name": "Ch12 fully worked solutions",
+         "ext": "pdf",
+         "id": "1OiAvSgSjwHws63yTa7eLt4Qc1N9hZMyV",
+         "ref": "Pearson Ch 12",
+         "path": "Unit 2/AoS1 Motion/Ch12 Momentum and force/Ch12 fully worked solutions.pdf"
+        },
+        {
+         "label": "Fully worked solutions",
+         "name": "Ch14 fully worked solutions",
+         "ext": "pdf",
+         "id": "1730YT8DknREs_oQQUI3oG7LenqnJnPpe",
+         "ref": "Pearson Ch 14",
+         "path": "Unit 2/AoS1 Motion/Ch14 Forces and equilibrium/Ch14 fully worked solutions.pdf"
+        }
        ]
       },
       {
@@ -2622,6 +3794,7 @@
        "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy",
        "sections": [
         {
+         "pearson": [],
          "files": [
           {
            "kind": "checkin",
@@ -2665,6 +3838,32 @@
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy\\9A Work"
         },
         {
+         "pearson": [
+          {
+           "label": "Video",
+           "name": "The potential for fun",
+           "ext": "mp4",
+           "id": "1epumrx3TG1RzbDyBi_PX_CM4ya63MyiQ",
+           "ref": "",
+           "path": "Unit 2/AoS1 Motion/Ch13 Energy and motion/Videos/The potential for fun.mp4"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA21 Work, energy and power",
+           "ext": "spklab",
+           "id": "1qzzrgtOAeC9iYupHUteEMhtt8DveBm5a",
+           "ref": "PA21",
+           "path": "Unit 2/AoS1 Motion/Pracs (SAB SPARKlabs)/PA21 Work, energy and power.spklab"
+          },
+          {
+           "label": "Practical (SAB SPARKlab)",
+           "name": "PA23 Conservation of energy",
+           "ext": "spklab",
+           "id": "1BysFftdDmFSwQMziwX7T2dHuyx7o2P3Y",
+           "ref": "PA23",
+           "path": "Unit 2/AoS1 Motion/Pracs (SAB SPARKlabs)/PA23 Conservation of energy.spklab"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -2722,6 +3921,24 @@
          "folder": "Unit 2\\U2 AoS1 Motion\\Ch09 Energy\\9B Energy and power"
         },
         {
+         "pearson": [
+          {
+           "label": "Teacher notes",
+           "name": "OE 13.2.1 - teacher notes and solutions",
+           "ext": "pdf",
+           "id": "14FdLE6GhnIRXpKE7v37wm_jXbjSSWzjc",
+           "ref": "OE 13.2.1",
+           "path": "Unit 2/AoS1 Motion/Ch13 Energy and motion/Online experiments/OE 13.2.1 - teacher notes and solutions.pdf"
+          },
+          {
+           "label": "Online experiment",
+           "name": "OE 13.2.1 Hooke’s law",
+           "ext": "pdf",
+           "id": "16ePcwE6ce71dXgpExsRMXnucDuoi2Mn6",
+           "ref": "OE 13.2.1",
+           "path": "Unit 2/AoS1 Motion/Ch13 Energy and motion/Online experiments/OE 13.2.1 Hooke’s law.pdf"
+          }
+         ],
          "files": [
           {
            "kind": "checkin",
@@ -2861,10 +4078,62 @@
          "ext": "docx",
          "id": "1p656HhIshm9QH0IRXiqbUWybmksR7yJ_"
         }
+       ],
+       "pearson": [
+        {
+         "label": "Fully worked solutions",
+         "name": "Ch13 fully worked solutions",
+         "ext": "pdf",
+         "id": "1K94JAxg7z8rhsmMhzpdmMh5i1YIS6q_N",
+         "ref": "Pearson Ch 13",
+         "path": "Unit 2/AoS1 Motion/Ch13 Energy and motion/Ch13 fully worked solutions.pdf"
+        }
        ]
       }
      ],
-     "files": []
+     "files": [],
+     "pearson": [
+      {
+       "label": "AoS review solutions",
+       "name": "AoS1 Review fully worked solutions",
+       "ext": "pdf",
+       "id": "1oucUczKNs9qUUKrkn5_sAGwIP64XGmCz",
+       "ref": "Pearson Unit 2 AoS 1",
+       "path": "Unit 2/AoS1 Motion/AoS1 Review fully worked solutions.pdf"
+      },
+      {
+       "label": "Prac solutions",
+       "name": "AoS1 SAB practical activity solutions",
+       "ext": "pdf",
+       "id": "1rnB_sUmN7YMW3c2a-KX4-vVBAexKCnwh",
+       "ref": "Pearson Unit 2 AoS 1",
+       "path": "Unit 2/AoS1 Motion/Pracs (SAB SPARKlabs)/Teacher/AoS1 SAB practical activity solutions.pdf"
+      },
+      {
+       "label": "Prac teacher notes",
+       "name": "AoS1 SAB practical activity teacher notes",
+       "ext": "pdf",
+       "id": "1vbV2MS9nnqySAP5jzQuUBhpy_CvvUVOJ",
+       "ref": "Pearson Unit 2 AoS 1",
+       "path": "Unit 2/AoS1 Motion/Pracs (SAB SPARKlabs)/Teacher/AoS1 SAB practical activity teacher notes.pdf"
+      },
+      {
+       "label": "SAB exam question solutions",
+       "name": "AoS1 SAB exam question solutions",
+       "ext": "pdf",
+       "id": "1iSDUgplmDVBpLgKcHpe0V1g_13C-dfAU",
+       "ref": "Pearson Unit 2 AoS 1",
+       "path": "Unit 2/AoS1 Motion/SAB answers (teacher only)/AoS1 SAB exam question solutions.pdf"
+      },
+      {
+       "label": "SAB worksheet solutions",
+       "name": "AoS1 SAB worksheet solutions",
+       "ext": "pdf",
+       "id": "1TBbG6daiY4V9eih9C9MCBnmfsKuPHmOn",
+       "ref": "Pearson Unit 2 AoS 1",
+       "path": "Unit 2/AoS1 Motion/SAB answers (teacher only)/AoS1 SAB worksheet solutions.pdf"
+      }
+     ]
     },
     {
      "n": 2,
@@ -2874,50 +4143,420 @@
      "files": [
       "About Unit 2 Options.docx"
      ],
+     "pearson": [],
      "options": [
       {
        "n": "2.1",
-       "title": "Climate change"
+       "title": "Climate change",
+       "files": [
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.1 (Word)",
+         "ext": "docx",
+         "id": "1vA4Ont6SuBXWN4npp8bHeTFKSvDQEsme"
+        },
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.1",
+         "ext": "pdf",
+         "id": "1b7TkGygb9LOe0O5A7jHyMUEzjwPS0qgj"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "Option 2.1 Answers",
+         "ext": "docx",
+         "id": "1qHlkKniTYAYhLdOwryJxBm1-gWrddcDm"
+        }
+       ]
+      },
+      {
+       "n": "2.2",
+       "title": "How do fusion and fission compare as viable nuclear energy power sources",
+       "pearsonOnly": true,
+       "pearson": [
+        {
+         "label": "Option reading",
+         "name": "Option 2.2 How do fusion and fission compare as viable nuclear energy power sources",
+         "ext": "pdf",
+         "id": "1Cm3bVe6E8ZoIo9t9-UK3tLsYDS_8SGAW",
+         "ref": "Option 2.2",
+         "path": "Unit 2/AoS2 Options/Option 2.2/Option 2.2 How do fusion and fission compare as viable nuclear energy power sources.pdf"
+        },
+        {
+         "label": "Teacher notes",
+         "name": "Option 2.2 teacher notes",
+         "ext": "pdf",
+         "id": "1y9BzXxkKTCzczzLevsdgepATSK-vQjvG",
+         "ref": "Option 2.2",
+         "path": "Unit 2/AoS2 Options/Option 2.2/Option 2.2 teacher notes.pdf"
+        }
+       ]
       },
       {
        "n": "2.3",
-       "title": "Flight"
+       "title": "Flight",
+       "files": [
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.3 (Word)",
+         "ext": "docx",
+         "id": "17v84i-Wbtv_DicTp4v7w0b7WSn-43j73"
+        },
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.3",
+         "ext": "pdf",
+         "id": "1AJcd3IyQSAPLzqUkjckaZ42Ux2sXHVek"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "Option 2.3 Answers",
+         "ext": "docx",
+         "id": "1E2uA7Rdfk_FMhzp0mDGZrGnQdvw2prD-"
+        }
+       ]
       },
       {
        "n": "2.4",
-       "title": "Structures and materials"
+       "title": "Structures and materials",
+       "files": [
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.4 (Word)",
+         "ext": "docx",
+         "id": "1iYC8WptfMl-itsnfyfSDntadGRJb0QQa"
+        },
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.4",
+         "ext": "pdf",
+         "id": "1Sgy54L3_UDPBsAMNPKszwBmedVIhPPn5"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "Option 2.4 Answers",
+         "ext": "docx",
+         "id": "1k3_nDWoVRzaUtt9Qak-iDeeihn8mZttp"
+        }
+       ]
+      },
+      {
+       "n": "2.5",
+       "title": "How do forces act on the human body",
+       "pearsonOnly": true,
+       "pearson": [
+        {
+         "label": "Option reading",
+         "name": "Option 2.5 How do forces act on the human body",
+         "ext": "pdf",
+         "id": "1-CCGpPlpJahePNTOWRVQxhUNNd8n2CmW",
+         "ref": "Option 2.5",
+         "path": "Unit 2/AoS2 Options/Option 2.5/Option 2.5 How do forces act on the human body.pdf"
+        },
+        {
+         "label": "Teacher notes",
+         "name": "Option 2.5 teacher notes",
+         "ext": "pdf",
+         "id": "15rDVUI2rYeiJdKcJ3p_z5S6kkj3zY4dG",
+         "ref": "Option 2.5",
+         "path": "Unit 2/AoS2 Options/Option 2.5/Option 2.5 teacher notes.pdf"
+        }
+       ]
       },
       {
        "n": "2.8",
-       "title": "Human vision"
+       "title": "Human vision",
+       "files": [
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.8 (Word)",
+         "ext": "docx",
+         "id": "18FA1nafJwXizKZRXIEOOR6V-cicLKm22"
+        },
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.8",
+         "ext": "pdf",
+         "id": "1IRvHVyRc991cSm1cK77fAo-p1h2R3Aug"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "Option 2.8 Answers",
+         "ext": "docx",
+         "id": "1ED7SxtQNPz7bB8mPSyBA53Ceauq_pAKw"
+        }
+       ]
       },
       {
        "n": "2.9",
-       "title": "Photography"
+       "title": "Photography",
+       "files": [
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.9 (Word)",
+         "ext": "docx",
+         "id": "1o0D4LcSOrzx3WWOb3wmSn1h1XrmAdD0u"
+        },
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.9",
+         "ext": "pdf",
+         "id": "1apJzCCJxhasdduQ2yrM-eZJ6P_GVhegi"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "Option 2.9 Answers",
+         "ext": "docx",
+         "id": "1k0A2DIfZu19KDfzkPfwXGXyQz4tDH6QO"
+        }
+       ]
       },
       {
        "n": "2.10",
-       "title": "Music"
+       "title": "Music",
+       "files": [
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.10 (Word)",
+         "ext": "docx",
+         "id": "1D8WSIrlOHK54YoMoQS-5uXFBhDUgyyoj"
+        },
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.10",
+         "ext": "pdf",
+         "id": "12M8LLp4ZlHHZZJ2b4tJyfVQupoBrFdTz"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "Option 2.10 Answers",
+         "ext": "docx",
+         "id": "1GBvrTaEN14WLTy74C3T2yZpb2XTG6dIh"
+        }
+       ],
+       "pearson": [
+        {
+         "label": "Option reading",
+         "name": "Option 2.10 How do instruments make music",
+         "ext": "pdf",
+         "id": "1MMS70UrDNEBFkwulfupzLPGIbh7eV21m",
+         "ref": "Option 2.10",
+         "path": "Unit 2/AoS2 Options/Option 2.10/Option 2.10 How do instruments make music.pdf"
+        },
+        {
+         "label": "Teacher notes",
+         "name": "Option 2.10 teacher notes",
+         "ext": "pdf",
+         "id": "19gQSiubbnU-cUb0Mljl36G4wcKZNclqN",
+         "ref": "Option 2.10",
+         "path": "Unit 2/AoS2 Options/Option 2.10/Option 2.10 teacher notes.pdf"
+        }
+       ]
       },
       {
        "n": "2.11",
-       "title": "Ball sports"
+       "title": "Ball sports",
+       "files": [
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.11 (Word)",
+         "ext": "docx",
+         "id": "1WwzKd8jUjsdDdKxR_0Zl35wcJeHevM1K"
+        },
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.11",
+         "ext": "pdf",
+         "id": "1DY8T6sSlnb2xh5ZaNeJAc7sBDMg32CW7"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "Option 2.11 Answers",
+         "ext": "docx",
+         "id": "1DFfcAFuulecTI507UPIrP0Fjv0gVTBNe"
+        }
+       ],
+       "pearson": [
+        {
+         "label": "Option reading",
+         "name": "Option 2.11 How can performance in ball sports be improved",
+         "ext": "pdf",
+         "id": "137lndxFwhWmAMUswt0D4o52JuWeuH8ZA",
+         "ref": "Option 2.11",
+         "path": "Unit 2/AoS2 Options/Option 2.11/Option 2.11 How can performance in ball sports be improved.pdf"
+        },
+        {
+         "label": "Teacher notes",
+         "name": "Option 2.11 teacher notes",
+         "ext": "pdf",
+         "id": "10jxpeW_RgScOXi4W2TWAaXgI3ImFyVmW",
+         "ref": "Option 2.11",
+         "path": "Unit 2/AoS2 Options/Option 2.11/Option 2.11 teacher notes.pdf"
+        }
+       ]
+      },
+      {
+       "n": "2.12",
+       "title": "How can AC electricity charge a DC device",
+       "pearsonOnly": true,
+       "pearson": [
+        {
+         "label": "Option reading",
+         "name": "Option 2.12 How can AC electricity charge a DC device",
+         "ext": "pdf",
+         "id": "19_U0e61mbNc9-u03potqAhQiNNfmTsiJ",
+         "ref": "Option 2.12",
+         "path": "Unit 2/AoS2 Options/Option 2.12/Option 2.12 How can AC electricity charge a DC device.pdf"
+        },
+        {
+         "label": "Teacher notes",
+         "name": "Option 2.12 teacher notes",
+         "ext": "pdf",
+         "id": "1XEPg7U0zq6kgOKrnrlkKarE3UJlEOJ_K",
+         "ref": "Option 2.12",
+         "path": "Unit 2/AoS2 Options/Option 2.12/Option 2.12 teacher notes.pdf"
+        }
+       ]
       },
       {
        "n": "2.13",
-       "title": "Stars and black holes"
+       "title": "Stars and black holes",
+       "files": [
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.13 (Word)",
+         "ext": "docx",
+         "id": "1iLoKLJKwrx1Rk1lylnvrz-IUc7acvEjh"
+        },
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.13",
+         "ext": "pdf",
+         "id": "1zP4Qy3HIO8ykPFV25w7BW44lT2O7Dx99"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "Option 2.13 Answers",
+         "ext": "docx",
+         "id": "15D5D5Flo95L0U1Kim4DreC-Evp8OqmfS"
+        }
+       ]
       },
       {
        "n": "2.14",
-       "title": "Life beyond the Solar System"
+       "title": "Life beyond the Solar System",
+       "files": [
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.14 (Word)",
+         "ext": "docx",
+         "id": "1EIJZPDnV8PhUipHTLegha1fphFW2458K"
+        },
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.14",
+         "ext": "pdf",
+         "id": "1bKvjHg-_kFdRohO2SC3pEJvloPsHlWPq"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "Option 2.14 Answers",
+         "ext": "docx",
+         "id": "1tdhXygUIVK8vP_OZauC2-gOCNjVK9yHq"
+        }
+       ]
       },
       {
        "n": "2.15",
-       "title": "Traditional artefacts"
+       "title": "Traditional artefacts",
+       "files": [
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.15 (Word)",
+         "ext": "docx",
+         "id": "1uKg9xPJObhoynpCw1j413JDn2CrRDsYK"
+        },
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.15",
+         "ext": "pdf",
+         "id": "1ImwdPmuuSMPtS9hTOuAbVse12dWvjaXc"
+        }
+       ],
+       "pearson": [
+        {
+         "label": "Option reading",
+         "name": "Option 2.15 How can physics explain traditional artefacts, knowledge and techniques",
+         "ext": "pdf",
+         "id": "1C30JzhifP8OPVDbVciTLDzxKfU4k5Tav",
+         "ref": "Option 2.15",
+         "path": "Unit 2/AoS2 Options/Option 2.15/Option 2.15 How can physics explain traditional artefacts, knowledge and techniques.pdf"
+        },
+        {
+         "label": "Teacher notes",
+         "name": "Option 2.15 teacher notes",
+         "ext": "pdf",
+         "id": "1CfGSmTYp0u12zaphg7itElHC6VwJZ7Gw",
+         "ref": "Option 2.15",
+         "path": "Unit 2/AoS2 Options/Option 2.15/Option 2.15 teacher notes.pdf"
+        }
+       ]
       },
       {
        "n": "2.17",
-       "title": "Origins of matter"
+       "title": "Origins of matter",
+       "files": [
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.17 (Word)",
+         "ext": "docx",
+         "id": "1WACYfPwjvbg0oxDzrY3AczuxXz7Bsko5"
+        },
+        {
+         "kind": "other",
+         "label": "Other",
+         "name": "Option 2.17",
+         "ext": "pdf",
+         "id": "19Y3w92gU0ZXoAm_XRHHZ2LM3vIJj0LBB"
+        },
+        {
+         "kind": "wsans",
+         "label": "Worksheet answers",
+         "name": "Option 2.17 Answers",
+         "ext": "docx",
+         "id": "19fDzne9AOR9Aew2rzObt_r8H6V7RAEt7"
+        }
+       ]
       }
      ]
     },
@@ -2927,7 +4566,214 @@
      "folder": "U2 AoS3 Investigation",
      "chapters": [],
      "files": [],
-     "options": []
+     "pearson": [
+      {
+       "label": "Assessment rubric",
+       "name": "Assessment rubric",
+       "ext": "docx",
+       "id": "1feNUynImXZedga-Sxt4G0Oy28c2qmAYL",
+       "ref": "Investigation",
+       "path": "Unit 2/AoS3 Investigation/Assessment rubric.docx"
+      },
+      {
+       "label": "Logbook template",
+       "name": "Logbook template",
+       "ext": "docx",
+       "id": "1wtT-17XdXC02vMsYyWUdjbpAjeKjWOno",
+       "ref": "Investigation",
+       "path": "Unit 2/AoS3 Investigation/Logbook template.docx"
+      },
+      {
+       "label": "Poster template",
+       "name": "Poster template",
+       "ext": "pptx",
+       "id": "17b8q5HqsrMXMXC1OtAia-eH2KTDL6VaJ",
+       "ref": "Investigation",
+       "path": "Unit 2/AoS3 Investigation/Poster template.pptx"
+      },
+      {
+       "label": "Sample logbook",
+       "name": "Sample logbook",
+       "ext": "pdf",
+       "id": "17X6mPIxp7ctSVJ9FIZyKe7Na6IAaQ42F",
+       "ref": "Investigation",
+       "path": "Unit 2/AoS3 Investigation/Sample logbook.pdf"
+      },
+      {
+       "label": "Sample poster",
+       "name": "Sample poster",
+       "ext": "pdf",
+       "id": "1YNIA5Y0knFB0OQ-dv3-aMIyHxboAP2J7",
+       "ref": "Investigation",
+       "path": "Unit 2/AoS3 Investigation/Sample poster.pdf"
+      },
+      {
+       "label": "Student checklist",
+       "name": "Student checklist",
+       "ext": "docx",
+       "id": "1Aquw5uIy63PTZPBc1_BiqkiLQP1ediAq",
+       "ref": "Investigation",
+       "path": "Unit 2/AoS3 Investigation/Student checklist.docx"
+      },
+      {
+       "label": "Teacher notes",
+       "name": "Teacher notes",
+       "ext": "pdf",
+       "id": "1m16iQ4wgpqiwJMbOzQxcJ_yxCT3vrpnz",
+       "ref": "Investigation",
+       "path": "Unit 2/AoS3 Investigation/Teacher notes.pdf"
+      }
+     ],
+     "options": [
+      {
+       "n": "2.2",
+       "title": "How do fusion and fission compare as viable nuclear energy power sources",
+       "pearsonOnly": true,
+       "pearson": [
+        {
+         "label": "Option reading",
+         "name": "Option 2.2 How do fusion and fission compare as viable nuclear energy power sources",
+         "ext": "pdf",
+         "id": "1Cm3bVe6E8ZoIo9t9-UK3tLsYDS_8SGAW",
+         "ref": "Option 2.2",
+         "path": "Unit 2/AoS2 Options/Option 2.2/Option 2.2 How do fusion and fission compare as viable nuclear energy power sources.pdf"
+        },
+        {
+         "label": "Teacher notes",
+         "name": "Option 2.2 teacher notes",
+         "ext": "pdf",
+         "id": "1y9BzXxkKTCzczzLevsdgepATSK-vQjvG",
+         "ref": "Option 2.2",
+         "path": "Unit 2/AoS2 Options/Option 2.2/Option 2.2 teacher notes.pdf"
+        }
+       ]
+      },
+      {
+       "n": "2.5",
+       "title": "How do forces act on the human body",
+       "pearsonOnly": true,
+       "pearson": [
+        {
+         "label": "Option reading",
+         "name": "Option 2.5 How do forces act on the human body",
+         "ext": "pdf",
+         "id": "1-CCGpPlpJahePNTOWRVQxhUNNd8n2CmW",
+         "ref": "Option 2.5",
+         "path": "Unit 2/AoS2 Options/Option 2.5/Option 2.5 How do forces act on the human body.pdf"
+        },
+        {
+         "label": "Teacher notes",
+         "name": "Option 2.5 teacher notes",
+         "ext": "pdf",
+         "id": "15rDVUI2rYeiJdKcJ3p_z5S6kkj3zY4dG",
+         "ref": "Option 2.5",
+         "path": "Unit 2/AoS2 Options/Option 2.5/Option 2.5 teacher notes.pdf"
+        }
+       ]
+      },
+      {
+       "n": "2.10",
+       "title": "How do instruments make music",
+       "pearsonOnly": true,
+       "pearson": [
+        {
+         "label": "Option reading",
+         "name": "Option 2.10 How do instruments make music",
+         "ext": "pdf",
+         "id": "1MMS70UrDNEBFkwulfupzLPGIbh7eV21m",
+         "ref": "Option 2.10",
+         "path": "Unit 2/AoS2 Options/Option 2.10/Option 2.10 How do instruments make music.pdf"
+        },
+        {
+         "label": "Teacher notes",
+         "name": "Option 2.10 teacher notes",
+         "ext": "pdf",
+         "id": "19gQSiubbnU-cUb0Mljl36G4wcKZNclqN",
+         "ref": "Option 2.10",
+         "path": "Unit 2/AoS2 Options/Option 2.10/Option 2.10 teacher notes.pdf"
+        }
+       ]
+      },
+      {
+       "n": "2.11",
+       "title": "How can performance in ball sports be improved",
+       "pearsonOnly": true,
+       "pearson": [
+        {
+         "label": "Option reading",
+         "name": "Option 2.11 How can performance in ball sports be improved",
+         "ext": "pdf",
+         "id": "137lndxFwhWmAMUswt0D4o52JuWeuH8ZA",
+         "ref": "Option 2.11",
+         "path": "Unit 2/AoS2 Options/Option 2.11/Option 2.11 How can performance in ball sports be improved.pdf"
+        },
+        {
+         "label": "Teacher notes",
+         "name": "Option 2.11 teacher notes",
+         "ext": "pdf",
+         "id": "10jxpeW_RgScOXi4W2TWAaXgI3ImFyVmW",
+         "ref": "Option 2.11",
+         "path": "Unit 2/AoS2 Options/Option 2.11/Option 2.11 teacher notes.pdf"
+        }
+       ]
+      },
+      {
+       "n": "2.12",
+       "title": "How can AC electricity charge a DC device",
+       "pearsonOnly": true,
+       "pearson": [
+        {
+         "label": "Option reading",
+         "name": "Option 2.12 How can AC electricity charge a DC device",
+         "ext": "pdf",
+         "id": "19_U0e61mbNc9-u03potqAhQiNNfmTsiJ",
+         "ref": "Option 2.12",
+         "path": "Unit 2/AoS2 Options/Option 2.12/Option 2.12 How can AC electricity charge a DC device.pdf"
+        },
+        {
+         "label": "Teacher notes",
+         "name": "Option 2.12 teacher notes",
+         "ext": "pdf",
+         "id": "1XEPg7U0zq6kgOKrnrlkKarE3UJlEOJ_K",
+         "ref": "Option 2.12",
+         "path": "Unit 2/AoS2 Options/Option 2.12/Option 2.12 teacher notes.pdf"
+        }
+       ]
+      },
+      {
+       "n": "2.15",
+       "title": "How can physics explain traditional artefacts, knowledge and techniques",
+       "pearsonOnly": true,
+       "pearson": [
+        {
+         "label": "Option reading",
+         "name": "Option 2.15 How can physics explain traditional artefacts, knowledge and techniques",
+         "ext": "pdf",
+         "id": "1C30JzhifP8OPVDbVciTLDzxKfU4k5Tav",
+         "ref": "Option 2.15",
+         "path": "Unit 2/AoS2 Options/Option 2.15/Option 2.15 How can physics explain traditional artefacts, knowledge and techniques.pdf"
+        },
+        {
+         "label": "Teacher notes",
+         "name": "Option 2.15 teacher notes",
+         "ext": "pdf",
+         "id": "1CfGSmTYp0u12zaphg7itElHC6VwJZ7Gw",
+         "ref": "Option 2.15",
+         "path": "Unit 2/AoS2 Options/Option 2.15/Option 2.15 teacher notes.pdf"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "pearson": [
+    {
+     "label": "Fully worked solutions (all chapters)",
+     "name": "Unit 2 fully worked solutions (all chapters)",
+     "ext": "pdf",
+     "id": "17y4KIaeLwT1YQSXX4XtoMmA4kNa2B4OQ",
+     "ref": "Pearson",
+     "path": "Unit 2/Unit 2 fully worked solutions (all chapters).pdf"
     }
    ]
   }

@@ -1,7 +1,10 @@
 # Builds data/year11.json for the Physics planner from the Cambridge VCE Physics 1&2 file inventory.
 # Inputs: tools/cambridge_inventory.json (file list of the Cambridge Resources folder on G:, 18 Nov 2026)
 #         tools/cambridge_unit1_sections.json (worked examples read from the Unit 1 chapter PDFs)
-import json,re,os,collections
+import json,re,os,collections,sys
+sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
+import pearson_map
+PM=pearson_map.build()
 H=os.path.dirname(os.path.abspath(__file__))
 INV=json.load(open(os.path.join(H,'cambridge_inventory.json')))
 IDS=json.load(open(os.path.join(H,'drive_ids.json')))  # file name -> Google Drive file id (Cambridge Resources folder, 18 Nov 2026)
@@ -35,16 +38,27 @@ for e in INV:
     else: ch['files'].append(e['name'])
   elif len(p)>=3:
     tree[p[1]].setdefault('_other',{'files':[],'secs':{}})['files'].append(e['name'])
-out={'year':11,'title':'Year 11 Physics','course':'VCE Physics Units 1 and 2','source':'Cambridge Senior Science VCE Physics Units 1&2 (2023)','root':ROOT,'units':[]}
+CW=[f for f in INV if f['name'].startswith('Course-wide/')]
+out={'courseCambridge':fl([f['name'] for f in CW]),'coursePearson':PM['course'],'year':11,'title':'Year 11 Physics','course':'VCE Physics Units 1 and 2','source':'Cambridge Senior Science VCE Physics Units 1&2 (2023)','root':ROOT,'units':[]}
 for un in (1,2):
-  U={'n':un,'title':UNITS[un],'aos':[]}
+  U={'n':un,'title':UNITS[un],'aos':[],'pearson':PM['unit'].get(un,[])}
   for an,(uu,a,title) in AOS.items():
     if uu!=un: continue
-    A={'n':a,'title':title,'folder':an,'chapters':[],'files':[]}
+    A={'n':a,'title':title,'folder':an,'chapters':[],'files':[],'pearson':PM['aos'].get((un,a),[])}
+    if (un,a)==(2,3): A['pearson']=PM['inv']
     for cn,ch in tree.get(an,{}).items():
       if cn=='_other':
         names=sorted({f.split('/')[2] for f in ch['files'] if len(f.split('/'))>3 and re.match(r'\d\.\d\d ',f.split('/')[2])})
         A['options']=[{'n':x[:4].replace('.0','.'),'title':x[5:]} for x in names]
+        have={o['n'] for o in A['options']}
+        for f in ch['files']:
+          b=f.split('/')[-1];mm=re.match(r'Option (2\.\d+)',b)
+          if mm and mm.group(1) in have: next(o for o in A['options'] if o['n']==mm.group(1)).setdefault('files',[]).append(fl([f])[0])
+        for n,fs in PM['options'].items():
+          o=next((o for o in A['options'] if o['n']==n),None)
+          if not o: o={'n':n,'title':fs[0]['name'].split(' ',2)[2] if len(fs[0]['name'].split(' ',2))>2 else n,'pearsonOnly':True};A['options'].append(o)
+          o['pearson']=fs
+        A['options'].sort(key=lambda o:[int(x) for x in o['n'].split('.')])
         A['files']=sorted({f.split('/')[-1] for f in ch['files'] if 'README' not in f and len(f.split('/'))==3});continue
       n=int(cn[2:4]);C={'n':n,'title':cn[5:],'folder':f'Unit {un}\\{an}\\{cn}','sections':[],'chapter':collections.Counter(),'testMarks':TESTS.get(n)}
       for f in ch['files']: C['chapter'][kind(f.split('/')[-1])]+=1
@@ -53,8 +67,8 @@ for un in (1,2):
         pr=[re.sub(r'^\d[A-Z] Practical ','',f.split('/')[-1].rsplit('.',1)[0]).replace('–','-') for f in files if kind(f.split('/')[-1])=='prac']
         if code in U1: pr=[x.replace('–','-') for x in U1[code]['prac']]
         we=[w.replace('–','-') for w in U1.get(code,{}).get('we',[])] if code in U1 else None
-        C['sections'].append({'files':fl(files),'code':code,'title':sn[3:],'checkins':K['checkin'],'sectionQs':K['sq'],'worksheets':K['ws'],'pracs':pr,'ppts':K['ppt'],'workedExamples':we,'folder':f"{C['folder']}\\{sn}"})
-      C['chapter']=dict(C['chapter']);C['files']=fl(ch['files']);A['chapters'].append(C)
+        C['sections'].append({'pearson':PM['sec'].get(code,[]),'files':fl(files),'code':code,'title':sn[3:],'checkins':K['checkin'],'sectionQs':K['sq'],'worksheets':K['ws'],'pracs':pr,'ppts':K['ppt'],'workedExamples':we,'folder':f"{C['folder']}\\{sn}"})
+      C['chapter']=dict(C['chapter']);C['files']=fl(ch['files']);C['pearson']=PM['ch'].get(n,[]);A['chapters'].append(C)
     U['aos'].append(A)
   out['units'].append(U)
 os.makedirs(os.path.join(H,'..','data'),exist_ok=True)

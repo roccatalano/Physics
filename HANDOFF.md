@@ -16,6 +16,8 @@ _Last updated 18 Nov 2026_
 
 - Year 11 now has its own tabs: Course plan, Cambridge course, Study design. The analysis page is restyled to the light planner look.
 
+- 18 Nov: Cambridge links grouped under a Cambridge heading on every card; all 158 Pearson files mapped onto the Cambridge structure (orange) plus a Pearson cross-map tab. Course resources card added at the top of the Year 11 course plan.
+
 ## Next
 1. Confirm timing, prac model, assessment plan and lesson shape with Rocco (see CLAUDE.md, "Still to confirm").
 2. Draft the Unit 1 lesson-by-lesson plan from the Cambridge order and show it to Rocco.

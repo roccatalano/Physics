@@ -183,6 +183,7 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
 .scard b.code{color:var(--ac)}.scard .ttl{font-weight:600;margin:2px 0 6px}
 .rl{font-size:12.5px;color:var(--ink);margin:3px 0;display:grid;grid-template-columns:120px 1fr;gap:6px}.rl i{font-style:normal;color:var(--muted)}.rl span{display:block}
 .rl.none{color:#a32d2d}.dl{display:inline-block;font-size:12px;color:#1d7266;text-decoration:none;border:1px solid #9fd3c9;border-radius:6px;padding:0 6px;margin:1px 3px 1px 0;font-weight:600;background:#fff}.dl:hover{background:#e6f5ee}.dl.off{color:#999;border-color:#ddd}
+.grp{border-radius:8px;padding:6px 8px;margin-top:6px}.grp .gh{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px}.grp.cb{background:#f3f6fc}.grp.cb .gh{color:#1f4fa0}.grp.pe{background:#fdf4ec}.grp.pe .gh{color:#b4532a}.grp.pe .dl{color:#9a4a1c;border-color:#efc4a3}.grp.pe .dl:hover{background:#fbe6d6}
 .path{font-size:11px;color:var(--muted);word-break:break-all;margin-top:6px}
 .ystat{font-size:11px;padding:1px 7px;border-radius:9px;margin-left:6px;vertical-align:1px}.ystat.prog{background:#dff1e2;color:#1a6b2a}.ystat.no{background:#eee;color:#888}
 .note{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:10px;color:var(--ink)}
@@ -195,7 +196,7 @@ a.ext{color:var(--accent)}
 <script>
 const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 const $=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-let VIEW=store.get('ph:view','plan');const VIEWS=[['plan','Course plan'],['cambridge','Cambridge course'],['sd','Study design']];
+let VIEW=store.get('ph:view','plan');const VIEWS=[['plan','Course plan'],['cambridge','Cambridge course'],['pearson','Pearson cross-map'],['sd','Study design']];
 let YEARS=[],DATA={},tab=store.get('ph:tab',11),open=new Set(store.get('ph:open',[])),filt='';
 const V='?v='+Date.now();
 async function load(){YEARS=(await (await fetch('data/years.json'+V)).json()).years;
@@ -206,6 +207,10 @@ const DR=id=>`https://drive.google.com/file/d/${id}/view`;
 function chip(f,txt){return f.id?`<a class="dl" href="${DR(f.id)}" target="_blank" rel="noopener" title="${esc(f.name)}">${esc(txt)}</a>`:`<span class="dl off">${esc(txt)}</span>`}
 function short(f){return f.name.replace(/^\d[A-Z] /,'').replace(/^(Check-in )?Set /,'Set ').replace(/^Check-in /,'').replace(/^Worksheet /,'').replace(/^Practical /,'').replace(/^PowerPoint /,'').replace(/ Answers$/,' answers')}
 function row(lbl,fs,empty){return `<div class="rl ${fs.length?'':'none'}"><i>${lbl}</i><span>${fs.length?fs.map(f=>chip(f,short(f))).join(' '):(empty||'none')}</span></div>`}
+function pchip(f){return chip(f,(f.ref?f.ref+' ':'')+(f.label=='Video'||f.label.startsWith('Practical')?f.name.replace(/^PA\d\d /,''):f.label))}
+function pgroup(fs,title){if(!fs||!fs.length)return '';const G={};fs.forEach(f=>(G[f.label]=G[f.label]||[]).push(f));
+ return `<div class="grp pe"><div class="gh">${title||'Pearson'}</div>${Object.entries(G).map(([l,a])=>`<div class="rl"><i>${esc(l)}</i><span>${a.map(f=>chip(f,f.label=='Video'||l.startsWith('Practical')?((f.ref?f.ref+' ':'')+f.name.replace(/^PA\d\d /,'')):(f.ref||f.name))).join(' ')}</span></div>`).join('')}</div>`}
+function flist(fs){return fs.map(f=>chip(f,f.label&&f.label!='Other'&&!f.name.startsWith('Option')?f.name:f.name.replace(/^Option [\d.]+ /,'').replace(/ \(Word\)$/,' (Word)'))).join(' ')}
 function badge(t,on){return `<span class="${on?'y':''}">${esc(t)}</span>`}
 function aosKey(u,a){return u*3+a-3}
 function views(on){const v=$('#views');if(!on){v.innerHTML='';v.style.display='none';return}v.style.display='';
@@ -216,31 +221,33 @@ function render(){tabs();const y=YEARS.find(x=>x.year==tab)||YEARS[4];const d=DA
  $('#subinfo').textContent=`${y.title} · ${y.course}`;views(!!d);
  if(d&&VIEW=='cambridge')return frame('analysis.html'+V);
  if(d&&VIEW=='sd')return frame('studydesign.html'+V);
+ if(d&&VIEW=='pearson')return frame('pearson.html'+V);
  const f=$('#aosFilter');
  if(!d){f.style.display='none';$('#main').innerHTML=`<div class="unit">${esc(y.title)} Physics</div><div class="placeholder"><b>${esc(y.course)}</b><p>Not planned yet.</p><ul><li>Source materials: to be decided</li><li>Course plan: to come</li><li>Lesson resources: to come</li></ul></div>`;return}
  f.style.display='';const opts=[];d.units.forEach(u=>u.aos.forEach(a=>opts.push([`${u.n}-${a.n}`,`Unit ${u.n} · AoS ${a.n}`])));
  f.innerHTML='<option value="">All areas of study</option>'+opts.map(([v,t])=>`<option value="${v}" ${filt==v?'selected':''}>${t}</option>`).join('');
  f.onchange=()=>{filt=f.value;render()};
  let h=`<div class="unit">Course plan</div><div class="legend">${d.units.map(u=>u.aos.map(a=>`<span class="a${aosKey(u.n,a.n)}"><i style="background:var(--ac)"></i>U${u.n} AoS ${a.n}</span>`).join('')).join('')}</div>
- <div class="note">Built on the <b>${esc(d.source)}</b> resources. Lessons are not planned yet: each chapter shows what Cambridge provides, section by section. See the <b>Cambridge course</b> and <b>Study design</b> tabs above.</div>
+ <div class="note">Built on the <b>${esc(d.source)}</b> resources. Lessons are not planned yet: each chapter shows what Cambridge provides, section by section. Pearson resources are attached in orange (see the <b>Pearson cross-map</b> tab). See also the <b>Cambridge course</b> and <b>Study design</b> tabs.</div>
+ <div class="trow"><div class="trh">Course resources<span>whole course</span></div><div class="secgrid"><div class="scard"><div class="grp cb"><div class="gh">Cambridge</div><div class="rl" style="display:block">${flist(d.courseCambridge||[])}</div></div></div><div class="scard">${pgroup((d.coursePearson||[]).map(f=>({...f,label:'Course-wide',ref:''})).concat(d.units.flatMap(u=>(u.pearson||[]).map(f=>({...f,label:'Unit '+u.n+' solutions',ref:''})))),'Pearson')}</div></div></div>
  <div class="ctl2"><button id="uall">Open all chapters</button><button id="unone">Close all chapters</button></div>`;
  for(const u of d.units){h+=`<div class="unitbar">Unit ${u.n} <span>${esc(u.title)}</span></div>`;
   for(const a of u.aos){if(filt&&filt!=`${u.n}-${a.n}`)continue;const k=aosKey(u.n,a.n),ud=`ud${u.n}-${a.n}`;
    const nsec=a.chapters.reduce((s,c)=>s+c.sections.length,0),npr=a.chapters.reduce((s,c)=>s+c.sections.reduce((t,x)=>t+x.pracs.length,0),0);
    h+=`<div class="trow"><div class="trh">Unit ${u.n} · AoS ${a.n}<span>${a.chapters.length?`${a.chapters.length} chapters · ${nsec} sections · ${npr} pracs`:''}</span></div><div class="vlist">
    <div class="udcard a${k} ${open.has(ud)?'open':''}" data-k="${ud}"><div class="uc1"><span>Unit ${u.n} · AoS ${a.n} · Unit details</span><span>${open.has(ud)?'▾':'▸'}</span></div><div class="uname">${esc(a.title)}</div><div class="umeta">${a.chapters.length?a.chapters.map(c=>'Ch '+c.n).join(', '):a.options?a.options.length+' Cambridge options':'No Cambridge materials on the drive'}</div></div>`;
-   if(open.has(ud))h+=`<div class="uopen a${k}"><div class="aos"><b>Unit details</b><span>SACs and outcome: to be planned</span></div>${a.options?`<div class="colh" style="margin-top:8px">Options with Cambridge materials</div><div class="secgrid">${a.options.map(o=>`<div class="scard"><b class="code">Option ${esc(o.n)}</b><div class="ttl">${esc(o.title)}</div><div class="rl">Reading + answers (TEACHER ONLY)</div></div>`).join('')}</div>`:''}${!a.chapters.length&&!a.options?'<div class="note">The Cambridge folder for this AoS holds placeholder files only.</div>':''}${a.chapters.length?'<div class="note">Chapter tests and SACs will sit here once assessment is planned.</div>':''}</div>`;
+   if(open.has(ud))h+=`<div class="uopen a${k}"><div class="aos"><b>Unit details</b><span>SACs and outcome: to be planned</span></div>${a.options?`<div class="colh" style="margin-top:8px">Options with materials (Cambridge and/or Pearson)</div><div class="secgrid">${a.options.map(o=>`<div class="scard"><b class="code">Option ${esc(o.n)}</b><div class="ttl">${esc(o.title)}</div>${o.files?`<div class="grp cb"><div class="gh">Cambridge</div><div class="rl" style="display:block">${flist(o.files)}</div></div>`:''}${o.pearson?pgroup(o.pearson):''}</div>`).join('')}</div>`:''}${!a.chapters.length&&!a.options?'<div class="note">Cambridge has no files for this AoS (placeholders only). Pearson provides the investigation kit below.</div>':''}${a.pearson&&a.pearson.length?`<div class="secgrid"><div class="scard">${pgroup(a.pearson,a.chapters.length?'Pearson · this AoS':'Pearson · investigation')}</div></div>`:''}${a.chapters.length?'<div class="note">Chapter tests and SACs will sit here once assessment is planned.</div>':''}</div>`;
    for(const c of a.chapters){const ck=`ch${c.n}`,isO=open.has(ck);
     const S=c.sections,ci=S.reduce((s,x)=>s+x.checkins,0),we=S.every(x=>x.workedExamples)?S.reduce((s,x)=>s+x.workedExamples.length,0):null,ws=S.reduce((s,x)=>s+x.worksheets,0),pr=S.reduce((s,x)=>s+x.pracs.length,0);
     h+=`<div class="ucard a${k} ${isO?'open':''}" data-k="${ck}"><div class="uc1"><span>Ch ${c.n} · Unit ${u.n} AoS ${a.n}</span><span>${isO?'▾':'▸'}</span></div><div class="uname">${esc(c.title)}</div><div class="umeta">${S.length} sections · ${S.map(x=>x.code).join(', ')} · lessons not planned yet</div>
     <div class="ubad">${badge('Sections '+S.length,1)}${badge('Check-ins '+ci,ci)}${we===null?badge('Worked examples ?',0):badge('Worked examples '+we,we)}${badge('Worksheets '+ws,ws)}${badge('Pracs '+pr,pr)}${badge(c.testMarks?'Chapter test /'+c.testMarks:'Chapter test',c.chapter.test)}${badge('Review',c.chapter.review)}${badge('Slides 0',0)}${badge('Guided sheets 0',0)}</div></div>`;
     if(isO){h+=`<div class="uopen a${k}"><div class="aos"><b>Chapter ${c.n} · ${esc(c.title)}</b><span>${S.length} Cambridge sections</span></div><div class="secgrid">`;
      const book=(c.files||[]).find(f=>f.kind=='book');
-     for(const s of S){const K=k=>(s.files||[]).filter(f=>f.kind==k);h+=`<div class="scard"><b class="code">${esc(s.code)}</b><div class="ttl">${esc(s.title)}</div>
+     for(const s of S){const K=k=>(s.files||[]).filter(f=>f.kind==k);h+=`<div class="scard"><b class="code">${esc(s.code)}</b><div class="ttl">${esc(s.title)}</div><div class="grp cb"><div class="gh">Cambridge</div>
       ${row('Check-ins',K('checkin'))}${row('Section questions',K('sq'))}${row('Worksheet',K('ws'))}${row('PowerPoint figures',K('ppt'))}${row('Practicals',K('prac'))}
-      <div class="rl ${s.workedExamples&&!s.workedExamples.length?'none':''}"><i>Worked examples</i><span>${s.workedExamples?(s.workedExamples.length?s.workedExamples.map(esc).join('<br>')+(book?'<br>'+chip(book,'Textbook chapter'):''):'none'):'not indexed yet'}</span></div><div class="path">${esc(s.folder)}</div></div>`}
+      <div class="rl ${s.workedExamples&&!s.workedExamples.length?'none':''}"><i>Worked examples</i><span>${s.workedExamples?(s.workedExamples.length?s.workedExamples.map(esc).join('<br>')+(book?'<br>'+chip(book,'Textbook chapter'):''):'none'):'not indexed yet'}</span></div></div>${pgroup(s.pearson)}<div class="path">${esc(s.folder)}</div></div>`}
      const CF=k=>(c.files||[]).filter(f=>f.kind==k);
-     h+=`</div><div class="colh" style="margin-top:12px">Chapter resources</div><div class="secgrid"><div class="scard">${row('Textbook',CF('book'))}${row('Review questions',CF('review'))}${row('Checklist',CF('checklist'))}${row('Model summary',CF('summary'))}${row('Internet resources',CF('links'))}</div><div class="scard"><div class="colh" style="margin-bottom:4px">Teacher only</div>${row('Chapter test',CF('test'))}${row('Suggested responses',CF('resp'))}${row('Worksheet answers',CF('wsans'))}</div></div><div class="path">${esc(c.folder)}</div></div>`}
+     h+=`</div><div class="colh" style="margin-top:12px">Chapter resources</div><div class="secgrid"><div class="scard"><div class="grp cb"><div class="gh">Cambridge</div>${row('Textbook',CF('book'))}${row('Review questions',CF('review'))}${row('Checklist',CF('checklist'))}${row('Model summary',CF('summary'))}${row('Internet resources',CF('links'))}</div></div><div class="scard"><div class="grp cb"><div class="gh">Cambridge · teacher only</div>${row('Chapter test',CF('test'))}${row('Suggested responses',CF('resp'))}${row('Worksheet answers',CF('wsans'))}</div></div>${c.pearson&&c.pearson.length?`<div class="scard">${pgroup(c.pearson,'Pearson · teacher only')}</div>`:''}</div><div class="path">${esc(c.folder)}</div></div>`}
    }
    h+='</div></div>'}}
  $('#main').innerHTML=h;
