@@ -25,8 +25,21 @@ Root: `G:\Shared drives\1. EKC CURRICULUM\1. KLA Folders\SCIENCE\VCE Physics\VCE
 - `...\<ChNN name>\ChNN Textbook chapter.pdf`: the chapter itself (worked examples are here).
 - Read .docx files with pandoc. The Cambridge files are licensed school resources: use them for Rocco's own teaching, and don't publish them anywhere public.
 
+## 2027 calendar for Year 11 (agreed 18 Nov 2026, from the EKC School Planner 2027)
+- Lessons per week by student days (same rule as 12MAG): 5 days = 3, 3 or 4 days = 2, 1 or 2 days = 1.
+- **Unit 1 (about 48 lessons):** Step Up 2026 (19 Nov to about 2 Dec 2026, 5 lessons) + Term 1 (22) + Term 2 Weeks 1 to 7 (21). Unit 1 teaching ends Fri 28 May 2027.
+- **Unit 1 exam:** Term 2 Weeks 8 and 9 (Mon 31 May to Thu 10 Jun). Fri 11 Jun student free.
+- **Unit 2 (about 46 lessons):** Term 2 Weeks 10 and 11 (from Wed 16 Jun, Semester 2: 5) + Term 3 (28) + Term 4 Weeks 1 to 5 (13). Unit 2 teaching ends Fri 5 Nov 2027.
+- **Unit 2 exam:** Term 4 Weeks 6 and 7 (Mon 8 Nov to Wed 17 Nov). Step Up to Year 12 2028 from Thu 18 Nov.
+- Days with no Year 11 lessons: 26 to 28 Jan (holiday and staff days), 5 Mar, 8 Mar, 26 Mar, 11 Jun, 14 to 15 Jun, 3 Sep, 15 Sep (PT interviews), 29 Oct, 1 to 2 Nov.
+- Assumptions still to check: SAC free periods (T2 W7, T4 W5) counted as lesson days; Bogong camp (T3 W10) counted as lesson days; Niddrie-only student free day (12 Jul) counted.
+- **Planning rules (Rocco, 18 Nov 2026):**
+  - 1 week (3 lessons) of exam revision right before each exam block.
+  - 1 revision lesson before every assessment.
+  - At least 1 buffer lesson per unit.
+
 ## Still to confirm with Rocco (ask before laying out lessons)
-1. Timing: 16 teaching weeks, 3 lessons a week, 79-minute lessons? Holidays and term dates?
+1. Timing: confirmed above (79-minute lessons still to confirm).
 2. Pracs: a dedicated prac lesson each week, or each Cambridge practical inside its section? A logbook is required, and Unit 1 needs at least 15 h of practical work.
 3. Assessment: one CFAT per chapter, built from the Cambridge chapter tests? SACs in Weeks 7, 10 and 15? Week 16 for revision and the practice exam?
 4. Lesson shape (below): still right?
