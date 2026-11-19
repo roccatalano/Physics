@@ -1,0 +1,190 @@
+<script type="application/json">{"code":"1B","title":"Electromagnetic waves"}</script>
+
+<style>
+/* 1B only: the region sorter lab (job card, seven region buttons, caption, controls) */
+.lab.b1-sort{flex-direction:column;gap:14px}
+.b1-sort .job{background:#fdfdfb;color:#111827;border-radius:18px;padding:20px 28px;font:600 34px/1.3 Inter;box-shadow:0 0 0 6px #c9ced8;min-height:124px}
+.b1-sort .job small{display:block;font:700 13px Inter;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;margin-bottom:6px}
+.b1-low{display:flex;flex-direction:column;gap:10px;flex:1;min-height:0}
+.b1-sort .fb{font-size:26px;line-height:1.4;min-height:74px}
+.b1-cap small{font:700 13px Inter;letter-spacing:.1em;text-transform:uppercase;color:#4ade80;display:block;margin-bottom:6px}
+.b1-cap p{font:600 28px/1.3 Inter;margin:0 0 6px;color:#fff}.b1-cap i{font:500 14px Inter;color:#64748b;font-style:normal}
+.b1-wide .pgrid{grid-template-columns:1.3fr 1fr}
+.b1-we{gap:10px}.b1-we .vq{font-size:28px;padding:12px 22px}.b1-we .vfss{gap:6px}.b1-we .vr{min-height:58px;font-size:29px}.b1-we .vr.sub{min-height:58px}
+.b1-ctl{display:flex;gap:12px;align-items:center}.b1-ctl .btn{font-size:18px;padding:10px 20px}
+</style>
+
+<section class="slide" data-mode="watch" data-do="By the end of 1B I can">
+ <div class="goal" style="--c:#7dd3fc"><span class="n">1</span><div>Describe light as vibrating electric and magnetic fields that need no medium<small>1B.1</small></div></div>
+ <div class="goal" style="--c:#fbb040"><span class="n">2</span><div>Put the seven regions of the spectrum in order, and use $c = f\lambda$<small>1B.3</small></div></div>
+ <div class="goal" style="--c:#f472b6"><span class="n">3</span><div>Give a use for each region<small>1B.4</small></div></div>
+ <div class="goal" style="--c:#4ade80"><span class="n">4</span><div>Describe sunlight as mainly infrared, visible and ultraviolet<small>1B.2</small></div></div>
+</section>
+<section class="slide" data-mode="board" data-t="90" data-tag="VC2S10U14 (Levels 9 and 10)" data-do="What do you already know? On your whiteboard.">
+ <div class="pwb"><div class="mq">Light and sound are both waves.<br>Give one way they are different.</div><div class="ma st">Sound needs particles to travel through.<br>Light can cross empty space.</div></div>
+</section>
+<section class="slide" data-mode="board" data-t="90" data-tag="VC2S8U15 (Levels 7 and 8)" data-do="What do you already know? On your whiteboard.">
+ <div class="pwb"><div class="mq">How does energy from the Sun reach Earth across empty space?</div><div class="ma st">By radiation.<br>Conduction and convection need particles. Radiation does not.</div></div>
+</section>
+<section class="slide" data-mode="board" data-t="90" data-tag="VC2S6U08 (Levels 5 and 6)" data-do="What do you already know? On your whiteboard.">
+ <div class="pwb"><div class="mq">White light shines through a prism.<br>What comes out the other side?</div><div class="ma st">A band of colours:<br>red, orange, yellow, green, blue, violet.</div><div class="hint">prism: a triangular block of glass</div></div>
+</section>
+<section class="slide" data-mode="board" data-t="90" data-tag="From 1A" data-do="What do you already know? On your whiteboard.">
+ <div class="pwb"><div class="mq">A wave keeps the same speed, but its frequency doubles. What happens to its wavelength?</div><div class="ma st">It halves. &nbsp;$\lambda = \dfrac{v}{f}$</div></div>
+</section>
+<section class="slide" data-mode="book" data-t="60" data-b="0" data-do="New page. Title and date on the top line."></section>
+
+<section class="slide" data-mode="board" data-loop="Light needs no medium" data-t="60" data-do="Predict. One letter and one reason. Cover it.">
+ <div class="pwb"><div class="mq s">Which one is NOT the same kind of wave as light?</div><div class="pgrid"><div class="mo"><div><b>A</b><span>A mobile phone signal</span></div><div><b>B<i class='st ring'></i></b><span>The sound of thunder</span></div><div><b>C</b><span>An X-ray at the dentist</span></div><div><b>D</b><span>The warmth you feel from a heater</span></div></div><div class="ma s st">Sound is a vibration of particles.<br>The other three are electromagnetic waves, like light. They need no particles.</div></div></div>
+</section>
+<section class="slide" data-mode="lab" data-do="Pump out the air. What still gets through?">
+ <i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><div class="lab" data-sim="b1_em"></div>
+</section>
+<section class="slide" data-mode="board" data-t="60" data-do="Explain it in your own words. Then show.">
+ <div class="pwb"><div class="mq">Light can cross empty space.<br>Sound cannot. Why?</div><div class="ma st">Sound is particles bumping each other along.<br>Light is vibrating electric and magnetic fields. It needs no particles.</div></div>
+</section>
+<section class="slide" data-mode="book" data-t="300" data-b="1" data-do="Copy the new part exactly as it looks here."></section>
+
+<section class="slide" data-mode="board" data-loop="The spectrum" data-t="60" data-do="Predict. One letter and one reason. Cover it.">
+ <div class="pwb"><div class="mq s">Radio waves and X-rays travel at the same speed. An X-ray has a much higher frequency. So its wavelength is</div><div class="pgrid"><div class="mo"><div><b>A</b><span>much longer</span></div><div><b>B</b><span>the same</span></div><div><b>C<i class='st ring'></i></b><span>much shorter</span></div><div><b>D</b><span>impossible to tell</span></div></div><div class="ma s st">$c = f\lambda$ and $c$ is the same.<br>Higher $f$ means shorter $\lambda$.</div></div></div>
+</section>
+<section class="slide" data-mode="lab" data-do="Slide along the spectrum">
+ <i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><div class="lab" data-sim="b1_spectrum"></div>
+</section>
+<section class="slide" data-mode="board" data-t="90" data-do="Three short answers. Then show.">
+ <div class="pwb"><div class="qa"><div class="mq s">From radio to gamma, what happens to the wavelength?</div><div class="ma s st">It gets shorter.</div></div><div class="qa"><div class="mq s">What happens to the frequency? Why?</div><div class="ma s st">It gets higher. $c = f\lambda$ and $c$ stays the same.</div></div><div class="qa"><div class="mq s">What happens to the energy?</div><div class="ma s st">It gets bigger. Gamma carries the most.</div></div></div>
+</section>
+<section class="slide" data-mode="book" data-t="300" data-b="2" data-do="Copy the new part exactly as it looks here."></section>
+
+<section class="slide" data-mode="lab" data-loop="Uses and sunlight" data-do="Which region does the job?">
+ <i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><div class="lab" data-sim="b1_sorter"></div>
+</section>
+<section class="slide" data-mode="board" data-t="60" data-do="Explain it in your own words. Then show.">
+ <div class="pwb"><div class="mq">Why do radio stations use radio waves and not X-rays?</div><div class="ma st">Radio is low energy, so it is safe.<br>Long waves travel far and bend around buildings.<br>X-rays could harm people.</div></div>
+</section>
+<section class="slide" data-mode="book" data-page="2" data-t="60" data-b="0" data-do="New page. Title and date on the top line."></section>
+<section class="slide" data-mode="book" data-page="2" data-t="300" data-b="1" data-do="Copy the new part exactly as it looks here."></section>
+<section class="slide" data-mode="board" data-t="60" data-do="Predict. One letter and one reason. Cover it.">
+ <div class="pwb b1-wide"><div class="mq s">Sunlight is a mix. Which is closest to the real mix?</div><div class="pgrid"><div class="mo"><div><b>A</b><span>UV 49%, visible 43%, IR 7%</span></div><div><b>B<i class='st ring'></i></b><span>IR 49%, visible 43%, UV 7%</span></div><div><b>C</b><span>Visible 90%, IR 5%, UV 5%</span></div><div><b>D</b><span>A third of each</span></div></div><div class="ma s st">About half is infrared.<br>A bit less than half is visible.<br>Only about 7% is UV.</div></div><div class="hint">IR: infrared &nbsp; UV: ultraviolet</div></div>
+</section>
+<section class="slide" data-mode="board" data-t="45" data-do="One short answer. Then show.">
+ <div class="pwb"><div class="mq">Name the three main parts of sunlight, biggest first.</div><div class="ma st">Infrared, then visible, then ultraviolet.</div></div>
+</section>
+<section class="slide" data-mode="book" data-page="2" data-t="120" data-b="2" data-do="Copy the new part exactly as it looks here."></section>
+
+<section class="slide" data-mode="book" data-page="2" data-part="Worked example" data-t="150" data-b="3" data-do="Copy the prefixes. You need them for the worked example."></section>
+<section class="slide b1-we" data-mode="watch" data-do="Pens down. Values, Formula, Substitute, Solve.">
+ <div class="vq">A 5G phone signal has a frequency of 3.5 GHz. Find its wavelength and its region.</div>
+ <div class="lg"><span class="unk">what we want</span><span class="der">find this first</span></div>
+ <div class="vfss">
+  <div class="vr st"><b>V</b><span class="vl">Values</span><div><span class="der">$f$</span> $= 3.5\ \text{GHz}$ &emsp; $c = 3.00 \times 10^{8}\ \text{m/s}$ &emsp; <span class="unk">$\lambda$</span> $= \ ?$</div></div>
+  <div class="vr st"><b>F</b><span class="vl">Formula</span><div>$\colorbox{#fde047}{\(\color{#0b0f24}\lambda\)} = \dfrac{c}{\colorbox{#5eead4}{\(\color{#0b0f24}f\)}}$</div></div>
+  <div class="vr sub st"><b></b><span class="vl">First: <span class="der">$f$</span> in Hz</span><div><span class="der">$f$</span> $=$ <span class="der">$3.5 \times 10^{9}\ \text{Hz}$</span></div></div>
+  <div class="vr st"><b>S</b><span class="vl">Substitute</span><div>$\colorbox{#fde047}{\(\color{#0b0f24}\lambda\)} = \dfrac{3.00 \times 10^{8}}{\colorbox{#5eead4}{\(\color{#0b0f24}3.5 \times 10^{9}\)}}$</div></div>
+  <div class="vr st"><b>S</b><span class="vl">Solve</span><div><span class="unk">$\lambda$</span> $= 0.086\ \text{m} = 8.6\ \text{cm}$</div></div>
+ </div>
+ <div class="vans st">The wavelength is <span class="unk">$8.6\ \text{cm}$</span>. Between 1 mm and 1 m: a microwave.</div>
+</section>
+<section class="slide" data-mode="book" data-page="2" data-t="240" data-b="4" data-do="Copy the worked example on the right of your page."></section>
+<section class="slide" data-mode="book" data-page="2" data-t="240" data-b="5" data-do="You try. In your book, under the worked example."></section>
+<section class="slide" data-mode="book" data-page="2" data-t="60" data-b="6" data-do="Check your working. Tick it or fix it."></section>
+<section class="slide" data-mode="board" data-t="120" data-do="Values, Formula, Substitute, Solve. Then show.">
+ <div class="pwb"><div class="mq s">An AM radio station broadcasts at 774 kHz. Find the wavelength.</div><div class="ma s"><div class="st wl"><b>V</b><span>$f = 774$ kHz $= 7.74 \times 10^{5}$ Hz &nbsp; $c = 3.00 \times 10^{8}$ m/s</span></div><div class="st wl"><b>F</b><span>$\lambda = \dfrac{c}{f}$</span></div><div class="st wl"><b>S</b><span>$\lambda = \dfrac{3.00 \times 10^{8}}{7.74 \times 10^{5}}$</span></div><div class="st wl"><b>S</b><span>$\lambda = 388$ m &nbsp; (radio)</span></div></div></div>
+</section>
+<section class="slide" data-mode="board" data-t="120" data-do="Values, Formula, Substitute, Solve. Then show.">
+ <div class="pwb"><div class="mq s">A hospital X-ray has a wavelength of 0.10 nm. Find its frequency.</div><div class="ma s"><div class="st wl"><b>V</b><span>$\lambda = 0.10$ nm $= 1.0 \times 10^{-10}$ m &nbsp; $c = 3.00 \times 10^{8}$ m/s</span></div><div class="st wl"><b>F</b><span>$f = \dfrac{c}{\lambda}$</span></div><div class="st wl"><b>S</b><span>$f = \dfrac{3.00 \times 10^{8}}{1.0 \times 10^{-10}}$</span></div><div class="st wl"><b>S</b><span>$f = 3.0 \times 10^{18}$ Hz</span></div></div></div>
+</section>
+<section class="slide" data-mode="book" data-page="2" data-t="60" data-b="7" data-do="Copy the warning under the prefixes."></section>
+<section class="slide pageslide" data-mode="book" data-t="60" data-b="99" data-do="Check page 1 against this. Fix anything missing."></section>
+<section class="slide pageslide" data-mode="book" data-page="2" data-t="60" data-b="99" data-do="Check page 2 against this. Fix anything missing."></section>
+
+<section class="slide" data-mode="practise" data-part="Coursework" data-do="On your own. Full working: V, F, S, S.">
+ <table class="pr"><tr><th>Resource</th><th>Questions</th></tr>
+  <tr><td>Worksheet 1B Electromagnetic waves<br><span style="font-size:20px;color:#d6dcf5">Practice booklet pages 7 and 8</span></td><td>Q1 to Q6</td></tr>
+  <tr><td>Section 1B questions</td><td>Q4 to Q8 first, then Q1</td></tr></table>
+ <p class="task">Stuck? Open your reference book at the <b>worked example</b> before you ask.</p>
+</section>
+
+
+<div class="pagesrc">
+ <div class="col L">
+  <div class="bk" data-b="1"><div class="h">Electromagnetic waves</div>
+   <div class="sp"></div>
+   <div><u>EM wave</u>: vibrating <u>electric</u> (E) and <u>magnetic</u> (B) fields.</div>
+   <div class="sp"></div>
+   <div><svg viewBox="0 0 418 114" style="height:calc(3*var(--u))"><path class="pc" style="stroke-width:1.6" d="M14 57H300"/><path d="M314.0 57.0 L300.0 51.0 L300.0 63.0z" fill="#444"/><path class="pc" d="M14.0 57.0 L22.0 40.7 L30.0 27.3 L38.0 19.0 L46.0 17.2 L54.0 22.4 L62.0 33.5 L70.0 48.7 L78.0 65.3 L86.0 80.5 L94.0 91.6 L102.0 96.8 L110.0 95.0 L118.0 86.7 L126.0 73.3 L134.0 57.0 L142.0 40.7 L150.0 27.3 L158.0 19.0 L166.0 17.2 L174.0 22.4 L182.0 33.5 L190.0 48.7 L198.0 65.3 L206.0 80.5 L214.0 91.6 L222.0 96.8 L230.0 95.0 L238.0 86.7 L246.0 73.3 L254.0 57.0"/><path class="pc" style="stroke-dasharray:7 6;stroke-width:2" d="M14.0 57.0 L17.1 64.3 L21.1 70.4 L26.6 74.1 L34.1 74.9 L43.6 72.6 L54.9 67.6 L67.5 60.7 L80.5 53.3 L93.1 46.4 L104.4 41.4 L113.9 39.1 L121.4 39.9 L126.9 43.6 L130.9 49.7 L134.0 57.0 L137.1 64.3 L141.1 70.4 L146.6 74.1 L154.1 74.9 L163.6 72.6 L174.9 67.6 L187.5 60.7 L200.5 53.3 L213.1 46.4 L224.4 41.4 L233.9 39.1 L241.4 39.9 L246.9 43.6 L250.9 49.7 L254.0 57.0"/><text x="42" y="12" class="mth">E</text><text x="2" y="100" class="mth">B</text><text x="326" y="64">travel</text></svg></div>
+   <div class="sp"></div>
+   <div><u>Transverse</u>: the fields vibrate at right angles to the direction of travel.</div>
+   <div class="sp"></div>
+   <div>Needs <u>no medium</u>. Sound does.</div>
+   <div class="sp"></div>
+   <div>In a vacuum, all EM waves travel at the <u>speed of light</u>, $c$:</div>
+   <div class="fm"><span>$c = 3.00 \times 10^{8}$ m/s</span></div>
+  </div>
+  <div class="bk" data-b="2"><div class="h">The EM spectrum</div>
+   <div class="sp"></div>
+   <div><svg viewBox="0 0 418 152" style="height:calc(4*var(--u))"><g class="pc" style="stroke-width:2"><path d="M4 8H410V68H4Z"/><path d="M62 8V68M120 8V68M178 8V68M236 8V68M294 8V68M352 8V68"/></g><text x="33" y="45" text-anchor="middle" style="font-size:18px">radio</text><text x="91" y="45" text-anchor="middle" style="font-size:18px">micro</text><text x="149" y="45" text-anchor="middle" style="font-size:18px">IR</text><text x="207" y="45" text-anchor="middle" style="font-size:18px">visible</text><text x="265" y="45" text-anchor="middle" style="font-size:18px">UV</text><text x="323" y="45" text-anchor="middle" style="font-size:18px">X-ray</text><text x="381" y="45" text-anchor="middle" style="font-size:18px">gamma</text><text x="6" y="102"><tspan class="mth">λ</tspan> gets shorter</text><path class="pc" d="M200 96H398"/><path d="M410.0 96.0 L398.0 90.0 L398.0 102.0z" fill="#444"/><text x="6" y="140"><tspan class="mth">f</tspan> and energy get higher</text><path class="pc" d="M250 134H398"/><path d="M410.0 134.0 L398.0 128.0 L398.0 140.0z" fill="#444"/></svg></div>
+   <div class="sp"></div>
+   <div class="fm"><span>$c = f\lambda$</span></div>
+   <div>$c$ is the same for all, so a shorter $\lambda$ means a higher $f$.</div>
+   <div class="sp"></div>
+   <div><u>Visible</u>: 400 nm (violet) to 700 nm (red)</div>
+  </div>
+ </div>
+ <div class="col R"></div>
+</div>
+
+<div class="pagesrc" data-title="1B Electromagnetic waves (page 2)">
+ <div class="col L">
+  <div class="bk" data-b="1"><div class="h">Uses</div>
+   <div class="sp"></div>
+   <div>Radio: FM radio, TV, MRI scans</div>
+   <div>Microwave: wi-fi, radar, ovens</div>
+   <div>Infrared: remotes, thermal cameras</div>
+   <div>Visible: sight, photosynthesis</div>
+   <div>Ultraviolet: vitamin D, killing germs</div>
+   <div>X-ray: bone images, airport scanners</div>
+   <div>Gamma: cancer treatment, sterilising</div>
+   <div class="sp"></div>
+   <div>Long $\lambda$: low energy, safe. Used to <u>communicate</u>.</div>
+   <div class="sp"></div>
+   <div>Short $\lambda$: high energy. Can <u>damage cells</u>.</div>
+  </div>
+  <div class="bk" data-b="2"><div class="h">Sunlight</div>
+   <div class="sp"></div>
+   <div>Mainly <u>infrared</u> (49%), <u>visible</u> (43%) and <u>ultraviolet</u> (7%).</div>
+  </div>
+  <div class="bk" data-b="3"><div class="h">Prefixes</div>
+   <div class="sp"></div>
+   <div>G (giga) $10^{9}$ &nbsp; M (mega) $10^{6}$ &nbsp; k (kilo) $10^{3}$</div>
+   <div>c (centi) $10^{-2}$ &nbsp; m (milli) $10^{-3}$</div>
+   <div>μ (micro) $10^{-6}$ &nbsp; n (nano) $10^{-9}$</div>
+  </div>
+  <div class="bk" data-b="7"><div class="wo">! Change to Hz and m before you use $c = f\lambda$.</div></div>
+ </div>
+ <div class="col R">
+  <div class="bk" data-b="4"><div class="h">Worked example</div>
+   <div>A 5G phone signal has a frequency of 3.5 GHz. Find its wavelength and its region.</div>
+   <div class="sp"></div>
+   <div><span class="vf">V</span>$\colorbox{#b9f5b0}{\(f\)} = 3.5$ GHz, $c = 3.00 \times 10^{8}$ m/s</div>
+   <div class="w2"><span class="vf">F</span>$\colorbox{#ffee58}{\(\lambda\)} = \dfrac{c}{\colorbox{#b9f5b0}{\(f\)}}$</div>
+   <div class="w2 ind">$\colorbox{#b9f5b0}{\(f\)} = \colorbox{#b9f5b0}{\(3.5 \times 10^{9}\)}$ Hz</div>
+   <div class="w2"><span class="vf">S</span>$\colorbox{#ffee58}{\(\lambda\)} = \dfrac{3.00 \times 10^{8}}{\colorbox{#b9f5b0}{\(3.5 \times 10^{9}\)}}$</div>
+   <div><span class="vf">S</span>$\colorbox{#ffee58}{\(\lambda\)} = 0.086$ m $= 8.6$ cm</div>
+   <div>The wavelength is 8.6 cm.</div>
+   <div>Between 1 mm and 1 m: a microwave.</div>
+  </div>
+  <div class="bk" data-b="5"><div class="h">You try</div>
+   <div>A red laser has a wavelength of 650 nm. Find its frequency and its region.</div>
+  </div>
+  <div class="bk" data-b="6">
+   <div><span class="vf">V</span>$\colorbox{#b9f5b0}{\(\lambda\)} = 650$ nm, $c = 3.00 \times 10^{8}$ m/s</div>
+   <div class="w2"><span class="vf">F</span>$\colorbox{#ffee58}{\(f\)} = \dfrac{c}{\colorbox{#b9f5b0}{\(\lambda\)}}$</div>
+   <div class="w2 ind">$\colorbox{#b9f5b0}{\(\lambda\)} = \colorbox{#b9f5b0}{\(6.50 \times 10^{-7}\)}$ m</div>
+   <div class="w2"><span class="vf">S</span>$\colorbox{#ffee58}{\(f\)} = \dfrac{3.00 \times 10^{8}}{\colorbox{#b9f5b0}{\(6.50 \times 10^{-7}\)}}$</div>
+   <div><span class="vf">S</span>$\colorbox{#ffee58}{\(f\)} = 4.6 \times 10^{14}$ Hz</div>
+   <div>The frequency is $4.6 \times 10^{14}$ Hz.</div>
+   <div>Between 400 and 700 nm: visible (red).</div>
+  </div>
+ </div>
+</div>
