@@ -1,4 +1,6 @@
-// Guided lesson engine. Every slide declares a mode (what students are doing), and the look follows the mode.
+// Chapter deck engine. A chapter holds sections (1A, 1B, 1C) in order. Every slide declares a mode
+// (what students are doing), and the look follows the mode. build.py supplies CHAPTER and wraps each
+// section's slides and page sources in <div class="sec">.
 const $=(s,e=document)=>e.querySelector(s),$$=(s,e=document)=>[...e.querySelectorAll(s)];
 const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
 const pick=a=>a[Math.floor(Math.random()*a.length)];
@@ -6,9 +8,6 @@ const mx=s=>String(s).replace(/\$([^$]+)\$/g,(_,t)=>katex.renderToString(t.repla
 function mathAll(root){const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),ns=[];
   while(w.nextNode())if(w.currentNode.nodeValue.includes('$'))ns.push(w.currentNode);
   ns.forEach(n=>{const sp=document.createElement('span');sp.innerHTML=mx(n.nodeValue.replace(/&/g,'&amp;').replace(/</g,'&lt;'));n.replaceWith(sp)})}
-function num(x,n=3){if(!x)return'0';const e=Math.floor(Math.log10(Math.abs(x))+1e-9);
-  if(e<-3||e>4)return (x/10**e).toPrecision(n)+' \\times 10^{'+e+'}';
-  if(e>=n){const p=10**(e-n+1);return String(Math.round(x/p)*p)}return x.toPrecision(n)}
 const SUP=s=>String(s).replace(/[-0-9]/g,d=>'⁻⁰¹²³⁴⁵⁶⁷⁸⁹'['-0123456789'.indexOf(d)]);
 function si(x,unit,n=3){const P=[[12,'T'],[9,'G'],[6,'M'],[3,'k'],[0,''],[-3,'m'],[-6,'μ'],[-9,'n'],[-12,'p'],[-15,'f']];
   const e=Math.log10(x)+1e-9;if(e>=15){const k=Math.floor(e);return +(x/10**k).toPrecision(n)+' × 10'+SUP(k)+' '+unit}
@@ -21,65 +20,82 @@ const MODES={
   board:['Whiteboard','Write. Cover. Show on three.',svg('<rect x="3" y="4" width="18" height="13" rx="2"/><path d="M7 13l3-4 3 3 4-5M8 21l2-4M16 21l-2-4"/>')],
   lab:['Lab','Do the task. Jot your numbers on your whiteboard.',svg('<path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3M7.5 15h9"/>')],
   book:['Reference book','Copy this into your reference book. This is your notes.',svg('<path d="M12 6c-2-1.5-5-2-9-2v14c4 0 7 .5 9 2 2-1.5 5-2 9-2V4c-4 0-7 .5-9 2zM12 6v14"/>')],
-  practise:['Exercise book','On your own. Full working. Check as you go.',svg('<path d="M4 20l1-5L16 4l4 4L9 19l-5 1zM14 6l4 4"/>')],
-  handin:['Exit slip','Answer on your slip. Hand it in at the door.',svg('<path d="M4 7h16v4a2 2 0 000 4v4H4v-4a2 2 0 000-4V7zM10 7v12"/>')]};
+  practise:['Exercise book','On your own. Full working. Check as you go.',svg('<path d="M4 20l1-5L16 4l4 4L9 19l-5 1zM14 6l4 4"/>')]};
 
-// ---------- build the deck
-const stage=$('#stage'),L=LESSON,TOT=L.phases.reduce((a,p)=>a+p[1],0);
-stage.insertBefore(el('section','slide title',`<div class="code">${L.code}</div><div class="sub">Unit ${L.unit} · ${L.aos} · Lesson ${L.n}</div><h1>${L.title}</h1><div class="strip">${L.phases.map(p=>`<div><b>${p[1]}</b>${p[0]}</div>`).join('')}</div><div class="bring">On your desk: <b>reference book</b>, <b>whiteboard and marker</b>, <b>calculator</b>, exercise book.</div>`),stage.querySelector('.slide'));
-// The reference book page: one A4 sheet of 8 mm ruled paper, built once and shown at each stage of the lesson.
-const NB=Math.max(0,...$$('#pagesrc .bk').map(k=>+k.dataset.b));
-function mkPage(b){const p=el('div','page',`<div class="ptop"></div><div class="phd"><span>${L.code} ${L.title}</span><span>...... / ...... / ......</span></div><div class="tl"></div><div class="mg"></div><div class="md"></div>`+$('#pagesrc').innerHTML);
+// ---------- sections: each has its own title slide, slides and one or more reference pages
+const stage=$('#stage'),CH=CHAPTER;
+const SECS=$$('.sec',stage).map((d,i)=>({...CH.sections[i],el:d,pages:$$('.pagesrc',d)}));
+const desk=s=>`<div class="bring">${s.desk||CH.desk}</div>`;
+SECS.forEach(s=>s.el.prepend(el('section','slide title',`<div class="code">${s.code}</div><div class="sub">Unit ${CH.unit} · ${CH.aos} · Chapter ${CH.code}</div><h1>${s.title}</h1>${desk(s)}`)));
+const toc=el('section','slide contents','<h2>Contents</h2><div class="toc"></div><div class="how">Click a line to jump there, or type its slide number then G. Press C to come back to this page.</div>');
+stage.prepend(toc);
+stage.prepend(el('section','slide title',`<div class="code">${CH.code}</div><div class="sub">Unit ${CH.unit} · ${CH.aos} · Chapter ${CH.code}</div><h1>${CH.title}</h1>${desk(CH)}`));
+
+// ---------- the reference book pages: A4 sheets of 8 mm ruled paper, built once, shown at each stage
+function pageTitle(sec,i){const t=sec.pages[i].dataset.title;return t||`${sec.code} ${sec.title}`}
+function mkPage(sec,i,b){const src=sec.pages[i],NB=Math.max(0,...$$('.bk',src).map(k=>+k.dataset.b));
+  const p=el('div','page',`<div class="ptop"></div><div class="phd"><span>${pageTitle(sec,i)}</span><span>...... / ...... / ......</span></div><div class="tl"></div><div class="mg"></div><div class="md"></div>`+src.innerHTML);
   $$('.bk',p).forEach(k=>{const n=+k.dataset.b;k.classList.add(b>NB?'all':n>b?'later':n<b?'done':'now')});return p}
-$$('.slide[data-mode=book]').forEach(s=>{const b=+s.dataset.b;
-  if(s.classList.contains('pageslide')){s.append(el('div','fitwrap','<div class="fit"></div><div class="chk"><h3>Your page should match this</h3><p>Left of the line: notes, formulas, diagrams.</p><p>Right of the line: worked examples.</p><p>One line of writing on each ruled line.</p><p class="pp">Press <b>P</b> to print this page at full size for anyone away.</p></div>'));$('.fit',s).append(mkPage(99));return}
+const secOf=s=>SECS.find(x=>x.el.contains(s));
+SECS.forEach(sec=>$$('.slide[data-mode=book]',sec.el).forEach(s=>{const b=+s.dataset.b,i=(+s.dataset.page||1)-1;
+  if(!sec.pages[i])throw new Error(`${sec.code}: a book slide asks for page ${i+1}, but the section has ${sec.pages.length}`);
+  if(s.classList.contains('pageslide')){const n=sec.pages.length;
+    s.append(el('div','fitwrap',`<div class="fit"></div><div class="chk"><h3>Your page should match this</h3><p>Left of the line: notes, formulas, diagrams.</p><p>Right of the line: worked examples.</p><p>One line of writing on each ruled line.</p><p class="pp">Press <b>P</b> to print ${n>1?`the ${n} pages for ${sec.code}`:'this page'} at full size for anyone away.</p></div>`));$('.fit',s).append(mkPage(sec,i,99));return}
   const w=el('div','bookwrap','<div class="vw"></div><div class="aside"><div class="thumb"><div class="vp"></div></div></div>');s.append(w);
-  $('.vw',w).append(mkPage(b));$('.thumb',w).prepend(mkPage(b))});
+  $('.vw',w).append(mkPage(sec,i,b));$('.thumb',w).prepend(mkPage(sec,i,b))}));
 function place(s){const vw=$('.vw',s);if(!vw)return;const pg=$('.page',vw),nw=$('.now',pg),U=pg.offsetHeight/37.125,k=$('.thumb',s).clientWidth/pg.offsetWidth;
   const y=Math.max(0,Math.min(pg.offsetHeight-vw.clientHeight,nw?nw.offsetTop+nw.offsetParent.offsetTop-2.2*U:0));
   pg.style.transform=`translateY(${-y}px)`;const vp=$('.vp',s);vp.style.top=y*k+'px';vp.style.height=vw.clientHeight*k+'px'}
-const pr=el('div');pr.id='print';pr.append(mkPage(99));document.body.append(pr);
-const S=$$('.slide');let cur=0,ph=null,t0=0,dur=0,st0=0,sdur=0;
+// every finished page, ready to print; prepPrint picks which ones go on paper
+const pr=el('div');pr.id='print';SECS.forEach(sec=>sec.pages.forEach((_,i)=>{const p=mkPage(sec,i,99);p.dataset.sec=sec.code;pr.append(p)}));document.body.append(pr);
+function prepPrint(all){const sec=secOf(S[cur]),want=p=>all||!sec||p.dataset.sec===sec.code;let first=true;
+  $$('.page',pr).forEach(p=>{const on=want(p);p.classList.toggle('skip',!on);p.classList.toggle('brk',on&&!first);if(on)first=false})}
+
+// ---------- header, footer and contents
+const S=$$('.slide');let cur=0,st0=0,sdur=0;
 S.forEach((s,i)=>{const m=MODES[s.dataset.mode];
   if(m)s.prepend(el('div','hd',`<span class="mode">${m[2]}${m[0]}</span><span class="do">${s.dataset.do||m[1]}</span><span style="flex:1"></span>${s.dataset.tag?`<span class="ctag">${s.dataset.tag}</span>`:''}<span class="tm"></span>`));
   s.append(el('div','pg',`${i+1} / ${S.length}`))});
-const pb=el('div');pb.id='phases';pb.innerHTML=L.phases.map(p=>`<i style="flex:${p[1]}" title="${p[0]}"><b></b></i>`).join('');stage.append(pb);
-const cnt=el('div');cnt.id='count';stage.append(cnt);
+const go=n=>()=>show(n);
+SECS.forEach(sec=>{const col=el('div','tsec'),first=S.indexOf($('.slide',sec.el));let k=0;
+  const b=el('button','sh',`<b>${sec.code}</b><span class="nm">${sec.title}</span><i>${first+1}</i>`);b.onclick=go(first);col.append(b);
+  $$('.slide[data-loop],.slide[data-part]',sec.el).forEach(s=>{const n=S.indexOf(s),lp=s.dataset.loop!=null;
+    const e=el('button','',`<span class="lp">${lp?'Loop '+(++k):''}</span><span class="nm">${lp?s.dataset.loop:s.dataset.part}</span><i>${n+1}</i>`);e.onclick=go(n);col.append(e)});
+  $('.toc',toc).append(col)});
 mathAll(stage);mathAll(pr);
+
+// ---------- moving through the deck. Every reveal is reachable with PageDown alone.
 const steps=s=>$$('.st',s);
+const KEY='deck:'+CH.code+':'+CH.title;
+function save(){try{const s=S[cur],sec=secOf(s);localStorage.setItem(KEY,JSON.stringify({n:cur,sec:sec?sec.code:null,k:sec?$$('.slide',sec.el).indexOf(s):cur}))}catch(e){}}
+function saved(){try{const v=JSON.parse(localStorage.getItem(KEY));if(!v)return 0;
+  if(v.sec){const sec=SECS.find(x=>x.code===v.sec),ss=sec&&$$('.slide',sec.el);if(ss&&ss[v.k])return S.indexOf(ss[v.k])}
+  return Math.min(S.length-1,v.n||0)}catch(e){return 0}}
 function show(n,all){S[cur].classList.remove('on');cur=Math.max(0,Math.min(S.length-1,n));const s=S[cur];s.classList.add('on');
   steps(s).forEach(e=>e.classList.toggle('shown',!!all));
-  const p=s.dataset.phase||'';if(p!==ph){ph=p;t0=performance.now();dur=((L.phases.find(x=>x[0]===p)||[0,0])[1])*60}
-  st0=performance.now();sdur=+s.dataset.t||0;place(s);try{history.replaceState(null,'','#'+(cur+1))}catch(e){}}
+  if(s===toc){const sec=SECS.find(x=>x.el.contains(S[Math.max(0,+toc.dataset.from||0)]));$$('.toc .sh',toc).forEach((b,i)=>b.classList.toggle('here',SECS[i]===sec))}
+  st0=performance.now();sdur=+s.dataset.t||0;place(s);try{history.replaceState(null,'','#'+(cur+1))}catch(e){}save()}
 function next(){const h=steps(S[cur]).filter(e=>!e.classList.contains('shown'));if(h.length)h[0].classList.add('shown');else if(cur<S.length-1)show(cur+1)}
 function prev(){const v=steps(S[cur]).filter(e=>e.classList.contains('shown'));if(v.length)v[v.length-1].classList.remove('shown');else if(cur>0)show(cur-1,true)}
+let typed='',typedAt=0;
 addEventListener('keydown',e=>{if(/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;
   if(['ArrowRight','PageDown','Enter'].includes(e.key)){e.preventDefault();next()}
   else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();prev()}
-  else if(e.key==='p'||e.key==='P')print();
+  else if(/^[0-9]$/.test(e.key)){const now=performance.now();typed=(now-typedAt>3000?'':typed)+e.key;typedAt=now}
+  else if((e.key==='g'||e.key==='G')&&typed){show(+typed-1);typed=''}
+  else if(e.key==='c'||e.key==='C'){if(S[cur]!==toc){toc.dataset.from=cur;show(S.indexOf(toc))}}
+  else if(e.key==='p'||e.key==='P'){prepPrint(e.shiftKey);print()}
   else if(e.key==='f'||e.key==='F')document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()});
-stage.addEventListener('click',e=>{if(e.target.closest('.lab,.gen,.sorter,.nav,button,input,a'))return;next()});
+addEventListener('beforeprint',()=>{if(!$$('.page.skip,.page.brk',pr).length)prepPrint(false)});
+stage.addEventListener('click',e=>{if(e.target.closest('.tm'))st0=performance.now();if(e.target.closest('.lab,.sorter,.nav,button,input,a'))return;next()});
 const nav=el('div','nav','<button title="Back">◀</button><button title="Next">▶</button>');stage.append(nav);
 nav.children[0].onclick=prev;nav.children[1].onclick=next;
+// per-slide timer (data-t seconds); click it to restart
 const clock=x=>{const a=Math.abs(x);return (x<0?'+':'')+Math.floor(a/60)+':'+String(a%60).padStart(2,'0')};
-setInterval(()=>{const now=performance.now(),tm=$('.tm',S[cur]);
-  if(tm){if(!sdur)tm.style.display='none';else{const left=Math.round(sdur-(now-st0)/1000);tm.style.display='';tm.textContent=clock(left);tm.classList.toggle('over',left<0)}}
-  const k=L.phases.findIndex(p=>p[0]===ph);$$('#phases i').forEach((b,j)=>{const f=j<k?1:j>k||k<0?0:Math.min(1,(now-t0)/1000/dur);$('b',b).style.width=f*100+'%';b.classList.toggle('over',j===k&&(now-t0)/1000>dur)})},250);
-stage.addEventListener('click',e=>{if(e.target.closest('.tm'))st0=performance.now();
-  if(e.target.closest('.show3')){let k=3;cnt.className='on';cnt.textContent=k;const iv=setInterval(()=>{k--;if(k>0)cnt.textContent=k;else if(k===0){cnt.textContent='SHOW';cnt.className='on go'}else{clearInterval(iv);cnt.className=''}},800)}});
+setInterval(()=>{const tm=$('.tm',S[cur]);if(!tm)return;
+  if(!sdur)tm.style.display='none';else{const left=Math.round(sdur-(performance.now()-st0)/1000);tm.style.display='';tm.textContent=clock(left);tm.classList.toggle('over',left<0)}},250);
 function fit(){const k=Math.min(innerWidth/1280,innerHeight/720);stage.style.transform=`translate(-50%,-50%) scale(${k})`}
 addEventListener('resize',fit);fit();
-
-// ---------- You try: a new question each round, checked, with working one line at a time
-const GEN={};
-function initGen(box){let round=0;const make=()=>{const q=GEN[box.dataset.gen]();let k=0;round++;
-  box.innerHTML=`<div class="wb"><small>Round ${round}</small>${mx(q.q)}</div><div class="row"><input placeholder="class answer"><span class="unit">${mx(q.unit||'')}</span><button class="btn chk">Check</button><span class="res"></span><span style="flex:1"></span><button class="btn alt sw">Next line of working</button><button class="btn nw">New question</button></div><div class="steps"></div>`;
-  const inp=$('input',box),res=$('.res',box);
-  const chk=()=>{const v=parseNum(inp.value);if(isNaN(v)){res.textContent='';return}const ok=Math.abs(v-q.ans)<=(q.abs!=null?q.abs:Math.abs(q.ans)*.025);
-    res.className='res '+(ok?'ok':'no');res.textContent=ok?'✓ Correct':'✗ Not yet'};
-  $('.chk',box).onclick=chk;inp.onkeydown=e=>{if(e.key==='Enter')chk()};
-  $('.sw',box).onclick=()=>{if(k<q.steps.length)$('.steps',box).append(el('div','',mx(q.steps[k++])))};
-  $('.nw',box).onclick=make};make()}
 
 // ---------- lab helpers
 const SIMS={};
@@ -98,4 +114,7 @@ function missions(side,list,state){let i=0,hold=0,done=false;const box=el('div',
     const b=$('button',box);if(b)b.onclick=()=>{i++;done=false;hold=0;draw()}};draw();
   return dt=>{if(done)return;if(list[i].ok(state())){hold+=dt;if(hold>.8){done=true;draw()}}else hold=0}}
 const D=Math.PI/180;
-function init(){$$('.gen').forEach(initGen);$$('.lab').forEach(h=>SIMS[h.dataset.sim](h,JSON.parse(h.dataset.o||'{}')));$$('.sorter').forEach(h=>SIMS.sorter(h));show((+location.hash.slice(1)||1)-1)}
+// load the handwriting fonts now, so a page printed before any page is on screen still uses them
+try{document.fonts.load("16px 'Patrick Hand'");document.fonts.load("700 16px Kalam")}catch(e){}
+function init(){$$('.lab').forEach(h=>SIMS[h.dataset.sim](h,JSON.parse(h.dataset.o||'{}')));$$('.sorter').forEach(h=>SIMS.sorter(h));
+  const h=+location.hash.slice(1);show(h?h-1:saved())}
