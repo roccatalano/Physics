@@ -6,4 +6,4 @@ Built 19 Nov 2026 for Chapters 1 and 2 (Area of Study 1). Nothing here has been 
 - `tools/`: the scripts that build the booklet, tests, checklist and summary, so later chapters can reuse them.
 - The deck source is in `decks/`.
 
-Not in this repo: the practice booklets and the student copies of the chapter tests. They are whole Cambridge documents, and this repo is public. They are on the shared drive only.
+Not in this repo: the practice booklets and the student copies of the chapter tests. They are whole Cambridge documents, and this repo is public. They are kept out of it.
