@@ -1,0 +1,598 @@
+<!--{"id":"2A-P1-prac-convection","section":"2A","title":"Practical 2A-1: Convection in water","criteria":["2A.4"],
+"blurb":"Virtual prac. Drop permanganate crystals into still water, then heat from below, heat from above and cool from above. Predict, watch the dye and sketch the currents.",
+"source":"Follows the method of Cambridge VCE Physics Units 1&2, Practical 2A-1. Wording and animation are the teacher's own.","colour":"#f472b6"}-->
+<style>
+.prail{display:flex;gap:10px;align-items:center}
+.pstep{display:flex;align-items:center;gap:8px;font:600 16px Inter,sans-serif;padding:5px 14px 5px 6px;border-radius:999px;background:transparent;border:2px solid #36418a;color:#a5b4d8;min-height:40px}
+.pstep i{font-style:normal;display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#232c63;color:#eef2ff;font:700 15px "Space Grotesk",sans-serif}
+.pstep.on{background:var(--c);border-color:var(--c);color:#0d1330}.pstep.on i{background:#0d1330;color:var(--c)}
+.pstep.done{border-color:var(--c);color:#eef2ff}.pstep.done i{background:transparent;color:var(--c);border:2px solid var(--c)}
+.pstep:disabled{opacity:.45;cursor:default}
+#dset{margin-left:auto;font:700 16px "Space Grotesk",sans-serif;color:#fbb040;background:#141a40;border:2px dashed #36418a;border-radius:10px;padding:6px 12px}
+.pnav{position:absolute;right:56px;bottom:30px;display:flex;gap:10px;z-index:4}
+.pnav button{min-height:42px;min-width:96px}
+.bare .pnav{right:auto;left:56px}
+button.pshow{border-color:#fbb040;color:#fbb040;background:#1b1f45}
+button.pshow:hover{background:#2a2a50}
+button{min-height:40px}
+button:disabled{opacity:.4;cursor:default}
+.pmain{flex:1;min-height:0;display:flex;gap:16px;margin-bottom:52px}
+#cvcard{flex:none;padding:8px 10px;display:flex}
+#cv{width:500px;height:420px;display:block;touch-action:none}
+#panel{flex:1;min-width:0;position:relative}
+.pv{position:absolute;inset:0;display:none;flex-direction:column;gap:10px}
+.pv.on{display:flex}
+.pv .card{padding:10px 14px}
+.ptxt{font-size:16.5px;line-height:1.4;color:#cfd7f5}
+.ptxt b{color:#fff}
+.small{font-size:15px;line-height:1.35;color:#a5b4d8}
+.sgrid{display:grid;grid-template-columns:34px 1fr;gap:5px 10px;align-items:center;font-size:16px;line-height:1.3}
+.sgrid .n{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#232c63;font:700 15px "Space Grotesk"}
+.sgrid .n.ok{background:#4ade80;color:#0d1330}
+.srow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.safety{border-color:#f87171;font-size:15px;line-height:1.35;padding:8px 12px}
+.safety b{color:#fca5a5}
+.tabs{display:flex;gap:8px}
+.tabs button{flex:1;font-size:16px;padding:6px 8px}
+.tabs button.done:not(.on){border-color:#4ade80}
+.pcards{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pcard{display:flex;align-items:center;gap:10px;text-align:left;font-size:15px;line-height:1.22;padding:4px 10px;background:#141a40}
+.pcard svg{flex:none;width:72px;height:58px}
+.pcard.on{background:#2a3470;border-color:#f472b6;color:#fff}
+.msg{font-size:15.5px;line-height:1.4;color:#cfd7f5;min-height:22px}
+.msg b{color:#fff}.msg .ok{color:#4ade80}.msg .no{color:#fbb040}
+.spd button{min-width:52px;padding:6px 8px}
+.spd button.on{background:#f472b6;border-color:#f472b6;color:#0d1330}
+#recwrap{position:relative;width:280px;height:255px;flex:none}
+#recsvg{position:absolute;inset:0;width:280px;height:255px}
+#recgrid{position:absolute;left:25.5px;top:37.3px;width:229px;height:186.7px;display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(4,1fr);touch-action:none}
+#recgrid button{min-height:0;padding:0;border-radius:0;background:transparent;border:1px dashed rgba(165,180,216,.28);font:700 30px Inter;color:#f9a8d4;line-height:1}
+#recgrid button:hover{background:rgba(244,114,182,.10)}
+#recgrid button svg{width:40px;height:40px;pointer-events:none}
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
+.mcq{display:flex;flex-direction:column;gap:6px}
+.mcq .q{font-weight:600;font-size:16px;line-height:1.3}
+.mcq button{text-align:left;font-size:15px;line-height:1.25;padding:6px 10px;background:#141a40}
+.mcq button.right{border-color:#4ade80;background:#173a2c}.mcq button.wrong{border-color:#fbb040;background:#3a2a17}
+.mcq .fb{font-size:14.5px;line-height:1.3;color:#cfd7f5}
+.mcq .opts{display:flex;flex-direction:column;gap:6px}.mcq.inl .opts{flex-direction:row;flex-wrap:wrap}.mcq.inl .opts button{flex:1}
+.ord{display:flex;flex-direction:column;gap:6px}
+.ord button{text-align:left;font-size:16px;line-height:1.3;padding:7px 12px;background:#141a40}
+.slot{display:grid;grid-template-columns:34px 1fr;gap:8px;align-items:center}
+.slot .n{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#232c63;font:700 15px "Space Grotesk"}
+.slot button{min-height:40px}
+.slot .emp{border:2px dashed #36418a;border-radius:10px;min-height:40px}
+.lb li{margin:0 0 7px 22px;font-size:16px;line-height:1.35;color:#cfd7f5}
+.lb li b{color:#fff}
+.thumbs{display:flex;gap:8px}
+.thumbs svg{width:150px;height:150px;background:#141a40;border-radius:10px}
+#copybox{display:none;width:100%;height:120px;font:13px/1.3 Consolas,monospace;background:#0b1029;color:#eef2ff;border:2px solid #36418a;border-radius:8px;padding:6px;-webkit-user-select:text;user-select:text}
+#psheet{display:none}
+@media print{
+ @page{size:A4 portrait;margin:12mm}
+ html,body{height:auto!important;overflow:visible!important;background:#fff!important}
+ #stage,.tour{display:none!important}
+ #psheet{display:block!important;color:#000;font:10.5pt/1.35 Inter,Arial,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ #psheet h2{font:700 16pt "Space Grotesk",Arial,sans-serif;margin:0 0 2mm}
+ #psheet .hd{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1.5pt solid #000;padding-bottom:2mm;margin-bottom:3mm}
+ #psheet .nm{display:flex;gap:10mm;margin:2mm 0 3mm}
+ #psheet .three{display:flex;gap:4mm}
+ #psheet .three>div{flex:1;border:1pt solid #000;padding:2mm;text-align:center}
+ #psheet .three svg{width:100%;height:auto}
+ #psheet .three b{display:block}
+ #psheet .three p{text-align:left;font-size:9pt;margin:1mm 0 0}
+ #psheet h3{font:700 11pt Inter,Arial,sans-serif;margin:3mm 0 1mm}
+ #psheet ol,#psheet ul{margin:0 0 0 6mm;padding:0}
+ #psheet .lines div{border-bottom:.6pt solid #888;height:7mm}
+}
+</style>
+<div class="prail" id="prail">
+ <button class="pstep on" data-s="0"><i>1</i>Set up</button>
+ <button class="pstep" data-s="1"><i>2</i>Predict and observe</button>
+ <button class="pstep" data-s="2"><i>3</i>Record</button>
+ <button class="pstep" data-s="3"><i>4</i>Explain</button>
+ <button class="pstep" data-s="4"><i>5</i>Log book</button>
+ <span id="dset">Data set 0000</span>
+</div>
+<div class="pmain">
+ <div class="card" id="cvcard" style="--c:#f472b6"><canvas id="cv" width="500" height="420"></canvas></div>
+ <div id="panel">
+  <!-- STEP 1 -->
+  <div class="pv on" id="v0">
+   <div class="card" style="--c:#f472b6"><div class="ptxt"><b>Aim:</b> use a dye to see how water moves when heated or cooled.</div>
+    <div class="small" style="margin-top:4px">Equipment: 200 mL beakers, straw, tweezers, potassium permanganate, retort stand, mat, Bunsen burner, heat lamp, bag of ice. Full method: Cambridge Practical 2A-1.</div></div>
+   <div class="card" style="--c:#7dd3fc" id="s1ctl"><div class="sgrid">
+    <span class="n" id="k1">1</span><div class="srow"><button id="bStraw">Put the straw in</button><span class="small">at a slant, tip on the bottom near one side</span></div>
+    <span class="n" id="k2">2</span><div class="srow"><button id="bStand">Let it stand 5 min</button><button id="bSkip" disabled>Skip</button><span class="small" id="standTxt"></span></div>
+    <span class="n" id="k3">3</span><div class="srow"><button id="bDrop" disabled>Drop a crystal</button><span class="small" id="dropTxt"></span></div>
+    <span class="n" id="k4">4</span><div class="srow"><button id="bPull" disabled>Withdraw gently</button><span class="small">or drag the straw up slowly (about 3 s)</span></div>
+   </div>
+   <div style="display:flex;gap:10px;align-items:center;margin-top:6px"><div class="msg" id="s1msg" style="flex:1"></div><button id="bRedo" style="flex:none">↻ Set up again</button></div></div>
+   <div class="card safety" style="--c:#f87171" id="safety"><b>Safety.</b> Bunsen burner, heat lamp, hot beaker and water: handle with care, keep it secure on the mat. Keep water off the lamp. Permanganate stains skin and clothes. Let it cool before disposal.</div>
+  </div>
+  <!-- STEP 2 -->
+  <div class="pv" id="v1">
+   <div class="tabs" id="tabs2"><button data-p="0" class="on">Part 1: heat from below</button><button data-p="1">Part 2: heat from above</button><button data-p="2">Part 3: cool from above</button></div>
+   <div class="card" style="--c:#f472b6"><div class="ptxt" id="p2desc"></div></div>
+   <div class="card" style="--c:#fbb040"><h3 id="predh">1. Predict: how will the water move?</h3><div class="pcards" id="pcards"></div></div>
+   <div class="card" style="--c:#7dd3fc"><h3>2. Observe</h3>
+    <div class="srow"><button id="bGo" disabled>Light the burner</button><span class="small">Speed</span><span class="srow spd" id="spd"><button data-v="1" class="on">1×</button><button data-v="4">4×</button><button data-v="16">16×</button></span><button id="bRestart">↻ Restart</button></div>
+    <div class="msg" id="p2msg" style="margin-top:6px"></div></div>
+   
+  </div>
+  <!-- STEP 3 -->
+  <div class="pv" id="v2">
+   <div class="tabs" id="tabs3"><button data-p="0" class="on">Part 1</button><button data-p="1">Part 2</button><button data-p="2">Part 3</button></div>
+   <div style="display:flex;gap:12px;flex:1;min-height:0">
+    <div style="display:flex;flex-direction:column;gap:10px;flex:none">
+     <div class="card" style="--c:#f472b6;padding:6px 8px"><div id="recwrap"><svg id="recsvg" viewBox="0 0 330 300"></svg><div id="recgrid"></div></div></div>
+     <div class="srow"><span class="small">Speed</span><span class="srow spd" id="spd3"><button data-v="1" class="on">1×</button><button data-v="4">4×</button><button data-v="16">16×</button></span></div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:10px;min-width:0">
+     <div class="card" style="--c:#7dd3fc"><div class="small" style="color:#cfd7f5"><b style="color:#fff">Tap</b> a box to turn its arrow. <b style="color:#fff">Drag</b> across boxes to draw a stream. Leave a box empty if nothing moved there.</div>
+      <div class="srow" style="margin-top:8px"><button id="bCheck">Check my sketch</button><button id="bClear">Clear</button><button id="bArrows" disabled>Show flow arrows</button></div></div>
+     <div class="card" style="--c:#4ade80;flex:1;min-height:0;overflow:hidden"><div class="msg" id="recmsg" style="font-size:15px;line-height:1.35"></div></div>
+    </div>
+   </div>
+  </div>
+  <!-- STEP 4 -->
+  <div class="pv" id="v3">
+   <div class="tabs" id="tabs4"><button data-t="0" class="on">a. Why water moves</button><button data-t="1">b. Questions</button><button data-t="2">c. Move the heater</button></div>
+   <div id="e0" style="display:flex;gap:12px;flex:1;min-height:0">
+    <div class="card" style="--c:#7dd3fc;width:430px;flex:none"><h3>Density</h3><div class="ptxt"><b>Density</b> is mass per unit volume:<div style="font-size:24px;margin:8px 0;text-align:center">$\rho = \frac{m}{V}$</div>where $\rho$ is the density in kg/m³, $m$ is the mass in kg and $V$ is the volume in m³.<br><br>A less dense fluid is pushed up through a denser one. A denser fluid sinks. Gravity drives both.</div></div>
+    <div class="card" style="--c:#f472b6;flex:1"><h3>Part 1: put the explanation in order</h3><div class="small" style="margin-bottom:6px">Tap the statements in order. Tap a placed one to send it back.</div>
+     <div class="ord" id="ordslots"></div><div class="ord" id="ordpool" style="margin-top:10px"></div>
+     <div class="srow" style="margin-top:8px"><button id="bOrd">Check order</button><span class="msg" id="ordmsg"></span></div></div>
+   </div>
+   <div id="e1" style="display:none;flex:1;min-height:0"><div class="card" style="--c:#fbb040;flex:1"><div class="qgrid" id="qgrid"></div></div></div>
+   <div id="e2" style="display:none;gap:12px;flex:1;min-height:0">
+    <div class="card" style="--c:#7dd3fc;flex:none;padding:8px 10px"><canvas id="mini" width="360" height="300" style="width:360px;height:300px;display:block"></canvas></div>
+    <div class="card" style="--c:#f472b6;flex:1"><h3>Where is the heater?</h3><div class="btns" id="minib"><button data-v="L" class="on">Flame below, left</button><button data-v="C">Flame below, centre</button><button data-v="R">Flame below, right</button><button data-v="T">Lamp above</button><button data-v="I">Ice above, right</button></div>
+     <div class="ptxt" id="minimsg" style="margin-top:12px"></div><div class="small" style="margin-top:10px">Dots follow the water, 3 times faster than real. This is a model, not a recording.</div></div>
+   </div>
+   
+  </div>
+  <!-- STEP 5 -->
+  <div class="pv" id="v4">
+   <div style="display:flex;gap:12px;flex:1;min-height:0">
+    <div class="card" style="--c:#f472b6;flex:1"><h3>Write in your log book</h3><ol class="lb">
+     <li><b>Aim</b> in one sentence.</li>
+     <li><b>Three sketches</b> of the beaker with arrows for the currents: heated from below, heated from above, cooled from above. Mark the heat or the ice.</li>
+     <li><b>The condition for convection:</b> the warmer, less dense fluid must be below, or the cooler, denser fluid above, so gravity can move it.</li>
+     <li><b>Why heating from above is a poor way</b> to warm the whole liquid.</li>
+     <li><b>Sources of error:</b> water still moving from pouring, too many crystals, draughts or bumps.</li>
+     <li><b>One improvement</b> to the method, and why it helps.</li></ol></div>
+    <div class="card" style="--c:#4ade80;width:500px;flex:none;display:flex;flex-direction:column;gap:8px"><h3>Your results</h3>
+     <div class="thumbs" id="thumbs"></div>
+     <div class="small" id="sumtxt"></div>
+     <div class="srow"><button id="bPrint">Print results page</button><button id="bCopy">Copy my results</button></div>
+     <textarea id="copybox" readonly></textarea><div class="msg" id="copymsg"></div></div>
+   </div>
+   
+  </div>
+ </div>
+</div>
+<div class="pnav"><button class="pshow" id="bShow">Show me</button><button id="bBack">◀ Back</button><button id="bNext">Next ▶</button></div>
+<div id="psheet"></div>
+<script>
+// ===================== Practical 2A-1: Convection in water (virtual prac) =====================
+// Physics model, all lengths in cm, times in lab seconds. Side view of a 200 mL beaker: water 6.0 cm wide, 5.0 cm deep.
+// The flow in each part comes from a stream function psi(x,y): u = dpsi/dy, v = -dpsi/dx, so the velocity field is
+// divergence-free (water is conserved) by construction, and psi = 0 on the walls, bottom and surface (and on the ice bag)
+// means no flow through any of them. The simulation runs in a "canonical" frame with the crystals near the LEFT wall;
+// when the seed puts the crystals on the right, the whole picture is mirrored at draw time (x -> 6 - x).
+const LX=6,LY=5,NU=0.01;
+// ---------- seeded random numbers (mulberry32), Gaussian by Box-Muller
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const QS=new URLSearchParams(location.search);let SEED=parseInt(QS.get('seed'),10);
+if(!(SEED>=0&&SEED<=9999))SEED=1000+Math.floor(Math.random()*9000); // only the data set number is picked at random
+const rng=k=>mulberry32((SEED+1)*7919+k*104729);
+const gauss=r=>{let u=r();if(u<1e-12)u=1e-12;return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*r())};
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+document.getElementById('dset').textContent='Data set '+String(SEED).padStart(4,'0');
+const R0=rng(1);
+const MIR=R0()<.5;                                  // crystals land on the right: mirror the picture
+const XC=1.35+0.4*R0();                             // where the straw tip touches the bottom (cm from the near wall)
+const AMP1=clamp(2.5*(1+.1*gauss(R0)),2,3);        // peak plume speed over the Bunsen, cm/s (real: about 1 to 5 cm/s)
+const W1=.26+.08*R0();                              // plume half-width, cm
+const AMP3=clamp(.8*(1+.1*gauss(R0)),.6,1);        // peak speed under the ice bag, cm/s (smaller temperature difference)
+const W3=.45+.1*R0();
+// ---------- main flow: one convection cell driven by a source at xs
+function makeField(o){const xs=o.xs,w=o.w,bag=o.bag||null,dl=.3;
+ const t0=Math.tanh(-xs/w),Sd=Math.tanh((LX-xs)/w)-t0,eps=.05,Wi=x=>((x-xs)**3+xs**3)/3+eps*x,Wt=Wi(LX),k=Math.PI/LY;
+ // F(x) = L(x) - S(x): S is a narrow smooth step at xs (the plume), L spreads the return flow, weighted to the far wall.
+ // F(0) = F(LX) = 0, G(y) = sin(pi y / LY) is 0 at bottom and surface. psi = A F(x) G(y) m(x,y), m = 0 inside the bag.
+ function raw(x,y,out){const th=Math.tanh((x-xs)/w),S=(th-t0)/Sd,Sp=(1-th*th)/(w*Sd),L=Wi(x)/Wt,Lp=((x-xs)**2+eps)/Wt,F=L-S,Fp=Lp-Sp,
+   G=Math.sin(k*y),Gp=k*Math.cos(k*y);let m=1,mx=0,my=0;
+  if(bag){const ex=(x-bag.x)/bag.ax,ey=(y-bag.y)/bag.ay,q=Math.hypot(ex,ey);
+   if(q<=1){m=0}else{const s=Math.min(bag.ax,bag.ay),d=(q-1)*s,e=Math.exp(-d*d/(dl*dl)),dm=2*d/(dl*dl)*e;m=1-e;mx=dm*s*ex/(bag.ax*q);my=dm*s*ey/(bag.ay*q)}}
+  out[0]=F*(Gp*m+G*my);out[1]=-G*(Fp*m+F*mx);out[2]=F*G*m;return out}
+ const tmp=[0,0,0];let vmax=0;for(let i=1;i<120;i++)for(let j=1;j<100;j++){raw(i*LX/120,j*LY/100,tmp);vmax=Math.max(vmax,Math.hypot(tmp[0],tmp[1]))}
+ const A=o.amp/vmax;
+ return{A,xs,bag,vel(x,y,out){raw(x,y,out);out[0]*=A;out[1]*=A;out[2]*=A;return out}}}
+// ---------- leftover swirl from pouring / stirring: a few box modes, each decays at its own viscous rate
+// tau = 1/(2.5 nu pi^2 (m^2/LX^2 + n^2/LY^2)); the factor 2.5 allows for the no-slip glass (about 1 min for the largest mode).
+const MODES=[[1,1],[2,1],[1,2],[2,2],[3,1]].map(([m,n])=>({m,n,kx:m*Math.PI/LX,ky:n*Math.PI/LY,tau:1/(2.5*NU*Math.PI**2*(m*m/LX/LX+n*n/LY/LY))}));
+const POUR=(()=>{const r=rng(3);return MODES.map((M,i)=>[.8,.4,.35,.2,.2][i]*(r()<.5?-1:1)*(.8+.4*r()))})(); // cm^2/s, about 0.5 cm/s just after pouring
+const KICK=(()=>{const r=rng(4);return MODES.map((M,i)=>[1,.6,.6,.4,.4][i]*(r()<.5?-1:1))})();
+function swirlVel(a,x,y,out){for(let i=0;i<MODES.length;i++){if(!a[i])continue;const M=MODES[i],sx=Math.sin(M.kx*x),cx=Math.cos(M.kx*x),sy=Math.sin(M.ky*y),cy=Math.cos(M.ky*y);
+  out[0]+=a[i]*M.ky*sx*cy;out[1]-=a[i]*M.kx*cx*sy}return out}
+// ---------- the student's set-up (step 1)
+const SU={straw:0,s:0,standT:0,standing:false,stoodFull:false,n:0,cx:[],vpeak:0,done:false,drops:[],pulling:false,pullAuto:false,specks:null};
+const CRY=rng(2);
+function setupAmps(){const kick=clamp(.15*Math.max(0,SU.vpeak-3),0,.9);return MODES.map((M,i)=>POUR[i]*Math.exp(-SU.standT/M.tau)+kick*KICK[i])}
+function haze(){return clamp(.03*Math.max(0,SU.vpeak-3),0,.2)}
+function setupWords(){const w=[];const st=SU.standT>=299?'5:00':fmt(SU.standT);
+ w.push('water stood '+st+(SU.standT>=240?'':' (too short)'));w.push(SU.n+' crystal'+(SU.n===1?'':'s')+(SU.n>3?' (too many)':''));
+ w.push(SU.vpeak>3?'straw out fast':'straw out gently');return w.join(', ')}
+function careless(){return SU.standT<240||SU.n>3||SU.vpeak>3}
+// ---------- the three parts
+const PARTS=[0,1,2].map(p=>({p,started:false,t:0,pred:-1,sketch:new Array(20).fill(0),checked:false,accepted:false,fb:'',arrows:false,lowered:0,built:false}));
+const MINW=[45,150,90];       // lab seconds to watch before the sketch can be checked
+const TMAX=300;               // each run lasts 5 lab minutes
+const PER=900;                // dye particles per crystal
+function buildPart(P){const r=rng(10+P.p);P.rr=mulberry32((SEED+3)*31+P.p*977);
+ P.cx=SU.cx.map(x=>clamp(x+.08*gauss(r),.25,2.6));const xm=P.cx.reduce((a,b)=>a+b,0)/Math.max(1,P.cx.length);
+ if(P.p===0)P.F=makeField({xs:xm,w:W1,amp:AMP1});
+ if(P.p===1)P.F=null;
+ if(P.p===2){const bx=Math.max(1.2,xm);P.bag={x:bx,y:LY-.35,ax:1.1,ay:.5};P.F=makeField({xs:bx,w:W3,amp:-AMP3,bag:P.bag})}
+ P.burnX=xm;P.a0=setupAmps().map((a,i)=>a*(r()<.5?-1:1));
+ const n=Math.max(1,SU.n);P.N=n*PER;P.X=new Float32Array(P.N);P.Y=new Float32Array(P.N);P.B=new Int16Array(P.N);
+ const hz=haze(),dirx=.42,diry=1,dn=Math.hypot(dirx,diry);
+ for(let i=0;i<P.N;i++){const c=i%n,x0=P.cx[c]||XC;P.B[i]=c;P.X[i]=x0;P.Y[i]=.06;const u=r();
+  if(u<.04){P.B[i]=-1;P.X[i]=clamp(x0+.15*gauss(r),.03,LX-.03);P.Y[i]=clamp(.03+Math.abs(.06*gauss(r)),.03,LY-.03)}
+  else if(u<.04+hz){P.B[i]=-1;const s=r()*5.2;P.X[i]=clamp(XC+.1+s*dirx/dn+.15*gauss(r),.03,LX-.03);P.Y[i]=clamp(.2+s*diry/dn+.15*gauss(r),.03,LY-.03)}}
+ P.t=0;P.started=false;P.lowered=0;P.built=true;P.tmin=1e9;P.maxDyeY=0}
+function ramp(P){if(!P.started)return 0;if(P.p===0)return 1-Math.exp(-P.t/12);if(P.p===2)return P.lowered>=1?1-Math.exp(-(P.t-2)/30):0;return 0}
+function velAt(P,x,y,out){out[0]=0;out[1]=0;out[2]=0;const R=ramp(P);if(P.F&&R>0){P.F.vel(x,y,out);out[0]*=R;out[1]*=R}
+ const dec=MODES.map((M,i)=>P.a0[i]*Math.exp(-P.t/M.tau));swirlVel(dec,x,y,out);return out}
+const DIFF=1e-3,EDDY=.008,SETTLE=.001; // spreading of the dye: DIFF (cm^2/s) in still water, plus EDDY x speed (cm) where the water moves
+// (a moving plume wobbles and mixes with its surroundings); SETTLE: slow sinking of the dense dye solution (cm/s)
+function inBag(P,x,y){const b=P.bag;if(!b||P.lowered<1)return false;const ex=(x-b.x)/b.ax,ey=(y-b.y)/b.ay;return ex*ex+ey*ey<1.02}
+function stepPart(P,dt){const sub=Math.max(1,Math.ceil(dt/.04)),h=dt/sub,rr=P.rr,o=[0,0,0],o2=[0,0,0];
+ for(let s=0;s<sub;s++){if(P.started){P.t+=h;if(P.p===2)P.lowered=Math.min(1,P.t/2)}
+  const dec=MODES.map((M,i)=>P.a0[i]*Math.exp(-P.t/M.tau)),R=ramp(P);
+  const V=(x,y,out)=>{out[0]=0;out[1]=0;if(P.F&&R>0){P.F.vel(x,y,out);out[0]*=R;out[1]*=R}swirlVel(dec,x,y,out);return out};
+  const rate=P.cx.map(c=>{V(c,.15,o);return(1/500+.04*Math.hypot(o[0],o[1]))*h});
+  for(let i=0;i<P.N;i++){let x=P.X[i],y=P.Y[i];
+   if(P.B[i]>=0){if(P.started&&rr()<rate[P.B[i]]){P.B[i]=-1;P.X[i]=x+.05*(rr()-.5);P.Y[i]=.05+.04*rr()}continue}
+   V(x,y,o);const xm=x+.5*h*o[0],ym=y+.5*h*o[1];V(xm,ym,o2);const sd=Math.sqrt(2*(DIFF+EDDY*Math.hypot(o2[0],o2[1]))*h)*3.464; // uniform step with variance 2Dh
+   let nx=x+h*o2[0]+sd*(rr()-.5),ny=y+h*o2[1]-SETTLE*h+sd*(rr()-.5);
+   if(nx<.02)nx=.04-nx;if(nx>LX-.02)nx=2*LX-.04-nx;if(ny<.02)ny=.04-ny;if(ny>LY-.02)ny=2*LY-.04-ny;
+   nx=clamp(nx,.02,LX-.02);ny=clamp(ny,.02,LY-.02);
+   if(inBag(P,nx,ny)){nx=x;ny=y;if(inBag(P,nx,ny)){ny=P.bag.y-P.bag.ay-.03}}
+   P.X[i]=nx;P.Y[i]=ny}}}
+// temperatures for the side strip (approximate, for the picture only)
+function temps(P){const t=P.started?P.t:0;
+ if(P.p===0){const m=Math.min(70,20+.15*t);return{top:m+(P.started?1.2:0),bot:m-(P.started?.4:0),prof:f=>m-(P.started?.4:0)+f*1.6*(P.started?1:0)}}
+ if(P.p===1){const dT=.6*Math.sqrt(t),dd=Math.max(.05,2*Math.sqrt(1.4e-3*Math.max(t,1)));const erfc=z=>{const q=1/(1+.3275911*z);return q*(.254829592+q*(-.284496736+q*(1.421413741+q*(-1.453152027+q*1.061405429))))*Math.exp(-z*z)};
+  return{top:20+dT,bot:20+dT*erfc(LY/dd),prof:f=>20+dT*erfc((1-f)*LY/dd),layer:dd}}
+ const m=35-8*(1-Math.exp(-t/250)),g=P.lowered>=1?1.5*(1-Math.exp(-t/60)):0;return{top:m+.5*g/1.5,bot:m-g,prof:f=>m-g+f*(g+.5*g/1.5)}}
+// ---------- truth for the sketch: average the main flow (full strength, no swirl) over each of 5 x 4 boxes
+const DIRS=[null,[0,1],[1,0],[0,-1],[-1,0]],DW=['','up','right','down','left'];
+function truth(P){if(!P.F)return null;const o=[0,0,0],out=[];
+ for(let r=0;r<4;r++)for(let c=0;c<5;c++){let u=0,v=0,nn=0;for(let a=0;a<7;a++)for(let b=0;b<7;b++){const x=(c+(a+.5)/7)*LX/5,y=LY-(r+(b+.5)/7)*LY/4;if(P.bag){const ex=(x-P.bag.x)/P.bag.ax,ey=(y-P.bag.y)/P.bag.ay;if(ex*ex+ey*ey<1)continue}P.F.vel(x,y,o);u+=o[0];v+=o[1];nn++}
+  out.push(nn?[u/nn,v/nn]:[0,0])}
+ return out}
+// display box (r,c) <-> canonical box; direction mirrored when MIR
+const canonCell=i=>{const r=Math.floor(i/5),c=i%5;return r*5+(MIR?4-c:c)};
+const canonDir=d=>MIR&&(d===2||d===4)?6-d:d;
+function judge(P){const S=P.sketch,REG={src:[],top:[],bottom:[],far:[],near:[],mid:[]};
+ const srcC=MIR?3:1,farC=MIR?0:4,nearC=MIR?4:0;
+ const reg=i=>{const r=Math.floor(i/5),c=i%5;if(c===srcC&&(r===1||r===2))return'src';if(r===0)return'top';if(r===3)return'bottom';if(c===farC)return'far';if(c===nearC)return'near';return'mid'};
+ if(P.p===1){const ups=[],bad=[];S.forEach((d,i)=>{if(!d)return;const r=Math.floor(i/5),c=i%5;if(d===1||d===3)ups.push(i);else if(!(r===3&&Math.abs(c-(MIR?3.5:.5))<=2))bad.push(i)});
+  if(ups.length)return{ok:false,lines:['You drew water moving '+(S[ups[0]]===1?'up':'down')+'. Did the colour rise or sink in Part 2? Watch again at 16×.']};
+  if(bad.length)return{ok:false,lines:['You drew a current '+({top:'along the top',mid:'in the middle',far:'on the far side',near:'near the wall',bottom:'along the far end of the bottom',src:'in the middle'})[reg(bad[0])]+'. Did the colour ever get there?']};
+  return{ok:true,lines:[S.some(d=>d)?'Only slow spreading near the crystals: yes.':'No arrows: yes, there was no current.','The colour stayed near the bottom.']}}
+ const T=truth(P);let vmax=0;T.forEach(v=>vmax=Math.max(vmax,Math.hypot(v[0],v[1])));
+ const names=P.p===0?{src:'above the flame'}:{src:'under the ice bag'};Object.assign(names,{top:'along the top',bottom:'along the bottom',far:'on the far side',near:'near the wall by the crystals',mid:'in the middle'});
+ let key=0,hit=0;const st={};
+ for(let i=0;i<20;i++){const v=T[canonCell(i)],sp=Math.hypot(v[0],v[1]);if(sp<.3*vmax)continue;const g=reg(i),d=canonDir(S[i]);
+  // boxes in the middle of the beaker are optional: only an arrow against the flow counts there
+  if(g==='mid'){if(d){const D=DIRS[d];if((D[0]*v[0]+D[1]*v[1])/sp<=-.45){st[g]=st[g]||{n:0,ok:0,opp:[],miss:0};st[g].opp.push(S[i])}}continue}
+  key++;st[g]=st[g]||{n:0,ok:0,opp:[],miss:0};st[g].n++;
+  if(!d){st[g].miss++;continue}const D=DIRS[d],dot=(D[0]*v[0]+D[1]*v[1])/sp;if(dot>=.45){st[g].ok++;hit++}else if(dot<=-.45)st[g].opp.push(S[i]);else st[g].miss++}
+ const lines=[],yes=[],wrong=[];let opp=0;['src','top','far','bottom','near','mid'].forEach(g=>{const s=st[g];if(!s)return;
+  if(s.opp.length){opp++;wrong.push(names[g]+' ('+DW[s.opp[0]]+')')}
+  else if(!s.n)return;else if(s.ok===s.n)yes.push(names[g]);
+  else lines.push('<span class="no">Check '+names[g]+'.</span> Add arrows where the colour moved.')});
+ if(yes.length)lines.unshift('<span class="ok">Your arrows '+yes.join(', ')+': yes.</span>');
+ if(wrong.length)lines.unshift('<span class="no">These arrows point the wrong way: '+wrong.join(', ')+'.</span> Watch the colour there again.');
+ return{ok:opp===0&&hit>=.75*key,lines,key,hit}}
+// ---------- prediction choices
+const PRED=['Rises above the heat and loops round','Stays put: slow spreading only','Sinks under the cold and loops the other way','Rises everywhere evenly'];
+const TRUEP=[0,1,2];
+const ACT=['Light the burner','Switch on the lamp','Lower the ice bag'];
+const DESC=['<b>Part 1, heated from below.</b> A fresh beaker with crystals on the bottom near one side. The Bunsen burner goes under the crystals.',
+ '<b>Part 2, heated from above.</b> A fresh beaker, same crystal method. A heat lamp (at least 100 W) shines on the surface. Keep water off the lamp.',
+ '<b>Part 3, cooled from above.</b> Fresh lukewarm water, same crystal method. A sealed bag of ice hangs just under the surface, above the crystals.'];
+// ---------- drawing helpers
+const cv=document.getElementById('cv'),cx=cv.getContext('2d');
+const SC=50,WX=60,WY=110,WW=LX*SC,WH=LY*SC; // water box on the canvas
+const DX=x=>WX+(MIR?LX-x:x)*SC,DY=y=>WY+(LY-y)*SC;
+const NX=75,NY=63,grid=new Float32Array(NX*NY),gtmp=new Float32Array(NX*NY);
+const off=document.createElement('canvas');off.width=NX;off.height=NY;const ox=off.getContext('2d'),img=ox.createImageData(NX,NY);
+function renderDye(P,K){grid.fill(0);const fx=NX/LX,fy=NY/LY;
+ for(let i=0;i<P.N;i++){if(P.B[i]>=0)continue;let gx=(MIR?LX-P.X[i]:P.X[i])*fx-.5,gy=(LY-P.Y[i])*fy-.5;const ix=Math.floor(gx),iy=Math.floor(gy),fx2=gx-ix,fy2=gy-iy;
+  for(let a=0;a<2;a++)for(let b=0;b<2;b++){const X=ix+a,Y=iy+b;if(X<0||Y<0||X>=NX||Y>=NY)continue;grid[Y*NX+X]+=(a?fx2:1-fx2)*(b?fy2:1-fy2)}}
+ for(let pass=0;pass<3;pass++){for(let y=0;y<NY;y++)for(let x=0;x<NX;x++){let s=0,n=0;for(let d=-1;d<=1;d++){const X=x+d;if(X>=0&&X<NX){s+=grid[y*NX+X];n++}}gtmp[y*NX+x]=s/n}
+  for(let y=0;y<NY;y++)for(let x=0;x<NX;x++){let s=0,n=0;for(let d=-1;d<=1;d++){const Y=y+d;if(Y>=0&&Y<NY){s+=gtmp[Y*NX+x];n++}}grid[y*NX+x]=s/n}}
+ const D=img.data;for(let i=0;i<NX*NY;i++){const a=1-Math.exp(-K*grid[i]);D[i*4]=205-60*a;D[i*4+1]=50-20*a;D[i*4+2]=215-25*a;D[i*4+3]=255*Math.min(.95,a)}
+ ox.putImageData(img,0,0);cx.imageSmoothingEnabled=true;cx.drawImage(off,WX,WY,WW,WH)}
+function rr(c,x,y,w,h,r){c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);c.closePath()}
+function arrow(c,x1,y1,x2,y2,col,lw){const a=Math.atan2(y2-y1,x2-x1),hl=Math.min(10,Math.hypot(x2-x1,y2-y1)*.6);c.strokeStyle=col;c.fillStyle=col;c.lineWidth=lw||2;
+ c.beginPath();c.moveTo(x1,y1);c.lineTo(x2-hl*.6*Math.cos(a),y2-hl*.6*Math.sin(a));c.stroke();c.beginPath();c.moveTo(x2,y2);c.lineTo(x2-hl*Math.cos(a-.45),y2-hl*Math.sin(a-.45));c.lineTo(x2-hl*Math.cos(a+.45),y2-hl*Math.sin(a+.45));c.closePath();c.fill()}
+function fmt(t){t=Math.max(0,Math.floor(t));return Math.floor(t/60)+':'+String(t%60).padStart(2,'0')}
+const tcol=T=>{const f=clamp((T-15)/50,0,1),a=[96,165,250],b=[249,115,22];return`rgb(${a.map((v,i)=>Math.round(v+(b[i]-v)*f)).join(',')})`};
+function drawBench(kind,P,t){const c=cx;c.clearRect(0,0,500,420);
+ // retort stand rod (left) and base
+ c.fillStyle='#3a4572';c.fillRect(18,10,7,398);c.fillRect(6,404,120,10);
+ // beaker support: gauze on a ring for the burner part, bench mat otherwise
+ if(kind==='burner'||kind==='setup'){c.fillStyle='#5b6690';c.fillRect(WX-30,WY+WH+6,WW+60,5);c.fillRect(25,WY+WH+5,WX-55+30,4);
+  c.strokeStyle='#8090c0';c.lineWidth=1;for(let x=WX-28;x<WX+WW+30;x+=6){c.beginPath();c.moveTo(x,WY+WH+6);c.lineTo(x+3,WY+WH+11);c.stroke()}}
+ else{c.fillStyle='#2b3566';c.fillRect(WX-40,WY+WH+6,WW+80,8)}
+ // water
+ c.fillStyle='#22306a';c.fillRect(WX,WY,WW,WH);
+ const g=c.createLinearGradient(WX,0,WX+WW,0);g.addColorStop(0,'rgba(255,255,255,.05)');g.addColorStop(.15,'rgba(255,255,255,0)');g.addColorStop(.85,'rgba(255,255,255,0)');g.addColorStop(1,'rgba(255,255,255,.05)');c.fillStyle=g;c.fillRect(WX,WY,WW,WH)}
+function drawGlass(){const c=cx;c.strokeStyle='#cfd7f5';c.lineWidth=4;c.beginPath();c.moveTo(WX-2,WY-55);c.lineTo(WX-2,WY+WH+2);c.lineTo(WX+WW+2,WY+WH+2);c.lineTo(WX+WW+2,WY-55);c.stroke();
+ c.beginPath();c.moveTo(WX-2,WY-55);c.quadraticCurveTo(WX-8,WY-60,WX-12,WY-62);c.stroke();
+ c.strokeStyle='rgba(207,215,245,.7)';c.lineWidth=2;c.beginPath();c.moveTo(WX,WY);c.lineTo(WX+WW,WY);c.stroke();
+ c.fillStyle='#7f8bb8';c.font='600 12px Inter';c.textAlign='left';for(let k=1;k<=4;k++){const y=WY+WH-k*WH/4.3;c.fillRect(WX+WW-14,y,12,2);}c.fillText('200 mL',WX+WW-62,WY-40)}
+function drawCrystals(P,cxs,frac){const c=cx;cxs.forEach((x,i)=>{const left=frac?frac[i]:1;if(left<=.03)return;const X=DX(x),Y=DY(.06),s=2.2+2.6*Math.sqrt(left);c.fillStyle='#3b0a45';c.beginPath();c.moveTo(X,Y-s);c.lineTo(X+s,Y);c.lineTo(X,Y+s*.6);c.lineTo(X-s,Y);c.closePath();c.fill()})}
+function drawBurner(on,x,t){const c=cx,X=DX(x),Y=WY+WH+14;c.fillStyle='#64748b';c.fillRect(X-11,Y+30,22,300);c.fillStyle='#475569';c.fillRect(X-15,Y+28,30,6);
+ if(on){const f=1+.08*Math.sin(t*23)+.05*Math.sin(t*37);c.fillStyle='rgba(96,165,250,.55)';c.beginPath();c.moveTo(X-10,Y+28);c.quadraticCurveTo(X-12,Y+8,X,Y-6*f+2);c.quadraticCurveTo(X+12,Y+8,X+10,Y+28);c.fill();
+  c.fillStyle='rgba(191,219,254,.85)';c.beginPath();c.moveTo(X-5,Y+28);c.quadraticCurveTo(X-6,Y+16,X,Y+10*f);c.quadraticCurveTo(X+6,Y+16,X+5,Y+28);c.fill()}}
+function drawLamp(on,t,P){const c=cx,X=WX+WW/2;c.fillStyle='#3a4572';c.fillRect(25,22,X-25,6);
+ c.fillStyle='#64748b';c.beginPath();c.moveTo(X-50,44);c.lineTo(X-22,12);c.lineTo(X+22,12);c.lineTo(X+50,44);c.closePath();c.fill();
+ c.fillStyle=on?'#fde68a':'#94a3b8';c.beginPath();c.ellipse(X,46,24,8,0,0,Math.PI*2);c.fill();
+ if(on){const g=c.createLinearGradient(0,50,0,WY);g.addColorStop(0,'rgba(253,186,116,.28)');g.addColorStop(1,'rgba(253,186,116,.05)');c.fillStyle=g;c.beginPath();c.moveTo(X-40,50);c.lineTo(X+40,50);c.lineTo(WX+WW,WY);c.lineTo(WX,WY);c.closePath();c.fill()}
+ // warm surface layer (faint shimmer); its depth grows like the square root of time (conduction only)
+ if(P&&P.started){const T=temps(P),d=Math.min(1.5,T.layer)*SC,a=clamp((T.top-20)/12,0,1)*.32;const g=c.createLinearGradient(0,WY,0,WY+d);g.addColorStop(0,`rgba(251,146,60,${a})`);g.addColorStop(1,'rgba(251,146,60,0)');c.fillStyle=g;c.fillRect(WX,WY,WW,d);
+  c.strokeStyle=`rgba(253,186,116,${a*.9})`;c.lineWidth=1;for(let k=0;k<3;k++){const yy=WY+4+k*d/4;c.beginPath();for(let x=0;x<=WW;x+=6)c.lineTo(WX+x,yy+1.5*Math.sin(x/14+t*2+k));c.stroke()}}}
+function drawBag(P,t){const b=P.bag,c=cx;const drop=(1-P.lowered)*1.6;const X=DX(b.x),Y=DY(b.y+drop),rx=b.ax*SC,ry=b.ay*SC;
+ c.strokeStyle='#cbd5e1';c.lineWidth=2;c.beginPath();c.moveTo(25,30);c.lineTo(X,30);c.lineTo(X,Y-ry-8);c.stroke();c.fillStyle='#3a4572';c.fillRect(25,26,X-25+6,8);
+ c.fillStyle='rgba(224,242,254,.22)';c.strokeStyle='rgba(224,242,254,.85)';c.lineWidth=2;c.beginPath();c.ellipse(X,Y,rx,ry,0,0,Math.PI*2);c.fill();c.stroke();
+ c.fillStyle='rgba(186,230,253,.75)';[[-.55,.1],[-.1,-.2],[.35,.15],[.1,.35],[-.35,-.35]].forEach(([u,v])=>{c.fillRect(X+u*rx-7,Y+v*ry-6,14,12)});
+ c.beginPath();c.moveTo(X-8,Y-ry-8);c.lineTo(X+8,Y-ry-8);c.lineTo(X,Y-ry+2);c.closePath();c.fill()}
+function drawStrip(P){const c=cx,x=WX+WW+16,T=temps(P);for(let k=0;k<50;k++){const f=1-k/50;c.fillStyle=tcol(T.prof(f));c.fillRect(x,WY+k*WH/50,12,WH/50+1)}
+ c.strokeStyle='#5b6690';c.lineWidth=1;c.strokeRect(x,WY,12,WH);c.fillStyle='#cfd7f5';c.font='600 13px Inter';c.textAlign='left';
+ c.fillText('about '+T.top.toFixed(0)+' °C',x+18,WY+10);c.fillText('about '+T.bot.toFixed(0)+' °C',x+18,WY+WH);c.fillStyle='#7f8bb8';c.fillText('temperature',x+18,WY+WH/2)}
+function drawClock(P,label){const c=cx;c.fillStyle='rgba(11,16,41,.85)';rr(c,300,6,194,40,8);c.fill();c.fillStyle='#fbb040';c.font='700 17px "Space Grotesk"';c.textAlign='right';
+ c.fillText(label,486,32);c.textAlign='left';c.font='600 12px Inter';c.fillStyle='#a5b4d8';c.fillText('lab clock',310,31)}
+function drawScale(){const c=cx,y=WY+WH+42;c.strokeStyle='#cfd7f5';c.lineWidth=2;c.beginPath();c.moveTo(WX+WW+16,y);c.lineTo(WX+WW+16+SC,y);c.moveTo(WX+WW+16,y-5);c.lineTo(WX+WW+16,y+5);c.moveTo(WX+WW+16+SC,y-5);c.lineTo(WX+WW+16+SC,y+5);c.stroke();
+ c.fillStyle='#cfd7f5';c.font='600 13px Inter';c.textAlign='center';c.fillText('1 cm',WX+WW+16+SC/2,y+20)}
+function drawArrows(P){if(!P.F)return;const c=cx,o=[0,0,0],R=1;let vm=0;const pts=[];
+ for(let i=0;i<12;i++)for(let j=0;j<10;j++){const x=(i+.5)*LX/12,y=(j+.5)*LY/10;if(P.bag){const ex=(x-P.bag.x)/P.bag.ax,ey=(y-P.bag.y)/P.bag.ay;if(ex*ex+ey*ey<1.1)continue}P.F.vel(x,y,o);const s=Math.hypot(o[0],o[1]);vm=Math.max(vm,s);pts.push([x,y,o[0],o[1],s])}
+ pts.forEach(([x,y,u,v,s])=>{if(s<.04*vm)return;const L=8+14*Math.sqrt(s/vm),X=DX(x),Y=DY(y),ux=(MIR?-u:u)/s,uy=-v/s;arrow(c,X-ux*L/2,Y-uy*L/2,X+ux*L/2,Y+uy*L/2,'rgba(255,255,255,.75)',2)})}
+// ---------- step 1 scene
+const STRAW={dx:.42,dy:1};{const n=Math.hypot(STRAW.dx,STRAW.dy);STRAW.dx/=n;STRAW.dy/=n}
+const tipAt=s=>[XC+.1+s*STRAW.dx,.22+s*STRAW.dy];
+function specksInit(){const r=rng(5);SU.specks=[...Array(70)].map(()=>[.2+r()*(LX-.4),.2+r()*(LY-.4)])}
+function drawSetup(t){drawBench('setup');const c=cx;const a=setupAmps(),o=[0,0,0];
+ // faint specks show any leftover swirl
+ c.fillStyle='rgba(207,215,245,.55)';SU.specks.forEach(p=>{c.beginPath();c.arc(DX(p[0]),DY(p[1]),1.6,0,7);c.fill()});
+ // a small puddle of dye round the crystals once they are in
+ if(SU.n){const g=[];SU.cx.forEach(x=>{const X=DX(x),Y=DY(.05),gr=c.createRadialGradient(X,Y,1,X,Y,22);gr.addColorStop(0,'rgba(190,40,200,.55)');gr.addColorStop(1,'rgba(190,40,200,0)');c.fillStyle=gr;c.fillRect(X-24,Y-24,48,26)})}
+ drawCrystals(null,SU.cx);
+ SU.drops.forEach(d=>{const s=5.6*(1-d.f),[x,y]=tipAt(s);c.fillStyle='#3b0a45';c.beginPath();c.arc(DX(x),DY(y),3.5,0,7);c.fill()});
+ if(SU.straw){const [x0,y0]=tipAt(SU.s),[x1,y1]=tipAt(SU.s+7.2);c.strokeStyle='rgba(255,255,255,.75)';c.lineWidth=11;c.lineCap='round';c.beginPath();c.moveTo(DX(x0),DY(y0));c.lineTo(DX(x1),DY(y1));c.stroke();
+  c.strokeStyle='rgba(125,211,252,.55)';c.lineWidth=7;c.beginPath();c.moveTo(DX(x0),DY(y0));c.lineTo(DX(x1),DY(y1));c.stroke();c.lineCap='butt';
+  if(SU.straw===1&&SU.n&&!SU.done){c.strokeStyle='#fbb040';c.lineWidth=2;c.setLineDash([4,4]);rr(c,DX(x1)-16,DY(y1)-16,32,32,8);c.stroke();c.setLineDash([]);c.fillStyle='#fbb040';c.font='700 12px Inter';c.textAlign='center';c.fillText('drag up',DX(x1),DY(y1)-22)}}
+ drawGlass();
+ c.fillStyle='#cfd7f5';c.font='600 13px Inter';c.textAlign='left';
+ if(SU.standing||SU.standT>0){c.fillStyle='rgba(11,16,41,.85)';rr(c,300,6,194,40,8);c.fill();c.fillStyle='#fbb040';c.font='700 17px "Space Grotesk"';c.textAlign='right';c.fillText(fmt(SU.standT),486,32);c.textAlign='left';c.font='600 12px Inter';c.fillStyle='#a5b4d8';c.fillText('standing',310,31)}
+ drawScale()}
+// ---------- main draw for parts
+function drawPart(P,t){const kind=P.p===0?'burner':'bench';drawBench(kind,P,t);const K=P.N>3*PER?1.1:1.1;renderDye(P,K);
+ const left=P.cx.map((_,c)=>{let n=0,tot=0;for(let i=0;i<P.N;i++)if(i%P.cx.length===c){tot++;if(P.B[i]>=0)n++}return n/Math.max(1,tot)});drawCrystals(P,P.cx,left);
+ if(P.p===0)drawBurner(P.started,P.burnX,t);if(P.p===1)drawLamp(P.started,t,P);if(P.p===2)drawBag(P,t);
+ drawGlass();drawStrip(P);drawScale();
+ drawClock(P,P.started?fmt(P.t)+(P.t>=TMAX?' (end)':''):'not started');
+ if(P.arrows)drawArrows(P)}
+// ---------- app state and UI
+const UI={step:0,part:0,speed:1,maxStep:0,ord:[],ordOk:false,q:[-1,-1,-1,-1],etab:0,printed:false};
+const $=id=>document.getElementById(id);
+function say(id,h){$(id).innerHTML=h}
+// step 1 controls
+function s1refresh(){$('bStraw').disabled=SU.straw!==0;$('bStand').disabled=!(SU.straw===1&&SU.n===0&&!SU.standing&&SU.standT<300);$('bSkip').disabled=!SU.standing;
+ $('bDrop').disabled=!(SU.straw===1&&SU.n<8&&!SU.pulling&&SU.s===0);$('bPull').disabled=!(SU.straw===1&&SU.n>0&&!SU.pulling);
+ $('k1').className='n'+(SU.straw?' ok':'');$('k2').className='n'+(SU.standT>=299?' ok':'');$('k3').className='n'+(SU.n>=2&&SU.n<=3?' ok':'');$('k4').className='n'+(SU.done&&SU.vpeak<=3?' ok':'');
+ $('standTxt').textContent=SU.standing?'Waiting... the clock runs fast.':SU.standT>=299?'Still now.':SU.standT>0?'Stopped early at '+fmt(SU.standT)+'.':'so the swirl from pouring dies away';
+ $('dropTxt').textContent=SU.n?SU.n+' in. '+(SU.n<2?'2 or 3 is right.':SU.n<=3?'Good. 2 or 3 is right.':'Too many: the water will go dark and murky.'):'down the straw with tweezers: 2 or 3 only';
+ if(SU.done){say('s1msg',(careless()?'<span class="no">Set-up: '+setupWords()+'.</span> The currents will be harder to see.':'<span class="ok">Set-up: '+setupWords()+'.</span> Good. All three beakers are set up this way.'))}
+ railRefresh()}
+$('bStraw').onclick=()=>{SU.straw=1;SU.s=0;s1refresh()};
+$('bStand').onclick=()=>{SU.standing=true;s1refresh()};
+$('bSkip').onclick=()=>{SU.standing=false;s1refresh()};
+$('bDrop').onclick=()=>{if(SU.standing){SU.standing=false}SU.drops.push({f:0});SU.n++;s1refresh()};
+$('bPull').onclick=()=>{SU.pulling=true;SU.pullAuto=true;s1refresh()};
+$('bRedo').onclick=()=>{Object.assign(SU,{straw:0,s:0,standT:0,standing:false,n:0,cx:[],vpeak:0,done:false,drops:[],pulling:false,pullAuto:false});specksInit();PARTS.forEach(P=>{P.built=false;P.started=false;P.checked=false;P.accepted=false;P.arrows=false;P.pred=-1;P.sketch.fill(0)});UI.maxStep=0;s1refresh();say('s1msg','')};
+function finishSetup(){SU.done=true;SU.pulling=false;SU.straw=2;PARTS.forEach(P=>buildPart(P));UI.maxStep=Math.max(UI.maxStep,1);s1refresh()}
+// drag the straw on the canvas
+let drag=null;
+function cvPt(e){const r=cv.getBoundingClientRect();return[(e.clientX-r.left)*500/r.width,(e.clientY-r.top)*420/r.height]}
+cv.addEventListener('pointerdown',e=>{if(UI.step!==0||SU.straw!==1||!SU.n||SU.pullAuto||SU.done)return;const [px,py]=cvPt(e);const [x1,y1]=tipAt(SU.s+7.2),[x0,y0]=tipAt(SU.s);
+ // grab anywhere near the straw above the water
+ const ax=DX(x0),ay=DY(y0),bx=DX(x1),by=DY(y1),L=Math.hypot(bx-ax,by-ay),u=((px-ax)*(bx-ax)+(py-ay)*(by-ay))/(L*L),d=Math.abs((px-ax)*(by-ay)-(py-ay)*(bx-ax))/L;
+ if(u<0||u>1.15||d>26)return;cv.setPointerCapture(e.pointerId);drag={p0:[px,py],s0:SU.s,hist:[[performance.now(),SU.s]]};SU.pulling=true;s1refresh();e.preventDefault()});
+cv.addEventListener('pointermove',e=>{if(!drag)return;const [px,py]=cvPt(e);const ux=(MIR?-STRAW.dx:STRAW.dx),uy=-STRAW.dy;const ds=((px-drag.p0[0])*ux+(py-drag.p0[1])*uy)/SC;
+ SU.s=clamp(drag.s0+ds,0,7);const now=performance.now();drag.hist.push([now,SU.s]);while(drag.hist.length>2&&now-drag.hist[0][0]>120)drag.hist.shift();
+ const h=drag.hist,dt=(h[h.length-1][0]-h[0][0])/1000;if(dt>.03&&tipAt(SU.s)[1]<LY+.3){const v=(h[h.length-1][1]-h[0][1])/dt;if(v>SU.vpeak)SU.vpeak=v}
+ if(tipAt(SU.s)[1]>LY+.4){drag=null;finishSetup()}});
+const endDrag=()=>{if(!drag)return;drag=null;SU.pulling=false;s1refresh()};cv.addEventListener('pointerup',endDrag);cv.addEventListener('pointercancel',endDrag);
+// step 2: predictions and observing
+function predSVG(k,p,big){const W=100,H=80,x0=10,x1=90,y0=14,y1=70,sx=MIR?72:28,fx=MIR?20:80,id='m'+k+p+(big?'b':'')+Math.floor(Math.random()*1e6);
+ let s=`<svg viewBox="0 0 ${W} ${H}"><defs><marker id="${id}" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f472b6"/></marker></defs>`;
+ s+=`<path d="M${x0} 8V${y1}H${x1}V8" fill="none" stroke="#cfd7f5" stroke-width="2"/><line x1="${x0}" y1="${y0}" x2="${x1}" y2="${y0}" stroke="#7dd3fc" stroke-width="1" opacity=".6"/>`;
+ if(p===0)s+=`<path d="M${sx-5} 79Q${sx} 70 ${sx+5} 79Z" fill="#60a5fa"/>`;
+ if(p===1)s+=`<rect x="40" y="0" width="20" height="5" fill="#fde68a"/>`;
+ if(p===2)s+=`<ellipse cx="${sx}" cy="${y0+3}" rx="13" ry="6" fill="#bae6fd" opacity=".7"/>`;
+ s+=`<circle cx="${sx}" cy="${y1-3}" r="2.5" fill="#a21caf"/>`;
+ const A=`stroke="#f472b6" stroke-width="2.5" fill="none" marker-end="url(#${id})"`,dir=MIR?-1:1;
+ if(k===0)s+=`<path d="M${sx} ${y1-6}V${y0+8}Q${sx} ${y0+4} ${sx+6*dir} ${y0+4}H${fx-6*dir}Q${fx} ${y0+4} ${fx} ${y0+10}V${y1-10}Q${fx} ${y1-5} ${fx-6*dir} ${y1-5}H${sx+10*dir}" ${A}/>`;
+ if(k===1)s+=`<path d="M${sx-4} ${y1-5}H${sx-14}" ${A}/><path d="M${sx+4} ${y1-5}H${sx+14}" ${A}/>`;
+ if(k===2)s+=`<path d="M${sx} ${y0+12}V${y1-8}Q${sx} ${y1-5} ${sx+6*dir} ${y1-5}H${fx-6*dir}Q${fx} ${y1-5} ${fx} ${y1-11}V${y0+8}Q${fx} ${y0+4} ${fx-6*dir} ${y0+4}H${sx+18*dir}" ${A}/>`;
+ if(k===3)[22,40,58,76].forEach(x=>s+=`<path d="M${x} ${y1-6}V${y0+10}" ${A}/>`);
+ return s+'</svg>'}
+function p2refresh(){const P=PARTS[UI.part];$('tabs2').querySelectorAll('button').forEach((b,i)=>{b.classList.toggle('on',i===UI.part);b.classList.toggle('done',PARTS[i].started&&PARTS[i].t>=MINW[i])});
+ say('p2desc',DESC[UI.part]);$('pcards').innerHTML=PRED.map((s,k)=>`<button class="pcard${P.pred===k?' on':''}" data-k="${k}">${predSVG(k,UI.part)}<span>${s}</span></button>`).join('');
+ $('pcards').querySelectorAll('.pcard').forEach(b=>b.onclick=()=>{if(P.started)return;P.pred=+b.dataset.k;p2refresh()});
+ $('bGo').textContent=ACT[UI.part];$('bGo').disabled=P.pred<0||P.started;p2msg();railRefresh()}
+function p2msg(){const P=PARTS[UI.part];let h;
+ if(P.pred<0)h='Choose the pattern you expect first. A wrong guess costs nothing.';
+ else if(!P.started)h='Prediction saved. Now '+ACT[UI.part].toLowerCase()+' and watch the purple dye.';
+ else if(P.t<MINW[UI.part])h='Watch where the colour goes for at least '+fmt(MINW[UI.part])+' on the lab clock.'+(UI.part===1?' This one is slow: try 16×.':'');
+ else h='Seen enough? Go to <b>Record</b> and draw it'+(UI.part<2?', or do the next part first.':'.');
+ if(P.p===0&&P.started&&P.t>200)h+=' The water is getting hot: turn the burner off soon.';
+ $('p2msg').innerHTML=h}
+$('bGo').onclick=()=>{const P=PARTS[UI.part];if(P.pred<0||P.started)return;P.started=true;P.t=0;p2refresh()};
+$('bRestart').onclick=()=>{const P=PARTS[UI.part];const pr=P.pred;buildPart(P);P.pred=pr;P.arrows=P.arrows&&P.checked;p2refresh();recRefresh()};
+function setSpeed(v){UI.speed=v;document.querySelectorAll('.spd button').forEach(b=>b.classList.toggle('on',+b.dataset.v===v))}
+document.querySelectorAll('.spd button').forEach(b=>b.onclick=()=>setSpeed(+b.dataset.v));
+$('tabs2').querySelectorAll('button').forEach(b=>b.onclick=()=>{UI.part=+b.dataset.p;p2refresh();recRefresh()});
+$('tabs3').querySelectorAll('button').forEach(b=>b.onclick=()=>{UI.part=+b.dataset.p;p2refresh();recRefresh()});
+// step 3: record grid
+const recgrid=$('recgrid');for(let i=0;i<20;i++){const b=document.createElement('button');b.dataset.i=i;b.setAttribute('aria-label','box '+(i+1));recgrid.appendChild(b)}
+const ARW=['','<svg viewBox="0 0 40 40"><path d="M20 34V10M11 18l9-10 9 10" stroke="#f472b6" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'];
+ARW[2]=ARW[1].replace('<path','<path transform="rotate(90 20 20)"');ARW[3]=ARW[1].replace('<path','<path transform="rotate(180 20 20)"');ARW[4]=ARW[1].replace('<path','<path transform="rotate(270 20 20)"');
+function recSVG(p,forPrint){const ink=forPrint?'#000':'#cfd7f5',sx=30+(MIR?LX-(PARTS[p].burnX||XC):(PARTS[p].burnX||XC))*45;
+ let s=`<path d="M28 14V266H302V14" fill="none" stroke="${ink}" stroke-width="3"/><line x1="30" y1="44" x2="300" y2="44" stroke="${forPrint?'#555':'#7dd3fc'}" stroke-width="1.5"/>`;
+ if(p===0)s+=`<path d="M${sx-9} 292Q${sx} 268 ${sx+9} 292Z" fill="${forPrint?'#888':'#60a5fa'}"/><text x="${sx+14}" y="290" font-size="13" fill="${ink}">flame</text>`;
+ if(p===1)s+=`<rect x="140" y="2" width="50" height="10" rx="3" fill="${forPrint?'#bbb':'#fde68a'}"/><text x="196" y="12" font-size="13" fill="${ink}">lamp</text>`;
+ if(p===2){const b=PARTS[2].bag,bx=b?30+(MIR?LX-b.x:b.x)*45:sx;s+=`<ellipse cx="${bx}" cy="56" rx="49" ry="16" fill="none" stroke="${forPrint?'#555':'#bae6fd'}" stroke-width="2" stroke-dasharray="4 3"/><text x="${bx}" y="34" font-size="13" fill="${ink}" text-anchor="middle">ice bag</text>`}
+ s+=`<circle cx="${sx}" cy="261" r="4" fill="${forPrint?'#555':'#a21caf'}"/>`;return s}
+function sketchArrowsSVG(sk,forPrint){let s='';const col=forPrint?'#000':'#f472b6';sk.forEach((d,i)=>{if(!d)return;const r=Math.floor(i/5),c=i%5,x=30+c*54+27,y=44+r*55+27.5,D=DIRS[d],L=17;
+  s+=`<line x1="${x-D[0]*L}" y1="${y+D[1]*L}" x2="${x+D[0]*L*.55}" y2="${y-D[1]*L*.55}" stroke="${col}" stroke-width="4" stroke-linecap="round"/><path d="M${x+D[0]*L} ${y-D[1]*L}L${x+D[0]*L*.3-D[1]*8} ${y-D[1]*L*.3-D[0]*8}L${x+D[0]*L*.3+D[1]*8} ${y-D[1]*L*.3+D[0]*8}Z" fill="${col}"/>`});return s}
+function recRefresh(){const P=PARTS[UI.part];$('tabs3').querySelectorAll('button').forEach((b,i)=>{b.classList.toggle('on',i===UI.part);b.classList.toggle('done',PARTS[i].checked)});
+ $('recsvg').innerHTML=recSVG(UI.part,false);[...recgrid.children].forEach((b,i)=>b.innerHTML=ARW[P.sketch[i]]);
+ $('bArrows').disabled=!P.checked||!P.F;$('bArrows').classList.toggle('on',P.arrows);$('bArrows').textContent=P.arrows?'Hide flow arrows':'Show flow arrows';
+ const watched=P.started&&P.t>=MINW[UI.part];$('bCheck').disabled=!watched;
+ if(!P.started)say('recmsg','Watch Part '+(UI.part+1)+' first (step 2), then draw it here.');
+ else if(!watched&&!P.checked)say('recmsg','Keep watching: at least '+fmt(MINW[UI.part])+' on the lab clock. You can draw while it runs.');
+ else if(!P.checked)say('recmsg','Draw your arrows, then press <b>Check my sketch</b>.');
+ else say('recmsg',P.fb);railRefresh()}
+let gdrag=null;
+const cellAt=(e)=>{const r=recgrid.getBoundingClientRect();const c=Math.floor((e.clientX-r.left)/r.width*5),w=Math.floor((e.clientY-r.top)/r.height*4);return(c<0||c>4||w<0||w>3)?-1:w*5+c};
+recgrid.addEventListener('pointerdown',e=>{const i=cellAt(e);if(i<0)return;recgrid.setPointerCapture(e.pointerId);gdrag={x:e.clientX,y:e.clientY,i,moved:false};e.preventDefault()});
+recgrid.addEventListener('pointermove',e=>{if(!gdrag)return;const r=recgrid.getBoundingClientRect(),k=r.width/270,dx=e.clientX-gdrag.x,dy=e.clientY-gdrag.y;
+ if(Math.hypot(dx,dy)>14*k){const d=Math.abs(dx)>Math.abs(dy)?(dx>0?2:4):(dy>0?3:1);const P=PARTS[UI.part];if(gdrag.i>=0)P.sketch[gdrag.i]=d;
+  const j=cellAt(e);if(j>=0)P.sketch[j]=d;gdrag.moved=true;gdrag.x=e.clientX;gdrag.y=e.clientY;gdrag.i=j;P.checked=false;P.arrows=false;recRefresh()}});
+recgrid.addEventListener('pointerup',e=>{if(!gdrag)return;if(!gdrag.moved&&gdrag.i>=0){const P=PARTS[UI.part];P.sketch[gdrag.i]=(P.sketch[gdrag.i]+1)%5;P.checked=false;P.arrows=false;recRefresh()}gdrag=null});
+recgrid.addEventListener('pointercancel',()=>gdrag=null);
+recgrid.addEventListener('keydown',e=>{if(e.key!=='Enter')return;const i=+e.target.dataset.i;if(isNaN(i))return;const P=PARTS[UI.part];P.sketch[i]=(P.sketch[i]+1)%5;P.checked=false;recRefresh();e.preventDefault()});
+$('bClear').onclick=()=>{const P=PARTS[UI.part];P.sketch.fill(0);P.checked=false;P.arrows=false;recRefresh()};
+$('bCheck').onclick=()=>{const P=PARTS[UI.part];const J=judge(P);P.checked=true;P.accepted=J.ok;
+ const tp=TRUEP[UI.part],pr=P.pred;
+ const pl=pr<0?'':(pr===tp?'<br>Your prediction (<b>'+PRED[pr].toLowerCase()+'</b>) was right.':'<br>You predicted <b>'+PRED[pr].toLowerCase()+'</b>. It actually <b>'+PRED[tp].toLowerCase().replace('rises','rose').replace('stays','stayed').replace('sinks','sank').replace('loops','looped')+'</b>.');
+ P.fb=(J.ok?'<b class="ok">Accepted.</b> ':'<b class="no">Not yet.</b> ')+J.lines.join(' ')+(J.ok?pl:'');
+ if(!J.ok){P.arrows=false}recRefresh()};
+$('bArrows').onclick=()=>{const P=PARTS[UI.part];if(!P.checked)return;P.arrows=!P.arrows;recRefresh()};
+// step 4: order, questions, mini model
+const ORD=['Water at the bottom is heated by the flame.','It expands: the same mass takes up more volume.','So its density falls.','It rises, and cooler, denser water sinks to take its place.'];
+const ordShuf=(()=>{const r=rng(6),a=[0,1,2,3];for(let i=3;i>0;i--){const j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]]}if(a.join()==='0,1,2,3')a.reverse();return a})();
+function ordRefresh(){$('ordslots').innerHTML=[0,1,2,3].map(i=>`<div class="slot"><span class="n">${i+1}</span>${UI.ord[i]!==undefined?`<button data-o="${UI.ord[i]}">${ORD[UI.ord[i]]}</button>`:'<div class="emp"></div>'}</div>`).join('');
+ $('ordpool').innerHTML=ordShuf.filter(k=>!UI.ord.includes(k)).map(k=>`<button data-o="${k}">${ORD[k]}</button>`).join('');
+ $('ordslots').querySelectorAll('button').forEach(b=>b.onclick=()=>{UI.ord=UI.ord.filter(k=>k!==+b.dataset.o);UI.ordOk=false;say('ordmsg','');ordRefresh()});
+ $('ordpool').querySelectorAll('button').forEach(b=>b.onclick=()=>{UI.ord.push(+b.dataset.o);ordRefresh()});railRefresh()}
+$('bOrd').onclick=()=>{if(UI.ord.length<4){say('ordmsg','Place all four first.');return}const bad=UI.ord.findIndex((k,i)=>k!==i);UI.ordOk=bad<0;
+ say('ordmsg',bad<0?'<span class="ok">Correct. That is convection.</span>':'<span class="no">Not yet.</span> Statement '+(bad+1)+' is out of place. What has to happen before the next step can?');railRefresh()};
+const QS4=[
+ {q:'Part 2: why was there no current?',o:[['Warm, less dense water was already on top, so nothing pushed it down.',1,'Yes. Convection needs the warmer, less dense water underneath, so that it can rise.'],
+  ['The lamp did not give the water enough energy.',0,'The top did warm up. Even a weak heater underneath would start a current.'],
+  ['Thermal energy cannot travel down through water.',0,'It can, by conduction, but only slowly. The point is that warm water on top has no reason to move.']]},
+ {q:'Part 3: which way did the loop go, and why?',o:[['Down under the ice, along the bottom, up the far side: cooled water is denser.',1,'Yes. Cooled water contracts, so its density rises and gravity pulls it down.'],
+  ['Up under the ice, because cold water rises.',0,'Cooling makes the water contract: denser water sinks.'],
+  ['There was no loop. Cooling cannot cause convection.',0,'Cold, dense water on top is unstable. It sinks and sets up a loop.']]},
+ {q:'Where should the heating element of a kettle go?',o:[['At the bottom',1,'Yes. Heated water rises and the whole kettle circulates.'],['At the top',0,'Warm water would stay at the top, like Part 2. The bottom would stay cold.'],['Anywhere',0,'Part 1 and Part 2 behaved very differently.']]},
+ {q:'Where should a fridge\'s cooling unit, or a room air conditioner, go?',o:[['Near the top',1,'Yes. Cooled air is denser and sinks, so a loop forms, like Part 3.'],['Near the floor',0,'Cold air would pool at the floor and the top would stay warm.']]}];
+function qRefresh(){$('qgrid').innerHTML=QS4.map((Q,i)=>`<div class="mcq${i>=2?' inl':''}"><div class="q">${i+1}. ${Q.q}</div><div class="opts">${Q.o.map((o,j)=>`<button data-q="${i}" data-j="${j}" class="${UI.q[i]===j?(o[1]?'right':'wrong'):''}">${o[0]}</button>`).join('')}</div><div class="fb">${UI.q[i]>=0?Q.o[UI.q[i]][2]:''}</div></div>`).join('');
+ $('qgrid').querySelectorAll('button').forEach(b=>b.onclick=()=>{UI.q[+b.dataset.q]=+b.dataset.j;qRefresh()});railRefresh()}
+function etab(t){UI.etab=t;['e0','e1','e2'].forEach((id,i)=>$(id).style.display=i===t?'flex':'none');$('tabs4').querySelectorAll('button').forEach((b,i)=>b.classList.toggle('on',i===t))}
+$('tabs4').querySelectorAll('button').forEach(b=>b.onclick=()=>etab(+b.dataset.t));
+// mini model: same stream-function cell, source moved
+const mini=$('mini'),mx=mini.getContext('2d');let MINI={k:'L',F:null,dots:[]};
+const MINIMSG={L:'The water rises above the flame and the loop turns towards the far side.',C:'Flame in the middle: water rises in the middle and two loops form, one each side.',R:'The loop follows the flame. It runs the other way round.',T:'Heated from above: the warm water stays on top. No loop.',I:'Cold at the top: water sinks under the ice. The loop runs the opposite way to the flame on that side.'};
+function miniSet(k){MINI.k=k;const L=k==='L',C=k==='C',R=k==='R';
+ MINI.F=k==='T'?null:k==='I'?makeField({xs:LX-1.5,w:.5,amp:-.8,bag:{x:LX-1.5,y:LY-.35,ax:1.1,ay:.5}}):makeField({xs:L?1.5:C?3:LX-1.5,w:.3,amp:2.5});
+ const r=rng(7);MINI.fresh=true;MINI.dots=[...Array(140)].map(()=>[.1+r()*(LX-.2),.1+r()*(LY-.2)]);
+ document.querySelectorAll('#minib button').forEach(b=>b.classList.toggle('on',b.dataset.v===k));say('minimsg',MINIMSG[k])}
+document.querySelectorAll('#minib button').forEach(b=>b.onclick=()=>miniSet(b.dataset.v));
+function miniDraw(dt){const S=40,X0=40,Y0=50,c=mx;c.clearRect(0,0,360,Y0);c.clearRect(0,Y0+LY*S+3,360,60);c.fillStyle=MINI.fresh?'#22306a':'rgba(34,48,106,.18)';MINI.fresh=false;c.fillRect(X0,Y0,LX*S,LY*S);
+ const o=[0,0,0];const r=rng(Math.floor(performance.now()/16));
+ MINI.dots.forEach(p=>{const n=Math.max(1,Math.ceil(dt/.04)),h=dt/n;for(let s=0;s<n;s++){if(MINI.F){MINI.F.vel(p[0],p[1],o);p[0]+=h*o[0];p[1]+=h*o[1]}p[0]=clamp(p[0],.05,LX-.05);p[1]=clamp(p[1],.05,LY-.05);
+   if(MINI.F&&MINI.F.bag){const b=MINI.F.bag,ex=(p[0]-b.x)/b.ax,ey=(p[1]-b.y)/b.ay;if(ex*ex+ey*ey<1)p[1]=b.y-b.ay-.05}}
+  c.fillStyle='rgba(244,114,182,.9)';c.beginPath();c.arc(X0+p[0]*S,Y0+(LY-p[1])*S,2.2,0,7);c.fill()});
+ c.strokeStyle='#cfd7f5';c.lineWidth=3;c.beginPath();c.moveTo(X0-2,Y0-25);c.lineTo(X0-2,Y0+LY*S+2);c.lineTo(X0+LX*S+2,Y0+LY*S+2);c.lineTo(X0+LX*S+2,Y0-25);c.stroke();
+ const k=MINI.k;if('LCR'.includes(k)){const x=X0+(k==='L'?1.5:k==='C'?3:LX-1.5)*S;c.fillStyle='#60a5fa';c.beginPath();c.moveTo(x-9,Y0+LY*S+32);c.quadraticCurveTo(x,Y0+LY*S+2,x+9,Y0+LY*S+32);c.fill()}
+ if(k==='T'){c.fillStyle='#fde68a';c.fillRect(X0+LX*S/2-30,6,60,10);c.fillStyle='rgba(253,186,116,.25)';c.fillRect(X0,Y0,LX*S,14)}
+ if(k==='I'){const b=MINI.F.bag;c.fillStyle='rgba(186,230,253,.4)';c.strokeStyle='#bae6fd';c.beginPath();c.ellipse(X0+b.x*S,Y0+(LY-b.y)*S,b.ax*S,b.ay*S,0,0,7);c.fill();c.stroke()}}
+// step 5
+function thumbs(){$('thumbs').innerHTML=[0,1,2].map(p=>`<svg viewBox="0 0 330 330">${recSVG(p,false)}${sketchArrowsSVG(PARTS[p].sketch,false)}<text x="165" y="324" text-anchor="middle" font-size="22" font-weight="700" fill="${PARTS[p].accepted?'#4ade80':'#fbb040'}">Part ${p+1}${PARTS[p].checked?(PARTS[p].accepted?': accepted':': not yet'):': not checked'}</text></svg>`).join('');
+ say('sumtxt','Set-up: '+(SU.done?setupWords():'not done')+'. Order: '+(UI.ordOk?'correct':'not finished')+'. Questions right: '+UI.q.filter((a,i)=>a>=0&&QS4[i].o[a][1]).length+' of 4.')}
+function resultsText(){const L=['Practical 2A-1: Convection in water (virtual rehearsal)','Data set '+String(SEED).padStart(4,'0')+'. Crystals on the '+(MIR?'right':'left')+' side.','Set-up: '+(SU.done?setupWords():'not done'),''];
+ ['Part 1, heated from below','Part 2, heated from above','Part 3, cooled from above'].forEach((n,p)=>{const P=PARTS[p];L.push(n+':');L.push('  Prediction: '+(P.pred>=0?PRED[P.pred]:'none'));
+  const rows=[0,1,2,3].map(r=>'  '+[0,1,2,3,4].map(c=>['.','^','>','v','<'][P.sketch[r*5+c]]).join(' '));L.push('  Sketch (top row first, ^ up, > right, v down, < left):');L.push(...rows);L.push('  Sketch check: '+(P.checked?(P.accepted?'accepted':'not accepted'):'not checked'))});
+ L.push('','Explanation order: '+(UI.ordOk?'correct':(UI.ord.length?UI.ord.map(k=>k+1).join(', '):'not done')));
+ QS4.forEach((Q,i)=>L.push('Q'+(i+1)+' '+Q.q+' '+(UI.q[i]>=0?Q.o[UI.q[i]][0]+(Q.o[UI.q[i]][1]?' (right)':' (not right)'):'not answered')));return L.join('\n')}
+$('bCopy').onclick=()=>{const t=resultsText();const show=()=>{const b=$('copybox');b.style.display='block';b.value=t;b.focus();b.select();say('copymsg','Select the text above and copy it.')};
+ UI.printed=true;railRefresh();try{navigator.clipboard.writeText(t).then(()=>say('copymsg','<span class="ok">Copied.</span> Paste it into your notes.'),show)}catch(e){show()}};
+function buildSheet(){const S=$('psheet');const nm=['Part 1: heated from below','Part 2: heated from above','Part 3: cooled from above'];
+ S.innerHTML=`<div class="hd"><div><h2>Practical 2A-1: Convection in water</h2>Virtual rehearsal results</div><div><b>Data set ${String(SEED).padStart(4,'0')}</b></div></div>
+ <div class="nm"><span>Name: ____________________________</span><span>Date: ______________</span></div>
+ <div>Set-up: ${SU.done?setupWords():'not done'}.</div><h3>Sketches of the currents (arrows show which way the dye moved)</h3>
+ <div class="three">${[0,1,2].map(p=>{const P=PARTS[p];return`<div><b>${nm[p]}</b><svg viewBox="0 0 330 300">${recSVG(p,true)}${sketchArrowsSVG(P.sketch,true)}</svg><p>Predicted: ${P.pred>=0?PRED[P.pred]:'none'}.<br>Sketch: ${P.checked?(P.accepted?'accepted':'not accepted'):'not checked'}.</p></div>`}).join('')}</div>
+ <h3>Explanation (Part 1), in my order</h3><ol>${(UI.ord.length?UI.ord:[]).map(k=>`<li>${ORD[k]}</li>`).join('')||'<li>not done</li>'}</ol>${UI.ordOk?'':'<div>(order not yet correct)</div>'}
+ <h3>My answers</h3><ul>${QS4.map((Q,i)=>`<li>${Q.q} <i>${UI.q[i]>=0?Q.o[UI.q[i]][0]:'not answered'}</i>${UI.q[i]>=0?(Q.o[UI.q[i]][1]?' (right)':' (not right)'):''}</li>`).join('')}</ul>
+ <h3>Condition for convection, in my words</h3><div class="lines"><div></div><div></div></div>
+ <h3>One source of error and one improvement</h3><div class="lines"><div></div><div></div></div>`}
+$('bPrint').onclick=()=>{buildSheet();UI.printed=true;railRefresh();window.print()};
+addEventListener('beforeprint',buildSheet);
+// ---------- step rail and navigation
+function stepDone(i){if(i===0)return SU.done;if(i===1)return PARTS.every((P,k)=>P.started&&P.t>=MINW[k]);if(i===2)return PARTS.every(P=>P.checked&&P.accepted);if(i===3)return UI.ordOk&&UI.q.every((a,k)=>a>=0&&QS4[k].o[a][1]);return UI.printed}
+function railRefresh(){document.querySelectorAll('.pstep').forEach((b,i)=>{const d=stepDone(i);b.classList.toggle('on',i===UI.step);b.classList.toggle('done',d&&i!==UI.step);b.querySelector('i').textContent=d?'✓':i+1;b.disabled=i>0&&!SU.done});
+ $('bBack').disabled=UI.step===0;$('bNext').disabled=UI.step===4||(UI.step===0&&!SU.done);}
+function goStep(i){if(i>0&&!SU.done)return;UI.step=i;document.querySelectorAll('.pv').forEach((v,k)=>v.classList.toggle('on',k===i));$('cvcard').style.display=i<=2?'':'none';
+ if(i===1)p2refresh();if(i===2)recRefresh();if(i===3){ordRefresh();qRefresh();etab(UI.etab);if(!MINI.F&&MINI.k!=='T')miniSet('L')}if(i===4)thumbs();railRefresh()}
+document.querySelectorAll('.pstep').forEach(b=>b.onclick=()=>goStep(+b.dataset.s));
+$('bBack').onclick=()=>goStep(Math.max(0,UI.step-1));$('bNext').onclick=()=>goStep(Math.min(4,UI.step+1));
+// ---------- Show me
+function flash(sel){document.querySelectorAll(sel).forEach(e=>{e.classList.add('tourhl');setTimeout(()=>e.classList.remove('tourhl'),1800)})}
+$('bShow').onclick=()=>{const s=UI.step;
+ if(s===0){if(SU.straw===0){$('bStraw').click();flash('#bStraw')}else if(!SU.n&&SU.standT<299&&!SU.standing){$('bStand').click();flash('#bStand')}
+  else if(SU.standing){flash('#bStand');say('s1msg','Waiting for the water to settle. Watch the specks slow down.')}
+  else if(SU.n<3&&SU.straw===1){$('bDrop').click();flash('#bDrop')}else if(SU.straw===1){$('bPull').click();flash('#bPull')}else{flash('.pstep[data-s="1"]');say('s1msg',$('s1msg').innerHTML+' Press <b>Next</b>.')}}
+ if(s===1){const P=PARTS[UI.part];if(P.pred<0){flash('.pcard');say('p2msg','Tap the picture that matches what you expect. Then the button below lights up.')}
+  else if(!P.started){$('bGo').click();flash('#bGo')}else{setSpeed(UI.part===1?16:4);flash('#spd')}}
+ if(s===2){const P=PARTS[UI.part];if(!P.started){flash('.pstep[data-s="1"]');return}const btn=recgrid.children[MIR?0:4];const keep=P.sketch[MIR?0:4];let k=0;
+  say('recmsg','Watch: each tap turns the arrow (up, right, down, left, none). Drag across several boxes to draw a stream in one go.');
+  const iv=setInterval(()=>{k++;P.sketch[MIR?0:4]=k%5;[...recgrid.children].forEach((b,i)=>b.innerHTML=ARW[P.sketch[i]]);btn.classList.add('tourhl');if(k>=5){clearInterval(iv);P.sketch[MIR?0:4]=keep;btn.classList.remove('tourhl');[...recgrid.children].forEach((b,i)=>b.innerHTML=ARW[P.sketch[i]])}},450)}
+ if(s===3){if(UI.etab===0){if(UI.ord.length<4&&UI.ord.every((k,i)=>k===i)){UI.ord.push(UI.ord.length);ordRefresh();say('ordmsg','Placed the next one for you.')}else{UI.ord=[];ordRefresh();say('ordmsg','Start with what the flame does to the water.')}}
+  else if(UI.etab===1){const i=UI.q.findIndex(a=>a<0);flash(i>=0?'.mcq:nth-child('+(i+1)+')':'.mcq');}else{const ks='LCRTI',n=ks[(ks.indexOf(MINI.k)+1)%5];miniSet(n)}}
+ if(s===4){flash('#bPrint');say('copymsg','Print the results page and glue it into your log book, or copy the text.')}};
+// ---------- animation loop
+document.body.appendChild($('psheet'));specksInit();
+let lastNow=performance.now();
+IX.anims.push((t,dt)=>{const real=IX.play?dt*IX.speed:0;
+ if(UI.step===0){// setup scene
+  if(SU.standing){SU.standT=Math.min(300,SU.standT+real*60);if(SU.standT>=300){SU.standing=false;s1refresh()}}
+  const a=setupAmps(),o=[0,0,0],lab=SU.standing?real*60:real;const n=Math.max(1,Math.ceil(lab/.05));
+  SU.specks.forEach(p=>{for(let s=0;s<n;s++){o[0]=0;o[1]=0;swirlVel(a,p[0],p[1],o);p[0]=clamp(p[0]+o[0]*lab/n,.05,LX-.05);p[1]=clamp(p[1]+o[1]*lab/n,.05,LY-.05)}});
+  SU.drops.forEach(d=>{d.f=Math.min(1,d.f+real*1.2)});const landed=SU.drops.filter(d=>d.f>=1);if(landed.length){SU.drops=SU.drops.filter(d=>d.f<1);landed.forEach(()=>SU.cx.push(clamp(XC+.1+.12*gauss(CRY),.25,2.4)));}
+  if(SU.pullAuto&&SU.straw===1){SU.s+=real*1.5;if(tipAt(SU.s)[1]>LY+.4){SU.pullAuto=false;finishSetup()}}
+  drawSetup(t);return}
+ if(UI.step<=2){const P=PARTS[UI.part];if(!P.built)buildPart(P);const lab=P.started&&P.t<TMAX?Math.min(real*UI.speed,TMAX-P.t):0;if(lab>0){stepPart(P,lab);
+   if(UI.step===1&&Math.floor(P.t)!==Math.floor(P.t-lab))p2msg();if(UI.step===2&&P.t>=MINW[UI.part]&&P.t-lab<MINW[UI.part])recRefresh();railRefresh()}
+  drawPart(P,t);return}
+ if(UI.step===3&&UI.etab===2)miniDraw(real*3)});
+// ---------- guided tour
+window.TOUR=[
+ {say:'This is a rehearsal of <b>Practical 2A-1</b>. Five steps along the top. You can go back to any step.',hl:'.prail',top:true,do:()=>goStep(0)},
+ {say:'The beaker, side on. Purple dye from potassium permanganate crystals will show you how the water moves.',hl:'#cvcard',top:true},
+ {say:'Step 1: put the straw in, let the water stand, drop <b>2 or 3</b> crystals, then pull the straw out <b>gently</b>. Rushing leaves the water stirred.',hl:'#s1ctl',top:true},
+ {say:'Watch out for the safety notes. They matter at the bench.',hl:'#safety',top:true},
+ {say:'Stuck? Every step has a <b>Show me</b> button.',hl:'.pshow',top:true},
+ {say:'Then predict, watch, and draw arrows for what you saw. Your data set number makes your beaker a little different from everyone else\'s.',hl:'#dset',top:true}];
+goStep(0);s1refresh();
+// hooks for automated testing only (no effect on the page)
+window.VP={strawTop:()=>{const [x,y]=tipAt(SU.s+5.8);return[DX(x),DY(y)]},PARTS,SU,UI,MIR,XC,AMP1,AMP3,makeField,truth,judge,MODES,velAt,canonCell,canonDir,LX,LY,setupAmps,stepPart,buildPart};
+</script>
