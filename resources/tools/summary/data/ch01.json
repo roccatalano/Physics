@@ -1,0 +1,449 @@
+{
+ "chapter": 1,
+ "name": "Electromagnetic radiation",
+ "course": "Year 11 Physics, Unit 1",
+ "index": "/home/claude/physics/data/index/ch01/ch01.json",
+ "credit": "Based on the Chapter 1 summary in Cambridge Senior Science Physics VCE Units 1&2. Diagrams drawn for this page.",
+ "consts": [
+  "$c = 3.00 \\times 10^{8}$ m/s",
+  "$n$: air 1.00, water 1.33, glass 1.50",
+  "G $10^{9}$, M $10^{6}$, k $10^{3}$, m $10^{-3}$, µ $10^{-6}$, n $10^{-9}$, p $10^{-12}$"
+ ],
+ "blocks": {
+  "1A": {
+   "sec": "1A",
+   "name": "The properties of waves",
+   "crit": "1A.1 to 1A.6"
+  },
+  "1A-p1": {
+   "pts": [
+    "A **wave** carries **energy**, not matter. Particles vibrate on the spot.",
+    "**Mechanical** waves (sound, water) need a **medium**. EM waves do not.",
+    "**Transverse**: vibrates at 90° to the direction of travel. e.g. light.",
+    "**Longitudinal**: vibrates along the direction of travel. e.g. sound. **Compressions** (close) and **rarefactions** (spread out)."
+   ],
+   "crit": [
+    "1A.1",
+    "1A.2",
+    "1A.3"
+   ]
+  },
+  "1A-wave": {
+   "svg": "wave"
+  },
+  "1A-fm": {
+   "fm": [
+    "$v = f\\lambda$",
+    "$\\lambda = \\dfrac{v}{f} = vT$",
+    "$f = \\dfrac{1}{T}$"
+   ],
+   "where": [
+    [
+     "$A$",
+     "**amplitude**: biggest distance from the neutral position (m)"
+    ],
+    [
+     "$\\lambda$",
+     "**wavelength**: crest to crest (m)"
+    ],
+    [
+     "$T$",
+     "**period**: time for one full wave (s)"
+    ],
+    [
+     "$f$",
+     "**frequency**: waves each second (Hz)"
+    ],
+    [
+     "$v$",
+     "**wave speed** (m/s)"
+    ]
+   ],
+   "crit": [
+    "1A.4",
+    "1A.6"
+   ]
+  },
+  "1A-p2": {
+   "pts": [
+    "The **medium** sets $v$. The **source** sets $f$. $\\lambda$ is the result.",
+    "Shake faster: $f$ up, $\\lambda$ shorter, $v$ the same."
+   ],
+   "crit": [
+    "1A.5"
+   ]
+  },
+  "1B": {
+   "sec": "1B",
+   "name": "Electromagnetic waves",
+   "crit": "1B.1 to 1B.4"
+  },
+  "1B-p1": {
+   "pts": [
+    "**EM wave**: vibrating **electric** and **magnetic** fields.",
+    "**Transverse**: the fields vibrate at 90° to the direction of travel.",
+    "Needs **no medium**, so it crosses a vacuum. Sound cannot.",
+    "In a vacuum all EM waves travel at the **speed of light**, $c$."
+   ],
+   "crit": [
+    "1B.1"
+   ]
+  },
+  "1B-fm": {
+   "fm": [
+    "$c = f\\lambda$"
+   ],
+   "where": [
+    [
+     "$c$",
+     "speed of light in a vacuum, $3.00 \\times 10^{8}$ m/s. Use Hz and m."
+    ]
+   ],
+   "crit": [
+    "1B.1"
+   ]
+  },
+  "1B-p2": {
+   "pts": [
+    "Same $c$, so a shorter $\\lambda$ means a higher $f$ and more energy.",
+    "**Sunlight**: about half infrared, a bit less than half visible and about 7% ultraviolet.",
+    "Long $\\lambda$ (radio, microwave): low energy. Used to **communicate**.",
+    "Short $\\lambda$ (UV, X-ray, gamma): high energy. Can **damage cells**."
+   ],
+   "crit": [
+    "1B.2",
+    "1B.3",
+    "1B.4"
+   ]
+  },
+  "1B-strip": {
+   "strip": {
+    "toplab": "$f$ (Hz)",
+    "botlab": "$\\lambda$",
+    "top": [
+     "$3 \\times 10^{8}$",
+     "$3 \\times 10^{11}$",
+     "$4.3 \\times 10^{14}$",
+     "$7.5 \\times 10^{14}$",
+     "$3 \\times 10^{16}$",
+     "$3 \\times 10^{19}$"
+    ],
+    "bottom": [
+     "1 m",
+     "1 mm",
+     "700 nm",
+     "400 nm",
+     "10 nm",
+     "10 pm"
+    ],
+    "cells": [
+     [
+      "Radio",
+      "FM radio, TV, MRI"
+     ],
+     [
+      "Microwave",
+      "wi-fi, radar, ovens"
+     ],
+     [
+      "Infrared",
+      "remotes, thermal cameras"
+     ],
+     [
+      "Visible",
+      "sight, photosynthesis"
+     ],
+     [
+      "Ultraviolet",
+      "vitamin D, killing germs"
+     ],
+     [
+      "X-ray",
+      "bone images, airport scanners"
+     ],
+     [
+      "Gamma",
+      "cancer treatment, sterilising"
+     ]
+    ]
+   },
+   "note": "**The EM spectrum** with approximate boundaries. Left to right: $\\lambda$ shorter, $f$ and energy higher. Visible: violet 400 nm to red 700 nm.",
+   "crit": [
+    "1B.3",
+    "1B.4"
+   ]
+  },
+  "1C": {
+   "sec": "1C",
+   "name": "Reflection, refraction and dispersion",
+   "crit": "1C.1 to 1C.12"
+  },
+  "1C-sub1": {
+   "sub": "Refraction"
+  },
+  "1C-p1": {
+   "pts": [
+    "A **ray** shows the direction light travels. **Crests** are at 90° to it.",
+    "The **normal** is at 90° to the surface. Measure angles from it.",
+    "**Reflection**: angle in = angle out.",
+    "**Refraction**: light bends because its speed changes.",
+    "Slower (bigger $n$): bends **towards** the normal. Faster: **away**.",
+    "$f$ stays the same. Slower: shorter $\\lambda$, crests closer."
+   ],
+   "crit": [
+    "1C.1",
+    "1C.5"
+   ]
+  },
+  "1C-snell": {
+   "svg": "snell"
+  },
+  "1C-side": {
+   "side": [
+    "1C-p1",
+    "1C-snell"
+   ],
+   "cols": "1fr 38mm"
+  },
+  "1C-fm": {
+   "fm": [
+    "$n = \\dfrac{c}{v}$",
+    "$n_1v_1 = n_2v_2$",
+    "Snell's law: $n_1\\sin\\theta_1 = n_2\\sin\\theta_2$"
+   ],
+   "where": [
+    [
+     "$n$",
+     "**refractive index**: light is $n$ times slower than in a vacuum (no unit)"
+    ],
+    [
+     "$v$",
+     "speed of light in the material (m/s)"
+    ],
+    [
+     "$\\theta$",
+     "angle between the ray and the normal (°)"
+    ],
+    [
+     "1, 2",
+     "first material, second material"
+    ]
+   ],
+   "crit": [
+    "1C.2",
+    "1C.3",
+    "1C.5"
+   ]
+  },
+  "1C-p2": {
+   "pts": [
+    "**Prac**: graph $\\sin\\theta_1$ (air) up, $\\sin\\theta_2$ (glass) across. Gradient = $n$ of the glass.",
+    "**Images**: the eye traces rays back in straight lines, so things under water look **higher** than they are."
+   ],
+   "crit": [
+    "1C.4",
+    "1C.5",
+    "1C.6"
+   ]
+  },
+  "1C-sub3": {
+   "sub": "Dispersion"
+  },
+  "1C-p5": {
+   "pts": [
+    "**Dispersion**: white light splits into colours because $n$ depends on the colour. **Prac**: a prism.",
+    "Violet: biggest $n$, slowest in glass, bends most. Red bends least.",
+    "**Chromatic distortion**: a lens focuses each colour at a different point."
+   ],
+   "crit": [
+    "1C.9",
+    "1C.10"
+   ]
+  },
+  "1C-sub2": {
+   "sub": "Total internal reflection"
+  },
+  "1C-p3": {
+   "pts": [
+    "**Partial internal reflection**: part reflects, part refracts.",
+    "**Critical angle** $\\theta_c$: the angle of incidence where the refracted ray skims along the surface ($\\theta_2 = 90°$).",
+    "**Total internal reflection**: all the light reflects. Needs bigger $n$ into smaller $n$, and $\\theta_1 > \\theta_c$."
+   ],
+   "crit": [
+    "1C.7",
+    "1C.8"
+   ]
+  },
+  "1C-tir": {
+   "svg": "tir"
+  },
+  "1C-fm2": {
+   "fm": [
+    "$n_1\\sin\\theta_c = n_2$"
+   ],
+   "where": [
+    [
+     "$\\theta_c$",
+     "critical angle (°), from $n_1$ into a smaller $n_2$"
+    ]
+   ],
+   "crit": [
+    "1C.8",
+    "1C.12"
+   ]
+  },
+  "1C-p4": {
+   "pts": [
+    "**Prac**: turn a semicircular block until the ray skims ($\\theta_c$). Turn more: all of it reflects.",
+    "**Optical fibre**: light stays in the **core** by total internal reflection. The **cladding** has a smaller $n$. Data travels far with little loss.",
+    "A ray that meets the wall at less than $\\theta_c$ leaks out."
+   ],
+   "crit": [
+    "1C.7",
+    "1C.12"
+   ]
+  },
+  "1C-fibre": {
+   "svg": "fibre"
+  },
+  "1C-sub4": {
+   "sub": "Rainbows and mirages"
+  },
+  "1C-p6": {
+   "pts": [
+    "**Rainbow**: in each raindrop, sunlight refracts in, reflects off the back and refracts out, split into colours. Sun behind you.",
+    "Secondary rainbow: two reflections in each drop. Fainter, colours reversed.",
+    "**Mirage**: hot air near a road has a smaller $n$. Light from the sky bends back up into your eye, so the road looks wet. Over a cold sea, a boat can seem to float in the sky."
+   ],
+   "crit": [
+    "1C.11"
+   ]
+  },
+  "1B-tab": {
+   "table": {
+    "head": [
+     "",
+     "Wavelength",
+     "Frequency (Hz)",
+     "Uses"
+    ],
+    "widths": [
+     "17.5mm",
+     "24.5mm",
+     "32mm",
+     "auto"
+    ],
+    "rows": [
+     [
+      "Radio",
+      "over 1 m",
+      "under $3 \\times 10^{8}$",
+      "radio, TV"
+     ],
+     [
+      "Microwave",
+      "1 mm to 1 m",
+      "$3 \\times 10^{8}$ to $3 \\times 10^{11}$",
+      "wi-fi, radar"
+     ],
+     [
+      "Infrared",
+      "700 nm to 1 mm",
+      "$3 \\times 10^{11}$ to $4.3 \\times 10^{14}$",
+      "remotes"
+     ],
+     [
+      "Visible",
+      "400 to 700 nm",
+      "$4.3 \\times 10^{14}$ to $7.5 \\times 10^{14}$",
+      "sight"
+     ],
+     [
+      "Ultraviolet",
+      "10 to 400 nm",
+      "$7.5 \\times 10^{14}$ to $3 \\times 10^{16}$",
+      "vitamin D"
+     ],
+     [
+      "X-ray",
+      "10 pm to 10 nm",
+      "$3 \\times 10^{16}$ to $3 \\times 10^{19}$",
+      "bone images"
+     ],
+     [
+      "Gamma",
+      "under 10 pm",
+      "over $3 \\times 10^{19}$",
+      "cancer treatment"
+     ]
+    ]
+   },
+   "title": "**EM spectrum** (approximate). Going down: $\\lambda$ shorter, $f$ higher.",
+   "crit": [
+    "1B.3",
+    "1B.4"
+   ]
+  }
+ },
+ "variants": {
+  "one": {
+   "suffix": "",
+   "font": "8.5pt",
+   "lh": "1.2",
+   "li": "0.25mm",
+   "gap": "6mm",
+   "rowgap": "1.8mm",
+   "sheets": [
+    {
+     "rows": [
+      {
+       "cols": [
+        [
+         "1A",
+         "1A-p1",
+         "1A-wave",
+         "1A-fm",
+         "1A-p2"
+        ],
+        [
+         "1B",
+         "1B-p1",
+         "1B-fm",
+         "1B-p2",
+         "1B-tab"
+        ]
+       ]
+      },
+      {
+       "full": [
+        "1C"
+       ]
+      },
+      {
+       "cols": [
+        [
+         "1C-sub1",
+         "1C-side",
+         "1C-fm",
+         "1C-p2",
+         "1C-sub3",
+         "1C-p5"
+        ],
+        [
+         "1C-sub2",
+         "1C-p3",
+         "1C-tir",
+         "1C-fm2",
+         "1C-p4",
+         "1C-fibre",
+         "1C-sub4",
+         "1C-p6"
+        ]
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

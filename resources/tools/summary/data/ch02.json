@@ -1,0 +1,300 @@
+{
+ "chapter": 2,
+ "name": "Thermal energy and electromagnetic radiation",
+ "course": "Year 11 Physics, Unit 1",
+ "index": "/home/claude/physics/data/index/ch02/ch02.json",
+ "credit": "Based on the Chapter 2 summary in Cambridge Senior Science Physics VCE Units 1&2. Graph: Cambridge Figure 2B-2.",
+ "consts": [
+  "Water: $c$ = 4190 J/(kg K), $L_{\\text{fusion}}$ = 334 kJ/kg, $L_{\\text{vaporisation}}$ = 2256 kJ/kg",
+  "$b = 2.898 \\times 10^{-3}$ m K"
+ ],
+ "blocks": {
+  "2A": {
+   "sec": "2A",
+   "name": "Thermal energy",
+   "crit": "2A.1 to 2A.10"
+  },
+  "2A-sub1": {
+   "sub": "Thermal energy and temperature"
+  },
+  "2A-p1": {
+   "pts": [
+    "**Thermal energy**: the total random kinetic and potential energy of the particles.",
+    "**Temperature** $T$: measures the average kinetic energy of the particles.",
+    "More thermal energy: higher temperature (except while changing state).",
+    "**Heat**: thermal energy flowing from hotter to colder, until both reach the same temperature (**thermal equilibrium**)."
+   ],
+   "crit": [
+    "2A.1",
+    "2A.2"
+   ]
+  },
+  "2A-fm1": {
+   "fm": [
+    "$T\\ \\text{in K} = T\\ \\text{in}\\ ^\\circ\\text{C} + 273$"
+   ],
+   "crit": [
+    "2A.3"
+   ]
+  },
+  "2A-p2": {
+   "pts": [
+    "**Absolute zero**: 0 K = −273 °C. Nothing is colder.",
+    "A change of 1 K = a change of 1 °C. Write K, not °K."
+   ],
+   "crit": [
+    "2A.3"
+   ]
+  },
+  "2A-sub2": {
+   "sub": "How thermal energy moves (particle model)"
+  },
+  "2A-p3": {
+   "pts": [
+    "**Conduction**: particles pass on vibrations. Main way in solids. Metals conduct (free electrons). Air, wood and plastic **insulate**.",
+    "**Convection**: a liquid or gas moves, carrying the energy. Warm fluid is less dense and rises. e.g. sea breezes.",
+    "**Radiation**: EM waves, mostly infrared. No particles needed. Black, matt: absorb and emit well. Shiny, white: reflect.",
+    "**Evaporative cooling**: the fastest particles escape, so the average kinetic energy of the rest drops and the liquid cools."
+   ],
+   "crit": [
+    "2A.4"
+   ]
+  },
+  "2A-sub3": {
+   "sub": "Changing temperature"
+  },
+  "2A-p4": {
+   "pts": [
+    "**Specific heat capacity** $c$: the energy to warm 1 kg by 1 K.",
+    "High $c$ (like water): slow to heat up, slow to cool."
+   ],
+   "crit": [
+    "2A.5"
+   ]
+  },
+  "2A-fm2": {
+   "fm": [
+    "$Q = mc\\Delta T$"
+   ],
+   "where": [
+    [
+     "$Q$",
+     "energy (J)"
+    ],
+    [
+     "$m$",
+     "mass (kg)"
+    ],
+    [
+     "$c$",
+     "specific heat capacity (J/(kg K)), not the speed of light"
+    ],
+    [
+     "$\\Delta T$",
+     "change in temperature (K, same size as °C)"
+    ]
+   ],
+   "crit": [
+    "2A.9"
+   ]
+  },
+  "2A-sub4": {
+   "sub": "Changing state"
+  },
+  "2A-p5": {
+   "pts": [
+    "While the state changes, the temperature stays the same. The energy changes the potential energy of the particles.",
+    "**Specific latent heat** $L$: the energy to change the state of 1 kg.",
+    "**Fusion**: melting or freezing. **Vaporisation**: boiling or condensing.",
+    "Melting and boiling take in energy. Freezing and condensing give it out."
+   ],
+   "crit": [
+    "2A.6"
+   ]
+  },
+  "2A-fm3": {
+   "fm": [
+    "$Q = mL$"
+   ],
+   "where": [
+    [
+     "$L$",
+     "specific latent heat (J/kg): $L_{\\text{fusion}}$ or $L_{\\text{vaporisation}}$"
+    ]
+   ],
+   "crit": [
+    "2A.10"
+   ]
+  },
+  "2A-heat": {
+   "svg": "heating"
+  },
+  "2A-p6": {
+   "pts": [
+    "Total energy: add $mc\\Delta T$ for each sloping part and $mL$ for each flat part.",
+    "Use J and kg: 334 kJ/kg = 334 000 J/kg.",
+    "**Prac**: heat water or melt ice with a measured energy input to find $c$ or $L$."
+   ],
+   "crit": [
+    "2A.7",
+    "2A.8"
+   ]
+  },
+  "2B": {
+   "sec": "2B",
+   "name": "Thermal energy, EM radiation and global warming",
+   "crit": "2B.1 to 2B.4"
+  },
+  "2B-sub1": {
+   "sub": "Blackbodies"
+  },
+  "2B-p1": {
+   "pts": [
+    "Every object above 0 K gives off EM radiation.",
+    "**Blackbody**: an ideal object. It absorbs all radiation that hits it, and emits the most possible at its temperature.",
+    "Same temperature: same curve, whatever the material.",
+    "Hotter: the peak is at a **shorter wavelength**, and the **total energy** emitted (the **area under the curve**) is much bigger."
+   ],
+   "crit": [
+    "2B.1",
+    "2B.3"
+   ]
+  },
+  "2B-fig": {
+   "img": "img/2B_fig2B-2_bw.png",
+   "w": 88
+  },
+  "2B-sub2": {
+   "sub": "Wien's law"
+  },
+  "2B-fm": {
+   "fm": [
+    "$\\lambda_{max}T = b$",
+    "$\\lambda_{max} = \\dfrac{b}{T}$"
+   ],
+   "where": [
+    [
+     "$\\lambda_{max}$",
+     "**peak wavelength** (m)"
+    ],
+    [
+     "$T$",
+     "temperature in kelvin (K). Not the period."
+    ],
+    [
+     "$b$",
+     "**Wien's constant**, $2.898 \\times 10^{-3}$ m K"
+    ]
+   ],
+   "crit": [
+    "2B.2"
+   ]
+  },
+  "2B-p2": {
+   "pts": [
+    "Sun, about 5778 K: peak about 500 nm, visible.",
+    "Earth, about 288 K: peak about 10 µm, infrared."
+   ],
+   "crit": [
+    "2B.2"
+   ]
+  },
+  "2B-sub3": {
+   "sub": "Global warming"
+  },
+  "2B-budget": {
+   "svg": "budget"
+  },
+  "2B-p3": {
+   "pts": [
+    "In = out: steady temperature. Now about 0.8 W/m² more comes in than goes out, so Earth warms (mostly the oceans).",
+    "The surface gives off about 400 W/m² of infrared. Only about 40 W/m² escapes straight out, through the **atmospheric window**.",
+    "**Greenhouse gases** ($\\text{H}_2\\text{O}$, $\\text{CO}_2$, $\\text{CH}_4$) absorb infrared and re-emit it, some back down (**back radiation**). More gas: more warming.",
+    "**Climate**: the average weather over about 30 years. 2016 and 2020 were about 1 °C above the 1951 to 1980 average.",
+    "Effects: higher seas, less ice, more heatwaves, bushfires, droughts, floods."
+   ],
+   "crit": [
+    "2B.4"
+   ]
+  },
+  "2A-heatrow": {
+   "side": [
+    "2A-heat",
+    "2A-p6"
+   ],
+   "cols": "88mm 1fr"
+  },
+  "2A-sub5": {
+   "sub": "Heating water from ice to steam"
+  }
+ },
+ "variants": {
+  "one": {
+   "suffix": "",
+   "font": "8.5pt",
+   "lh": "1.2",
+   "li": "0.3mm",
+   "gap": "6mm",
+   "rowgap": "1.8mm",
+   "sheets": [
+    {
+     "rows": [
+      {
+       "full": [
+        "2A"
+       ]
+      },
+      {
+       "cols": [
+        [
+         "2A-sub1",
+         "2A-p1",
+         "2A-fm1",
+         "2A-p2",
+         "2A-sub2",
+         "2A-p3"
+        ],
+        [
+         "2A-sub3",
+         "2A-p4",
+         "2A-fm2",
+         "2A-sub4",
+         "2A-p5",
+         "2A-fm3"
+        ]
+       ]
+      },
+      {
+       "full": [
+        "2A-sub5",
+        "2A-heatrow"
+       ]
+      },
+      {
+       "full": [
+        "2B"
+       ]
+      },
+      {
+       "cols": [
+        [
+         "2B-sub1",
+         "2B-p1",
+         "2B-fig",
+         "2B-p2"
+        ],
+        [
+         "2B-sub2",
+         "2B-fm",
+         "2B-sub3",
+         "2B-budget",
+         "2B-p3"
+        ]
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

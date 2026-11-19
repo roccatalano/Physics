@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{TITLE}}</title>
+<style>
+{{FONTS}}
+{{KATEX_CSS}}
+@page { size: A4; margin: 11mm 12mm 12mm 12mm; }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font-family: Inter, sans-serif; font-size: {{FONT}}; line-height: {{LH}}; color: #000; }
+.page-w { width: 186mm; margin: 0 auto; }
+.katex { font-size: 1.06em; }
+
+/* header */
+.top { display: flex; align-items: flex-end; justify-content: space-between; border-bottom: 1.6pt solid #000; padding-bottom: 2mm; }
+.top h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19pt; margin: 0; line-height: 1; }
+.top .sub { font-size: 8.5pt; margin-top: 1.4mm; }
+.top .name { font-size: 10pt; white-space: nowrap; }
+.top .name span { display: inline-block; width: 62mm; border-bottom: 0.8pt solid #000; margin-left: 2mm; }
+.how { font-size: 8.5pt; margin: 1.6mm 0 0; }
+
+/* sections */
+.sec { margin-top: 2.4mm; }
+.sec.brk { break-before: page; margin-top: 0; }
+.sec-h { display: grid; grid-template-columns: {{COLS}}; align-items: end; border-bottom: 1.2pt solid #000; padding-bottom: 0.8mm; break-after: avoid; }
+.sec-h .nm { grid-column: 1; white-space: nowrap; overflow: visible; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 12pt; }
+.sec-h .nm .ican { display: block; font-family: Inter, sans-serif; font-weight: 400; font-size: 7.5pt; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.6mm; }
+.sec-h .lab { font-size: 7.5pt; text-transform: uppercase; letter-spacing: 0.05em; }
+.sec-h .lab.tk { text-align: center; }
+
+/* rows */
+.row { display: grid; grid-template-columns: {{COLS}}; border-bottom: 0.5pt solid #888; break-inside: avoid; page-break-inside: avoid; }
+.row > div { padding: {{PAD}} 0; }
+.crit { padding-right: 3mm !important; font-size: 8.6pt; }
+.crit b { display: block; font-family: 'Space Grotesk', sans-serif; font-size: 10pt; }
+.q { padding-right: 2mm !important; }
+.qwrap { display: flex; gap: 3mm; align-items: flex-start; }
+.qmain { flex: 1; min-width: 0; }
+.qimg img { display: block; filter: grayscale(1) contrast(1.05); }
+.stem { margin-bottom: 0.6mm; }
+.opts { display: grid; column-gap: 4mm; row-gap: 0.3mm; margin-top: 0.8mm; }
+.opts.c1 { grid-template-columns: 1fr; }
+.opts.c2 { grid-template-columns: 1fr 1fr; }
+.opts.c4 { grid-template-columns: repeat(4, auto); justify-content: start; column-gap: 6mm; }
+.opt { display: grid; grid-template-columns: 4.2mm 1fr; }
+.opt .L { font-weight: 700; }
+.tf { font-weight: 700; letter-spacing: 0.4em; margin-left: 6mm; white-space: nowrap; align-self: flex-end; }
+.inl { display: flex; align-items: flex-end; gap: 2mm; }
+.inl > span:first-child { flex: 0 1 auto; }
+.iline { flex: 1 0 30mm; border-bottom: 0.5pt solid #9a9a9a; height: {{LINE}}; }
+.lines { margin-top: 0.6mm; }
+.lines div { height: {{LINE}}; border-bottom: 0.5pt solid #9a9a9a; }
+.prac { display: flex; flex-direction: column; justify-content: center; }
+.prac .pn { font-weight: 600; }
+.tick { display: flex; justify-content: center; align-items: flex-start; }
+.box { width: 7mm; height: 7mm; border: 1.2pt solid #000; border-radius: 1mm; margin-top: 0.3mm; }
+
+.stk .crit { padding: 0 !important; font-size: 8.9pt; }
+.stk .crit b { display: inline; font-size: 9.6pt; margin-right: 2mm; }
+.stk .crit { font-weight: 600; }
+.stk .q { padding: 0.7mm 0 0 7mm !important; }
+.stk .prac { flex-direction: row; gap: 4mm; justify-content: flex-start; }
+.stk .sec-h, .sec-h { }
+.top.stacked + .how { margin-bottom: 0; }
+.stk .pline { display: flex; justify-content: space-between; gap: 4mm; }
+.stk .pline .pt { font-weight: 400; white-space: nowrap; }
+
+/* teacher page */
+.ans { width: 100%; border-collapse: collapse; margin-top: 3mm; font-size: 9pt; }
+.ans th { text-align: left; font-size: 7.5pt; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1.2pt solid #000; padding: 1mm 2mm 1mm 0; }
+.ans td { border-bottom: 0.5pt solid #888; padding: 1.3mm 2mm 1.3mm 0; vertical-align: top; }
+.ans td.c { font-family: 'Space Grotesk', sans-serif; font-weight: 700; width: 13mm; }
+.ans td.s { width: 38mm; }
+.ans tr.secrow td { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 10.5pt; border-bottom: 1.2pt solid #000; padding-top: 3mm; }
+.foot { font-size: 7.5pt; margin-top: 3mm; }
+</style>
+</head>
+<body>
+<div class="page-w">
+{{BODY}}
+</div>
+</body>
+</html>

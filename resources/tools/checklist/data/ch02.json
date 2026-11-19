@@ -1,0 +1,219 @@
+{
+ "chapter": 2,
+ "title": "Chapter 2: I can do this",
+ "subtitle": "Thermal energy and electromagnetic radiation",
+ "course": "Year 11 Physics",
+ "sections": [
+  {
+   "code": "2A",
+   "name": "Thermal energy"
+  },
+  {
+   "code": "2B",
+   "name": "Thermal energy, electromagnetic radiation and global warming"
+  }
+ ],
+ "prac_text": "Prac done and written up in my log book",
+ "rows": [
+  {
+   "id": "2A.1",
+   "text": "Describe thermal energy as the sum of the random kinetic energy and potential energy of the atoms and molecules of an object or system",
+   "src": "Review Q2",
+   "index_id": "CH2-RQ2",
+   "kind": "mc",
+   "question": "Which of the following statements about thermal energy is correct?",
+   "options": [
+    "The thermal energy of an object can be increased by increasing its thermal conductivity.",
+    "Increasing the total potential energy of an object’s molecules increases its thermal energy.",
+    "Increasing the heat capacity of an object will increase its thermal energy.",
+    "Changing the temperature of an object is unlikely to change its thermal energy."
+   ],
+   "opt_cols": 1,
+   "answer": "B"
+  },
+  {
+   "id": "2A.2",
+   "text": "Understand that increases and decreases of temperature are related to increases and decreases of thermal energy in a system",
+   "src": "Review Q3",
+   "index_id": "CH2-RQ3",
+   "kind": "mc",
+   "question": "Which of the following changes will increase the temperature of an object?",
+   "options": [
+    "increasing its heat capacity",
+    "increasing the random kinetic energy of its molecules",
+    "decreasing its thermal conductivity",
+    "converting the potential energy of some of its molecules to random kinetic energy"
+   ],
+   "opt_cols": 2,
+   "answer": "B"
+  },
+  {
+   "id": "2A.3",
+   "text": "Convert temperatures between Celsius and kelvin",
+   "src": "2A Check-in Set 1 Q2",
+   "index_id": "2A-CI1.2",
+   "kind": "short",
+   "lines": 1,
+   "lines_roomy": 2,
+   "inline": true,
+   "question": "Which is a lower temperature: –200°C or 63 K?",
+   "answer": "63 K. $-200 + 273 = 73$ K"
+  },
+  {
+   "id": "2A.4",
+   "text": "Analyse qualitatively thermal energy transfers in terms of conduction, convection, radiation and evaporation using a particle model",
+   "src": "Review Q16",
+   "index_id": "CH2-RQ16",
+   "kind": "short",
+   "lines": 2,
+   "lines_roomy": 3,
+   "question": "A silver spoon is placed in a hot cup of tea. After a short time, the handle of the spoon becomes much warmer. Describe the mechanism by which thermal energy is transferred along the spoon.",
+   "answer": "Conduction along the metal, mainly through interactions (collisions) of the loose electrons, which pass energy from particle to particle."
+  },
+  {
+   "id": "2A.5",
+   "text": "Define specific heat capacity, $c$",
+   "src": "Review Q6",
+   "index_id": "CH2-RQ6",
+   "kind": "mc",
+   "question": "Which of the following is the best definition of the specific heat capacity of an object?",
+   "options": [
+    "the energy required to raise the temperature of a body by 1 K",
+    "the energy required to raise the temperature of a body by 1 K in 1 s",
+    "the energy per kg required to raise the temperature of a body by 1 K in 1 s",
+    "the energy per kg required to raise the temperature of a body by 1 K"
+   ],
+   "opt_cols": 2,
+   "answer": "D"
+  },
+  {
+   "id": "2A.6",
+   "text": "Define specific latent heats of vaporisation (condensation) and fusion (melting), $L$",
+   "src": "Review Q8",
+   "index_id": "CH2-RQ8",
+   "kind": "mc",
+   "question": "Which of the following is the best definition of the specific latent heat of fusion?",
+   "options": [
+    "the energy required to melt 1 kg of the material involved in 1 s",
+    "the energy required to melt 1 kg of the material involved",
+    "the energy required to raise the temperature enough to melt 1 kg of the material involved",
+    "the energy required to raise the temperature enough to melt 1 kg of the material involved in 1 s"
+   ],
+   "opt_cols": 2,
+   "answer": "B"
+  },
+  {
+   "id": "2A.7",
+   "text": "Carry out practical investigations involving changing the temperature or state of a substance",
+   "kind": "prac",
+   "prac": "Practical 2A-2: Specific heat capacity of water"
+  },
+  {
+   "id": "2A.8",
+   "text": "Analyse quantitatively the thermal energy changes associated with temperature and state changes",
+   "src": "Review Q9",
+   "index_id": "CH2-RQ9",
+   "kind": "mc",
+   "question": "A 250 W immersion heater is used to bring 0.50 kg of water at 20°C to the boil. The specific heat capacity of water is 4190 J kg$^{-1}$ K$^{-1}$. Ignoring thermal energy losses, and the energy to heat the heater itself, the time that this would take is closest to",
+   "options": [
+    "11 minutes.",
+    "14 minutes.",
+    "22 minutes.",
+    "28 minutes."
+   ],
+   "opt_cols": 4,
+   "answer": "A. $Q = 0.50 \\times 4190 \\times 80 = 167\\,600$ J, $t = \\frac{Q}{P} = \\frac{167\\,600}{250} = 670$ s, about 11 min"
+  },
+  {
+   "id": "2A.9",
+   "text": "Use the equation $Q = mc\\Delta T$ to calculate the energy needed to raise the temperature of a substance",
+   "src": "Review Q18b",
+   "index_id": "CH2-RQ18b",
+   "kind": "short",
+   "lines": 2,
+   "lines_roomy": 3,
+   "stem": "Students observe a dish of ice melting in the sunlight. There is 250 g of ice; it is initially at 0°C. They stop the observation when all the ice has turned to water at 15°C.",
+   "question": "How much energy is required to raise the 250 g of water at 0°C to 15°C?",
+   "answer": "$Q = mc\\Delta T = 0.250 \\times 4190 \\times 15 = 15\\,700$ J $= 15.7$ kJ"
+  },
+  {
+   "id": "2A.10",
+   "text": "Use the equation $Q = mL$ to calculate the energy needed to change the state of a substance",
+   "src": "Review Q18a",
+   "index_id": "CH2-RQ18a",
+   "kind": "short",
+   "lines": 2,
+   "lines_roomy": 3,
+   "stem": "Students observe a dish of ice melting in the sunlight. There is 250 g of ice; it is initially at 0°C. They stop the observation when all the ice has turned to water at 15°C.",
+   "question": "How much energy in kJ is required to convert the ice at 0°C to water at 0°C?",
+   "answer": "$Q = mL = 0.250 \\times 334\\,000 = 83\\,500$ J $= 83.5$ kJ"
+  },
+  {
+   "id": "2B.1",
+   "text": "Describe the general features of a blackbody object",
+   "src": "Review Q11",
+   "index_id": "CH2-RQ11",
+   "kind": "mc",
+   "question": "A blackbody is an object that",
+   "options": [
+    "is painted with black paint.",
+    "is only visible when black light shines on it",
+    "does not reflect any frequencies of electromagnetic radiation",
+    "only emits certain electromagnetic radiation frequencies"
+   ],
+   "opt_cols": 2,
+   "answer": "C"
+  },
+  {
+   "id": "2B.2",
+   "text": "Use Wien’s law ($\\lambda_{max}T = 2.90 \\times 10^{-3}$ m K) to calculate the peak emitting wavelengths of objects modelled as blackbodies",
+   "src": "Review Q12",
+   "index_id": "CH2-RQ12",
+   "kind": "mc",
+   "question": "A temperature sensor measures the forehead of a person’s temperature to be 36.6°C.<br>Use Wien’s law to estimate which of the following wavelengths is closest to the peak wavelength.",
+   "options": [
+    "9.4 μm",
+    "9.7 μm",
+    "11 μm",
+    "79 μm"
+   ],
+   "opt_cols": 4,
+   "answer": "A. $T = 36.6 + 273 = 309.6$ K, $\\lambda_{max} = \\frac{2.90 \\times 10^{-3}}{309.6} = 9.4 \\times 10^{-6}$ m"
+  },
+  {
+   "id": "2B.3",
+   "text": "Use graphical methods to compare total energy radiated by objects modelled as blackbodies",
+   "src": "2B Section Q4",
+   "index_id": "2B-SQ4",
+   "kind": "mc",
+   "question": "Which of the five graphs has the greatest total energy emission?",
+   "img": "img/CH2_2B-SQ4.png",
+   "img_mm": 78,
+   "img_mm_roomy": 62,
+   "options": [
+    "$T$ = 5500 K",
+    "$T$ = 5000 K",
+    "$T$ = 4000 K",
+    "$T$ = 3500 K"
+   ],
+   "opt_cols": 2,
+   "answer": "A. The 5500 K curve has the largest area under it."
+  },
+  {
+   "id": "2B.4",
+   "text": "Identify the way concepts of thermal energy and electromagnetic radiation can help understanding of global warming and climate change",
+   "src": "Review Q13",
+   "index_id": "CH2-RQ13",
+   "kind": "mc",
+   "question": "The surface of Earth radiates about 400 W m$^{-2}$ of infrared radiation. Which of the following best describes what happens to this radiation?",
+   "options": [
+    "About 10% of this radiation is absorbed by greenhouse gases; the rest escapes into space.",
+    "About 10% of this radiation escapes into space; the rest is converted into visible wavelengths.",
+    "About 10% of this radiation escapes into space; the rest is absorbed by the atmosphere.",
+    "Almost all of this radiation is reflected back to the surface."
+   ],
+   "opt_cols": 1,
+   "answer": "C"
+  }
+ ]
+}
