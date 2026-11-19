@@ -79,7 +79,7 @@ SIMS.b2_glow=(host,o)=>{const {c,cv,side,W,H}=lab(host,800,470),wien=o.mode==='w
       txt(c,B2.look(T),99,318,C.mu,'600 14px Inter','center');
       if(k===1||k===2){const x=px(Lp);txt(c,'peak: infrared',x,GY1-.86*GH-14,C.pk,'700 16px Inter','center')}
       if(k===3){const x=px(Lp);txt(c,'peak: visible',x,GY1-.86*GH-14,C.pk,'700 16px Inter','center')}
-      out.innerHTML=`<b>${T} K</b> = ${T-273} °C<br>Peak is in the <b>${B2.region(Lp)}</b><br>Glow you can see: <b>${B2.look(T)}</b>`}
+      out.innerHTML=`<b>${T} K</b> = ${T<273?'−':''}${Math.abs(T-273)} °C<br>Peak is in the <b>${B2.region(Lp)}</b><br>Glow you can see: <b>${B2.look(T)}</b>`}
     else{if(k>=0){const x=px(cur),h=B2.I(cur,T)/Im;c.strokeStyle=C.am;c.lineWidth=2.5;ln(c,x,GY0,x,GY1);c.fillStyle=C.am;c.fillRect(x-9,GY1-6,18,12);
         const lab=fmtL(cur);txt(c,lab,Math.min(GX1-30,Math.max(GX0+30,x)),GY1+58,C.am,'700 16px Inter','center');
         txt(c,`line at ${lab}   ·   curve height there: ${Math.round(h*100)}% of the top`,(GX0+GX1)/2,30,'#fff','600 15px Inter','center')}
@@ -120,7 +120,7 @@ SIMS.b2_area=host=>{const {c,side,W,H}=lab(host,800,470),GX0=70,GX1=780,GY0=40,G
 
 // budget: Earth's energy budget. Simple model: sunlight absorbed at the surface, one layer of air,
 // no convection or evaporation. Calibrated so that today's greenhouse gases give 15 °C with 240 W/m² absorbed.
-SIMS.b2_budget=host=>{const {c,side,W,H}=lab(host,800,470),SIG=5.67e-8,U=.42749,CAP=8;
+SIMS.b2_budget=host=>{const {c,side,W,H}=lab(host,800,470),SIG=5.67e-8,U=.42749,CAP=3;
   let x=100,R=100,T=288,k=0,ph=0,goal=null;
   const g=v=>1-.1**((v/100)**.47);   // share of the surface infrared that greenhouse gases absorb (0.9 today)
   const flows=()=>{const A=340-R,E=SIG*T**4,G=g(x),win=(1-G)*E,back=G*E*U,up=G*E*(1-U);return{A,E,G,win,back,up,out:win+up,N:A-win-up}};
@@ -128,7 +128,7 @@ SIMS.b2_budget=host=>{const {c,side,W,H}=lab(host,800,470),SIG=5.67e-8,U=.42749,
   const rs=slider(side,'Sunlight reflected by clouds, ice and snow',40,170,5,100,v=>v+' W/m²',v=>R=v);
   const out=el('div','read');side.append(out);
   const tick=missions(side,[
-    {t:'Remove <b>all</b> the greenhouse gases. Wait until in = out.',ok:s=>s.x===0&&Math.abs(s.N)<.3,d:'Here it settles near −18 °C. Almost all the infrared escapes straight to space.'},
+    {t:'Remove <b>all</b> the greenhouse gases. Wait until in = out.',ok:s=>s.x===0&&Math.abs(s.N)<.3,d:'Here it settles near −18 °C. All the infrared escapes straight to space.'},
     {t:'Back to today: <b>100%</b>. Wait until in = out.',ok:s=>s.x===100&&s.R===100&&Math.abs(s.N)<.3,d:'15 °C. Greenhouse gases keep the surface much warmer than it would be without them.'},
     {t:'Raise greenhouse gases to <b>150%</b>. Watch the back radiation.',ok:s=>s.x>=150&&Math.abs(s.N)<.3,d:'More back radiation, so in beat out. The surface warmed until it gave off enough to balance again.'},
     {t:'Less ice and cloud: reflect only <b>70 W/m²</b>.',ok:s=>s.R<=70&&Math.abs(s.N)<.3,d:'More sunlight absorbed, so the balance comes at a higher temperature.'}],()=>({x,R,N:flows().N}));
@@ -152,22 +152,22 @@ SIMS.b2_budget=host=>{const {c,side,W,H}=lab(host,800,470),SIG=5.67e-8,U=.42749,
     c.clearRect(0,0,W,H);const sc=v=>v/400*44,Y_SP=70,A0=170,A1=270,G0=400;
     // space, air, ground
     c.fillStyle='#04061a';c.fillRect(0,0,W,Y_SP);txt(c,'space',14,24,C.mu,'600 14px Inter');
-    c.fillStyle='rgba(125,211,252,.08)';c.fillRect(0,A0,W,A1-A0);txt(c,'air with greenhouse gases',14,A0+20,C.cy,'600 14px Inter');
+    c.fillStyle='rgba(125,211,252,.08)';c.fillRect(0,A0,W,A1-A0);txt(c,'air with greenhouse gases',14,A1-10,C.cy,'600 13px Inter');
     const nd=Math.round(f.G*60);for(let i=0;i<nd;i++){const xx=(i*137.5)%660+20,yy=A0+28+((i*53)%70);dot(c,xx,yy,2.4,'rgba(125,211,252,.55)')}
     c.fillStyle='#14361f';c.fillRect(0,G0,W,H-G0);txt(c,'surface',14,H-16,C.gr,'600 14px Inter');
     // sunlight
-    dot(c,70,40,26,'#fde047');
-    if(show>=0)arrow(100,60,250,G0,sc(340),'rgba(253,224,71,.85)','sunlight in 340',118,120);
-    if(show>=0)arrow(262,G0-6,360,Y_SP-6,sc(R),'rgba(253,224,71,.55)','reflected '+Math.round(R),300,96);
+    dot(c,120,36,24,'#fde047');
+    if(show>=0)arrow(135,58,250,G0,sc(340),'rgba(253,224,71,.85)','sunlight in 340',190,130);
+    if(show>=0)arrow(262,G0-6,360,Y_SP-6,sc(R),'rgba(253,224,71,.55)','reflected '+Math.round(R),372,100);
     if(show>=1)txt(c,'absorbed '+Math.round(f.A),190,G0+30,'#fde047','700 16px Inter','center');
-    if(show>=2){arrow(470,G0,470,A1,sc(f.E),'rgba(239,68,68,.85)','surface infrared '+Math.round(f.E),484,A1+50);
-      arrow(452,A1,452,Y_SP-6,sc(f.win),'rgba(239,68,68,.95)','window '+Math.round(f.win),452+sc(f.win)/2+10,Y_SP+30)}
-    if(show>=3){arrow(560,A0,560,Y_SP-6,sc(f.up),'rgba(248,113,113,.8)','up from the gases',575,Y_SP+64);
-      arrow(640,A1,640,G0,sc(f.back),'rgba(248,113,113,.8)','back radiation',655,A1+90)}
+    if(show>=2){arrow(500,G0,500,A1,sc(f.E),'rgba(239,68,68,.85)','surface infrared '+Math.round(f.E),474,A1+60,'right');
+      const wx=500-sc(f.E)/2+sc(f.win)/2;arrow(wx,A1,wx,Y_SP-6,sc(f.win),'rgba(239,68,68,.95)','window '+Math.round(f.win),474,Y_SP+60,'right')}
+    if(show>=3){arrow(590,A0,590,Y_SP-6,sc(f.up),'rgba(248,113,113,.8)','up from gases',605,Y_SP+64);
+      arrow(670,A1,670,G0,sc(f.back),'rgba(248,113,113,.8)','back radiation',652,A1+100,'right')}
     if(show>=4)txt(c,'out to space '+Math.round(f.out),520,24,'#fff','700 16px Inter','center');
     // thermometer
     const tc=T-273,ty=G0-20-(Math.max(-40,Math.min(40,tc))+40)/80*230;c.fillStyle='#1e2858';c.beginPath();c.roundRect(744,G0-260,22,250,11);c.fill();
     c.fillStyle='#ef4444';c.beginPath();c.roundRect(748,ty,14,G0-14-ty,7);c.fill();dot(c,755,G0-10,16,'#ef4444');
     txt(c,(tc>=0?'':'−')+Math.abs(tc).toFixed(1)+' °C',755,G0-268,'#fff','700 18px Space Grotesk','center');
     const N=f.N,bal=Math.abs(N)<.3;
-    out.innerHTML=`In (absorbed): <b>${Math.round(f.A)} W/m²</b><br>Out to space: <b>${Math.round(f.out)} W/m²</b><br>In minus out: <b class="${bal?'ok':N>0?'no':'cy'}">${N>=0?'+':'−'}${Math.abs(N).toFixed(1)} W/m²</b> ${bal?'balanced':N>0?'warming':'cooling'}<br>Surface: <b>${(tc>=0?'':'−')+Math.abs(tc).toFixed(1)} °C</b><br><span class="muted" style="font-size:13px">Simple model: one layer of air, no convection or evaporation. Not a forecast.</span>`})};
+    out.innerHTML=`In (absorbed): <b>${Math.round(f.A)} W/m²</b><br>Out to space: <b>${Math.round(f.out)} W/m²</b><br>In minus out: <b class="${bal?'ok':N>0?'no':'cy'}">${Math.abs(N)<.05?'':N>0?'+':'−'}${Math.abs(N).toFixed(1)} W/m²</b> ${bal?'balanced':N>0?'warming':'cooling'}<br>Surface: <b>${(tc>=0?'':'−')+Math.abs(tc).toFixed(1)} °C</b><br><span class="muted" style="font-size:13px">Simple model: one layer of air, no convection or evaporation. Not a forecast.</span>`})};
