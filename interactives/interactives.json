@@ -533,6 +533,17 @@
   "colour": "#4ade80"
  },
  {
+  "id": "2A-P1-prac-convection",
+  "section": "2A",
+  "title": "Practical 2A-1: Convection in water",
+  "criteria": [
+   "2A.4"
+  ],
+  "blurb": "Virtual prac. Drop permanganate crystals into still water, then heat from below, heat from above and cool from above. Predict, watch the dye and sketch the currents.",
+  "source": "Follows the method of Cambridge VCE Physics Units 1&2, Practical 2A-1. Wording and animation are the teacher's own.",
+  "colour": "#f472b6"
+ },
+ {
   "id": "2A-P2-prac-specific-heat",
   "section": "2A",
   "title": "Practical 2A-2: Specific heat capacity of water",
