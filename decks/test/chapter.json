@@ -1,0 +1,9 @@
+{
+ "code": "9",
+ "title": "Test chapter",
+ "unit": 1,
+ "aos": "AoS 1: Light and heat",
+ "desk": "On your desk: <b>reference book</b>, <b>whiteboard and marker</b>.",
+ "file": "Test deck (not for class)",
+ "sections": ["../src/chapter1/1a.html", "9z.html"]
+}
