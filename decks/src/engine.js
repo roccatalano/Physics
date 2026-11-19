@@ -73,6 +73,7 @@ function saved(){try{const v=JSON.parse(localStorage.getItem(KEY));if(!v)return 
   return Math.min(S.length-1,v.n||0)}catch(e){return 0}}
 function show(n,all){S[cur].classList.remove('on');cur=Math.max(0,Math.min(S.length-1,n));const s=S[cur];s.classList.add('on');
   steps(s).forEach(e=>e.classList.toggle('shown',!!all));
+  if(s===toc){const tb=$('.toc',toc),tc=$$('.tsec',tb);tc.forEach(c=>c.style.zoom=1);const need=Math.max(...tc.map(c=>c.scrollHeight)),have=tb.clientHeight;if(need>have)tc.forEach(c=>c.style.zoom=have/need)} /* long sections: shrink the columns so every line fits */
   if(s===toc){const sec=SECS.find(x=>x.el.contains(S[Math.max(0,+toc.dataset.from||0)]));$$('.toc .sh',toc).forEach((b,i)=>b.classList.toggle('here',SECS[i]===sec))}
   st0=performance.now();sdur=+s.dataset.t||0;place(s);try{history.replaceState(null,'','#'+(cur+1))}catch(e){}save()}
 function next(){const h=steps(S[cur]).filter(e=>!e.classList.contains('shown'));if(h.length)h[0].classList.add('shown');else if(cur<S.length-1)show(cur+1)}
