@@ -1,0 +1,493 @@
+<script type="application/json">{"code":"2A","title":"Thermal energy"}</script>
+<style>
+/* 2A only: wider answer boxes in the heat lab, prac preview slides */
+.a2w .ask{grid-template-columns:76px 1fr 66px auto 18px}
+.a2p{display:flex;flex-direction:column;gap:16px;font:500 29px/1.35 Inter;color:#eef1ff}
+.a2p .pt{font:700 40px 'Space Grotesk';color:#fff}.a2p .pt small{display:block;font:600 18px Inter;color:#7dd3fc;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+.a2p>div:not(.pt){display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:baseline}.a2p>div>b{font:700 17px Inter;letter-spacing:.08em;text-transform:uppercase;color:#7dd3fc}
+.a2ql .mq{font-size:35px}
+.a2fr .wl{min-height:84px}
+.sec[data-sec="2A"] .side>div:empty{display:none}.a2ql .ma{font-size:35px;margin-left:12px}
+</style>
+
+<section class="slide" data-mode="watch" data-do="By the end of 2A I can">
+ <div class="goal" style="--c:#7dd3fc"><span class="n">1</span><div>Explain the difference between thermal energy and temperature<small>2A.1 · 2A.2</small></div></div>
+ <div class="goal" style="--c:#fbb040"><span class="n">2</span><div>Convert temperatures between °C and kelvin<small>2A.3</small></div></div>
+ <div class="goal" style="--c:#f472b6"><span class="n">3</span><div>Explain conduction, convection, radiation and evaporation with particles<small>2A.4</small></div></div>
+</section>
+<section class="slide" data-mode="watch" data-do="By the end of 2A I can">
+ <div class="goal" style="--c:#4ade80"><span class="n">4</span><div>Define specific heat capacity and specific latent heat<small>2A.5 · 2A.6</small></div></div>
+ <div class="goal" style="--c:#a78bfa"><span class="n">5</span><div>Calculate energy with $Q = mc\Delta T$ and $Q = mL$, on their own and together<small>2A.8 · 2A.9 · 2A.10</small></div></div>
+ <div class="goal" style="--c:#fb7185"><span class="n">6</span><div>Measure a temperature change in a practical and use it<small>2A.7</small></div></div>
+</section>
+<section class="slide" data-mode="board" data-t="90" data-tag="VC2S8U15 (Levels 7 and 8)" data-do="What do you already know? On your whiteboard.">
+ <div class="pwb"><div class="mq">Name the three ways heat moves from one place to another.</div><div class="ma st">conduction, convection, radiation</div></div>
+</section>
+<section class="slide" data-mode="board" data-t="90" data-tag="VC2S8U15 (Levels 7 and 8)" data-do="What do you already know? On your whiteboard.">
+ <div class="pwb"><div class="mq">Particles are always moving.<br>What form of energy does a moving particle have?</div><div class="ma st">kinetic energy</div></div>
+</section>
+<section class="slide" data-mode="board" data-t="90" data-tag="From 1B" data-do="What do you already know? On your whiteboard.">
+ <div class="pwb"><div class="mq">You sit near a campfire and feel warm on your face.<br>Which part of the electromagnetic spectrum is that?</div><div class="ma st">infrared</div></div>
+</section>
+<section class="slide" data-mode="book" data-t="60" data-b="0" data-do="New page. Title and date on the top line."></section>
+
+<!-- Loop 1 -->
+<section class="slide" data-mode="board" data-loop="Hot or lots?" data-t="60" data-do="Predict. One letter and one reason. Cover it.">
+ <div class="pwb"><div class="mq s">A cup of tea is at 80 °C. A swimming pool is at 25 °C. Which one has more thermal energy?</div><div class="pgrid"><div class="mo"><div><b>A</b><span>The tea</span></div><div><b>B<i class='st ring'></i></b><span>The pool</span></div><div><b>C</b><span>They have the same</span></div><div><b>D</b><span>Neither has any</span></div></div><div class="ma s st">The pool has far more particles.<br>Each one has less energy, but the total is much bigger.</div></div></div>
+</section>
+<section class="slide" data-mode="lab" data-do="Temperature or thermal energy?">
+ <i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><div class="lab" data-sim="a2_particles" data-o='{"mode":"energy"}'></div>
+</section>
+<section class="slide" data-mode="board" data-t="60" data-do="Explain it in your own words. Then show.">
+ <div class="pwb"><div class="mq">Temperature and thermal energy.<br>How are they different?</div><div class="ma st">Temperature: the average kinetic energy of the particles.<br>Thermal energy: the total energy of all of them.</div></div>
+</section>
+<section class="slide" data-mode="book" data-t="180" data-b="1" data-do="Copy the new part exactly as it looks here."></section>
+
+<!-- Loop 2 -->
+<section class="slide" data-mode="board" data-loop="Absolute zero" data-t="60" data-do="Predict. One letter and one reason. Cover it.">
+ <div class="pwb"><div class="mq s">How cold can anything ever get?</div><div class="pgrid"><div class="mo"><div><b>A</b><span>0 °C</span></div><div><b>B</b><span>−100 °C</span></div><div><b>C<i class='st ring'></i></b><span>About −273 °C</span></div><div><b>D</b><span>There is no limit</span></div></div><div class="ma s st">At about −273 °C the particles stop.<br>You cannot take away energy that is not there.</div></div></div>
+</section>
+<section class="slide" data-mode="lab" data-do="The kelvin scale">
+ <i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><div class="lab" data-sim="a2_particles" data-o='{"mode":"kelvin"}'></div>
+</section>
+<section class="slide" data-mode="board" data-t="90" data-do="Three short answers. Then show.">
+ <div class="pwb"><div class="qa"><div class="mq s">Room temperature is 27 °C. What is it in kelvin?</div><div class="ma s st">27 + 273 = 300 K</div></div><div class="qa"><div class="mq s">A gas is at 100 K. What is that in °C?</div><div class="ma s st">100 − 273 = −173 °C</div></div><div class="qa"><div class="mq s">Water warms by 15 °C. What is $\Delta T$ in kelvin?</div><div class="ma s st">15 K. A change of 1 °C is a change of 1 K.</div></div></div>
+</section>
+<section class="slide" data-mode="book" data-t="180" data-b="2" data-do="Copy the new part exactly as it looks here."></section>
+
+<section class="slide" data-mode="watch" data-part="Worked example: kelvin" data-do="Pens down. Values, Formula, Substitute, Solve.">
+ <div class="vq">Liquid nitrogen at 77 K warms up to room temperature, 22 °C. Find its change in temperature.</div>
+ <div class="lg"><span class="unk">what we want</span><span class="der">find this first</span></div>
+ <div class="vfss">
+  <div class="vr st"><b>V</b><span class="vl">Values</span><div>$T_1 = 77\ \text{K}$ &emsp; $T_2 = 22\ ^\circ\text{C}$ &emsp; <span class="unk">$\Delta T$</span> $= \ ?$</div></div>
+  <div class="vr st"><b>F</b><span class="vl">Formula</span><div><span class="unk">$\Delta T$</span> $=$ <span class="der">$T_2$</span> $-\ T_1$</div></div>
+  <div class="vr sub st"><b></b><span class="vl">First find <span class="der">$T_2$</span> in K</span><div><span class="der">$T_2$</span> $= 22 + 273 =$ <span class="der">$295\ \text{K}$</span></div></div>
+  <div class="vr st"><b>S</b><span class="vl">Substitute</span><div><span class="unk">$\Delta T$</span> $=$ <span class="der">$295$</span> $-\ 77$</div></div>
+  <div class="vr st"><b>S</b><span class="vl">Solve</span><div><span class="unk">$\Delta T$</span> $= 218\ \text{K}$</div></div>
+ </div>
+ <div class="vans st">The temperature rises by <span class="unk">$218\ \text{K}$</span>, the same as a rise of 218 °C.</div>
+</section>
+<section class="slide" data-mode="book" data-t="240" data-b="3" data-do="Copy the worked example on the right of your page."></section>
+<section class="slide" data-mode="book" data-t="180" data-b="4" data-do="You try. In your book, under the worked example."></section>
+<section class="slide" data-mode="book" data-t="60" data-b="5" data-do="Check your working. Tick it or fix it."></section>
+<section class="slide" data-mode="board" data-t="120" data-do="Values, Formula, Substitute, Solve. Then show.">
+ <div class="pwb"><div class="mq s">A pot of water heats from 15 °C to 368 K. Find $\Delta T$.</div><div class="ma s"><div class="st wl"><b>V</b><span>$T_1 = 15$ °C &nbsp; $T_2 = 368$ K</span></div><div class="st wl"><b>F</b><span>$\Delta T = T_2 - T_1$ &emsp; first: $T_1 = 15 + 273 = 288$ K</span></div><div class="st wl"><b>S</b><span>$\Delta T = 368 - 288$</span></div><div class="st wl"><b>S</b><span>$\Delta T = 80$ K</span></div></div></div>
+</section>
+<section class="slide" data-mode="board" data-t="120" data-do="Values, Formula, Substitute, Solve. Then show.">
+ <div class="pwb"><div class="mq s">Liquid helium boils at 4.2 K. What is this in °C?</div><div class="ma s"><div class="st wl"><b>V</b><span>$T = 4.2$ K</span></div><div class="st wl"><b>F</b><span>temperature in °C $=$ temperature in K $-\ 273$</span></div><div class="st wl"><b>S</b><span>$= 4.2 - 273$</span></div><div class="st wl"><b>S</b><span>$= -268.8 \approx -269$ °C</span></div></div></div>
+</section>
+<section class="slide" data-mode="book" data-t="60" data-b="6" data-do="Copy the warning at the bottom of the right side."></section>
+
+<!-- Loop 3 -->
+<section class="slide" data-mode="board" data-loop="Hot to cold" data-t="60" data-do="Predict. One letter and one reason. Cover it.">
+ <div class="pwb"><div class="mq s">On a cold morning a metal bench and a wooden bench are both at 10 °C. The metal one feels colder. Why?</div><div class="pgrid"><div class="mo"><div><b>A</b><span>The metal is colder</span></div><div><b>B<i class='st ring'></i></b><span>Metal takes heat from your hand faster</span></div><div><b>C</b><span>Wood gives off heat</span></div><div><b>D</b><span>Metal reflects your heat</span></div></div><div class="ma s st">Both are at 10 °C.<br>Metal conducts heat out of your hand faster, so your hand cools faster.</div></div></div>
+</section>
+<section class="slide" data-mode="lab" data-do="Two blocks touch">
+ <i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><div class="lab" data-sim="a2_contact"></div>
+</section>
+<section class="slide" data-mode="board" data-t="60" data-do="Explain it in one sentence. Then show.">
+ <div class="pwb"><div class="mq">Two blocks touch. Heat flows, then it stops.<br>Why does it stop?</div><div class="ma st">They reach the same temperature: thermal equilibrium.<br>Heat only flows from hotter to colder.</div></div>
+</section>
+<section class="slide" data-mode="book" data-t="210" data-b="7" data-do="Copy the new part exactly as it looks here."></section>
+
+<!-- Page 2 -->
+<section class="slide" data-mode="book" data-page="2" data-t="60" data-b="0" data-do="New page. Title and date on the top line."></section>
+
+<!-- Loop 4 -->
+<section class="slide" data-mode="board" data-loop="Convection and radiation" data-t="60" data-do="Predict. One letter and one reason. Cover it.">
+ <div class="pwb"><div class="mq s">You have one heater to warm a whole room. Where should it go?</div><div class="pgrid"><div class="mo"><div><b>A<i class='st ring'></i></b><span>Near the floor</span></div><div><b>B</b><span>Near the ceiling</span></div><div><b>C</b><span>Halfway up a wall</span></div><div><b>D</b><span>It makes no difference</span></div></div><div class="ma s st">Warm air rises. Cool air sinks to take its place.<br>The air goes round the whole room.</div></div></div>
+</section>
+<section class="slide" data-mode="book" data-page="2" data-t="180" data-b="1" data-do="Copy the new part exactly as it looks here."></section>
+<section class="slide" data-mode="board" data-t="60" data-do="Explain it in your own words. Then show.">
+ <div class="pwb"><div class="mq">The Sun warms us across empty space.<br>Why can't conduction or convection do that?</div><div class="ma st">Both need particles, and space has almost none.<br>Radiation needs no particles.</div><div class="hint">radiation: energy carried by electromagnetic waves</div></div>
+</section>
+<section class="slide" data-mode="book" data-page="2" data-t="150" data-b="2" data-do="Copy the new part exactly as it looks here."></section>
+<section class="slide" data-mode="watch" data-do="Coming up: a practical lesson.">
+ <div class="a2p"><div class="pt"><small>Practical 2A-1, its own lesson</small>Convection in water</div>
+  <div><b>You will</b><span>heat water from below, then from above, then cool it from the top, and watch purple dye move.</span></div>
+  <div><b>Before</b><span>Predict in your log book: where will the dye go each time?</span></div>
+  <div><b>Bring</b><span>log book, pen, pencil</span></div></div>
+</section>
+
+<!-- Loop 5 -->
+<section class="slide" data-mode="board" data-loop="Evaporation" data-t="60" data-do="Predict. One letter and one reason. Cover it.">
+ <div class="pwb"><div class="mq s">You get out of a pool on a windy day. Why do you feel colder than you did when dry?</div><div class="pgrid"><div class="mo"><div><b>A</b><span>The wind is colder</span></div><div><b>B</b><span>Water conducts heat away</span></div><div><b>C<i class='st ring'></i></b><span>Fast particles leave with energy</span></div><div><b>D</b><span>Wet skin reflects sunlight</span></div></div><div class="ma s st">The fastest particles escape from your skin.<br>The water left behind is cooler, and so are you.</div></div></div>
+</section>
+<section class="slide" data-mode="lab" data-do="Evaporation">
+ <i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><div class="lab" data-sim="a2_evap"></div>
+</section>
+<section class="slide" data-mode="board" data-t="60" data-do="Explain it in your own words. Then show.">
+ <div class="pwb"><div class="mq">Particles escape from a hot drink.<br>Why does that make the drink colder?</div><div class="ma st">The ones that leave are the fastest.<br>The average kinetic energy of the rest drops, so the temperature drops.</div></div>
+</section>
+<section class="slide" data-mode="book" data-page="2" data-t="150" data-b="3" data-do="Copy the new part exactly as it looks here."></section>
+
+<section class="slide" data-mode="watch" data-do="Pens down. Name each way, then explain it with particles.">
+ <div class="vq">A hot pie sits on a metal tray in the kitchen. How does it lose heat? Explain each way with particles.</div>
+ <div class="vfss">
+  <div class="vr st"><b>C</b><span class="vl">Conduction</span><div>Vibrating particles pass energy into the metal tray.</div></div>
+  <div class="vr st"><b>C</b><span class="vl">Convection</span><div>Air above the pie warms, rises, and cooler air moves in.</div></div>
+  <div class="vr st"><b>R</b><span class="vl">Radiation</span><div>The pie gives off infrared to the cooler room.</div></div>
+  <div class="vr st"><b>E</b><span class="vl">Evaporation</span><div>Fast water particles leave the filling as steam.</div></div>
+ </div>
+ <div class="vans st">Four ways. The hotter the pie, the faster each one works.</div>
+</section>
+<section class="slide" data-mode="book" data-page="2" data-t="240" data-b="4" data-do="Copy the worked example on the right of your page."></section>
+<section class="slide" data-mode="book" data-page="2" data-t="180" data-b="5" data-do="You try. In your book, under the worked example."></section>
+<section class="slide" data-mode="book" data-page="2" data-t="60" data-b="6" data-do="Check your answer. Tick it or fix it."></section>
+<section class="slide" data-mode="board" data-t="120" data-do="One word each. Then show.">
+ <div class="pwb a2ql"><div class="mq">The main way heat moves:</div><div class="mq">along a metal spoon in hot soup <span class="ma st">conduction</span></div><div class="mq">up through a pot of water on a stove <span class="ma st">convection</span></div><div class="mq">from a campfire to your face <span class="ma st">radiation</span></div><div class="mq">off a sweaty runner <span class="ma st">evaporation</span></div></div>
+</section>
+
+<!-- Page 3 -->
+<section class="slide" data-mode="book" data-page="3" data-t="60" data-b="0" data-do="New page. Title and date on the top line."></section>
+
+<!-- Loop 6 -->
+<section class="slide" data-mode="board" data-loop="Specific heat capacity" data-t="60" data-do="Predict. One letter and one reason. Cover it.">
+ <div class="pwb"><div class="mq s">1 kg of water and 1 kg of copper get the same energy from the same heater. Which one ends up hotter?</div><div class="pgrid"><div class="mo"><div><b>A</b><span>The water</span></div><div><b>B<i class='st ring'></i></b><span>The copper</span></div><div><b>C</b><span>They end up the same</span></div><div><b>D</b><span>It depends where they start</span></div></div><div class="ma s st">Copper needs far less energy for each degree: about 11 times less.</div></div></div>
+</section>
+<section class="slide" data-mode="lab" data-do="Heating different materials">
+ <i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><div class="lab" data-sim="a2_heat" data-o='{"mode":"c"}'></div>
+</section>
+<section class="slide" data-mode="board" data-t="60" data-do="Explain it in your own words. Then show.">
+ <div class="pwb"><div class="mq">Water has a high specific heat capacity.<br>What does that mean for a pot of water on a stove?</div><div class="ma st">It takes a lot of energy to heat up.<br>It also stays hot for a long time.</div></div>
+</section>
+<section class="slide" data-mode="book" data-page="3" data-t="240" data-b="1" data-do="Copy the new part exactly as it looks here."></section>
+
+<section class="slide" data-mode="watch" data-part="Worked example: Q = mcΔT" data-do="Pens down. Values, Formula, Substitute, Solve.">
+ <div class="vq">How much energy is needed to heat 250 g of water from 18 °C to 95 °C? For water, $c = 4190$ J/(kg K).</div>
+ <div class="lg"><span class="unk">what we want</span><span class="der">find this first</span></div>
+ <div class="vfss">
+  <div class="vr st"><b>V</b><span class="vl">Values</span><div>$m = 0.250\ \text{kg}$ &emsp; $c = 4190$ &emsp; 18 °C to 95 °C &emsp; <span class="unk">$Q$</span> $= \ ?$</div></div>
+  <div class="vr st"><b>F</b><span class="vl">Formula</span><div><span class="unk">$Q$</span> $= mc$ <span class="der">$\Delta T$</span></div></div>
+  <div class="vr sub st"><b></b><span class="vl">First find <span class="der">$\Delta T$</span></span><div><span class="der">$\Delta T$</span> $= 95 - 18 =$ <span class="der">$77\ \text{K}$</span></div></div>
+  <div class="vr st"><b>S</b><span class="vl">Substitute</span><div><span class="unk">$Q$</span> $= 0.250 \times 4190 \times$ <span class="der">$77$</span></div></div>
+  <div class="vr st"><b>S</b><span class="vl">Solve</span><div><span class="unk">$Q$</span> $= 80\,658 \approx 8.1 \times 10^{4}\ \text{J}$</div></div>
+ </div>
+ <div class="vans st">It takes <span class="unk">$8.1 \times 10^{4}\ \text{J}$</span>, or 81 kJ.</div>
+</section>
+<section class="slide" data-mode="book" data-page="3" data-t="240" data-b="2" data-do="Copy the worked example on the right of your page."></section>
+<section class="slide" data-mode="book" data-page="3" data-t="180" data-b="3" data-do="You try. In your book, under the worked example."></section>
+<section class="slide" data-mode="book" data-page="3" data-t="60" data-b="4" data-do="Check your working. Tick it or fix it."></section>
+<section class="slide" data-mode="board" data-t="120" data-do="Values, Formula, Substitute, Solve. Then show.">
+ <div class="pwb"><div class="mq s">1.5 kg of water cools from 80 °C to 30 °C. How much energy does it give out? ($c = 4190$ J/(kg K))</div><div class="ma s"><div class="st wl"><b>V</b><span>$m = 1.5$ kg &nbsp; $c = 4190$ &nbsp; 80 °C to 30 °C</span></div><div class="st wl"><b>F</b><span>$Q = mc\Delta T$ &emsp; first: $\Delta T = 80 - 30 = 50$ K</span></div><div class="st wl"><b>S</b><span>$Q = 1.5 \times 4190 \times 50$</span></div><div class="st wl"><b>S</b><span>$Q = 314\,250 \approx 3.1 \times 10^{5}$ J</span></div></div></div>
+</section>
+<section class="slide" data-mode="board" data-t="120" data-do="Values, Formula, Substitute, Solve. Then show.">
+ <div class="pwb a2fr"><div class="mq s">A 2.0 kg metal block takes in 36 000 J and warms by 20 K. Find its specific heat capacity.</div><div class="ma s"><div class="st wl"><b>V</b><span>$Q = 36\,000$ J &nbsp; $m = 2.0$ kg &nbsp; $\Delta T = 20$ K</span></div><div class="st wl"><b>F</b><span>$c = \dfrac{Q}{m\Delta T}$</span></div><div class="st wl"><b>S</b><span>$c = \dfrac{36\,000}{2.0 \times 20}$</span></div><div class="st wl"><b>S</b><span>$c = 900$ J/(kg K)</span></div></div></div>
+</section>
+<section class="slide" data-mode="book" data-page="3" data-t="60" data-b="5" data-do="Copy the warning at the bottom of the right side."></section>
+<section class="slide" data-mode="watch" data-do="Coming up: a practical lesson.">
+ <div class="a2p"><div class="pt"><small>Practical 2A-2, its own lesson</small>Specific heat capacity of water</div>
+  <div><b>You will</b><span>heat 200 g of water on a hotplate, record the temperature every minute, and graph it.</span></div>
+  <div><b>Then</b><span>find the gradient and use $c = \dfrac{P}{m \times \text{gradient}}$, the method from the lab.</span></div>
+  <div><b>Think</b><span>Some heat escapes. Will your $c$ come out too big or too small?</span></div>
+  <div><b>Bring</b><span>log book, calculator, pencil, ruler</span></div></div>
+</section>
+
+<!-- Loop 7 -->
+<section class="slide" data-mode="board" data-loop="Changing state" data-t="60" data-do="Predict. One letter and one reason. Cover it.">
+ <div class="pwb"><div class="mq s">Ice at 0 °C is heated steadily. What does a thermometer in it read while the ice melts?</div><div class="pgrid"><div class="mo"><div><b>A</b><span>It rises steadily</span></div><div><b>B</b><span>It rises faster and faster</span></div><div><b>C<i class='st ring'></i></b><span>It stays at 0 °C</span></div><div><b>D</b><span>It drops</span></div></div><div class="ma s st">The energy breaks bonds between the particles.<br>It does not speed them up, so the temperature stays put.</div></div></div>
+</section>
+<section class="slide" data-mode="lab" data-do="Heating ice to steam">
+ <i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><i class="st stg"></i><div class="lab" data-sim="a2_heat" data-o='{"mode":"curve"}'></div>
+</section>
+<section class="slide" data-mode="board" data-t="60" data-do="Explain it in your own words. Then show.">
+ <div class="pwb"><div class="mq">Ice is melting on a hotplate.<br>Where does the energy go?</div><div class="ma st">Into breaking the bonds between particles.<br>Their kinetic energy stays the same, so the temperature does too.</div></div>
+</section>
+<section class="slide" data-mode="book" data-page="3" data-t="240" data-b="6" data-do="Copy the new part on the left of your page."></section>
+
+<!-- Page 4 -->
+<section class="slide" data-mode="book" data-page="4" data-t="60" data-b="0" data-do="New page. Title and date on the top line."></section>
+<section class="slide" data-mode="book" data-page="4" data-t="240" data-b="1" data-do="Copy the graph and the two lines under it."></section>
+
+<section class="slide" data-mode="watch" data-part="Worked example: Q = mL" data-do="Pens down. Values, Formula, Substitute, Solve.">
+ <div class="vq">0.20 kg of ice at 0 °C melts, then the water warms to 25 °C. Find the energy needed. ($L_{\text{fusion}} = 334$ kJ/kg, $c = 4190$ J/(kg K))</div>
+ <div class="lg"><span class="unk">what we want</span><span class="der">find this first</span></div>
+ <div class="vfss">
+  <div class="vr st"><b>V</b><span class="vl">Values</span><div>$m = 0.20\ \text{kg}$ &emsp; $L = 334$ kJ/kg &emsp; $c = 4190$ &emsp; $\Delta T = 25\ \text{K}$</div></div>
+  <div class="vr st"><b>F</b><span class="vl">Formula</span><div><span class="unk">$Q$</span> $= m$<span class="der">$L$</span> $+\ mc\Delta T$</div></div>
+  <div class="vr sub st"><b></b><span class="vl">First find <span class="der">$L$</span> in J/kg</span><div><span class="der">$L$</span> $= 334 \times 1000 =$ <span class="der">$334\,000\ \text{J/kg}$</span></div></div>
+  <div class="vr st"><b>S</b><span class="vl">Substitute</span><div><span class="unk">$Q$</span> $= 0.20 \times$ <span class="der">$334\,000$</span> $+\ 0.20 \times 4190 \times 25$</div></div>
+  <div class="vr st"><b>S</b><span class="vl">Solve</span><div><span class="unk">$Q$</span> $= 66\,800 + 20\,950 = 87\,750\ \text{J}$</div></div>
+ </div>
+ <div class="vans st">It takes <span class="unk">$8.8 \times 10^{4}\ \text{J}$</span>. Melting uses three quarters of it.</div>
+</section>
+<section class="slide" data-mode="book" data-page="4" data-t="240" data-b="2" data-do="Copy the worked example on the right of your page."></section>
+<section class="slide" data-mode="book" data-page="4" data-t="240" data-b="3" data-do="You try. In your book, under the worked example."></section>
+<section class="slide" data-mode="book" data-page="4" data-t="60" data-b="4" data-do="Check your working. Tick it or fix it."></section>
+<section class="slide" data-mode="board" data-t="120" data-do="Values, Formula, Substitute, Solve. Then show.">
+ <div class="pwb"><div class="mq s">How much energy melts 3.0 kg of ice at 0 °C? ($L_{\text{fusion}} = 334$ kJ/kg)</div><div class="ma s"><div class="st wl"><b>V</b><span>$m = 3.0$ kg &nbsp; $L = 334$ kJ/kg</span></div><div class="st wl"><b>F</b><span>$Q = mL$ &emsp; first: $L = 334\,000$ J/kg</span></div><div class="st wl"><b>S</b><span>$Q = 3.0 \times 334\,000$</span></div><div class="st wl"><b>S</b><span>$Q = 1\,002\,000 \approx 1.0 \times 10^{6}$ J</span></div></div></div>
+</section>
+<section class="slide" data-mode="board" data-t="120" data-do="Values, Formula, Substitute, Solve. Then show.">
+ <div class="pwb"><div class="mq s">50 g of steam at 100 °C condenses on your skin. How much energy does it give out? ($L_{\text{vaporisation}} = 2256$ kJ/kg)</div><div class="ma s"><div class="st wl"><b>V</b><span>$m = 0.050$ kg &nbsp; $L = 2256$ kJ/kg</span></div><div class="st wl"><b>F</b><span>$Q = mL$ &emsp; first: $L = 2\,256\,000$ J/kg</span></div><div class="st wl"><b>S</b><span>$Q = 0.050 \times 2\,256\,000$</span></div><div class="st wl"><b>S</b><span>$Q = 112\,800 \approx 1.1 \times 10^{5}$ J</span></div></div></div>
+</section>
+<section class="slide" data-mode="book" data-page="4" data-t="60" data-b="5" data-do="Copy the warning at the bottom of the left side."></section>
+
+<section class="slide pageslide" data-mode="book" data-t="60" data-b="99" data-do="Check page 1 against this. Fix anything missing."></section>
+<section class="slide pageslide" data-mode="book" data-page="2" data-t="60" data-b="99" data-do="Check page 2 against this. Fix anything missing."></section>
+<section class="slide pageslide" data-mode="book" data-page="3" data-t="60" data-b="99" data-do="Check page 3 against this. Fix anything missing."></section>
+<section class="slide pageslide" data-mode="book" data-page="4" data-t="60" data-b="99" data-do="Check page 4 against this. Fix anything missing."></section>
+
+<section class="slide" data-mode="practise" data-part="Coursework" data-do="On your own. Full working: V, F, S, S.">
+ <table class="pr"><tr><th>Topic</th><th>Worksheet 2A</th><th>Section 2A questions</th></tr>
+  <tr><td>Thermal energy, temperature, kelvin</td><td>Q1, Q2, Q4, Q5</td><td>Q1, Q2</td></tr>
+  <tr><td>Conduction, convection, radiation, evaporation</td><td>Q3, Q6, Q7, Q8</td><td>Q3, Q4, Q5, Q6, Q10</td></tr>
+  <tr><td>$Q = mc\Delta T$ and $Q = mL$</td><td>Q9</td><td>Q9, Q11, Q7, Q8</td></tr></table>
+ <p class="task">Worksheet 2A Thermal energy is on <b>Practice booklet pages 5 to 7</b>.</p>
+ <p class="task">Stuck? Open your reference book at the <b>worked examples</b> before you ask.</p>
+</section>
+
+
+<div class="pagesrc">
+ <div class="col L">
+  <div class="bk" data-b="1"><div class="h">Thermal energy and temperature</div>
+   <div class="sp"></div>
+   <div><u>Thermal energy</u>: the total random kinetic</div>
+   <div>and potential energy of all the particles.</div>
+   <div class="sp"></div>
+   <div><u>Temperature</u> $T$: measures the average</div>
+   <div>kinetic energy of the particles.</div>
+   <div class="sp"></div>
+   <div>Gain thermal energy: temperature rises.</div>
+   <div>Lose thermal energy: temperature falls.</div>
+  </div>
+  <div class="bk" data-b="2"><div class="h">Temperature scales</div>
+   <div class="sp"></div>
+      <div class="fm"><span>$T\ \text{in K} = T\ \text{in}\ ^\circ\text{C} + 273$</span></div>
+   <div class="sp"></div>
+   <div><u>Absolute zero</u>: 0 K = −273 °C.</div>
+   <div>The particles stop. Nothing is colder.</div>
+   <div class="sp"></div>
+   <div>$\Delta T$ = change in temperature.</div>
+   <div>A change of 1 K = a change of 1 °C.</div>
+  </div>
+  <div class="bk" data-b="7"><div class="h">Heat and conduction</div>
+   <div class="sp"></div>
+   <div><u>Heat</u>: thermal energy flowing from a</div>
+   <div>hotter object to a colder one.</div>
+   <div class="sp"></div>
+   <div><u>Conduction</u>: particles pass vibrations</div>
+   <div>to their neighbours. Main way in solids.</div>
+   <div class="sp"></div>
+   <div><u>Conductors</u>: metals (free electrons).</div>
+   <div><u>Insulators</u>: air, wood, plastic.</div>
+   <div class="sp"></div>
+   <div>Heat flows until the temperatures are</div>
+   <div>equal: <u>thermal equilibrium</u>.</div>
+  </div>
+ </div>
+ <div class="col R">
+  <div class="bk" data-b="3"><div class="h">Worked example</div>
+   <div class="sp"></div>
+   <div>Liquid nitrogen at 77 K warms to 22 °C.</div>
+   <div>Find its change in temperature.</div>
+   <div class="sp"></div>
+   <div><span class="vf">V</span>$T_1 = 77$ K, $T_2 = 22$ °C</div>
+   <div><span class="vf">F</span>$\colorbox{#ffee58}{\(\Delta T\)} = \colorbox{#b9f5b0}{\(T_2\)} - T_1$</div>
+   <div class="ind">$\colorbox{#b9f5b0}{\(T_2\)} = 22 + 273 = \colorbox{#b9f5b0}{\(295\)}$ K</div>
+   <div><span class="vf">S</span>$\colorbox{#ffee58}{\(\Delta T\)} = \colorbox{#b9f5b0}{\(295\)} - 77$</div>
+   <div><span class="vf">S</span>$\colorbox{#ffee58}{\(\Delta T\)} = 218$ K</div>
+   <div>The temperature rises by 218 K.</div>
+  </div>
+  <div class="bk" data-b="4"><div class="h">You try</div>
+   <div class="sp"></div>
+   <div>Dry ice at −78 °C warms to 300 K.</div>
+   <div>Find its change in temperature.</div>
+  </div>
+  <div class="bk" data-b="5">
+   <div><span class="vf">V</span>$T_1 = -78$ °C, $T_2 = 300$ K</div>
+   <div><span class="vf">F</span>$\colorbox{#ffee58}{\(\Delta T\)} = T_2 - \colorbox{#b9f5b0}{\(T_1\)}$</div>
+   <div class="ind">$\colorbox{#b9f5b0}{\(T_1\)} = -78 + 273 = \colorbox{#b9f5b0}{\(195\)}$ K</div>
+   <div><span class="vf">S</span>$\colorbox{#ffee58}{\(\Delta T\)} = 300 - \colorbox{#b9f5b0}{\(195\)}$</div>
+   <div><span class="vf">S</span>$\colorbox{#ffee58}{\(\Delta T\)} = 105$ K</div>
+   <div>The temperature rises by 105 K.</div>
+  </div>
+  <div class="bk" data-b="6"><div class="wo">! Write 300 K, not 300 °K.</div></div>
+ </div>
+</div>
+
+<div class="pagesrc" data-title="2A Thermal energy (page 2)">
+ <div class="col L">
+  <div class="bk" data-b="1"><div class="h">Convection</div>
+   <div class="sp"></div>
+   <div><u>Convection</u>: a liquid or gas moves and</div>
+   <div>carries thermal energy with it.</div>
+   <div class="sp"></div>
+   <div>Warm fluid is less dense, so it rises.</div>
+   <div>Cool fluid is denser, so it sinks.</div>
+   <div class="sp"></div>
+   <div><svg viewBox="0 0 418 152" style="height:calc(4*var(--u))"><path class="pc" d="M30 10H400V146H30z"/><path class="pc" style="stroke-width:1.6" d="M42 128h40v14h-40z"/><text x="92" y="143">heater</text>
+    <path class="pc" d="M62 120V30 Q62 22 70 22H372 Q380 22 380 30V104 Q380 112 372 112H96"/><path d="M62 26 L57 38 L67 38z" fill="#444"/><path d="M380 100 L375 88 L385 88z" fill="#444"/><path d="M90 112 L102 107 L102 117z" fill="#444"/>
+    <text x="76" y="62">warm air</text><text x="76" y="84">rises</text><text x="368" y="62" text-anchor="end">cool air</text><text x="368" y="84" text-anchor="end">sinks</text></svg></div>
+  </div>
+  <div class="bk" data-b="2"><div class="h">Radiation</div>
+   <div class="sp"></div>
+   <div><u>Radiation</u>: energy carried by EM waves,</div>
+   <div>mostly infrared. It needs no particles.</div>
+   <div class="sp"></div>
+   <div>Everything above 0 K gives off radiation.</div>
+   <div class="sp"></div>
+   <div>Black, matt: absorb and emit well.</div>
+   <div>Shiny, white: reflect.</div>
+  </div>
+  <div class="bk" data-b="3"><div class="h">Evaporative cooling</div>
+   <div class="sp"></div>
+   <div>The fastest surface particles <u>escape</u>.</div>
+   <div class="sp"></div>
+   <div>Those left have less kinetic energy on</div>
+   <div>average, so the liquid cools.</div>
+   <div class="sp"></div>
+   <div>Faster with a breeze or a bigger surface.</div>
+  </div>
+ </div>
+ <div class="col R">
+  <div class="bk" data-b="4"><div class="h">Worked example</div>
+   <div class="sp"></div>
+   <div>A hot pie sits on a metal tray. How does</div>
+   <div>it lose heat? Explain with particles.</div>
+   <div class="sp"></div>
+   <div><span class="vf">C</span>Conduction: vibrating particles pass</div>
+   <div class="ind">energy into the metal tray.</div>
+   <div class="sp"></div>
+   <div><span class="vf">C</span>Convection: air above warms and rises.</div>
+   <div class="ind">Cooler air moves in.</div>
+   <div class="sp"></div>
+   <div><span class="vf">R</span>Radiation: the pie gives off infrared.</div>
+   <div class="sp"></div>
+   <div><span class="vf">E</span>Evaporation: fast water particles</div>
+   <div class="ind">leave the filling as steam.</div>
+  </div>
+  <div class="bk" data-b="5"><div class="h">You try</div>
+   <div class="sp"></div>
+   <div>Hot soup with no lid sits on a wooden</div>
+   <div>table. Name three ways it loses heat.</div>
+   <div>Which way is small? Why?</div>
+  </div>
+  <div class="bk" data-b="6">
+   <div><span class="vf">E</span>Evaporation: fastest particles escape.</div>
+   <div class="sp"></div>
+   <div><span class="vf">C</span>Convection: warm air rises off the top.</div>
+   <div class="sp"></div>
+   <div><span class="vf">R</span>Radiation: infrared from the soup.</div>
+   <div class="sp"></div>
+   <div>Conduction is small: wood is an insulator.</div>
+  </div>
+ </div>
+</div>
+
+<div class="pagesrc" data-title="2A Thermal energy (page 3)">
+ <div class="col L">
+  <div class="bk" data-b="1"><div class="h">Specific heat capacity</div>
+   <div class="sp"></div>
+   <div><u>Specific heat capacity</u> $c$: the energy</div>
+   <div>needed to warm 1 kg by 1 K.</div>
+   <div class="sp"></div>
+   <div>$Q$ = energy (J), $m$ = mass (kg)</div>
+   <div>$c$ = specific heat capacity (J/(kg K))</div>
+   <div>$\Delta T$ = change in temperature (K)</div>
+   <div class="sp"></div>
+   <div class="fm"><span>$Q = mc\Delta T$</span></div>
+   <div class="sp"></div>
+   <div>Water: $c$ = 4190 J/(kg K)</div>
+   <div>Copper: $c$ = 385 J/(kg K)</div>
+   <div class="sp"></div>
+   <div>High $c$: slow to heat up, slow to cool.</div>
+  </div>
+  <div class="bk" data-b="6"><div class="h">Changing state</div>
+   <div class="sp"></div>
+   <div>While the state changes, the temperature</div>
+   <div>stays the same. The energy breaks bonds.</div>
+   <div class="sp"></div>
+   <div><u>Specific latent heat</u> $L$: the energy to</div>
+   <div>change the state of 1 kg (J/kg).</div>
+   <div class="sp"></div>
+   <div class="fm"><span>$Q = mL$</span></div>
+   <div class="sp"></div>
+   <div>Melting or freezing: $L_{\text{fusion}}$</div>
+   <div>Boiling or condensing: $L_{\text{vaporisation}}$</div>
+   <div class="sp"></div>
+   <div>Water: $L_{\text{fusion}}$ = 334 kJ/kg</div>
+   <div>Water: $L_{\text{vaporisation}}$ = 2256 kJ/kg</div>
+  </div>
+ </div>
+ <div class="col R">
+  <div class="bk" data-b="2"><div class="h">Worked example</div>
+   <div class="sp"></div>
+   <div>How much energy heats 250 g of water</div>
+   <div>from 18 °C to 95 °C?</div>
+   <div class="sp"></div>
+   <div><span class="vf">V</span>$m = 0.250$ kg, $c = 4190$ J/(kg K)</div>
+   <div class="ind">18 °C to 95 °C</div>
+   <div><span class="vf">F</span>$\colorbox{#ffee58}{\(Q\)} = mc\,\colorbox{#b9f5b0}{\(\Delta T\)}$</div>
+   <div class="ind">$\colorbox{#b9f5b0}{\(\Delta T\)} = 95 - 18 = \colorbox{#b9f5b0}{\(77\)}$ K</div>
+   <div><span class="vf">S</span>$\colorbox{#ffee58}{\(Q\)} = 0.250 \times 4190 \times \colorbox{#b9f5b0}{\(77\)}$</div>
+   <div><span class="vf">S</span>$\colorbox{#ffee58}{\(Q\)} = 80\,658 \approx 8.1 \times 10^{4}$ J</div>
+   <div>It takes $8.1 \times 10^{4}$ J, or 81 kJ.</div>
+  </div>
+  <div class="bk" data-b="3"><div class="h">You try</div>
+   <div class="sp"></div>
+   <div>A 0.80 kg copper pan is heated from 20 °C</div>
+   <div>to 170 °C. How much energy does it take?</div>
+  </div>
+  <div class="bk" data-b="4">
+   <div><span class="vf">V</span>$m = 0.80$ kg, $c = 385$ J/(kg K)</div>
+   <div class="ind">20 °C to 170 °C</div>
+   <div><span class="vf">F</span>$\colorbox{#ffee58}{\(Q\)} = mc\,\colorbox{#b9f5b0}{\(\Delta T\)}$</div>
+   <div class="ind">$\colorbox{#b9f5b0}{\(\Delta T\)} = 170 - 20 = \colorbox{#b9f5b0}{\(150\)}$ K</div>
+   <div><span class="vf">S</span>$\colorbox{#ffee58}{\(Q\)} = 0.80 \times 385 \times \colorbox{#b9f5b0}{\(150\)}$</div>
+   <div><span class="vf">S</span>$\colorbox{#ffee58}{\(Q\)} = 46\,200 \approx 4.6 \times 10^{4}$ J</div>
+   <div>It takes $4.6 \times 10^{4}$ J, or 46 kJ.</div>
+  </div>
+  <div class="bk" data-b="5"><div class="wo">! Mass in kg and energy in J. Convert first.</div></div>
+ </div>
+</div>
+
+<div class="pagesrc" data-title="2A Thermal energy (page 4)">
+ <div class="col L">
+  <div class="bk" data-b="1"><div class="h">Heating ice to steam</div>
+   <div class="sp"></div>
+   <div><svg viewBox="0 0 418 266" style="height:calc(7*var(--u))"><path class="pc" d="M40 14V246H404"/><path d="M40 8 L35 20 L45 20z" fill="#444"/><path d="M410 246 L398 241 L398 251z" fill="#444"/>
+    <path class="pc" style="stroke-dasharray:5 6;stroke-width:1.4" d="M40 206H140 M40 86H230"/><text x="32" y="212" text-anchor="end">0</text><text x="32" y="92" text-anchor="end">100</text>
+    <text x="50" y="30">temperature (°C)</text><text x="404" y="236" text-anchor="end">time</text>
+    <path class="pc" style="stroke-width:3" d="M40 236L70 206H140L190 86H340L372 56"/>
+    <text x="74" y="234">ice</text><text x="105" y="196" text-anchor="middle">melting</text><text x="180" y="170">water</text><text x="265" y="76" text-anchor="middle">boiling</text><text x="350" y="94">steam</text></svg></div>
+   <div class="sp"></div>
+   <div>Sloping parts: $Q = mc\Delta T$</div>
+   <div>Flat parts: $Q = mL$</div>
+   <div class="sp"></div>
+   <div>Total: add the energy for each part.</div>
+  </div>
+  <div class="bk" data-b="5"><div class="wo">! Convert kJ/kg to J/kg before you add.</div></div>
+ </div>
+ <div class="col R">
+  <div class="bk" data-b="2"><div class="h">Worked example</div>
+   <div class="sp"></div>
+   <div>0.20 kg of ice at 0 °C melts, then the</div>
+   <div>water warms to 25 °C. Find the energy.</div>
+   <div class="sp"></div>
+   <div><span class="vf">V</span>$m = 0.20$ kg, $L = 334$ kJ/kg</div>
+   <div class="ind">$c = 4190$ J/(kg K), $\Delta T = 25$ K</div>
+   <div><span class="vf">F</span>$\colorbox{#ffee58}{\(Q\)} = m\colorbox{#b9f5b0}{\(L\)} + mc\Delta T$</div>
+   <div class="ind">$\colorbox{#b9f5b0}{\(L\)} = \colorbox{#b9f5b0}{\(334\,000\)}$ J/kg</div>
+   <div><span class="vf">S</span>$\colorbox{#ffee58}{\(Q\)} = 0.20 \times \colorbox{#b9f5b0}{\(334\,000\)}$</div>
+   <div class="ind">$+\ 0.20 \times 4190 \times 25$</div>
+   <div><span class="vf">S</span>$\colorbox{#ffee58}{\(Q\)} = 66\,800 + 20\,950 = 87\,750$ J</div>
+   <div>It takes $8.8 \times 10^{4}$ J, or 88 kJ.</div>
+  </div>
+  <div class="bk" data-b="3"><div class="h">You try</div>
+   <div class="sp"></div>
+   <div>0.40 kg of water at 30 °C is heated and</div>
+   <div>boiled away. Find the energy needed.</div>
+  </div>
+  <div class="bk" data-b="4">
+   <div><span class="vf">V</span>$m = 0.40$ kg, $c = 4190$ J/(kg K)</div>
+   <div class="ind">$\Delta T = 70$ K, $L = 2256$ kJ/kg</div>
+   <div><span class="vf">F</span>$\colorbox{#ffee58}{\(Q\)} = mc\Delta T + m\colorbox{#b9f5b0}{\(L\)}$</div>
+   <div class="ind">$\colorbox{#b9f5b0}{\(L\)} = \colorbox{#b9f5b0}{\(2\,256\,000\)}$ J/kg</div>
+   <div><span class="vf">S</span>$\colorbox{#ffee58}{\(Q\)} = 0.40 \times 4190 \times 70$</div>
+   <div class="ind">$+\ 0.40 \times \colorbox{#b9f5b0}{\(2\,256\,000\)}$</div>
+   <div><span class="vf">S</span>$\colorbox{#ffee58}{\(Q\)} = 117\,320 + 902\,400$</div>
+   <div class="ind">$= 1\,019\,720 \approx 1.0 \times 10^{6}$ J</div>
+   <div>It takes $1.0 \times 10^{6}$ J.</div>
+  </div>
+ </div>
+</div>
