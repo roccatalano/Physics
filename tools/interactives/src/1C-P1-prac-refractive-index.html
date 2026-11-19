@@ -1,0 +1,513 @@
+<!--{"id":"1C-P1-prac-refractive-index","section":"1C","title":"Practical 1C-1: Refractive index of an unknown material","criteria":["1C.4","1C.5"],
+"blurb":"A virtual rehearsal of the prac. Aim a ray into an unknown block, read the angles off the protractor yourself, graph the sines and find n from the gradient.",
+"source":"Follows the method of Cambridge VCE Physics Units 1&2, Practical 1C-1. Wording and data are the teacher's own.","colour":"#4ade80"}-->
+<style>
+.ix{padding:24px 56px 30px;gap:10px}
+.tools button:not(#tourbtn):not([title]){display:none}
+.prail{display:flex;gap:10px;align-items:center}
+.pstep{display:flex;align-items:center;gap:9px;padding:4px 16px 4px 5px;border-radius:999px;border:2px solid #36418a;background:transparent;color:#a5b4d8;font:600 17px Inter,sans-serif;min-height:42px}
+.pstep b{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#232c63;color:#cfd7f5;font:700 16px "Space Grotesk",sans-serif}
+.pstep.on{background:var(--c);border-color:var(--c);color:#0d1330}.pstep.on b{background:#0d1330;color:var(--c)}
+.pstep.done{border-color:var(--c);color:#eef2ff}.pstep.done b{background:transparent;color:var(--c);border:2px solid var(--c)}
+.pstep:disabled{opacity:.4;cursor:default}.pstep:disabled:hover{border-color:#36418a}
+.dset{margin-left:auto;font:700 19px "Space Grotesk",sans-serif;color:#fbb040}
+.pbody{flex:1;min-height:0;position:relative}
+.pst{position:absolute;inset:0;display:none;gap:14px}.pst.cur{display:flex}
+.col{display:flex;flex-direction:column;gap:12px;min-height:0}
+.pbar{display:flex;align-items:center;gap:12px;min-height:46px}
+.pmsg{flex:1;font-size:17px;line-height:1.3;color:#cfd7f5}.pmsg b{color:#fbb040}
+.pnav{display:flex;gap:10px}.pnav button,.pshow{min-height:44px;padding:7px 18px}
+.pshow{border-color:#fbb040}
+#next.go{background:var(--c);border-color:var(--c);color:#0d1330}
+button:disabled{opacity:.45;cursor:default}
+.card p,.card li{font-size:16px;line-height:1.4;color:#cfd7f5}.card b{color:#fff}
+.slot{display:flex;flex-direction:column;min-height:0}
+#benchcard{width:470px;height:100%;padding:10px 14px;display:flex;flex-direction:column}
+#bench{flex:1;min-height:0;width:100%;touch-action:none;outline:none}
+#bench:focus-visible{outline:2px solid var(--c);border-radius:8px}
+#zoomcard{padding:10px 14px;flex:none}
+#zslot1,#zslot2{flex:none}
+#zoom{width:100%;height:178px;display:block;border-radius:10px;border:2px solid #36418a;background:#121a42}
+.zb{display:flex;gap:6px;margin-top:8px}.zb button{flex:1;font-size:15px;padding:6px 4px;min-height:40px}
+.tray{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.tray button{font-size:15px;min-height:46px;padding:4px 6px;line-height:1.15}
+.tray button.used{opacity:.45;border-style:dashed}
+.todo{list-style:none;display:flex;flex-direction:column;gap:3px}
+.todo li{font-size:15px;line-height:1.35;color:#a5b4d8;padding-left:26px;position:relative}
+.todo li:before{content:attr(data-n);position:absolute;left:0;top:0;width:20px;text-align:center;font-weight:700;color:#5b6690}
+.todo li.now{color:#fff}.todo li.now:before{color:#fbb040}
+.todo li.ok{color:#a5b4d8}.todo li.ok:before{content:"✓";color:var(--c)}
+.note{font-size:16px;line-height:1.4;color:#cfd7f5}
+.safe{margin-top:8px;border:2px solid #fbb040;border-radius:12px;padding:8px 12px;font-size:15px;line-height:1.35;color:#fde68a}
+.chk{margin-top:8px}.chk .btns{margin-top:6px}.chk button{min-height:42px;font-size:15px}
+.pt{border-collapse:collapse;width:100%}
+.pt th{font:600 14px Inter,sans-serif;color:#a5b4d8;text-align:center;padding:3px 3px 5px;border-bottom:2px solid #36418a;line-height:1.2}
+.pt td{text-align:center;padding:2px 3px;border-bottom:1px solid #26306a;height:41px;font-size:17px}
+.pt td.a{font:700 18px "Space Grotesk",sans-serif;color:#fbb040}
+.pt td.m{font:600 17px "Space Grotesk",sans-serif;color:#fff}
+.pt input{width:76px;height:36px;font:600 18px Inter,sans-serif;color:#eef2ff;background:#0d1330;border:2px solid #36418a;border-radius:8px;text-align:center;-webkit-user-select:text;user-select:text}
+.pt input:focus{outline:none;border-color:var(--c)}
+input.bad{border-color:#f87171!important}input.ok{border-color:#4ade80!important}
+.pt tr.off td{color:#5b6690}
+.gi{display:grid;grid-template-columns:auto 1fr 1fr;gap:6px 8px;align-items:center;font-size:16px}
+.gi input{width:100%;min-width:0}
+.gi input,.ri{width:84px;height:40px;font:600 18px Inter,sans-serif;color:#eef2ff;background:#0d1330;border:2px solid #36418a;border-radius:8px;text-align:center;-webkit-user-select:text;user-select:text}
+.gi input:focus,.ri:focus{outline:none;border-color:var(--c)}
+.gi span{color:#a5b4d8}
+.fb{font-size:16px;line-height:1.4;margin-top:8px;min-height:22px}.fb.ok{color:#4ade80}.fb.no{color:#fca5a5}
+.mt{display:flex;flex-direction:column;gap:5px}
+.mt button{display:flex;justify-content:space-between;font-size:16px;min-height:40px;padding:6px 14px}
+.mt button.on{background:var(--c);border-color:var(--c);color:#0d1330}
+.lb{padding-left:24px;display:flex;flex-direction:column;gap:5px}
+.lb li{font-size:16px}.lb .ex{display:none;color:#86efac;font-size:15px;line-height:1.35;margin-top:2px}
+.lb.showex .ex{display:block}
+.big2{font:700 28px "Space Grotesk",sans-serif;color:#fff}
+#copybox{position:absolute;inset:120px 220px;background:#0b1029;border:2px solid var(--c);border-radius:16px;padding:16px;z-index:30;display:none;flex-direction:column;gap:10px}
+#copybox textarea{flex:1;font:15px/1.4 Consolas,monospace;background:#0d1330;color:#eef2ff;border:2px solid #36418a;border-radius:8px;padding:8px;-webkit-user-select:text;user-select:text}
+#print{display:none}
+.bare .ix{padding-bottom:44px}
+@media print{
+ @page{size:A4 portrait;margin:14mm}
+ html,body{height:auto!important;overflow:visible!important;background:#fff!important}
+ body{-webkit-user-select:auto}
+ #stage{display:none!important}
+ #print{display:block!important;color:#000;font-family:Inter,Arial,sans-serif;width:178mm}
+ #print h2{font:700 17pt "Space Grotesk",Arial,sans-serif;margin-bottom:2mm}
+ #print .pl{font-size:11pt;margin-bottom:4mm;display:flex;gap:8mm}
+ #print table{border-collapse:collapse;font-size:10.5pt;margin-bottom:4mm}
+ #print th,#print td{border:1px solid #000;padding:1.2mm 2.4mm;text-align:center}
+ #print th{background:#eee}
+ #print .pg{display:flex;gap:6mm;align-items:flex-start}
+ #print svg{width:96mm;height:96mm;flex:none}
+ #print .pw{font-size:10.5pt;line-height:1.5}
+ #print .sm{font-size:9pt;color:#333;margin-top:3mm}
+}
+</style>
+<div class="prail" id="prail">
+ <button class="pstep" data-i="0"><b>1</b>Set up</button>
+ <button class="pstep" data-i="1"><b>2</b>Measure</button>
+ <button class="pstep" data-i="2"><b>3</b>Analyse</button>
+ <button class="pstep" data-i="3"><b>4</b>Result</button>
+ <button class="pstep" data-i="4"><b>5</b>Log book</button>
+ <span class="dset" id="dset"></span>
+</div>
+<div class="pbody">
+ <!-- 1. Set up -->
+ <section class="pst" id="s1">
+  <div class="slot" id="slot1"></div>
+  <div class="col" style="width:310px">
+   <div class="slot" id="zslot1"></div>
+   <div class="card" style="flex:1;padding:12px 16px"><div class="note"><b>Aim:</b> find <i>n</i>, the refractive index of an unknown clear material. Full method: Cambridge Practical 1C-1.</div>
+    <div id="note1"></div></div>
+  </div>
+  <div class="col" style="flex:1">
+   <div class="card" style="padding:12px 16px"><h3>Equipment tray</h3><div class="tray" id="tray">
+    <button data-k="box">Light box</button><button data-k="slit">Slit plate</button><button data-k="sheet">Protractor sheet</button>
+    <button data-k="power">Power supply</button><button data-k="block">Block</button><button data-k="pencil">Pencil</button></div></div>
+   <div class="card" style="flex:1;padding:12px 16px"><h3>Set up the bench</h3><ol class="todo" id="todo"></ol></div>
+  </div>
+ </section>
+ <!-- 2. Measure -->
+ <section class="pst" id="s2">
+  <div class="slot" id="slot2"></div>
+  <div class="col" style="width:310px">
+   <div class="slot" id="zslot2"></div>
+   <div class="card" style="flex:1;padding:12px 16px">
+    <div class="note" style="font-size:15px"><i>θ</i><sub>1</sub>: angle of incidence, in air.<br><i>θ</i><sub>2</sub>: angle of refraction, in the block.<br>Both from the normal.</div>
+    <div class="note" style="margin-top:6px;color:#a5b4d8;font-size:15px">Read the middle of the ray. For trial 2, move the light box away and set it again.</div>
+    <div class="btns" style="margin-top:8px"><button id="nl" style="flex:1;min-height:42px">◀ Nudge</button><button id="nr" style="flex:1;min-height:42px">Nudge ▶</button></div>
+   </div>
+  </div>
+  <div class="card" style="flex:1;padding:12px 16px"><h3>Results (degrees)</h3>
+   <table class="pt" id="mtab"></table></div>
+ </section>
+ <!-- 3. Analyse -->
+ <section class="pst" id="s3">
+  <div class="card" style="width:452px;padding:12px 16px"><h3>Find the sines (calculator in degrees)</h3>
+   <table class="pt" id="atab"></table>
+   <div class="fb" id="afb"></div>
+   <button id="fill" style="display:none;margin-top:4px">Fill in the rest for me</button>
+  </div>
+  <div class="card" style="flex:1;padding:12px 16px;display:flex;gap:12px">
+   <svg id="graph" viewBox="0 0 440 440" style="width:430px;height:430px;flex:none;touch-action:none"></svg>
+   <div style="flex:1;display:flex;flex-direction:column;gap:8px">
+    <h3 style="margin:0">Gradient</h3>
+    <div class="note" style="font-size:15px">Drag the pink line to fit the points. It must pass through the origin. Then read two points off <b>your line</b>, far apart.</div>
+    <div class="gi"><span></span><span>sin <i>θ</i><sub>2</sub></span><span>sin <i>θ</i><sub>1</sub></span>
+     <span>Point 1</span><input id="gx1"><input id="gy1"><span>Point 2</span><input id="gx2"><input id="gy2"></div>
+    <div class="gi" style="grid-template-columns:1fr 1fr 1fr;gap:2px 6px"><span>rise</span><span>run</span><span>gradient</span><input id="grise"><input id="grun"><input id="ggrad"></div>
+    <button id="gchk" style="min-height:42px">Check my gradient</button>
+    <div class="fb" id="gfb" style="margin-top:0;font-size:15px"></div>
+   </div>
+  </div>
+ </section>
+ <!-- 4. Result -->
+ <section class="pst" id="s4">
+  <div class="card" style="width:540px;padding:12px 18px"><h3>Your value of n</h3>
+   <div class="note">The gradient of your graph is the refractive index: $n = \dfrac{\sin\theta_1}{\sin\theta_2}$</div>
+   <div style="display:flex;align-items:center;gap:12px;margin:8px 0 10px;font-size:20px"><span><i>n</i> =</span><input class="ri" id="rn"><span class="note" id="rgrad"></span></div>
+   <h3>Which material is it most likely to be?</h3>
+   <div class="mt" id="mt"></div>
+  </div>
+  <div class="card" style="flex:1;padding:12px 18px;display:flex;flex-direction:column;gap:10px"><h3>How close?</h3>
+   <button id="rchk" style="align-self:flex-start;min-height:44px">Check my result</button>
+   <div id="rout" class="out" style="font-size:19px;line-height:1.45"></div>
+   <button id="rrev" style="align-self:flex-start;min-height:44px" disabled>Show the material</button>
+   <div id="rrevo" style="font-size:18px;line-height:1.45"></div>
+   <div class="rule" style="margin-top:auto;font-size:17px">Percentage difference $= \dfrac{|\,n - n_{\text{accepted}}\,|}{n_{\text{accepted}}} \times 100\%$. Within about 3% is a good result for this method.</div>
+  </div>
+ </section>
+ <!-- 5. Log book -->
+ <section class="pst" id="s5">
+  <div class="card" style="flex:1;padding:12px 18px"><h3>Write these in your log book, in your own words</h3>
+   <ol class="lb" id="lb">
+    <li><b>Aim.</b> One sentence.<div class="ex">To find the refractive index of an unknown material from a graph of sin θ<sub>1</sub> against sin θ<sub>2</sub>.</div></li>
+    <li><b>Results.</b> Your table and graph. Print the results page and glue it in.</li>
+    <li><b>The ray.</b> What happened to it as it went from air into the block?<div class="ex">It slowed and bent towards the normal. A faint ray reflected off the flat face. It left the curved face without bending, because it travelled along a radius.</div></li>
+    <li><b>Why the sines?</b> Why not just graph θ<sub>1</sub> against θ<sub>2</sub>?<div class="ex">Snell's law says sin θ<sub>1</sub> = n sin θ<sub>2</sub>. The sines are proportional, so they give a straight line through the origin with gradient n. The angles are not proportional: their graph curves.</div></li>
+    <li><b>Sources of error.</b> Name two and say what each did to your readings.<div class="ex">The ray is about 2° wide, so its middle is hard to judge. The block may not sit exactly on the centre. The scale can only be read to about half a degree, and θ<sub>1</sub> is set by eye.</div></li>
+    <li><b>One improvement</b> and why it helps.<div class="ex">A narrower slit gives a thinner ray. Repeats and averages reduce random error. A larger protractor spreads the degrees further apart.</div></li>
+    <li><b>Conclusion.</b> Your n and what the material might be.</li>
+   </ol>
+  </div>
+  <div class="col" style="width:380px">
+   <div class="card" style="flex:1;padding:12px 18px"><h3>Your results</h3><div id="lbsum" class="note"></div></div>
+   <div class="card" style="padding:12px 18px"><h3>Save</h3><div class="btns" style="flex-direction:column;align-items:stretch">
+    <button id="bprint" style="min-height:44px">Print results page</button><button id="bcopy" style="min-height:44px">Copy my results</button></div>
+    <div class="fb" id="cpmsg"></div></div>
+  </div>
+ </section>
+</div>
+<div class="pbar"><div class="pmsg" id="msg"></div><button class="pshow" id="showme">Show me</button><div class="pnav"><button id="back">◀ Back</button><button id="next">Next ▶</button></div></div>
+<div id="copybox"><b>Select this text and copy it (Ctrl+C or long press).</b><textarea id="copyta" readonly></textarea><button id="copyclose" style="align-self:flex-end">Close</button></div>
+<div id="parked" style="display:none">
+ <div class="card" id="benchcard"><h3 style="margin-bottom:4px">Bench, seen from above</h3><svg id="bench" viewBox="0 0 520 520" tabindex="0"></svg></div>
+ <div class="card" id="zoomcard"><h3 style="margin-bottom:6px">Zoom on the scale</h3><svg id="zoom" viewBox="0 0 56 36"><use href="#scene"/></svg>
+  <div class="zb" id="zb"><button data-v="in">Ray in air</button><button data-v="out" class="on">Ray in block</button><button data-v="refl">Reflected</button></div></div>
+</div>
+<div id="print"></div>
+<script>
+// ---------- seed, noise and the unknown material ----------
+const Q=new URLSearchParams(location.search),NOISE=Q.get('noise')!=='0',TEST=Q.has('test');
+let SEED=parseInt(Q.get('seed'),10);if(!(SEED>=1000&&SEED<=9999))SEED=1000+crypto.getRandomValues(new Uint32Array(1))[0]%9000;
+function mulberry32(a){return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const gauss=R=>{let u=0;while(!u)u=R();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*R())};
+const R0=mulberry32(SEED),RJ=mulberry32(SEED*7919+13);
+const MATS=[['Ethanol (in a thin clear dish)',1.36],['Glycerol',1.47],['Perspex (acrylic)',1.49],['Crown glass',1.52],['Dense flint glass',1.63]];
+const PICK=[['Water',1.33],...MATS];
+const MAT=MATS[Math.floor(R0()*MATS.length)],NB=MAT[1];
+const DELTA=NOISE?Math.max(-.5,Math.min(.5,gauss(R0)*.3)):0;          // block sits slightly rotated: systematic, fixed per data set
+const nextJ=()=>NOISE?Math.max(-1,Math.min(1,gauss(RJ)*.4)):0;           // where the middle of a finite-width ray appears: new each time the box is set
+document.getElementById('dset').textContent='Data set '+SEED;
+const D2R=Math.PI/180,O={x:260,y:260},RBK=95,ANG=[10,20,30,40,50,60,70,80];
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const fmt=(v,d)=>(+(+v).toFixed(d)).toString();
+const num=s=>{s=String(s).trim().replace(',','.');if(!/^-?\d*\.?\d+$/.test(s))return NaN;return +s};
+const ST={step:0,reached:0,a:30,J:0,blk:null,pencil:null,set:{box:0,slit:0,sheet:0,power:0,normal:0,block:0,check:0,pencil:0},forced:0,chkAns:null,
+ rows:ANG.map(a=>({a,t:['',''],meta:[null,null]})),sinOK:false,filled:false,hd:{x:.5,y:.5},lineMoved:false,grad:null,guide:null,
+ n:null,pick:null,checked:false,revealed:false,zoom:'out',exOn:false};
+const msg=(h)=>{$('#msg').innerHTML=h||''};
+
+// ---------- the bench (one SVG scene, also shown magnified in the zoom panel) ----------
+const sv=$('#bench'),scene=el('g',{id:'scene'},sv);
+const defs=el('defs',{},sv);const cp=el('clipPath',{id:'rclip'},defs);el('circle',{cx:O.x,cy:O.y,r:240},cp);
+el('rect',{x:-200,y:-200,width:920,height:920,fill:'#121a42'},scene);
+const paper=el('g',{display:'none'},scene);
+el('circle',{cx:O.x,cy:O.y,r:206,fill:'#1d2654',stroke:'#3a4790','stroke-width':1.5},paper);
+const pencilP=el('path',{fill:'none',stroke:'#9aa3c7','stroke-width':1.1,'stroke-dasharray':'3 2.5',display:'none'},scene);
+const blockG=el('g',{display:'none'},scene);
+const BPATH=`M${-RBK},0A${RBK},${RBK} 0 0 0 ${RBK},0Z`;
+el('path',{d:BPATH,fill:'rgba(125,211,252,.14)',stroke:'#a5dcf7','stroke-width':1.6},blockG);
+el('line',{x1:0,y1:0,x2:0,y2:8,stroke:'#a5dcf7','stroke-width':1.4},blockG);
+const rayG=el('g',{'clip-path':'url(#rclip)'},scene);
+const scaleG=el('g',{display:'none'},scene);
+const tickC='#dfe5fb';
+el('circle',{cx:O.x,cy:O.y,r:172,fill:'none',stroke:tickC,'stroke-width':.9},scaleG);
+el('line',{x1:O.x-206,x2:O.x+206,y1:O.y,y2:O.y,stroke:tickC,'stroke-width':.9},scaleG);
+el('line',{x1:O.x,x2:O.x,y1:O.y-206,y2:O.y+206,stroke:tickC,'stroke-width':.8,'stroke-dasharray':'5 4'},scaleG);
+el('path',{d:`M${O.x-6},${O.y}H${O.x+6}M${O.x},${O.y-6}V${O.y+6}`,stroke:'#fff','stroke-width':1.2},scaleG);
+for(let d=0;d<360;d++){const v=d<=90?d:d<=180?180-d:d<=270?d-180:360-d,s=Math.sin(d*D2R),c=-Math.cos(d*D2R);
+ const r1=v%10===0?150:v%5===0?158:163;
+ el('line',{x1:O.x+r1*s,y1:O.y+r1*c,x2:O.x+172*s,y2:O.y+172*c,stroke:tickC,'stroke-width':v%10===0?.9:v%5===0?.7:.45},scaleG);
+ if(v%10===0)txt(scaleG,O.x+182*s,O.y+182*c+3.6,String(v),{fill:tickC,'font-size':10,'font-weight':600,'text-anchor':'middle'})}
+txt(scaleG,O.x+4,O.y-128,'normal',{fill:'#8b95c0','font-size':9,'font-weight':600});
+const boxG=el('g',{display:'none',style:'cursor:grab'},scene);
+el('rect',{x:O.x-17,y:O.y-254,width:34,height:58,rx:5,fill:'#56618f',stroke:'#eef2ff','stroke-width':1.5},boxG);
+el('rect',{x:O.x-12,y:O.y-250,width:24,height:13,rx:3,fill:'#3a4170'},boxG);
+const lampG=el('circle',{cx:O.x,cy:O.y-232,r:7,fill:'#3a4170'},boxG);
+const slitG=el('g',{display:'none'},boxG);
+el('rect',{x:O.x-17,y:O.y-200,width:34,height:5,fill:'#0b0f24'},slitG);
+const slitGap=el('rect',{x:O.x-1.2,y:O.y-200,width:2.4,height:5,fill:'#3a4170'},slitG);
+const cableG=el('path',{d:`M${O.x},${O.y-254}C${O.x},${O.y-275} ${O.x+30},${O.y-270} ${O.x+40},${O.y-290}`,fill:'none',stroke:'#0b0f24','stroke-width':3,display:'none'},boxG);
+// ray bands: three layers give a ray about 2 degrees wide at the scale with a brighter middle
+const LAY=[[7.5,.17],[4.4,.38],[1.7,.9]],RC='#fcd34d',pool=[];
+function band(){const g=el('g',{},rayG);return{g,ls:LAY.map(([w,o])=>el('line',{stroke:RC,'stroke-width':w,'stroke-opacity':o,'stroke-linecap':'butt'},g))}}
+function setBand(b,p,q,k){b.g.style.display='';b.ls.forEach((l,i)=>{l.setAttribute('x1',p.x);l.setAttribute('y1',p.y);l.setAttribute('x2',q.x);l.setAttribute('y2',q.y);l.setAttribute('stroke-opacity',LAY[i][1]*k)})}
+scaleG.after(boxG);
+const emptyT=txt(sv,260,250,'Empty bench. Take the equipment from the tray.',{fill:'#5b6690','font-size':17,'text-anchor':'middle'});
+function fres(n1,n2,ci,ct){const rs=((n1*ci-n2*ct)/(n1*ci+n2*ct))**2,rp=((n1*ct-n2*ci)/(n1*ct+n2*ci))**2;return(rs+rp)/2}
+// trace a ray from the light box through the block (flat face + curved face), with refraction, TIR and the first partial reflection
+function trace(a,blk,J){const s=Math.sin(a*D2R),c=Math.cos(a*D2R);let P={x:O.x-196*s,y:O.y-196*c},Dv={x:s,y:c},inside=false,segs=[],refl=null,first=true;
+ for(let it=0;it<10;it++){let best=null;
+  if(blk){const eu={x:Math.cos(blk.r*D2R),y:Math.sin(blk.r*D2R)},ev={x:-eu.y,y:eu.x},rx=P.x-blk.x,ry=P.y-blk.y;
+   const dv=Dv.x*ev.x+Dv.y*ev.y,pv=rx*ev.x+ry*ev.y;
+   if(Math.abs(dv)>1e-12){const t=-pv/dv;if(t>1e-6){const u=(rx+t*Dv.x)*eu.x+(ry+t*Dv.y)*eu.y;if(Math.abs(u)<=RBK)best={t,N:{x:-ev.x,y:-ev.y}}}}
+   const b=rx*Dv.x+ry*Dv.y,cc=rx*rx+ry*ry-RBK*RBK,di=b*b-cc;
+   if(di>=0){const q=Math.sqrt(di);for(const t of[-b-q,-b+q])if(t>1e-6){const qx=rx+t*Dv.x,qy=ry+t*Dv.y;if(qx*ev.x+qy*ev.y>=-1e-9&&(!best||t<best.t))best={t,N:{x:qx/RBK,y:qy/RBK}}}}}
+  if(!best){segs.push({p:P,q:{x:P.x+560*Dv.x,y:P.y+560*Dv.y},inside});break}
+  const H={x:P.x+best.t*Dv.x,y:P.y+best.t*Dv.y};segs.push({p:P,q:H,inside});
+  let N=best.N;if(Dv.x*N.x+Dv.y*N.y>0)N={x:-N.x,y:-N.y};
+  const n1=inside?NB:1,n2=inside?1:NB,eta=n1/n2,ci=-(Dv.x*N.x+Dv.y*N.y),k=1-eta*eta*(1-ci*ci),Rd={x:Dv.x+2*ci*N.x,y:Dv.y+2*ci*N.y};
+  if(k<0){Dv=Rd;P=H;first=false;continue}
+  const ct=Math.sqrt(k);let T={x:eta*Dv.x+(eta*ci-ct)*N.x,y:eta*Dv.y+(eta*ci-ct)*N.y};
+  if(first&&!inside){refl={p:H,d:Rd,R:fres(n1,n2,ci,ct)};if(J){const j=J*D2R,cj=Math.cos(j),sj=Math.sin(j);T={x:T.x*cj-T.y*sj,y:T.x*sj+T.y*cj}}}
+  first=false;Dv=T;P=H;inside=!inside}
+ return{segs,refl}}
+// where a path last crosses the circle of radius r (going outwards); angle measured from the downward normal
+function crossOut(segs,r){for(let i=segs.length-1;i>=0;i--){const{p,q}=segs[i],dx=q.x-p.x,dy=q.y-p.y,fx=p.x-O.x,fy=p.y-O.y,A=dx*dx+dy*dy,B=2*(fx*dx+fy*dy),C=fx*fx+fy*fy-r*r,di=B*B-4*A*C;
+ if(di<0)continue;const t=(-B+Math.sqrt(di))/(2*A);if(t>=0&&t<=1){const x=p.x+t*dx,y=p.y+t*dy;return{x,y,ang:Math.atan2(x-O.x,y-O.y)/D2R}}}return null}
+let TR=null;
+function redraw(){const S=ST.set;emptyT.style.display=S.box||S.sheet?'none':'';paper.setAttribute('display',S.sheet?'':'none');scaleG.setAttribute('display',S.sheet?'':'none');
+ boxG.setAttribute('display',S.box?'':'none');boxG.setAttribute('transform',`rotate(${-ST.a} ${O.x} ${O.y})`);
+ slitG.setAttribute('display',S.slit?'':'none');cableG.setAttribute('display',S.power?'':'none');
+ const on=S.box&&S.slit&&S.power;lampG.setAttribute('fill',on?'#fde68a':'#3a4170');slitGap.setAttribute('fill',on?'#fde68a':'#3a4170');
+ blockG.setAttribute('display',S.block?'':'none');if(ST.blk)blockG.setAttribute('transform',`translate(${ST.blk.x} ${ST.blk.y}) rotate(${ST.blk.r})`);
+ if(ST.pencil){pencilP.setAttribute('display','');pencilP.setAttribute('d',BPATH);pencilP.setAttribute('transform',`translate(${ST.pencil.x} ${ST.pencil.y}) rotate(${ST.pencil.r})`)}else pencilP.setAttribute('display','none');
+ pool.forEach(b=>b.g.style.display='none');TR=null;
+ if(on){TR=trace(ST.a,S.block?ST.blk:null,ST.J);let k=0;const R=TR.refl?TR.refl.R:0;
+  TR.segs.forEach((g,i)=>{if(!pool[k])pool.push(band());setBand(pool[k++],g.p,g.q,i===0?1:g.inside?.8*(1-R):(1-R))});
+  if(TR.refl){if(!pool[k])pool.push(band());const r=TR.refl;setBand(pool[k++],r.p,{x:r.p.x+340*r.d.x,y:r.p.y+340*r.d.y},Math.min(1,.12+2.2*r.R))}}
+ zoomTo()}
+// zoom panel: centred where the chosen ray crosses the scale
+const zsv=$('#zoom');
+function zoomTo(){const r=168,s=Math.sin(ST.a*D2R),c=Math.cos(ST.a*D2R);let p={x:O.x,y:O.y+r};
+ if(ST.zoom==='in')p={x:O.x-r*s,y:O.y-r*c};
+ else if(TR){if(ST.zoom==='out'){const q=crossOut(TR.segs,r);if(q)p=q}else if(TR.refl){const rr=TR.refl,seg=[{p:rr.p,q:{x:rr.p.x+340*rr.d.x,y:rr.p.y+340*rr.d.y}}],q=crossOut(seg,r);if(q)p=q}}
+ zsv.setAttribute("viewBox",`${(p.x-28).toFixed(2)} ${(p.y-18).toFixed(2)} 56 36`)}
+group('#zb button',v=>{ST.zoom=v;zoomTo()});
+const shown=()=>{if(!TR)return null;const q=crossOut(TR.segs,168);return q?q.ang:null};
+
+// ---------- dragging the light box and the block ----------
+const spt=e=>{const p=sv.createSVGPoint();p.x=e.clientX;p.y=e.clientY;return p.matrixTransform(sv.getScreenCTM().inverse())};
+const inBlock=p=>{if(!ST.set.block||!ST.blk)return false;const rx=p.x-ST.blk.x,ry=p.y-ST.blk.y,r=-ST.blk.r*D2R,u=rx*Math.cos(r)-ry*Math.sin(r),v=rx*Math.sin(r)+ry*Math.cos(r);return v>=-8&&u*u+v*v<=(RBK+6)**2};
+let drag=null;
+function angFrom(p){return Math.max(0,Math.min(88,Math.atan2(O.x-p.x,O.y-p.y)/D2R))}
+sv.addEventListener('pointerdown',e=>{const p=spt(e);
+ if(ST.step===0&&inBlock(p)&&!ST.anim){drag={k:'blk',dx:p.x-ST.blk.x,dy:p.y-ST.blk.y};}
+ else if(ST.set.box&&p.y<O.y-14&&(ST.step<=1)){drag={k:'box'};ST.a=angFrom(p);redraw()}
+ else return;
+ sv.setPointerCapture(e.pointerId);e.preventDefault()});
+sv.addEventListener('pointermove',e=>{if(!drag)return;const p=spt(e);
+ if(drag.k==='box'){ST.a=angFrom(p);redraw()}
+ else{ST.blk.x=Math.max(60,Math.min(460,p.x-drag.dx));ST.blk.y=Math.max(40,Math.min(470,p.y-drag.dy));redraw()}});
+const endDrag=()=>{if(!drag)return;const k=drag.k;drag=null;if(k==='box')settleBox();else dropBlock()};
+sv.addEventListener('pointerup',endDrag);sv.addEventListener('pointercancel',endDrag);
+function settleBox(){if(ST.step===0&&ST.a<1.5)ST.a=0;if(!NOISE)ST.a=Math.round(ST.a);ST.J=nextJ();redraw();afterBox()}
+let kT=null;sv.addEventListener('keydown',e=>{if(!ST.set.box||ST.step>1)return;if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;e.preventDefault();e.stopPropagation();nudge((e.key==='ArrowLeft'?1:-1)*(e.shiftKey?1:.25))});
+function nudge(d){ST.a=Math.max(0,Math.min(88,ST.a+d));redraw();clearTimeout(kT);kT=setTimeout(settleBox,350)}
+$('#nl').onclick=()=>nudge(.25);$('#nr').onclick=()=>nudge(-.25);
+function dropBlock(){const d=Math.hypot(ST.blk.x-O.x,ST.blk.y-O.y);if(d<7){ST.blk.x=O.x;ST.blk.y=O.y}ST.blk.r=DELTA;ST.chkAns=null;ST.set.check=0;ST.forced=0;redraw();upSetup()}
+function anim(from,to,ms,f,done){ST.anim=1;const t0=performance.now();(function s(now){const u=Math.min(1,(now-t0)/ms),e=u<.5?2*u*u:1-2*(1-u)*(1-u);f(from+(to-from)*e);if(u<1)requestAnimationFrame(s);else{ST.anim=0;done&&done()}})(t0)}
+
+// ---------- step 1: set up ----------
+const TODO=[['kit','Light box with the single slit plate'],['sheet','Protractor sheet in front of the box'],['power','Power on'],['normal','Aim the ray along the normal (0°)'],
+ ['block','Block on the protractor: flat face on the diameter line, centre mark on the centre'],['check','Check: the ray goes straight through'],['pencil','Pencil round the block']];
+const done1=k=>k==='kit'?ST.set.box&&ST.set.slit:ST.set[k];
+function upSetup(){ST.set.normal=ST.set.power&&ST.a===0?1:0;
+ let first=-1;$('#todo').innerHTML=TODO.map(([k,t],i)=>{const d=done1(k);if(!d&&first<0)first=i;return`<li data-n="${i+1}" class="${d?'ok':first===i?'now':''}">${t}</li>`}).join('');
+ $$('#tray button').forEach(b=>b.classList.toggle('used',!!ST.set[b.dataset.k]));
+ const n=$('#note1');let h='';
+ if(ST.set.power&&!ST.set.block)h=`<div class="safe"><b style="color:#fbb040">Safety.</b> The lamp end of the light box gets hot: move the box by its base. Keep water away from the power supply and switch it off when you finish.</div>`;
+ if(ST.set.block&&ST.set.normal&&!ST.set.check)h=`<div class="chk note">Zoom on the <b>ray in the block</b>. Does it leave on 0°?<div class="btns"><button id="cy">Yes</button><button id="cn">No, it bends</button></div><div id="cfb" class="fb"></div></div>`;
+ if(ST.set.block&&!ST.set.normal&&!ST.set.check)h=`<div class="note" style="margin-top:8px;color:#fde68a">Put the light box back on 0° to check the block.</div>`;
+ if(ST.set.check)h=ST.forced?`<div class="fb no">The block is not lined up. Expect your results to be off.</div>`:`<div class="fb ok">Lined up. The ray goes straight through.</div>`;
+ if(n.dataset.h!==h){n.innerHTML=h;n.dataset.h=h;if($('#cy')){$('#cy').onclick=()=>answer(true);$('#cn').onclick=()=>answer(false)}}
+ upNav()}
+function devAt0(){const t=trace(0,ST.blk,0),q=crossOut(t.segs,168);return q?Math.abs(q.ang):99}
+function answer(yes){const al=ST.blk.x===O.x&&ST.blk.y===O.y,dev=devAt0(),fb=$('#cfb');let h,ok=false;
+ if(al){if(yes){ok=true}else h='Look again in the zoom: the middle of the ray is on 0.'}
+ else if(dev>=.6){h=yes?'Look again: the ray does not leave on 0. Drag the block so its centre mark sits on the centre of the protractor.':'Right. Drag the block so its flat face is on the diameter line and its centre mark is on the centre, then check again.'}
+ else h='It goes straight through at 0°, but the block is not on the centre, so the ray will not meet the centre of the flat face at other angles. Move it.';
+ if(ok){ST.set.check=1;ST.forced=0;msg('');upSetup();return}
+ fb.innerHTML=h+' <button id="cgo" style="font-size:14px;min-height:40px;margin-top:4px">Go on anyway</button>';fb.className='fb no';
+ $('#cgo').onclick=()=>{ST.set.check=1;ST.forced=1;upSetup()}}
+function trayClick(k){const S=ST.set;
+ const need={slit:[S.box,'Put the light box on the bench first.'],power:[S.box&&S.slit,'Fit the slit plate to the light box first.'],sheet:[S.box,'Put the light box on the bench first.'],
+  block:[S.sheet&&S.power&&S.normal,'First lay the protractor, switch on and aim the ray along the normal.'],pencil:[S.block&&S.check,'Place and check the block first.']}[k];
+ if(need&&!need[0]){msg(need[1]);return}
+ if(S[k]&&k!=='pencil')return;
+ if(k==='box'){S.box=1;ST.a=30}
+ if(k==='slit')S.slit=1;if(k==='sheet')S.sheet=1;
+ if(k==='power'){S.power=1;ST.J=nextJ();msg('Switched on. Now drag the light box round to <b>0°</b>, along the normal. The zoom helps.')}
+ if(k==='block'){S.block=1;ST.blk={x:O.x+64,y:O.y+58,r:DELTA};msg('Drag the block into place: flat face on the diameter line, its centre mark on the centre.')}
+ if(k==='pencil'){S.pencil=1;ST.pencil={...ST.blk};msg('Outline drawn. If the block moves, you will see it.')}
+ if(k==='box')msg('The light box is on the bench. Next, fit the single slit plate.');
+ redraw();upSetup()}
+$$('#tray button').forEach(b=>b.onclick=()=>trayClick(b.dataset.k));
+function afterBox(){if(ST.step===0){upSetup();if(ST.set.normal&&!ST.set.block)msg('Along the normal: the ray carries straight on. Now place the block.')}
+ if(ST.step===1)upMeasure()}
+
+// ---------- step 2: measure ----------
+const mtab=$('#mtab');
+mtab.innerHTML=`<tr><th><i>θ</i><sub>1</sub></th><th><i>θ</i><sub>2</sub><br>trial 1</th><th><i>θ</i><sub>2</sub><br>trial 2</th><th>mean<br><i>θ</i><sub>2</sub></th></tr>`+
+ ANG.map((a,i)=>`<tr><td class="a">${a}°</td><td><input data-r="${i}" data-t="0" inputmode="decimal" aria-label="theta 2 trial 1 at ${a} degrees"></td><td><input data-r="${i}" data-t="1" inputmode="decimal" aria-label="theta 2 trial 2 at ${a} degrees"></td><td class="m" id="mean${i}"></td></tr>`).join('');
+const meanOf=r=>{const v=r.t.map(num).filter(x=>isFinite(x));return v.length?v.reduce((a,b)=>a+b)/v.length:null};
+function upMeasure(){ST.rows.forEach((r,i)=>{const m=meanOf(r);$('#mean'+i).textContent=m==null?'':fmt(m,2)});upNav()}
+$$('#mtab input').forEach(inp=>{const r=ST.rows[+inp.dataset.r],t=+inp.dataset.t;
+ inp.addEventListener('keydown',e=>{e.stopPropagation();if(e.key==='Enter'){const all=$$('#mtab input'),i=all.indexOf(inp);inp.blur();if(all[i+2])all[i+2].focus()}});
+ inp.addEventListener('focus',()=>{if(!ST.set.power)return;if(Math.abs(ST.a-r.a)>4)msg(`Your light box is not set near <b>${r.a}°</b>. Set it first, then read the ray.`);else msg('Read where the middle of the ray crosses the scale on the far side. Nearest half degree.')});
+ inp.addEventListener('input',()=>{const v=num(inp.value);r.t[t]=inp.value;inp.classList.toggle('bad',inp.value!==''&&!(v>=0&&v<=90));r.meta[t]=inp.value===''?null:{aSet:+ST.a.toFixed(3),shown:shown(),J:ST.J};upMeasure()})});
+const nRows=()=>ST.rows.filter(r=>meanOf(r)!=null).length;
+
+// ---------- step 3: analyse ----------
+const used=()=>ST.rows.filter(r=>meanOf(r)!=null).map(r=>{const m=meanOf(r);return{a:r.a,m,s1:Math.sin(r.a*D2R),s2:Math.sin(m*D2R)}});
+let SIN={};
+function buildA(){const U=used(),atab=$('#atab');
+ atab.innerHTML=`<tr><th><i>θ</i><sub>1</sub></th><th>mean <i>θ</i><sub>2</sub></th><th>sin <i>θ</i><sub>1</sub></th><th>sin <i>θ</i><sub>2</sub></th></tr>`+U.map((u,i)=>`<tr><td class="a">${u.a}°</td><td class="m">${fmt(u.m,2)}°</td>`+
+  (i===0?`<td><input id="sin1" inputmode="decimal" value="${SIN.s1||''}"></td><td><input id="sin2" inputmode="decimal" value="${SIN.s2||''}"></td>`:`<td>${ST.filled?u.s1.toFixed(3):''}</td><td>${ST.filled?u.s2.toFixed(3):''}</td>`)+`</tr>`).join('');
+ ['s1','s2'].forEach(k=>{const inp=$('#sin'+k[1]);inp.addEventListener('keydown',e=>{e.stopPropagation();if(e.key==='Enter')checkSin()});inp.addEventListener('change',checkSin);inp.addEventListener('input',()=>{SIN[k]=inp.value})});
+ if(ST.sinOK){$('#sin1').classList.add('ok');$('#sin2').classList.add('ok')}
+ $('#fill').style.display=ST.sinOK&&!ST.filled?'':'none';drawGraph($('#graph'),false)}
+function checkSin(){const U=used();if(!U.length)return;const u=U[0],fb=$('#afb');let all=true,h=[];
+ [['s1',u.s1,u.a],['s2',u.s2,u.m]].forEach(([k,tv,ang])=>{const inp=$('#sin'+k[1]),v=num(inp.value);if(inp.value===''){all=false;inp.classList.remove('ok','bad');return}
+  const ok=Math.abs(v-tv)<=.0055;inp.classList.toggle('ok',ok);inp.classList.toggle('bad',!ok);if(!ok){all=false;
+   if(Math.abs(v-Math.sin(ang))<.006)h.push(`sin ${fmt(ang,2)}: your calculator is in radians. Switch it to degrees.`);
+   else if(Math.abs(v-(k==='s1'?u.s2:u.s1))<.006)h.push('Check which angle goes in which column.');
+   else h.push(`sin ${fmt(ang,2)}° is not ${inp.value}. Try again, to 2 decimal places.`)}});
+ if(all){ST.sinOK=true;fb.className='fb ok';fb.innerHTML='Both correct. Do more yourself if you like, or let the page fill the rest.';$('#fill').style.display=ST.filled?'none':''}
+ else{fb.className='fb no';fb.innerHTML=h.join(' ')}
+ drawGraph($('#graph'),false)}
+$('#fill').onclick=()=>{ST.filled=true;$('#fill').style.display='none';$('#afb').className='fb';$('#afb').innerHTML='All points are on the graph.';buildA()};
+const GX=58,GY=392,GS=360,X=v=>GX+v*GS,Y=v=>GY-v*GS;
+function lineEnd(h){const g=h.y/h.x;return g>=1?{x:1/g,y:1}:{x:1,y:g}}
+function drawGraph(g,pr){g.innerHTML='';const ink=pr?'#000':'#eef2ff',mu=pr?'#000':'#a5b4d8';
+ for(let i=0;i<=50;i++){const v=i/50,maj=i%5===0;const st=pr?(maj?'#888':'#ddd'):(maj?'#3a4790':'#232c63');
+  el('line',{x1:X(v),x2:X(v),y1:Y(0),y2:Y(1),stroke:st,'stroke-width':maj?1:.6},g);el('line',{x1:X(0),x2:X(1),y1:Y(v),y2:Y(v),stroke:st,'stroke-width':maj?1:.6},g);
+  if(maj){txt(g,X(v),Y(0)+17,v.toFixed(1),{fill:mu,'font-size':12,'text-anchor':'middle','font-weight':600});if(i)txt(g,X(0)-6,Y(v)+4,v.toFixed(1),{fill:mu,'font-size':12,'text-anchor':'end','font-weight':600})}}
+ el('line',{x1:X(0),x2:X(1),y1:Y(0),y2:Y(0),stroke:ink,'stroke-width':1.6},g);el('line',{x1:X(0),x2:X(0),y1:Y(0),y2:Y(1),stroke:ink,'stroke-width':1.6},g);
+ txt(g,X(.5),436,'sin θ₂',{fill:ink,'font-size':15,'text-anchor':'middle','font-weight':700});
+ const yl=txt(g,16,Y(.5),'sin θ₁',{fill:ink,'font-size':15,'text-anchor':'middle','font-weight':700});yl.setAttribute('transform',`rotate(-90 16 ${Y(.5)})`);
+ const U=used();U.forEach((u,i)=>{if(!(ST.filled||(i===0&&ST.sinOK)))return;const x=X(u.s2),y=Y(u.s1);
+  if(pr)el('path',{d:`M${x-5},${y-5}L${x+5},${y+5}M${x-5},${y+5}L${x+5},${y-5}`,stroke:'#000','stroke-width':1.8},g);else el('circle',{cx:x,cy:y,r:5,fill:'#fbb040',stroke:'#0d1330','stroke-width':1.5},g)});
+ if(!ST.filled)return;
+ const e=lineEnd(ST.hd);el('line',{x1:X(0),y1:Y(0),x2:X(e.x),y2:Y(e.y),stroke:pr?'#000':'#f472b6','stroke-width':2.4},g);
+ if(ST.guide&&!pr){const q=ST.guide;el('path',{d:`M${X(q.x)},${Y(0)}V${Y(q.y)}H${X(0)}`,fill:'none',stroke:'#7dd3fc','stroke-width':1.6,'stroke-dasharray':'5 4'},g)}
+ [[gx1,gy1],[gx2,gy2]].forEach(([a,b])=>{const x=num(a.value),y=num(b.value);if(isFinite(x)&&isFinite(y)&&x>=0&&x<=1&&y>=0&&y<=1)el('circle',{cx:X(x),cy:Y(y),r:6,fill:'none',stroke:pr?'#000':'#7dd3fc','stroke-width':2},g)});
+ if(!pr){el('circle',{cx:X(ST.hd.x),cy:Y(ST.hd.y),r:24,fill:'#f472b6','fill-opacity':.12},g);el('circle',{cx:X(ST.hd.x),cy:Y(ST.hd.y),r:9,fill:'#f472b6',stroke:'#fff','stroke-width':2,style:'cursor:grab'},g)}}
+const gsv=$('#graph'),gx1=$('#gx1'),gy1=$('#gy1'),gx2=$('#gx2'),gy2=$('#gy2');let gdrag=false;
+const gpt=e=>{const p=gsv.createSVGPoint();p.x=e.clientX;p.y=e.clientY;const q=p.matrixTransform(gsv.getScreenCTM().inverse());return{x:Math.max(.05,Math.min(1,(q.x-GX)/GS)),y:Math.max(.05,Math.min(1,(GY-q.y)/GS))}};
+gsv.addEventListener('pointerdown',e=>{if(!ST.filled||ST.anim)return;gdrag=true;gsv.setPointerCapture(e.pointerId);ST.hd=gpt(e);ST.lineMoved=true;ST.guide=null;drawGraph(gsv,false)});
+gsv.addEventListener('pointermove',e=>{if(!gdrag)return;ST.hd=gpt(e);drawGraph(gsv,false)});
+gsv.addEventListener('pointerup',()=>{if(!gdrag)return;gdrag=false;sideHint()});
+function sideHint(){const U=used(),g=ST.hd.y/ST.hd.x;let up=0,dn=0;U.forEach(u=>{u.s1>g*u.s2?up++:dn++});
+ msg(up&&dn?'Points on both sides of your line. Good. Now read two points off the line.':up?'All the points are above your line. A best-fit line has points on both sides.':'All the points are below your line. A best-fit line has points on both sides.')}
+[gx1,gy1,gx2,gy2,$('#grise'),$('#grun'),$('#ggrad')].forEach(i=>{i.addEventListener('keydown',e=>{e.stopPropagation();if(e.key==='Enter')$('#gchk').click()});i.addEventListener('input',()=>{if(ST.filled)drawGraph(gsv,false)})});
+$('#gchk').onclick=()=>{const fb=$('#gfb'),g=ST.hd.y/ST.hd.x,v=[gx1,gy1,gx2,gy2,$('#grise'),$('#grun'),$('#ggrad')].map(i=>num(i.value));
+ const bad=h=>{fb.className='fb no';fb.innerHTML=h};
+ if(!ST.filled)return bad('Fill in the sines first so all your points are on the graph.');
+ if(v.slice(0,4).some(x=>!isFinite(x)))return bad('Enter both points first.');
+ const off=(x,y)=>Math.abs(y-g*x)/Math.sqrt(1+g*g);
+ if(off(v[0],v[1])>.015)return bad('Point 1 is not on your line. Read it again from the grid.');
+ if(off(v[2],v[3])>.015)return bad('Point 2 is not on your line. Read it again from the grid.');
+ if(Math.abs(v[2]-v[0])<.25)return bad('Choose points further apart along the line: it makes the gradient more precise.');
+ if(!isFinite(v[4])||Math.abs(v[4]-(v[3]-v[1]))>.002)return bad('Rise = (sin θ<sub>1</sub> of point 2) − (sin θ<sub>1</sub> of point 1). Check it.');
+ if(!isFinite(v[5])||Math.abs(v[5]-(v[2]-v[0]))>.002)return bad('Run = (sin θ<sub>2</sub> of point 2) − (sin θ<sub>2</sub> of point 1). Check it.');
+ if(!isFinite(v[6])||Math.abs(v[6]-v[4]/v[5])>Math.max(.006,.004*Math.abs(v[4]/v[5])))return bad('Gradient = rise divided by run. Check the division.');
+ ST.grad=v[6];fb.className='fb ok';fb.innerHTML=`Gradient = ${fmt(v[6],3)}. This is your value of <i>n</i>.`;ST.guide=null;drawGraph(gsv,false);upNav()};
+
+// ---------- step 4: result ----------
+$('#mt').innerHTML=PICK.map(([nm,n],i)=>`<button data-v="${i}"><span>${nm}</span><b>${n.toFixed(2)}</b></button>`).join('');
+group('#mt button',v=>{ST.pick=+v;ST.checked&&check4()});
+$('#rn').addEventListener('keydown',e=>{e.stopPropagation();if(e.key==='Enter')$('#rchk').click()});
+function check4(){const n=num($('#rn').value),o=$('#rout');
+ if(!(n>1&&n<3)){o.innerHTML='<span class="hi">Enter your value of n first (a number bigger than 1).</span>';return}
+ if(ST.pick==null){o.innerHTML='<span class="hi">Pick the material you think it is first.</span>';return}
+ ST.n=n;ST.checked=true;const pd=Math.abs(n-NB)/NB*100;ST.pd=pd;
+ o.innerHTML=`Your <i>n</i> = <b class="big2">${fmt(n,3)}</b><br>is <b class="big2" style="color:${pd<=3?'#4ade80':'#fbb040'}">${pd.toFixed(1)}%</b> from the accepted value for this block.<br>`+
+  (pd<=3?'<span class="gr">Good: within 3%.</span>':'<span class="hi">More than 3% off. Check your readings, your line and your rise and run.</span>');
+ $('#rrev').disabled=false;if(ST.revealed)reveal();upNav()}
+$('#rchk').onclick=check4;
+function reveal(){ST.revealed=true;const pk=PICK[ST.pick],near=PICK.reduce((b,p)=>Math.abs(p[1]-ST.n)<Math.abs(b[1]-ST.n)?p:b);
+ let h=`The block was <b class="gr">${MAT[0].toLowerCase()}</b>, <i>n</i> = ${NB.toFixed(2)}.<br>`;
+ if(pk[1]===NB)h+='Your pick matches.';
+ else{h+=`You picked ${pk[0].toLowerCase()} (${pk[1].toFixed(2)}). `;h+=pk!==near?`The closest value to your n is ${near[0].toLowerCase()} (${near[1].toFixed(2)}).`:''}
+ if(Math.abs(pk[1]-NB)<=.05&&pk[1]!==NB)h+=' Glycerol, perspex and crown glass are within 0.05 of each other. A result good to 2% or 3% cannot tell them apart.';
+ $('#rrevo').innerHTML=h}
+$('#rrev').onclick=reveal;
+
+// ---------- step 5: log book, print, copy ----------
+function tableRows(){return ST.rows.map(r=>{const m=meanOf(r);return{a:r.a,t1:r.t[0],t2:r.t[1],m,s1:Math.sin(r.a*D2R),s2:m==null?null:Math.sin(m*D2R)}})}
+function gradText(){const v=[gx1,gy1,gx2,gy2,$('#grise'),$('#grun'),$('#ggrad')].map(i=>i.value);return ST.grad==null?'not found yet':`points (${v[0]}, ${v[1]}) and (${v[2]}, ${v[3]}): rise ${v[4]}, run ${v[5]}, gradient ${v[6]}`}
+function buildSum(){$('#lbsum').innerHTML=`Data set <b>${SEED}</b><br>Angles measured: <b>${nRows()}</b> of 8<br>Gradient: <b>${ST.grad==null?'not found yet':fmt(ST.grad,3)}</b><br>Your n: <b>${ST.n==null?'not entered':fmt(ST.n,3)}</b><br>`+
+ (ST.checked?`Your pick: <b>${PICK[ST.pick][0]}</b><br>Difference from accepted value: <b>${ST.pd.toFixed(1)}%</b>`:'')+(ST.revealed?`<br>The block was: <b>${MAT[0]}</b>`:'')}
+function buildPrint(){const T=tableRows(),p=$('#print');
+ p.innerHTML=`<h2>Practical 1C-1: Refractive index of an unknown material</h2><div class="pl"><span>Name: ______________________________</span><span>Date: ____________</span><span>Data set ${SEED} (virtual rehearsal)</span></div>
+ <table><tr><th>θ<sub>1</sub> (°)</th><th>θ<sub>2</sub> trial 1 (°)</th><th>θ<sub>2</sub> trial 2 (°)</th><th>mean θ<sub>2</sub> (°)</th><th>sin θ<sub>1</sub></th><th>sin θ<sub>2</sub></th></tr>`+
+ T.map(r=>`<tr><td>${r.a}</td><td>${r.t1||''}</td><td>${r.t2||''}</td><td>${r.m==null?'':fmt(r.m,2)}</td><td>${r.m==null?'':r.s1.toFixed(3)}</td><td>${r.m==null?'':r.s2.toFixed(3)}</td></tr>`).join('')+`</table>
+ <div class="pg"><svg viewBox="0 0 440 440" id="pgraph"></svg><div class="pw"><b>Graph:</b> sin θ<sub>1</sub> (vertical) against sin θ<sub>2</sub> (horizontal), line of best fit through the origin.<br><br>
+ <b>Gradient:</b> ${gradText()}<br><br><b>n = ${ST.n==null?'____':fmt(ST.n,3)}</b><br>Most likely material: ${ST.pick==null?'____':PICK[ST.pick][0]}<br>`+
+ (ST.checked?`Difference from accepted value: ${ST.pd.toFixed(1)}%<br>`:'')+(ST.revealed?`The block was: ${MAT[0]} (n = ${NB.toFixed(2)})<br>`:'')+
+ `<div class="sm">θ<sub>1</sub>: angle of incidence in air. θ<sub>2</sub>: angle of refraction in the block. Both from the normal.<br>Done on the virtual prac page as a rehearsal. It does not replace the bench prac.</div></div></div>`;
+ const ff=ST.filled;ST.filled=true;drawGraph($('#pgraph'),true);ST.filled=ff;if(!ff)drawGraph($('#pgraph'),true)}
+function copyText(){const T=tableRows();return['Practical 1C-1: Refractive index of an unknown material (virtual rehearsal)','Data set '+SEED,'',
+ 'θ1 (°) | θ2 trial 1 | θ2 trial 2 | mean θ2 | sin θ1 | sin θ2',...T.map(r=>[r.a,r.t1||'-',r.t2||'-',r.m==null?'-':fmt(r.m,2),r.m==null?'-':r.s1.toFixed(3),r.m==null?'-':r.s2.toFixed(3)].join(' | ')),'',
+ 'Line of best fit: '+gradText(),'n = '+(ST.n==null?'not entered':fmt(ST.n,3)),'Most likely material: '+(ST.pick==null?'not chosen':PICK[ST.pick][0]),
+ ...(ST.checked?['Difference from accepted value: '+ST.pd.toFixed(1)+'%']:[]),...(ST.revealed?['The block was: '+MAT[0]]:[])].join('\n')}
+addEventListener('beforeprint',buildPrint);
+$('#bprint').onclick=()=>{buildPrint();window.print()};
+$('#bcopy').onclick=()=>{const t=copyText(),box=()=>{$('#copyta').value=t;$('#copybox').style.display='flex';$('#copyta').select()};
+ if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(()=>{$('#cpmsg').className='fb ok';$('#cpmsg').textContent='Copied. Paste it into your notes or an email to your teacher.'},box);else box()};
+$('#copyclose').onclick=()=>$('#copybox').style.display='none';
+
+// ---------- steps, navigation, Show me ----------
+const canNext=()=>[()=>TODO.every(([k])=>done1(k)),()=>nRows()>=5,()=>ST.grad!=null,()=>ST.checked,()=>false][ST.step]();
+function upNav(){$$('.pstep').forEach((b,i)=>{b.classList.toggle('on',i===ST.step);b.classList.toggle('done',i!==ST.step&&i<ST.reached);b.querySelector('b').textContent=i!==ST.step&&i<ST.reached?'✓':i+1;b.disabled=i>ST.reached});
+ $('#back').disabled=ST.step===0;$('#next').style.visibility=ST.step===4?'hidden':'';$('#next').classList.toggle('go',canNext())}
+function go(i){ST.step=i;ST.reached=Math.max(ST.reached,i);$$('.pst').forEach((s,k)=>s.classList.toggle('cur',k===i));msg('');
+ if(i<=1){$('#slot'+(i+1)).appendChild($('#benchcard'));$('#zslot'+(i+1)).appendChild($('#zoomcard'))}
+ if(i===0)upSetup();
+ if(i===1){if(ST.zoom!=='out')$('#zb [data-v=out]').click();upMeasure();msg('Choose a row. Drag the light box to that angle, then read <i>θ</i><sub>2</sub> where the ray crosses the scale.')}
+ if(i===2){buildA();msg(ST.filled?'':'Work out the first two sines yourself. Calculator in degrees, answer to 2 decimal places.')}
+ if(i===3){$('#rgrad').textContent=ST.grad==null?'':'(your gradient was '+fmt(ST.grad,3)+')'}
+ if(i===4)buildSum();
+ redraw();upNav()}
+$$('.pstep').forEach(b=>b.onclick=()=>{const i=+b.dataset.i;if(i<=ST.reached)go(i)});
+$('#back').onclick=()=>{if(ST.step>0)go(ST.step-1)};
+$('#next').onclick=()=>{if(canNext())go(ST.step+1);else msg(['Finish setting up the bench first: follow the list.','Measure at least five angles (all eight is better).','Find the gradient of your line first.','Enter your n, pick a material and press <b>Check my result</b>.'][ST.step])};
+function hl(sel){$$('.tourhl').forEach(e=>e.classList.remove('tourhl'));const e=$(sel);if(e){e.classList.add('tourhl');setTimeout(()=>e.classList.remove('tourhl'),2600)}}
+$('#showme').onclick=()=>{if(ST.anim)return;const S=ST.set;
+ if(ST.step===0){
+  if(!S.box)return trayClick('box');if(!S.slit)return trayClick('slit');if(!S.sheet)return trayClick('sheet');if(!S.power)return trayClick('power');
+  if(!S.normal){msg('Moving the light box round to 0°, along the normal.');return anim(ST.a,0,900,v=>{ST.a=v;redraw()},settleBox)}
+  if(!S.block)return trayClick('block');
+  if(ST.blk.x!==O.x||ST.blk.y!==O.y){const x0=ST.blk.x,y0=ST.blk.y;msg('Sliding the block so its centre mark sits on the centre.');return anim(0,1,900,u=>{ST.blk.x=x0+(O.x-x0)*u;ST.blk.y=y0+(O.y-y0)*u;redraw()},dropBlock)}
+  if(!S.check){$('#zb [data-v=out]').click();hl('#zoomcard');return msg('The zoom shows the ray in the block landing on 0°: it goes straight through. Press <b>Yes</b>.')}
+  if(!S.pencil)return trayClick('pencil');return msg('Set up is done. Press <b>Next</b>.')}
+ if(ST.step===1){const i=ST.rows.findIndex(r=>r.t[0]===''),j=i>=0?i:ST.rows.findIndex(r=>r.t[1]==='');if(j<0)return msg('All readings taken. Press <b>Next</b>.');
+  const r=ST.rows[j],trial=r.t[0]===''?0:1;msg(`Setting the light box to ${r.a}°. Now read the ray in the zoom and type it in the trial ${trial+1} box.`);
+  if(ST.zoom!=='out')$('#zb [data-v=out]').click();
+  return anim(ST.a,r.a,900,v=>{ST.a=v;redraw()},()=>{settleBox();const inp=$(`#mtab input[data-r="${j}"][data-t="${trial}"]`);inp.focus();hl('#zoomcard')})}
+ if(ST.step===2){const U=used();if(!U.length)return;
+  if(!ST.sinOK){$('#sin1').value=SIN.s1=U[0].s1.toFixed(2);msg(`sin ${U[0].a}° = ${U[0].s1.toFixed(4)}, so ${U[0].s1.toFixed(2)} to 2 decimal places. Now do sin ${fmt(U[0].m,2)}° yourself.`);return checkSin()}
+  if(!ST.filled)return $('#fill').click();
+  if(!ST.lineMoved){let a=0,b=0;U.forEach(u=>{a+=u.s1*u.s2;b+=u.s2*u.s2});const g=a/b,h0={...ST.hd},h1={x:.6,y:.6*g};msg('Turning the line so the points sit evenly on both sides.');
+   return anim(0,1,900,u=>{ST.hd={x:h0.x+(h1.x-h0.x)*u,y:h0.y+(h1.y-h0.y)*u};drawGraph(gsv,false)},()=>{ST.lineMoved=true;sideHint()})}
+  if(ST.grad==null){gx1.value=0;gy1.value=0;gx2.value='0.60';ST.guide={x:.6,y:.6*ST.hd.y/ST.hd.x};drawGraph(gsv,false);gy2.focus();
+   return msg('Point 1 can be (0, 0). For point 2, go up from 0.60 to your line, then across to read sin <i>θ</i><sub>1</sub>.')}
+  return msg('Gradient found. Press <b>Next</b>.')}
+ if(ST.step===3){if(ST.grad!=null&&$('#rn').value==='')$('#rn').value=fmt(ST.grad,3);hl('#mt');return msg('Your n is your gradient. Pick the material whose n is closest to yours, then press <b>Check my result</b>.')}
+ if(ST.step===4){ST.exOn=!ST.exOn;$('#lb').classList.toggle('showex',ST.exOn);msg(ST.exOn?'Example answers shown in green. Write your own, in your own words.':'')}};
+
+// ---------- start ----------
+document.body.appendChild($('#print'));
+$('#stage').appendChild($('#copybox'));
+go(0);
+window.TOUR=[
+ {say:'This page rehearses <b>Practical 1C-1</b>. You will find the refractive index of an unknown clear block, the same way you will at the bench.',hl:'.prail',top:true},
+ {say:'Five steps along the top. The green pill is where you are. You can go back to a finished step at any time.',hl:'.prail',top:true},
+ {say:'Start here. Take the equipment from the <b>tray</b> in the order of the list.',hl:'#tray',top:true},
+ {say:'The <b>zoom</b> shows the protractor scale up close. Use it to set and to read angles.',hl:'#zoomcard',top:true},
+ {say:'Stuck? <b>Show me</b> does the next action for you. When a step is done, press <b>Next</b>.',hl:'.pshow,.pnav',top:true}];
+addEventListener('load',()=>{const b=$('#tourbtn');if(b&&!Q.has('notour'))b.click()});
+if(TEST)window.__vp={ST,MAT,DELTA,SEED,trace,shown,crossOut,O};
+</script>
