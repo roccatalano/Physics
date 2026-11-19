@@ -110,7 +110,7 @@ SIMS.raybox=(host,o)=>{const mode=o.mode||(o.mystery?'mystery':'snell'),{c,cv,si
       'Now the ray starts inside the glass and goes up into air.',
       'Going into a lower $n$, the ray bends <b>away</b> from the normal. A weak ray also reflects back: <b>partial internal reflection</b>.',
       'As the angle grows, the ray in air swings down towards the surface and gets fainter. The reflected ray gets brighter.',
-      'At the <b>critical angle</b> $\\theta_c$ the ray in air skims along the surface: $\\theta_2 = 90°$. For this glass $\\theta_c = 41.8°$.',
+      'At the <b>critical angle</b> $\\theta_c$ the ray in air skims along the surface: $\\theta_2 = 90°$. For this glass, $\\theta_c = 41.8°$',
       'Past it, no light gets out. All of it reflects: <b>total internal reflection</b>.',
       '']}[mode];
   let sweep=0;
@@ -122,10 +122,10 @@ SIMS.raybox=(host,o)=>{const mode=o.mode||(o.mystery?'mystery':'snell'),{c,cv,si
   // a small graph of sin(theta1) against sin(theta2), in the lower left of the canvas
   const graph=()=>{const gx=26,gy=448,gw=170,gh=170;c.fillStyle='rgba(7,11,31,.92)';c.fillRect(gx-20,gy-gh-26,gw+34,gh+46);
     c.strokeStyle=C.mu;c.lineWidth=1.5;ln(c,gx,gy,gx+gw,gy);ln(c,gx,gy,gx,gy-gh);
-    txt(c,'sin θ₁',gx+4,gy-gh-10,C.mu,'600 12px Inter');txt(c,'sin θ₂',gx+gw,gy+16,C.mu,'600 12px Inter','right');txt(c,'0',gx-12,gy+14,C.mu,'600 11px Inter');txt(c,'1',gx-12,gy-gh+4,C.mu,'600 11px Inter');txt(c,'1',gx+gw-4,gy+14,C.mu,'600 11px Inter');
+    txt(c,'sin θ₁',gx+4,gy-gh-10,C.mu,'600 12px Inter');txt(c,'sin θ₂',gx+gw/2,gy+16,C.mu,'600 12px Inter','center');txt(c,'0',gx-12,gy+14,C.mu,'600 11px Inter');txt(c,'1',gx-12,gy-gh+4,C.mu,'600 11px Inter');txt(c,'1',gx+gw-4,gy+14,C.mu,'600 11px Inter');
     rows.forEach(r=>dot(c,gx+Math.sin(r[1]*D)*gw,gy-Math.sin(r[0]*D)*gh,4.5,C.am));
     if(fit&&rows.length){let sxy=0,sxx=0;rows.forEach(r=>{const x=Math.sin(r[1]*D),y=Math.sin(r[0]*D);sxy+=x*y;sxx+=x*x});const g=sxy/sxx,xm=Math.min(1,1/g);
-      c.strokeStyle=C.pk;c.lineWidth=2;ln(c,gx,gy,gx+xm*gw,gy-g*xm*gh);txt(c,'gradient = '+g.toFixed(2),gx+gw-4,gy-gh+24,C.pk,'700 14px Inter','right')}};
+      c.strokeStyle=C.pk;c.lineWidth=2;ln(c,gx,gy,gx+xm*gw,gy-g*xm*gh);txt(c,'gradient = '+g.toFixed(2),gx+gw-4,gy-18,C.pk,'700 14px Inter','right')}};
   loop(host,dt=>{stage();if(sweep&&k===2){th=Math.min(41,th+dt*2.5)}
     c.clearRect(0,0,W,H);const n1=up?nb:1,n2=up?1:nb,t1=th*D,s2=n1*Math.sin(t1)/n2,tir=s2>=1,t2=tir?Math.PI/2:Math.asin(s2),d=up?1:-1,R=fres(n1,n2,t1);
     c.fillStyle=`rgba(125,211,252,${(nb-1)*.16})`;c.fillRect(0,BY,W,H-BY);c.strokeStyle='#5b6aa8';c.lineWidth=2;ln(c,0,BY,W,BY);
@@ -218,7 +218,7 @@ SIMS.c1_fibre=(host,o)=>{const {c,side,W,H}=lab(host,800,470),N1=1.5,FX=130,FE=7
     c.strokeStyle='#5b6aa8';c.lineWidth=1.5;ln(c,FX,CT,FE,CT);ln(c,FX,CB,FE,CB);ln(c,FX,CL,FE,CL);ln(c,FX,CLB,FE,CLB);
     txt(c,'coating',FE-6,JT+12,C.mu,'600 12px Inter','right');txt(c,'cladding, n = '+n2.toFixed(2),FE-6,CL+20,C.mu,'600 13px Inter','right');txt(c,'core, n = 1.50',FE-6,CT+22,'#cfd7f5','600 13px Inter','right');
     // laser and entry
-    const L=150,lx=FX-L*Math.cos(al*D),ly=MY-L*Math.sin(al*D);c.save();c.translate(lx,ly);c.rotate(al*D);c.fillStyle='#e8ecff';c.fillRect(-44,-10,44,20);c.restore();
+    const L=Math.min(150,(MY-24)/Math.max(.01,Math.sin(al*D))),lx=FX-L*Math.cos(al*D),ly=MY-L*Math.sin(al*D);c.save();c.translate(lx,ly);c.rotate(al*D);c.fillStyle='#e8ecff';c.fillRect(-44,-10,44,20);c.restore();
     c.strokeStyle=C.pk;c.lineWidth=3.5;ln(c,lx,ly,FX,MY);
     c.setLineDash([5,5]);c.strokeStyle=C.mu;c.lineWidth=1.2;ln(c,FX-60,MY,FX+60,MY);c.setLineDash([]);
     if(al>0)txt(c,al+'°',FX-66,MY-6,C.am,'700 14px Inter','right');
