@@ -37,7 +37,7 @@ cfg='<script>const CHAPTER='+json.dumps({k:v for k,v in ch.items() if k!='sectio
 name=ch.get('file',f"Chapter {ch['code']} deck")
 page=f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chapter {ch['code']} {ch['title']}</title>
 <style>{FONTS}{kcss}{rd(os.path.join(H,'engine.css'))}</style></head><body><div id="stage">{''.join(body)}</div>
-<script>{rd(os.path.join(V,'katex.min.js'))}</script>{cfg}<script>{rd(os.path.join(H,'engine.js'))}</script><script>{rd(os.path.join(H,'sims.js'))}
+<script>{rd(os.path.join(V,'katex.min.js'))}</script>{cfg}<script>{rd(os.path.join(H,'engine.js'))}</script><script>{rd(os.path.join(H,'sims.js'))}{''.join(chr(10)+rd(os.path.join(H,f)) for f in sorted(os.listdir(H)) if f.startswith('sims-') and f.endswith('.js'))}
 init();</script></body></html>"""
 os.makedirs(OUT,exist_ok=True);out=os.path.join(OUT,name+'.html')
 open(out,'w',encoding='utf-8').write(page);print(os.path.normpath(out),len(page)//1024,'KB,',len(meta),'sections')
