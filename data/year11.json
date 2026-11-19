@@ -2582,6 +2582,10 @@
           {
            "id": "1C-4-optical-fibre",
            "title": "Optical fibre: total internal reflection"
+          },
+          {
+           "id": "1C-P1-prac-refractive-index",
+           "title": "Practical 1C-1: Refractive index of an unknown material"
           }
          ]
         }
@@ -3725,6 +3729,10 @@
           {
            "id": "2A-4-thermal-equilibrium",
            "title": "Reaching thermal equilibrium"
+          },
+          {
+           "id": "2A-P2-prac-specific-heat",
+           "title": "Practical 2A-2: Specific heat capacity of water"
           }
          ]
         },

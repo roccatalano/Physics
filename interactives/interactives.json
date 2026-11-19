@@ -469,6 +469,18 @@
   "colour": "#7dd3fc"
  },
  {
+  "id": "1C-P1-prac-refractive-index",
+  "section": "1C",
+  "title": "Practical 1C-1: Refractive index of an unknown material",
+  "criteria": [
+   "1C.4",
+   "1C.5"
+  ],
+  "blurb": "A virtual rehearsal of the prac. Aim a ray into an unknown block, read the angles off the protractor yourself, graph the sines and find n from the gradient.",
+  "source": "Follows the method of Cambridge VCE Physics Units 1&2, Practical 1C-1. Wording and data are the teacher's own.",
+  "colour": "#4ade80"
+ },
+ {
   "id": "2A-1-particle-temperature",
   "section": "2A",
   "title": "Temperature and moving particles",
@@ -519,6 +531,19 @@
   "blurb": "Drop a hot object into cool water. Heat flows until both reach the same temperature; energy lost equals energy gained.",
   "source": "Cambridge VCE Physics Units 1&2, 2A Thermal energy (pp. 7, 14–15). Insulated container: no energy lost to the surroundings. Cooling rate shape is illustrative.",
   "colour": "#4ade80"
+ },
+ {
+  "id": "2A-P2-prac-specific-heat",
+  "section": "2A",
+  "title": "Practical 2A-2: Specific heat capacity of water",
+  "criteria": [
+   "2A.5",
+   "2A.7",
+   "2A.9"
+  ],
+  "blurb": "Virtual rehearsal of the hotplate prac. Heat 200 mL of water in two beakers, graph temperature against time and use the gradient to find c. Then explain why the value comes out too high.",
+  "source": "Follows the method of Cambridge VCE Physics Units 1&2, Practical 2A-2. Wording and data are the teacher's own.",
+  "colour": "#fbb040"
  },
  {
   "id": "2B-1-blackbody-wien",
