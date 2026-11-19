@@ -1,0 +1,585 @@
+<!--{"id":"2A-P2-prac-specific-heat","section":"2A","title":"Practical 2A-2: Specific heat capacity of water","criteria":["2A.5","2A.7","2A.9"],
+"blurb":"Virtual rehearsal of the hotplate prac. Heat 200 mL of water in two beakers, graph temperature against time and use the gradient to find c. Then explain why the value comes out too high.",
+"source":"Follows the method of Cambridge VCE Physics Units 1&2, Practical 2A-2. Wording and data are the teacher's own.","colour":"#fbb040"}-->
+<style>
+.prow{display:flex;align-items:center;gap:14px}
+.prail{display:flex;gap:10px;flex:1}
+.pstep{display:flex;align-items:center;gap:9px;border-radius:999px;padding:5px 16px 5px 5px;background:transparent;border:2px solid #36418a;color:#a5b4d8;font-size:17px;min-height:42px}
+.pstep i{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#232c63;color:#eef2ff;font:700 16px Inter}
+.pstep.on{background:var(--c);border-color:var(--c);color:#0d1330}.pstep.on i{background:#0d1330;color:var(--c)}
+.pstep.done{border-color:var(--c);color:#eef2ff}.pstep.done i{background:var(--c);color:#0d1330}
+.pstep:disabled{opacity:.45;cursor:default}
+.dsn{font:700 16px Inter;color:#a5b4d8;white-space:nowrap}.dsn b{color:#fbb040}
+.pwrap{flex:1;min-height:0;position:relative}
+.pg{display:none;position:absolute;inset:0;gap:18px}.pg.on{display:flex}
+.pg .card{display:flex;flex-direction:column;min-height:0}
+.pbar{display:flex;align-items:center;gap:14px;min-height:46px}
+.pmsg{flex:1;font-size:17px;line-height:1.35;color:#cfd7f5;min-height:24px}
+.pmsg b{color:#fbb040}.pmsg.bad{color:#f9a8d4}.pmsg.ok{color:#86efac}
+.pnav{display:flex;gap:10px}
+.pnav button{min-height:42px;padding:7px 18px}
+button.pshow{border-color:#fbb040;color:#fbb040}
+button.pri{background:#fbb040;border-color:#fbb040;color:#0d1330}
+button:disabled{opacity:.4;cursor:default}
+button.sm{font-size:15px;padding:6px 10px;min-height:40px}
+.pin{font:600 18px Inter,sans-serif;width:96px;background:#0d1330;color:#fff;border:2px solid #36418a;border-radius:8px;padding:6px 8px;min-height:40px;-webkit-user-select:text;user-select:text}
+.pin:focus{outline:none;border-color:#fbb040}
+.pin.okb{border-color:#4ade80}.pin.badb{border-color:#f472b6}
+.tasks{display:flex;flex-direction:column;gap:7px;overflow:auto;flex:1;min-height:0;padding-right:4px}
+.tk{border:2px solid #2c3670;border-radius:12px;padding:7px 12px;font-size:16px;line-height:1.35;color:#a5b4d8}
+.tk>.tt{display:flex;gap:9px;align-items:center;font-weight:600}
+.tk>.tt i{font-style:normal;display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:26px;border-radius:50%;background:#232c63;color:#eef2ff;font:700 14px Inter}
+.tk.cur{border-color:#fbb040;color:#eef2ff;background:#141a40}
+.tk.ok>.tt i{background:#4ade80;color:#0d1330}
+.tk .tb{display:none;margin-top:7px;flex-direction:column;gap:7px}.tk.cur .tb{display:flex}
+.line{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:17px}
+.safe{border-left:4px solid #f472b6;padding:3px 0 3px 10px;font-size:15px;color:#f9a8d4;line-height:1.35}
+.note{font-size:15px;color:#a5b4d8;line-height:1.35}
+.fb{font-size:16px;min-height:20px;line-height:1.3}.tk .fb:empty{display:none}.fb.ok{color:#86efac}.fb.bad{color:#f9a8d4}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chips button{font-size:15px;padding:6px 11px;min-height:40px}
+table.rt{border-collapse:collapse;width:100%;font-size:16px}
+table.rt th{font:700 14px Inter;color:#a5b4d8;text-align:center;padding:4px;border-bottom:2px solid #36418a;position:sticky;top:0;background:#1a2150}
+table.rt td{text-align:center;padding:3px 4px;border-bottom:1px solid #232c63;font-variant-numeric:tabular-nums}
+table.rt td small{color:#5b6690;font-size:12px}
+.tscroll{overflow:auto;flex:1;min-height:0}
+.calc{display:grid;grid-template-columns:auto auto auto 1fr;gap:5px 8px;align-items:center;font-size:17px}
+.calc .fb{grid-column:1/-1;margin-top:-3px}
+.eq{font-size:17px;line-height:1.5;color:#cfd7f5}
+.prompts{font-size:17px;line-height:1.45;color:#cfd7f5;padding-left:22px;display:flex;flex-direction:column;gap:5px}
+.prompts b{color:#fff}
+.ebar{display:flex;height:34px;border-radius:8px;overflow:hidden;border:2px solid #36418a}
+.ebar span{height:100%}
+.eleg{display:grid;grid-template-columns:18px 1fr auto;gap:4px 8px;font-size:15px;align-items:center}
+.eleg i{width:14px;height:14px;border-radius:3px;display:block}
+#copybox{display:none;width:100%;height:90px;font:13px monospace;background:#0d1330;color:#eef2ff;border:2px solid #36418a;border-radius:8px;padding:6px;-webkit-user-select:text;user-select:text}
+#psheet{display:none}
+@media print{
+ @page{size:A4;margin:12mm}
+ html,body{height:auto!important;overflow:visible!important;background:#fff!important}
+ #stage{display:none!important}
+ #psheet{display:block!important;color:#000;font:11pt Arial,Helvetica,sans-serif;width:180mm}
+ #psheet h2{font:bold 15pt Arial;margin:0 0 2mm}
+ #psheet .pl{display:flex;justify-content:space-between;margin:0 0 3mm;font-size:10.5pt}
+ #psheet table{border-collapse:collapse;font-size:10pt;margin:0 0 3mm}
+ #psheet td,#psheet th{border:1px solid #000;padding:1mm 2.5mm;text-align:center}
+ #psheet .cols{display:flex;gap:5mm;align-items:flex-start}
+ #psheet svg{width:112mm;height:auto;border:1px solid #000}
+ #psheet .res{font-size:10.5pt;line-height:1.45}
+ #psheet .sm{font-size:9pt;color:#000}
+}
+</style>
+<div class="prow"><div class="prail" id="prail"></div><div class="dsn" id="dsno"></div></div>
+<div class="pwrap">
+ <!-- STEP 1 -->
+ <section class="pg" data-s="1">
+  <div class="card" id="scard1" style="width:700px;flex:none"><h3>Bench: side view</h3><div id="slot1" style="flex:1;min-height:0;display:flex"></div></div>
+  <div class="card" style="flex:1;min-width:0"><h3>Set up</h3>
+   <div class="note" style="margin-bottom:6px"><b style="color:#fff">Aim:</b> find the specific heat capacity of water from how fast a hotplate heats it, then explain the error.</div>
+   <div class="tasks" id="tasks1"></div>
+  </div>
+ </section>
+ <!-- STEP 2 -->
+ <section class="pg" data-s="2">
+  <div class="card" style="width:640px;flex:none"><h3 id="sh2">Bench: side view</h3><div id="slot2" style="flex:1;min-height:0;display:flex"></div></div>
+  <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:12px">
+   <div class="card" id="runcard" style="gap:7px"><h3 id="rh">Run</h3>
+    <div class="line"><span class="chips" id="bsel"><button class="sm" data-b="0">Beaker 1</button><button class="sm" data-b="1">Beaker 2</button></span><span class="note">Read every</span><span class="chips" id="isel"><button class="sm" data-v="60">1 min</button><button class="sm" data-v="30">30 s</button></span></div>
+    <div class="line runonly"><button id="bon" class="pri sm">Hotplate on</button><button id="bstir" class="sm">Stir</button><button id="bread" class="sm">Read thermometer (R)</button><button id="boff" class="sm">Turn off</button></div>
+    <div class="line runonly"><span class="chips" id="vsel"><button class="sm" data-v="10">Slow</button><button class="sm" data-v="4">Normal</button><button class="sm" data-v="2">Fast</button></span><button id="bpause" class="sm">Pause</button><button id="bredo" class="sm">Redo this beaker</button></div>
+    <div class="line" id="entry" style="display:none"><span id="snapt"></span><input class="pin" id="rin" inputmode="decimal" aria-label="thermometer reading" style="width:80px"> °C <button id="rok" class="pri sm">Write it down</button><button id="rcan" class="sm">Cancel</button></div>
+    <div class="fb" id="runfb"></div>
+   </div>
+   <div class="card" id="setup2" style="display:none;flex:1;min-height:0"><h3>Set up beaker 2</h3><div class="tasks" id="tasks2"></div></div>
+   <div class="card" id="tcard" style="flex:1;min-height:0"><h3>Results</h3><div class="tscroll"><table class="rt" id="rtab"></table></div></div>
+  </div>
+ </section>
+ <!-- STEP 3 -->
+ <section class="pg" data-s="3">
+  <div class="card" style="width:700px;flex:none;gap:6px"><h3>Temperature against time</h3>
+   <svg id="gsv" viewBox="0 0 700 330" style="width:100%;flex:1;min-height:0;touch-action:none"></svg>
+   <div class="rule" style="font-size:16px;padding:7px 12px;line-height:1.5">$Q$ energy (J), $m$ mass (kg), $c$ specific heat capacity (J/(kg K)), $\Delta T$ temperature change (°C or K, the same size), $P$ power (W), $t$ time (s).<br>$Q = mc\Delta T$ and $Q = Pt$, so $Pt = mc\Delta T$, so $\frac{\Delta T}{t} = \frac{P}{mc}$, so $c = \frac{P}{m \times \text{gradient}}$</div>
+  </div>
+  <div class="card" style="flex:1;min-width:0;gap:8px;overflow:hidden auto"><h3>Gradient, power and mass</h3>
+   <div class="chips" id="gsel"><button class="sm" data-b="0">Beaker 1</button><button class="sm" data-b="1">Beaker 2</button></div>
+   <div class="note" id="gnote">Drag the two handles onto the straight middle part of the points. Then read two points on your line, far apart.</div>
+   <div class="line"><span>rise</span><input class="pin" id="grise" inputmode="decimal"><span>°C</span><span style="width:8px"></span><span>run</span><input class="pin" id="grun" inputmode="decimal"><span>s</span></div>
+   <div class="line"><span>gradient</span><input class="pin" id="ggr" inputmode="decimal"><span>°C/s</span><button class="sm" id="gchk">Check</button></div>
+   <div class="fb" id="gfb"></div>
+   <div class="line"><span><i>P</i> =</span><input class="pin" id="gP" inputmode="decimal"><span>W</span><button class="sm" id="Pchk">Check</button><span class="fb" id="Pfb"></span></div>
+   <div class="line"><span><i>m</i> =</span><input class="pin" id="gm" inputmode="decimal"><span>kg</span><button class="sm" id="mchk">Check</button></div>
+   <div class="fb" id="mfb"></div>
+  </div>
+ </section>
+ <!-- STEP 4 -->
+ <section class="pg" data-s="4">
+  <div class="card" style="width:640px;flex:none;gap:10px"><h3>Specific heat capacity</h3>
+   <div class="eq">$c = \frac{P}{m \times \text{gradient}}$ &nbsp;&nbsp; Percentage error $= \frac{|c - 4180|}{4180} \times 100\%$</div>
+   <div id="cb0"></div><div id="cb1"></div>
+   <div class="note" id="cnote"></div>
+  </div>
+  <div class="card" style="flex:1;min-width:0;gap:8px"><h3>Where did the energy go?</h3>
+   <div class="chips" id="esel"><button class="sm" data-b="0">Beaker 1</button><button class="sm" data-b="1">Beaker 2</button></div>
+   <div id="eout" class="note">Check your values of <i>c</i> first, then pick a beaker.</div>
+  </div>
+ </section>
+ <!-- STEP 5 -->
+ <section class="pg" data-s="5">
+  <div class="card" style="width:640px;flex:none"><h3>Write in your log book</h3>
+   <ol class="prompts">
+    <li><b>Aim</b> in one sentence, and the hotplate power in W.</li>
+    <li><b>Table</b> of temperature against time for both beakers.</li>
+    <li><b>Graphs</b> of temperature (°C) against time (s), with your lines of best fit and gradients.</li>
+    <li><b>Both values of <i>c</i></b>, with working, and the percentage error for each.</li>
+    <li><b>Why is <i>c</i> too high?</b> Name where the hotplate's energy went other than into the water.</li>
+    <li><b>Why do the beakers differ?</b> Think about the base area, the glass and the open water surface.</li>
+    <li><b>Thermometer near the bottom:</b> what does it read, and why?</li>
+    <li><b>Improvements:</b> give two, and say how each reduces the error.</li>
+   </ol>
+  </div>
+  <div class="card" style="flex:1;min-width:0;gap:8px"><h3>Your results</h3>
+   <div id="sumout" class="note" style="font-size:16px;color:#cfd7f5"></div>
+   <div class="btns"><button id="bprint" class="pri">Print results page</button><button id="bcopy">Copy my results</button></div>
+   <div class="note" id="copyfb"></div>
+   <textarea id="copybox" readonly></textarea>
+   <div class="note">This page is a rehearsal. The full method is in the Cambridge prac document.</div>
+  </div>
+ </section>
+</div>
+<div class="pbar"><div class="pmsg" id="pmsg"></div><div class="pnav"><button class="pshow" id="pshow">Show me</button><button id="pback">Back</button><button id="pnext" class="pri">Next</button></div></div>
+<div id="psheet"></div>
+<script>
+// ===================== seed, random numbers =====================
+const QS=new URLSearchParams(location.search);
+let SEED=parseInt(QS.get('seed'),10);
+if(!(SEED>=0&&SEED<=9999))SEED=1000+crypto.getRandomValues(new Uint32Array(1))[0]%9000;
+const NOISE=QS.get('noise')!=='0';
+function mb32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function gaussOf(r){return()=>{let u=0;while(!u)u=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*r())}}
+const Rset=mb32(SEED*7919+17);
+const P=[600,750,1000][Math.floor(Rset()*3)];
+const TROOM=Math.round((18+Rset()*6)*10)/10;
+const MODEL='HP-'+(200+Math.floor(Rset()*700));
+const Rpour=mb32(SEED*104729+3);
+const DS=String(SEED).padStart(4,'0');
+document.getElementById('dsno').innerHTML='Data set <b>'+DS+'</b>';
+// ===================== physics =====================
+// Lumped model, SI units. Plate: heat capacity Cp, electrical power P in, loses to the beaker base (conductance hc x contact area)
+// and to the air (ha x exposed area). Water + glass: one lump. Water loses to the room through sides and top, and by evaporation.
+const PH={R:0.08,Cp:200,hc:500,ha:40,Aex:0.02,cg:830,cw:4180,hw:12,ke:55,kB:5.1e-5};
+const BK=[{n:1,cap:250,ro:3.5,ri:3.35,h:9.5,mg:0.10},{n:2,cap:800,ro:5.0,ri:4.85,h:13.5,mg:0.25}];
+const psat=T=>0.61094*Math.exp(17.625*T/(T+243.04)); // kPa
+function overlap(r1,r2,d){d=Math.abs(d);if(d>=r1+r2)return 0;if(d<=Math.abs(r1-r2))return Math.PI*Math.min(r1,r2)**2;
+ const a=r1*r1*Math.acos((d*d+r1*r1-r2*r2)/(2*d*r1)),c=r2*r2*Math.acos((d*d+r2*r2-r1*r1)/(2*d*r2));return a+c-0.5*Math.sqrt((-d+r1+r2)*(d+r1-r2)*(d-r1+r2)*(d+r1+r2))}
+// ===================== scene geometry (px; 9 px per cm) =====================
+const K=9,PX=340,PTOP=339,BENCH=380,GLASS=2.7;
+const ST={step:1,maxStep:1,active:0,standX:615,bulbY:190,powerOk:false,cyl:0,pour:0,cool:false,speed:4,interval:60,stirAnim:0,runs:0,
+ b:[0,1].map(i=>({x:170,V:0,Vrec:null,poured:false,run:null,rd:{},line:null,g:null,gIn:null,Pok:false,mIn:null,mok:false,c:null,cok:false,pct:false}))};
+const thermoX=()=>ST.standX-200;
+const beakerY=i=>Math.abs(ST.b[i].x-PX)<=72?PTOP:BENCH;
+const onPlateC=i=>ST.b[i].x===PX;
+function geom(i){const B=BK[i],b=ST.b[i],m=b.V/1000,on=beakerY(i)===PTOP;
+ const Aov=on?overlap(B.ro/100,PH.R,(b.x-PX)/K/100):0,Ap=Math.PI*PH.R**2,At=Math.PI*(B.ri/100)**2,d=b.V/(Math.PI*B.ri**2);
+ return{m,Aov,Gc:PH.hc*Aov,Ga:PH.ha*(Ap-Aov+PH.Aex),At,d,Aside:2*Math.PI*B.ri/100*d/100,Cw:m*PH.cw+B.mg*PH.cg}}
+function bulbZ(i){return(beakerY(i)-GLASS-ST.bulbY)/K} // cm above the inside bottom
+function inBeaker(i){return Math.abs(thermoX()-ST.b[i].x)<BK[i].ri*K-6}
+function submerged(i){const z=bulbZ(i),d=geom(i).d;return inBeaker(i)&&ST.b[i].poured&&z+0.6<=d+0.01}
+function newRun(i){const r=mb32(SEED*31+i*977+(ST.runs++)*7);return{t:0,on:false,done:false,Tp:TROOM,Tw:TROOM,S:0,f:0,Td:TROOM,stir:0,qc:0,rate:0,
+ E:{in:0,air:0,side:0,evap:0},g:gaussOf(r),snap:null,warn:''}}
+function bulbT(R,i){const g=geom(i),z=bulbZ(i);
+ const air=TROOM+0.4*(R.Tw-TROOM);
+ if(!inBeaker(i)||!ST.b[i].poured)return TROOM+(beakerY(i)===PTOP&&Math.abs(thermoX()-PX)<72?0.15*(R.Tp-TROOM)*Math.max(0,1-(PTOP-ST.bulbY)/150):0);
+ const strat=R.S*(Math.min(z,g.d)/g.d-0.5);
+ const Bmax=g.Aov>0?PH.kB*Math.max(0,R.qc)/g.Aov*(R.stir>0?0.6:1):0;
+ let w=R.Tw+strat+Bmax*Math.exp(-(z-0.6)/0.4)+R.f;
+ const sub=Math.max(0,Math.min(1,(g.d-(z-0.6))/1.2)); // fraction of the bulb under water
+ return Math.min(99.3,sub*w+(1-sub)*air)}
+function stepRun(R,i,dt){const g=geom(i),Pin=R.on&&!R.done?P:0;
+ const qc=g.Gc*(R.Tp-R.Tw),qa=g.Ga*(R.Tp-TROOM),ql=PH.hw*(g.Aside+g.At)*(R.Tw-TROOM),qe=g.At*PH.ke*Math.max(0,psat(R.Tw)-0.5*psat(TROOM));
+ R.Tp+=(Pin-qc-qa)/PH.Cp*dt;const rate=(qc-ql-qe)/g.Cw;R.Tw+=rate*dt;R.qc=qc;R.rate=rate;
+ R.E.in+=Pin*dt;R.E.air+=qa*dt;R.E.side+=ql*dt;R.E.evap+=qe*dt;
+ if(R.stir>0){R.S+=-R.S/1.5*dt;R.stir-=dt}else R.S+=(12*(g.d/5.67)*Math.max(0,rate)-R.S)/30*dt;
+ if(NOISE)R.f+=-R.f/4*dt+0.3*Math.sqrt(2*dt/4)*R.g();
+ R.Td+=(bulbT(R,i)-R.Td)*(1-Math.exp(-dt/3));
+ if(Pin)R.t+=dt}
+// ===================== helpers =====================
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const num=v=>{const x=parseFloat(String(v).replace(',','.').replace(/\s/g,''));return isFinite(x)?x:NaN};
+const mmss=t=>{t=Math.max(0,Math.round(t));return Math.floor(t/60)+':'+String(t%60).padStart(2,'0')};
+const fmt=(v,d)=>(+v).toFixed(d);
+function say(h,k){const m=$('#pmsg');m.innerHTML=h||'';m.className='pmsg'+(k?' '+k:'')}
+function fb(id,h,ok){const e=$('#'+id);e.innerHTML=h||'';e.className='fb'+(ok===true?' ok':ok===false?' bad':'')}
+function mark(inp,ok){inp.classList.toggle('okb',ok===true);inp.classList.toggle('badb',ok===false)}
+// ===================== scene =====================
+const sc=document.createElementNS(NS,'svg');sc.setAttribute('viewBox','0 0 660 412');sc.id='scene';sc.style.cssText='width:100%;height:100%;touch-action:none;display:block';
+const G={};
+(function build(){
+ el('rect',{x:0,y:BENCH,width:660,height:32,fill:'#2a3366'},sc);
+ // stand
+ G.stand=el('g',{style:'cursor:ew-resize'},sc);
+ G.sbase=el('rect',{y:BENCH-8,width:90,height:8,rx:2,fill:'#5b6690'},G.stand);
+ G.srod=el('rect',{y:50,width:8,height:BENCH-58,fill:'#8b95c4'},G.stand);
+ G.shit=el('rect',{y:40,width:60,height:BENCH-40,fill:'transparent'},G.stand);
+ // hotplate
+ el('rect',{x:PX-90,y:PTOP+6,width:180,height:BENCH-PTOP-6,rx:5,fill:'#3b4470',stroke:'#5b6690','stroke-width':2},sc);
+ G.plate=el('rect',{x:PX-72,y:PTOP,width:144,height:7,rx:2,fill:'#4b5563'},sc);
+ G.glow=el('rect',{x:PX-74,y:PTOP-3,width:148,height:10,rx:4,fill:'#ef4444','fill-opacity':0},sc);
+ G.lamp=el('circle',{cx:PX-70,cy:PTOP+22,r:5,fill:'#3f1d1d'},sc);
+ el('circle',{cx:PX+68,cy:PTOP+22,r:8,fill:'#232c63',stroke:'#a5b4d8','stroke-width':2},sc);
+ G.knob=el('line',{x1:PX+68,y1:PTOP+22,x2:PX+68,y2:PTOP+15,stroke:'#fff','stroke-width':2.5},sc);
+ el('rect',{x:PX-22,y:PTOP+14,width:44,height:16,rx:2,fill:'#9ca3af'},sc);
+ // cylinder
+ G.cylg=el('g',{},sc);
+ const cx=70,cri=16.6,ctop=BENCH-8-222;
+ el('rect',{x:cx-30,y:BENCH-8,width:60,height:8,rx:2,fill:'#5b6690'},G.cylg);
+ G.cylw=el('rect',{x:cx-cri,width:2*cri,fill:'#38bdf8','fill-opacity':.45},G.cylg);
+ el('path',{d:`M${cx-cri-2} ${ctop} V${BENCH-8} H${cx+cri+2} V${ctop}`,fill:'none',stroke:'#cfe8ff','stroke-width':2.5,'stroke-opacity':.85},G.cylg);
+ for(let v=50;v<=250;v+=10){const y=BENCH-8-v*0.837;el('line',{x1:cx-cri,x2:cx-cri+(v%50?5:10),y1:y,y2:y,stroke:'#cfe8ff','stroke-width':1,'stroke-opacity':.7},G.cylg);if(v%50===0)txt(G.cylg,cx-cri+12,y+4,v,{'font-size':10,fill:'#cfe8ff','font-weight':400})}
+ txt(G.cylg,cx,BENCH+15,'cylinder',{'text-anchor':'middle','font-size':12,fill:'#a5b4d8','font-weight':600});
+ G.cyl={cx,cri};
+ // beakers
+ G.bk=BK.map((B,i)=>{const g=el('g',{style:'cursor:grab'},sc);const w=B.ro*K,h=B.h*K,ri=B.ri*K;
+  const water=el('rect',{x:-ri,width:2*ri,fill:'#38bdf8','fill-opacity':.45},g);
+  el('path',{d:`M${-w-4} ${-h} Q${-w} ${-h} ${-w} ${-h+4} V-2 Q${-w} 0 ${-w+3} 0 H${w-3} Q${w} 0 ${w} -2 V${-h}`,fill:'#cfe8ff','fill-opacity':.06,stroke:'#cfe8ff','stroke-width':2.5,'stroke-opacity':.9},g);
+  for(let k=1;k<=(i?7:4);k++){const v=k*(i?100:50),y=-GLASS-v/(Math.PI*B.ri**2)*K;if(-y<h-6){el('line',{x1:-w+3,x2:-w+(k%2?9:13),y1:y,y2:y,stroke:'#cfe8ff','stroke-width':1,'stroke-opacity':.6},g)}}
+  const lab=txt(g,0,24,'beaker '+B.n+', '+B.cap+' mL',{'text-anchor':'middle','font-size':12,fill:'#a5b4d8','font-weight':600});
+  const bub=[...Array(6)].map(()=>el('circle',{r:1.6,fill:'#e0f2fe','fill-opacity':0},g));
+  el('rect',{x:-w-6,y:-h-6,width:2*w+12,height:h+10,fill:'transparent'},g);
+  return{g,water,bub,w,h,ri,lab}});
+ G.steam=el('path',{fill:'none',stroke:'#e0f2fe','stroke-width':2,'stroke-opacity':0,'stroke-linecap':'round'},sc);
+ G.rod=el('line',{stroke:'#cfe8ff','stroke-width':3,'stroke-opacity':0,'stroke-linecap':'round'},sc);
+ // thermometer + clamp
+ G.th=el('g',{style:'cursor:ns-resize'},sc);
+ G.arm=el('rect',{height:6,fill:'#8b95c4'},sc);G.boss=el('rect',{width:16,height:14,rx:2,fill:'#5b6690'},sc);G.jaw=el('rect',{width:16,height:14,rx:3,fill:'#5b6690'},sc);
+ G.stem=el('rect',{width:8,rx:4,fill:'#e5edff','fill-opacity':.85},G.th);
+ G.bulb=el('ellipse',{rx:4.5,ry:6,fill:'#ef4444'},G.th);
+ G.col=el('rect',{width:2.6,fill:'#ef4444'},G.th);
+ G.thit=el('rect',{width:44,fill:'transparent'},G.th);
+ // clock
+ G.clk=el('g',{},sc);el('rect',{x:470,y:8,width:178,height:40,rx:8,fill:'#0b1029',stroke:'#36418a','stroke-width':2},G.clk);
+ txt(G.clk,482,34,'lab clock',{'font-size':13,fill:'#a5b4d8'});G.clkt=txt(G.clk,636,37,'0:00',{'font-size':26,'font-family':'Space Grotesk','text-anchor':'end',fill:'#fbb040','font-weight':700});
+ // close-up of the thermometer
+ G.mag=el('g',{},sc);el('rect',{x:8,y:8,width:150,height:300,rx:10,fill:'#0b1029',stroke:'#36418a','stroke-width':2},G.mag);
+ G.magtt=txt(G.mag,83,28,'close-up',{'text-anchor':'middle','font-size':14,fill:'#a5b4d8'});
+ G.magclip=el('clipPath',{id:'mclip'},sc);el('rect',{x:14,y:38,width:138,height:262},G.magclip);
+ G.magin=el('g',{'clip-path':'url(#mclip)'},G.mag);
+ G.magbox=el('rect',{x:8,y:8,width:150,height:300,rx:10,fill:'none',stroke:'#fbb040','stroke-width':3,'stroke-opacity':0},G.mag);
+ el('line',{x1:14,x2:152,y1:169,y2:169,stroke:'#fbb040','stroke-width':1,'stroke-dasharray':'3 4','stroke-opacity':.35},G.mag);
+ // close-up of the cylinder
+ G.cmag=el('g',{},sc);el('rect',{x:108,y:8,width:170,height:230,rx:10,fill:'#0b1029',stroke:'#36418a','stroke-width':2},G.cmag);
+ txt(G.cmag,193,28,'at eye level (mL)',{'text-anchor':'middle','font-size':13,fill:'#a5b4d8'});
+ el('clipPath',{id:'cclip'},sc).appendChild(el('rect',{x:114,y:36,width:158,height:196}));
+ G.cmagin=el('g',{'clip-path':'url(#cclip)'},G.cmag);
+ // hint arrow
+ G.hint=el('g',{'pointer-events':'none'},sc);G.hintt=txt(G.hint,0,0,'',{'font-size':14,fill:'#fbb040','text-anchor':'middle','font-weight':700});
+ G.hinta=el('path',{fill:'#fbb040'},G.hint);
+})();
+function drawMagThermo(T,snap){const g=G.magin;g.innerHTML='';const cy=169,k=16; // px per degree
+ el('rect',{x:62,y:30,width:42,height:280,fill:'#e5edff','fill-opacity':.92},g);
+ el('rect',{x:80,y:cy-(-T)*0-0,width:7,height:400,fill:'#dc2626'},g).setAttribute('y',cy);
+ const lo=Math.floor(T-9),hi=Math.ceil(T+9);
+ for(let v=lo;v<=hi;v++){const y=cy-(v-T)*k,L=v%10===0?20:v%5===0?14:8;el('line',{x1:62,x2:62+L,y1:y,y2:y,stroke:'#0d1330','stroke-width':v%5===0?2:1.2},g);
+  if(v%10===0)txt(g,112,y+6,v,{'font-size':17,fill:'#eef2ff','font-weight':700})}
+ G.magbox.setAttribute('stroke-opacity',snap?1:0)}
+function drawMagCyl(V){const g=G.cmagin;g.innerHTML='';const cy=150,k=3.2,L0=162,L1=252;// px per mL; the bottom of the meniscus sits at the true volume
+ el('rect',{x:L0,y:36,width:L1-L0,height:200,fill:'#cfe8ff','fill-opacity':.06},g);
+ const yS=cy-(V-200)*k;
+ if(V>0){el('path',{d:`M${L0} ${yS-10} Q${L0+8} ${yS} ${(L0+L1)/2} ${yS} Q${L1-8} ${yS} ${L1} ${yS-10} V300 H${L0}Z`,fill:'#38bdf8','fill-opacity':.45},g);
+  el('path',{d:`M${L0} ${yS-10} Q${L0+8} ${yS} ${(L0+L1)/2} ${yS} Q${L1-8} ${yS} ${L1} ${yS-10}`,fill:'none',stroke:'#e0f2fe','stroke-width':2},g)}
+ for(let v=Math.floor(V/2)*2-40;v<=V+40;v+=2){const y=cy-(v-200)*k,L=v%10===0?40:20;el('line',{x1:L0,x2:L0+L,y1:y,y2:y,stroke:'#eef2ff','stroke-width':v%10===0?2:1},g);
+  if(v%10===0)txt(g,L0-5,y+5,v,{'font-size':14,fill:'#eef2ff','text-anchor':'end'})}
+ el('line',{x1:L0,x2:L0,y1:36,y2:240,stroke:'#cfe8ff','stroke-width':2.5},g);el('line',{x1:L1,x2:L1,y1:36,y2:240,stroke:'#cfe8ff','stroke-width':2.5},g);
+ }
+function hint(x,y,s){if(!s){G.hint.setAttribute('opacity',0);return}G.hint.setAttribute('opacity',.5+.5*Math.abs(Math.sin(performance.now()/350)));
+ G.hintt.setAttribute('x',x);G.hintt.setAttribute('y',y-16);G.hintt.textContent=s;G.hinta.setAttribute('d',`M${x-7} ${y-10}H${x+7}L${x} ${y}Z`)}
+function curRun(){const b=ST.b[ST.active];return b.run}
+function drawScene(){const i=ST.active,b=ST.b[i],R=b.run,tx=thermoX();
+ // stand
+ G.sbase.setAttribute('x',ST.standX-25);G.srod.setAttribute('x',ST.standX-4);G.shit.setAttribute('x',ST.standX-30);
+ const clampY=ST.bulbY-150;G.arm.setAttribute('x',tx);G.arm.setAttribute('width',ST.standX-tx);G.arm.setAttribute('y',clampY-3);
+ G.boss.setAttribute('x',ST.standX-8);G.boss.setAttribute('y',clampY-7);G.jaw.setAttribute('x',tx-8);G.jaw.setAttribute('y',clampY-7);
+ // thermometer
+ G.stem.setAttribute('x',tx-4);G.stem.setAttribute('y',ST.bulbY-178);G.stem.setAttribute('height',176);
+ G.bulb.setAttribute('cx',tx);G.bulb.setAttribute('cy',ST.bulbY);G.thit.setAttribute('x',tx-22);G.thit.setAttribute('y',ST.bulbY-180);G.thit.setAttribute('height',190);
+ const Td=R?R.Td:TROOM,ch=Math.max(0,(Td+10)/120*150);G.col.setAttribute('x',tx-1.3);G.col.setAttribute('y',ST.bulbY-6-ch);G.col.setAttribute('height',ch);
+ // plate
+ const Tp=R?R.Tp:TROOM,hot=Math.max(0,Math.min(1,(Tp-60)/300));G.glow.setAttribute('fill-opacity',hot*.7);
+ G.lamp.setAttribute('fill',R&&R.on&&!R.done?'#ef4444':'#3f1d1d');G.knob.setAttribute('x2',R&&R.on&&!R.done?PX+75:PX+68);G.knob.setAttribute('y2',R&&R.on&&!R.done?PTOP+20:PTOP+15);
+ // beakers
+ G.bk.forEach((o,k)=>{const show=k===i;o.g.style.display=show?'':'none';if(!show)return;const by=beakerY(k),bb=ST.b[k];
+  o.g.setAttribute('transform',`translate(${bb.x},${by})`);o.lab.style.display=by===PTOP?'none':'';const d=bb.V/(Math.PI*BK[k].ri**2)*K;
+  o.water.setAttribute('y',-GLASS-d);o.water.setAttribute('height',Math.max(0,d));
+  const hotB=R&&R.qc>40?Math.min(1,R.qc/500):0;o.bub.forEach((c,j)=>{const ph=(performance.now()/700+j*0.37)%1;c.setAttribute('cx',(j-2.5)*o.ri/3.2);c.setAttribute('cy',-GLASS-2-ph*Math.min(d-2,14));c.setAttribute('fill-opacity',d>0?hotB*(1-ph)*.9:0)})});
+ // steam and stirring rod
+ if(R&&R.Tw>65&&b.poured){const by=beakerY(i),top=by-BK[i].h*K,t=performance.now()/600,a=Math.min(.5,(R.Tw-65)/50);let p='';
+  for(let s=-1;s<=1;s++){const x0=b.x+s*BK[i].ro*K*.45;p+=`M${x0} ${top-4}`;for(let k=1;k<=6;k++)p+=`L${x0+5*Math.sin(t+k+s)} ${top-4-k*7}`}
+  G.steam.setAttribute('d',p);G.steam.setAttribute('stroke-opacity',a)}else G.steam.setAttribute('stroke-opacity',0);
+ if(R&&R.stir>0||ST.stirAnim>0){const by=beakerY(i),dx=Math.sin(performance.now()/120)*BK[i].ri*K*.55;G.rod.setAttribute('x1',b.x+dx);G.rod.setAttribute('x2',b.x+dx*.3+12);G.rod.setAttribute('y1',by-GLASS-3);G.rod.setAttribute('y2',by-BK[i].h*K-22);G.rod.setAttribute('stroke-opacity',.9)}else G.rod.setAttribute('stroke-opacity',0);
+ // cylinder
+ const showCyl=ST.step===1||(ST.step===2&&settingUp2());G.cylg.style.display=showCyl?'':'none';
+ G.cylw.setAttribute('y',BENCH-8-ST.cyl*0.837);G.cylw.setAttribute('height',ST.cyl*0.837);
+ const curT=curTask();G.cmag.style.display=showCyl&&curT==='fill'?'':'none';if(showCyl&&curT==='fill')drawMagCyl(ST.cyl);
+ // run view
+ const runView=ST.step===2&&!settingUp2();G.mag.style.display=runView?'':'none';G.clk.style.display=runView?'':'none';
+ if(runView&&R){const snap=R.snap;drawMagThermo(snap?snap.shown:R.Td,!!snap);G.magtt.textContent=snap?'read at '+mmss(snap.t)+' (°C)':'close-up (°C)';G.clkt.textContent=mmss(R.t)}
+ // drag hints
+ let h=null;if(ST.step===1||settingUp2()){if(curT==='stand')h=[ST.standX+10,180,'drag'];else if(curT==='transfer'&&b.poured&&!onPlateC(i))h=[b.x,beakerY(i)-BK[i].h*K-14,'drag'];else if(curT==='thermo')h=[tx+30,ST.bulbY-190,'drag'];}
+ if(h)hint(...h);else hint()}
+// ===================== dragging in the scene =====================
+let drag=null;
+function svgPt(e,svg){const p=svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;return p.matrixTransform(svg.getScreenCTM().inverse())}
+function canSetup(){return ST.step===1||settingUp2()}
+function raiseThermo(){const i=ST.active,top=Math.min(beakerY(i)-BK[i].h*K-8,ST.bulbY);if(ST.bulbY>top)ST.bulbY=Math.max(120,top)}
+sc.addEventListener('pointerdown',e=>{const p=svgPt(e,sc),i=ST.active,t=e.target,R=ST.b[i].run;
+ if(!canSetup()){if(ST.step===2&&R&&!R.on&&G.th.contains(t)){drag={k:'th',dy:p.y-ST.bulbY};sc.setPointerCapture(e.pointerId);e.preventDefault()}return}
+ if(G.th.contains(t))drag={k:'th',dy:p.y-ST.bulbY};else if(G.stand.contains(t))drag={k:'st',dx:p.x-ST.standX};else if(G.bk[i].g.contains(t)&&ST.b[i].poured)drag={k:'bk',dx:p.x-ST.b[i].x};
+ else if(G.bk[i].g.contains(t)){say('Pour the water into the beaker first, on the bench.');return}
+ if(drag){sc.setPointerCapture(e.pointerId);e.preventDefault()}});
+sc.addEventListener('pointermove',e=>{if(!drag)return;const p=svgPt(e,sc),i=ST.active,b=ST.b[i];
+ if(drag.k==='st'){raiseThermo();let x=Math.max(470,Math.min(625,p.x-drag.dx));if(Math.abs(x-200-PX)<7)x=PX+200;ST.standX=x}
+ if(drag.k==='bk'){raiseThermo();let x=Math.max(140,Math.min(420,p.x-drag.dx));if(Math.abs(x-PX)<=4.5)x=PX;b.x=x}
+ if(drag.k==='th'){let y=p.y-drag.dy;const by=beakerY(i);let lo;
+  if(inBeaker(i))lo=by-GLASS-0.6*K;else if(Math.abs(thermoX()-b.x)<BK[i].ro*K+6)lo=by-BK[i].h*K-8;else if(Math.abs(thermoX()-PX)<92)lo=PTOP-30;else lo=BENCH-12;
+  ST.bulbY=Math.max(130,Math.min(lo,y))}
+ refreshTasks()});
+const endDrag=()=>{if(drag){drag=null;refreshTasks()}};sc.addEventListener('pointerup',endDrag);sc.addEventListener('pointercancel',endDrag);
+// ===================== set-up tasks =====================
+const TASKS={
+ power:{t:'Read the rating plate',done:()=>ST.powerOk,body:()=>`<svg viewBox="0 0 230 74" style="width:230px;height:74px"><rect x="2" y="2" width="226" height="70" rx="8" fill="#c7cbd6" stroke="#6b7280" stroke-width="2"/><text x="14" y="22" font-size="13" font-weight="700" fill="#111">LAB HOTPLATE   ${MODEL}</text><text x="14" y="42" font-size="13" fill="#111">230 V~   50 Hz</text><text x="14" y="62" font-size="17" font-weight="700" fill="#111">${(P/1000).toFixed(P%100?2:1)} kW</text><text x="216" y="62" font-size="11" fill="#333" text-anchor="end">Class I</text></svg>
+  <div class="line">Power <i>P</i> = <input class="pin" id="tpow" inputmode="decimal"> W <button class="sm" id="tpowc">Check</button></div><div class="fb" id="tpowfb"></div>
+  <div class="safe">Mains electricity: dry hands, cord clear of the water, plate switched off at the wall when you finish.</div>`,
+  wire:()=>{const go=()=>{const v=num($('#tpow').value);if(Math.abs(v-P)<0.5){ST.powerOk=true;say('Good. 1 kW = 1000 W.','ok');refreshTasks()}else{mark($('#tpow'),false);fb('tpowfb',isFinite(v)&&Math.abs(v-P/1000)<1e-6?'That is in kW. Write it in W: 1 kW = 1000 W.':'Read the power on the plate, then change kW to W.',false)}};$('#tpowc').onclick=go;$('#tpow').onkeydown=e=>{if(e.key==='Enter')go()}}},
+ stand:{t:'Clamp over the centre of the plate',done:()=>thermoX()===PX,body:()=>`<div class="note">Drag the retort stand left or right until the thermometer clamp is above the centre of the hotplate.</div>`},
+ cool:{t:'Let the plate cool',done:()=>ST.cool,body:()=>`<div class="note">The plate is still hot from beaker 1. Leave it to cool back to room temperature, so beaker 2 starts the same way beaker 1 did. A warm plate would heat the water faster at the start.</div><div class="safe">Do not touch the plate or beaker 1. They stay hot for a long time.</div><div class="line"><button class="sm pri" id="tcool">The plate has cooled</button></div>`,
+  wire:()=>{$('#tcool').onclick=()=>{ST.cool=true;say('Fresh, cool start.');refreshTasks()}}},
+ fill:{t:'Measure 200 mL of water',done:()=>ST.b[ST.active].Vrec!=null,body:()=>`<div class="note">Hold <b>Pour</b> to fill the measuring cylinder. Use the small buttons to get close to 200 mL. Read the bottom of the curved surface at eye level.</div>
+  <div class="line"><button class="sm pri" id="tpour" style="touch-action:none">Hold to pour</button><button class="sm" id="tdrop">Add a little</button><button class="sm" id="tout">Tip a little out</button></div>
+  <div class="line">The cylinder reads <input class="pin" id="tvol" inputmode="decimal" style="width:80px"> mL <button class="sm" id="tvolc">Check</button></div><div class="fb" id="tvolfb"></div>
+  <div class="safe">Keep water away from the hotplate.</div>`,
+  wire:()=>{const pb=$('#tpour');pb.onpointerdown=e=>{e.preventDefault();ST.pour=1;pb.setPointerCapture(e.pointerId)};const stop=()=>{ST.pour=0};pb.onpointerup=stop;pb.onpointercancel=stop;pb.onlostpointercapture=stop;
+   $('#tdrop').onclick=()=>{ST.cyl=Math.min(250,ST.cyl+1+Math.round(Rpour()*20)/10)};$('#tout').onclick=()=>{ST.cyl=Math.max(0,ST.cyl-(3+Math.round(Rpour()*40)/10))};
+   const go=()=>{const v=num($('#tvol').value),a=ST.cyl;if(!isFinite(v)){fb('tvolfb','Type the reading in mL.',false);return}
+    if(Math.abs(v-a)>2){mark($('#tvol'),false);fb('tvolfb','Look again. Read the bottom of the curve. Each small mark is 2 mL.',false);return}
+    if(v<190||v>210){fb('tvolfb','Aim for 200 mL. Add or tip out a little.',false);return}
+    ST.b[ST.active].Vrec=v;say(`Recorded: ${v} mL of water, so <i>m</i> = ${fmt(v/1000,3)} kg (1 mL of water has a mass of 1 g).`,'ok');refreshTasks()};
+   $('#tvolc').onclick=go;$('#tvol').onkeydown=e=>{if(e.key==='Enter')go()}}},
+ transfer:{t:'Pour it in, then centre the beaker',done:()=>ST.b[ST.active].poured&&onPlateC(ST.active),body:()=>{const n=ST.active+1;return `<div class="note">Pour the water into beaker ${n} while it is on the bench. Then drag the beaker onto the centre of the hotplate.</div><div class="line"><button class="sm pri" id="tpb" ${ST.b[ST.active].poured?'disabled':''}>Pour into beaker ${n}</button></div>`},
+  wire:()=>{$('#tpb').onclick=()=>{const i=ST.active,b=ST.b[i];if(beakerY(i)===PTOP){say('Pour on the bench, away from the hotplate. Drag the beaker off the plate first.','bad');return}
+   b.V=ST.cyl;ST.cyl=0;b.poured=true;say('Now drag the beaker to the centre of the plate.');refreshTasks(true)}}},
+ thermo:{t:'Lower the thermometer into the water',done:()=>submerged(ST.active),body:()=>`<div class="note">Drag the thermometer down until the bulb is under the water. You choose the height: think about where the reading will be most like the whole of the water.</div><div class="safe">From here on the plate and the beaker get very hot. Do not touch them, and let them cool before you move them.</div>`}};
+const LIST=[['power','stand','fill','transfer','thermo'],['cool','fill','transfer','thermo']];
+function taskList(){return ST.step===1?LIST[0]:LIST[1]}
+function settingUp2(){return ST.step===2&&ST.active===1&&!LIST[1].every(k=>TASKS[k].done())&&!ST.b[1].run}
+function curTask(){if(!(ST.step===1||settingUp2()))return null;return taskList().find(k=>!TASKS[k].done())||null}
+let lastTaskKey='';
+function refreshTasks(force){const host=ST.step===1?$('#tasks1'):$('#tasks2');if(!host)return;const L=taskList(),cur=curTask();
+ const key=ST.step+'|'+ST.active+'|'+cur+'|'+L.map(k=>TASKS[k].done()?1:0).join('');
+ if(key!==lastTaskKey||force){lastTaskKey=key;
+  host.innerHTML=L.map((k,j)=>{const T=TASKS[k],ok=T.done();return `<div class="tk ${ok?'ok':''} ${k===cur?'cur':''}" data-k="${k}"><div class="tt"><i>${ok?'✓':j+1}</i>${T.t}</div><div class="tb">${k===cur?T.body():''}</div></div>`}).join('')+
+   (cur?'':`<div class="fb ok" style="font-size:17px">${ST.step===1?'Set up done. Press <b>Next</b>.':'Beaker 2 is ready. Switch the hotplate on when you are ready.'}</div>`);
+  if(cur&&TASKS[cur].wire)TASKS[cur].wire();
+  if(ST.step===2&&ST.active===1&&!cur)ensureRun(1);
+  if(ST.step===2)updRun()}
+ updNav()}
+// ===================== step 2: the run =====================
+function ensureRun(i){const b=ST.b[i];if(!b.run)b.run=newRun(i);return b.run}
+IX.anims.push((t,dt)=>{
+ if(ST.pour&&ST.cyl<250)ST.cyl=Math.min(250,ST.cyl+28*dt);
+ if(ST.stirAnim>0)ST.stirAnim-=dt;
+ const i=ST.active,b=ST.b[i],R=b.run;
+ if(R&&ST.step===2&&IX.play&&!R.snap&&R.on&&!R.done){let lab=dt*IX.speed*60/ST.speed;while(lab>1e-9){const h=Math.min(0.1,lab);stepRun(R,i,h);lab-=h}
+  if(R.Tw>=95||R.Td>=97){R.done=true;R.warn='The water is close to boiling, so the hotplate has been switched off. Stop at 90 °C next time.';updRun()}}
+ if(ST.step<=2)drawScene();
+ if(ST.step===2)updRunLive()});
+function readings(i){return Object.values(ST.b[i].rd).sort((a,b)=>a.k-b.k)}
+let was90=false;function updRunLive(){const R=curRun();const bp=$('#bpause');bp.textContent=IX.play?'Pause':'Play';const n=!!(R&&R.on&&!R.done&&R.Td>=90);if(n!==was90){was90=n;if(R&&!R.snap)updRun()}}
+function updRun(){const i=ST.active,b=ST.b[i],R=b.run,setting=settingUp2();
+ $('#setup2').style.display=setting?'':'none';$$('.runonly,#runfb').forEach(e=>e.style.display=setting?'none':'');$('#tcard').style.display=setting?'none':'';
+ $$('#bsel button').forEach(x=>{const k=+x.dataset.b;x.classList.toggle('on',k===i);x.disabled=(k===1&&!(ST.b[0].run&&ST.b[0].run.done))||(R&&R.on&&!R.done)});
+ $$('#isel button').forEach(x=>x.classList.toggle('on',+x.dataset.v===ST.interval));
+ $$('#vsel button').forEach(x=>x.classList.toggle('on',+x.dataset.v===ST.speed));
+ const ready=i===0?LIST[0].every(k=>TASKS[k].done()):!setting;
+ $('#bon').disabled=!ready||!R||R.on||R.done||!!R.snap;$('#bstir').disabled=!ready||!R||R.done||!!R.snap;$('#bread').disabled=!ready||!R||R.done||!!R.snap;$('#boff').disabled=!R||!R.on||R.done||!!R.snap;
+ $('#bredo').disabled=!R||!(R.done||(!R.on&&readings(i).length));$('#entry').style.display=R&&R.snap?'':'none';
+ $('#rh').textContent='Run: beaker '+(i+1)+(R&&R.done?' (finished)':R&&R.on?' (heating)':'');
+ $('#sh2').textContent='Bench: beaker '+(i+1)+' ('+BK[i].cap+' mL)'+(b.Vrec?', '+b.Vrec+' mL of water':'');
+ let m='';if(!ready)m=i===0?'Finish the set up in step 1 first.':'';else if(R&&R.warn)m=R.warn;else if(R&&R.done){const n=readings(i).length;
+   m=n<4?`Only ${n} readings. That is too few for a good line. Press <b>Redo this beaker</b> and read every 30 s.`:(i===0&&!ST.b[1].run?'Beaker 1 done. Pick <b>Beaker 2</b> to set it up.':'Done. You can redo a beaker, or press <b>Next</b>.')}
+  else if(R&&!R.on)m=readings(i).length?'Switch the hotplate on.':'Take the reading at 0:00 first, then switch the hotplate on.';
+  else if(R&&R.on)m=R.Td>=90?'It has reached 90 °C. Take this reading, then turn the hotplate off.':'Stir, then read at each mark on the clock. Turn off at 90 °C.';
+ if(!R||!R.snap)fb('runfb',m,R&&R.done&&readings(i).length>=4?true:undefined);
+ table();updNav()}
+function table(){const keys=new Set();[0,1].forEach(i=>readings(i).forEach(r=>keys.add(r.k)));const ks=[...keys].sort((a,b)=>a-b);
+ const cell=(i,k)=>{const r=ST.b[i].rd[k];return r?`${fmt(r.typed,1)} <small>(${mmss(r.t)})</small>`:''};
+ $('#rtab').innerHTML=`<tr><th>Time (min)</th><th>Time (s)</th><th>Beaker 1 (°C)</th><th>Beaker 2 (°C)</th></tr>`+(ks.length?ks.map(k=>`<tr><td>${+(k/60).toFixed(1)}</td><td>${k}</td><td>${cell(0,k)}</td><td>${cell(1,k)}</td></tr>`).join(''):'<tr><td colspan="4" style="color:#5b6690;padding:12px">No readings yet. The small grey time is when you actually read it.</td></tr>')}
+$$('#bsel button').forEach(x=>x.onclick=()=>{const k=+x.dataset.b;if(k===ST.active)return;const R=curRun();if(R&&R.on&&!R.done)return;
+ ST.active=k;if(k===1&&!ST.b[1].run){raiseThermo()}if(ST.b[k].poured&&LIST[k].every(t=>TASKS[t].done())||k===0)ensureRun(k);
+ lastTaskKey='';refreshTasks(true);updRun();say(k===1&&settingUp2()?'Set up beaker 2. Measure fresh water and place it the same way.':'')});
+$$('#isel button').forEach(x=>x.onclick=()=>{ST.interval=+x.dataset.v;updRun()});
+$$('#vsel button').forEach(x=>x.onclick=()=>{ST.speed=+x.dataset.v;updRun()});
+$('#bpause').onclick=()=>{const tb=[...document.querySelectorAll('.tools button')].find(b=>/Pause|Play/.test(b.textContent));if(tb)tb.click();else IX.play=!IX.play};
+$('#bon').onclick=()=>{const i=ST.active,R=ensureRun(i);if(!submerged(i)){fb('runfb','The thermometer bulb is not under the water. Go back and lower it.',false);return}
+ R.on=true;if(!IX.play)$('#bpause').click();say('Hotplate on, full power. The plate takes a while to warm up.');updRun()};
+$('#boff').onclick=()=>{const R=curRun();R.done=true;R.warn='';const rs=readings(ST.active),last=rs[rs.length-1];
+ say(R.Td<89.5?'You stopped before 90 °C. That is fine if you have enough readings.':'Hotplate off. Remember: hot plate, hot beaker. Leave them to cool.');updRun()};
+$('#bstir').onclick=()=>{const R=curRun();if(R){R.stir=Math.max(R.stir,8);ST.stirAnim=0.6}};
+$('#bredo').onclick=()=>{const i=ST.active,b=ST.b[i];b.rd={};b.run=newRun(i);b.line=null;b.g=null;b.gIn=null;b.c=null;b.cok=false;
+ say('Fresh water, the same amount, and a plate that has cooled. Read at 0:00, then switch on.');updRun()};
+function doRead(){const i=ST.active,R=curRun();if(!R||R.done||R.snap)return;if(!submerged(i)){fb('runfb','The bulb is not under the water.',false);return}
+ R.snap={t:R.t,shown:R.Td};$('#snapt').innerHTML=`At <b>${mmss(R.t)}</b> it reads`;$('#rin').value='';updRun();fb('runfb','Read the top of the red column. The clock waits.');
+ setTimeout(()=>$('#rin').focus(),30)}
+$('#bread').onclick=doRead;
+addEventListener('keydown',e=>{if(ST.step===2&&(e.key==='r'||e.key==='R')&&e.target.tagName!=='INPUT'){e.preventDefault();doRead()}});
+function acceptRead(){const i=ST.active,R=curRun(),s=R.snap,v=num($('#rin').value);if(!isFinite(v)){fb('runfb','Type the temperature in °C.',false);return}
+ if(Math.abs(v-s.shown)>0.5){mark($('#rin'),false);fb('runfb','Look again. Each small mark is 1 °C. Read to the nearest half degree.',false);return}
+ const k=Math.round(s.t/ST.interval)*ST.interval;
+ if(Math.abs(s.t-k)>15){R.snap=null;fb('runfb',`That was at ${mmss(s.t)}, too far from a mark. Read at ${ST.interval===60?'each whole minute':'each half minute'}.`,false);mark($('#rin'));updRun();return}
+ const had=ST.b[i].rd[k];ST.b[i].rd[k]={k,t:s.t,shown:s.shown,typed:v,z:bulbZ(i)};R.snap=null;mark($('#rin'));updRun();
+ const late=s.t-k;fb('runfb',(had?'Replaced the reading at '+mmss(k)+'. ':'')+`Written down for ${mmss(k)}.`+(Math.abs(late)>=3?` You read it ${Math.abs(late).toFixed(0)} s ${late>0?'late':'early'}.`:''),true)}
+$('#rok').onclick=acceptRead;$('#rin').onkeydown=e=>{if(e.key==='Enter')acceptRead();if(e.key==='Escape')$('#rcan').click()};
+$('#rcan').onclick=()=>{const R=curRun();R.snap=null;updRun()};
+// ===================== step 3: graph and gradient =====================
+const gsv=document.getElementById('gsv'),GX0=64,GX1=684,GY0=292,GY1=12;let gsel=0,tmax=300,hdrag=null;
+const BC=['#fbb040','#7dd3fc'];
+function gx(t){return GX0+(GX1-GX0)*t/tmax}function gy(T){return GY0-(GY0-GY1)*T/100}
+function ix(x){return(x-GX0)/(GX1-GX0)*tmax}function iy(y){return(GY0-y)/(GY0-GY1)*100}
+function lineGrad(L){return(L.T2-L.T1)/(L.t2-L.t1)}
+function drawGraph(){gsv.innerHTML='';const all=[0,1].flatMap(i=>readings(i).map(r=>r.k));tmax=Math.max(240,Math.ceil((Math.max(0,...all)+30)/60)*60);
+ for(let s=0;s<=tmax;s+=10){const maj=s%60===0;el('line',{x1:gx(s),x2:gx(s),y1:GY1,y2:GY0,stroke:maj?'#36418a':'#1f2858','stroke-width':maj?1.5:1},gsv);if(maj)txt(gsv,gx(s),GY0+20,s,{'text-anchor':'middle','font-size':14,fill:'#a5b4d8','font-weight':400})}
+ for(let T=0;T<=100;T+=2){const maj=T%10===0;el('line',{x1:GX0,x2:GX1,y1:gy(T),y2:gy(T),stroke:maj?'#36418a':'#1f2858','stroke-width':maj?1.5:1},gsv);if(maj)txt(gsv,GX0-8,gy(T)+5,T,{'text-anchor':'end','font-size':14,fill:'#a5b4d8','font-weight':400})}
+ txt(gsv,GX1,GY0+38,'time (s)',{'text-anchor':'end','font-size':14,fill:'#a5b4d8'});
+ const yl=txt(gsv,16,(GY0+GY1)/2,'temperature (°C)',{'text-anchor':'middle','font-size':14,fill:'#a5b4d8'});yl.setAttribute('transform',`rotate(-90 16 ${(GY0+GY1)/2})`);
+ [0,1].forEach(i=>{readings(i).forEach(r=>{const x=gx(r.k),y=gy(r.typed);if(i===0)el('circle',{cx:x,cy:y,r:5.5,fill:BC[0]},gsv);else el('rect',{x:x-5,y:y-5,width:10,height:10,fill:BC[1]},gsv)})});
+ [0,1].forEach(i=>{const L=ST.b[i].line;if(!L)return;const on=i===gsel;
+  el('line',{x1:gx(L.t1),y1:gy(L.T1),x2:gx(L.t2),y2:gy(L.T2),stroke:BC[i],'stroke-width':on?3:2,'stroke-dasharray':i?'9 6':'','stroke-opacity':on?1:.6},gsv);
+  if(on)[[L.t1,L.T1,1],[L.t2,L.T2,2]].forEach(([t,T,h])=>{if(hdrag&&hdrag.h===h){el('line',{x1:GX0,x2:gx(t),y1:gy(T),y2:gy(T),stroke:'#eef2ff','stroke-dasharray':'3 4','stroke-opacity':.6},gsv);el('line',{x1:gx(t),x2:gx(t),y1:gy(T),y2:GY0,stroke:'#eef2ff','stroke-dasharray':'3 4','stroke-opacity':.6},gsv)}
+   el('circle',{cx:gx(t),cy:gy(T),r:9,fill:'#0d1330',stroke:BC[i],'stroke-width':3},gsv);const hc=el('circle',{cx:gx(t),cy:gy(T),r:22,fill:'transparent',style:'cursor:move'},gsv);hc.dataset.h=h})});
+ const lg=el('g',{},gsv);el('rect',{x:GX0+10,y:GY1+8,width:208,height:50,rx:6,fill:'#0d1330','fill-opacity':.85},lg);el('circle',{cx:GX0+24,cy:GY1+23,r:5.5,fill:BC[0]},lg);txt(lg,GX0+36,GY1+28,'beaker 1 (250 mL)',{'font-size':14});
+ el('rect',{x:GX0+19,y:GY1+38,width:10,height:10,fill:BC[1]},lg);txt(lg,GX0+36,GY1+48,'beaker 2 (800 mL)',{'font-size':14});
+ if(!readings(gsel).length)txt(gsv,(GX0+GX1)/2,(GY0+GY1)/2,'No readings for beaker '+(gsel+1)+' yet',{'text-anchor':'middle','font-size':18,fill:'#a5b4d8'})}
+function ensureLine(i){const b=ST.b[i];if(!b.line&&readings(i).length){b.line={t1:tmax*0.15,T1:55,t2:tmax*0.75,T2:70}}}
+gsv.addEventListener('pointerdown',e=>{const h=e.target.dataset&&e.target.dataset.h;if(!h)return;hdrag={h:+h};gsv.setPointerCapture(e.pointerId);e.preventDefault();drawGraph()});
+gsv.addEventListener('pointermove',e=>{if(!hdrag)return;const p=svgPt(e,gsv),L=ST.b[gsel].line;const t=Math.max(0,Math.min(tmax,ix(p.x))),T=Math.max(0,Math.min(100,iy(p.y)));
+ if(hdrag.h===1){L.t1=t;L.T1=T}else{L.t2=t;L.T2=T}if(Math.abs(L.t2-L.t1)<5){if(hdrag.h===1)L.t1=L.t2-5;else L.t2=L.t1+5}drawGraph()});
+const gEnd=()=>{if(hdrag){hdrag=null;const b=ST.b[gsel];b.g=null;drawGraph();updGrad()}};gsv.addEventListener('pointerup',gEnd);gsv.addEventListener('pointercancel',gEnd);
+function selG(i){gsel=i;$$('#gsel button').forEach(x=>{const k=+x.dataset.b;x.classList.toggle('on',k===i);x.innerHTML='Beaker '+(k+1)+(gDone(k)?' ✓':'')});
+ drawGraph();ensureLine(i);drawGraph();const b=ST.b[i];
+ $('#grise').value=b.gIn?b.gIn.rise:'';$('#grun').value=b.gIn?b.gIn.run:'';$('#ggr').value=b.gIn?b.gIn.g:'';$('#gP').value=b.Pok?P:'';$('#gm').value=b.mok?b.mIn:'';
+ ['#grise','#grun','#ggr','#gP','#gm'].forEach(s=>mark($(s)));fb('gfb',b.g?'Gradient checked.':'',b.g?true:undefined);fb('Pfb',b.Pok?'Checked.':'',b.Pok||undefined);fb('mfb',b.mok?'Checked.':'',b.mok||undefined)}
+$$('#gsel button').forEach(x=>x.onclick=()=>selG(+x.dataset.b));
+function gDone(i){const b=ST.b[i];return !!(b.g&&b.Pok&&b.mok)}
+function updGrad(){selG(gsel);updNav()}
+$('#gchk').onclick=()=>{const b=ST.b[gsel],L=b.line;if(!L){fb('gfb','No line yet: take readings for this beaker first.',false);return}
+ const rise=num($('#grise').value),run=num($('#grun').value),g=num($('#ggr').value);
+ if(![rise,run,g].every(isFinite)||run<=0){fb('gfb','Fill in the rise, the run and the gradient.',false);return}
+ if(Math.abs(g-rise/run)>0.03*Math.abs(rise/run)+0.0005){mark($('#ggr'),false);fb('gfb','The gradient is the rise divided by the run. Check that division.',false);return}
+ const lg=lineGrad(L);if(Math.abs(g-lg)>0.07*Math.abs(lg)){mark($('#ggr'),false);fb('gfb','That does not match your line. Read two points that are on your line, far apart.',false);return}
+ if(run<0.3*Math.abs(L.t2-L.t1)){fb('gfb','Use two points further apart on the line. It makes the gradient more accurate.',false);return}
+ b.g=g;b.gIn={rise,run,g};mark($('#ggr'),true);
+ const rs=readings(gsel).filter(r=>r.k>=Math.min(L.t1,L.t2)-1&&r.k<=Math.max(L.t1,L.t2)+1);
+ fb('gfb',`Gradient = ${g} °C/s. That matches your line.`,true);selG(gsel);updNav()};
+$('#Pchk').onclick=()=>{const b=ST.b[gsel],v=num($('#gP').value);if(Math.abs(v-P)<0.5){b.Pok=true;fb('Pfb','Checked.',true)}else fb('Pfb',Math.abs(v-P/1000)<1e-6?'Use watts: 1 kW = 1000 W.':'Use the power from the rating plate, in W.',false);selG(gsel);updNav()};
+$('#mchk').onclick=()=>{const b=ST.b[gsel],v=num($('#gm').value),rec=b.Vrec/1000;if(!isFinite(v)){fb('mfb','Type the mass in kg.',false);return}
+ if(Math.abs(v-rec)<0.0005){b.mIn=v;b.mok=true;fb('mfb','Checked.',true)}
+ else if(Math.abs(v-0.2)<0.0005){b.mIn=v;b.mok=true;fb('mfb',`Accepted, but you measured ${b.Vrec} mL (${fmt(rec,3)} kg).`,true)}
+ else fb('mfb',Math.abs(v-b.Vrec)<0.5?'That is in grams. Change to kg: 1000 g = 1 kg.':`Use the volume you measured, ${b.Vrec} mL. 1 mL of water has a mass of 1 g.`,false);
+ const keep=$('#mfb').innerHTML,ok=b.mok;selG(gsel);if(ok)fb('mfb',keep,true);updNav()};
+// ===================== step 4: result =====================
+let esel=-1;
+function drawC(){[0,1].forEach(i=>{const b=ST.b[i],h=$('#cb'+i);if(!gDone(i)){h.innerHTML=`<div class="note"><b style="color:${BC[i]}">Beaker ${i+1}:</b> finish the gradient, <i>P</i> and <i>m</i> in step 3 first.</div>`;return}
+  const pct=b.c?Math.abs(b.c-4180)/4180*100:0;
+  h.innerHTML=`<div class="line" style="margin-top:4px"><b style="color:${BC[i]}">Beaker ${i+1}:</b> <i>c</i> = <span style="display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;font-size:16px"><span>${P}</span><span style="border-top:1.5px solid #cfd7f5;padding:0 4px">${b.mIn} × ${b.g}</span></span> = <input class="pin" id="cin${i}" inputmode="decimal" style="width:110px" value="${b.cok?b.c:''}"> J/(kg K) <button class="sm" id="cchk${i}">Check</button></div>
+   <div class="line" style="margin-top:2px;min-height:40px"><span class="fb" id="cfb${i}"></span><button class="sm" id="cpct${i}" style="display:${b.cok?'':'none'}">Show percentage error</button><span id="cpo${i}"></span></div>`;
+  const go=()=>{const v=num($('#cin'+i).value),exp=P/(b.mIn*b.g);if(!isFinite(v)){fb('cfb'+i,'Type your value of c.',false);return}
+   if(Math.abs(v-exp)<=0.03*exp){b.c=v;b.cok=true;drawC();updNav();if(esel<0)selE(i)}
+   else{mark($('#cin'+i),false);fb('cfb'+i,Math.abs(v-exp/1000)<=0.03*exp/1000?'Check the units: m must be in kg and P in W.':'Check the calculation: multiply m by the gradient first, then divide P by that.',false)}};
+  $('#cchk'+i).onclick=go;$('#cin'+i).onkeydown=e=>{if(e.key==='Enter')go()};
+  if(b.cok)fb('cfb'+i,'Your arithmetic is right.',true);
+  const sp=()=>{b.pct=true;$('#cpct'+i).style.display='none';$('#cpo'+i).innerHTML=`Accepted value 4180 J/(kg K). Yours is <b class="hi">${pct.toFixed(0)}%</b> ${b.c>4180?'above':'below'} it.`;cnote()};
+  $('#cpct'+i).onclick=sp;if(b.pct&&b.cok)sp()});cnote()}
+function cnote(){const a=ST.b[0],b=ST.b[1];let s='';
+ if(a.pct||b.pct)s='This method gives a value well above 4180 J/(kg K) on a real bench too. Not all of the hotplate\'s energy goes into the water, so the gradient is smaller than <i>P</i> alone predicts.';
+ if(a.pct&&b.pct&&a.c&&b.c)s+=` Beaker ${a.c>b.c?'2':'1'} came out closer. Why?`;
+ $('#cnote').innerHTML=s}
+function selE(i){esel=i;$$('#esel button').forEach(x=>x.classList.toggle('on',+x.dataset.b===i));const b=ST.b[i],R=b.run;
+ if(!b.cok||!R){$('#eout').innerHTML='Check your value of <i>c</i> for beaker '+(i+1)+' first.';return}
+ const g=geom(i),dT=R.Tw-TROOM,Ein=R.E.in;const parts=[['Into the water',g.m*PH.cw*dT,'#38bdf8'],['Into the glass',BK[i].mg*PH.cg*dT,'#a5b4d8'],['Still in the hot plate',PH.Cp*(R.Tp-TROOM),'#ef4444'],
+  ['Plate to the air',R.E.air,'#fb923c'],['Water sides and top to the air',R.E.side,'#f472b6'],['Evaporation',R.E.evap,'#4ade80']];
+ $('#eout').innerHTML=`<div class="note" style="margin-bottom:6px">Energy the hotplate used in your run: <i>P</i> × time = ${P} W × ${Math.round(Ein/P)} s = <b>${(Ein/1000).toFixed(0)} kJ</b>. Where it ended up when you turned it off (from the model behind this page):</div>
+  <div class="ebar">${parts.map(p=>`<span style="width:${Math.max(0,p[1]/Ein*100)}%;background:${p[2]}"></span>`).join('')}</div>
+  <div class="eleg" style="margin-top:8px">${parts.map(p=>`<i style="background:${p[2]}"></i><span>${p[0]}</span><b>${Math.max(0,p[1]/Ein*100).toFixed(0)}%</b>`).join('')}</div>
+  <div class="note" style="margin-top:8px">Only the water part counts in <i>Q</i> = <i>mc</i>Δ<i>T</i>. Everything else makes your <i>c</i> too big. ${i===1?'The wide base covers more of the plate, so more energy reaches the water, even though there is more glass to heat.':'The small base covers less of the plate, so more of the plate\'s energy goes straight into the air.'}</div>`}
+$$('#esel button').forEach(x=>x.onclick=()=>selE(+x.dataset.b));
+// ===================== step 5: log book, print, copy =====================
+function resultsText(){const L=[`Practical 2A-2: Specific heat capacity of water (virtual rehearsal)`,`Data set ${DS}`,`Hotplate power P = ${P} W. Room temperature ${TROOM} °C.`];
+ [0,1].forEach(i=>{const b=ST.b[i];L.push('',`Beaker ${i+1} (${BK[i].cap} mL): water measured ${b.Vrec??'-'} mL`);readings(i).forEach(r=>L.push(`  t = ${r.k} s   T = ${fmt(r.typed,1)} °C`));
+  if(b.gIn)L.push(`  gradient = ${b.gIn.rise} °C / ${b.gIn.run} s = ${b.g} °C/s`);if(b.cok)L.push(`  c = ${P} / (${b.mIn} × ${b.g}) = ${b.c} J/(kg K)`,`  percentage error = ${(Math.abs(b.c-4180)/4180*100).toFixed(0)}% (accepted 4180 J/(kg K))`)});return L.join('\n')}
+function sumHTML(){return [0,1].map(i=>{const b=ST.b[i];return `<div><b style="color:${BC[i]}">Beaker ${i+1}</b>: ${readings(i).length} readings, m = ${b.mIn??(b.Vrec?b.Vrec/1000:'?')} kg, gradient ${b.g??'?'} °C/s, c = ${b.cok?b.c+' J/(kg K)':'?'}${b.cok?', '+(Math.abs(b.c-4180)/4180*100).toFixed(0)+'% error':''}</div>`}).join('')+`<div>P = ${P} W, data set ${DS}</div>`}
+function printSVG(){const W=420,H=280,x0=44,x1=410,y0=245,y1=10,X=t=>x0+(x1-x0)*t/tmax,Y=T=>y0-(y0-y1)*T/100;let s=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" font-family="Arial" font-size="10">`;
+ for(let t=0;t<=tmax;t+=10)s+=`<line x1="${X(t)}" x2="${X(t)}" y1="${y1}" y2="${y0}" stroke="${t%60?'#ddd':'#999'}" stroke-width="${t%60?.5:.8}"/>`+(t%60?'':`<text x="${X(t)}" y="${y0+12}" text-anchor="middle">${t}</text>`);
+ for(let T=0;T<=100;T+=2)s+=`<line x1="${x0}" x2="${x1}" y1="${Y(T)}" y2="${Y(T)}" stroke="${T%10?'#ddd':'#999'}" stroke-width="${T%10?.5:.8}"/>`+(T%10?'':`<text x="${x0-4}" y="${Y(T)+3}" text-anchor="end">${T}</text>`);
+ s+=`<text x="${x1}" y="${y0+26}" text-anchor="end">time (s)</text><text x="12" y="${(y0+y1)/2}" text-anchor="middle" transform="rotate(-90 12 ${(y0+y1)/2})">temperature (°C)</text>`;
+ [0,1].forEach(i=>{readings(i).forEach(r=>{s+=i?`<rect x="${X(r.k)-3}" y="${Y(r.typed)-3}" width="6" height="6" fill="none" stroke="#000" stroke-width="1.2"/>`:`<circle cx="${X(r.k)}" cy="${Y(r.typed)}" r="3" fill="#000"/>`});
+  const L=ST.b[i].line;if(L&&ST.b[i].g)s+=`<line x1="${X(L.t1)}" y1="${Y(L.T1)}" x2="${X(L.t2)}" y2="${Y(L.T2)}" stroke="#000" stroke-width="1.2" ${i?'stroke-dasharray="5 3"':''}/>`});
+ s+=`<rect x="${x0+6}" y="${y1+6}" width="150" height="34" fill="#fff" stroke="#000" stroke-width=".6"/><circle cx="${x0+16}" cy="${y1+16}" r="3"/><text x="${x0+26}" y="${y1+19}">beaker 1, solid line</text><rect x="${x0+13}" y="${y1+26}" width="6" height="6" fill="none" stroke="#000"/><text x="${x0+26}" y="${y1+33}">beaker 2, dashed line</text></svg>`;return s}
+function buildPrint(){const keys=[...new Set([0,1].flatMap(i=>readings(i).map(r=>r.k)))].sort((a,b)=>a-b);
+ const row=k=>`<tr><td>${+(k/60).toFixed(1)}</td><td>${k}</td>${[0,1].map(i=>`<td>${ST.b[i].rd[k]?fmt(ST.b[i].rd[k].typed,1):''}</td>`).join('')}</tr>`;
+ const res=i=>{const b=ST.b[i];return `<div><b>Beaker ${i+1} (${BK[i].cap} mL)</b>: water ${b.Vrec??'-'} mL, m = ${b.mIn??'-'} kg<br>gradient = ${b.gIn?b.gIn.rise+' °C / '+b.gIn.run+' s = '+b.g+' °C/s':'-'}<br>c = ${b.cok?P+' / ('+b.mIn+' × '+b.g+') = '+b.c+' J/(kg K)':'-'}<br>percentage error = ${b.cok?(Math.abs(b.c-4180)/4180*100).toFixed(0)+'%':'-'}</div>`};
+ $('#psheet').innerHTML=`<div class="pl"><span>Name: ______________________________</span><span>Date: ______________</span></div>
+ <h2>Practical 2A-2: Specific heat capacity of water</h2><div class="pl"><span>Virtual rehearsal. Data set ${DS}</span><span>Hotplate power P = ${P} W</span></div>
+ <div class="cols"><table><tr><th>Time (min)</th><th>Time (s)</th><th>Beaker 1 (°C)</th><th>Beaker 2 (°C)</th></tr>${keys.map(row).join('')}</table>${printSVG()}</div>
+ <div class="res">${res(0)}${res(1)}<div class="sm">Accepted value for water: 4180 J/(kg K). Percentage error = |c − 4180| / 4180 × 100%.</div></div>`}
+$('#bprint').onclick=()=>{buildPrint();window.print()};
+addEventListener('beforeprint',buildPrint);
+$('#bcopy').onclick=()=>{const t=resultsText(),box=$('#copybox');const fall=()=>{box.style.display='block';box.value=t;box.focus();box.select();$('#copyfb').textContent='Select the text in the box and copy it.'};
+ if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(()=>{$('#copyfb').textContent='Copied. Paste it into your notes.';box.style.display='none'},fall);else fall()};
+// ===================== steps, navigation =====================
+const NAMES=['Set up','Measure','Analyse','Result','Log book'];
+$('#prail').innerHTML=NAMES.map((n,k)=>`<button class="pstep" data-s="${k+1}"><i>${k+1}</i>${n}</button>`).join('');
+function stepDone(s){if(s===1)return LIST[0].every(k=>TASKS[k].done())||!!ST.b[0].run&&ST.b[0].run.on;
+ if(s===2)return [0,1].every(i=>ST.b[i].run&&ST.b[i].run.done&&readings(i).length>=4);
+ if(s===3)return gDone(0)&&gDone(1);if(s===4)return ST.b[0].cok&&ST.b[1].cok;return false}
+function updNav(){$$('.pstep').forEach(b=>{const s=+b.dataset.s;b.classList.toggle('on',s===ST.step);b.classList.toggle('done',s!==ST.step&&stepDone(s));b.querySelector('i').textContent=s!==ST.step&&stepDone(s)?'✓':s;b.disabled=s>ST.maxStep});
+ $('#pback').disabled=ST.step===1;$('#pnext').disabled=ST.step===5||!stepDone(ST.step);$('#pnext').textContent=ST.step===5?'Next':'Next'}
+function go(s){ST.step=s;ST.maxStep=Math.max(ST.maxStep,s);$$('.pg').forEach(p=>p.classList.toggle('on',+p.dataset.s===s));
+ if(s===1){$('#slot1').appendChild(sc);ST.active=0;lastTaskKey='';refreshTasks(true)}
+ if(s===2){$('#slot2').appendChild(sc);ensureRun(0);if(ST.active===1&&!ST.b[1].run&&LIST[1].every(k=>TASKS[k].done()))ensureRun(1);lastTaskKey='';refreshTasks(true);updRun()}
+ if(s===3){drawGraph();selG(gsel)}
+ if(s===4){drawC();if(esel>=0)selE(esel)}
+ if(s===5)$('#sumout').innerHTML=sumHTML();
+ say(['','Do the tasks in order. Drag things on the bench.','Read at 0:00, switch on, stir, and read at each mark. Slow speed makes it easier to read on time.','Place a line of best fit for each beaker, then find its gradient.','Work out c for each beaker.','Copy these prompts into your log book, then print or copy your results.'][s]);updNav()}
+$$('.pstep').forEach(b=>b.onclick=()=>{const s=+b.dataset.s;if(s<=ST.maxStep)go(s)});
+$('#pnext').onclick=()=>{if(stepDone(ST.step)&&ST.step<5)go(ST.step+1)};$('#pback').onclick=()=>{if(ST.step>1)go(ST.step-1)};
+// Show me
+$('#pshow').onclick=()=>{const s=ST.step,i=ST.active,b=ST.b[i];
+ if(s===1||settingUp2()){const k=curTask();
+  if(k==='power'){$('#tpow').classList.add('tourhl');setTimeout(()=>$('#tpow')&&$('#tpow').classList.remove('tourhl'),2500);say(`The plate says ${(P/1000).toFixed(P%100?2:1)} kW. Multiply by 1000 to get watts.`)}
+  else if(k==='stand'){anim(v=>{ST.standX=v},ST.standX,PX+200,()=>refreshTasks());say('The stand moves until the clamp is over the middle of the plate.')}
+  else if(k==='cool'){$('#tcool').click()}
+  else if(k==='fill'){if(Math.abs(ST.cyl-200)>2)anim(v=>{ST.cyl=v},ST.cyl,199+Math.round(Rpour()*4),()=>{});say('Fill to near 200 mL, then read the bottom of the curved surface on the close-up and type it in.')}
+  else if(k==='transfer'){if(!b.poured){if(beakerY(i)===PTOP)b.x=170;$('#tpb').click()}anim(v=>{b.x=v},b.x,PX,()=>refreshTasks());say('The beaker goes on the centre of the plate, where the base gets the most heat.')}
+  else if(k==='thermo'){const target=beakerY(i)-GLASS-geom(i).d/2*K;if(!inBeaker(i))ST.standX=PX+200;anim(v=>{ST.bulbY=v},ST.bulbY,target,()=>refreshTasks());say('Halfway down the water is best: away from the hot glass at the bottom, and below the surface.')}
+  return}
+ if(s===2){const R=curRun();if(!R)return;if(R.snap){say(`Read the top of the red column on the close-up. Long marks are every 5 °C; numbers every 10 °C.`);return}
+  if(!R.on&&!R.done){if(!readings(i).length){doRead();say('This is the reading at 0:00. Type the temperature shown on the close-up.')}else{$('#bon').click()}return}
+  if(R.on&&!R.done){$('#bstir').click();say('Stir just before each reading so the water is the same temperature all through. Then press <b>Read</b> as the clock reaches the mark.');return}
+  if(R.done&&i===0&&!ST.b[1].run){$$('#bsel button')[1].click();return}
+  say('Both runs are done when each beaker has at least 4 readings up to about 90 °C.');return}
+ if(s===3){const rs=readings(gsel);if(rs.length<2)return;const mid=rs.filter(r=>r.typed>=35&&r.typed<=82),use=mid.length>=2?mid:rs;
+  let n=use.length,sx=0,sy=0,sxx=0,sxy=0;use.forEach(r=>{sx+=r.k;sy+=r.typed;sxx+=r.k*r.k;sxy+=r.k*r.typed});const g=(n*sxy-sx*sy)/(n*sxx-sx*sx),c0=(sy-g*sx)/n;
+  const t1=use[0].k,t2=use[use.length-1].k;ST.b[gsel].line={t1,T1:c0+g*t1,t2,T2:c0+g*t2};ST.b[gsel].g=null;drawGraph();
+  say('The line follows the straight middle part. The first points curve because the plate is still warming up. Now read two points on the line: rise is the change in temperature, run is the change in time.');return}
+ if(s===4){say('Put your numbers in: c equals P divided by (m times the gradient). Do the bottom first.');return}
+ if(s===5){$('#bprint').classList.add('tourhl');setTimeout(()=>$('#bprint').classList.remove('tourhl'),2500);say('Print the results page and glue it in, or copy your results into your notes.')}};
+function anim(set,a,b,done){const t0=performance.now(),D=700;(function f(){const u=Math.min(1,(performance.now()-t0)/D),e=u<.5?2*u*u:1-2*(1-u)*(1-u);set(a+(b-a)*e);if(u<1)requestAnimationFrame(f);else{set(b);done&&done()}})()}
+// ===================== tour =====================
+window.TOUR=[
+ {say:'This page rehearses <b>Practical 2A-2</b>. You heat 200 mL of water on a hotplate, graph its temperature and use the gradient to find the specific heat capacity of water.',hl:'#prail',do:()=>go(1),top:true},
+ {say:'Five steps: set up, measure, analyse, result, log book. Ticks show what is done. You can go back at any time.',hl:'#prail',top:true},
+ {say:'This is your bench. You will <b>drag</b> the retort stand, the beaker and the thermometer.',hl:'#scard1',top:true},
+ {say:'Do the set up tasks in order. Each one opens when the one before it is done.',hl:'#tasks1',top:true},
+ {say:'Stuck? <b>Show me</b> does the next action, or shows you how.',hl:'#pshow',top:true},
+ {say:'This is your data set number. Write it down: adding <b>?seed=</b> and the number to the address brings back the same data.',hl:'#dsno',top:true},
+ {say:'This rehearses the real prac; it does not replace it. The full method is in the Cambridge prac document.',top:true}];
+document.body.appendChild(document.getElementById('psheet'));selG(0);go(1);
+</script>
